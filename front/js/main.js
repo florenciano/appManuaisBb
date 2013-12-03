@@ -1,5 +1,4 @@
 "use strict";
-
 // declare as variáveis
 var trim, placeholder;
 
@@ -32,7 +31,6 @@ placeholder = {
 
 // Doc ready
 $(function(){
-
     // Nice scroll
     // $("body").mCustomScrollbar();
 
@@ -51,3 +49,6 @@ $(function(){
         }
     }
 });
+/* ==========================================================================
+   Page: local
+========================================================================== */
