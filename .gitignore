@@ -3,7 +3,6 @@
 
 .DS_Store
 .DS_Store?
-._*
 .Spotlight-V100
 .Trashes
 ehthumbs.db
@@ -14,5 +13,5 @@ libpeerconnection.log
 node_modules
 .tmp
 components
-css/main.css
+css/
 layout/
