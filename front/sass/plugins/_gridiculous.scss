@@ -27,6 +27,7 @@
     margin: 0;
 }
 
+// the default values percents was moved from @media queries: tablet e desktop layout.scss
 .c1{width:8.33%}
 .c2{width:16.66%}
 .c3{width:25%}
@@ -43,11 +44,10 @@
 .c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,.c11,.c12{
     float:left;
     min-height:1px;
-    padding-left:20px;
-    padding-right:20px;
+    padding-left:10px;
+    padding-right:10px;
     position:relative
 }
-
 // Spaces
 .s1{margin-left:8.33%}
 .s2{margin-left:16.66%}
