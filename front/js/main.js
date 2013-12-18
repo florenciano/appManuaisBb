@@ -31,7 +31,9 @@ placeholder = {
 
 // Doc ready
 $(function(){
-    // Nice scroll
+    
+    /* Nice scroll
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */ 
     // $("body").mCustomScrollbar();
 
     // Only IE
@@ -48,7 +50,31 @@ $(function(){
             });
         }
     }
+
 });
-/* ==========================================================================
-   Page: local
-========================================================================== */
+
+(function(){
+    /* ===============================================================
+       Page: local
+    ================================================================== */
+
+    /* show and Hie the subcategories
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */ 
+    var expandirRecolher = $(".exp-rec");
+    // console.log(expandirRecolher.length);
+    // iterando com cada grupo
+    
+    for(var i = 0; i < expandirRecolher.length; i++) {
+        // $(this).click(function(e){
+        //     e.preventDefault();
+        //     console.log("dljasl");
+        // });
+        expandirRecolher[i].addEventListener("click", function(e){
+            e.preventDefault();
+            var listaSubcategoria = this.parentNode.parentNode.nextSibling;
+            console.log(listaSubcategoria);
+        })
+    };
+
+})();
+
