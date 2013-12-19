@@ -53,28 +53,98 @@ $(function(){
 
 });
 
-(function(){
+(function($){
     /* ===============================================================
        Page: local
     ================================================================== */
 
-    /* show and Hie the subcategories
+    /* show and Hide the subcategories
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */ 
-    var expandirRecolher = $(".exp-rec");
-    // console.log(expandirRecolher.length);
-    // iterando com cada grupo
-    
-    for(var i = 0; i < expandirRecolher.length; i++) {
-        // $(this).click(function(e){
-        //     e.preventDefault();
-        //     console.log("dljasl");
-        // });
-        expandirRecolher[i].addEventListener("click", function(e){
-            e.preventDefault();
-            var listaSubcategoria = this.parentNode.parentNode.nextSibling;
-            console.log(listaSubcategoria);
-        })
-    };
+    var expandirRecolher = $( ".exp-rec" );
+    var expandirTudo = $( ".expandir" );
+    var recolherTudo = $( ".recolher" );
+    var todasListas = $( ".navigationMain li ul" );
+        
+    var linkMais = "[+]";
+    var linkMenos = "[-]";
 
-})();
+    /* show/hide each categories */
+    expandirRecolher.each(function(){
+       
+        $(this).click(function(event){
+            event.preventDefault();
+            var lista = $(event.target).parent().parent().next();
+            lista.toggle(400);
+            
+            // call function replace text
+            var linkText = this; //[+]
+            if(linkText.innerText == linkMais) {
+                linkText.innerText = linkMenos;
+            } else if(linkText.innerText == linkMenos) {
+                linkText.innerText = linkMais;
+            }
+        });
+
+    });
+    /* show ALL the categories */
+    expandirTudo.click(function(event){
+        event.preventDefault();
+        
+        todasListas.each(function(event){
+            $(this).show(400);
+        });
+
+        // display Text
+        expandirRecolher.each(function(){
+            var linkText = this; //[+]
+            linkText.innerText = linkMenos;
+        });
+
+    });
+    /* hide ALL the categories */
+    recolherTudo.click(function(event){
+        event.preventDefault();
+        
+        todasListas.each(function(event){
+            $(this).hide(400);
+        });
+
+        expandirRecolher.each(function(){
+            var linkText = this; //[-]
+            linkText.innerText = linkMais;
+        });
+
+    });
+
+     /* focus input
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */ 
+    $( ".inputPesquisa" ).focus();
+
+
+     /* create summary
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */ 
+    var divSumario = $( ".sumario" );
+    var todosTitulos = $( ".contentMain h2" );
+    var tagUl = $( "<ul>" );
+    
+
+
+    todosTitulos.each(function(){
+        var contentTagA = $(this).text();
+        var tagA = $( "<a>" );
+            tagA.attr("href","#");
+        tagA.append(contentTagA);
+        
+        var tagLi = $( "<li>" );
+        tagLi.append(tagA);
+        tagUl.append(tagLi);
+        
+    });
+
+    // inserting ul na DOM
+    divSumario.append(tagUl);
+
+    // pensar numa forma de recuperar a ancora de cada link
+
+})(jQuery);
 

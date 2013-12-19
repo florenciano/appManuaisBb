@@ -8,6 +8,7 @@
 <meta name="viewport" content="width=device-width">
 
 <link rel="stylesheet" href="css/main.css">
+<!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" /> -->
 <!-- <link rel="stylesheet" href="css/print.css"> -->
 <!--  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css"> -->
 
@@ -40,7 +41,8 @@
                 <section class="buscaMain c4">
                     <div class="inputSearch">
                         <form id="busca" action="#">
-                            <input type="text" class="inputPesquisa" placeholder="Busca por título ou palavra-chave">
+                            <label for="pesquisa"></label>
+                            <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Busca por título ou palavra-chave" data-type="search" disabled>
                             <p>
                                 <span class="interat"><a href="#" class="expandir">&#62;</a>Expandir tudo</span>
                                 <span class="interat"><a href="#" class="recolher">&#60;</a>Recolher tudo</span>
@@ -48,9 +50,26 @@
                         </form>
                     </div>
                     
-                    <nav role="navigation" class="navigationMain">
+                    <nav role="navigation" class="navigationMain" data-role="listview" data-inset="true" data-filter="true">
                         <h5>Blackboard</h5>
                         <ol>
+                            <li class="">
+                                <div class="containerCategory">
+                                    <div class="contLeft">
+                                        <span>&nbsp;</span><a href="#" class="exp-rec">[+]</a>   
+                                    </div>
+                                    <div class="contRight">
+                                        <p>Nome da categoria1</p>
+                                    </div>    
+                                </div>
+                                <!-- itens by category -->
+                                <ul style="display:none">
+                                    <li><a href="http://minhaPagina.com.br#titlePage">Link da subcategoria1</a></li>
+                                    <li><a href="#titlePage">Link da subcategoria2</a></li>
+                                    <li><a href="#titlePage">Link da subcategoria3</a></li>
+                                    <li><a href="#titlePage">Link da subcategoria4</a></li>
+                                </ul>
+                            </li>
                             <li class="">
                                 <div class="containerCategory">
                                     <div class="contLeft">
@@ -61,24 +80,7 @@
                                     </div>    
                                 </div>
                                 <!-- itens by category -->
-                                <!-- <ul>
-                                    <li><a href="http://minhaPagina.com.br#titlePage">Link da subcategoria1</a></li>
-                                    <li><a href="#titlePage">Link da subcategoria2</a></li>
-                                    <li><a href="#titlePage">Link da subcategoria3</a></li>
-                                    <li><a href="#titlePage">Link da subcategoria4</a></li>
-                                </ul> -->
-                            </li>
-                            <li class="">
-                                <div class="containerCategory">
-                                    <div class="contLeft">
-                                        <span>&nbsp;</span><a href="#" class="exp-rec">&#91;-&#93;</a>   
-                                    </div>
-                                    <div class="contRight">
-                                        <p>Nome da categoria1</p>
-                                    </div>    
-                                </div>
-                                <!-- itens by category -->
-                                <ul>
+                                <ul style="display:none">
                                     <li><a href="#titlePage">Link da subcategoria1</a></li>
                                     <li><a href="#titlePage">Link da subcategoria2</a></li>
                                 </ul>
@@ -86,14 +88,14 @@
                             <li class="selectedCategory">
                                 <div class="containerCategory">
                                     <div class="contLeft">
-                                        <span>&nbsp;</span><a href="#" class="exp-rec">&#91;-&#93;</a>   
+                                        <span>&nbsp;</span><a href="#" class="exp-rec">&#91;+&#93;</a>   
                                     </div>
                                     <div class="contRight">
                                         <p>Nome da categoria1</p>
                                     </div>    
                                 </div>
                                 <!-- itens by category -->
-                                <ul>
+                                <ul style="display:none">
                                     <li><a href="#titlePage">Link da subcategoria1</a></li>
                                     <li><a href="#titlePage">Link da subcategoria2</a></li>
                                     <li><a href="#titlePage">Link da subcategoria3</a></li>
@@ -115,12 +117,12 @@
                                     </div>
                                 </div>
                                 <!-- itens by category -->
-                                <!-- <ul>
+                                <ul style="display:none">
                                     <li><a href="#titlePage">Link da subcategoria1</a></li>
                                     <li><a href="#titlePage">Link da subcategoria2</a></li>
                                     <li><a href="#titlePage">Link da subcategoria3</a></li>
                                     <li><a href="#titlePage">Nome muito grande de uma subcategoria podendo ter até duas linhas</a></li>
-                                </ul> -->
+                                </ul>
                             </li>
                         </ol>
                         <hr>
@@ -130,14 +132,14 @@
                             <li class="">
                                 <div class="containerCategory">
                                     <div class="contLeft">
-                                        <span>&nbsp;</span><a href="#" class="exp-rec">&#91;-&#93;</a>   
+                                        <span>&nbsp;</span><a href="#" class="exp-rec">&#91;+&#93;</a>   
                                     </div>
                                     <div class="contRight">
                                         <p>Nome da categoria1</p>
                                     </div>    
                                 </div>
                                 <!-- itens by category -->
-                                <ul>
+                                <ul style="display:none">
                                     <li><a href="#titlePage">Link da subcategoria1</a></li>
                                     <li><a href="#titlePage">Link da subcategoria2</a></li>
                                     <li><a href="#titlePage">Link da subcategoria3</a></li>
@@ -152,14 +154,14 @@
                             <li class="">
                                 <div class="containerCategory">
                                     <div class="contLeft">
-                                        <span>&nbsp;</span><a href="#" class="exp-rec">&#91;-&#93;</a>   
+                                        <span>&nbsp;</span><a href="#" class="exp-rec">&#91;+&#93;</a>   
                                     </div>
                                     <div class="contRight">
                                         <p>Nome da categoria1</p>
                                     </div>    
                                 </div>
                                 <!-- itens by category -->
-                                <ul>
+                                <ul style="display:none">
                                     <li><a href="#titlePage">Link da subcategoria1</a></li>
                                     <li><a href="#titlePage">Link da subcategoria2</a></li>
                                     <li><a href="#titlePage">Link da subcategoria3</a></li>
@@ -169,14 +171,14 @@
                             <li class="">
                                 <div class="containerCategory">
                                     <div class="contLeft">
-                                        <span>&nbsp;</span><a href="#" class="exp-rec">&#91;-&#93;</a>   
+                                        <span>&nbsp;</span><a href="#" class="exp-rec">&#91;+&#93;</a>   
                                     </div>
                                     <div class="contRight">
                                         <p>Nome da categoria[1]</p>
                                     </div>    
                                 </div>
                                 <!-- itens by category -->
-                                <ul>
+                                <ul style="display:none">
                                     <li><a href="#titlePage">Link da subcategoria1</a></li>
                                     <li><a href="#titlePage">Nome muito grande de uma subcategoria podendo ter até duas linhas na plataforma mobile</a></li>
                                     <li><a href="#titlePage">Link da subcategoria3</a></li>
@@ -223,13 +225,13 @@
 
                         <!-- dinamic content -->
                         <div class="sumario row">
-                            <h2>Sumário</h2>
-                            <ul>
+                            <h3>Sumário</h3>
+                            <!-- <ul>
                                 <li><a href="#">Donec eu nibh varius, pretium nulla id</a></li>
                                 <li><a href="#">Suspendisse sodales elit eu gravida imperdiet</a></li>
                                 <li><a href="#">Etiam dignissim non erat vitae semper</a></li>
                                 <li><a href="#">Saiba mais</a></li>
-                            </ul>
+                            </ul> -->
                         </div>
 
                         <h2>Donec eu nibh varius, pretium nulla id</h2>
@@ -311,6 +313,7 @@
     <!-- Scripts -->
     <script>navigator.userAgent.match("MSIE")&&document.write('<script src="js/libs/jquery-1.9.1.min.js"><\/script>')||document.write('<script src="js/libs/jquery-2.0.2.min.js"><\/script>');</script>
     <!-- <script src="js/plugins.js"></script> -->
+    <!-- <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script> -->
     <script src="js/main.js"></script>
 </body>
 </html>
