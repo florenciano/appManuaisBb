@@ -118,33 +118,58 @@ $(function(){
 
      /* focus input
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */ 
-    $( ".inputPesquisa" ).focus();
+    // $( ".inputPesquisa" ).focus();
 
 
-     /* create summary
+     /* create list of the summary
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */ 
     var divSumario = $( ".sumario" );
-    var todosTitulos = $( ".contentMain h2" );
+    var todosTitulos = $( "h2" );
     var tagUl = $( "<ul>" );
     
-
-
     todosTitulos.each(function(){
-        var contentTagA = $(this).text();
+        // catch anchor after todosTitulos
+        var linkAncora = this.firstChild;
+
+        // creating tag <a>
         var tagA = $( "<a>" );
-            tagA.attr("href","#");
+            tagA.attr("href","#" + linkAncora.name);
+        var contentTagA = $(this).text();
         tagA.append(contentTagA);
         
+        // creating tag <li> and inserting content
         var tagLi = $( "<li>" );
         tagLi.append(tagA);
+
+        // inserting content in tag <ul>
         tagUl.append(tagLi);
         
     });
 
-    // inserting ul na DOM
+    // inserting content tag <ul> na divSumario
     divSumario.append(tagUl);
 
-    // pensar numa forma de recuperar a ancora de cada link
+     /* create anchor summary
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */ 
+    /*
+    * Obs: Rotina de programação para construir a âncora do sumário
+    * Mas a âncora pode ser incluída fora da div "imageContainer"
+    * Verificar o critério de alocação das âncoras para viabilizar
+    * a utilidade desta rotina.
+    */
+    divAnchorSumario.each(function(){
+        var divAnchorSumario = $( ".imageContainer" );
+        // creating tag <div>
+        var tagDiv = $( "<div>" ).addClass("voltarSumario", "fix");
+        // creating tag <a> and content
+        var tagAnchor = $( "<a>" );
+            tagAnchor.attr("href","#sumarioAncora");
+        var txtA = "Sumário";
+        // inserting in DOM
+        tagAnchor.text(txtA);
+        tagDiv.append(tagAnchor);        
+        divAnchorSumario.append(tagDiv);
+    });
 
 })(jQuery);
 
