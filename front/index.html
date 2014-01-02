@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="pt-br">
+<html class="no-js" lang="pt-br" ng-app="manuaisBB">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -21,7 +21,7 @@
     <script>window.html5 || document.write('<script src="js/libs/html5shiv.js"><\/script>')</script>
 <![endif]-->
 </head>
-<body>
+<body ng-controller="listControl">
 
     <div class="wrapper">
         <!-- top -->
@@ -40,163 +40,59 @@
                 <!-- area search -->
                 <section class="buscaMain c4">
                     <div class="inputSearch">
-                        <form id="busca" action="#">
+                        <form id="busca" action="index.html">
                             <label for="pesquisa"></label>
-                            <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Busca por título ou palavra-chave" data-type="search" disabled>
+                            
+                            <!-- INPUT SEARCH -->
+                            <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Busca por título ou palavra-chave" ng-model="query">
+                            
                             <p>
                                 <span class="interat"><a href="#" class="expandir">&#62;</a>Expandir tudo</span>
                                 <span class="interat"><a href="#" class="recolher">&#60;</a>Recolher tudo</span>
                             </p>  
                         </form>
                     </div>
+                    <nav role="navigation" class="navigationMain">
                     
-                    <nav role="navigation" class="navigationMain" data-role="listview" data-inset="true" data-filter="true">
-                        <h5>Blackboard</h5>
+                    <!-- CONTAINER REPETY -->
+                    <div ng-repeat="item in itensManual | filter:query">
+                        <!-- name of category -->
+                        <h5>{{item.assunto}}</h5>
                         <ol>
-                            <li class="">
+                            <li>
                                 <div class="containerCategory">
                                     <div class="contLeft">
                                         <span>&nbsp;</span><a href="#" class="exp-rec">[+]</a>   
                                     </div>
                                     <div class="contRight">
-                                        <p>Nome da categoria1</p>
+                                        <p>{{item.categoria}}</p>
                                     </div>    
                                 </div>
                                 <!-- itens by category -->
                                 <ul style="display:none">
-                                    <li><a href="http://minhaPagina.com.br#titlePage">Link da subcategoria1</a></li>
-                                    <li><a href="#titlePage">Link da subcategoria2</a></li>
-                                    <li><a href="#titlePage">Link da subcategoria3</a></li>
-                                    <li><a href="#titlePage">Link da subcategoria4</a></li>
-                                </ul>
-                            </li>
-                            <li class="">
-                                <div class="containerCategory">
-                                    <div class="contLeft">
-                                        <span>&nbsp;</span><a href="#" class="exp-rec">&#91;+&#93;</a>   
-                                    </div>
-                                    <div class="contRight">
-                                        <p>Nome da categoria1</p>
-                                    </div>    
-                                </div>
-                                <!-- itens by category -->
-                                <ul style="display:none">
-                                    <li><a href="#titlePage">Link da subcategoria1</a></li>
-                                    <li><a href="#titlePage">Link da subcategoria2</a></li>
-                                </ul>
-                            </li>
-                            <li class="selectedCategory">
-                                <div class="containerCategory">
-                                    <div class="contLeft">
-                                        <span>&nbsp;</span><a href="#" class="exp-rec">&#91;+&#93;</a>   
-                                    </div>
-                                    <div class="contRight">
-                                        <p>Nome da categoria1</p>
-                                    </div>    
-                                </div>
-                                <!-- itens by category -->
-                                <ul style="display:none">
-                                    <li><a href="#titlePage">Link da subcategoria1</a></li>
-                                    <li><a href="#titlePage">Link da subcategoria2</a></li>
-                                    <li><a href="#titlePage">Link da subcategoria3</a></li>
-                                    <li><a href="#titlePage">Link da subcategoria4</a></li>
+                                    <li class="sublist"><a href="http://minhaPagina.com.br#titlePage">{{item.subCategoria}}</a></li>
+                                    <li class="sublist"><a href="#titlePage">{{item.subCategoria2}}</a></li>
+                                    <li class="sublist"><a href="#titlePage">{{item.subCategoria3}}</a></li>
+                                    <li class="sublist"><a href="#titlePage">{{item.subCategoria4}}</a></li>
+                                    <li class="sublist"><a href="#titlePage">{{item.subCategoria5}}</a></li>
                                 </ul>
                             </li>
                         </ol>
-                        <hr>
-                        <!-- name of the category -->
-                        <h5>Catme</h5>
-                        <ol>
-                            <li class="">
-                                <div class="containerCategory">
-                                    <div class="contLeft">
-                                     <span>&nbsp;</span><a href="#" class="exp-rec">&#91;+&#93;</a>   
-                                    </div>
-                                    <div class="contRight">
-                                        <p>Link da subcategoria, recomenda-se até duas linhas.</p>
-                                    </div>
-                                </div>
-                                <!-- itens by category -->
-                                <ul style="display:none">
-                                    <li><a href="#titlePage">Link da subcategoria1</a></li>
-                                    <li><a href="#titlePage">Link da subcategoria2</a></li>
-                                    <li><a href="#titlePage">Link da subcategoria3</a></li>
-                                    <li><a href="#titlePage">Nome muito grande de uma subcategoria podendo ter até duas linhas</a></li>
-                                </ul>
-                            </li>
-                        </ol>
-                        <hr>
-                        <!-- name of the category -->
-                        <h5>Rubric</h5>
-                        <ol>
-                            <li class="">
-                                <div class="containerCategory">
-                                    <div class="contLeft">
-                                        <span>&nbsp;</span><a href="#" class="exp-rec">&#91;+&#93;</a>   
-                                    </div>
-                                    <div class="contRight">
-                                        <p>Nome da categoria1</p>
-                                    </div>    
-                                </div>
-                                <!-- itens by category -->
-                                <ul style="display:none">
-                                    <li><a href="#titlePage">Link da subcategoria1</a></li>
-                                    <li><a href="#titlePage">Link da subcategoria2</a></li>
-                                    <li><a href="#titlePage">Link da subcategoria3</a></li>
-                                    <li><a href="#titlePage">Link da subcategoria4</a></li>
-                                </ul>
-                            </li>
-                        </ol>
-                        <hr>
-                        <!-- name of the category -->
-                        <h5>cartilha de plágio</h5>
-                        <ol>
-                            <li class="">
-                                <div class="containerCategory">
-                                    <div class="contLeft">
-                                        <span>&nbsp;</span><a href="#" class="exp-rec">&#91;+&#93;</a>   
-                                    </div>
-                                    <div class="contRight">
-                                        <p>Nome da categoria1</p>
-                                    </div>    
-                                </div>
-                                <!-- itens by category -->
-                                <ul style="display:none">
-                                    <li><a href="#titlePage">Link da subcategoria1</a></li>
-                                    <li><a href="#titlePage">Link da subcategoria2</a></li>
-                                    <li><a href="#titlePage">Link da subcategoria3</a></li>
-                                    <li><a href="#titlePage">Link da subcategoria4</a></li>
-                                </ul>
-                            </li>
-                            <li class="">
-                                <div class="containerCategory">
-                                    <div class="contLeft">
-                                        <span>&nbsp;</span><a href="#" class="exp-rec">&#91;+&#93;</a>   
-                                    </div>
-                                    <div class="contRight">
-                                        <p>Nome da categoria[1]</p>
-                                    </div>    
-                                </div>
-                                <!-- itens by category -->
-                                <ul style="display:none">
-                                    <li><a href="#titlePage">Link da subcategoria1</a></li>
-                                    <li><a href="#titlePage">Nome muito grande de uma subcategoria podendo ter até duas linhas na plataforma mobile</a></li>
-                                    <li><a href="#titlePage">Link da subcategoria3</a></li>
-                                    <li><a href="#titlePage">Link da subcategoria4</a></li>
-                                </ul>
-                            </li>
-                        </ol>
-                        <hr>
-                        <!-- faq: category -->
-                        <ol>
-                            <li class="selectedCategory"><span>&nbsp;</span><a href="#titlePage" class="faqBusca">faq</a></li>
-                        </ol>
-                        <hr>
-                        <!-- more options -->
-                        <div class="outros">
-                            <p><a href="#titlePage">Não encontrou o que queria?</a></p>
-                        </div>
-                        <hr>
+                    </div>
+
+                    <!-- faq: category li class="selectedCategory" -->
+                    <hr>
+                    <ol>
+                        <li><span>&nbsp;</span><a href="#titlePage" class="faqBusca">faq</a></li>
+                    </ol>
+                    <hr>
+
+                    <!-- more options -->
+                    <div class="outros">
+                        <p><a href="#titlePage">Não encontrou o que queria?</a></p>
+                    </div>
+                    <hr>
+
                     </nav>
                 </section>
                 <!-- content main -->
@@ -214,7 +110,7 @@
                         <hr>
                         <!-- dinamic content -->
                         <div class="breadcrumb">
-                            <p>nomeCategoria <span>&#62;</span> nomeLinkCategoriaAcessada</p>
+                            <p><span class="nameCategory">nomeCategoria</span> <span>&#62;</span> nomeLinkCategoriaAcessada</p>
                         </div>
                     </section>
                     <!-- manual beging here -->
@@ -234,7 +130,7 @@
                             </ul> -->
                         </div>
 
-                        <h2><a name="Titulo1" class="ancora"></a>Donec eu nibh varius, pretium nulla id</h2>
+                        <h2><!-- <a name="Titulo1" class="ancora"></a> -->Donec eu nibh varius, pretium nulla id</h2>
                         <p>Maecenas aliquet elit in ultricies pretium. Quisque consequat vulputate imperdiet. Phasellus in augue ante. Phasellus et blandit mi. Maecenas lacus justo, viverra malesuada imperdiet et, imperdiet at risus. Fusce ut augue at nibh porttitor facilisis. Donec consectetur urna lorem, et porta mi convallis eget. Vestibulum quis lacinia dui. Vestibulum mattis aliquam magna eu elementum. Ut placerat purus nisi, dapibus tempus augue tempus a. Nunc ligula dolor, congue non convallis id, porta vel tortor. Nam vitae convallis sem, ac egestas metus. Maecenas scelerisque at lorem ut aliquam.</p>
 
                         <!-- dinamic content: excet img -->
@@ -243,12 +139,12 @@
                             <div class="boxDestaque" id="CatNumb01">
                                 <p>Aliquam sed semper purus, sit amet pretium erat. Praesent consectetur, erat nec <a href="#">dictum</a> tempus, tortor tortor sodales felis, id molestie arcu orci et velit. Suspendisse pharetra felis in urna pharetra, <strong>a dictum nisl vehicula</strong>. Nullam tincidunt ac sapien vel posuere. Morbi ut vulputate velit, vel rutrum.</p>
                             </div>
-                            <!-- <div class="voltarSumario fix">
+                            <div class="voltarSumario fix">
                                 <a href="#sumarioAncora">Sumário</a>
-                            </div> -->
+                            </div>
                         </div>
 
-                        <h2><a name="Titulo2" class="ancora">Suspence sodales elit eu gravida imperdiet</h2>
+                        <h2><!-- <a name="Titulo2" class="ancora"> -->Suspence sodales elit eu gravida imperdiet</h2>
                         <p>Tunc velit sapien, porta laoreet rhoncus vitae, suscipit et augue. Sed eu lectus vel orci sodales consectetur. Nunc ullamcorper urna     ut congue euismod. Cras tincidunt dictum nisl, sed dapibus felis consequat at. Phasellus facilisis leo ante, at consequat dolor feugiat eget. Pellentesque hendrerit mi sem, sit amet volutpat orci vestibulum in.</p>
 
                         <!-- dinamic content: excet img -->
@@ -257,17 +153,17 @@
                             <div class="boxDestaqueAdicional" id="CatNumb02">
                                 <p>In dui tellus, vehicula a venenatis non, facilisis id sapien. Proin auctor molestie odio et auctor. Cras non condimentum mauris. Etiam ultrices felis mauris, vel vehicula mauris molestie in. Aliquam quis bibendum nisi. Sed dapibus, erat a semper aliquam, orci dolor viverra neque.</p>
                             </div>
-                            <!-- <div class="voltarSumario fix">
+                            <div class="voltarSumario fix">
                                 <a href="#sumarioAncora">Sumário</a>
-                            </div> -->
+                            </div>
                         </div>
 
-                        <h2><a name="Titulo3" class="ancora">Etiam dignissim non erat vitae semper</h2>
+                        <h2><!-- <a name="Titulo3" class="ancora"> -->Etiam dignissim non erat vitae semper</h2>
                         <p>Cras tincidunt dictum nisl, sed dapibus felis consequat at. <strong>Phasellus facilisis</strong> leo ante, at consequat dolor feugiat eget. Pellentesque hendrerit mi sem, sit amet volutpat orci vestibulum in.</p>
                         <p>Nunc velit sapien, porta laoreet rhoncus vitae, suscipit et augue. Sed eu lectus vel orci sodales consectetur. Nunc ullamcorper urna ut congue euismod. Cras tincidunt dictum nisl, sed dapibus felis consequat at. Phasellus facilisis leo ante, at consequat dolor feugiat eget. Pellentesque hendrerit mi sem, sit amet volutpat orci vestibulum in.</p>
-                        <!-- <div class="voltarSumario fix">
+                        <div class="voltarSumario fix">
                             <a href="#sumarioAncora">Sumário</a>
-                        </div> -->
+                        </div>
                     </article>
 
                     <!-- section saiba mais -->
@@ -314,6 +210,11 @@
     <script>navigator.userAgent.match("MSIE")&&document.write('<script src="js/libs/jquery-1.9.1.min.js"><\/script>')||document.write('<script src="js/libs/jquery-2.0.2.min.js"><\/script>');</script>
     <!-- <script src="js/plugins.js"></script> -->
     <!-- <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script> -->
+    
+    
+    <script src="js/libs/angular.js"></script>
+    <script src="js/controllers.js"></script>
+    
     <script src="js/main.js"></script>
 </body>
 </html>
