@@ -152,29 +152,12 @@ $(function(){
     }
 
 
-
-
     /* EVENTS FOR clearList */
-    $(document).ready(function(){
-        clearList();
+    // DOMSubtreeModified
+    $( document ).on("ready", function(){
         expRec();
         selectedCat();
     });
-
-    // $( "#pesquisa" ).bind("keydown", "blur",function(){
-    //     clearList();
-    //     expRec();
-    //     selectedCat();
-
-    // });
-
-    /* EVENTS FOR expRec */
-    // $( ".navigationMain" ).on("change", function(){
-    //     clearList();
-    //      expRec();
-    //     selectedCat();
-    // });
-
 
 
      /* focus input
