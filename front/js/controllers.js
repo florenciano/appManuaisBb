@@ -83,9 +83,71 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	];
 });
 
-manuaisBB.controller('altMenu', function ($scope) {
-	$scope.init = function() {
-		
-	};
+// manuaisBB.controller('navMenu', function ($scope) {
 
-});
+// 	setTimeout(function() {
+
+// 		/* show and Hide the subcategories
+// 	    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// 		// declaration variables
+// 		var expandirRecolher = $( ".exp-rec" );
+// 	    var expandirTudo = $( ".expandir" );
+// 	    var recolherTudo = $( ".recolher" );
+// 	    var todasListas = $( "#listinha" );
+	        
+// 	    var linkMais = "[+]";
+// 	    var linkMenos = "[-]";
+// 	    var linkText = "";
+
+// 	    // show/hide each categories
+//         $scope.showHideAllCategory = function() {
+//             event.preventDefault();
+//             var lista = $(event.target).parent().parent().next();
+//             lista.toggle(400);
+            
+//             // call function replace text
+//             var linkText = linkMais; //[+]
+//             if(linkText.innerText == linkMais) {
+//                 linkText.innerText = linkMenos;
+//             } else if(linkText.innerText == linkMenos) {
+//                 linkText.innerText = linkMais;
+//             }
+//         }
+
+// 		$scope.showHideEachCategory = function() {
+// 		    /* show Each the categories */
+// 	        event.preventDefault();
+//             linkText.innerText = linkMais;
+			
+// 	        todasListas.each(function(event){
+// 	            $(this).toggle(400);
+// 	            if(linkText.innerText == linkMais) {
+// 	                linkText.innerText = linkMenos;
+// 	            } else if(linkText.innerText == linkMenos) {
+// 	                linkText.innerText = linkMais;
+// 	            }
+// 	        });
+
+// 	        // display Text
+// 	        // expandirRecolher.each(function(){
+// 	            // var linkText = linkMais; //[+]
+// 	        // });
+			
+		
+			
+// 			/* hide Each the categories */
+//         	// event.preventDefault();
+            
+//          //    todasListas.each(function(event){
+//          //        $(this).hide(400);
+//          //    });
+
+//          //    expandirRecolher.each(function(){
+//          //        var linkText = linkMenos; //[-]
+//          //        linkText.innerText = linkMais;
+//          //    });
+// 		}
+
+// 	}, 500);
+	
+// });

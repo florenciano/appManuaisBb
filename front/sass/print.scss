@@ -1,3 +1,417 @@
-/* Welcome to Compass. Use this file to define print styles.
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    GENERAL RECOMENDATIONS
+    1. Todas as cores em tons de cinza;
+	2. Sublinhar os links, e de preferência imprimir seus endereços;
+	3. Textos em pontos, e não em pixels;
+	4. Remover elementos desncessários;
+
+	a[href^="/"]:after {
+  	content: " (http://www.seusite.com.br" attr(href) ") ";
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/*  COMPASS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/////////////////////////////////////////////////////////////////////
+// Vars
+/////////////////////////////////////////////////////////////////////
+
+// fonts
+$font: "Tahoma", "arial", "sans-serif";
+
+@mixin font($fstyle, $fsize) {
+    font: $fstyle $fsize $font;
+}
+
+// colors
+$corDefault: #000000;
+$corTitle: #4b4b4b;
+$corTexto: #4b4b4b;
+$corDefaultDark: #3c3c3c;
+$corBorda: #c8c8c8;
+
+@mixin corLink() {
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 1pt dotted $corDefault;
+}
+
+@mixin corLinkUpBox($corDigitada) {
+    text-decoration: none;
+    color: $corDigitada;
+    display: inline-block;
+    border-bottom: 1pt dotted $corDefault;
+}
+
+// grids
+$grid: 30pt;
+$meioGrid: $grid / 2;
+
+/////////////////////////////////////////////////////////////////////
+// Mixin
+/////////////////////////////////////////////////////////////////////
+
+@mixin box-size($boxSize) {
+    box-sizing: $boxSize;
+    -o-box-sizing: $boxSize;
+    -ms-box-sizing: $boxSize;
+    -moz-box-sizing: $boxSize;
+    -webkit-box-sizing: $boxSize;
+}
+
+@mixin radius($radius: 3pt) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin settingsBoxImagem($widthBox, $topBox, $rightBox, $bottomBox, $leftBox) {
+    position: absolute;
+    width: $widthBox;
+    left: $leftBox;
+    top: $topBox;
+    right: $rightBox;
+    bottom: $bottomBox;
+}
+
+// page
+* {
+    @include box-size(border-box);
+}
+body { 
+    @include font(normal, 7.5pt);
+    color: $corTexto;
+    // considerando 1cm de margim
+    width: 27cm;
+
+}
+
+.wrapper {
+    border: none;
+    *border: 0;
+}
+
+/*
+ * Don't show links for images, or javascript/internal links
+ */
+.ir a:after,
+a[href^="javascript:"]:after,
+a[href^="#"]:after {
+    content: "";
+}
+
+pre,
+blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+}
+
+thead {
+    display: table-header-group; /* h5bp.com/t */
+}
+
+tr,
+img {
+    page-break-inside: avoid;
+}
+
+img {
+    max-width: 100% !important;
+}
+
+@page {
+    margin: 0.5cm;
+}
+
+p,
+h2,
+h3 {
+    orphans: 3;
+    widows: 3;
+}
+
+h2,
+h3 {
+    page-break-after: avoid;
+}
+
+/////////////////////////////////////////////////////////////////////
+// Gridiculous
+/////////////////////////////////////////////////////////////////////
+.row .row .c1,.row .row .c2,.row .row .c3,.row .row .c4,.row .row .c5,.row .row .c6,.row .row .c7,.row .row .c8,.row .row .c9,.row .row .c10,.row .row .c11,.row .row .c12{ 
+    width:100%; 
+    margin-bottom:15pt; 
+}
+
+.c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,.c11,.c12{
+    width:100%;
+    margin-right:0;
+    margin-left:0;
+    margin-bottom:0;
+}
+
+/////////////////////////////////////////////////////////////////////
+// Content
+/////////////////////////////////////////////////////////////////////
+
+/* HEADER */
+.logo {
+    margin: 0;
+    width: 23% !important;
+	display: inline-block;
+	float: left;
+    img { max-width: 100%; }
+}
+.titleHeader {
+    padding-bottom: 0;
+    width: 74% !important;
+	display: inline-block;
+    text-align: right;
+    float: left;
+    margin: $grid / 3;
+    .title {
+        @include font(bold, 2.8em);
+        color: $corTexto !important;
+        border-bottom: 2.25pt solid $corTexto;
+        width: 83.75%;
+        padding: 0 0 ($meioGrid / 4) 0;
+        margin: 0 0 0 8.13%;
+        text-align: center;
+    }
+    .description {
+        @include font(bold, 2em);
+        color: #fff !important;
+        background-color: $corTexto !important;
+        padding: ($meioGrid / 2) ($grid - 10);
+        height: auto;
+        margin: 0 8.13% 0 0;
+        display: inline-block;
+    }
+}
+#main{clear: both;}
+/* GERAL */
+.containerMain {
+    border-top: 1pt solid $corBorda;
+}
+/* NAVIGATION */
+.buscaMain { display: none; }
+
+// divise navigation and content [only mobile]
+.divisionMobile {
+    display: none;
+}
+
+/* CONTENT MAIN */
+// Header
+.headerContent  {
+    margin: ($meioGrid / 2) 0 0;
+    @include font(normal, 1.1em);
+    .cabecalho {
+        padding: 0;
+        display: block;
+        p { margin: 0 }
+        .imprimir {
+            display: none;
+        }
+    }
+    hr { display: none; }
+}
+// Content Main
+.mainContent .contentMain {
+    margin-top: $meioGrid / 2;
+	border-top: 1pt solid #c8c8c8;
+}
+.contentMain {
+    h1 {
+        @include font(bold, 2em);
+        line-height: 1em;
+        color: $corTitle;
+    }
+    h2 {
+        margin: $meioGrid 0 ($meioGrid / 4) 0;
+    }
+    h2 + p { margin-top: 0; }
+    p {
+        @include font(normal, 1.2em);
+        line-height: 1.6em;
+        a { @include corLink(); }
+    }
+}
+
+// sumario: content dinamic
+.sumario {
+    margin: $grid 0 !important;
+    h3 {
+        margin: 0 0 ($meioGrid / 4);
+        @include font(bold, 1.4em);
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            margin-bottom: ($meioGrid / 2);
+            &:last-child { margin-bottom: 0;}
+            a { @include corLink(); @include font(normal, 1.2em); }
+            a[href]:after {
+            	content: "" !important;
+            }
+        }
+    }
+}
+.voltarSumario {
+    display: none;
+}
+
+// content img and boxText
+.imageContainer {
+    display: block;
+    position: relative;
+
+    // highlighted box
+    .boxDestaque {
+        display: block;
+        @include radius($meioGrid/5);
+        background-color: #e6e6e6 !important;
+        border: 2.25pt solid $corTexto;
+        padding: $meioGrid / 2;
+        p { 
+            @include font(normal, 1.1em);
+            line-height: 1.5em;
+            margin: 0;
+        }
+    }
+    // highlighted box: Additional information
+    .boxDestaqueAdicional {
+        color: #fff;
+        p { 
+            @include font(normal, 1.1em);
+            line-height: 16px;
+            margin: 0;
+            padding: 0;
+            a { @include corLinkUpBox(#fff); }
+        }
+    }
+
+    /////////////////////////////////////////////////////////////
+    //  Here will be the position coordinates individual box
+    //
+    //  1] Nome of the category;
+    //  2] Number of the box;
+    //
+    /////////////////////////////////////////////////////////////
+    
+    // @include           settingsBoxImagem(width, top, right, bottom, left)
+    #CatNumb01 { @include settingsBoxImagem(60%, 180px, auto, auto, 75px) }
+    #CatNumb02 { @include settingsBoxImagem(70%, auto, auto, 40px, 20px) }
+}
+
+// saiba mais
+.saibaMais {
+    border: 1pt solid $corBorda;
+    @include radius();
+    padding: $meioGrid;
+    margin: $grid 0 0;
+    
+    h2 {
+        color: $corTexto;
+        margin: 0 0 ($meioGrid / 4) 0;
+        border-bottom: 1pt solid $corBorda;
+        @include font(bold, 1.2em);
+        line-height: 1.6em;
+    }
+
+    h4 {
+        margin: $meioGrid 0 0;
+        @include font(bold, 1.1em);
+        line-height: 1.7em;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style:  none;
+        li {
+            display: block;
+            // border: 1px solid $corDefault;
+            margin: 3pt 0;
+            padding: 0;
+            background: url("../img/ui/icoSaibaMaisManuais.png") 5px center no-repeat;
+            @include radius();
+
+            div {
+                display: table-cell;
+                vertical-align: middle;
+                padding: 0;
+                a { 
+                    @include corLink();
+                    @include font(normal, 1.2em);
+                    line-height: 1.4em;
+                }
+            }
+        }
+    }
+}
+
+
+/////////////////////////////////////////////////////////////////////
+// Helpers classs
+/////////////////////////////////////////////////////////////////////
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.fix:before,
+.fix:after {
+    content: " ";
+    display: table;
+}
+
+.fix:after {
+    clear: both;
+}
+
+.fix {
+    *zoom: 1;
+}
+
+/////////////////////////////////////////////////////////////////////
+// Resets
+/////////////////////////////////////////////////////////////////////
+
+* {
+    background: transparent !important;
+    color: #000 !important; /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    border-bottom: 1pt dotted $corDefault;
+}
+
+a[href]:after {
+    content: " (" attr(href) ")";
+}
+
+abbr[title]:after {
+    content: " (" attr(title) ")";
+}

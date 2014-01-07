@@ -29,7 +29,7 @@ placeholder = {
     }
 }
 
-// Doc ready
+// // Doc ready
 $(function(){
     
     /* Nice scroll
@@ -53,10 +53,15 @@ $(function(){
 
 });
 
-(function($){
+$(function(){
     /* ===============================================================
-       Page: local
+       GENERAL SCRIPTS
     ================================================================== */
+
+    /* focus input
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */ 
+    $( "#pesquisa" ).focus();
+
 
      /* show and Hide the subcategories
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -141,10 +146,10 @@ $(function(){
         var contentCategoria = document.querySelectorAll(".contRight p");
         
         for(var i = 0; i < contentCategoria.length; i++) {
-            var textoCategoria = contentCategoria[i].textContent;
+            var txt = contentCategoria[i].textContent;
             var li = contentCategoria[i].parentNode.parentNode.parentNode;
 
-            if (textoCategoria == catBreadcrumb) {
+            if (txt == catBreadcrumb) {
                 li.className="selectedCategory";
             }
 
@@ -152,71 +157,90 @@ $(function(){
     }
 
 
-    /* EVENTS FOR clearList */
+     /* create list of the summary and their respective anchors
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */ 
+    function listSumary() {
+        var divSumario = $( ".sumario" );
+        var anchor = $( ".voltarSumario" );
+        var todosTitulos = $( "h2" ); //incluso o saibaMais
+        var tagUl = $( "<ul>" );
+        var count = 1;
+        
+
+        // creating anchors...
+        function createAnchor() {
+
+            todosTitulos.each(function(){
+                // var divSum = $( ".imageContainer" );
+                // creating tag <div>
+                var tagDiv = $( "<div>" ).addClass("voltarSumario", "fix");
+                // creating tag <a> and content
+                var tagAnchor = $( "<a>" );
+                    tagAnchor.attr("href","#sumarioAncora");
+                var txtA = "Sumário";
+                // inserting in DOM
+                tagAnchor.text(txtA);
+                tagDiv.append(tagAnchor);        
+                // criando a <div> do sumário antes de cada <h2>
+                $(this).prev().append(tagDiv);
+            });
+
+            
+            // elimited index[0] of the anchor...
+            var allAnchor = $( ".voltarSumario" );
+            allAnchor[0].style.display="none";
+
+            // modify style of the last anchor [equival "saiba mais"]...
+            var lastAnchor = allAnchor.slice(-1)[0];
+            lastAnchor.style.marginTop="40px";
+        }
+
+        // creating list...
+        todosTitulos.each(function(){
+            var ancora = this.firstChild;
+
+            var tagA = $( "<a>" );
+            tagA.attr("href","#" + ancora.name);
+
+            var contentTagA = $(this).text();
+            tagA.append(contentTagA);
+            
+            // creating tag <li> and inserting content
+            var tagLi = $( "<li>" );
+            tagLi.append(tagA);
+
+            tagUl.append(tagLi);
+            
+        });
+
+        // condictional for exibition content in the DOM..
+        if(todosTitulos.length > 1) { //> 1 pq o titulo do saibaMais também é <h2>
+            divSumario.append(tagUl);
+            createAnchor();
+        } else {
+            divSumario.css("display","none");
+            anchor.css("margin-top","40px");
+        }
+    }
+
+    
+    /* ~~~~~~~~~~~~~~~~~~~~~~~ CALL FUNCTIONS ~~~~~~~~~~~~~~~~~~~~~~~ */
     // DOMSubtreeModified
+    
     $( document ).on("ready", function(){
+        // retira todas as <li> não usadas listada no menu
+        clearList();
+
+        // expande e recolhe todas as sublistas
         expRec();
+
+        // selecionada o item do menu de conforme indicado no breadcrumb
         selectedCat();
+
+        // cria o sumário e suas respectivas âncoras qdo houver títulos
+        listSumary();
     });
 
 
-     /* focus input
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */ 
-    // $( ".inputPesquisa" ).focus();
-
-
-
-     /* create list of the summary
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */ 
-    var divSumario = $( ".sumario" );
-    var todosTitulos = $( "h2" );
-    var tagUl = $( "<ul>" );
-    
-    todosTitulos.each(function(){
-        // catch anchor after todosTitulos
-        var linkAncora = this.firstChild;
-
-        // creating tag <a>
-        var tagA = $( "<a>" );
-            tagA.attr("href","#" + linkAncora.name);
-        var contentTagA = $(this).text();
-        tagA.append(contentTagA);
-        
-        // creating tag <li> and inserting content
-        var tagLi = $( "<li>" );
-        tagLi.append(tagA);
-
-        // inserting content in tag <ul>
-        tagUl.append(tagLi);
-        
-    });
-
-    // inserting content tag <ul> na divSumario
-    divSumario.append(tagUl);
-
-
-     /* create anchor summary
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */ 
-    /*
-    * Obs: Rotina de programação para construir a âncora do sumário
-    * Mas a âncora pode ser incluída fora da div "imageContainer"
-    * Verificar o critério de alocação das âncoras para viabilizar
-    * a utilidade desta rotina.
-    */
-    // divAnchorSumario.each(function(){
-    //     var divAnchorSumario = $( ".imageContainer" );
-    //     // creating tag <div>
-    //     var tagDiv = $( "<div>" ).addClass("voltarSumario", "fix");
-    //     // creating tag <a> and content
-    //     var tagAnchor = $( "<a>" );
-    //         tagAnchor.attr("href","#sumarioAncora");
-    //     var txtA = "Sumário";
-    //     // inserting in DOM
-    //     tagAnchor.text(txtA);
-    //     tagDiv.append(tagAnchor);        
-    //     divAnchorSumario.append(tagDiv);
-    // });
-    
-
-})(jQuery);
+});
 
