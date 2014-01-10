@@ -30,30 +30,30 @@ placeholder = {
 }
 
 // // Doc ready
-$(function(){
+// $(function(){
     
-    /* Nice scroll
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */ 
-    // $("body").mCustomScrollbar();
+//     /* Nice scroll
+//     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */ 
+//     // $("body").mCustomScrollbar();
 
-    // Only IE
-    if (navigator.userAgent.match("MSIE")) {
-        // Placeholder
-        placeholder.hold("input, textarea");
+//     // Only IE
+//     if (navigator.userAgent.match("MSIE")) {
+//         // Placeholder
+//         placeholder.hold("input, textarea");
 
-        // PIE (border-radius, gradient, box-shadow)
-        if (window.PIE) {
-            var elements = 'input, textarea, .round';
+//         // PIE (border-radius, gradient, box-shadow)
+//         if (window.PIE) {
+//             var elements = 'input, textarea, .round';
             
-            $(elements).each(function() {
-                PIE.attach(this);
-            });
-        }
-    }
+//             $(elements).each(function() {
+//                 PIE.attach(this);
+//             });
+//         }
+//     }
 
-});
+// });
 
-$(function(){
+// $(function(){
     /* ===============================================================
        GENERAL SCRIPTS
     ================================================================== */
@@ -65,63 +65,70 @@ $(function(){
 
      /* show and Hide the subcategories
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-    function expRec() {
-        var expandirRecolher = $( ".exp-rec" );
-        var expandirTudo = $( ".expandir" );
-        var recolherTudo = $( ".recolher" );
-        var todasListas = $( ".navigationMain li ul" );
-            
-        var linkMais = "[+]";
-        var linkMenos = "[-]";
-
-        /* show/hide each categories */
-        expandirRecolher.each(function(){
-           
-            $(this).click(function(event){
-                event.preventDefault();
-                var lista = $(event.target).parent().parent().next();
-                lista.toggle(400);
+    // setTimeout(function() {
+        
+        function expRec() {
+            var expandirRecolher = $( ".exp-rec" );
+            var expandirTudo = $( ".expandir" );
+            var recolherTudo = $( ".recolher" );
+            var todasListas = $( ".navigationMain li ul" );
                 
-                // call function replace text
-                var linkText = this; //[+]
-                if(linkText.innerText == linkMais) {
+            var linkMais = "[+]";
+            var linkMenos = "[-]";
+
+            /* show/hide each categories */
+            expandirRecolher.each(function(){
+               
+                $(this).click(function(event){
+                    event.preventDefault();
+                    var lista = $(event.target).parent().parent().next();
+                    lista.toggle(400);
+                    
+                    // call function replace text
+                    var linkText = this; //[+]
+                    if(linkText.innerText == linkMais) {
+                        linkText.innerText = linkMenos;
+                    } else if(linkText.innerText == linkMenos) {
+                        linkText.innerText = linkMais;
+                    }
+                });
+
+            });
+            /* show ALL the categories */
+            expandirTudo.click(function(event){
+                event.preventDefault();
+                
+                todasListas.each(function(event){
+                    $(this).show(400);
+                });
+
+                // display Text
+                expandirRecolher.each(function(){
+                    var linkText = this; //[+]
                     linkText.innerText = linkMenos;
-                } else if(linkText.innerText == linkMenos) {
+                });
+
+            });
+            /* hide ALL the categories */
+            recolherTudo.click(function(event){
+                event.preventDefault();
+                
+                todasListas.each(function(event){
+                    $(this).hide(400);
+                });
+
+                expandirRecolher.each(function(){
+                    var linkText = this; //[-]
                     linkText.innerText = linkMais;
-                }
-            });
+                });
 
-        });
-        /* show ALL the categories */
-        expandirTudo.click(function(event){
-            event.preventDefault();
-            
-            todasListas.each(function(event){
-                $(this).show(400);
             });
+        }
 
-            // display Text
-            expandirRecolher.each(function(){
-                var linkText = this; //[+]
-                linkText.innerText = linkMenos;
-            });
 
-        });
-        /* hide ALL the categories */
-        recolherTudo.click(function(event){
-            event.preventDefault();
-            
-            todasListas.each(function(event){
-                $(this).hide(400);
-            });
-
-            expandirRecolher.each(function(){
-                var linkText = this; //[-]
-                linkText.innerText = linkMais;
-            });
-
-        });
-    }
+        // expRec();
+    // }, 500);
+    
 
 
     /* Deleting <li> empty in the navigation search
@@ -223,24 +230,77 @@ $(function(){
         }
     }
 
-    
+
+    /* prints 
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */ 
+    function printManual() {
+        $('a#imprimir').click(function() {
+            window.print();
+            return false;
+        });
+    }
+
+
     /* ~~~~~~~~~~~~~~~~~~~~~~~ CALL FUNCTIONS ~~~~~~~~~~~~~~~~~~~~~~~ */
     // DOMSubtreeModified
-    
-    $( document ).on("ready", function(){
-        // retira todas as <li> não usadas listada no menu
-        clearList();
+    // expande e recolhe todas as sublistas
+       
 
-        // expande e recolhe todas as sublistas
-        expRec();
+    // $( document ).ready(function(){
+    //     // retira todas as <li> não usadas listada no menu
+    //     clearList();
 
-        // selecionada o item do menu de conforme indicado no breadcrumb
-        selectedCat();
+        
 
-        // cria o sumário e suas respectivas âncoras qdo houver títulos
-        listSumary();
-    });
+    //     // selecionada o item do menu de conforme indicado no breadcrumb
+    //     selectedCat();
+
+    //     // cria o sumário e suas respectivas âncoras qdo houver títulos
+    //     listSumary();
+
+    //     // imprimir manual
+    //     printManual();
+    // });
+
+    /* teste1 */
+    /*$('#pesquisa').keyup(function(){
+       var valThis = $(this).val().toLowerCase();
+        $('.navigationMain ol li').each(function(){
+            var text = $(this).text().toLowerCase();
+            // (text.indexOf(valThis) == 0) ? $(this).parent().show() : $(this).parent().hide();
+            // (text.indexOf(valThis) == 0) ? $( '.navigationMain ol' ).show() : $( '.navigationMain ol' ).hide();
+            if((text.indexOf(valThis) == 0)) {
+                console.log("ok", text.indexOf(valThis));
+            } else {
+                console.log("not", text.indexOf(valThis));
+            }
+       });  
+    });*/
+
+/* teste2 */
+// function listFilter(list) {
+//     $('#pesquisa')
+//     .change( function () {
+//         var filter = $(this).val();
+//         if(filter) {
+            
+//             // this finds all links in a list that contain the input,
+//             // and hide the ones not containing the input while showing the ones that do
+//             $(list).find("a:not(:Contains(" + filter + "))").parent().hide();
+//             $(list).find("a:Contains(" + filter + ")").parent().show();
+//         } else {
+//             $(list).find("li").show();
+//         }
+//         return false;
+//   })
+//     .keyup( function () {
+//         // fire the above change event after every letter
+//         $(this).change();
+//     });
+// }
 
 
-});
+// listFilter($(".navigationMain ol"));
+
+// });
 

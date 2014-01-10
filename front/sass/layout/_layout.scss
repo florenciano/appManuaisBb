@@ -1,0 +1,847 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    B- content
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+//  $settings SASS/COMPASS
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+/////////////////////////////////////////////////////////////////////
+// Vars
+/////////////////////////////////////////////////////////////////////
+
+// fonts
+$font: "Tahoma", "arial", "sans-serif";
+
+@mixin font($fstyle, $fsize) {
+    font: $fstyle $fsize $font;
+}
+
+// colors
+$corDefault: #cf1432;
+$corTitle: #3c3c3c;
+$corTexto: #4b4b4b;
+$corDefaultDark: #7b0012;
+$corBorda: #c8c8c8;
+$corSec01: #f57d8c;
+$corSec02: #e64b64;
+
+@mixin corLink() {
+    text-decoration: none;
+    color: $corDefault;
+    display: inline-block;
+    &:visited {
+        color: $corDefaultDark
+    }
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+@mixin corLinkUpBox($corDigitada) {
+    text-decoration: none;
+    color: $corDigitada;
+    display: inline-block;
+    &:visited {
+        color: $corDigitada;
+    }
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// grids
+$grid: 40px;
+$meioGrid: $grid / 2;
+
+
+/////////////////////////////////////////////////////////////////////
+// Mixin
+/////////////////////////////////////////////////////////////////////
+
+@mixin bShadow($typeShadow, $lenH,$lenV,$blur,$spread,$rgba) {
+    box-shadow: $typeShadow $lenH $lenV $blur $spread $rgba;
+    -o-box-shadow: $typeShadow $lenH $lenV $blur $spread $rgba;
+    -ms-box-shadow: $typeShadow $lenH $lenV $blur $spread $rgba;
+    -moz-box-shadow: $typeShadow $lenH $lenV $blur $spread $rgba;
+    -webkit-box-shadow: $typeShadow $lenH $lenV $blur $spread $rgba;
+}
+
+@mixin box-size($boxSize) {
+    box-sizing: $boxSize;
+    -o-box-sizing: $boxSize;
+    -ms-box-sizing: $boxSize;
+    -moz-box-sizing: $boxSize;
+    -webkit-box-sizing: $boxSize;
+}
+
+@mixin radius($radius: 4px) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin transition($transition) {
+    transition: $transition;
+    -o-transition: $transition;
+    -ms-transition: $transition;
+    -moz-transition: $transition;
+    -webkit-transition: $transition;
+}
+
+@mixin settingsBoxImagem($widthBox, $leftBox, $topBox, $rightBox, $bottomBox) {
+    position: absolute;
+    width: $widthBox;
+    left: $leftBox;
+    bottom: $bottomBox;
+    top: $topBox;
+    right: $rightBox;
+}
+
+/////////////////////////////////////////////////////////////////////
+// Resets
+/////////////////////////////////////////////////////////////////////
+html, body { height: 100%;}
+
+* {
+    @include box-size(border-box);
+    @include transition(all .25s ease);
+    // Trasition removed in all style, it's not a good pratice
+}
+body { 
+    @include font(normal, 10px);
+    color: $corTexto;
+}
+
+.wrapper {
+    background-color: #fff;
+    border: 1px solid $corBorda;
+}
+
+// remove transitions of the subList in navigation
+ol {
+    li {
+        ul {
+            @include transition(none !important);
+        }
+    }
+    
+}
+
+/*  $Media Queries
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Media query MOBILE
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@media only screen and (min-width:160px) {
+    .logo {
+        margin: ($meioGrid /2) 0 auto;
+        img {
+            max-width: $grid * 5;
+        }
+    }
+    .titleHeader {
+        text-align: center;
+        padding-bottom: $meioGrid;
+        .title {
+            @include font(bold, 1.8em);
+            margin: 0;
+        }
+        .description {
+            @include font(bold, 1.2em);
+            color: #fff;
+            display: inline-block;
+            background-color: $corDefault;
+            height: $meioGrid + 2;
+            line-height: $meioGrid + 2;
+            padding: 0 $meioGrid;
+            margin: ($meioGrid/4) 0 0;
+        }
+    }
+    // geral
+    .containerMain {
+        border-top: 1px solid $corBorda;
+        padding-top: $meioGrid;
+    }
+    // busca: search
+    .inputSearch {
+        input[type="text"] {
+            color: $corTexto;
+            width: 100%;
+            height: $grid - 8;
+            padding: 0 1em;
+            @include radius();
+            @include font(normal, 1.2em);
+            @include bShadow(inset, 0, 0, 5px, 0, rgba(0,0,0,0.25));
+            border: 1px solid $corBorda;
+            &:focus {
+                @include bShadow(inset, 0, 0, 5px, 0, rgba(207,20,50,0.25));
+                // only application
+                border: 1px solid $corDefault;
+            }
+        }
+        
+        p { line-height: $meioGrid + 2;}
+
+        // btn expandir e recolher
+        .interat {
+            margin: 0 .5em;
+            a.expandir {
+                height: $meioGrid + 4;
+                display: inline-block;
+                width: $meioGrid + 4;
+                text-indent: -9999px;
+                margin-right: .5em;
+                background: url("../img/ui/rec-exp.png") -1px center no-repeat;
+            }
+
+            a.recolher {
+                @extend .expandir;
+                background: url("../img/ui/rec-exp.png") -26px center no-repeat;
+            }
+        }
+    }
+    // navigation
+    .navigationMain {
+        margin-top: $meioGrid;
+
+        .selectedCategory {
+            border: 1px solid #cf1432;
+            padding: ($meioGrid / 4) 0;
+        }
+
+        .selectedCategory {
+            border: 1px solid $corDefault;
+        }
+
+        h5 {
+            clear: both;
+            margin: 0;
+            @include font(bold, 1.4em);
+            display: block;
+            padding: ($meioGrid - 12) 0 ($meioGrid - 12) $grid ;
+            
+            // altura do icone
+            // height: $grid - 8;
+            min-height: $grid - 8;
+            background: url("../img/ui/icoCategoryBusca.png") left center no-repeat;
+            
+        }
+        ol, ul {
+            margin: 0 0 ($meioGrid / 4) 0;
+            padding: 0;
+            list-style: none;
+            display: block;
+            width: 100%;
+            float: left;
+
+            li {
+                margin: 2px 0;
+                padding: 0;
+                float: left;
+                width: 100%;
+                @include radius();
+
+                // add header line
+                .containerCategory {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    span {
+                        display: inline-block;
+                        height: 100%;
+                        min-height: 100%;
+                        padding: ($meioGrid / 4) 0;
+                        float: left;
+                        @include font(normal, 1.2em);
+                    }
+                    // btn [+]
+                    span.click {
+                        width: 15%;
+                        max-width: ($grid - 8);
+                        text-align: center;
+                        a {
+                            @include corLink();
+                            &:visited {
+                                color: $corDefault;
+                            }
+                        }
+                    }
+                    // nome da categoria alimentado via angularjs
+                    span.nameCategory { margin-left: .75em; width: 85%;}
+                }
+                a {
+                    margin: 0;
+                    padding: 0 ($meioGrid / 4);
+                    text-decoration: none;
+                    @include font(normal, 1em);
+                    display: inline-block;
+                    height: 100%;
+                }
+                // nivel 2 of the list
+                ul {
+                    clear: both;
+                    // list of the all manual by category
+                    li {
+                        border: none;
+                        margin: ($meioGrid / 4) 0;
+                        min-height: 1em;
+                        display: block;
+                        line-height: 1em;
+                        padding: 0;
+                        
+                        // name of manual
+                        a {
+                            @include font(normal, 1.1em);
+                            @include corLink();
+                            margin: 0;
+                            padding: 0 0 0 ($grid + 2);
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        
+        // qdo não houver categorias
+        .noCategory {
+            li {
+                a {
+                    @include corLink();
+                    @include font(normal, 1.1em);
+                    margin-left: $grid + 2;
+                    padding: ($meioGrid / 10) 0;
+                }
+            }
+        }
+
+        hr {
+            clear: both;
+            margin: ($meioGrid / 2) 0;
+            border-top: 1px solid $corBorda;
+        }
+
+        // faq
+        .faqBusca {
+            margin-top: ($meioGrid / 2);
+            display: block;
+            padding: ($meioGrid / 4) 0;
+            float: left;
+            width: 100%;
+            border-top: 1px solid $corBorda;
+            border-bottom: 1px solid $corBorda;
+            h5 {
+                a {
+                    @include corLink();
+                    &:visited {
+                        color: $corDefault;
+                    }  
+                }
+            }
+        }
+        
+        // did not find what i wanted
+        .outros {
+            clear: both;
+            padding: $meioGrid 0;
+            text-align: center;
+            h6 {
+                margin: 0;
+                a {
+                    @include corLink();
+                    @include font(normal, 12px);
+                }    
+            }
+        }
+    }
+
+    // divise navigation and content [only mobile]
+    .divisionMobile {
+        height: 20px;
+        display: block;
+        background: url("../img/ui/separatedMenu.gif") 0 0 repeat-x;
+        border-bottom: 1px solid $corBorda;
+        border-top: 1px solid $corBorda;
+    }
+
+    // Header Content Main
+   .headerContent  {
+        margin: 0;
+        @include font(normal, 1.1em);
+        .cabecalho {
+            padding: $meioGrid 0;
+            display: block;
+            p { margin: 0 }
+            .imprimir {
+                float: right;
+                span {
+                    height: 15px;
+                    width: $meioGrid;
+                    background: url("../img/ui/imprimir.png") center center no-repeat;
+                    margin-right: $meioGrid / 5;
+                    display: inline-block;
+                    text-indent: -9999px;
+                }
+                a { @include corLink(); }
+            }
+        }
+
+        hr { margin: 0; }
+    }
+
+    // Content Main
+    .mainContent .contentMain {
+        margin-top: $meioGrid + 10;
+    }
+    .contentMain {
+        h1 {
+            @include font(bold, 2em);
+            line-height: 1em;
+            color: $corTitle;
+        }
+        h2 {
+            margin: $meioGrid 0 ($meioGrid / 4) 0;
+        }
+        h2 + p { margin-top: 0; }
+        p {
+            @include font(normal, 1.2em);
+            line-height: 1.6em;
+            a { @include corLink(); }
+        }
+    }
+
+    // sumario: content dinamic
+    .sumario {
+        margin: $grid 0 !important;
+        h3 {
+            margin: 0 0 ($meioGrid / 4);
+            @include font(bold, 1.4em);
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li {
+                margin-bottom: ($meioGrid / 2);
+                &:last-child { margin-bottom: 0;}
+                a { @include corLink(); @include font(normal, 1.2em); }
+            }
+        }
+    }
+    .voltarSumario {
+        display: block;
+        padding-bottom: $meioGrid;
+        margin-top: $meioGrid;
+        a {
+            float: right;
+            @include corLink();
+            @include font(normal, 1.1em);
+            &:before {
+                content: "";
+                height: 1.2em;
+                width: 2em;
+                display: inline-block;
+                background: url("../img/ui/sumario.png") center center no-repeat;
+            }
+        }
+    }
+
+    // content img and boxText
+    .imageContainer {
+        display: block;
+        position: relative;
+
+        // highlighted box
+        .boxDestaque {
+            display: block;
+            @include radius($meioGrid/5);
+            background-color: #e6e6e6;
+            border: 3px solid $corDefault;
+            padding: $meioGrid / 2;
+            p { 
+                @include font(normal, 1.1em);
+                line-height: 1.5em;
+                margin: 0;
+            }
+        }
+        // highlighted box: Additional information
+        .boxDestaqueAdicional {
+            @extend .boxDestaque;
+            background-color: $corDefaultDark;
+            border: 0;
+            color: #fff;
+            p { 
+                line-height: 16px;
+                margin: 0;
+                a { @include corLinkUpBox($corSec01); }
+            }
+        }
+
+    }
+
+    // saiba mais
+    .saibaMais {
+        border: 1px solid #f57d8c;
+        @include radius();
+        padding: $meioGrid;
+        margin: 0 0 $meioGrid !important;
+        
+        h2 {
+            color: #e64b64;
+            margin: 0 0 ($meioGrid / 4) 0;
+            border-bottom: 1px solid #e64b64;
+            @include font(bold, 1.2em);
+            line-height: 1.6em;
+        }
+
+        h4 {
+            margin: $meioGrid 0 ($meioGrid / 2);
+            @include font(bold, 1.1em);
+            line-height: 1.7em;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style:  none;
+            li {
+                display: block;
+                height: $grid +5;
+                // border: 1px solid $corDefault;
+                margin: ($meioGrid / 4) 0;
+                padding: 0;
+                background: url("../img/ui/icoSaibaMaisManuais.png") 5px center no-repeat;
+                @include radius();
+
+                div {
+                    height: $grid +5;
+                    display: table-cell;
+                    vertical-align: middle;
+                    padding: 0 ($meioGrid / 2) 0 ($grid + 10);
+                    a { 
+                        @include corLink();
+                        @include font(normal, 1.2em);
+                        line-height: 1.4em;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+// rwd convert in 100%
+@media only screen and (max-width: 767px) {
+    .row .row .c1,.row .row .c2,.row .row .c3,.row .row .c4,.row .row .c5,.row .row .c6,.row .row .c7,.row .row .c8,.row .row .c9,.row .row .c10,.row .row .c11,.row .row .c12{ 
+        width:100%; 
+        margin-bottom:20px; 
+    }
+    // .row .row > div:last-child{ margin-bottom:0 !important }
+    
+    .c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,.c11,.c12{
+        width:100%;
+        margin-right:0;
+        margin-left:0;
+        margin-bottom:0;
+    }
+}
+
+/* Media query TABLET
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@media handheld, only screen and (min-width: 768px) and (max-width: 1024px), only screen  and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:portrait) {
+
+    /* 1-INDEX */
+    // wrapper
+    .wrapper { margin: $grid auto; }
+
+    // contentMain
+    .containerMain { padding-top: 0; }
+    .mainContent { border-left: 1px solid $corBorda; }
+
+    // header
+    .wrapper > header { padding: $meioGrid 0; }
+    .logo {
+        margin: 0;
+        img { max-width: 100%; }
+    }
+    .titleHeader { 
+        padding-bottom: 0;
+        .title {
+            @include font(bold, 2.35em);
+            border-bottom: 3px solid $corDefault;
+            width: 78%;
+            padding: 0 0 ($meioGrid / 4) 0;
+            margin: 0 0 0 $meioGrid;
+        }
+        .description {
+            @include font(bold, 1.6em);
+            color: #fff;
+            padding: ($meioGrid / 2) ($grid - 10);
+            height: auto;
+            margin: -3px 0 0 ($meioGrid * 11);
+        }
+    }
+
+    // navigation
+    .buscaMain { padding-top: $meioGrid; }
+    .inputSearch {
+        input[type="text"],
+        input [type="text"]:focus {
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+        }
+        input[type="text"] {
+            padding: 0 .5em;
+            @include font(normal, 1.1em);
+        }
+        p {
+            text-align: center;
+        }
+        .interat {
+            margin: 0 .5em 0 0;
+        }
+    }
+    
+    .navigationMain {
+        h5 {
+            padding: ($meioGrid - 12) 0 ($meioGrid - 12)  $grid ;
+            @include font(bold, 1.2em);
+        }
+        hr { margin: ($meioGrid / 4) 0;}
+        ol, ul {
+
+            li {
+                margin: ($meioGrid / 10) 0;
+                padding: 0;
+                .containerCategory {
+                    span.nameCategory {
+                        max-width: 180px;
+                    }
+                }
+                ul {
+                    margin-bottom:  $meioGrid / 2;
+                    li {
+                        margin: ($meioGrid / 4) 0;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                        a { margin-bottom:  0; }
+                    }
+                }
+            }
+        }
+
+        .noCategory {
+            margin: 0;
+            li {
+                a {
+                    margin-left: $meioGrid / 2;
+                }
+            }
+        }
+    }
+
+    .divisionMobile {
+        display: none;
+    }
+
+    .imageContainer {
+
+        // class for align img
+        .imgLeft { margin-left: 0; }
+        .imgRight { margin-right: 0; }
+
+    }
+    // saibaMais
+    .saibaMais {
+        ul {
+            li { margin-bottom: 0; }
+        }
+    }
+
+}
+
+/* Media query DESKTOP
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@media only screen and (min-width: 1024px) and (max-width: 1920px) {
+
+    /* 1-INDEX */
+    // wrapper
+    .wrapper { margin: $grid auto; }
+
+    .containerMain { padding-top: 0;}
+
+    // contentMain
+    .contentMain { 
+        padding-top: 0;
+        h1 {
+            @include font(bold, 2.2em);
+            margin-bottom: 0;
+        }
+        h1 + p {
+            margin-top: 0; 
+        }
+        h2 {
+            @include font(bold, 1.4em);
+        }
+    }
+    .mainContent { border-left: 1px solid $corBorda; padding: 0 $meioGrid;}
+
+    // header
+    .wrapper > header { padding: $meioGrid 0; }
+    .logo {
+        margin: 0;
+        img { max-width: 100%; }
+    }
+    .titleHeader {
+        text-align: right;
+        margin-top: $meioGrid / 2;        
+        .title {
+            @include font(bold, 2.8em);
+            border-bottom: 3px solid $corDefault;
+            width: 69%;
+            padding: 0 0 ($meioGrid / 4) 0;
+            margin: 0 0 0 8.13%;
+        }
+        .description {
+            @include font(bold, 2em);
+            color: #fff;
+            padding: ($meioGrid / 2) ($grid - 10);
+            height: auto;
+            margin: -3px 8.13% 0 0;
+        }
+    }
+
+    // navigation
+    .buscaMain { padding: $grid $meioGrid 0; }
+    .inputSearch {
+        input[type="text"],
+        input [type="text"]:focus {
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+        }
+        input[type="text"] {
+            padding: 0 1em;
+            @include font(normal, 1.1em);
+        }
+        p {
+            text-align: left;
+            margin-bottom: $grid - 10;
+        }
+        .interat {
+            margin: 0 .5em 0 ($meioGrid / 2);
+        }
+    }
+    
+    ////////////////////////////////////////////////////////////////////
+    .navigationMain {
+        h5 {
+            // padding: 0;
+            // margin: ($meioGrid - 5) 0
+        }
+        hr { margin: ($meioGrid - 5) 0;}
+        ol, ul {
+
+            li {
+                // margin: ($meioGrid / 4) 0;
+                // padding: 0;
+                .containerCategory {
+                    // height: $grid;
+                    .contLeft {
+                        width: 20%;
+                        a { margin: 0 0 0 ($meioGrid / 4); padding: 0; }
+                    }
+                    .contRight {
+                        width: 80%;
+                        height: 100%;
+                        overflow: hidden;
+                        p { padding-left: ($meioGrid / 10); }
+                    }
+                }
+                ul {
+                    margin: ($meioGrid / 4) 0;
+                    li {
+                        margin: 0 0 ($meioGrid / 2) 0;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                        a { padding-left: $grid + 2; }
+                    }
+                }
+            }
+        }
+        .noCategory {
+            margin: 0;
+            li {
+                a {
+                    margin-left: $meioGrid / 2;
+                }
+            }
+        }
+        .outros {
+
+        }
+    }
+    .faqBusca { 
+        h5 {
+          a {
+            margin-left: $meioGrid - 5 !important;
+            }  
+        }
+    }
+    ///////////////////////////////////////////////////////////////////////////
+    .divisionMobile {
+        display: none;
+    }
+
+    .imageContainer {
+
+        // class for align of the img
+        .imgLeft { margin-left: 0; }
+        .imgRight { margin-right: 0; }
+    }
+    // saibaMais
+    .saibaMais {
+        ul {
+            li { margin-bottom: 0; }
+        }
+    }
+
+}
+
+/* $Helper classes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.fix:before,
+.fix:after {
+    content: " ";
+    display: table;
+}
+
+.fix:after {
+    clear: both;
+}
+
+.fix {
+    *zoom: 1;
+}

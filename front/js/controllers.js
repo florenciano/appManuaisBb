@@ -6,7 +6,7 @@ var manuaisBB = angular.module('manuaisBB', []);
 manuaisBB.controller('listaMenu', function ($scope) {
 	$scope.itensManual = [
 	// ASSUNTO : BLACKBOARD
-	{	'assunto'				: 'blackboard',
+	{	'assunto'				: 'Blackboard',
 		'categoria'				: 'Quisque eleifend',
 		'subCategoria'			: 'Consectetur adipiscing elit',
 		'linkSubCategoria'		: '/blackboard/sub1',
@@ -56,7 +56,7 @@ manuaisBB.controller('listaMenu', function ($scope) {
 		'linkSubCategoria5'		: '/blackboard/sub5'
 	},
 	// ASSUNTO : CATME
-	{	'assunto'				: 'catme',
+	{	'assunto'				: 'CATME',
 		'categoria'				: 'Link da subCategoria, recomenda-se até sessenta caracteres',
 		'linkSubCategoria'		: '/catme/sub',
 
@@ -67,7 +67,7 @@ manuaisBB.controller('listaMenu', function ($scope) {
 		'linkSubCategoria3'		: '/catme/sub3'
 	},
 	// ASSUNTO : RUBRIC
-	{	'assunto'				: 'rubric',
+	{	'assunto'				: 'Rubric',
 		'categoria'				: 'Vestibulum facilisis tincidunt odio',
 		'linkSubCategoria'		: '/rubric/sub',
 
@@ -81,73 +81,66 @@ manuaisBB.controller('listaMenu', function ($scope) {
 		'linkSubCategoria4'		: '/rubric/sub4'
 	}
 	];
-});
 
-// manuaisBB.controller('navMenu', function ($scope) {
-
-// 	setTimeout(function() {
-
-// 		/* show and Hide the subcategories
-// 	    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-// 		// declaration variables
-// 		var expandirRecolher = $( ".exp-rec" );
-// 	    var expandirTudo = $( ".expandir" );
-// 	    var recolherTudo = $( ".recolher" );
-// 	    var todasListas = $( "#listinha" );
-	        
-// 	    var linkMais = "[+]";
-// 	    var linkMenos = "[-]";
-// 	    var linkText = "";
-
-// 	    // show/hide each categories
-//         $scope.showHideAllCategory = function() {
-//             event.preventDefault();
-//             var lista = $(event.target).parent().parent().next();
-//             lista.toggle(400);
-            
-//             // call function replace text
-//             var linkText = linkMais; //[+]
-//             if(linkText.innerText == linkMais) {
-//                 linkText.innerText = linkMenos;
-//             } else if(linkText.innerText == linkMenos) {
-//                 linkText.innerText = linkMais;
-//             }
-//         }
-
-// 		$scope.showHideEachCategory = function() {
-// 		    /* show Each the categories */
-// 	        event.preventDefault();
-//             linkText.innerText = linkMais;
-			
-// 	        todasListas.each(function(event){
-// 	            $(this).toggle(400);
-// 	            if(linkText.innerText == linkMais) {
-// 	                linkText.innerText = linkMenos;
-// 	            } else if(linkText.innerText == linkMenos) {
-// 	                linkText.innerText = linkMais;
-// 	            }
-// 	        });
-
-// 	        // display Text
-// 	        // expandirRecolher.each(function(){
-// 	            // var linkText = linkMais; //[+]
-// 	        // });
-			
+	$scope.showAllCat = function() {
+		// declaration variables...
+		var todasListas = $( ".subCat" );
+		var expandirRecolher = $( ".exp-rec" );
+		var expandirTudo = $( ".expandir" );
+        var recolherTudo = $( ".recolher" );
 		
-			
-// 			/* hide Each the categories */
-//         	// event.preventDefault();
-            
-//          //    todasListas.each(function(event){
-//          //        $(this).hide(400);
-//          //    });
+		var linkMais = "[+]";
+        var linkMenos = "[-]";
 
-//          //    expandirRecolher.each(function(){
-//          //        var linkText = linkMenos; //[-]
-//          //        linkText.innerText = linkMais;
-//          //    });
-// 		}
+		todasListas.each(function(event){
+			$(this).show(400);
+		});
 
-// 	}, 500);
-	
-// });
+		expandirRecolher.each(function(){
+            var linkText = $(this); //[+]
+            linkText.text(linkMenos);
+        });
+		
+		event.preventDefault();
+	}
+
+	$scope.hideAllCat = function() {
+		// declaration variables...
+		var todasListas = $( ".subCat" );
+		var expandirRecolher = $( ".exp-rec" );
+		var expandirTudo = $( ".expandir" );
+        var recolherTudo = $( ".recolher" );
+		
+		var linkMais = "[+]";
+        var linkMenos = "[-]";
+		
+		todasListas.each(function(event){
+			$(this).hide(400);
+		});
+
+		expandirRecolher.each(function(){
+            var linkText = $(this); //[+]
+            linkText.text(linkMais);
+        });
+
+		event.preventDefault();
+	}
+
+	$scope.showHideCat = function($event) {
+		// declaration variables...
+		var todasListas = $( ".subCat" );
+		var expandirRecolher = $( ".exp-rec" );
+		var expandirTudo = $( ".expandir" );
+        var recolherTudo = $( ".recolher" );
+		
+		var linkMais = "[+]";
+        var linkMenos = "[-]";
+
+        var lista = $(event.target).parent().parent().next();
+        lista.each(function(){
+        	$(this).toggle(400);
+        });
+
+        $event.preventDefault();
+	}
+});

@@ -7,9 +7,8 @@
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width">
 
-<!-- <link rel="stylesheet" type="text/css" media="screen" href="css/main.css"> -->
-<link rel="stylesheet" type="text/css" media="screen" href="css/print.css">
 <link rel="stylesheet" type="text/css" media="print" href="css/print.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
 
 <!--[if IE]>
  <link href="css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -37,38 +36,33 @@
         <div id="main" role="main" class="fix wfull">
             <div class="containerMain row">
                 <!-- area search -->
-                <section class="buscaMain c4">
+                <section class="buscaMain c4" ng-controller="listaMenu">
                     <div class="inputSearch">
                         <form id="busca" action="">
                             <label for="pesquisa"></label>
-                            
                             <!-- INPUT SEARCH -->
                             <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Busca por título ou palavra-chave" ng-model="query">
                             
                             <p>
-                                <span class="interat"><a href="#" class="expandir">&#62;</a>Expandir tudo</span>
-                                <span class="interat"><a href="#" class="recolher">&#60;</a>Recolher tudo</span>
+                                <span class="interat"><a href="#" class="expandir" ng-click="showAllCat()">&#62;</a>Expandir tudo</span>
+                                <span class="interat"><a href="#" class="recolher" ng-click="hideAllCat()">&#60;</a>Recolher tudo</span>
                             </p>  
                         </form>
                     </div>
 
-                    <nav role="navigation" class="navigationMain" ng-controller="listaMenu">
-                    <!-- CONTAINER REPETY -->
+                    <nav role="navigation" class="navigationMain">
+
                     <div ng-repeat="item in itensManual | filter:query">
-                        <!-- name of category -->
                         <h5>{{item.assunto}}</h5>
                         <ol>
                             <li>
                                 <div class="containerCategory">
-                                    <div class="contLeft">
-                                        <span>&nbsp;</span><a href="#" class="exp-rec">[+]</a>   
-                                    </div>
-                                    <div class="contRight">
-                                        <p>{{item.categoria}}</p>
-                                    </div>    
+                                    <span class="click">
+                                        <a href="#" class="exp-rec" ng-click="showHideCat($event)">[+]</a>
+                                    </span>   
+                                    <span class="nameCategory">{{item.categoria}}</span>
                                 </div>
-                                <!-- itens by category -->
-                                <ul id="subCat" style="display:none">
+                                <ul class="subCat" style="display:none">
                                     <li class="sublist"><a href="{{item.linkSubCategoria}}">{{item.subCategoria}}</a></li>
                                     <li class="sublist"><a href="{{item.linkSubCategoria2}}">{{item.subCategoria2}}</a></li>
                                     <li class="sublist"><a href="{{item.linkSubCategoria3}}">{{item.subCategoria3}}</a></li>
@@ -78,19 +72,6 @@
                             </li>
                         </ol>
                     </div>
-
-                    <!-- faq: category li class="selectedCategory" -->
-                    <hr>
-                    <ol>
-                        <li><span>&nbsp;</span><a href="#titlePage" class="faqBusca">faq</a></li>
-                    </ol>
-                    <hr>
-
-                    <!-- more options -->
-                    <div class="outros">
-                        <p><a href="#titlePage">Não encontrou o que queria?</a></p>
-                    </div>
-                    <hr>
 
                     </nav>
                 </section>
@@ -103,7 +84,7 @@
                         <div class="cabecalho fix">
                             <p>
                                 <span><strong>Atualizado: </strong>01/01/2014</span>
-                                <span class="imprimir"><span>i</span><a href="#">Imprimir Manual</a></span>
+                                <span class="imprimir"><span>i</span><a href="#" id="imprimir">Imprimir Manual</a></span>
                             </p>
                         </div>
                         <hr>
@@ -123,15 +104,15 @@
 
                         <div class="sumario row">
                             <h3><a name="sumarioAncora"></a>Sumário</h3>
-                            <!-- dinamic content: ul -->
+                            <!-- list of summary here -->
                         </div>
 
                         <h2><a name="Titulo1" class="ancora"></a>Donec eu nibh varius, pretium nulla id</h2>
                         <p>Maecenas aliquet elit in ultricies pretium. Quisque consequat vulputate imperdiet. Phasellus in augue ante. Phasellus et blandit mi. Maecenas lacus justo, viverra malesuada imperdiet et, imperdiet at risus. Fusce ut augue at nibh porttitor facilisis. Donec consectetur urna lorem, et porta mi convallis eget. Vestibulum quis lacinia dui. Vestibulum mattis aliquam magna eu elementum. Ut placerat purus nisi, dapibus tempus augue tempus a. Nunc ligula dolor, congue non convallis id, porta vel tortor. Nam vitae convallis sem, ac egestas metus. Maecenas scelerisque at lorem ut aliquam.</p>
                         <div class="imageContainer row">
-                            <img src="img/blackboard/step1.png" alt="image step 1" class="imgRight">
+                            <img src="img/blackboard/step1.png" alt="image step 1" class="imgLeft">
                             <div class="boxDestaque" id="CatNumb01">
-                                <p>Aliquam sed semper purus, sit amet pretium erat. Praesent consectetur, erat nec <a href="#">dictum</a> tempus, tortor tortor sodales felis, id molestie arcu orci et velit. Suspendisse pharetra felis in urna pharetra, <strong>a dictum nisl vehicula</strong>. Nullam tincidunt ac sapien vel posuere. Morbi ut vulputate velit, vel rutrum.</p>
+                                <p>Aliquam sed semper purus, sit amet pretium erat. Praesent consectetur, erat nec <a href="#teste">dictum tempus, tortor tortor sodales felis</a>, id molestie arcu orci et velit. Suspendisse pharetra felis in urna pharetra, <strong>a dictum nisl vehicula</strong>. Nullam tincidunt ac sapien vel posuere. Morbi ut vulputate velit, vel rutrum.</p>
                             </div>
                         </div>
 
@@ -141,25 +122,15 @@
 
                         <h2><a name="Titulo2" class="ancora"></a>Suspence sodales elit eu gravida imperdiet</h2>
                         <p>Tunc velit sapien, porta laoreet rhoncus vitae, suscipit et augue. Sed eu lectus vel orci sodales consectetur. Nunc ullamcorper urna     ut congue euismod. Cras tincidunt dictum nisl, sed dapibus felis consequat at. Phasellus facilisis leo ante, at consequat dolor feugiat eget. Pellentesque hendrerit mi sem, sit amet volutpat orci vestibulum in.</p>
-                        <!-- example with table -->
-                        <table class="imageContainer">
-                            <tr>
-                                <td style="position:relative">
-                                    <img src="img/blackboard/step1.png" alt="image step 1">
-                                    <div class="boxDestaque" id="CatNumb01">
-                                        <p>Aliquam sed semper purus, sit amet pretium erat. Praesent consectetur, erat nec <a href="#">dictum</a> tempus, tortor tortor sodales felis, id molestie arcu orci et velit. Suspendisse pharetra felis in urna pharetra, <strong>a dictum nisl vehicula</strong>. Nullam tincidunt ac sapien vel posuere. Morbi ut vulputate velit, vel rutrum.</p>
-                                    </div> 
-                                </td>
-
-
-                            </tr>
-                        </table>
-                        <!-- <div class="imageContainer row">
-                            <img src="img/blackboard/step2-1.png" alt="image step 2">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptates, obcaecati incidunt dolorum laboriosam recusandae soluta labore ratione delectus dolor natus provident perspiciatis saepe illum alias quaerat nisi ipsum beatae. Etiam ultrices felis mauris, vel vehicula mauris molestie in. Aliquam quis bibendum nisi. Sed dapibus, erat a semper aliquam, orci dolor viverra neque. Etiam ultrices felis mauris, vel vehicula mauris molestie in. Aliquam quis bibendum nisi. Sed dapibus, erat a semper aliquam, orci dolor viverra neque.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, ad temporibus vel sit neque eos accusamus aspernatur quo accusantium nihil commodi laudantium cupiditate. Vero doloribus a tenetur. Quis, natus mollitia ratione nemo temporibus? Temporibus, earum, maxime eaque accusantium natus doloribus quod vero voluptate unde et molestiae cupiditate a iure sint minima cum repellendus enim dolorem velit sequi ipsum esse ducimus rem nisi consequatur repellat perspiciatis animi eius aliquam nostrum nihil ex corporis eum deleniti incidunt necessitatibus quibusdam aperiam optio non.</p>
+                        <div class="imageContainer row">
+                            <!-- imgLeft or imgRight | absent when img is centered -->
+                            <img src="img/blackboard/step1.png" alt="image step 2" class="imgRight">
                             <div class="boxDestaqueAdicional" id="CatNumb02">
-                                <p>In dui tellus, vehicula a venenatis non, facilisis id sapien. Proin auctor molestie odio et auctor. Cras non condimentum mauris. Etiam ultrices felis mauris, vel vehicula mauris molestie in. Aliquam quis bibendum nisi. Sed dapibus, erat a semper aliquam, orci dolor viverra neque.</p>
+                                <p>In dui tellus, vehicula a venenatis non, facilisis id sapien. Proin auctor molestie odio et auctor. Cras non condimentum mauris. <a href="#">Etiam ultrices felis mauris</a>, vel vehicula mauris molestie in. Aliquam quis bibendum nisi. Sed dapibus, erat a semper aliquam, orci dolor viverra neque. </p>
                             </div>
-                        </div> -->
+                        </div>
 
                         <div class="row">
                             <!-- div sumario -->
@@ -168,11 +139,12 @@
                         <h2><a name="Titulo3" class="ancora"></a>Etiam dignissim non erat vitae semper</h2>
                         <p>Cras tincidunt dictum nisl, sed dapibus felis consequat at. <strong>Phasellus facilisis</strong> leo ante, at consequat dolor feugiat eget. Pellentesque hendrerit mi sem, sit amet volutpat orci vestibulum in.</p>
                         <p>Nunc velit sapien, porta laoreet rhoncus vitae, suscipit et augue. Sed eu lectus vel orci sodales consectetur. Nunc ullamcorper urna ut congue euismod. Cras tincidunt dictum nisl, sed dapibus felis consequat at. Phasellus facilisis leo ante, at consequat dolor feugiat eget. Pellentesque hendrerit mi sem, sit amet volutpat orci vestibulum in.</p>
-                        
                     </article>
+
                     <div class="voltarSumario fix">
                         <a href="#sumarioAncora">Sumário</a>
                     </div>
+
                     <!-- section saiba mais -->
                     <section class="saibaMais row fix">
                         <h2><a name="Titulo4" class="ancora"></a>Saiba Mais</h2>
