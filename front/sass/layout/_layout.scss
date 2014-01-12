@@ -109,7 +109,7 @@ html, body { height: 100%;}
     @include transition(all .25s ease);
     // Trasition removed in all style, it's not a good pratice
 }
-body { 
+body {
     @include font(normal, 10px);
     color: $corTexto;
 }
@@ -126,7 +126,7 @@ ol {
             @include transition(none !important);
         }
     }
-    
+
 }
 
 /*  $Media Queries
@@ -181,7 +181,7 @@ ol {
                 border: 1px solid $corDefault;
             }
         }
-        
+
         p { line-height: $meioGrid + 2;}
 
         // btn expandir e recolher
@@ -213,6 +213,7 @@ ol {
 
         .selectedCategory {
             border: 1px solid $corDefault;
+            @include radius();
         }
 
         h5 {
@@ -221,12 +222,12 @@ ol {
             @include font(bold, 1.4em);
             display: block;
             padding: ($meioGrid - 12) 0 ($meioGrid - 12) $grid ;
-            
+
             // altura do icone
             // height: $grid - 8;
             min-height: $grid - 8;
             background: url("../img/ui/icoCategoryBusca.png") left center no-repeat;
-            
+
         }
         ol, ul {
             margin: 0 0 ($meioGrid / 4) 0;
@@ -290,7 +291,7 @@ ol {
                         display: block;
                         line-height: 1em;
                         padding: 0;
-                        
+
                         // name of manual
                         a {
                             @include font(normal, 1.1em);
@@ -304,7 +305,7 @@ ol {
                 }
             }
         }
-        
+
         // qdo não houver categorias
         .noCategory {
             li {
@@ -337,11 +338,11 @@ ol {
                     @include corLink();
                     &:visited {
                         color: $corDefault;
-                    }  
+                    }
                 }
             }
         }
-        
+
         // did not find what i wanted
         .outros {
             clear: both;
@@ -352,7 +353,7 @@ ol {
                 a {
                     @include corLink();
                     @include font(normal, 12px);
-                }    
+                }
             }
         }
     }
@@ -460,7 +461,7 @@ ol {
             background-color: #e6e6e6;
             border: 3px solid $corDefault;
             padding: $meioGrid / 2;
-            p { 
+            p {
                 @include font(normal, 1.1em);
                 line-height: 1.5em;
                 margin: 0;
@@ -472,7 +473,7 @@ ol {
             background-color: $corDefaultDark;
             border: 0;
             color: #fff;
-            p { 
+            p {
                 line-height: 16px;
                 margin: 0;
                 a { @include corLinkUpBox($corSec01); }
@@ -487,7 +488,7 @@ ol {
         @include radius();
         padding: $meioGrid;
         margin: 0 0 $meioGrid !important;
-        
+
         h2 {
             color: #e64b64;
             margin: 0 0 ($meioGrid / 4) 0;
@@ -519,7 +520,7 @@ ol {
                     display: table-cell;
                     vertical-align: middle;
                     padding: 0 ($meioGrid / 2) 0 ($grid + 10);
-                    a { 
+                    a {
                         @include corLink();
                         @include font(normal, 1.2em);
                         line-height: 1.4em;
@@ -533,12 +534,12 @@ ol {
 
 // rwd convert in 100%
 @media only screen and (max-width: 767px) {
-    .row .row .c1,.row .row .c2,.row .row .c3,.row .row .c4,.row .row .c5,.row .row .c6,.row .row .c7,.row .row .c8,.row .row .c9,.row .row .c10,.row .row .c11,.row .row .c12{ 
-        width:100%; 
-        margin-bottom:20px; 
+    .row .row .c1,.row .row .c2,.row .row .c3,.row .row .c4,.row .row .c5,.row .row .c6,.row .row .c7,.row .row .c8,.row .row .c9,.row .row .c10,.row .row .c11,.row .row .c12{
+        width:100%;
+        margin-bottom:20px;
     }
     // .row .row > div:last-child{ margin-bottom:0 !important }
-    
+
     .c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,.c11,.c12{
         width:100%;
         margin-right:0;
@@ -565,7 +566,7 @@ ol {
         margin: 0;
         img { max-width: 100%; }
     }
-    .titleHeader { 
+    .titleHeader {
         padding-bottom: 0;
         .title {
             @include font(bold, 2.35em);
@@ -603,7 +604,7 @@ ol {
             margin: 0 .5em 0 0;
         }
     }
-    
+
     .navigationMain {
         h5 {
             padding: ($meioGrid - 12) 0 ($meioGrid - 12)  $grid ;
@@ -674,14 +675,14 @@ ol {
     .containerMain { padding-top: 0;}
 
     // contentMain
-    .contentMain { 
+    .contentMain {
         padding-top: 0;
         h1 {
             @include font(bold, 2.2em);
             margin-bottom: 0;
         }
         h1 + p {
-            margin-top: 0; 
+            margin-top: 0;
         }
         h2 {
             @include font(bold, 1.4em);
@@ -697,7 +698,7 @@ ol {
     }
     .titleHeader {
         text-align: right;
-        margin-top: $meioGrid / 2;        
+        margin-top: $meioGrid / 2;
         .title {
             @include font(bold, 2.8em);
             border-bottom: 3px solid $corDefault;
@@ -735,31 +736,18 @@ ol {
             margin: 0 .5em 0 ($meioGrid / 2);
         }
     }
-    
+
     ////////////////////////////////////////////////////////////////////
     .navigationMain {
         h5 {
-            // padding: 0;
-            // margin: ($meioGrid - 5) 0
+            padding-left: $grid +2;
         }
         hr { margin: ($meioGrid - 5) 0;}
         ol, ul {
 
             li {
-                // margin: ($meioGrid / 4) 0;
-                // padding: 0;
                 .containerCategory {
-                    // height: $grid;
-                    .contLeft {
-                        width: 20%;
-                        a { margin: 0 0 0 ($meioGrid / 4); padding: 0; }
-                    }
-                    .contRight {
-                        width: 80%;
-                        height: 100%;
-                        overflow: hidden;
-                        p { padding-left: ($meioGrid / 10); }
-                    }
+                //     .titleCategory { margin-left: $meioGrid - 12; }
                 }
                 ul {
                     margin: ($meioGrid / 4) 0;
@@ -785,11 +773,11 @@ ol {
 
         }
     }
-    .faqBusca { 
+    .faqBusca {
         h5 {
           a {
-            margin-left: $meioGrid - 5 !important;
-            }  
+            margin-left: 2px !important;
+            }
         }
     }
     ///////////////////////////////////////////////////////////////////////////

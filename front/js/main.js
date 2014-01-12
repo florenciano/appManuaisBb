@@ -30,277 +30,225 @@ placeholder = {
 }
 
 // // Doc ready
-// $(function(){
-    
-//     /* Nice scroll
-//     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */ 
-//     // $("body").mCustomScrollbar();
+$(function(){
 
-//     // Only IE
-//     if (navigator.userAgent.match("MSIE")) {
-//         // Placeholder
-//         placeholder.hold("input, textarea");
-
-//         // PIE (border-radius, gradient, box-shadow)
-//         if (window.PIE) {
-//             var elements = 'input, textarea, .round';
-            
-//             $(elements).each(function() {
-//                 PIE.attach(this);
-//             });
-//         }
-//     }
-
-// });
-
-// $(function(){
-    /* ===============================================================
-       GENERAL SCRIPTS
-    ================================================================== */
-
-    /* focus input
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */ 
-    $( "#pesquisa" ).focus();
-
-
-     /* show and Hide the subcategories
+    /* Nice scroll
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-    // setTimeout(function() {
-        
-        function expRec() {
-            var expandirRecolher = $( ".exp-rec" );
-            var expandirTudo = $( ".expandir" );
-            var recolherTudo = $( ".recolher" );
-            var todasListas = $( ".navigationMain li ul" );
-                
-            var linkMais = "[+]";
-            var linkMenos = "[-]";
+    // $("body").mCustomScrollbar();
 
-            /* show/hide each categories */
-            expandirRecolher.each(function(){
-               
-                $(this).click(function(event){
-                    event.preventDefault();
-                    var lista = $(event.target).parent().parent().next();
-                    lista.toggle(400);
-                    
-                    // call function replace text
-                    var linkText = this; //[+]
-                    if(linkText.innerText == linkMais) {
-                        linkText.innerText = linkMenos;
-                    } else if(linkText.innerText == linkMenos) {
-                        linkText.innerText = linkMais;
-                    }
-                });
+    // Only IE
+    if (navigator.userAgent.match("MSIE")) {
+        // Placeholder
+        placeholder.hold("input, textarea");
 
+        // PIE (border-radius, gradient, box-shadow)
+        if (window.PIE) {
+            var elements = 'input, textarea, .round';
+
+            $(elements).each(function() {
+                PIE.attach(this);
             });
-            /* show ALL the categories */
-            expandirTudo.click(function(event){
-                event.preventDefault();
-                
-                todasListas.each(function(event){
-                    $(this).show(400);
-                });
-
-                // display Text
-                expandirRecolher.each(function(){
-                    var linkText = this; //[+]
-                    linkText.innerText = linkMenos;
-                });
-
-            });
-            /* hide ALL the categories */
-            recolherTudo.click(function(event){
-                event.preventDefault();
-                
-                todasListas.each(function(event){
-                    $(this).hide(400);
-                });
-
-                expandirRecolher.each(function(){
-                    var linkText = this; //[-]
-                    linkText.innerText = linkMais;
-                });
-
-            });
-        }
-
-
-        // expRec();
-    // }, 500);
-    
-
-
-    /* Deleting <li> empty in the navigation search
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-    function clearList() {
-        // varre todos os listas
-        var list = document.querySelectorAll(".sublist");
-        for(var i = 0; i < list.length; i++) {
-            var contentLink = list[i].firstChild;
-            // verifica-se os links tem conteúdo de texto
-            if(contentLink.textContent == "" || contentLink.textContent == null || contentLink.textContent == undefined) {
-                list[i].style.display="none";
-            }
         }
     }
 
+});
 
-    /* Attr class "selectedCategory" in the <li> atual
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-    function selectedCat() {
-        var catBreadcrumb = document.querySelector(".nameCategory").textContent;
-        var contentCategoria = document.querySelectorAll(".contRight p");
-        
-        for(var i = 0; i < contentCategoria.length; i++) {
-            var txt = contentCategoria[i].textContent;
-            var li = contentCategoria[i].parentNode.parentNode.parentNode;
+/* ===============================================================
+   GENERAL SCRIPTS
+================================================================== */
 
-            if (txt == catBreadcrumb) {
-                li.className="selectedCategory";
-            }
-
-        }
-    }
+/* focus input
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+$( "#pesquisa" ).focus();
 
 
-     /* create list of the summary and their respective anchors
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */ 
-    function listSumary() {
-        var divSumario = $( ".sumario" );
-        var anchor = $( ".voltarSumario" );
-        var todosTitulos = $( "h2" ); //incluso o saibaMais
-        var tagUl = $( "<ul>" );
-        var count = 1;
-        
+ /* show and Hide the subcategories
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// function expRec() {
+//     var expandirRecolher = $( ".exp-rec" );
+//     var expandirTudo = $( ".expandir" );
+//     var recolherTudo = $( ".recolher" );
+//     var todasListas = $( ".navigationMain li ul" );
 
-        // creating anchors...
-        function createAnchor() {
+//     var linkMais = "[+]";
+//     var linkMenos = "[-]";
 
-            todosTitulos.each(function(){
-                // var divSum = $( ".imageContainer" );
-                // creating tag <div>
-                var tagDiv = $( "<div>" ).addClass("voltarSumario", "fix");
-                // creating tag <a> and content
-                var tagAnchor = $( "<a>" );
-                    tagAnchor.attr("href","#sumarioAncora");
-                var txtA = "Sumário";
-                // inserting in DOM
-                tagAnchor.text(txtA);
-                tagDiv.append(tagAnchor);        
-                // criando a <div> do sumário antes de cada <h2>
-                $(this).prev().append(tagDiv);
-            });
+//     /* show/hide each categories */
+//     expandirRecolher.each(function(){
 
-            
-            // elimited index[0] of the anchor...
-            var allAnchor = $( ".voltarSumario" );
-            allAnchor[0].style.display="none";
+//         $(this).click(function(event){
+//             event.preventDefault();
+//             var lista = $(event.target).parent().parent().next();
+//             lista.toggle(400);
 
-            // modify style of the last anchor [equival "saiba mais"]...
-            var lastAnchor = allAnchor.slice(-1)[0];
-            lastAnchor.style.marginTop="40px";
-        }
+//             // call function replace text
+//             var linkText = this; //[+]
+//             if(linkText.innerText == linkMais) {
+//                 linkText.innerText = linkMenos;
+//             } else if(linkText.innerText == linkMenos) {
+//                 linkText.innerText = linkMais;
+//             }
+//         });
 
-        // creating list...
-        todosTitulos.each(function(){
-            var ancora = this.firstChild;
+//     });
+//     /* show ALL the categories */
+//     expandirTudo.click(function(event){
+//         event.preventDefault();
 
-            var tagA = $( "<a>" );
-            tagA.attr("href","#" + ancora.name);
+//         todasListas.each(function(event){
+//             $(this).show(400);
+//         });
 
-            var contentTagA = $(this).text();
-            tagA.append(contentTagA);
-            
-            // creating tag <li> and inserting content
-            var tagLi = $( "<li>" );
-            tagLi.append(tagA);
+//         // display Text
+//         expandirRecolher.each(function(){
+//             var linkText = this; //[+]
+//             linkText.innerText = linkMenos;
+//         });
 
-            tagUl.append(tagLi);
-            
-        });
+//     });
+//     /* hide ALL the categories */
+//     recolherTudo.click(function(event){
+//         event.preventDefault();
 
-        // condictional for exibition content in the DOM..
-        if(todosTitulos.length > 1) { //> 1 pq o titulo do saibaMais também é <h2>
-            divSumario.append(tagUl);
-            createAnchor();
-        } else {
-            divSumario.css("display","none");
-            anchor.css("margin-top","40px");
-        }
-    }
+//         todasListas.each(function(event){
+//             $(this).hide(400);
+//         });
 
+//         expandirRecolher.each(function(){
+//             var linkText = this; //[-]
+//             linkText.innerText = linkMais;
+//         });
 
-    /* prints 
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */ 
-    function printManual() {
-        $('a#imprimir').click(function() {
-            window.print();
-            return false;
-        });
-    }
-
-
-    /* ~~~~~~~~~~~~~~~~~~~~~~~ CALL FUNCTIONS ~~~~~~~~~~~~~~~~~~~~~~~ */
-    // DOMSubtreeModified
-    // expande e recolhe todas as sublistas
-       
-
-    // $( document ).ready(function(){
-    //     // retira todas as <li> não usadas listada no menu
-    //     clearList();
-
-        
-
-    //     // selecionada o item do menu de conforme indicado no breadcrumb
-    //     selectedCat();
-
-    //     // cria o sumário e suas respectivas âncoras qdo houver títulos
-    //     listSumary();
-
-    //     // imprimir manual
-    //     printManual();
-    // });
-
-    /* teste1 */
-    /*$('#pesquisa').keyup(function(){
-       var valThis = $(this).val().toLowerCase();
-        $('.navigationMain ol li').each(function(){
-            var text = $(this).text().toLowerCase();
-            // (text.indexOf(valThis) == 0) ? $(this).parent().show() : $(this).parent().hide();
-            // (text.indexOf(valThis) == 0) ? $( '.navigationMain ol' ).show() : $( '.navigationMain ol' ).hide();
-            if((text.indexOf(valThis) == 0)) {
-                console.log("ok", text.indexOf(valThis));
-            } else {
-                console.log("not", text.indexOf(valThis));
-            }
-       });  
-    });*/
-
-/* teste2 */
-// function listFilter(list) {
-//     $('#pesquisa')
-//     .change( function () {
-//         var filter = $(this).val();
-//         if(filter) {
-            
-//             // this finds all links in a list that contain the input,
-//             // and hide the ones not containing the input while showing the ones that do
-//             $(list).find("a:not(:Contains(" + filter + "))").parent().hide();
-//             $(list).find("a:Contains(" + filter + ")").parent().show();
-//         } else {
-//             $(list).find("li").show();
-//         }
-//         return false;
-//   })
-//     .keyup( function () {
-//         // fire the above change event after every letter
-//         $(this).change();
 //     });
 // }
 
 
-// listFilter($(".navigationMain ol"));
+/* Deleting <li> empty in the navigation search
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// function clearList() {
+//     // varre todos os listas
+//     var list = document.querySelectorAll(".sublist");
+//     for(var i = 0; i < list.length; i++) {
+//         var contentLink = list[i].firstChild;
+//         // verifica-se os links tem conteúdo de texto
+//         if(contentLink.textContent == "" || contentLink.textContent == null || contentLink.textContent == undefined) {
+//             list[i].style.display="none";
+//         }
+//     }
+// }
 
-// });
+
+/* Attr class "selectedCategory" in the <li> atual
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// function selectedCat() {
+//     var catBreadcrumb = document.querySelector(".nameCategory").textContent;
+//     var contentCategoria = document.querySelectorAll(".contRight p");
+
+//     for(var i = 0; i < contentCategoria.length; i++) {
+//         var txt = contentCategoria[i].textContent;
+//         var li = contentCategoria[i].parentNode.parentNode.parentNode;
+
+//         if (txt == catBreadcrumb) {
+//             li.className="selectedCategory";
+//         }
+
+//     }
+// }
+
+
+ /* create list of the summary and their respective anchors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+function listSumary() {
+    var divSumario = $( ".sumario" );
+    var anchor = $( ".voltarSumario" );
+    var todosTitulos = $( "h2" ); //incluso o saibaMais
+    var tagUl = $( "<ul>" );
+    var count = 1;
+
+
+    // creating anchors...
+    function createAnchor() {
+
+        todosTitulos.each(function(){
+            // var divSum = $( ".imageContainer" );
+            // creating tag <div>
+            var tagDiv = $( "<div>" ).addClass("voltarSumario", "fix");
+            // creating tag <a> and content
+            var tagAnchor = $( "<a>" );
+                tagAnchor.attr("href","#sumarioAncora");
+            var txtA = "Sumário";
+            // inserting in DOM
+            tagAnchor.text(txtA);
+            tagDiv.append(tagAnchor);
+            // criando a <div> do sumário antes de cada <h2>
+            $(this).prev().append(tagDiv);
+        });
+
+
+        // elimited index[0] of the anchor...
+        var allAnchor = $( ".voltarSumario" );
+        allAnchor[0].style.display="none";
+
+        // modify style of the last anchor [equival "saiba mais"]...
+        var lastAnchor = allAnchor.slice(-1)[0];
+        lastAnchor.style.marginTop="40px";
+    }
+
+    // creating list...
+    todosTitulos.each(function(){
+        var ancora = this.firstChild;
+
+        var tagA = $( "<a>" );
+        tagA.attr("href","#" + ancora.name);
+
+        var contentTagA = $(this).text();
+        tagA.append(contentTagA);
+
+        // creating tag <li> and inserting content
+        var tagLi = $( "<li>" );
+        tagLi.append(tagA);
+
+        tagUl.append(tagLi);
+
+    });
+
+    // condictional for exibition content in the DOM..
+    if(todosTitulos.length > 1) { //> 1 pq o titulo do saibaMais também é <h2>
+        divSumario.append(tagUl);
+        createAnchor();
+    } else {
+        divSumario.css("display","none");
+        anchor.css("margin-top","40px");
+    }
+}
+
+
+/* prints
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+function printManual() {
+    $('a#imprimir').click(function() {
+        window.print();
+        return false;
+    });
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~ CALL FUNCTIONS ~~~~~~~~~~~~~~~~~~~~~~~ */
+// DOMSubtreeModified
+
+
+$( document ).ready(function(){
+    //     selecionada o item do menu de conforme indicado no breadcrumb
+    //     selectedCat();
+
+    // retira todas as <li> não usadas listada no menu
+    // clearList();
+
+    // cria o sumário e suas respectivas âncoras qdo houver títulos
+    listSumary();
+
+    // imprimir manual
+    printManual();
+});
+
 

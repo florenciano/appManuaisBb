@@ -12,7 +12,7 @@
 
 <!--[if IE]>
  <link href="css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
- <![endif]--> 
+ <![endif]-->
 
 <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -32,7 +32,7 @@
                 <p class="description">Manuais de utilização</p>
             </div>
         </header>
-        
+
         <div id="main" role="main" class="fix wfull">
             <div class="containerMain row">
                 <!-- area search -->
@@ -42,35 +42,117 @@
                             <label for="pesquisa"></label>
                             <!-- INPUT SEARCH -->
                             <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Busca por título ou palavra-chave" ng-model="query">
-                            
+
                             <p>
                                 <span class="interat"><a href="#" class="expandir" ng-click="showAllCat()">&#62;</a>Expandir tudo</span>
                                 <span class="interat"><a href="#" class="recolher" ng-click="hideAllCat()">&#60;</a>Recolher tudo</span>
-                            </p>  
+                            </p>
                         </form>
                     </div>
 
                     <nav role="navigation" class="navigationMain">
 
-                    <div ng-repeat="item in itensManual | filter:query">
-                        <h5>{{item.assunto}}</h5>
-                        <ol>
-                            <li>
-                                <div class="containerCategory">
-                                    <span class="click">
-                                        <a href="#" class="exp-rec" ng-click="showHideCat($event)">[+]</a>
-                                    </span>   
-                                    <span class="nameCategory">{{item.categoria}}</span>
-                                </div>
-                                <ul class="subCat" style="display:none">
-                                    <li class="sublist"><a href="{{item.linkSubCategoria}}">{{item.subCategoria}}</a></li>
-                                    <li class="sublist"><a href="{{item.linkSubCategoria2}}">{{item.subCategoria2}}</a></li>
-                                    <li class="sublist"><a href="{{item.linkSubCategoria3}}">{{item.subCategoria3}}</a></li>
-                                    <li class="sublist"><a href="{{item.linkSubCategoria4}}">{{item.subCategoria4}}</a></li>
-                                    <li class="sublist"><a href="{{item.linkSubCategoria5}}">{{item.subCategoria5}}</a></li>
-                                </ul>
-                            </li>
-                        </ol>
+                    <!-- SUBJECT 1 -->
+                    <h5>Blackboard</h5>
+                    <ol class="yesCategory" ng-repeat="item in itensAssunto1 | filter:query">
+                        <li ng-class="selectedCat()">
+                            <div class="containerCategory">
+                                <span class="click">
+                                    <a href="#" class="exp-rec" ng-click="showHideCat($event)">[+]</a>
+                                </span>
+                                <span class="titleCategory">{{item.categoria}}</span>
+                            </div>
+                            <!-- subcategories -->
+                            <ul class="subCat" style="display:none">
+                                <li class="sublist" ng-hide="hideItens()">
+                                    <a href="{{item.linkSubCategoria1}}">{{item.subCategoria1}}</a>
+                                </li>
+                                <li class="sublist" ng-hide="hideItens()">
+                                    <a href="{{item.linkSubCategoria2}}">{{item.subCategoria2}}</a>
+                                </li>
+                                <li class="sublist" ng-hide="hideItens()">
+                                    <a href="{{item.linkSubCategoria3}}">{{item.subCategoria3}}</a>
+                                </li>
+                                <li class="sublist" ng-hide="hideItens()">
+                                    <a href="{{item.linkSubCategoria4}}">{{item.subCategoria4}}</a>
+                                </li>
+                                <li class="sublist" ng-hide="hideItens()">
+                                    <a href="{{item.linkSubCategoria5}}">{{item.subCategoria5}}</a>
+                                </li>
+                                <li class="sublist" ng-hide="hideItens()">
+                                    <a href="{{item.linkSubCategoria6}}">{{item.subCategoria6}}</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <!-- SUBJECT NO CATEGORIES | NoCat -->
+                    <ol class="noCategory" ng-repeat="item in itensAssunto1NoCat | filter:query">
+                        <li ng-class="selectedNoCat()" ng-hide="hideItensNoCat()">
+                            <a href="{{item.linkSemCategoria1}}" class="noCat">{{item.semCategoria1}}</a>
+                        </li>
+                        <li ng-class="selectedNoCat()" ng-hide="hideItensNoCat()">
+                            <a href="{{item.linkSemCategoria2}}" class="noCat">{{item.semCategoria2}}</a>
+                        </li>
+                        <li ng-class="selectedNoCat()" ng-hide="hideItensNoCat()">
+                            <a href="{{item.linkSemCategoria2}}" class="noCat">{{item.semCategoria3}}</a>
+                        </li>
+                    </ol>
+                    <!-- SUBJECT 2 -->
+                    <h5>CATME</h5>
+                    <ol class="yesCategory" ng-repeat="item in itensAssunto2 | filter:query">
+                        <li ng-class="selectedCat()">
+                            <div class="containerCategory">
+                                <span class="click">
+                                    <a href="#" class="exp-rec" ng-click="showHideCat($event)">[+]</a>
+                                </span>
+                                <span class="titleCategory">{{item.categoria}}</span>
+                            </div>
+                            <!-- subcategories -->
+                            <ul class="subCat" style="display:none">
+                                <li class="sublist" ng-hide="hideItens()">
+                                    <a href="{{item.linkSubCategoria1}}">{{item.subCategoria1}}</a>
+                                </li>
+                                <li class="sublist" ng-hide="hideItens()">
+                                    <a href="{{item.linkSubCategoria2}}">{{item.subCategoria2}}</a>
+                                </li>
+                                <li class="sublist" ng-hide="hideItens()">
+                                    <a href="{{item.linkSubCategoria3}}">{{item.subCategoria3}}</a>
+                                </li>
+                                <li class="sublist" ng-hide="hideItens()">
+                                    <a href="{{item.linkSubCategoria4}}">{{item.subCategoria4}}</a>
+                                </li>
+                                <li class="sublist" ng-hide="hideItens()">
+                                    <a href="{{item.linkSubCategoria5}}">{{item.subCategoria5}}</a>
+                                </li>
+                                <li class="sublist" ng-hide="hideItens()">
+                                    <a href="{{item.linkSubCategoria6}}">{{item.subCategoria6}}</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <!-- SUBJECT NO CATEGORIES | NoCat -->
+                    <ol class="noCategory" ng-repeat="item in itensAssunto2NoCat | filter:query">
+                        <li ng-class="selectedNoCat()" ng-hide="hideItensNoCat()">
+                            <a href="{{item.linkSemCategoria1}}" class="noCat">{{item.semCategoria1}}</a>
+                        </li>
+                        <li ng-class="selectedNoCat()" ng-hide="hideItensNoCat()">
+                            <a href="{{item.linkSemCategoria2}}" class="noCat">{{item.semCategoria2}}</a>
+                        </li>
+                        <li ng-class="selectedNoCat()" ng-hide="hideItensNoCat()">
+                            <a href="{{item.linkSemCategoria2}}" class="noCat">{{item.semCategoria3}}</a>
+                        </li>
+                    </ol>
+
+
+                    <div class="faqBusca">
+                        <h5>
+                            <a href="#" >FAQ</a>
+                        </h5>
+                    </div>
+                    <div class="outros">
+                        <h6>
+                            <a href="#titlePage">Não encontrou o que queria?</a>
+                        </h6>
                     </div>
 
                     </nav>
@@ -91,7 +173,7 @@
 
                         <!-- dinamic content -->
                         <div class="breadcrumb">
-                            <p><span class="nameCategory">nomeCategoria</span> <span>&#62;</span> nomeLinkCategoriaAcessada</p>
+                            <p><span class="nameCategory">Primeiro nome da categoria</span> <span>&#62;</span> nomeLinkCategoriaAcessada</p>
                         </div>
 
                     </section>
@@ -171,7 +253,7 @@
                         </ul>
                     </section>
 
-                </section>       
+                </section>
             </div>
         </div>
     </div>
