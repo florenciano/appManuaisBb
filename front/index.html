@@ -53,7 +53,7 @@
                     <nav role="navigation" class="navigationMain">
 
                     <!-- SUBJECT 1 -->
-                    <h5>Blackboard</h5>
+                    <h5 class="nomeAssunto">Nome do assunto ou tema 1</h5>
                     <ol class="yesCategory" ng-repeat="item in itensAssunto1 | filter:query">
                         <li ng-class="selectedCat()">
                             <div class="containerCategory">
@@ -97,8 +97,9 @@
                             <a href="{{item.linkSemCategoria2}}" class="noCat">{{item.semCategoria3}}</a>
                         </li>
                     </ol>
+
                     <!-- SUBJECT 2 -->
-                    <h5>CATME</h5>
+                    <h5 class="nomeAssunto">Nome do assunto ou tema 2</h5>
                     <ol class="yesCategory" ng-repeat="item in itensAssunto2 | filter:query">
                         <li ng-class="selectedCat()">
                             <div class="containerCategory">
@@ -130,8 +131,10 @@
                             </ul>
                         </li>
                     </ol>
-                    <!-- SUBJECT NO CATEGORIES | NoCat -->
-                    <ol class="noCategory" ng-repeat="item in itensAssunto2NoCat | filter:query">
+
+                    <!-- SUBJECT 3 NO CATEGORIES | NoCat -->
+                    <h5 class="nomeAssunto">Nome do assunto ou tema 3 sem categoria</h5>
+                    <ol class="noCategory" ng-repeat="item in itensAssunto3NoCat | filter:query">
                         <li ng-class="selectedNoCat()" ng-hide="hideItensNoCat()">
                             <a href="{{item.linkSemCategoria1}}" class="noCat">{{item.semCategoria1}}</a>
                         </li>
@@ -142,7 +145,6 @@
                             <a href="{{item.linkSemCategoria2}}" class="noCat">{{item.semCategoria3}}</a>
                         </li>
                     </ol>
-
 
                     <div class="faqBusca">
                         <h5>
@@ -259,7 +261,7 @@
     </div>
 
 <!-- Scripts -->
-<script>navigator.userAgent.match("MSIE")&&document.write('<script src="js/libs/jquery-1.9.1.min.js"><\/script>')||document.write('<script src="js/libs/jquery-2.0.2.min.js"><\/script>');</script>
+<script>navigator.userAgent.match("MSIE")&&document.write('<script src="js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="js/libs/jquery-2.0.3.min.js"><\/script>');</script>
 <script src="js/libs/angular.js"></script>
 <script src="js/controllers.js"></script>
 

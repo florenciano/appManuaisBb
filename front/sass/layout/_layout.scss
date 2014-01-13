@@ -207,12 +207,9 @@ ol {
         margin-top: $meioGrid;
 
         .selectedCategory {
-            border: 1px solid #cf1432;
-            padding: ($meioGrid / 4) 0;
-        }
-
-        .selectedCategory {
             border: 1px solid $corDefault;
+            padding: ($meioGrid / 4) 0;
+            margin-top: $meioGrid / 2;
             @include radius();
         }
 
@@ -270,7 +267,7 @@ ol {
                         }
                     }
                     // nome da categoria alimentado via angularjs
-                    span.nameCategory { margin-left: .75em; width: 85%;}
+                    span.titleCategory { margin-left: .75em; width: 85%; max-width: 405px}
                 }
                 a {
                     margin: 0;
@@ -311,9 +308,12 @@ ol {
             li {
                 a {
                     @include corLink();
-                    @include font(normal, 1.1em);
+                    @include font(normal, 1.2em);
                     margin-left: $grid + 2;
                     padding: ($meioGrid / 10) 0;
+                }
+                &:last-child {
+                    margin-bottom: $meioGrid / 2;
                 }
             }
         }
@@ -617,7 +617,7 @@ ol {
                 margin: ($meioGrid / 10) 0;
                 padding: 0;
                 .containerCategory {
-                    span.nameCategory {
+                    span.titleCategory {
                         max-width: 180px;
                     }
                 }
@@ -640,6 +640,9 @@ ol {
                 a {
                     margin-left: $meioGrid / 2;
                 }
+            }
+            &:last-child {
+                margin-bottom: $meioGrid / 2;
             }
         }
     }
@@ -747,7 +750,9 @@ ol {
 
             li {
                 .containerCategory {
-                //     .titleCategory { margin-left: $meioGrid - 12; }
+                    .titleCategory { 
+                        width: 85%;
+                        max-width: 285px; }
                 }
                 ul {
                     margin: ($meioGrid / 4) 0;
@@ -766,6 +771,9 @@ ol {
             li {
                 a {
                     margin-left: $meioGrid / 2;
+                }
+                &:last-child {
+                    margin-bottom: $meioGrid;
                 }
             }
         }

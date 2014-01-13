@@ -6,94 +6,95 @@ var manuaisBB = angular.module('manuaisBB', []);
 manuaisBB.controller('listaMenu', function ($scope) {
 	$scope.itensAssunto1 = [
 
-	// ASSUNTO : BLACKBOARD COM CATEGORIA
-	{	'categoria'				: 'Primeiro nome da categoria',
+	// ASSUNTO : XXXX COM CATEGORIA
+	{	'categoria'				: 'Duis ac vestibulum nisi',
 
-		'subCategoria1'			: 'Primeiro nome da subcategoria 1',
+		'subCategoria1'			: 'Aliquam erat volutpat',
 		'linkSubCategoria1'		: '/blackboard/sub1',
 
-		'subCategoria2'			: 'Lorem ipsum dolor sit',
+		'subCategoria2'			: 'Velit nisi sollicitudin nisi',
 		'linkSubCategoria2'		: '/blackboard/sub2',
 
-		'subCategoria3'			: 'Primeiro nome da subcategoria 3',
+		'subCategoria3'			: 'Aenean aliquam blandit lectus',
 		'linkSubCategoria3'		: '/blackboard/sub3',
 
-		'subCategoria4'			: 'Primeiro nome da subcategoria 4',
+		'subCategoria4'			: 'Donec eu ligula vulputate, blandit urna ut, porta justo',
 		'linkSubCategoria4'		: '/blackboard/sub4',
 
-		'subCategoria5'			: 'Primeiro nome da subcategoria 5',
+		'subCategoria5'			: 'Nulla condimentum massa',
 		'linkSubCategoria5'		: '/blackboard/sub5',
 
-		'subCategoria6'			: 'Primeiro nome da subcategoria 6',
+		'subCategoria6'			: 'Praesent mollis sodales vulputate',
 		'linkSubCategoria6'		: '/blackboard/sub6'
 	},
 
-	{	'categoria'				: 'Segundo nome da categoria',
+	{	'categoria'				: 'Segundo nome da categoria, vamos simular um nome grande com mais de uma linha',
 
-		'subCategoria1'			: 'Primeiro nome da subcategoria 1',
+		'subCategoria1'			: 'Praesent auctor neque pretium',
 		'linkSubCategoria1'		: '/blackboard/sub21'
-	},
-
+	}
 	];
 
 	$scope.itensAssunto1NoCat = [
 
-	// ASSUNTO : BLACKBOARD SEM CATEGORIA
+	// ASSUNTO : XXX SEM CATEGORIA
 	{
-		'semCategoria1'			: 'Primeiro nome da categoria',
+		'semCategoria1'			: 'Aqui fica o primeiro item de assunto sem categoria',
 		'linkSemCategoria1'		: '/blackboard/sub1',
 
-		'semCategoria2'			: 'Segundo nome do item sem subcategoria 2',
-		'linkSemCategoria2'		: '/blackboard/sub1',
-
-		// 'semCategoria3'			: 'Terceiro nome do item sem subcategoria 3',
-		// 'linkSemCategoria3'		: '/blackboard/sub1'
+		'semCategoria2'			: 'E aqui, é claro, fica o segundo item de assunto sem categoria',
+		'linkSemCategoria2'		: '/blackboard/sub1'
 	}
 	];
 
 	$scope.itensAssunto2 = [
 
-	// ASSUNTO : BLACKBOARD COM CATEGORIA
-	{	'categoria'				: 'Nome da categoria do segundo assunto',
+	// ASSUNTO : XXX COM CATEGORIA
+	{	'categoria'				: 'Primeiro nome da categoria',
 
-		'subCategoria1'			: 'Primeiro nome da subcategoria 1',
+		'subCategoria1'			: 'Mauris hendrerit at arcu a porta',
 		'linkSubCategoria1'		: '/blackboard/sub1'
-
-		// 'subCategoria2'			: 'Lorem ipsum dolor sit',
-		// 'linkSubCategoria2'		: '/blackboard/sub2',
-
-		// 'subCategoria3'			: 'Primeiro nome da subcategoria 3',
-		// 'linkSubCategoria3'		: '/blackboard/sub3',
-
-		// 'subCategoria4'			: 'Primeiro nome da subcategoria 4',
-		// 'linkSubCategoria4'		: '/blackboard/sub4',
-
-		// 'subCategoria5'			: 'Primeiro nome da subcategoria 5',
-		// 'linkSubCategoria5'		: '/blackboard/sub5',
-
-		// 'subCategoria6'			: 'Primeiro nome da subcategoria 6',
-		// 'linkSubCategoria6'		: '/blackboard/sub6'
 	},
 
 	{	'categoria'				: 'Segundo nome da categoria',
 
-		'subCategoria1'			: 'Primeiro nome da subcategoria 1',
-		'linkSubCategoria1'		: '/blackboard/sub21'
-	},
+		'subCategoria1'			: 'Vivamus posuere nibh mattis nulla congue porta',
+		'linkSubCategoria1'		: '/blackboard/sub21',
 
+		'subCategoria2'			: 'Pellentesque posuere varius commodoa',
+		'linkSubCategoria2'		: '/blackboard/sub21',
+
+		'subCategoria3'			: 'Vestibulum congue nisl et ipsum auctor',
+		'linkSubCategoria3'		: '/blackboard/sub21'
+	}
 	];
 
 	$scope.itensAssunto2NoCat = [
 
-	// ASSUNTO : BLACKBOARD SEM CATEGORIA
+	// ASSUNTO : XXX SEM CATEGORIA
 	{
 		'semCategoria1'			: 'Lorem ipsum dolor sit amet, consectetur adipisicing',
 		'linkSemCategoria1'		: '/blackboard/sub1',
 
-		'semCategoria2'			: 'Segundo nome do item sem subcategoria 2',
+		'semCategoria2'			: 'Aliquam erat volutpat. Fusce sed porttitor urna',
 		'linkSemCategoria2'		: '/blackboard/sub1',
 
-		'semCategoria3'			: 'Terceiro nome do item sem subcategoria 3',
+		'semCategoria3'			: 'Ut ornare',
+		'linkSemCategoria3'		: '/blackboard/sub1'
+	}
+	];
+
+	$scope.itensAssunto3NoCat = [
+
+	// ASSUNTO : XXX SEM CATEGORIA
+	{
+		'semCategoria1'			: 'Lorem ipsum dolor sit amet, consectetur adipisicing',
+		'linkSemCategoria1'		: '/blackboard/sub1',
+
+		'semCategoria2'			: 'Phasellus tempor nibh vitae posuere tincidunt',
+		'linkSemCategoria2'		: '/blackboard/sub1',
+
+		'semCategoria3'			: 'Urna eros vehicula purus, quis fringilla',
 		'linkSemCategoria3'		: '/blackboard/sub1'
 	}
 	];
@@ -143,26 +144,6 @@ manuaisBB.controller('listaMenu', function ($scope) {
 		event.preventDefault();
 	}
 
-	$scope.showHideCat = function($event) {
-		// declaration variables...
-		var linkMais = "[+]";
-        var linkMenos = "[-]";
-
-        var lista = $(event.target).parent().parent().next();
-        lista.each(function(){
-        	$(this).toggle(400);
-        });
-
-        var teste = $event.target;
-        if(teste.innerText == linkMais) {
-        	teste.innerText = linkMenos;
-        } else {
-        	teste.innerText = linkMais;
-        }
-
-        $event.preventDefault();
-	}
-
 	$scope.hideItens = function() {
 		// declaration variables...
 		var list = $( ".sublist" );
@@ -203,7 +184,7 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	    }
 	}
 
-	$scope.selectedNoCat = function(){
+	$scope.selectedNoCat = function() {
 		// declaration variables...
 		var catBreadcrumb = document.querySelector(".nameCategory").innerText;
 		var contentNoCategoria = document.querySelectorAll(".noCat");
@@ -219,4 +200,29 @@ manuaisBB.controller('listaMenu', function ($scope) {
 		}
 	}
 
+	$scope.showHideCat = function($event) {
+		// declaration variables...
+		var linkMais = "[+]";
+		var linkMenos = "[-]";
+		// var listona = $( ".subCat" );
+
+		var lista1 = $(event.target),
+			lista2 = lista1.parent().parent().next();
+		lista2.each(function(){
+	        $(this).toggle(400);
+		});
+
+		var display = event.target;
+		if(display.innerText == linkMais) {
+	       display.innerText = linkMenos;
+		} else {
+	        display.innerText = linkMais;
+		}
+
+		$event.preventDefault();
+		// outra alternativa
+		// <ul> ng-show="item.show"
+		// return item.show = ! item.show;
+	}
+		
 });
