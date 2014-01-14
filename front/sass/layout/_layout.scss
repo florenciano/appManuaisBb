@@ -120,14 +120,14 @@ body {
 }
 
 // remove transitions of the subList in navigation
-ol {
-    li {
-        ul {
-            @include transition(none !important);
-        }
-    }
+// ol {
+//     li {
+//         ul {
+//             @include transition(none !important);
+//         }
+//     }
 
-}
+// }
 
 /*  $Media Queries
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -204,6 +204,8 @@ ol {
     }
     // navigation
     .navigationMain {
+       @include transition(all .40s ease);
+
         margin-top: $meioGrid;
 
         .selectedCategory {
@@ -741,6 +743,9 @@ ol {
     }
 
     ////////////////////////////////////////////////////////////////////
+    .navigation  {
+        @include transition(all 0.4s ease);
+    }
     .navigationMain {
         h5 {
             padding-left: $grid +2;
@@ -750,7 +755,7 @@ ol {
 
             li {
                 .containerCategory {
-                    .titleCategory { 
+                    .titleCategory {
                         width: 85%;
                         max-width: 285px; }
                 }

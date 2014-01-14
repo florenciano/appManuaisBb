@@ -100,7 +100,7 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	];
 
 
-	$scope.showAllCat = function() {
+	$scope.showAllCat = function($event) {
 		// declaration variables...
 		var todasListas = $( ".subCat" );
 		var expandirRecolher = $( ".exp-rec" );
@@ -111,7 +111,7 @@ manuaisBB.controller('listaMenu', function ($scope) {
         var linkMenos = "[-]";
 
 		todasListas.each(function(event){
-			$(this).show(400);
+			$(this).show();
 		});
 
 		expandirRecolher.each(function(){
@@ -119,10 +119,10 @@ manuaisBB.controller('listaMenu', function ($scope) {
             linkText.text(linkMenos);
         });
 
-		event.preventDefault();
+		$event.preventDefault();
 	}
 
-	$scope.hideAllCat = function() {
+	$scope.hideAllCat = function($event) {
 		// declaration variables...
 		var todasListas = $( ".subCat" );
 		var expandirRecolher = $( ".exp-rec" );
@@ -133,7 +133,7 @@ manuaisBB.controller('listaMenu', function ($scope) {
         var linkMenos = "[-]";
 
 		todasListas.each(function(event){
-			$(this).hide(400);
+			$(this).hide();
 		});
 
 		expandirRecolher.each(function(){
@@ -141,7 +141,7 @@ manuaisBB.controller('listaMenu', function ($scope) {
             linkText.text(linkMais);
         });
 
-		event.preventDefault();
+		$event.preventDefault();
 	}
 
 	$scope.hideItens = function() {
@@ -171,10 +171,10 @@ manuaisBB.controller('listaMenu', function ($scope) {
 
 	$scope.selectedCat = function() {
 		// declaration variables...
-		var catBreadcrumb = document.querySelector(".nameCategory").innerText;
+		var catBreadcrumb = document.querySelector(".nameCategory").textContent;
 	    var contentCategoria = document.querySelectorAll(".titleCategory");
 
-	    for(i = 0; i < contentCategoria.length; i++) {
+	    for(var i = 0; i < contentCategoria.length; i++) {
 	        var txt = contentCategoria[i].textContent;
 	        var li = contentCategoria[i].parentNode.parentNode.parentNode;
 
@@ -204,25 +204,18 @@ manuaisBB.controller('listaMenu', function ($scope) {
 		// declaration variables...
 		var linkMais = "[+]";
 		var linkMenos = "[-]";
-		// var listona = $( ".subCat" );
+		var lista = $event.target.parentNode.parentNode.nextElementSibling;
 
-		var lista1 = $(event.target),
-			lista2 = lista1.parent().parent().next();
-		lista2.each(function(){
-	        $(this).toggle(400);
-		});
-
-		var display = event.target;
-		if(display.innerText == linkMais) {
-	       display.innerText = linkMenos;
+		if($event.target.textContent == linkMais) {
+	       $event.target.textContent = linkMenos;
+	       lista.style.display="block";
 		} else {
-	        display.innerText = linkMais;
+	        $event.target.textContent = linkMais;
+	        lista.style.display="none";
 		}
-
 		$event.preventDefault();
 		// outra alternativa
 		// <ul> ng-show="item.show"
-		// return item.show = ! item.show;
 	}
-		
+
 });

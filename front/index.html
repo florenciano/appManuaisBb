@@ -44,8 +44,8 @@
                             <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Busca por título ou palavra-chave" ng-model="query">
 
                             <p>
-                                <span class="interat"><a href="#" class="expandir" ng-click="showAllCat()">&#62;</a>Expandir tudo</span>
-                                <span class="interat"><a href="#" class="recolher" ng-click="hideAllCat()">&#60;</a>Recolher tudo</span>
+                                <span class="interat"><a href="#" class="expandir" ng-click="showAllCat($event)">&#62;</a>Expandir tudo</span>
+                                <span class="interat"><a href="#" class="recolher" ng-click="hideAllCat($event)">&#60;</a>Recolher tudo</span>
                             </p>
                         </form>
                     </div>
@@ -62,7 +62,6 @@
                                 </span>
                                 <span class="titleCategory">{{item.categoria}}</span>
                             </div>
-                            <!-- subcategories -->
                             <ul class="subCat" style="display:none">
                                 <li class="sublist" ng-hide="hideItens()">
                                     <a href="{{item.linkSubCategoria1}}">{{item.subCategoria1}}</a>
@@ -88,12 +87,6 @@
                     <!-- SUBJECT NO CATEGORIES | NoCat -->
                     <ol class="noCategory" ng-repeat="item in itensAssunto1NoCat | filter:query">
                         <li ng-class="selectedNoCat()" ng-hide="hideItensNoCat()">
-                            <a href="{{item.linkSemCategoria1}}" class="noCat">{{item.semCategoria1}}</a>
-                        </li>
-                        <li ng-class="selectedNoCat()" ng-hide="hideItensNoCat()">
-                            <a href="{{item.linkSemCategoria2}}" class="noCat">{{item.semCategoria2}}</a>
-                        </li>
-                        <li ng-class="selectedNoCat()" ng-hide="hideItensNoCat()">
                             <a href="{{item.linkSemCategoria2}}" class="noCat">{{item.semCategoria3}}</a>
                         </li>
                     </ol>
@@ -108,7 +101,6 @@
                                 </span>
                                 <span class="titleCategory">{{item.categoria}}</span>
                             </div>
-                            <!-- subcategories -->
                             <ul class="subCat" style="display:none">
                                 <li class="sublist" ng-hide="hideItens()">
                                     <a href="{{item.linkSubCategoria1}}">{{item.subCategoria1}}</a>
@@ -172,15 +164,15 @@
                             </p>
                         </div>
                         <hr>
-
                         <!-- dinamic content -->
                         <div class="breadcrumb">
-                            <p><span class="nameCategory">Primeiro nome da categoria</span> <span>&#62;</span> nomeLinkCategoriaAcessada</p>
+                            <p>
+                                <span class="nameCategory">Primeiro nome da categoria</span>
+                                <span>&#62;</span> nomeLinkCategoriaAcessada
+                            </p>
                         </div>
-
                     </section>
 
-                    <!-- manual beging here -->
                     <article class="contentMain row">
                         <h1><a name="titlePage"></a>Nome do link da subcategoria selecionada</h1>
                         <p>Duis molestie mauris vitae ullamcorper laoreet. Maecenas bibendum turpis risus, at porttitor sapien varius quis. Etiam dignissim non erat vitae semper. Suspendisse potenti. Nullam vel <a href="#">justo lacinia</a> leo congue dapibus. Nulla facilisi. Integer dictum porttitor aliquet. Sed mi nunc, malesuada ut molestie nec, semper et nisi.</p>
