@@ -78,15 +78,17 @@ $meioGrid: $grid / 2;
     @include box-size(border-box);
 }
 body { 
-    @include font(normal, 8.25pt);
+    @include font(normal, 62.5%);
     color: $corTexto;
-    // considerando 1cm de margim
-    width: 26.7cm;
+    width: 100%;
+    margin: 0;
+    // aplicando bordas. Objetivo: sup/inf: 2,5 | dir/esq: 3,0
+    padding: 1.5cm 2cm 0 2.175cm;
 
 }
-
 .wrapper {
 	margin: 0;
+    padding: 0;
     border: none;
     *border: 0;
 }
@@ -168,24 +170,24 @@ h3 {
 	display: inline-block;
     text-align: center;
     float: left;
-    margin: $meioGrid 0 0;
+    margin: ($meioGrid / 3) 0;
     .title {
-        @include font(bold, 2.8em);
+        @include font(bold, 1.8em);
         color: $corTexto !important;
 		width: 90%;
 		padding: 0 0 2pt;
 		margin: 0 auto;
     }
     .description {
-        @include font(normal, 1.8em);
+        @include font(normal, 1.4em);
         color: $corTexto !important;
-        padding: 2pt ($grid - 10);
-        margin: 0.5pt 0 0;
+        padding: 0;
+        margin: 0;
         display: inline-block;
     }
 }
 /* GERAL */
-#main{clear: both;}
+#main{ clear: both; }
 
 .containerMain {
     border-top: 1pt solid $corBorda;
@@ -195,9 +197,7 @@ h3 {
 .buscaMain { display: none; }
 
 // divise navigation and content [only mobile]
-.divisionMobile {
-    display: none;
-}
+.divisionMobile { display: none; }
 
 /* CONTENT MAIN */
 // Header
@@ -223,23 +223,24 @@ h3 {
 
 .contentMain {
     h1 {
-        @include font(bold, 2em);
+        @include font(bold, 1.8em);
         line-height: 1em;
         color: $corTitle;
     }
     h2 {
         margin: $meioGrid 0 ($meioGrid / 4) 0;
+         @include font(bold, 1.6em);
     }
     h2 + p { margin-top: 0; }
     p {
         @include font(normal, 1.2em);
-        line-height: 1.6em;
+        line-height: 1.4em;
         a { @include corLink(); }
     }
 }
 
 .sumario {
-    margin: $grid 0 !important;
+    margin: ($grid - 10) 0 !important;
     h3 {
         margin: 0 0 ($meioGrid / 4);
         @include font(bold, 1.4em);
@@ -249,25 +250,21 @@ h3 {
         padding: 0;
         list-style: none;
         li {
-            margin-bottom: ($meioGrid / 2);
+            margin-bottom: 2pt;
             &:last-child { margin-bottom: 0;}
             a { @include corLink(); @include font(normal, 1.2em); }
-            a[href]:after {
-            	content: "" !important;
-            }
         }
     }
 }
 
-.voltarSumario {
-    display: none;
-}
+.voltarSumario { display: none; }
 
 // content img and boxText
 .imageContainer {
     display: block;
     position: relative;
     page-break-inside: avoid; //don't break imagem com  destaque
+    margin: 10px 0;
 
     // highlighted box
     .boxDestaque {
@@ -276,9 +273,10 @@ h3 {
         // background-color: $corBorda !important;
         border: 2.25pt solid $corDefault;
         padding: $meioGrid / 2;
+        margin: $meioGrid 0;
         p { 
             @include font(normal, 1.1em);
-            line-height: 1.5em;
+            line-height: 1.4em;
             margin: 0;
         }
     }
@@ -289,6 +287,7 @@ h3 {
         // background-color: $corBorda !important;
         border: 2.25pt solid $corBorda;
         padding: $meioGrid / 2;
+        margin: $meioGrid 0;
         p { 
             @include font(normal, 1.1em);
             line-height: 16px;
@@ -306,9 +305,9 @@ h3 {
     //
     /////////////////////////////////////////////////////////////
     
-    // @include           settingsBoxImagem(width, top, right, bottom, left)
-    #CatNumb01 { @include settingsBoxImagem(60%, 180px, auto, auto, 75px) }
-    #CatNumb02 { @include settingsBoxImagem(70%, auto, auto, 40px, 20px) }
+    //           @include settingsBoxImagem(width, top, right, bottom, left)
+    // #CatNumb01 { @include settingsBoxImagem(60%, 180px, auto, auto, 75px) }
+    #CatNumb02 { @include settingsBoxImagem(70%, auto, auto, -30px, 20px) }
 }
 
 // saiba mais
@@ -339,19 +338,27 @@ h3 {
         li {
             display: block;
             // border: 1px solid $corDefault;
-            margin: 3pt 0;
+            margin: 5pt 0;
             padding: 0;
             background: url("../img/ui/icoSaibaMaisManuais.png") 5px center no-repeat;
             @include radius();
 
             div {
-                display: table-cell;
-                vertical-align: middle;
+                display: block;
+                width: 100%;
+                overflow: hidden;
                 padding: 0;
                 a { 
                     @include corLink();
                     @include font(normal, 1.2em);
-                    line-height: 1.4em;
+                }
+                a[href]:after {
+                    content: " (" attr(href) ")";
+                    @include font(normal, .9em);
+                }
+
+                abbr[title]:after {
+                    content: " (" attr(title) ")";
                 }
             }
         }
@@ -412,10 +419,3 @@ a:visited {
     border-bottom: 1pt dotted $corDefault;
 }
 
-a[href]:after {
-    content: " (" attr(href) ")";
-}
-
-abbr[title]:after {
-    content: " (" attr(title) ")";
-}

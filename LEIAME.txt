@@ -1,0 +1,20 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DADOS FUNDAMENTAIS PARA MANUTENÇÃO E DESENVOLVIMENTO DO PROJETO:
+MANUAIS BLACKBOARD
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+O presente documento esclarece todas as diretrizes necessárias ao(s) desenvolvedor(es) responsável(is) visando atender qualquer alteração necessária no projeto ou, simplesmente, o contínuo desenvolvimento do mesmo.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DETALHES GERAL DO PROJETO
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Nome do Projeto: Manuais Blackboard 
+
+
+Minha opinião é de que você deve:
+
+1º - Documente o sistema, suas logicas, o que cada página faz
+
+2º - Documente a estrutura do site colocando as páginas, quem linka com quem, css, .js, etc.
+
+3º - Faça uma documentação de procedures, funções e view (do banco de dados) caso você esteja utilizando esses recursos.

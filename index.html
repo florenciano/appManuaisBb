@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="pt_br">
+<head>
+	<meta charset="UTF-8">
+	<title>Manuais Blackboard - documentação</title>
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+	<style type="text/css">
+		body{ color: #3c3c3c; }
+		.wrapper {
+			margin: 1em auto;
+			max-width: 1024px;
+			padding: 1em;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<h1><a name="inicio"></a>Manuais Blackboard: documentação do Projeto</h1>
+		<p><strong>Caro leitor</strong>, o presente documento esclarece todas as diretrizes necessárias ao(s) desenvolvedor(es) responsável(is) visando atender qualquer alteração necessária no projeto ou, simplesmente, o contínuo desenvolvimento do mesmo, no que se refere exclusivamente ao desenvolvimento Front-end. Aqui também esta descritas todas as lógicas de funcionamento, detalhamento da estrutura de diretórios e a função de cada página produzida.</p>
+
+		<hr>
+
+		<h3>sumário</a></h3>
+		<ul>
+			<li><a href="#detalhesGeral">Detalhes geral do Projeto</a></li>
+			<li><a href="#habilidades">Habilidades requeridas do desenvolvedor do Projeto</a></li>
+			<li><a href="#estruturaProjeto">Estrutura do Projeto</a></li>
+		</ul>
+
+		<hr>
+
+		<h2><a name="detalhesGeral"></a>Detalhes geral do Projeto</h2>
+		<p><strong>Nome do Projeto</strong>
+		<br>Manuais Blackboard</p>
+		<p><strong>Diretório de gravação do Projeto</strong>
+		<br>Material armazenado no computador no seguinte endereço*: <strong>D:\wamp\www\projetos\appManuaisBb\front</strong>
+		<br><small>* diretório <em>default</em> de desenvolvimento de projetos. Segue a diretriz de endereço recomendado e gerenciada pelo <a href="http://www.wampserver.com/en/">Wamp</a> (plataforma de desenvolvimento de aplicação web).</small></p>
+		<p><strong>Objetivo do Projeto</strong>
+		<br>Transpor os manuais do Blackboard da versão .pdf para .html mantendo a mesma (ou a mais próxima de) experiência de uso do modelo de origem.</p>
+		<p><strong>Requisitos mínimos do Projeto</strong>
+		<br>Responsive web design (RWD); Cross-browser compatível com todos os browser que recebem suporte do Blackboard (<a href="http://help.blackboard.com/en-us/Learn/9.1_SP_12_and_SP_13/Administrator/010_Release_Notes/025_SP13_Release_Notes/Browser_Support">veja lista</a>).</p>
+		<p><strong>Metas do Projeto</strong></p>
+		<ul>
+			<li>Permitir que o usuário tira as principais dúvidas referente ao Blackboard por meio da navegação das páginas do projeto;</li>
+			<li>Facilitar a busca por determinados assuntos de interesses;</li>
+			<li>Poder imprimir o documento mantendo a mesma experiência do formato original .pdf;</li>
+		</ul>
+		<p><strong>Início de desenvolvimento do Projeto</strong>
+		<br>dezembro de 2013</p>
+		<p><a href="#inicio">Subir</a></p>
+
+		<hr>
+		
+		<h2><a name="habilidades"></a>Habilidades requeridas do desenvolvedor do Projeto</h2>
+		<p>O desenvolver ou o responsável pela manutenção e/ou contínuo desenvolvimento do Projeto precisa ter as seguintes competências ou experiências de uso:</p>
+		<ul>
+			<li>HTML5</li>
+			<li>COMPASS (<a href="http://compass-style.org">mais informação</a>)</li>
+			<li>SASS (<a href="http://sass-lang.com">mais informação</a>)</li>
+			<li>CSS direcionado a impressão</li>
+			<li>Javascript e biblitoteca de script jQuery</li>
+			<li>AngularJS (<a href="http://angularjs.org">mais informação</a>)</li>	
+		</ul>
+		<p><a href="#inicio">Subir</a></p>
+
+		<hr>
+		
+		<h2><a name="estruturaProjeto"></a>Estrutura do Projeto</h2>
+		<p>O projeto esta sob a seguintes estrutura de diretórios:</p>
+		<p><img src="img/estruturaDiretorio.png" alt="Estrutura principal de diretórios"></p>
+		<h4>Diretrizes da estrutura de diretório</h4>
+		<p>A estrutura de diretórios esta segue as recomendações de boas práticas para o desenvolvimento de projetos web. Esta estrutura esta baseado num dos mais popular <a href="http://html5boilerplate.com/">templantes boilerplate</a> disponível para desenvolvimento front-end. A seguir a função de cada diretório desta estrutura:</p>
+		<ul>
+			<li>
+				<strong>Diretório raiz (front)</strong>
+				<p>Diretório responsável para armazenar o arquivo <em>índice</em> do diretório (index.html) e as demais, quando houver, páginas HTML. Os subs-diretórios também ficarão alocados aqui. Ainda sobre este diretório fica reservado a alocação de outros arquivos que complementam o desenvolvimento necessário do projeto podendo aumentar esta lista conforme necessidade.</p>
+				<ul>
+					<li><em>404.html</em></li>
+					<li><em>humans.txt</em></li>
+					<li><em>robots.txt</em></li>
+					<li><em>favicon.ico</em></li>
+				</ul>
+			</li>
+			<li>
+				<strong>Diretório de imagens (img)</strong>
+				<p>Ficarão alocados neste diretórios todas as imagens necessárias para o desenvolvimento do projeto.</p>
+
+				<p><strong><small>Diretório de imagens blackboard</small></strong>
+				<br>Local de armazenamento das imagens do manual. Seus subdiretórios podem aumentar conforme a expansão no desenvolvimento do projeto.</p>
+
+				<p><strong><small>Diretório de imagens ui</small></strong>
+				<br>Local exclusivo de armazenamento das imagens da GUI(Graphical User Interface).</p>
+
+			</li>
+			<li>
+				<strong>Diretório de estilos (sass)</strong>
+				<p>Neste diretório ficarão alocados os arquivos <em>.sass</em> que gerarão os documentos <em>.css</em> do projeto. O diretório <em>plugins</em> contém os recursos adicionais de estilos, podendo ser adicionados quantos forem necessários.</p>
+			</li>
+			<li>
+				<strong>Diretório de scripts e suas bibliotecas (js)</strong>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, dolores dicta commodi nihil eum. Eaque, repellendus ad maiores velit reprehenderit fugiat in vero perferendis blanditiis iste. Dignissimos, perspiciatis consequuntur eligendi.</p>
+			</li>
+		</ul>
+		<p><a href="#inicio">Subir</a></p>
+
+		<hr>
+		
+
+
+	</div>
+</body>
+</html>

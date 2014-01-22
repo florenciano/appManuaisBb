@@ -119,22 +119,46 @@ body {
     border: 1px solid $corBorda;
 }
 
-// remove transitions of the subList in navigation
-// ol {
-//     li {
-//         ul {
-//             @include transition(none !important);
-//         }
-//     }
-
-// }
-
 /*  $Media Queries
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* Media query MOBILE
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @media only screen and (min-width:160px) {
+    // pop-up para alerta de pequena resolução
+   .alert {
+        padding: ($meioGrid - 5);
+        border: 1px solid transparent;
+        width: 90%;
+        margin: $meioGrid auto;
+        @include radius();
+        @include font(normal, 1.1em);
+        @include transition(none !important)
+    }
+    .alert-dismissable {
+        padding-right: $grid - 5;
+    }
+    .alert-warning {
+        color: $corDefaultDark;
+        background-color: #f2dede;
+        border-color: #ebccd1;
+    }
+    button.close {
+        float: right;
+        @include font(bold, 1.6em);
+        line-height: 1;
+        text-shadow: 0 1px 0 #fff;
+        opacity: .3;
+        padding: 0;
+        cursor: pointer;
+        background: transparent;
+        border: 0;
+        -webkit-appearance: none;
+        position: relative;
+        top: -3px;
+        right: -21px;
+        color: inherit;
+    }
     .logo {
         margin: ($meioGrid /2) 0 auto;
         img {
@@ -221,6 +245,7 @@ body {
             @include font(bold, 1.4em);
             display: block;
             padding: ($meioGrid - 12) 0 ($meioGrid - 12) $grid ;
+            margin-bottom: $meioGrid / 4;
 
             // altura do icone
             // height: $grid - 8;
@@ -306,20 +331,23 @@ body {
         }
 
         // qdo não houver categorias
+        // Acabou virando o modelo principal
         .noCategory {
+            p { 
+                margin: 3px 0;
+                padding-left: $meioGrid / 2;
+                @include font(normal, 1.2em);
+            }
             li {
                 a {
                     @include corLink();
                     @include font(normal, 1.2em);
                     margin-left: $grid + 2;
-                    padding: ($meioGrid / 10) 0;
+                    padding: 0;
                 }
-                &:last-child {
-                    margin-bottom: $meioGrid / 2;
-                }
+                &:last-child { margin-bottom: $meioGrid / 2 }
             }
         }
-
         hr {
             clear: both;
             margin: ($meioGrid / 2) 0;
@@ -450,11 +478,16 @@ body {
             }
         }
     }
+    
+    // controla o alinhamento das img dos prints do manual
+    .imgLeft { margin-left: 0; }
+    .imgRight { margin-right: 0; }
 
     // content img and boxText
     .imageContainer {
         display: block;
         position: relative;
+        margin-bottom: 50px !important;
 
         // highlighted box
         .boxDestaque {
@@ -510,7 +543,7 @@ body {
             list-style:  none;
             li {
                 display: block;
-                height: $grid +5;
+                height: $grid;
                 // border: 1px solid $corDefault;
                 margin: ($meioGrid / 4) 0;
                 padding: 0;
@@ -518,7 +551,7 @@ body {
                 @include radius();
 
                 div {
-                    height: $grid +5;
+                    height: $grid;
                     display: table-cell;
                     vertical-align: middle;
                     padding: 0 ($meioGrid / 2) 0 ($grid + 10);
@@ -554,7 +587,9 @@ body {
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @media handheld, only screen and (min-width: 768px) and (max-width: 1024px), only screen  and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:portrait) {
 
-    /* 1-INDEX */
+    // ocultando o pop-up de alerta de pequena resolução
+    .alert { display: none !important }
+
     // wrapper
     .wrapper { margin: $grid auto; }
 
@@ -653,13 +688,6 @@ body {
         display: none;
     }
 
-    .imageContainer {
-
-        // class for align img
-        .imgLeft { margin-left: 0; }
-        .imgRight { margin-right: 0; }
-
-    }
     // saibaMais
     .saibaMais {
         ul {
@@ -673,7 +701,10 @@ body {
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @media only screen and (min-width: 1024px) and (max-width: 1920px) {
 
-    /* 1-INDEX */
+    // ocultando o pop-up de alerta de pequena resolução
+    .alert { display: none !important }
+
+
     // wrapper
     .wrapper { margin: $grid auto; }
 
@@ -778,7 +809,7 @@ body {
                     margin-left: $meioGrid / 2;
                 }
                 &:last-child {
-                    margin-bottom: $meioGrid;
+                    margin-bottom: $meioGrid / 2;
                 }
             }
         }
@@ -798,12 +829,6 @@ body {
         display: none;
     }
 
-    .imageContainer {
-
-        // class for align of the img
-        .imgLeft { margin-left: 0; }
-        .imgRight { margin-right: 0; }
-    }
     // saibaMais
     .saibaMais {
         ul {

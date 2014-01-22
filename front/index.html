@@ -1,262 +1,44 @@
-<!DOCTYPE html>
-<html class="no-js" lang="pt-br" ng-app="manuaisBB">
+<!doctype html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Tecnlogias de Aprendizagem - Manuais de utilização</title>
-<meta name="description" content="">
-<meta name="viewport" content="width=device-width">
-
-<link rel="stylesheet" type="text/css" media="print" href="css/print.css">
-<link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
-
-<!--[if IE]>
- <link href="css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
- <![endif]-->
-
-<!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <script>window.html5 || document.write('<script src="js/libs/html5shiv.js"><\/script>')</script>
-<![endif]-->
+	<meta charset="UTF-8">
+	<title>Histórico de versionamento</title>
+	<link rel="stylesheet" href="pure-min.css">
+	<style>
+		body { margin: 2em;}
+	</style>
 </head>
 <body>
+	<h1>Histórico de versionamento</h1>
+	<p>
+		<a href="v1.html">Versão 1</a> <br>
+		Com informações apresentadas na reunião <strong>21/01</strong>
+	</p>
 
-    <div class="wrapper">
-        <!-- top -->
-        <header id="top" class="wfull fix">
-            <div class="logo c4">
-                <img src="img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
-            </div>
-            <div class="titleHeader c8">
-                <p class="title">Tecnologias de Aprendizagem</p>
-                <p class="description">Manuais de utilização</p>
-            </div>
-        </header>
+	<hr>
 
-        <div id="main" role="main" class="fix wfull">
-            <div class="containerMain row">
-                <!-- area search -->
-                <section class="buscaMain c4" ng-controller="listaMenu">
-                    <div class="inputSearch">
-                        <form id="busca" action="">
-                            <label for="pesquisa"></label>
-                            <!-- INPUT SEARCH -->
-                            <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Busca por título ou palavra-chave" ng-model="query">
-
-                            <p>
-                                <span class="interat"><a href="#" class="expandir" ng-click="showAllCat($event)">&#62;</a>Expandir tudo</span>
-                                <span class="interat"><a href="#" class="recolher" ng-click="hideAllCat($event)">&#60;</a>Recolher tudo</span>
-                            </p>
-                        </form>
-                    </div>
-
-                    <nav role="navigation" class="navigationMain">
-
-                    <!-- SUBJECT 1 -->
-                    <h5 class="nomeAssunto">Nome do assunto ou tema 1</h5>
-                    <ol class="yesCategory" ng-repeat="item in itensAssunto1 | filter:query">
-                        <li ng-class="selectedCat()">
-                            <div class="containerCategory">
-                                <span class="click">
-                                    <a href="#" class="exp-rec" ng-click="showHideCat($event)">[+]</a>
-                                </span>
-                                <span class="titleCategory">{{item.categoria}}</span>
-                            </div>
-                            <ul class="subCat" style="display:none">
-                                <li class="sublist" ng-hide="hideItens()">
-                                    <a href="{{item.linkSubCategoria1}}">{{item.subCategoria1}}</a>
-                                </li>
-                                <li class="sublist" ng-hide="hideItens()">
-                                    <a href="{{item.linkSubCategoria2}}">{{item.subCategoria2}}</a>
-                                </li>
-                                <li class="sublist" ng-hide="hideItens()">
-                                    <a href="{{item.linkSubCategoria3}}">{{item.subCategoria3}}</a>
-                                </li>
-                                <li class="sublist" ng-hide="hideItens()">
-                                    <a href="{{item.linkSubCategoria4}}">{{item.subCategoria4}}</a>
-                                </li>
-                                <li class="sublist" ng-hide="hideItens()">
-                                    <a href="{{item.linkSubCategoria5}}">{{item.subCategoria5}}</a>
-                                </li>
-                                <li class="sublist" ng-hide="hideItens()">
-                                    <a href="{{item.linkSubCategoria6}}">{{item.subCategoria6}}</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ol>
-                    <!-- SUBJECT NO CATEGORIES | NoCat -->
-                    <ol class="noCategory" ng-repeat="item in itensAssunto1NoCat | filter:query">
-                        <li ng-class="selectedNoCat()" ng-hide="hideItensNoCat()">
-                            <a href="{{item.linkSemCategoria2}}" class="noCat">{{item.semCategoria3}}</a>
-                        </li>
-                    </ol>
-
-                    <!-- SUBJECT 2 -->
-                    <h5 class="nomeAssunto">Nome do assunto ou tema 2</h5>
-                    <ol class="yesCategory" ng-repeat="item in itensAssunto2 | filter:query">
-                        <li ng-class="selectedCat()">
-                            <div class="containerCategory">
-                                <span class="click">
-                                    <a href="#" class="exp-rec" ng-click="showHideCat($event)">[+]</a>
-                                </span>
-                                <span class="titleCategory">{{item.categoria}}</span>
-                            </div>
-                            <ul class="subCat" style="display:none">
-                                <li class="sublist" ng-hide="hideItens()">
-                                    <a href="{{item.linkSubCategoria1}}">{{item.subCategoria1}}</a>
-                                </li>
-                                <li class="sublist" ng-hide="hideItens()">
-                                    <a href="{{item.linkSubCategoria2}}">{{item.subCategoria2}}</a>
-                                </li>
-                                <li class="sublist" ng-hide="hideItens()">
-                                    <a href="{{item.linkSubCategoria3}}">{{item.subCategoria3}}</a>
-                                </li>
-                                <li class="sublist" ng-hide="hideItens()">
-                                    <a href="{{item.linkSubCategoria4}}">{{item.subCategoria4}}</a>
-                                </li>
-                                <li class="sublist" ng-hide="hideItens()">
-                                    <a href="{{item.linkSubCategoria5}}">{{item.subCategoria5}}</a>
-                                </li>
-                                <li class="sublist" ng-hide="hideItens()">
-                                    <a href="{{item.linkSubCategoria6}}">{{item.subCategoria6}}</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ol>
-
-                    <!-- SUBJECT 3 NO CATEGORIES | NoCat -->
-                    <h5 class="nomeAssunto">Nome do assunto ou tema 3 sem categoria</h5>
-                    <ol class="noCategory" ng-repeat="item in itensAssunto3NoCat | filter:query">
-                        <li ng-class="selectedNoCat()" ng-hide="hideItensNoCat()">
-                            <a href="{{item.linkSemCategoria1}}" class="noCat">{{item.semCategoria1}}</a>
-                        </li>
-                        <li ng-class="selectedNoCat()" ng-hide="hideItensNoCat()">
-                            <a href="{{item.linkSemCategoria2}}" class="noCat">{{item.semCategoria2}}</a>
-                        </li>
-                        <li ng-class="selectedNoCat()" ng-hide="hideItensNoCat()">
-                            <a href="{{item.linkSemCategoria2}}" class="noCat">{{item.semCategoria3}}</a>
-                        </li>
-                    </ol>
-
-                    <div class="faqBusca">
-                        <h5>
-                            <a href="#" >FAQ</a>
-                        </h5>
-                    </div>
-                    <div class="outros">
-                        <h6>
-                            <a href="#titlePage">Não encontrou o que queria?</a>
-                        </h6>
-                    </div>
-
-                    </nav>
-                </section>
-                <!-- content main -->
-                <section class="mainContent c8">
-                    <!-- divise only mobile -->
-                    <div class="divisionMobile fix">
-                    </div>
-                    <section class="headerContent row">
-                        <div class="cabecalho fix">
-                            <p>
-                                <span><strong>Atualizado: </strong>01/01/2014</span>
-                                <span class="imprimir"><span>i</span><a href="#" id="imprimir">Imprimir Manual</a></span>
-                            </p>
-                        </div>
-                        <hr>
-                        <!-- dinamic content -->
-                        <div class="breadcrumb">
-                            <p>
-                                <span class="nameCategory">Primeiro nome da categoria</span>
-                                <span>&#62;</span> nomeLinkCategoriaAcessada
-                            </p>
-                        </div>
-                    </section>
-
-                    <article class="contentMain row">
-                        <h1><a name="titlePage"></a>Nome do link da subcategoria selecionada</h1>
-                        <p>Duis molestie mauris vitae ullamcorper laoreet. Maecenas bibendum turpis risus, at porttitor sapien varius quis. Etiam dignissim non erat vitae semper. Suspendisse potenti. Nullam vel <a href="#">justo lacinia</a> leo congue dapibus. Nulla facilisi. Integer dictum porttitor aliquet. Sed mi nunc, malesuada ut molestie nec, semper et nisi.</p>
-                        <p>Cras tincidunt dictum nisl, sed dapibus felis consequat at. <strong>Phasellus facilisis leo ante</strong>, at consequat dolor feugiat eget. Pellentesque hendrerit mi sem, sit amet volutpat orci vestibulum in. Donec eu nibh varius, pretium nulla id, porttitor diam. Donec vitae sapien consequat, iaculis enim vel, semper est. Integer tristique, sapien non congue mollis, magna neque tristique quam, blandit tristique quam lectus quis erat.</p>
-
-                        <div class="sumario row">
-                            <h3><a name="sumarioAncora"></a>Sumário</h3>
-                            <!-- list of summary here -->
-                        </div>
-
-                        <h2><a name="Titulo1" class="ancora"></a>Donec eu nibh varius, pretium nulla id</h2>
-                        <p>Maecenas aliquet elit in ultricies pretium. Quisque consequat vulputate imperdiet. Phasellus in augue ante. Phasellus et blandit mi. Maecenas lacus justo, viverra malesuada imperdiet et, imperdiet at risus. Fusce ut augue at nibh porttitor facilisis. Donec consectetur urna lorem, et porta mi convallis eget. Vestibulum quis lacinia dui. Vestibulum mattis aliquam magna eu elementum. Ut placerat purus nisi, dapibus tempus augue tempus a. Nunc ligula dolor, congue non convallis id, porta vel tortor. Nam vitae convallis sem, ac egestas metus. Maecenas scelerisque at lorem ut aliquam.</p>
-                        <div class="imageContainer row">
-                            <img src="img/blackboard/step1.png" alt="image step 1" class="imgLeft">
-                            <div class="boxDestaque" id="CatNumb01">
-                                <p>Aliquam sed semper purus, sit amet pretium erat. Praesent consectetur, erat nec <a href="#teste">dictum tempus, tortor tortor sodales felis</a>, id molestie arcu orci et velit. Suspendisse pharetra felis in urna pharetra, <strong>a dictum nisl vehicula</strong>. Nullam tincidunt ac sapien vel posuere. Morbi ut vulputate velit, vel rutrum.</p>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <!-- div sumario -->
-                        </div>
-
-                        <h2><a name="Titulo2" class="ancora"></a>Suspence sodales elit eu gravida imperdiet</h2>
-                        <p>Tunc velit sapien, porta laoreet rhoncus vitae, suscipit et augue. Sed eu lectus vel orci sodales consectetur. Nunc ullamcorper urna     ut congue euismod. Cras tincidunt dictum nisl, sed dapibus felis consequat at. Phasellus facilisis leo ante, at consequat dolor feugiat eget. Pellentesque hendrerit mi sem, sit amet volutpat orci vestibulum in.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptates, obcaecati incidunt dolorum laboriosam recusandae soluta labore ratione delectus dolor natus provident perspiciatis saepe illum alias quaerat nisi ipsum beatae. Etiam ultrices felis mauris, vel vehicula mauris molestie in. Aliquam quis bibendum nisi. Sed dapibus, erat a semper aliquam, orci dolor viverra neque. Etiam ultrices felis mauris, vel vehicula mauris molestie in. Aliquam quis bibendum nisi. Sed dapibus, erat a semper aliquam, orci dolor viverra neque.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, ad temporibus vel sit neque eos accusamus aspernatur quo accusantium nihil commodi laudantium cupiditate. Vero doloribus a tenetur. Quis, natus mollitia ratione nemo temporibus? Temporibus, earum, maxime eaque accusantium natus doloribus quod vero voluptate unde et molestiae cupiditate a iure sint minima cum repellendus enim dolorem velit sequi ipsum esse ducimus rem nisi consequatur repellat perspiciatis animi eius aliquam nostrum nihil ex corporis eum deleniti incidunt necessitatibus quibusdam aperiam optio non.</p>
-                        <div class="imageContainer row">
-                            <!-- imgLeft or imgRight | absent when img is centered -->
-                            <img src="img/blackboard/step1.png" alt="image step 2" class="imgRight">
-                            <div class="boxDestaqueAdicional" id="CatNumb02">
-                                <p>In dui tellus, vehicula a venenatis non, facilisis id sapien. Proin auctor molestie odio et auctor. Cras non condimentum mauris. <a href="#">Etiam ultrices felis mauris</a>, vel vehicula mauris molestie in. Aliquam quis bibendum nisi. Sed dapibus, erat a semper aliquam, orci dolor viverra neque. </p>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <!-- div sumario -->
-                        </div>
-
-                        <h2><a name="Titulo3" class="ancora"></a>Etiam dignissim non erat vitae semper</h2>
-                        <p>Cras tincidunt dictum nisl, sed dapibus felis consequat at. <strong>Phasellus facilisis</strong> leo ante, at consequat dolor feugiat eget. Pellentesque hendrerit mi sem, sit amet volutpat orci vestibulum in.</p>
-                        <p>Nunc velit sapien, porta laoreet rhoncus vitae, suscipit et augue. Sed eu lectus vel orci sodales consectetur. Nunc ullamcorper urna ut congue euismod. Cras tincidunt dictum nisl, sed dapibus felis consequat at. Phasellus facilisis leo ante, at consequat dolor feugiat eget. Pellentesque hendrerit mi sem, sit amet volutpat orci vestibulum in.</p>
-                    </article>
-
-                    <div class="voltarSumario fix">
-                        <a href="#sumarioAncora">Sumário</a>
-                    </div>
-
-                    <!-- section saiba mais -->
-                    <section class="saibaMais row fix">
-                        <h2><a name="Titulo4" class="ancora"></a>Saiba Mais</h2>
-                        <h4>Manuais relacionados</h4>
-                        <ul>
-                            <li>
-                                <div><a href="#" class="manualRelacional">Nome de um determinado Manual relacionado podendo ter até duas linhas na plataforma mobile</a></div>
-                            </li>
-                            <li>
-                                <div><a href="#" class="manualRelacional">Manuais relacionados</a></div>
-                            </li>
-                        </ul>
-                        <h4>Manuais complementares</h4>
-                        <ul>
-                            <li>
-                                <div><a href="#" class="manualComplementar">Quisque pulvinar sapien massa</a></div>
-                            </li>
-                            <li>
-                                <div><a href="#" class="manualComplementar">Cras scelerisque a velit auctor rhoncus</a></div>
-                            </li>
-                            <li>
-                                <div><a href="#" class="manualComplementar">Nam eu purus ac tellus convallis posuere non sit amet mauris</a></div>
-                            </li>
-                        </ul>
-                    </section>
-
-                </section>
-            </div>
-        </div>
-    </div>
-
-<!-- Scripts -->
-<script>navigator.userAgent.match("MSIE")&&document.write('<script src="js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="js/libs/jquery-2.0.3.min.js"><\/script>');</script>
-<script src="js/libs/angular.js"></script>
-<script src="js/controllers.js"></script>
-
-<script src="js/main.js"></script>
+	<p>
+		<a href="v2.html">Versão 2</a> <br>
+		Com as seguintes alterações:
+		<ul>
+			<li>Nova estrutura de menus: Lista de manual dentro de um só nível;</li>
+			<li>Retirado os botões de expansão <strong>[+]</strong> e retração <strong>[-]</strong>;</li>
+			<li>Retirado os botões de <strong>expandir tudo</strong> e <strong>recolher tudo</strong>;</li>
+			<li>Exclusão do ícone de <em>imprimir manual</em>;</li>
+			<li>Inserção do menu pop-up sobre a resolução do monitor. Alerta só aparece em resoluções abaixo de 768px [resolução mínima de tablet decente, os tablets xing ling estão fora];</li>
+			<li>Inclusão do favicon. <br>
+			<small><strong>Obs:</strong> Tive que gerar o favicon de um site, e a redução brusca do tamanho do arquivo parece que ficou serrilhado. Eu costumo fazer pelo photoshop, mas a versão que eu tenho aqui não tem saída para formato .ico :[</small> ;</li>
+		</ul>
+	</p>
+	<p>
+		<a href="v2-1.html">Versão 2.1</a> <br>
+		É apenas uma outra variação dos estilos das categorias do menu. <strong>As alterações que não afeta o menu não esta contemplada nesta versão</strong>.
+	</p>
+	
+	<hr>
+	<p>
+		<a href="#">Versão 3</a> <br>
+		Em breve...
+	</p>
 </body>
 </html>

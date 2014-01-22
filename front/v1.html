@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br" ng-app="manuaisBB">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Tecnlogias de Aprendizagem - Manuais de utilização</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
+
+<link rel="stylesheet" type="text/css" media="print" href="css/print.css">
+<!-- <link rel="stylesheet" type="text/css" media="screen" href="css/print.css"> -->
+<link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+
+<!--[if IE]>
+    <link href="css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script>window.html5 || document.write('<script src="js/libs/html5shiv.js"><\/script>')</script>
+<![endif]-->
+</head>
+<body>
+
+    <div class="wrapper">
+        <!-- top -->
+        <header id="top" class="wfull fix">
+            <div class="logo c4">
+                <img src="img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
+            </div>
+            <div class="titleHeader c8">
+                <p class="title">Tecnologias de Aprendizagem</p>
+                <p class="description">Manuais de utilização</p>
+            </div>
+        </header>
+
+        <div id="main" role="main" class="fix wfull">
+            <div class="containerMain row">
+                <!-- area search -->
+                <section class="buscaMain c4" ng-controller="listaMenu">
+                    <div class="inputSearch">
+                        <form id="busca" action="">
+                            <label for="pesquisa"></label>
+                            <!-- INPUT SEARCH -->
+                            <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Busca por título ou palavra-chave" ng-model="query">
+
+                            <p>
+                                <span class="interat"><a href="#" class="expandir" ng-click="showAllCat($event)">&#62;</a>Expandir tudo</span>
+                                <span class="interat"><a href="#" class="recolher" ng-click="hideAllCat($event)">&#60;</a>Recolher tudo</span>
+                            </p>
+                        </form>
+                    </div>
+
+                    <nav role="navigation" class="navigationMain">
+                    
+                    <!-- SUBJECT 1 -->
+                    <h5 class="nomeAssunto">Nome do assunto ou tema 1</h5>
+                    <ol class="yesCategory" ng-repeat="item in itensAssunto1 | filter:query">
+                        <li ng-class="selectedCat()">
+                            <div class="containerCategory">
+                                <span class="click">
+                                    <a href="#" class="exp-rec" ng-click="showHideCat($event)">[+]</a>
+                                </span>
+                                <span class="titleCategory">{{item.categoria}}</span>
+                            </div>
+                            <ul class="subCat" style="display:none">
+                                <li class="sublist" ng-hide="hideItens()">
+                                    <a href="{{item.linkSubCategoria1}}">{{item.subCategoria1}}</a>
+                                </li>
+                                <li class="sublist" ng-hide="hideItens()">
+                                    <a href="{{item.linkSubCategoria2}}">{{item.subCategoria2}}</a>
+                                </li>
+                                <li class="sublist" ng-hide="hideItens()">
+                                    <a href="{{item.linkSubCategoria3}}">{{item.subCategoria3}}</a>
+                                </li>
+                                <li class="sublist" ng-hide="hideItens()">
+                                    <a href="{{item.linkSubCategoria4}}">{{item.subCategoria4}}</a>
+                                </li>
+                                <li class="sublist" ng-hide="hideItens()">
+                                    <a href="{{item.linkSubCategoria5}}">{{item.subCategoria5}}</a>
+                                </li>
+                                <li class="sublist" ng-hide="hideItens()">
+                                    <a href="{{item.linkSubCategoria6}}">{{item.subCategoria6}}</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <!-- SUBJECT NO CATEGORIES | NoCat -->
+                    <ol class="noCategory" ng-repeat="item in itensAssunto1NoCat | filter:query">
+                        <li ng-class="selectedNoCat()" ng-hide="hideItensNoCat()">
+                            <a href="{{item.linkSemCategoria2}}" class="noCat">{{item.semCategoria3}}</a>
+                        </li>
+                    </ol>
+
+                    <!-- SUBJECT 2 -->
+                    <h5 class="nomeAssunto">Nome do assunto ou tema 2</h5>
+                    <ol class="yesCategory" ng-repeat="item in itensAssunto2 | filter:query">
+                        <li ng-class="selectedCat()">
+                            <div class="containerCategory">
+                                <span class="click">
+                                    <a href="#" class="exp-rec" ng-click="showHideCat($event)">[+]</a>
+                                </span>
+                                <span class="titleCategory">{{item.categoria}}</span>
+                            </div>
+                            <ul class="subCat" style="display:none">
+                                <li class="sublist" ng-hide="hideItens()">
+                                    <a href="{{item.linkSubCategoria1}}">{{item.subCategoria1}}</a>
+                                </li>
+                                <li class="sublist" ng-hide="hideItens()">
+                                    <a href="{{item.linkSubCategoria2}}">{{item.subCategoria2}}</a>
+                                </li>
+                                <li class="sublist" ng-hide="hideItens()">
+                                    <a href="{{item.linkSubCategoria3}}">{{item.subCategoria3}}</a>
+                                </li>
+                                <li class="sublist" ng-hide="hideItens()">
+                                    <a href="{{item.linkSubCategoria4}}">{{item.subCategoria4}}</a>
+                                </li>
+                                <li class="sublist" ng-hide="hideItens()">
+                                    <a href="{{item.linkSubCategoria5}}">{{item.subCategoria5}}</a>
+                                </li>
+                                <li class="sublist" ng-hide="hideItens()">
+                                    <a href="{{item.linkSubCategoria6}}">{{item.subCategoria6}}</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <!-- SUBJECT 3 NO CATEGORIES | NoCat -->
+                    <h5 class="nomeAssunto">Nome do assunto ou tema 3 sem categoria</h5>
+                    <ol class="noCategory" ng-repeat="item in itensAssunto3NoCat | filter:query">
+                        <li ng-class="selectedNoCat()" ng-hide="hideItensNoCat()">
+                            <a href="{{item.linkSemCategoria1}}" class="noCat">{{item.semCategoria1}}</a>
+                        </li>
+                        <li ng-class="selectedNoCat()" ng-hide="hideItensNoCat()">
+                            <a href="{{item.linkSemCategoria2}}" class="noCat">{{item.semCategoria2}}</a>
+                        </li>
+                        <li ng-class="selectedNoCat()" ng-hide="hideItensNoCat()">
+                            <a href="{{item.linkSemCategoria2}}" class="noCat">{{item.semCategoria3}}</a>
+                        </li>
+                    </ol>
+                        
+                    <div class="faqBusca">
+                        <h5>
+                            <a href="#" >FAQ</a>
+                        </h5>
+                    </div>
+                    <div class="outros">
+                        <h6>
+                            <a href="#titlePage">Não encontrou o que queria?</a>
+                        </h6>
+                    </div>
+
+                    </nav>
+                </section>
+                <!-- content main -->
+                <section class="mainContent c8">
+                    <!-- divise only mobile -->
+                    <div class="divisionMobile fix">
+                    </div>
+                    <section class="headerContent row">
+                        <div class="cabecalho fix">
+                            <p>
+                                <span><strong>Atualizado: </strong>01/01/2014</span>
+                                <span class="imprimir"><span>i</span><a href="#" id="imprimir">Imprimir Manual</a></span>
+                            </p>
+                        </div>
+                        <hr>
+                        <!-- dinamic content -->
+                        <div class="breadcrumb">
+                            <p>
+                                <span class="nameCategory">Primeiro nome da categoria</span>
+                                <span>&#62;</span> nomeLinkCategoriaAcessada
+                            </p>
+                        </div>
+                    </section>
+
+                    <article class="contentMain row">
+                        <h1><a name="titlePage"></a>Criar um fórum de discussão 3/4</h1>
+
+                        <div class="sumario row">
+                            <h3><a name="sumarioAncora"></a>Sumário</h3>
+                            <!-- Aqui sera inseria a lista dos títulos [se houver] para gerar o sumário -->
+                        </div>
+
+                        <h2><a name="Titulo1" class="ancora"></a>Donec eu nibh varius, pretium nulla id</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, alias quaerat cumque facilis ad rem quae doloremque tenetur ipsa aliquid magni rerum. Doloremque, voluptatum magni rerum totam deleniti ex voluptatem!</p>
+                        <div class="imageContainer row">
+                            <!-- imgLeft: alinhado à esq | imgRight: alinhado à dir | default: center -->
+                            <img src="img/blackboard/com/step4-1.png" alt="image step 1" class="imgLeft">
+                            <!-- boxDestaque: estilo padrao dos boxes
+                            boxDestaqueAdicional: para boxes com informações adicionais
+                            Obs: Adicionar um id para posicionar o box -->
+                            <div class="boxDestaque" id="CatNumb01">
+                                <p>A página do Grupo dá acesso a <strong>todos</strong> os <a href="lorem/ipsum">fóruns criados na disciplina</a>.</p>
+                                <p>Também é possível selecionar <strong>um</strong> Fórum específico.</p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- Aqui será adicionado a ancora para voltar ao sumario -->
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, alias quaerat cumque facilis ad rem quae doloremque tenetur ipsa aliquid magni rerum. Doloremque, voluptatum magni rerum totam deleniti ex voluptatem!</p>
+                        <div class="imageContainer row">
+                            <img src="img/blackboard/com/step5.png" alt="image step 2" class="imgRight">
+                            <div class="boxDestaque" id="CatNumb02">
+                                <p>Na ferramenta Fórum é possível criar um <strong>fórum</strong> novo ou entrar nos fóruns existentes.</p>
+                                <p>Na lista há um resumo com o total de mensagens, mensagens não lidas e total de participantes.</p>
+                            </div>
+                        </div>
+
+                        <div class="row"> <div>
+
+                        <div class="imageContainer row">
+                            <img src="img/blackboard/com/step6.png" alt="image step 3" class="imgLeft">
+                            <div class="boxDestaqueAdicional" id="CatNumb03">
+                                <p>No botão de opções do Fórum, a opção <strong>Gerenciar</strong> permite atribuir <a href="#">diferentes perfis</a> de participação aos usuários da disciplina (opcional).</p>
+                            </div>
+                        </div>
+
+                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, error obcaecati incidunt fuga dolorum vel amet voluptates ipsa eaque.</p>
+                        <div class="imageContainer row">
+                            <img src="img/blackboard/com/step4-1.png" alt="image step 1" class="imgLeft">
+                            <div class="boxDestaque" id="CatNumb01">
+                                <p>A página do Grupo dá acesso a <strong>todos</strong> os <a href="lorem/ipsum">fóruns criados na disciplina</a>.</p>
+                                <p>Também é possível selecionar <strong>um</strong> Fórum específico.</p>
+                            </div>
+                        </div>
+
+                    </article>
+
+                    <div class="voltarSumario fix">
+                        <a href="#sumarioAncora">Sumário</a>
+                    </div>
+
+                    <!-- section saiba mais -->
+                    <section class="saibaMais row fix">
+                        <h2><a name="Titulo4" class="ancora"></a>Saiba Mais</h2>
+                        <h4>Manuais relacionados</h4>
+                        <ul>
+                            <li>
+                                <div><a href="http://localhost/projetos/appManuaisBb/front" class="manualRelacional">Nome de um determinado Manual relacionado podendo ter até duas linhas na plataforma mobile</a></div>
+                            </li>
+                            <li>
+                                <div><a href="http://localhost/projetos/appManuaisBb/front" class="manualRelacional">Manuais relacionados</a></div>
+                            </li>
+                        </ul>
+                        <h4>Manuais complementares</h4>
+                        <ul>
+                            <li>
+                                <div><a href="https://insper.blackboard.com/webapps/portal/frameset.jsp?/loremispum/dolor/insper.blackboard.com/webapps/portal/frameset.jsp?" class="manualComplementar">Quisque pulvinar sapien massa</a></div>
+                            </li>
+                            <li>
+                                <div><a href="http://localhost/projetos/appManuaisBb/front" class="manualComplementar">Cras scelerisque a velit auctor rhoncus</a></div>
+                            </li>
+                            <li>
+                                <div><a href="http://localhost/projetos/appManuaisBb/front/" class="manualComplementar">Nam eu purus ac tellus convallis posuere non sit amet mauris</a></div>
+                            </li>
+                        </ul>
+                    </section>
+
+                </section>
+            </div>
+        </div>
+    </div>
+
+<!-- Scripts -->
+<script>navigator.userAgent.match("MSIE")&&document.write('<script src="js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="js/libs/jquery-2.0.3.min.js"><\/script>');</script>
+<script src="js/libs/angular.js"></script>
+<script src="js/libs/jquery.placeholder.js"></script>
+
+<script src="js/controllers.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
