@@ -1,4 +1,4 @@
-manuaisBB.controller("manuaisRelacionados", function ($scope) { 
+manuaisBB.controller("manuaisComplementares", function ($scope) { 
 
 	$scope.manuais = [
 	// BLACKBOARD: Nome da categoria

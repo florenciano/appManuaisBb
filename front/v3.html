@@ -57,40 +57,121 @@
         </header>
 
         <div id="main" role="main" class="fix wfull">
-            <div class="containerMain row">
-                <!-- area search -->
+            <div class="containerMain fix row">
                 <section class="buscaMain c4" ng-controller="listaMenu">
                     <div class="inputSearch">
                         <form id="busca" action="">
                             <label for="pesquisa"></label>
-                            <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Busca por título ou palavra-chave" ng-model="query">
+                            <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Busca por título ou palavra-chave" ng-model="searchText">
                         </form>
                     </div>
 
                     <nav role="navigation" class="navigationMain">
-                        <h5 class="nomeAssunto">Blackboard</h5>
+                        <h5 class="nomeAssunto"><a name="inicio"></a>Blackboard</h5>
                         <ol class="noCategory">
                             <p>Conhecer o ambiente</p>
-                            <li class="sublist" ng-repeat="item in blackboardBb | filter:query">
+                            <li class="sublist" ng-repeat="item in blackboardBb | filter:{manual: searchText}">
                                 <a href="{{item.linkManual}}">{{item.manual}}</a>
                             </li>
                         </ol>
                         <ol class="noCategory">
                             <!-- adicionar class selectedCategory quando quiser marcar a categoria -->
                             <p class="selectedCategory">Materiais</p>
-                            <li class="sublist" ng-repeat="item in BbMateriais | filter:query">
+                            <li class="sublist" ng-repeat="item in BbMateriais | filter:{manual: searchText}">
                                 <a href="{{item.linkManual}}">{{item.manual}}</a>
                             </li>
                         </ol>
                         <ol class="noCategory">
                             <p>Comunicação e Interação</p>
-                            <li class="sublist" ng-repeat="item in BbComunicacaoInteracao | filter:query">
+                            <li class="sublist" ng-repeat="item in BbComunicacaoInteracao | filter:{manual: searchText}">
                                 <a href="{{item.linkManual}}">{{item.manual}}</a>
                             </li>
                         </ol>
                         <ol class="noCategory">
                             <p>Trabalhos</p>
-                            <li class="sublist" ng-repeat="item in BbTrabalhos | filter:query">
+                            <li class="sublist" ng-repeat="item in BbTrabalhos | filter:{manual: searchText}">
+                                <a href="{{item.linkManual}}">{{item.manual}}</a>
+                            </li>
+                        </ol>
+                        <ol class="noCategory">
+                            <p>Grupos</p>
+                            <li class="sublist" ng-repeat="item in BbGrupos | filter:{manual: searchText}">
+                                <a href="{{item.linkManual}}">{{item.manual}}</a>
+                            </li>
+                        </ol>
+                        <ol class="noCategory">
+                            <p>Testes e Pesquisas</p>
+                            <li class="sublist" ng-repeat="item in BbTestesPesquisas | filter:{manual: searchText}">
+                                <a href="{{item.linkManual}}">{{item.manual}}</a>
+                            </li>
+                        </ol>
+                        <ol class="noCategory">
+                            <p>Rubrics</p>
+                            <li class="sublist" ng-repeat="item in BbRubrics | filter:{manual: searchText}">
+                                <a href="{{item.linkManual}}">{{item.manual}}</a>
+                            </li>
+                        </ol>
+                        <ol class="noCategory">
+                            <p>Avaliação</p>
+                            <li class="sublist" ng-repeat="item in BbAvaliacao | filter:{manual: searchText}">
+                                <a href="{{item.linkManual}}">{{item.manual}}</a>
+                            </li>
+                        </ol>
+                        <ol class="noCategory">
+                            <p>Calendário</p>
+                            <li class="sublist" ng-repeat="item in BbCalendario | filter:{manual: searchText}">
+                                <a href="{{item.linkManual}}">{{item.manual}}</a>
+                            </li>
+                        </ol>
+                        
+                        <h5 class="nomeAssunto">Catme</h5>
+                        <ol class="noCategory">
+                            <p>Sobre a ferramenta</p>
+                            <li class="sublist" ng-repeat="item in catmeSobreFerramenta | filter:{manual: searchText}">
+                                <a href="{{item.linkManual}}">{{item.manual}}</a>
+                            </li>
+                        </ol>
+                        <ol class="noCategory">
+                            <p>Aplicar uma pesquisa de avaliação</p>
+                            <li class="sublist" ng-repeat="item in catmeAplicarPesquisaAval | filter:{manual: searchText}">
+                                <a href="{{item.linkManual}}">{{item.manual}}</a>
+                            </li>
+                        </ol>
+                        <ol class="noCategory">
+                            <p>Analisar os resultados</p>
+                            <li class="sublist" ng-repeat="item in catmeAnalisarResultados | filter:{manual: searchText}">
+                                <a href="{{item.linkManual}}">{{item.manual}}</a>
+                            </li>
+                        </ol>
+                        
+                        <h5 class="nomeAssunto">Votadores eletrônicos (clickers)</h5>
+                        <ol class="noCategory">
+                            <!-- <p>Lorem ipsum</p> -->
+                            <li class="sublist" ng-repeat="item in clickers | filter:{manual: searchText}">
+                                <a href="{{item.linkManual}}">{{item.manual}}</a>
+                            </li>
+                        </ol>
+                        
+                        <h5 class="nomeAssunto">Casos</h5>
+                        <ol class="noCategory">
+                            <!-- <p>Lorem ipsum</p> -->
+                            <li class="sublist" ng-repeat="item in casos | filter:{manual: searchText}">
+                                <a href="{{item.linkManual}}">{{item.manual}}</a>
+                            </li>
+                        </ol>
+                        
+                        <h5 class="nomeAssunto">Simuladores</h5>
+                        <ol class="noCategory">
+                            <!-- <p>Lorem ipsum</p> -->
+                            <li class="sublist" ng-repeat="item in simuladores | filter:{manual: searchText}">
+                                <a href="{{item.linkManual}}">{{item.manual}}</a>
+                            </li>
+                        </ol>
+                        
+                        <h5 class="nomeAssunto">Cursos online</h5>
+                        <ol class="noCategory">
+                            <!-- <p>Lorem ipsum</p> -->
+                            <li class="sublist" ng-repeat="item in cursosOnline | filter:{manual: searchText}">
                                 <a href="{{item.linkManual}}">{{item.manual}}</a>
                             </li>
                         </ol>
@@ -102,34 +183,30 @@
                         </div>
                         <div class="outros">
                             <h6>
-                                <a href="#titlePage">Não encontrou o que queria?</a>
+                                <a href="#titleManual">Não encontrou o que queria?</a>
                             </h6>
                         </div>
                     </nav>
-                    
                 </section>
-                <!-- content main -->
+                
                 <section class="mainContent c8">
                     <section class="headerContent row">
                         <div class="cabecalho fix">
                             <p>
                                 <span><strong>Atualizado: </strong>01/01/2014</span>
-                                <!-- Imprimir: pode ser usado no futuro 
-                                <span class="imprimir"><span>i</span><a href="#" id="imprimir">Imprimir Manual</a></span> -->
                             </p>
                         </div>
                         <hr>
-                        <!-- dinamic content -->
                         <div class="breadcrumb">
                             <p>
-                                <span class="nameCategory">Bb: Materiais</span>
+                                <span class="nameCategory">Materiais</span>
                                 <span>&#62;</span> nome do manual
                             </p>
                         </div>
                     </section>
 
                     <article class="contentMain row">
-                        <h1><a name="titlePage"></a>Criar um fórum de discussão 3/4</h1>
+                        <h1><a name="titleManual"></a>Criar um fórum de discussão 3/4</h1>
 
                         <div class="sumario row">
                             <h3><a name="sumarioAncora"></a>Sumário</h3>
@@ -153,7 +230,7 @@
                         <div class="row">
                             <!-- Aqui será adicionado a ancora para voltar ao sumario -->
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, alias quaerat cumque facilis ad rem quae doloremque tenetur ipsa aliquid magni rerum. Doloremque, voluptatum magni rerum totam deleniti ex voluptatem!</p>
+                        
                         <div class="imageContainer row">
                             <img src="img/blackboard/com/step5.png" alt="image step 2" class="imgRight">
                             <div class="boxDestaque" id="CatNumb02">
@@ -181,45 +258,48 @@
                         </div>
                     </article>
 
-                    <div class="voltarSumario fix">
+                    <div id="ancoraSaibaMais" class="voltarSumario fix">
                         <a href="#sumarioAncora">Sumário</a>
                     </div>
 
-                    <!-- section saiba mais -->
                     <section class="saibaMais row fix">
                         <h2><a name="Titulo4" class="ancora"></a>Saiba Mais</h2>
-                        <h4>Manuais relacionados</h4>
+                        
+                        <h4 id="relacionado">Manuais relacionados</h4>
                         <ul  ng-controller="manuaisRelacionados">
                             <li ng-repeat="item in manuais">
                                 <div><a href="{{item.linkManual}}">{{item.manual}}</a></div>
                             </li>
                         </ul>
-                        <h4>Manuais complementares</h4>
-                        <ul>
-                            <li>
-                                <div><a href="https://insper.blackboard.com/webapps/portal/frameset.jsp?/loremispum/dolor/insper.blackboard.com/webapps/portal/frameset.jsp?" class="manualComplementar">Quisque pulvinar sapien massa</a></div>
-                            </li>
-                            <li>
-                                <div><a href="http://localhost/projetos/appManuaisBb/front" class="manualComplementar">Cras scelerisque a velit auctor rhoncus</a></div>
-                            </li>
-                            <li>
-                                <div><a href="http://localhost/projetos/appManuaisBb/front/" class="manualComplementar">Nam eu purus ac tellus convallis posuere non sit amet mauris</a></div>
+                        
+                        <h4 id="complementar">Manuais complementares</h4>
+                        <ul ng-controller="manuaisComplementares">
+                            <li ng-repeat="item in manuais">
+                                <div><a href="{{item.linkManual}}">{{item.manual}}</a></div>
                             </li>
                         </ul>
                     </section>
 
+                    <div class="voltarSumario fix">
+                        <a href="#inicio">Início</a>
+                    </div>
                 </section>
             </div>
         </div>
     </div>
+    <div class="fix respiro"></div>
 
-<!-- Scripts -->
+<!-- Scripts: plugins -->
 <script>navigator.userAgent.match("MSIE")&&document.write('<script src="js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="js/libs/jquery-2.0.3.min.js"><\/script>');</script>
 <script src="js/libs/angular.js"></script>
 <script src="js/libs/jquery.placeholder.js"></script>
 
+<!-- Scripts: controllers do AngularJs -->
 <script src="js/listaCategoria.js"></script>
 <script src="js/manuaisRelacionados.js"></script>
+<script src="js/manuaisComplementares.js"></script>
+
+<!-- Scripts: do projeto -->
 <script src="js/main.js"></script>
 </body>
 </html>

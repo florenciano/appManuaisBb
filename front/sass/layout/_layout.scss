@@ -102,7 +102,7 @@ $meioGrid: $grid / 2;
 /////////////////////////////////////////////////////////////////////
 // Resets
 /////////////////////////////////////////////////////////////////////
-html, body { height: 100%;}
+html, body { height: 100%; min-height: 100%;}
 
 * {
     @include box-size(border-box);
@@ -245,16 +245,15 @@ body {
             @include font(bold, 1.4em);
             display: block;
             padding: ($meioGrid - 12) 0 ($meioGrid - 12) $grid ;
-            margin-bottom: $meioGrid / 4;
 
             // altura do icone
             // height: $grid - 8;
-            min-height: $grid - 8;
+            min-height: $grid - 2;
             background: url("../img/ui/icoCategoryBusca.png") left center no-repeat;
 
         }
         ol, ul {
-            margin: 0 0 ($meioGrid / 4) 0;
+            margin: 0 0 2px 0;
             padding: 0;
             list-style: none;
             display: block;
@@ -264,6 +263,7 @@ body {
             li {
                 margin: 2px 0;
                 padding: 0;
+                padding-left: $meioGrid;
                 float: left;
                 width: 100%;
                 @include radius();
@@ -336,12 +336,12 @@ body {
             p { 
                 margin: 3px 0;
                 padding-left: $meioGrid / 2;
-                @include font(normal, 1.2em);
+                @include font(bold, 1.3em);
             }
             li {
                 a {
                     @include corLink();
-                    @include font(normal, 1.2em);
+                    @include font(normal, 1.15em);
                     margin-left: $grid + 2;
                     padding: 0;
                 }
@@ -364,6 +364,7 @@ body {
             border-top: 1px solid $corBorda;
             border-bottom: 1px solid $corBorda;
             h5 {
+                margin: ($meioGrid / 10) 0;
                 a {
                     @include corLink();
                     &:visited {
@@ -565,6 +566,13 @@ body {
         }
     }
 
+    // area de respiro após o wrapper
+    .respiro {
+        display: block;
+        height: 1px;
+        float: left;
+        width: 100%;
+    }
 }
 
 // rwd convert in 100%
@@ -574,7 +582,6 @@ body {
         margin-bottom:20px;
     }
     // .row .row > div:last-child{ margin-bottom:0 !important }
-
     .c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,.c11,.c12{
         width:100%;
         margin-right:0;
@@ -594,8 +601,11 @@ body {
     .wrapper { margin: $grid auto; }
 
     // contentMain
-    .containerMain { padding-top: 0; }
-    .mainContent { border-left: 1px solid $corBorda; }
+    .containerMain {
+        padding-top: 0;
+        float: left;
+        background: transparent url("../img/ui/borderDivision.png") 33.33% top repeat-y;
+    }
 
     // header
     .wrapper > header { padding: $meioGrid 0; }
@@ -622,7 +632,7 @@ body {
     }
 
     // navigation
-    .buscaMain { padding-top: $meioGrid; }
+    .buscaMain { padding-top: $meioGrid;}
     .inputSearch {
         input[type="text"],
         input [type="text"]:focus {
@@ -645,14 +655,14 @@ body {
     .navigationMain {
         h5 {
             padding: ($meioGrid - 12) 0 ($meioGrid - 12)  $grid ;
-            @include font(bold, 1.2em);
+            @include font(bold, 1.6em);
         }
         hr { margin: ($meioGrid / 4) 0;}
         ol, ul {
 
             li {
                 margin: ($meioGrid / 10) 0;
-                padding: 0;
+                padding: 0 ($meioGrid / 2);
                 .containerCategory {
                     span.titleCategory {
                         max-width: 180px;
@@ -708,7 +718,10 @@ body {
     // wrapper
     .wrapper { margin: $grid auto; }
 
-    .containerMain { padding-top: 0;}
+    .containerMain { 
+        padding-top: 0;
+        float: left;
+        background: transparent url("../img/ui/borderDivision.png") 33.33% top repeat-y; }
 
     // contentMain
     .contentMain {
@@ -724,7 +737,7 @@ body {
             @include font(bold, 1.4em);
         }
     }
-    .mainContent { border-left: 1px solid $corBorda; padding: 0 $meioGrid;}
+    .mainContent { padding: 0 $meioGrid; }
 
     // header
     .wrapper > header { padding: $meioGrid 0; }
@@ -752,7 +765,7 @@ body {
     }
 
     // navigation
-    .buscaMain { padding: $grid $meioGrid 0; }
+    .buscaMain { padding: $grid $meioGrid 0;}
     .inputSearch {
         input[type="text"],
         input [type="text"]:focus {
@@ -779,6 +792,7 @@ body {
     }
     .navigationMain {
         h5 {
+            @include font(bold, 1.6em);
             padding-left: $grid +2;
         }
         hr { margin: ($meioGrid - 5) 0;}
@@ -803,10 +817,9 @@ body {
             }
         }
         .noCategory {
-            margin: 0;
             li {
                 a {
-                    margin-left: $meioGrid / 2;
+                    margin-left: 0;
                 }
                 &:last-child {
                     margin-bottom: $meioGrid / 2;
@@ -861,7 +874,7 @@ body {
 .fix:before,
 .fix:after {
     content: " ";
-    display: table;
+    display: block;
 }
 
 .fix:after {
