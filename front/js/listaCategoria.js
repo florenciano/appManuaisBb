@@ -1,9 +1,12 @@
-// vide example
-// http://angular.github.io/angular-phonecat/step-3/app/
-
 var manuaisBB = angular.module('manuaisBB', []);
 
 manuaisBB.controller('listaMenu', function ($scope) {
+
+	$scope.countLink = function() {
+		// exibir info somente após a digitação no campo
+		var display = $( "#display");
+		if( display.css( "display", "none" ) ) { display.css( "display", "block" ); }
+	}
 
 	// Blackboard: Conhecendo o ambiente
 	$scope.blackboardBb = [

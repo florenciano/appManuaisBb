@@ -8,25 +8,25 @@
 <meta name="msapplication-TileImage" content="tile.png"/>
 <meta name="msapplication-TileColor" content="#d02034"/>
 
-<link rel="stylesheet" type="text/css" media="print" href="css/print.css">
-<link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+<link rel="stylesheet" type="text/css" media="print" href="../css/print.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../css/main.css">
 
 <!--[if IE]><link rel="shortcut icon" href="favicon.ico"><![endif]-->
-<link rel="icon" href="favicon-16.png" sizes="16x16">
-<link rel="icon" href="favicon-32.png" sizes="32x32">
-<link rel="icon" href="favicon-48.png" sizes="48x48">
-<link rel="icon" href="favicon-64.png" sizes="64x64">
-<link rel="icon" href="favicon-128.png" sizes="128x128">
+<link rel="icon" href="../favicon-16.png" sizes="16x16">
+<link rel="icon" href="../favicon-32.png" sizes="32x32">
+<link rel="icon" href="../favicon-48.png" sizes="48x48">
+<link rel="icon" href="../favicon-64.png" sizes="64x64">
+<link rel="icon" href="../favicon-128.png" sizes="128x128">
 
 
 <!-- iPad com Retina Display -->
-<link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../apple-touch-icon-144x144.png">
 <!-- iPhone com Retina Display -->
-<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../apple-touch-icon-114x114.png">
 <!-- Primeira e segunda geração de iPad -->
-<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../apple-touch-icon-72x72.png">
 <!-- Versões antigas de iPhone, iPod Touch e Android 2.2+  -->
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
 
 <!--[if IE]>
     <link href="css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -48,7 +48,7 @@
         
         <header id="top" class="wfull fix">
             <div class="logo c4">
-                <img src="img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
+                <img src="../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
             </div>
             <div class="titleHeader c8">
                 <p class="title">Tecnologias de Aprendizagem</p>
@@ -62,7 +62,27 @@
                     <div class="inputSearch">
                         <form id="busca" action="">
                             <label for="pesquisa"></label>
-                            <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Busca por título ou palavra-chave" ng-model="searchText">
+                            <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Busca por título ou palavra-chave" ng-model="searchText" ng-change="countLink()"><br>
+                            <!-- mostrar a quantidade de links encontrados -->
+                            <span id="display" style="display:none">
+                            <strong>{{
+                            (blackboardBb |filter:{manual: searchText}).length + 
+                            (BbMateriais |filter:{manual: searchText}).length +
+                            (BbComunicacaoInteracao |filter:{manual: searchText}).length + 
+                            (BbTrabalhos |filter:{manual: searchText}).length +
+                            (BbGrupos |filter:{manual: searchText}).length + 
+                            (BbTestesPesquisas |filter:{manual: searchText}).length +
+                            (BbRubrics |filter:{manual: searchText}).length + 
+                            (BbAvaliacao |filter:{manual: searchText}).length +
+                            (BbCalendario |filter:{manual: searchText}).length +
+                            (catmeSobreFerramenta |filter:{manual: searchText}).length + 
+                            (catmeAplicarPesquisaAval |filter:{manual: searchText}).length +
+                            (catmeAnalisarResultados |filter:{manual: searchText}).length +
+                            (clickers |filter:{manual: searchText}).length +
+                            (casos |filter:{manual: searchText}).length + 
+                            (simuladores |filter:{manual: searchText}).length +
+                            (cursosOnline |filter:{manual: searchText}).length }}</strong>
+                            item(ns) encontrado(s)</span>
                         </form>
                     </div>
 
@@ -210,19 +230,19 @@
 
                         <div class="sumario row">
                             <h3><a name="sumarioAncora"></a>Sumário</h3>
-                            <!-- Aqui sera inseria a lista dos títulos [se houver] para gerar o sumário -->
+                            <!-- Aqui sera inserida a lista dos títulos [se houver] para gerar o sumário -->
                         </div>
 
                         <h2><a name="Titulo1" class="ancora"></a>Donec eu nibh varius, pretium nulla id</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, alias quaerat cumque facilis ad rem quae doloremque tenetur ipsa aliquid magni rerum. Doloremque, voluptatum magni rerum totam deleniti ex voluptatem!</p>
                         <div class="imageContainer row">
                             <!-- imgLeft: alinhado à esq | imgRight: alinhado à dir | default: center -->
-                            <img src="img/blackboard/com/step4-1.png" alt="image step 1" class="imgLeft">
+                            <img src="../img/blackboard/com/step4-1.png" alt="image step 1" class="imgLeft">
                             <!-- boxDestaque: estilo padrao dos boxes
                             boxDestaqueAdicional: para boxes com informações adicionais
                             Obs: Adicionar um id para posicionar o box -->
                             <div class="boxDestaque" id="CatNumb01">
-                                <p>A página do Grupo dá acesso a <strong>todos</strong> os <a href="lorem/ipsum">fóruns criados na disciplina</a>.</p>
+                                <p>A página do Grupo dá acesso a <strong>todos</strong> os <a href="../lorem/ipsum">fóruns criados na disciplina</a>.</p>
                                 <p>Também é possível selecionar <strong>um</strong> Fórum específico.</p>
                             </div>
                         </div>
@@ -232,7 +252,7 @@
                         </div>
                         
                         <div class="imageContainer row">
-                            <img src="img/blackboard/com/step5.png" alt="image step 2" class="imgRight">
+                            <img src="../img/blackboard/com/step5.png" alt="image step 2" class="imgRight">
                             <div class="boxDestaque" id="CatNumb02">
                                 <p>Na ferramenta Fórum é possível criar um <strong>fórum</strong> novo ou entrar nos fóruns existentes.</p>
                                 <p>Na lista há um resumo com o total de mensagens, mensagens não lidas e total de participantes.</p>
@@ -242,7 +262,7 @@
                         <div class="row"> <div>
 
                         <div class="imageContainer row">
-                            <img src="img/blackboard/com/step6.png" alt="image step 3" class="imgLeft">
+                            <img src="../img/blackboard/com/step6.png" alt="image step 3" class="imgLeft">
                             <div class="boxDestaqueAdicional" id="CatNumb03">
                                 <p>No botão de opções do Fórum, a opção <strong>Gerenciar</strong> permite atribuir <a href="#">diferentes perfis</a> de participação aos usuários da disciplina (opcional).</p>
                             </div>
@@ -250,9 +270,9 @@
 
                         <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, error obcaecati incidunt fuga dolorum vel amet voluptates ipsa eaque.</p>
                         <div class="imageContainer row">
-                            <img src="img/blackboard/com/step4-1.png" alt="image step 1" class="imgLeft">
+                            <img src="../img/blackboard/com/step4-1.png" alt="image step 1" class="imgLeft">
                             <div class="boxDestaque" id="CatNumb01">
-                                <p>A página do Grupo dá acesso a <strong>todos</strong> os <a href="lorem/ipsum">fóruns criados na disciplina</a>.</p>
+                                <p>A página do Grupo dá acesso a <strong>todos</strong> os <a href="../lorem/ipsum">fóruns criados na disciplina</a>.</p>
                                 <p>Também é possível selecionar <strong>um</strong> Fórum específico.</p>
                             </div>
                         </div>
@@ -267,14 +287,14 @@
                         
                         <h4 id="relacionado">Manuais relacionados</h4>
                         <ul  ng-controller="manuaisRelacionados">
-                            <li ng-repeat="item in manuais">
+                            <li ng-repeat="item in blackboardBb">
                                 <div><a href="{{item.linkManual}}">{{item.manual}}</a></div>
                             </li>
                         </ul>
                         
                         <h4 id="complementar">Manuais complementares</h4>
                         <ul ng-controller="manuaisComplementares">
-                            <li ng-repeat="item in manuais">
+                            <li ng-repeat="item in blackboardBb">
                                 <div><a href="{{item.linkManual}}">{{item.manual}}</a></div>
                             </li>
                         </ul>
@@ -290,16 +310,16 @@
     <div class="fix respiro"></div>
 
 <!-- Scripts: plugins -->
-<script>navigator.userAgent.match("MSIE")&&document.write('<script src="js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="js/libs/jquery-2.0.3.min.js"><\/script>');</script>
-<script src="js/libs/angular.js"></script>
-<script src="js/libs/jquery.placeholder.js"></script>
+<script>navigator.userAgent.match("MSIE")&&document.write('<script src="../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../js/libs/jquery-2.0.3.min.js"><\/script>');</script>
+<script src="../js/libs/angular.js"></script>
+<script src="../js/libs/jquery.placeholder.js"></script>
 
 <!-- Scripts: controllers do AngularJs -->
-<script src="js/listaCategoria.js"></script>
-<script src="js/manuaisRelacionados.js"></script>
-<script src="js/manuaisComplementares.js"></script>
+<script src="../js/listaCategoria.js"></script>
+<script src="../js/manuaisRelacionados.js"></script>
+<script src="../js/manuaisComplementares.js"></script>
 
 <!-- Scripts: do projeto -->
-<script src="js/main.js"></script>
+<script src="../js/main.js"></script>
 </body>
 </html>

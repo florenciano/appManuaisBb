@@ -188,6 +188,14 @@ body {
         border-top: 1px solid $corBorda;
         padding-top: $meioGrid;
     }
+
+    // display mostrando a qtde de links encontrados
+    #display {
+        margin-top: 5px;
+        text-align: center;
+        @include font(normal, 1.1em);
+    }
+
     // busca: search
     .inputSearch {
         input[type="text"] {
@@ -228,8 +236,7 @@ body {
     }
     // navigation
     .navigationMain {
-       @include transition(all .40s ease);
-
+        @include transition(all .40s ease);
         margin-top: $meioGrid;
 
         .selectedCategory {
@@ -342,7 +349,8 @@ body {
                 a {
                     @include corLink();
                     @include font(normal, 1.15em);
-                    margin-left: $grid + 2;
+                    /* retirado para adaptar no box do Blackboard
+                    margin-left: $grid + 2; */
                     padding: 0;
                 }
                 &:last-child { margin-bottom: $meioGrid / 2 }
@@ -484,11 +492,19 @@ body {
     .imgLeft { margin-left: 0; }
     .imgRight { margin-right: 0; }
 
+    // aplica um espacamento entre as imagens
+    .margemParaImagem { 
+        clear: both;
+        display: block;
+        width: 100%;
+        height: $meioGrid / 2;
+    }
+
     // content img and boxText
     .imageContainer {
         display: block;
         position: relative;
-        margin-bottom: 50px !important;
+        margin: 20px 0 !important;
 
         // highlighted box
         .boxDestaque {
@@ -498,7 +514,7 @@ body {
             border: 3px solid $corDefault;
             padding: $meioGrid / 2;
             p {
-                @include font(normal, 1.1em);
+                @include font(normal, 1.3em);
                 line-height: 1.5em;
                 margin: 0;
             }
@@ -511,6 +527,7 @@ body {
             color: #fff;
             p {
                 line-height: 16px;
+                line-height: 1.5em;
                 margin: 0;
                 a { @include corLinkUpBox($corSec01); }
             }
@@ -632,7 +649,7 @@ body {
     }
 
     // navigation
-    .buscaMain { padding-top: $meioGrid;}
+    .buscaMain { padding-top: $meioGrid; }
     .inputSearch {
         input[type="text"],
         input [type="text"]:focus {
@@ -766,6 +783,7 @@ body {
 
     // navigation
     .buscaMain { padding: $grid $meioGrid 0;}
+
     .inputSearch {
         input[type="text"],
         input [type="text"]:focus {

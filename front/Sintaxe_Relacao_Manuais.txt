@@ -1,0 +1,465 @@
+//manual x
+$scope.nome_do_manual =
+[
+{“código_do_manual_relacionado_1” : “Nome do manual relacionado 1” , “Link” : “link href do manual 1”},
+{“código_do_manual_relacionado_2” : “Nome do manual relacionado 2” , “Link” : “link href do manual 2”}
+];
+
+
+//manual "O que é Blackboard"
+$scope.O_que_é_Blackboard = 
+[
+{"Acessar_pelo_computador":"Acessar pelo computador", "Link" : "link href"},
+{"Acessar_por_dispositivos_móveis":"Acessar por dispositivos móveis", "Link" : "link href"}
+];
+
+//manual "Acessar pelo computador"
+$scope.Acessar_pelo_computador = 
+[
+{"Acessar_por_dispositivos_móveis":"Acessar por dispositivos móveis", "Link" : "link href"}
+];
+
+//manual "Acessar por dispositivos móveis"
+$scope.Acessar_por_dispositivos_móveis = 
+[
+{"Acessar_pelo_computador":"Acessar pelo computador", "Link" : "link href"}
+];
+
+//manual "Carregar materiais no ambiente virtual"
+$scope.Carregar_materiais_no_ambiente_virtual = 
+[
+{"Compartilhar_materiais_com_os_alunos":"Compartilhar materiais com os alunos", "Link" : "link href"},
+{"Alterar_ou_excluir_um_material_compartilhado":"Alterar ou excluir um material compartilhado", "Link" : "link href"},
+{"Aproveitar_materiais_de_um_curso_para_outro":"Aproveitar materiais de um curso para outro", "Link" : "link href"}
+];
+
+//manual "Compartilhar materiais com os alunos"
+$scope.Compartilhar_materiais_com_os_alunos = 
+[
+{"Carregar_materiais_no_ambiente_virtual":"Carregar materiais no ambiente virtual", "Link" : "link href"},
+{"Alterar_ou_excluir_um_material_compartilhado":"Alterar ou excluir um material compartilhado", "Link" : "link href"},
+{"Aproveitar_materiais_de_um_curso_para_outro":"Aproveitar materiais de um curso para outro", "Link" : "link href"}
+];
+
+//manual "Alterar ou excluir um material compartilhado"
+$scope.Alterar_ou_excluir_um_material_compartilhado = 
+[
+{"Carregar_materiais_no_ambiente_virtual":"Carregar materiais no ambiente virtual", "Link" : "link href"},
+{"Compartilhar_materiais_com_os_alunos":"Compartilhar materiais com os alunos", "Link" : "link href"},
+{"Aproveitar_materiais_de_um_curso_para_outro":"Aproveitar materiais de um curso para outro", "Link" : "link href"}
+];
+
+//manual "Aproveitar materiais de um curso para outro"
+$scope.Aproveitar_materiais_de_um_curso_para_outro = 
+[
+{"Carregar_materiais_no_ambiente_virtual":"Carregar materiais no ambiente virtual", "Link" : "link href"},
+{"Compartilhar_materiais_com_os_alunos":"Compartilhar materiais com os alunos", "Link" : "link href"},
+{"Alterar_ou_excluir_um_material_compartilhado":"Alterar ou excluir um material compartilhado", "Link" : "link href"}
+];
+
+//manual "Enviar avisos aos alunos"
+$scope.Enviar_avisos_aos_alunos = 
+[
+{"Enviar_e-mail_pelo_ambiente":"Enviar e-mail pelo ambiente", "Link" : "link href"}
+];
+
+//manual "Enviar e-mail pelo ambiente"
+$scope.Enviar_e-mail_pelo_ambiente = 
+[
+{"Enviar_avisos_aos_alunos":"Enviar avisos aos alunos", "Link" : "link href"}
+];
+
+//manual "Criar um fórum de discussão"
+$scope.Criar_um_fórum_de_discussão = 
+[
+{"Avaliar_fórum_de_discussão":"Avaliar fórum de discussão", "Link" : "link href"},
+{"Criar_um_blog":"Criar um blog", "Link" : "link href"}
+];
+
+//manual "Criar um blog"
+$scope.Criar_um_blog = 
+[
+{"Avaliar_blog":"Avaliar blog", "Link" : "link href"},
+{"Criar_um_fórum_de_discussão":"Criar um fórum de discussão", "Link" : "link href"}
+];
+
+//manual "Receber trabalhos sem verificação de plágio"
+$scope.Receber_trabalhos_sem_verificação_de_plágio = 
+[
+{"Corrigir_trabalhos_sem_verificação_de_plágio":"Corrigir trabalhos sem verificação de plágio", "Link" : "link href"},
+{"Receber_trabalhos_com_verificação_de_plágio":"Receber trabalhos com verificação de plágio", "Link" : "link href"}
+];
+
+//manual "Receber trabalhos com verificação de plágio"
+$scope.Receber_trabalhos_com_verificação_de_plágio = 
+[
+{"Corrigir_trabalhos_com_verificação_de_plágio":"Corrigir trabalhos com verificação de plágio", "Link" : "link href"},
+{"Submeter_arquivos_para_verificação_de_plágio_ou_criar_base_de_comparação":"Submeter arquivos para verificação de plágio ou criar base de comparação", "Link" : "link href"},
+{"Receber_trabalhos_sem_verificação_de_plágio":"Receber trabalhos sem verificação de plágio", "Link" : "link href"}
+];
+
+//manual "Submeter arquivos para verificação de plágio ou criar base de comparação"
+$scope.Submeter_arquivos_para_verificação_de_plágio_ou_criar_base_de_comparação = 
+[
+{"Receber_trabalhos_com_verificação_de_plágio":"Receber trabalhos com verificação de plágio", "Link" : "link href"},
+{"Corrigir_trabalhos_com_verificação_de_plágio":"Corrigir trabalhos com verificação de plágio", "Link" : "link href"}
+];
+
+//manual "Criar Grupos"
+$scope.Criar_Grupos = 
+[
+{"Receber_trabalhos_sem_verificação_de_plágio":"Receber trabalhos sem verificação de plágio", "Link" : "link href"}
+];
+
+//manual "Criar ou alterar testes (com nota)"
+$scope.Criar_ou_alterar_testes_(com_nota) = 
+[
+{"Criar_ou_alterar_pesquisas_(sem_nota)":"Criar ou alterar pesquisas (sem nota)", "Link" : "link href"},
+{"Conhecer_os_tipos_de_pergunta_dos_testes_e_pesquisas":"Conhecer os tipos de pergunta dos testes e pesquisas", "Link" : "link href"},
+{"Importar_testes_e_pesquisas_do_Word":"Importar testes e pesquisas do Word", "Link" : "link href"}
+];
+
+//manual "Criar ou alterar pesquisas (sem nota)"
+$scope.Criar_ou_alterar_pesquisas_(sem_nota) = 
+[
+{"Criar_ou_alterar_testes_(com_nota)":"Criar ou alterar testes (com nota)", "Link" : "link href"},
+{"Conhecer_os_tipos_de_pergunta_dos_testes_e_pesquisas":"Conhecer os tipos de pergunta dos testes e pesquisas", "Link" : "link href"},
+{"Importar_testes_e_pesquisas_do_Word":"Importar testes e pesquisas do Word", "Link" : "link href"}
+];
+
+//manual "Conhecer os tipos de pergunta dos testes e pesquisas"
+$scope.Conhecer_os_tipos_de_pergunta_dos_testes_e_pesquisas = 
+[
+{"Criar_ou_alterar_testes_(com_nota)":"Criar ou alterar testes (com nota)", "Link" : "link href"},
+{"Criar_ou_alterar_pesquisas_(sem_nota)":"Criar ou alterar pesquisas (sem nota)", "Link" : "link href"}
+];
+
+//manual "Importar testes e pesquisas do Word"
+$scope.Importar_testes_e_pesquisas_do_Word = 
+[
+{"Criar_ou_alterar_testes_(com_nota)":"Criar ou alterar testes (com nota)", "Link" : "link href"},
+{"Criar_ou_alterar_pesquisas_(sem_nota)":"Criar ou alterar pesquisas (sem nota)", "Link" : "link href"},
+{"Importar_testes_e_pesquisas_do_Word":"Importar testes e pesquisas do Word", "Link" : "link href"}
+];
+
+//manual "Criar uma Rubric"
+$scope.Criar_uma_Rubric = 
+[
+{"Associar_Rubric_a_atividades":"Associar Rubric a atividades", "Link" : "link href"},
+{"Associar_Rubric_a_colunas_na_Central_de_Notas":"Associar Rubric a colunas na Central de Notas", "Link" : "link href"},
+{"Corrigir_com_Rubric":"Corrigir com Rubric", "Link" : "link href"}
+];
+
+//manual "Associar Rubric a atividades"
+$scope.Associar_Rubric_a_atividades = 
+[
+{"Associar_Rubric_a_colunas_na_Central_de_Notas":"Associar Rubric a colunas na Central de Notas", "Link" : "link href"}
+];
+
+//manual "Associar Rubric a colunas na Central de Notas"
+$scope.Associar_Rubric_a_colunas_na_Central_de_Notas = 
+[
+{"Corrigir_com_Rubric":"Corrigir com Rubric", "Link" : "link href"}
+];
+
+//manual "Configurar a Central de Notas"
+$scope.Configurar_a_Central_de_Notas = 
+[
+{"Calcular_a_média_do_aluno":"Calcular a média do aluno", "Link" : "link href"},
+{"Exportar_as_notas_para_o_sistema_acadêmico":"Exportar as notas para o sistema acadêmico", "Link" : "link href"}
+];
+
+//manual "Dar nota a atividades feitas fora do ambiente"]
+
+//manual "Calcular a média do aluno"
+$scope.Calcular_a_média_do_aluno = 
+[
+{"Exportar_as_notas_para_o_sistema_acadêmico":"Exportar as notas para o sistema acadêmico", "Link" : "link href"}
+];
+
+//manual "Corrigir trabalhos sem verificação de plágio"
+$scope.Corrigir_trabalhos_sem_verificação_de_plágio = 
+[
+{"Receber_trabalhos_sem_verificação_de_plágio":"Receber trabalhos sem verificação de plágio", "Link" : "link href"}
+];
+
+//manual "Corrigir trabalhos com verificação de plágio"
+$scope.Corrigir_trabalhos_com_verificação_de_plágio = 
+[
+{"Receber_trabalhos_com_verificação_de_plágio":"Receber trabalhos com verificação de plágio", "Link" : "link href"}
+];
+
+//manual "Avaliar fórum de discussão"
+$scope.Avaliar_fórum_de_discussão = 
+[
+{"Criar_um_fórum_de_discussão":"Criar um fórum de discussão", "Link" : "link href"}
+];
+
+//manual "Avaliar blog"
+$scope.Avaliar_blog = 
+[
+{"Criar_um_blog":"Criar um blog", "Link" : "link href"}
+];
+
+//manual "Corrigir com Rubric"
+$scope.Corrigir_com_Rubric = 
+[
+{"Criar_uma_Rubric":"Criar uma Rubric", "Link" : "link href"},
+{"Associar_Rubric_a_atividades":"Associar Rubric a atividades", "Link" : "link href"},
+{"Associar_Rubric_a_colunas_na_Central_de_Notas":"Associar Rubric a colunas na Central de Notas", "Link" : "link href"}
+];
+
+//manual "Exportar as notas para o sistema acadêmico"
+$scope.Exportar_as_notas_para_o_sistema_acadêmico = 
+[
+{"Calcular_a_média_do_aluno":"Calcular a média do aluno", "Link" : "link href"},
+{"Configurar_a_Central_de_Notas":"Configurar a Central de Notas", "Link" : "link href"}
+];
+
+//manual "Criar e visualizar eventos"
+$scope.Criar_e_visualizar_eventos = 
+[
+{"Sincronizar_com_e-mail_pessoal":"Sincronizar com e-mail pessoal", "Link" : "link href"}
+];
+
+//manual "Sincronizar com e-mail pessoal"
+$scope.Sincronizar_com_e-mail_pessoal = 
+[
+{"Criar_e_visualizar_eventos":"Criar e visualizar eventos", "Link" : "link href"}
+];
+
+//manual "O que é Catme"
+$scope.O_que_é_Catme = 
+[
+{"Funcionamento_do_Catme":"Funcionamento do Catme", "Link" : "link href"},
+{"Criar_conta":"Criar conta", "Link" : "link href"}
+];
+
+//manual "Funcionamento do Catme"
+$scope.Funcionamento_do_Catme = 
+[
+{"O_que_é_Catme":"O que é Catme", "Link" : "link href"},
+{"Criar_conta":"Criar conta", "Link" : "link href"}
+];
+
+//manual "Criar conta"
+$scope.Criar_conta = 
+[
+{"O_que_é_Catme":"O que é Catme", "Link" : "link href"},
+{"Funcionamento_do_Catme":"Funcionamento do Catme", "Link" : "link href"}
+];
+
+//manual "Preparar listagem de alunos"
+$scope.Preparar_listagem_de_alunos = 
+[
+{"Criar_classe":"Criar classe", "Link" : "link href"},
+{"Criar_pesquisa_de_avaliação":"Criar pesquisa de avaliação", "Link" : "link href"},
+{"Editar_informações":"Editar informações", "Link" : "link href"}
+];
+
+//manual "Criar classe"
+$scope.Criar_classe = 
+[
+{"Preparar_listagem_de_alunos":"Preparar listagem de alunos", "Link" : "link href"},
+{"Criar_pesquisa_de_avaliação":"Criar pesquisa de avaliação", "Link" : "link href"},
+{"Editar_informações":"Editar informações", "Link" : "link href"}
+];
+
+//manual "Criar pesquisa de avaliação"
+$scope.Criar_pesquisa_de_avaliação = 
+[
+{"Preparar_listagem_de_alunos":"Preparar listagem de alunos", "Link" : "link href"},
+{"Criar_classe":"Criar classe", "Link" : "link href"},
+{"Editar_informações":"Editar informações", "Link" : "link href"}
+];
+
+//manual "Editar informações"
+$scope.Editar_informações = 
+[
+{"Preparar_listagem_de_alunos":"Preparar listagem de alunos", "Link" : "link href"},
+{"Criar_classe":"Criar classe", "Link" : "link href"},
+{"Criar_pesquisa_de_avaliação":"Criar pesquisa de avaliação", "Link" : "link href"}
+];
+
+//manual "Acessar resultados de uma avaliação existente"
+$scope.Acessar_resultados_de_uma_avaliação_existente = 
+[
+{"Trabalhar_resultados_no_Excel":"Trabalhar resultados no Excel", "Link" : "link href"}
+];
+
+//manual "Trabalhar resultados no Excel"
+$scope.Trabalhar_resultados_no_Excel = 
+[
+{"Acessar_resultados_de_uma_avaliação_existente":"Acessar resultados de uma avaliação existente", "Link" : "link href"}
+];
+
+//manual "Informações do software"
+$scope.Informações_do_software = 
+[
+{"Informações_do_hardware":"Informações do hardware", "Link" : "link href"},
+{"Como_utilizar":"Como utilizar", "Link" : "link href"},
+{"Criar_pergunta":"Criar pergunta", "Link" : "link href"},
+{"Criar_lista":"Criar lista", "Link" : "link href"},
+{"Salvar_sessão":"Salvar sessão", "Link" : "link href"},
+{"Gerar_e_acessar_relatórios":"Gerar e acessar relatórios", "Link" : "link href"},
+{"Controle_dos_aparelhos":"Controle dos aparelhos", "Link" : "link href"}
+];
+
+//manual "Informações do hardware"
+$scope.Informações_do_hardware = 
+[
+{"Informações_do_software":"Informações do software", "Link" : "link href"},
+{"Como_utilizar":"Como utilizar", "Link" : "link href"},
+{"Criar_pergunta":"Criar pergunta", "Link" : "link href"},
+{"Criar_lista":"Criar lista", "Link" : "link href"},
+{"Salvar_sessão":"Salvar sessão", "Link" : "link href"},
+{"Gerar_e_acessar_relatórios":"Gerar e acessar relatórios", "Link" : "link href"},
+{"Controle_dos_aparelhos":"Controle dos aparelhos", "Link" : "link href"}
+];
+
+//manual "Como utilizar"
+$scope.Como_utilizar = 
+[
+{"Informações_do_software":"Informações do software", "Link" : "link href"},
+{"Informações_do_hardware":"Informações do hardware", "Link" : "link href"},
+{"Criar_pergunta":"Criar pergunta", "Link" : "link href"},
+{"Criar_lista":"Criar lista", "Link" : "link href"},
+{"Salvar_sessão":"Salvar sessão", "Link" : "link href"},
+{"Gerar_e_acessar_relatórios":"Gerar e acessar relatórios", "Link" : "link href"},
+{"Controle_dos_aparelhos":"Controle dos aparelhos", "Link" : "link href"}
+];
+
+//manual "Criar pergunta"$scope.Criar_pergunta = 
+[
+{"Informações_do_software":"Informações do software", "Link" : "link href"},
+{"Informações_do_hardware":"Informações do hardware", "Link" : "link href"},
+{"Como_utilizar":"Como utilizar", "Link" : "link href"},
+{"Criar_lista":"Criar lista", "Link" : "link href"},
+{"Salvar_sessão":"Salvar sessão", "Link" : "link href"},
+{"Gerar_e_acessar_relatórios":"Gerar e acessar relatórios", "Link" : "link href"},
+{"Controle_dos_aparelhos":"Controle dos aparelhos", "Link" : "link href"}
+];
+
+//manual "Criar lista"
+$scope.Criar_lista = 
+[
+{"Informações_do_software":"Informações do software", "Link" : "link href"},
+{"Informações_do_hardware":"Informações do hardware", "Link" : "link href"},
+{"Como_utilizar":"Como utilizar", "Link" : "link href"},
+{"Criar_pergunta":"Criar pergunta", "Link" : "link href"},
+{"Salvar_sessão":"Salvar sessão", "Link" : "link href"},
+{"Gerar_e_acessar_relatórios":"Gerar e acessar relatórios", "Link" : "link href"},
+{"Controle_dos_aparelhos":"Controle dos aparelhos", "Link" : "link href"}
+];
+
+//manual "Salvar sessão"
+$scope.Salvar_sessão = 
+[
+{"Informações_do_software":"Informações do software", "Link" : "link href"},
+{"Informações_do_hardware":"Informações do hardware", "Link" : "link href"},
+{"Como_utilizar":"Como utilizar", "Link" : "link href"},
+{"Criar_pergunta":"Criar pergunta", "Link" : "link href"},
+{"Criar_lista":"Criar lista", "Link" : "link href"},
+{"Gerar_e_acessar_relatórios":"Gerar e acessar relatórios", "Link" : "link href"},
+{"Controle_dos_aparelhos":"Controle dos aparelhos", "Link" : "link href"}
+];
+
+//manual "Gerar e acessar relatórios"
+$scope.Gerar_e_acessar_relatórios = 
+[
+{"Informações_do_software":"Informações do software", "Link" : "link href"},
+{"Informações_do_hardware":"Informações do hardware", "Link" : "link href"},
+{"Como_utilizar":"Como utilizar", "Link" : "link href"},
+{"Criar_pergunta":"Criar pergunta", "Link" : "link href"},
+{"Criar_lista":"Criar lista", "Link" : "link href"},
+{"Salvar_sessão":"Salvar sessão", "Link" : "link href"},
+{"Controle_dos_aparelhos":"Controle dos aparelhos", "Link" : "link href"}
+];
+
+//manual "Controle dos aparelhos"
+$scope.Controle_dos_aparelhos = 
+[
+{"Informações_do_software":"Informações do software", "Link" : "link href"},
+{"Informações_do_hardware":"Informações do hardware", "Link" : "link href"},
+{"Como_utilizar":"Como utilizar", "Link" : "link href"},
+{"Criar_pergunta":"Criar pergunta", "Link" : "link href"},
+{"Criar_lista":"Criar lista", "Link" : "link href"},
+{"Salvar_sessão":"Salvar sessão", "Link" : "link href"},
+{"Gerar_e_acessar_relatórios":"Gerar e acessar relatórios", "Link" : "link href"}
+];
+
+//manual "Sobre os casos"
+$scope.Sobre_os_casos = 
+[
+{"Cadastrar-se_em_base_de_dados":"Cadastrar-se em base de dados", "Link" : "link href"},
+{"Consultar_casos_disponíveis":"Consultar casos disponíveis", "Link" : "link href"},
+{"Solicitar_casos_pelo_CUCA":"Solicitar casos pelo CUCA", "Link" : "link href"},
+{"Disponibilizar_link_aos_alunos":"Disponibilizar link aos alunos", "Link" : "link href"}
+];
+
+//manual "Cadastrar-se em base de dados"
+$scope.Cadastrar-se_em_base_de_dados = 
+[
+{"Sobre_os_casos":"Sobre os casos", "Link" : "link href"},
+{"Consultar_casos_disponíveis":"Consultar casos disponíveis", "Link" : "link href"},
+{"Solicitar_casos_pelo_CUCA":"Solicitar casos pelo CUCA", "Link" : "link href"},
+{"Disponibilizar_link_aos_alunos":"Disponibilizar link aos alunos", "Link" : "link href"}
+];
+
+//manual "Consultar casos disponíveis"
+$scope.Consultar_casos_disponíveis = 
+[
+{"Sobre_os_casos":"Sobre os casos", "Link" : "link href"},
+{"Cadastrar-se_em_base_de_dados":"Cadastrar-se em base de dados", "Link" : "link href"},
+{"Solicitar_casos_pelo_CUCA":"Solicitar casos pelo CUCA", "Link" : "link href"},
+{"Disponibilizar_link_aos_alunos":"Disponibilizar link aos alunos", "Link" : "link href"}
+];
+
+//manual "Solicitar casos pelo CUCA"
+$scope.Solicitar_casos_pelo_CUCA = 
+[
+{"Sobre_os_casos":"Sobre os casos", "Link" : "link href"},
+{"Cadastrar-se_em_base_de_dados":"Cadastrar-se em base de dados", "Link" : "link href"},
+{"Consultar_casos_disponíveis":"Consultar casos disponíveis", "Link" : "link href"},
+{"Disponibilizar_link_aos_alunos":"Disponibilizar link aos alunos", "Link" : "link href"}
+];
+
+//manual "Disponibilizar link aos alunos"
+$scope.Disponibilizar_link_aos_alunos = 
+[
+{"Sobre_os_casos":"Sobre os casos", "Link" : "link href"},
+{"Cadastrar-se_em_base_de_dados":"Cadastrar-se em base de dados", "Link" : "link href"},
+{"Consultar_casos_disponíveis":"Consultar casos disponíveis", "Link" : "link href"},
+{"Solicitar_casos_pelo_CUCA":"Solicitar casos pelo CUCA", "Link" : "link href"}
+];
+
+//manual "Conhecer simuladores"
+$scope.Conhecer_simuladores = 
+[
+{"Solicitar_simulador":"Solicitar simulador", "Link" : "link href"},
+{"Disponibilizar_link_aos_alunos":"Disponibilizar link aos alunos", "Link" : "link href"}
+];
+
+//manual "Solicitar simulador"
+$scope.Solicitar_simulador = 
+[
+{"Conhecer_simuladores":"Conhecer simuladores", "Link" : "link href"},
+{"Disponibilizar_link_aos_alunos":"Disponibilizar link aos alunos", "Link" : "link href"}
+];
+
+//manual "Disponibilizar link aos alunos"
+$scope.Disponibilizar_link_aos_alunos = 
+[
+{"Conhecer_simuladores":"Conhecer simuladores", "Link" : "link href"},
+{"Solicitar_simulador":"Solicitar simulador", "Link" : "link href"}
+];
+
+//manual "Acessar"
+$scope.Acessar = 
+[
+{"Gerenciar":"Gerenciar", "Link" : "link href"}];
+
+//manual "Gerenciar"
+$scope.Gerenciar = 
+[
+{"Acessar":"Acessar", "Link" : "link href"}]

@@ -1,7 +1,7 @@
 manuaisBB.controller("manuaisRelacionados", function ($scope) { 
 
-	$scope.manuais = [
-	// BLACKBOARD: Nome da categoria
+	$scope.blackboardBb = [
+	// BLACKBOARD: Conhecendo o ambiente
 	{
 		'manual'		: 	'Primeiro nome do manual relacioando fica aqui',
 		'linkManual'	: 	'/enderecoLink/subDiretorio/nomeDaPagina.html'
@@ -19,5 +19,13 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 		'linkManual'	: 	'/enderecoLink/subDiretorio/nomeDaPagina-4.html'
 	}
 	];
+
+	// BLACKBOARD: Materiais
+	$scope.BbMateriais = [
+	{
+		'manual'		: 	'Primeiro nome do manual relacioando fica aqui',
+		'linkManual'	: 	'/enderecoLink/subDiretorio/nomeDaPagina.html'
+	}
+	]
 
 });
