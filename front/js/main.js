@@ -16,7 +16,7 @@ $(document).ready(function() {
 
     /*
         Focus no input de pesquisa.
-        Obs: Por enquanto destivado!
+        NOTA: Desativado a partir da versão 4
     */
     // $( "#pesquisa" ).focus();
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -61,7 +61,7 @@ $(document).ready(function() {
             var tagDiv = $( "<div>" ).addClass("voltarSumario", "fix");
             var tagAnchor = $( "<a>" );
                 tagAnchor.attr("href","#sumarioAncora");
-            // texto que ira aparecer no HTML
+            // texto que ira aparecer no DOM HTML
             var txtA = "Sumário";
 
             tagAnchor.text(txtA);
@@ -97,7 +97,7 @@ $(document).ready(function() {
     });
 
     // Aqui fica as condições para que seja exibida no DOM
-    if(todosTitulos.length > 1) { // > 1 pq o titulo do saibaMais também é <h2>
+    if( todosTitulos.length > 1 ) { // > 1 pq o titulo do saibaMais também é <h2>
         divSumario.append(tagUl);
         createAnchor();
     } else {
@@ -115,8 +115,8 @@ $(document).ready(function() {
     function hideSaibaMaisDoSumario () {
         // pegando todas os links do sumário
         var linkSumario = document.querySelectorAll( ".sumario a" );
-        for(i = 0; i < linkSumario.length; i++) {
-            if(linkSumario[i].textContent == "Saiba Mais") {
+        for( i = 0; i < linkSumario.length; i++ ) {
+            if( linkSumario[i].textContent == "Saiba Mais" ) {
                 linkSumario[i].style.display = "none";
             }
         }
@@ -137,14 +137,14 @@ $(document).ready(function() {
     
     // Criando a condição 1
     liRel = $( "#relacionado" ).next().children();
-    if(!liRel.length > 0) { titleRel.css( "display", "none" ) }
+    if( !liRel.length > 0 ) { titleRel.css( "display", "none" ) }
 
     // Criando a condição 2
     liComp = $( "#complementar" ).next().children();
-    if(!liComp.length > 0) { titleComp.css( "display", "none" ) }
+    if( !liComp.length > 0 ) { titleComp.css( "display", "none" ) }
 
     // Criando a condição 3
-    if(!liRel.length > 0 && !liComp.length > 0) { 
+    if( !liRel.length > 0 && !liComp.length > 0 ) { 
         saibaMais.remove();
         // se não existir o box 'Saiba mais' a última âncora do sumário desaparece
         anchor.css( "display", "none");

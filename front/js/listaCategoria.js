@@ -9,26 +9,11 @@ manuaisBB.controller('listaMenu', function ($scope) {
 
 	}
 
-	// $scope.lorem = [
-	// {
-	// 	'categoria'		: 	'Conhecendo a bagaça',
-	// 	'manual_1'		: 	'item 1',
-	// 	'linkManual_2'	: 	'#',
-	// 	'manual_2'		: 	'item 2',
-	// 	'linkManual_1'	: 	'#',
-	// 	'manual_3'		: 	'item 3',
-	// 	'linkManual_3'	: 	'#',
-	// },
-	// {
-	// 	'categoria'		: 	'Materiais da bagaça',
-	// 	'manual_1'		: 	'lorem 1',
-	// 	'linkManual_2'	: 	'#',
-	// 	'manual_2'		: 	'lorem 2',
-	// 	'linkManual_1'	: 	'#'
-	// }
-	// ]
-
-	
+	$scope.lorem = [
+		{
+			'categoria'		: 	'Conhecendo o ambiente',
+		}
+	];
 	
 	// Blackboard: conhecer o ambiente
 	$scope.BbConhecerAmbiente = [

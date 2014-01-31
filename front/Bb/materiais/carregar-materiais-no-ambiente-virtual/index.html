@@ -91,7 +91,7 @@
                     <nav role="navigation" class="navigationMain">
                         <h5 class="icoBlackboard"><a name="inicio"></a>Blackboard</h5>
                         <ol class="noCategory">
-                            <p>Conhecer o ambiente</p>
+                            <p ng-repeat="item in lorem">{{item.categoria}}</p>
                             <li class="sublist" ng-repeat="item in BbConhecerAmbiente | filter:{manual: searchText}">
                                 <a href="{{item.linkManual}}">{{item.manual}}</a>
                             </li>
