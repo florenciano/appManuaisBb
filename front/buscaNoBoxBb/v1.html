@@ -47,7 +47,7 @@
                 (casos |filter:{manual: searchText}).length + 
                 (simuladores |filter:{manual: searchText}).length +
                 (cursosOnline |filter:{manual: searchText}).length }}</strong>
-                Item(ns) encontrando(s)</span>
+                item(ns) encontrado(s)</span>
             </form>
         </div>
 
@@ -55,7 +55,7 @@
             <h5 class="nomeAssunto"><a name="inicio"></a>Blackboard</h5>
             <ol class="noCategory">
                 <p>Conhecer o ambiente</p>
-                <li class="sublist" ng-repeat="item in blackboardBb | filter:{manual: searchText}">
+                <li class="sublist" ng-repeat="item in BbConhecerAmbiente | filter:{manual: searchText}">
                     <a href="{{item.linkManual}}">{{item.manual}}</a>
                 </li>
             </ol>

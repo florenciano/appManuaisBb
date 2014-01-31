@@ -6,10 +6,32 @@ manuaisBB.controller('listaMenu', function ($scope) {
 		// exibir info somente após a digitação no campo
 		var display = $( "#display");
 		if( display.css( "display", "none" ) ) { display.css( "display", "block" ); }
+
 	}
 
-	// Blackboard: Conhecendo o ambiente
-	$scope.blackboardBb = [
+	// $scope.lorem = [
+	// {
+	// 	'categoria'		: 	'Conhecendo a bagaça',
+	// 	'manual_1'		: 	'item 1',
+	// 	'linkManual_2'	: 	'#',
+	// 	'manual_2'		: 	'item 2',
+	// 	'linkManual_1'	: 	'#',
+	// 	'manual_3'		: 	'item 3',
+	// 	'linkManual_3'	: 	'#',
+	// },
+	// {
+	// 	'categoria'		: 	'Materiais da bagaça',
+	// 	'manual_1'		: 	'lorem 1',
+	// 	'linkManual_2'	: 	'#',
+	// 	'manual_2'		: 	'lorem 2',
+	// 	'linkManual_1'	: 	'#'
+	// }
+	// ]
+
+	
+	
+	// Blackboard: conhecer o ambiente
+	$scope.BbConhecerAmbiente = [
 	{
 		'manual'		: 	'O que é Blackboard',
 		'linkManual'	: 	'/href/sub1'
@@ -61,6 +83,10 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	{
 		'manual'			: 	'Criar um blog',
 		'linkManual'		: 	'/blackboard/sub3'
+	},
+	{
+		'manual'			: 	'Criar wiki',
+		'linkManual'		: 	'/blackboard/sub4'
 	}
 	];
 
@@ -147,12 +173,20 @@ manuaisBB.controller('listaMenu', function ($scope) {
 		'linkManual'		: 	'/blackboard/sub2'
 	},
 	{
-		'manual'			: 	'Corrigir com Rubric',
+		'manual'			: 	'Avaliar fórum de discussão',
 		'linkManual'		: 	'/blackboard/sub3'
 	},
 	{
-		'manual'			: 	'Consultar as faltas dos alunos',
+		'manual'			: 	'Avaliar blog',
 		'linkManual'		: 	'/blackboard/sub2'
+	},
+	{
+		'manual'			: 	'Avaliar wiki',
+		'linkManual'		: 	'/blackboard/sub3'
+	},
+	{
+		'manual'			: 	'Corrigir com Rubric',
+		'linkManual'		: 	'/blackboard/sub3'
 	},
 	{
 		'manual'			: 	'Exportar as notas para o sistema acadêmico',
@@ -220,7 +254,7 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	}
 	];
 
-	// Clickers
+	// Votadores eletrônicos: clickers
 	$scope.clickers = [
 	{
 		'manual'			: 	'Informações do software',
@@ -231,20 +265,16 @@ manuaisBB.controller('listaMenu', function ($scope) {
 		'linkManual'		: 	'/blackboard/sub2'
 	},
 	{
-		'manual'			: 	'Votadores eletrônicos (clickers): Utilização',
-		'linkManual'		: 	'/blackboard/sub1'
-	},
-	{
 		'manual'			: 	'Como utilizar',
-		'linkManual'		: 	'/blackboard/sub2'
+		'linkManual'		: 	'/blackboard/sub1'
 	},
 	{
 		'manual'			: 	'Criar pergunta',
-		'linkManual'		: 	'/blackboard/sub1'
+		'linkManual'		: 	'/blackboard/sub2'
 	},
 	{
 		'manual'			: 	'Criar lista',
-		'linkManual'		: 	'/blackboard/sub2'
+		'linkManual'		: 	'/blackboard/sub1'
 	},
 	{
 		'manual'			: 	'Salvar sessão',
@@ -311,4 +341,5 @@ manuaisBB.controller('listaMenu', function ($scope) {
 		'linkManual'		: 	'/blackboard/sub2'
 	}
 	];
+	
 });

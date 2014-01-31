@@ -1,38 +1,27 @@
 manuaisBB.controller("manuaisComplementares", function ($scope) { 
 
-	// BLACKBOARD: Conhecendo o ambiente
-	$scope.blackboardBb = [
-	{
-		'manual'		: 	'Primeiro nome do manual relacioando fica aqui',
-		'linkManual'	: 	'/enderecoLink/subDiretorio/nomeDaPagina.html'
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	// ASSUNTO: BLACKBOARD
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	// CATEGORIA: Nome da categoria
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	
+	//manual "nome do manual aqui"
+	$scope.lorem = 
+	[
+	{	"manual"	: 	"lorem",
+		"Link" 		: 	"#"
 	},
-	{
-		'manual'		: 	'Segundo nome do manual relacioando fica aqui',
-		'linkManual'	: 	'/enderecoLink/subDiretorio/nomeDaPagina-2.html'
+	{	
+		"manual"	: 	"lorem ipsum",
+		"Link" 		: 	"#"
 	},
-	{
-		'manual'		: 	'Terceiro nome do manual relacioando fica aqui',
-		'linkManual'	: 	'/enderecoLink/subDiretorio/nomeDaPagina-3.html'
+	{	"manual"	: 	"lorem ipsum dolor",
+		"Link" 		: 	"#"
 	},
-	{
-		'manual'		: 	'Quarto nome do manual relacioando fica aqui',
-		'linkManual'	: 	'/enderecoLink/subDiretorio/nomeDaPagina-4.html'
-	}
-	];
-
-	// BLACKBOARD: Materiais
-	$scope.BbMateriais = [
-	{
-		'manual'		: 	'Primeiro nome do manual relacioando fica aqui',
-		'linkManual'	: 	'/enderecoLink/subDiretorio/nomeDaPagina.html'
-	},
-	{
-		'manual'		: 	'Segundo nome do manual relacioando fica aqui',
-		'linkManual'	: 	'/enderecoLink/subDiretorio/nomeDaPagina-2.html'
-	},
-	{
-		'manual'		: 	'Terceiro nome do manual relacioando fica aqui',
-		'linkManual'	: 	'/enderecoLink/subDiretorio/nomeDaPagina-3.html'
+	{	
+		"manual"	: 	"lorem ipsum dolor simet",
+		"Link" 		: 	"#"
 	}
 	];
 

@@ -10,6 +10,12 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @media only screen and (min-width: 960px) and (max-width: 1920px) {
     
+    /*  BLACKBOARD
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        // Materiais
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+        // 1- Carregar materiais no ambiente virtual
+
     // @include                         settingsBoxImagem(width, left, top, right, bottom)
     #BbMateriaisCarregarMateriais1 { @include settingsBoxImagem(40%, 35px, auto, auto, -70px) }
     #BbMateriaisCarregarMateriais2 { @include settingsBoxImagem(45%, auto, auto, 20px, -70px) }
@@ -24,6 +30,8 @@
     #BbMateriaisCarregarMateriais11 { @include settingsBoxImagem(45%, 20px, 100px, auto, auto) }
     #BbMateriaisCarregarMateriais12 { @include settingsBoxImagem(45%, auto, auto, 20px, -70px) }
     #BbMateriaisCarregarMateriais13 { @include settingsBoxImagem(35%, auto, auto, 20px, -20px) }
+
+    // 2- Compartilhar materiais com os alunos
 }
 
 
@@ -31,11 +39,26 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @media handheld, only screen and (min-width: 768px) and (max-width: 960px), only screen  and (min-device-width: 768px) and (max-device-width: 960px) and (orientation:portrait) {
 
+    /*  BLACKBOARD
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        // Materiais
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+        // 1- Carregar materiais no ambiente virtual
+
 	// @include                        settingsBoxImagem(width, left, top, right, bottom)
-	#BbMateriaisCarregarMateriais1 { @include settingsBoxImagem(40%, 35px, auto, auto, -70px) }
-	#BbMateriaisCarregarMateriais2 { @include settingsBoxImagem(45%, auto, auto, 20px, -70px) }
-    #BbMateriaisCarregarMateriais3 { @include settingsBoxImagem(55%, auto, auto, 20px, -10px) }
+	#BbMateriaisCarregarMateriais1 { @include settingsBoxImagem(45%, 10px, auto, auto, -90px) }
+	#BbMateriaisCarregarMateriais2 { @include settingsBoxImagem(45%, auto, auto, 0px, -90px) }
+    #BbMateriaisCarregarMateriais3 { @include settingsBoxImagem(50%, auto, auto, 0px, -35px) }
     #BbMateriaisCarregarMateriais4 { @include settingsBoxImagem(50%, auto, auto, 20px, -70px) }
+    #BbMateriaisCarregarMateriais5 { @include settingsBoxImagem(65%, auto, 150px, 10px, auto) }
+    #BbMateriaisCarregarMateriais6 { @include settingsBoxImagem(55%, 90px, 75px, auto, auto) }
+    #BbMateriaisCarregarMateriais7 { @include settingsBoxImagem(45%, auto, auto, 20px, 60px) }
+    #BbMateriaisCarregarMateriais8 { @include settingsBoxImagem(55%, auto, auto, 100px, -40px) }
+    #BbMateriaisCarregarMateriais9 { @include settingsBoxImagem(50%, auto, 60px, 10px, auto) }
+    #BbMateriaisCarregarMateriais10 { @include settingsBoxImagem(45%, auto, auto, 20px, -70px) }
+    #BbMateriaisCarregarMateriais11 { @include settingsBoxImagem(50%, 0px, 110px, auto, auto) }
+    #BbMateriaisCarregarMateriais12 { @include settingsBoxImagem(45%, auto, auto, 20px, -70px) }
+    #BbMateriaisCarregarMateriais13 { @include settingsBoxImagem(45%, auto, auto, 0px, -45px) }
 
 }
 
@@ -46,6 +69,6 @@
         
     // @include           settingsBoxImagem(width, left, top, right, bottom)
     
-    // SEM FUNÇÃO
+    // Até o presente momento abortou o desenvolvimento do projeto em mobile
 
 }

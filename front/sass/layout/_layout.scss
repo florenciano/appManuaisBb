@@ -234,6 +234,14 @@ body {
             }
         }
     }
+    // icones do menu
+    .icoBlackboard  { background: url("../img/ui/icoBlackboard.png") left center no-repeat; }
+    .icoCatme       { background: url("../img/ui/icoCatme.png") left center no-repeat; }
+    .icoClickers    { background: url("../img/ui/icoClickers.png") left center no-repeat; }
+    .icoCasos       { background: url("../img/ui/icoCaso.png") left center no-repeat; }
+    .icoSimuladores { background: url("../img/ui/icoSimulador.png") left center no-repeat; }
+    .icoCursosOnline  { background: url("../img/ui/icoCurso.png") left center no-repeat; }
+
     // navigation
     .navigationMain {
         @include transition(all .40s ease);
@@ -252,12 +260,7 @@ body {
             @include font(bold, 1.4em);
             display: block;
             padding: ($meioGrid - 12) 0 ($meioGrid - 12) $grid ;
-
-            // altura do icone
-            // height: $grid - 8;
             min-height: $grid - 2;
-            background: url("../img/ui/icoCategoryBusca.png") left center no-repeat;
-
         }
         ol, ul {
             margin: 0 0 2px 0;
@@ -519,14 +522,15 @@ body {
                 margin: 0;
             }
         }
-        // highlighted box: Additional information
         .boxDestaqueAdicional {
-            @extend .boxDestaque;
+            display: block;
+            @include radius($meioGrid/5);
+            padding: $meioGrid / 2;
             background-color: $corDefaultDark;
             border: 0;
             color: #fff;
             p {
-                line-height: 16px;
+                @include font(normal, 1.3em);
                 line-height: 1.5em;
                 margin: 0;
                 a { @include corLinkUpBox($corSec01); }
@@ -711,8 +715,16 @@ body {
         }
     }
 
-    .divisionMobile {
-        display: none;
+    .divisionMobile { display: none; }
+
+    // content img and boxText
+    .imageContainer {
+        display: block;
+        position: relative;
+        margin: 40px 0 !important;
+        .boxDestaque {
+            p { @include font(normal, 1.2em); }
+        }
     }
 
     // saibaMais
@@ -804,7 +816,6 @@ body {
         }
     }
 
-    ////////////////////////////////////////////////////////////////////
     .navigation  {
         @include transition(all 0.4s ease);
     }
@@ -836,9 +847,7 @@ body {
         }
         .noCategory {
             li {
-                a {
-                    margin-left: 0;
-                }
+                a { margin-left: 0; }
                 &:last-child {
                     margin-bottom: $meioGrid / 2;
                 }
@@ -850,15 +859,10 @@ body {
     }
     .faqBusca {
         h5 {
-          a {
-            margin-left: 2px !important;
-            }
+          a { margin-left: 2px !important; }
         }
     }
-    ///////////////////////////////////////////////////////////////////////////
-    .divisionMobile {
-        display: none;
-    }
+    .divisionMobile { display: none; }
 
     // saibaMais
     .saibaMais {

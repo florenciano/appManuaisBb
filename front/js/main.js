@@ -15,9 +15,10 @@ $(document).ready(function() {
 
 
     /*
-        Focus no input de pesquisa
+        Focus no input de pesquisa.
+        Obs: Por enquanto destivado!
     */
-    $( "#pesquisa" ).focus();
+    // $( "#pesquisa" ).focus();
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
@@ -37,17 +38,16 @@ $(document).ready(function() {
         a desistência de fornecer material impresso.
         NOTA: Este btn existe somente na versão 1 do projeto
     */
-    $( "a#imprimir" ).click(function() {
-        window.print();
-        return false;
-    });
+    // $( "a#imprimir" ).click(function() {
+    //     window.print();
+    //     return false;
+    // });
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
     /*
         Criando a lista de sumário e suas respectivas âncoras.
-        A lista só aparece no DOM se houver algum título
-        no conteúdo do texto dos manuais
+        A lista só aparece no DOM se houver algum título no interior dos manuais
     */
     var divSumario, anchor, todosTitulos, tagUl, count;
 
