@@ -566,10 +566,9 @@ body {
             li {
                 display: block;
                 height: $grid;
-                // border: 1px solid $corDefault;
                 margin: ($meioGrid / 4) 0;
-                padding: 0;
                 background: url("../img/ui/icoSaibaMaisManuais.png") 5px center no-repeat;
+                padding: 0;
                 @include radius();
 
                 div {
@@ -584,6 +583,14 @@ body {
                     }
                 }
             }
+            // inserindo icones nas listas dos manuais complementares
+            .default { background: url("../img/ui/icoSaibaMaisManuais.png") 5px center no-repeat; }
+            .arquivo { background: url("../img/ui/icoSaibaMaisArquivo.png") 5px center no-repeat; } // [Arquivo] (pode ser PDF, DOC, PPT etc.)
+            .video { background: url("../img/ui/icoSaibaMaisVideo.png") 5px center no-repeat; } // [Vídeo] (videoaula ou tutorial narrado)
+            .site { background: url("../img/ui/icoSaibaMaisSite.png") 5px center no-repeat; } // [Site] (link para portais ou páginas específicas)
+            .curso { background: url("../img/ui/icoSaibaMaisCurso.png") 5px center no-repeat; } // [Curso] (indicação de algum curso, workshop etc.)
+            .livro { background: url("../img/ui/icoSaibaMaisLivro.png") 5px center no-repeat; } // [Livro] (indicação de bibliografia)
+            .discussao { background: url("../img/ui/icoSaibaMaisDiscussao.png") 5px center no-repeat; } // [Discussão] (indicação de algum fórum ou lista de discussão, comunidade de prática etc.)
         }
     }
 

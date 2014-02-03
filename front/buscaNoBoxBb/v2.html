@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br" ng-app="manuaisBB">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Tecnlogias de Aprendizagem - Manuais de utilização</title>
+<meta name="viewport" content="width=device-width">
+<meta name="msapplication-TileImage" content="tile.png"/>
+<meta name="msapplication-TileColor" content="#d02034"/>
+
+<link rel="stylesheet" type="text/css" media="print" href="../css/print.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../css/main.css">
+
+<!--[if IE]>
+    <link href="css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script>window.html5 || document.write('<script src="js/libs/html5shiv.js"><\/script>')</script>
+<![endif]-->
+</head>
+<body>
+<div class="wrapper" style="padding:10px">
+    <section class="buscaMain" ng-controller="listaMenu">
+        
+        <div class="inputSearch">
+            <form id="busca" action="">
+                <label for="pesquisa"></label>
+                <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Busca por título ou palavra-chave" ng-model="searchText" ng-change="countLink()"><br>
+                <!-- mostrar a quantidade de links encontrados -->
+                <span id="display" style="display:none">
+                <strong>{{
+                (blackboardBb |filter:{manual: searchText}).length + 
+                (BbMateriais |filter:{manual: searchText}).length +
+                (BbComunicacaoInteracao |filter:{manual: searchText}).length + 
+                (BbTrabalhos |filter:{manual: searchText}).length +
+                (BbGrupos |filter:{manual: searchText}).length + 
+                (BbTestesPesquisas |filter:{manual: searchText}).length +
+                (BbRubrics |filter:{manual: searchText}).length + 
+                (BbAvaliacao |filter:{manual: searchText}).length +
+                (BbCalendario |filter:{manual: searchText}).length +
+                (catmeSobreFerramenta |filter:{manual: searchText}).length + 
+                (catmeAplicarPesquisaAval |filter:{manual: searchText}).length +
+                (catmeAnalisarResultados |filter:{manual: searchText}).length +
+                (clickers |filter:{manual: searchText}).length +
+                (casos |filter:{manual: searchText}).length + 
+                (simuladores |filter:{manual: searchText}).length +
+                (cursosOnline |filter:{manual: searchText}).length }}</strong>
+                item(ns) encontrado(s)</span>
+            </form>
+        </div>
+
+        <nav role="navigation" class="navigationMain">
+            <h5 class="nomeAssunto"><a name="inicio"></a>Blackboard</h5>
+            <ol class="noCategory">
+                <!-- <p>Conhecer o ambiente</p> -->
+                <div ng-repeat="item in BbConhecerAmbiente | filter:{manual: searchText}">
+                    <p ng-show="item.categoria[1]">{{item.categoria}}</p>
+                    <li class="sublist" ng-show="item.manual">
+                        <a href="{{item.linkManual}}">{{item.manual}}</a>
+                    </li>    
+                </div>
+            </ol>
+            <!-- <ol class="noCategory">
+                <p>Materiais</p>
+                <li class="sublist" ng-repeat="item in BbMateriais | filter:{manual: searchText}">
+                    <a href="{{item.linkManual}}">{{item.manual}}</a>
+                </li>
+            </ol>
+            <ol class="noCategory">
+                <p>Comunicação e Interação</p>
+                <li class="sublist" ng-repeat="item in BbComunicacaoInteracao | filter:{manual: searchText}">
+                    <a href="{{item.linkManual}}">{{item.manual}}</a>
+                </li>
+            </ol>
+            <ol class="noCategory">
+                <p>Trabalhos</p>
+                <li class="sublist" ng-repeat="item in BbTrabalhos | filter:{manual: searchText}">
+                    <a href="{{item.linkManual}}">{{item.manual}}</a>
+                </li>
+            </ol>
+            <ol class="noCategory">
+                <p>Grupos</p>
+                <li class="sublist" ng-repeat="item in BbGrupos | filter:{manual: searchText}">
+                    <a href="{{item.linkManual}}">{{item.manual}}</a>
+                </li>
+            </ol>
+            <ol class="noCategory">
+                <p>Testes e Pesquisas</p>
+                <li class="sublist" ng-repeat="item in BbTestesPesquisas | filter:{manual: searchText}">
+                    <a href="{{item.linkManual}}">{{item.manual}}</a>
+                </li>
+            </ol>
+            <ol class="noCategory">
+                <p>Rubrics</p>
+                <li class="sublist" ng-repeat="item in BbRubrics | filter:{manual: searchText}">
+                    <a href="{{item.linkManual}}">{{item.manual}}</a>
+                </li>
+            </ol>
+            <ol class="noCategory">
+                <p>Avaliação</p>
+                <li class="sublist" ng-repeat="item in BbAvaliacao | filter:{manual: searchText}">
+                    <a href="{{item.linkManual}}">{{item.manual}}</a>
+                </li>
+            </ol>
+            <ol class="noCategory">
+                <p>Calendário</p>
+                <li class="sublist" ng-repeat="item in BbCalendario | filter:{manual: searchText}">
+                    <a href="{{item.linkManual}}">{{item.manual}}</a>
+                </li>
+            </ol>
+            
+            <h5 class="nomeAssunto">Catme</h5>
+            <ol class="noCategory">
+                <p>Sobre a ferramenta</p>
+                <li class="sublist" ng-repeat="item in catmeSobreFerramenta | filter:{manual: searchText}">
+                    <a href="{{item.linkManual}}">{{item.manual}}</a>
+                </li>
+            </ol>
+            <ol class="noCategory">
+                <p>Aplicar uma pesquisa de avaliação</p>
+                <li class="sublist" ng-repeat="item in catmeAplicarPesquisaAval | filter:{manual: searchText}">
+                    <a href="{{item.linkManual}}">{{item.manual}}</a>
+                </li>
+            </ol>
+            <ol class="noCategory">
+                <p>Analisar os resultados</p>
+                <li class="sublist" ng-repeat="item in catmeAnalisarResultados | filter:{manual: searchText}">
+                    <a href="{{item.linkManual}}">{{item.manual}}</a>
+                </li>
+            </ol>
+            
+            <h5 class="nomeAssunto">Votadores eletrônicos (clickers)</h5>
+            <ol class="noCategory">
+                <li class="sublist" ng-repeat="item in clickers | filter:{manual: searchText}">
+                    <a href="{{item.linkManual}}">{{item.manual}}</a>
+                </li>
+            </ol>
+            
+            <h5 class="nomeAssunto">Casos</h5>
+            <ol class="noCategory">
+                <li class="sublist" ng-repeat="item in casos | filter:{manual: searchText}">
+                    <a href="{{item.linkManual}}">{{item.manual}}</a>
+                </li>
+            </ol>
+            
+            <h5 class="nomeAssunto">Simuladores</h5>
+            <ol class="noCategory">
+                <li class="sublist" ng-repeat="item in simuladores | filter:{manual: searchText}">
+                    <a href="{{item.linkManual}}">{{item.manual}}</a>
+                </li>
+            </ol>
+            
+            <h5 class="nomeAssunto">Cursos online</h5>
+            <ol class="noCategory">
+                <li class="sublist" ng-repeat="item in cursosOnline | filter:{manual: searchText}">
+                    <a href="{{item.linkManual}}">{{item.manual}}</a>
+                </li>
+            </ol> -->
+
+            <div class="faqBusca">
+                <h5>
+                    <a href="#" >FAQ</a>
+                </h5>
+            </div>
+            <div class="outros">
+                <h6>
+                    <a href="#titleManual">Não encontrou o que queria?</a>
+                </h6>
+            </div>
+        </nav>
+
+    </section>
+</div>
+
+<!-- Scripts: plugins -->
+<script>navigator.userAgent.match("MSIE")&&document.write('<script src="../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../js/libs/jquery-2.0.3.min.js"><\/script>');</script>
+<script src="../js/libs/angular.js"></script>
+<script src="../js/libs/jquery.placeholder.js"></script>
+
+<!-- Scripts: controllers do AngularJs -->
+<script src="../js/listaCategoria2.js"></script>
+<script src="../js/manuaisRelacionados.js"></script>
+<script src="../js/manuaisComplementares.js"></script>
+
+<!-- Scripts: do projeto -->
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -9,19 +9,33 @@ manuaisBB.controller("manuaisComplementares", function ($scope) {
 	//manual "nome do manual aqui"
 	$scope.lorem = 
 	[
-	{	"manual"	: 	"lorem",
-		"Link" 		: 	"#"
+	{	"manual"	: 	"[Arquivo] (pode ser PDF, DOC, PPT etc.)",
+		"Link" 		: 	"#",
+		"tipoIcone" : 	"arquivo" //nome da classe
 	},
 	{	
-		"manual"	: 	"lorem ipsum",
-		"Link" 		: 	"#"
+		"manual"	: 	"[Vídeo] (videoaula ou tutorial narrado)",
+		"Link" 		: 	"#",
+		"tipoIcone" : 	"video" //nome da classe
 	},
-	{	"manual"	: 	"lorem ipsum dolor",
-		"Link" 		: 	"#"
+	{	"manual"	: 	"[Site] (link para portais ou páginas específicas)",
+		"Link" 		: 	"#",
+		"tipoIcone" : 	"site" //nome da classe
 	},
 	{	
-		"manual"	: 	"lorem ipsum dolor simet",
-		"Link" 		: 	"#"
+		"manual"	: 	"[Curso] (indicação de algum curso, workshop etc.)",
+		"Link" 		: 	"#",
+		"tipoIcone" : 	"curso" //nome da classe
+	},
+	{	
+		"manual"	: 	"[Livro] (indicação de bibliografia)",
+		"Link" 		: 	"#",
+		"tipoIcone" : 	"livro" //nome da classe
+	},
+	{	
+		"manual"	: 	"[Discussão] (indicação de algum fórum ou lista de discussão, comunidade de prática etc.)",
+		"Link" 		: 	"#",
+		"tipoIcone" : 	"discussao" //nome da classe
 	}
 	];
 
