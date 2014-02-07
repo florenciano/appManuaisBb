@@ -27,11 +27,14 @@
         <div class="inputSearch">
             <form id="busca" action="">
                 <label for="pesquisa"></label>
-                <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Busca por título ou palavra-chave" ng-model="searchText" ng-change="countLink()"><br>
-                <!-- mostrar a quantidade de links encontrados -->
+                <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Busca por título ou palavra-chave" ng-model="searchText"><br>
+                <!-- mostrar a quantidade de links encontrados 
+
+                     Adicionar ng-change="countLink()" no input.text
+
                 <span id="display" style="display:none">
                 <strong>{{
-                (blackboardBb |filter:{manual: searchText}).length + 
+                (BbConhecerAmbiente |filter:{manual: searchText}).length + 
                 (BbMateriais |filter:{manual: searchText}).length +
                 (BbComunicacaoInteracao |filter:{manual: searchText}).length + 
                 (BbTrabalhos |filter:{manual: searchText}).length +
@@ -47,119 +50,152 @@
                 (casos |filter:{manual: searchText}).length + 
                 (simuladores |filter:{manual: searchText}).length +
                 (cursosOnline |filter:{manual: searchText}).length }}</strong>
-                item(ns) encontrado(s)</span>
+                item(ns) encontrado(s)</span> -->
             </form>
         </div>
 
         <nav role="navigation" class="navigationMain">
-            <h5 class="nomeAssunto"><a name="inicio"></a>Blackboard</h5>
+            <h5 class="icoBlackboard"><a name="inicio"></a>Blackboard</h5>
             <ol class="noCategory">
-                <!-- <p>Conhecer o ambiente</p> -->
-                <div ng-repeat="item in BbConhecerAmbiente | filter:{manual: searchText}">
-                    <p ng-show="item.categoria[1]">{{item.categoria}}</p>
-                    <li class="sublist" ng-show="item.manual">
+                <div ng-repeat="item in BbConhecerAmbiente | filter: {manual:searchText}">
+                    <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                    <li class="sublist" ng-show="item.manual.length > 1">
                         <a href="{{item.linkManual}}">{{item.manual}}</a>
                     </li>    
                 </div>
             </ol>
-            <!-- <ol class="noCategory">
-                <p>Materiais</p>
-                <li class="sublist" ng-repeat="item in BbMateriais | filter:{manual: searchText}">
-                    <a href="{{item.linkManual}}">{{item.manual}}</a>
-                </li>
+            <ol class="noCategory">
+                <div ng-repeat="item in BbMateriais | filter: {manual:searchText}">
+                    <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                    <li class="sublist" ng-show="item.manual.length > 1">
+                        <a href="{{item.linkManual}}">{{item.manual}}</a>
+                    </li>
+                </div>
             </ol>
             <ol class="noCategory">
-                <p>Comunicação e Interação</p>
-                <li class="sublist" ng-repeat="item in BbComunicacaoInteracao | filter:{manual: searchText}">
-                    <a href="{{item.linkManual}}">{{item.manual}}</a>
-                </li>
+                <div ng-repeat="item in BbComunicacaoInteracao | filter: {manual:searchText}">
+                    <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                    <li class="sublist" ng-show="item.manual.length > 1">
+                        <a href="{{item.linkManual}}">{{item.manual}}</a>
+                    </li>
+                </div>
             </ol>
             <ol class="noCategory">
-                <p>Trabalhos</p>
-                <li class="sublist" ng-repeat="item in BbTrabalhos | filter:{manual: searchText}">
-                    <a href="{{item.linkManual}}">{{item.manual}}</a>
-                </li>
+                <div ng-repeat="item in BbTrabalhos | filter: {manual:searchText}">
+                    <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                    <li class="sublist" ng-show="item.manual.length > 1">
+                        <a href="{{item.linkManual}}">{{item.manual}}</a>
+                    </li>
+                </div>
             </ol>
             <ol class="noCategory">
-                <p>Grupos</p>
-                <li class="sublist" ng-repeat="item in BbGrupos | filter:{manual: searchText}">
-                    <a href="{{item.linkManual}}">{{item.manual}}</a>
-                </li>
+                <div ng-repeat="item in BbGrupos | filter: {manual:searchText}">
+                    <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                    <li class="sublist" ng-show="item.manual.length > 1">
+                        <a href="{{item.linkManual}}">{{item.manual}}</a>
+                    </li>
+                </div>
             </ol>
             <ol class="noCategory">
-                <p>Testes e Pesquisas</p>
-                <li class="sublist" ng-repeat="item in BbTestesPesquisas | filter:{manual: searchText}">
-                    <a href="{{item.linkManual}}">{{item.manual}}</a>
-                </li>
+                <div ng-repeat="item in BbTestesPesquisas | filter: {manual:searchText}">
+                    <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                    <li class="sublist" ng-show="item.manual.length > 1">
+                        <a href="{{item.linkManual}}">{{item.manual}}</a>
+                    </li>
+                </div>
             </ol>
             <ol class="noCategory">
-                <p>Rubrics</p>
-                <li class="sublist" ng-repeat="item in BbRubrics | filter:{manual: searchText}">
-                    <a href="{{item.linkManual}}">{{item.manual}}</a>
-                </li>
+                <div ng-repeat="item in BbRubrics | filter: {manual:searchText}">
+                    <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                    <li class="sublist" ng-show="item.manual.length > 1">
+                        <a href="{{item.linkManual}}">{{item.manual}}</a>
+                    </li>
+                </div>
             </ol>
             <ol class="noCategory">
-                <p>Avaliação</p>
-                <li class="sublist" ng-repeat="item in BbAvaliacao | filter:{manual: searchText}">
-                    <a href="{{item.linkManual}}">{{item.manual}}</a>
-                </li>
+                <div ng-repeat="item in BbAvaliacao | filter: {manual:searchText}">
+                    <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                    <li class="sublist" ng-show="item.manual.length > 1">
+                        <a href="{{item.linkManual}}">{{item.manual}}</a>
+                    </li>
+                </div>
             </ol>
             <ol class="noCategory">
-                <p>Calendário</p>
-                <li class="sublist" ng-repeat="item in BbCalendario | filter:{manual: searchText}">
-                    <a href="{{item.linkManual}}">{{item.manual}}</a>
-                </li>
+                <div ng-repeat="item in BbCalendario | filter: {manual:searchText}">
+                    <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                    <li class="sublist" ng-show="item.manual.length > 1">
+                        <a href="{{item.linkManual}}">{{item.manual}}</a>
+                    </li>
+                </div>
             </ol>
-            
-            <h5 class="nomeAssunto">Catme</h5>
-            <ol class="noCategory">
-                <p>Sobre a ferramenta</p>
-                <li class="sublist" ng-repeat="item in catmeSobreFerramenta | filter:{manual: searchText}">
-                    <a href="{{item.linkManual}}">{{item.manual}}</a>
-                </li>
-            </ol>
-            <ol class="noCategory">
-                <p>Aplicar uma pesquisa de avaliação</p>
-                <li class="sublist" ng-repeat="item in catmeAplicarPesquisaAval | filter:{manual: searchText}">
-                    <a href="{{item.linkManual}}">{{item.manual}}</a>
-                </li>
-            </ol>
-            <ol class="noCategory">
-                <p>Analisar os resultados</p>
-                <li class="sublist" ng-repeat="item in catmeAnalisarResultados | filter:{manual: searchText}">
-                    <a href="{{item.linkManual}}">{{item.manual}}</a>
-                </li>
-            </ol>
-            
-            <h5 class="nomeAssunto">Votadores eletrônicos (clickers)</h5>
-            <ol class="noCategory">
-                <li class="sublist" ng-repeat="item in clickers | filter:{manual: searchText}">
-                    <a href="{{item.linkManual}}">{{item.manual}}</a>
-                </li>
-            </ol>
-            
-            <h5 class="nomeAssunto">Casos</h5>
-            <ol class="noCategory">
-                <li class="sublist" ng-repeat="item in casos | filter:{manual: searchText}">
-                    <a href="{{item.linkManual}}">{{item.manual}}</a>
-                </li>
-            </ol>
-            
-            <h5 class="nomeAssunto">Simuladores</h5>
-            <ol class="noCategory">
-                <li class="sublist" ng-repeat="item in simuladores | filter:{manual: searchText}">
-                    <a href="{{item.linkManual}}">{{item.manual}}</a>
-                </li>
-            </ol>
-            
-            <h5 class="nomeAssunto">Cursos online</h5>
-            <ol class="noCategory">
-                <li class="sublist" ng-repeat="item in cursosOnline | filter:{manual: searchText}">
-                    <a href="{{item.linkManual}}">{{item.manual}}</a>
-                </li>
-            </ol> -->
 
-            <div class="faqBusca">
+            <h5 class="icoCatme"></a>Catme</h5>
+            <ol class="noCategory">
+                <div ng-repeat="item in catmeSobreFerramenta | filter: {manual:searchText}">
+                    <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                    <li class="sublist" ng-show="item.manual.length > 1">
+                        <a href="{{item.linkManual}}">{{item.manual}}</a>
+                    </li>
+                </div>
+            </ol>
+            <ol class="noCategory">
+                <div ng-repeat="item in catmeAplicarPesquisaAval | filter: {manual:searchText}">
+                    <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                    <li class="sublist" ng-show="item.manual.length > 1">
+                        <a href="{{item.linkManual}}">{{item.manual}}</a>
+                    </li>
+                </div>
+            </ol>
+            <ol class="noCategory">
+                <div ng-repeat="item in catmeAnalisarResultados | filter: {manual:searchText}">
+                    <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                    <li class="sublist" ng-show="item.manual.length > 1">
+                        <a href="{{item.linkManual}}">{{item.manual}}</a>
+                    </li>
+                </div>
+            </ol>
+
+            <h5 class="icoClickers"></a>Votadores eletrônicos (clickers)</h5>
+            <ol class="noCategory">
+                <div ng-repeat="item in clickers | filter: {manual:searchText}">
+                    <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                    <li class="sublist" ng-show="item.manual.length > 1">
+                        <a href="{{item.linkManual}}">{{item.manual}}</a>
+                    </li>
+                </div>
+            </ol>
+            
+            <h5 class="icoCasos"></a>Casos</h5>
+            <ol class="noCategory">
+                <div ng-repeat="item in casos | filter: {manual:searchText}">
+                    <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                    <li class="sublist" ng-show="item.manual.length > 1">
+                        <a href="{{item.linkManual}}">{{item.manual}}</a>
+                    </li>
+                </div>
+            </ol>
+
+            <h5 class="icoSimuladores"></a>Simuladores</h5>
+            <ol class="noCategory">
+                <div ng-repeat="item in simuladores | filter: {manual:searchText}">
+                    <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                    <li class="sublist" ng-show="item.manual.length > 1">
+                        <a href="{{item.linkManual}}">{{item.manual}}</a>
+                    </li>
+                </div>
+            </ol>
+
+            <h5 class="icoCursosOnline"></a>Cursos online</h5>
+            <ol class="noCategory">
+                <div ng-repeat="item in cursosOnline | filter: {manual:searchText}">
+                    <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                    <li class="sublist" ng-show="item.manual.length > 1">
+                        <a href="{{item.linkManual}}">{{item.manual}}</a>
+                    </li>
+                </div>
+            </ol>
+
+            <div class="faqBusca icoFaq">
                 <h5>
                     <a href="#" >FAQ</a>
                 </h5>
@@ -175,16 +211,15 @@
 </div>
 
 <!-- Scripts: plugins -->
-<script>navigator.userAgent.match("MSIE")&&document.write('<script src="../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../js/libs/jquery-2.0.3.min.js"><\/script>');</script>
+<script>navigator.userAgent.match("MSIE")&&document.write('<script src="../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
 <script src="../js/libs/angular.js"></script>
 <script src="../js/libs/jquery.placeholder.js"></script>
 
 <!-- Scripts: controllers do AngularJs -->
-<script src="../js/listaCategoria2.js"></script>
-<script src="../js/manuaisRelacionados.js"></script>
-<script src="../js/manuaisComplementares.js"></script>
+<script src="../js/listaCompletaManual.js"></script>
 
 <!-- Scripts: do projeto -->
 <script src="../js/main.js"></script>
+
 </body>
 </html>

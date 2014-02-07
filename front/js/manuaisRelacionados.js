@@ -1,7 +1,26 @@
-/*
-    Este documento é responsável por alimentar a lista dos
-    'Manuais relacionados' de cada manual.
-*/
+/* ===============================================================
+	
+	MATRIZ DOS MANUAIS RELACIONADOS
+
+   	Este documento é responsável por alimentar a lista dos
+   	'Manuais relacionados' de cada manual.
+
+   	Local do arquivo base:
+   	U:\TAI\Projetos\Projetos 2014\Reformulacao_manuais\Professor\DI\Para_Producao
+
+   	Nome:
+   	Blackboard_Sintaxe_Relacao_Manuais_Prof_vf
+
+   	Nomes das classe:
+   	1- blackboard
+   	2- catme
+   	3- clickers
+   	4- casos
+   	5- simuladores
+   	6- cursosOnline
+
+================================================================== */
+
 manuaisBB.controller("manuaisRelacionados", function ($scope) { 
 	
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -10,436 +29,538 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	// CATEGORIA: Conhecer o ambiente
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 	
-	//manual "O que é Blackboard"
+	// "O que é Blackboard"
 	$scope.O_que_é_Blackboard = 
 	[
 	{	"manual"	: 	"Acessar pelo computador",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	},
 	{	
 		"manual"	: 	"Acessar por dispositivos móveis",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
-	//manual "Acessar pelo computador"
+	// "Acessar pelo computador"
 	$scope.Acessar_pelo_computador = 
 	[
 	{
 		"manual"	: 	"Acessar por dispositivos móveis",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
-	//manual "Acessar por dispositivos móveis"
+	// "Acessar por dispositivos móveis"
 	$scope.Acessar_por_dispositivos_móveis = 
 	[
 	{
 		"manual"	: 	"Acessar pelo computador",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
 	// CATEGORIA: Materiais
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-	//manual "Carregar materiais no ambiente virtual"
+	// "Carregar materiais no ambiente virtual"
 	$scope.Carregar_materiais_no_ambiente_virtual = 
 	[
 	{
 		"manual"	: 	"Compartilhar materiais com os alunos",
-		"Link" 		:  	"#"
+		"Link" 		:  	"#",
+		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Alterar ou excluir um material compartilhado", 
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Aproveitar materiais de um curso para outro", 
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
-	//manual "Compartilhar materiais com os alunos"
+	// "Compartilhar materiais com os alunos"
 	$scope.Compartilhar_materiais_com_os_alunos = 
 	[
 	{
 		"manual"	: 	"Carregar materiais no ambiente virtual",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Alterar ou excluir um material compartilhado",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Aproveitar materiais de um curso para outro",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
-	//manual "Alterar ou excluir um material compartilhado"
+	// "Alterar ou excluir um material compartilhado"
 	$scope.Alterar_ou_excluir_um_material_compartilhado = 
 	[
 	{
 		"manual"	: 	"Carregar materiais no ambiente virtual",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Compartilhar materiais com os alunos",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Aproveitar materiais de um curso para outro",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
-	//manual "Aproveitar materiais de um curso para outro"
+	// "Aproveitar materiais de um curso para outro"
 	$scope.Aproveitar_materiais_de_um_curso_para_outro = 
 	[
 	{
 		"manual"	: 	"Carregar materiais no ambiente virtual",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual" 	: 	"Compartilhar materiais com os alunos",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Alterar ou excluir um material compartilhado",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
 	// CATEGORIA: Comunicação e interação
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-	//manual "Enviar avisos aos alunos"
+	// "Enviar avisos aos alunos"
 	$scope.Enviar_avisos_aos_alunos = 
 	[
 	{
 		"manual"	: 	"Enviar e-mail pelo ambiente",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
-	//manual "Enviar e-mail pelo ambiente"
+	// "Enviar e-mail pelo ambiente"
 	$scope.Enviar_eMail_pelo_ambiente = 
 	[
 	{
 		"manual"	: 	"Enviar avisos aos alunos",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
-	//manual "Criar um fórum de discussão"
+	// "Criar um fórum de discussão"
 	$scope.Criar_um_fórum_de_discussão = 
 	[
 	{
 		"manual"	: 	"Avaliar fórum de discussão", 
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	},
 	{
-		"manual"	: 	"Criar um blog",
-		"Link" 		: 	"#"
+		"manual"	: 	"Criar blog",
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
-	//manual "Criar um blog"
-	$scope.Criar_um_blog = 
+	// "Criar um blog"
+	$scope.Criar_blog = 
 	[
 	{
 		"manual"	: 	"Avaliar blog",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
+	},
+	{
+		"manual"	: 	"Criar diário",
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Criar um fórum de discussão",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
-	//manual "Criar wiki"
+	// "Criar diário"
+	$scope.Criar_diário = 
+	[
+	{
+		"Manual"	: 	"Avaliar diário",
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
+	},
+	{
+		"Manual"	: 	"Criar blog",
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
+	}
+	];
+
+
+	// "Criar wiki"
 	$scope.Criar_wiki = 
 	[
 	{
 		"Manual"	: 	"Avaliar wiki",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
-
 
 	// CATEGORIA: Trabalhos
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-	//manual "Receber trabalhos sem verificação de plágio"
+	// "Receber trabalhos sem verificação de plágio (exercicício)"
 	$scope.Receber_trabalhos_sem_verificação_de_plágio = 
 	[
 	{
-		"manual"	: 	"Corrigir trabalhos sem verificação de plágio",
-		"Link" 		: 	"#"
+		"manual"	: 	"Corrigir trabalhos sem verificação de plágio (Exercício)",
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	},
 	{
-		"manual"	: 	"Receber trabalhos com verificação de plágio",
-		"Link" 		: 	"#"
+		"manual"	: 	"Receber trabalhos com verificação de plágio (SafeAssignment)",
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
-	//manual "Receber trabalhos com verificação de plágio"
+	// "Receber trabalhos com verificação de plágio (SafeAssignment)"
 	$scope.Receber_trabalhos_com_verificação_de_plágio = 
 	[
 	{
 		"manual"	: 	"Corrigir trabalhos com verificação de plágio",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	},
 	{
-		"manual"	: 	"Submeter arquivos para verificação de plágio ou criar base de comparação",
-		"Link" 		: 	"#"
+		"manual"	: 	"Receber trabalhos com verificação de plágio (SafeAssignment)",
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	},
 	{
-		"manual"	: 	"Receber trabalhos sem verificação de plágio",
-		"Link" 		: 	"#"
+		"manual"	: 	"Receber trabalhos sem verificação de plágio (Exercício)",
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
-	//manual "Submeter arquivos para verificação de plágio ou criar base de comparação"
+	// "Submeter arquivos para verificação de plágio ou criar base de comparação"
 	$scope.Submeter_arquivos_para_verificação_de_plágio_ou_criar_base_de_comparação = 
 	[
-	{	"manual"	: 	"Receber trabalhos com verificação de plágio",
-		"Link" 		: 	"#"
+	{	"manual"	: 	"Receber trabalhos com verificação de plágio (SafeAssignment)",
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	},
-	{	"manual"	: 	"Corrigir trabalhos com verificação de plágio",
-		"Link" 		: 	"#"
+	{	"manual"	: 	"Corrigir trabalhos com verificação de plágio (SafeAssignment)",
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
 	// CATEGORIA: Grupos
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-	//manual "Criar Grupos"
+	// "Criar Grupos"
 	$scope.Criar_Grupos = 
 	[
 	{
-		"manual"	: 	"Receber trabalhos sem verificação de plágio",
-		"Link" 		: 	"#"
+		"manual"	: 	"Receber trabalhos sem verificação de plágio (Exercício)",
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
 	// CATEGORIA: Testes e pesquisas
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-	//manual "Criar ou alterar testes (com nota)"
-	$scope.Criar_ou_alterar_testes_com_nota = 
+	// "Criar ou alterar testes (com nota)"
+	$scope.Criar_ou_alterar_testes = 
 	[
 	{
 		"manual"	: 	"Criar ou alterar pesquisas (sem nota)", 
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Conhecer os tipos de pergunta dos testes e pesquisas", 
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Importar testes e pesquisas do Word", 
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
-	//manual "Criar ou alterar pesquisas (sem nota)"
-	$scope.Criar_ou_alterar_pesquisas_sem_nota = 
+	// "Criar ou alterar pesquisas (sem nota)"
+	$scope.Criar_ou_alterar_pesquisas = 
 	[
 	{
 		"manual"	: 	"Criar ou alterar testes (com nota)", 
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Conhecer os tipos de pergunta dos testes e pesquisas", 
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Importar testes e pesquisas do Word", 
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
-	//manual "Conhecer os tipos de pergunta dos testes e pesquisas"
+	// "Conhecer os tipos de pergunta dos testes e pesquisas"
 	$scope.Conhecer_os_tipos_de_pergunta_dos_testes_e_pesquisas = 
 	[
 	{
 		"manual"	: 	"Criar ou alterar testes (com nota)", 
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Criar ou alterar pesquisas (sem nota)", 
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
-	//manual "Importar testes e pesquisas do Word"
+	// "Importar testes e pesquisas do Word"
 	$scope.Importar_testes_e_pesquisas_do_Word = 
 	[
 	{
 		"manual"	: 	"Criar ou alterar testes (com nota)", 
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Criar ou alterar pesquisas (sem nota)", 
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Importar testes e pesquisas do Word", 
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
-	// CATEGORIA: Rubrics
+	// CATEGORIA: Rubric
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-	//manual "Criar uma Rubric"
-	$scope.Criar_uma_Rubric = 
+	// "Criar uma Rubric"
+	$scope.Criar_Rubric = 
 	[
 	{
 		"manual"	: 	"Associar Rubric a atividades",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Associar Rubric a colunas na Central de Notas",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Corrigir com Rubric",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
-	//manual "Associar Rubric a atividades"
+	// "Associar Rubric a atividades"
 	$scope.Associar_Rubric_a_atividades = 
 	[
 	{
 		"manual"	: 	"Associar Rubric a colunas na Central de Notas", 
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
-	//manual "Associar Rubric a colunas na Central de Notas"
+	// "Associar Rubric a colunas na Central de Notas"
 	$scope.Associar_Rubric_a_colunas_na_Central_de_Notas = 
 	[
 	{
 		"manual"	: 	"Corrigir com Rubric", 
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
 	// CATEGORIA: Avaliação
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-	//manual "Configurar a Central de Notas"
+	// "Configurar a Central de Notas"
 	$scope.Configurar_a_Central_de_Notas = 
 	[
 	{
 		"manual"		: 	"Calcular a média do aluno",
-		"Link" 			: 	"#"
+		"Link" 			: 	"#",
+		"tipoIcone"		: 	"blackboard"
 	},
 	{
 		"manual"		: 	"Exportar as notas para o sistema acadêmico",
-		"Link" 			: 	"#"
+		"Link" 			: 	"#",
+		"tipoIcone"		: 	"blackboard"
 	}
 	];
 
-	//manual "Dar nota a atividades feitas fora do ambiente"
+	// "Dar nota a atividades feitas fora do ambiente"
 
-	//manual "Calcular a média do aluno"
+	// "Calcular a média do aluno"
 	$scope.Calcular_a_média_do_aluno = 
 	[
 	{
 		"manual"	: 	"Exportar as notas para o sistema acadêmico",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
-	//manual "Corrigir trabalhos sem verificação de plágio"
+	// "Corrigir trabalhos sem verificação de plágio (Exercício)"
 	$scope.Corrigir_trabalhos_sem_verificação_de_plágio = 
 	[
 	{
 		"manual"	: 	"Receber trabalhos sem verificação de plágio", 
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
-	//manual "Corrigir trabalhos com verificação de plágio"
+	// "Corrigir trabalhos com verificação de plágio (SafeAssignment)"
 	$scope.Corrigir_trabalhos_com_verificação_de_plágio = 
 	[
 	{
-		"manual"	: 	"Receber trabalhos com verificação de plágio", 
-		"Link" 		: 	"#"
+		"manual"	: 	"Receber trabalhos com verificação de plágio (SafeAssignment)", 
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
-	//manual "Avaliar fórum de discussão"
+	// "Avaliar fórum de discussão"
 	$scope.Avaliar_fórum_de_discussão = 
 	[
 	{
-		"manual"	: 	"Criar um fórum de discussão", 
-		"Link" 		: 	"#"
+		"manual"	: 	"Criar fórum de discussão", 
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
-	//manual "Avaliar blog"
+	// "Avaliar blog"
 	$scope.Avaliar_blog = 
 	[
 	{
-		"manual"	: 	"Criar um blog", 
-		"Link" 		: 	"#"
+		"manual"	: 	"Criar blog", 
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
-	//manual "Corrigir com Rubric"
+	// "Avaliar diário"
+	$scope.diário = 
+	[
+	{
+		"manual"	: 	"Criar diário", 
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
+	}
+	];
+
+	// "Avaliar wiki"
+	$scope.Avaliar_wiki = 
+	[
+	{
+		"manual"	: 	"Criar wiki", 
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
+	}
+	];
+
+
+	// "Corrigir com Rubric"
 	$scope.Corrigir_com_Rubric = 
 	[
 	{
-		"manual" 	: 	"Criar uma Rubric",
-		"Link" 		: 	"#"
+		"manual" 	: 	"Criar Rubric",
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual" 	: 	"Associar Rubric a atividades",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual" 	: 	"Associar Rubric a colunas na Central de Notas",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
-	//manual "Exportar as notas para o sistema acadêmico"
+	// "Exportar as notas para o sistema acadêmico"
 	$scope.Exportar_as_notas_para_o_sistema_acadêmico = 
 	[
 	{
 		"manual" 	: 	"Calcular a média do aluno",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual" 	: 	"Configurar a Central de Notas",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
 	// CATEGORIA: Calendário
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-	//manual "Criar e visualizar eventos"
+	// "Criar e visualizar eventos"
 	$scope.Criar_e_visualizar_eventos = 
 	[
 	{
 		"manual" 	: 	"Sincronizar com e-mail pessoal",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
-	//manual "Sincronizar com e-mail pessoal"
+	// "Sincronizar com e-mail pessoal"
 	$scope.Sincronizar_com_eMail_pessoal = 
 	[
 	{
 		"manual" 	: 	"Criar e visualizar eventos",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
@@ -449,134 +570,154 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	// CATEGORIA: Sobre a ferramenta
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-	//manual "O que é Catme"
+	// "O que é Catme"
 	$scope.O_que_é_Catme = 
 	[
 	{
 		"manual"	: 	"Funcionamento do Catme",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"catme"
 	},
 	{
 		"manual"	: 	"Criar conta",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"catme"
 	}
 	];
 
-	//manual "Funcionamento do Catme"
+	// "Funcionamento do Catme"
 	$scope.Funcionamento_do_Catme = 
 	[
 	{
 		"manual"	: 	"O que é Catme",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"catme"
 	},
 	{
 		"manual"	: 	"Criar conta",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"catme"
 	}
 	];
 
-	//manual "Criar conta"
+	// "Criar conta"
 	$scope.Criar_conta = 
 	[
 	{
 		"manual"	: 	"O que é Catme",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"catme"
 	},
 	{
 		"manual"	: 	"Funcionamento do Catme",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"catme"
 	}
 	];
 
 	// CATEGORIA: Aplicar uma pesquisa de avaliação
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-	//manual "Preparar listagem de alunos"
+	// "Preparar listagem de alunos"
 	$scope.Preparar_listagem_de_alunos = 
 	[
 	{
 		"manual"	: 	"Criar classe", 
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"catme"
 	},
 	{
 		"manual"	: 	"Criar pesquisa de avaliação", 
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"catme"
 	},
 	{
 		"manual"	: 	"Editar informações", 
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"catme"
 	}
 	];
 
-	//manual "Criar classe"
+	// "Criar classe"
 	$scope.Criar_classe = 
 	[
 	{
 		"manual"	: 	"Preparar listagem de alunos", 
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"catme"
 	},
 	{
 		"manual"	: 	"Criar pesquisa de avaliação", 
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"catme"
 	},
 	{
 		"manual"	: 	"Editar informações", 
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"catme"
 	}
 	];
 
-	//manual "Criar pesquisa de avaliação"
+	// "Criar pesquisa de avaliação"
 	$scope.Criar_pesquisa_de_avaliação = 
 	[
 	{
 		"manual"	: 	"Preparar listagem de alunos", 
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"catme"
 	},
 	{
 		"manual"	: 	"Criar classe", 
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"catme"
 	},
 	{
 		"manual"	: 	"Editar informações", 
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"catme"
 	}
 	];
 
-	//manual "Editar informações"
+	// "Editar informações"
 	$scope.Editar_informações = 
 	[
 	{
 		"manual"	: 	"Preparar listagem de alunos", 
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"catme"
 	},
 	{
 		"manual"	: 	"Criar classe", 
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"catme"
 	},
 	{
 		"manual"	: 	"Criar pesquisa de avaliação", 
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"catme"
 	}
 	];
 
 	// CATEGORIA: Analisar os resultados
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-	//manual "Acessar resultados de uma avaliação existente"
+	// "Acessar resultados de uma avaliação existente"
 	$scope.Acessar_resultados_de_uma_avaliação_existente = 
 	[
 	{
 		"manual" 	: 	"Trabalhar resultados no Excel",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"catme"
 	}
 	];
 
-	//manual "Trabalhar resultados no Excel"
+	// "Trabalhar resultados no Excel"
 	$scope.Trabalhar_resultados_no_Excel = 
 	[
 	{
 		"manual" 	: 	"Acessar resultados de uma avaliação existente",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"catme"
 	}
 	];
 
@@ -584,267 +725,323 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	// ASSUNTO: VOTADORES ELETRÔNICOS (CLICKERS)
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-	//manual "Informações do software"
+	// "Informações do software"
 	$scope.Informações_do_software = 
 	[
 	{
 		"manual"	: 	"Informações do hardware",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Como utilizar",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Criar pergunta",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Criar lista",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Salvar sessão",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Gerar e acessar relatórios",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Controle dos aparelhos",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	}
 	];
 
-	//manual "Informações do hardware"
+	// "Informações do hardware"
 	$scope.Informações_do_hardware = 
 	[
 	{
 		"manual"	: 	"Informações do software",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Como utilizar",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Criar pergunta",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Criar lista",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Salvar sessão",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Gerar e acessar relatórios",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Controle dos aparelhos",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	}
 	];
 
-	//manual "Como utilizar"
+	// "Como utilizar"
 	$scope.Como_utilizar = 
 	[
 	{
 		"manual"	: 	"Informações do software",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Informações do hardware",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Criar pergunta",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Criar lista",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Salvar sessão",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Gerar e acessar relatórios",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Controle dos aparelhos",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	}
 	];
 
-	//manual "Criar pergunta"
+	// "Criar pergunta"
 	$scope.Criar_pergunta = 
 	[
 	{
 		"manual"	: 	"Informações do software",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Informações do hardware",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Como utilizar",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Criar lista",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Salvar sessão",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Gerar e acessar relatórios",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Controle dos aparelhos",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	}
 	];
 
-	//manual "Criar lista"
+	// "Criar lista"
 	$scope.Criar_lista = 
 	[
 	{
 		"manual" 	: 	"Informações do software",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual" 	: 	"Informações do hardware",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual" 	: 	"Como utilizar",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual" 	: 	"Criar pergunta",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual" 	: 	"Salvar sessão",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual" 	: 	"Gerar e acessar relatórios",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual" 	: 	"Controle dos aparelhos",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	}
 	];
 
-	//manual "Salvar sessão"
+	// "Salvar sessão"
 	$scope.Salvar_sessão = 
 	[
 	{
 		"manual"	: 	"Informações do software",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Informações do hardware",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Como utilizar",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Criar pergunta",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Criar lista",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Gerar e acessar relatórios",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Controle dos aparelhos",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	}
 	];
 
-	//manual "Gerar e acessar relatórios"
+	// "Gerar e acessar relatórios"
 	$scope.Gerar_e_acessar_relatórios = 
 	[
 	{
 		"manual" 	: 	"Informações do software",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual" 	: 	"Informações do hardware",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual" 	: 	"Como utilizar",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual" 	: 	"Criar pergunta",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual" 	: 	"Criar lista",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual" 	: 	"Salvar sessão",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual" 	: 	"Controle dos aparelhos",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	}
 	];
 
-	//manual "Controle dos aparelhos"
+	// "Controle dos aparelhos"
 	$scope.Controle_dos_aparelhos = 
 	[
 	{
 		"manual"	: 	"Informações do software",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Informações do hardware",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Como utilizar",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Criar pergunta",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Criar lista",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual	" 	: 	"Salvar sessão",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	},
 	{
 		"manual"	: 	"Gerar e acessar relatórios",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"clickers"
 	}
 	];
 
@@ -852,108 +1049,128 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	// ASSUNTO: CASOS
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-	//manual "Sobre os casos"
+	// "Sobre os casos"
 	$scope.Sobre_os_casos = 
 	[
 	{
 		"manual"	: 	"Cadastrar-se em base de dados",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"casos"
 	},
 	{
 		"manual"	: 	"Consultar casos disponíveis",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"casos"
 	},
 	{
 		"manual"	: 	"Solicitar casos pelo CUCA",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"casos"
 	},
 	{
 		"manual"	: 	"Disponibilizar link aos alunos",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"casos"
 	}
 	];
 
-	//manual "Cadastrar-se em base de dados"
+	// "Cadastrar-se em base de dados"
 	$scope.CadastrarSe_em_base_de_dados = 
 	[
 	{
 		"manual"	: 	"Sobre os casos",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"casos"
 	},
 	{
 		"manual"	: 	"Consultar casos disponíveis",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"casos"
 	},
 	{
 		"manual"	: 	"Solicitar casos pelo CUCA",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"casos"
 	},
 	{
 		"manual"	: 	"Disponibilizar link aos alunos",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"casos"
 	}
 	];
 
-	//manual "Consultar casos disponíveis"
+	// "Consultar casos disponíveis"
 	$scope.Consultar_casos_disponíveis = 
 	[
 	{
 		"manual"	: 	"Sobre os casos",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"casos"
 	},
 	{
 		"manual"	: 	"Cadastrar-se em base de dados",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"casos"
 	},
 	{
 		"manual"	: 	"Solicitar casos pelo CUCA",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"casos"
 	},
 	{
 		"manual"	: 	"Disponibilizar link aos alunos",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"casos"
 	}
 	];
 
-	//manual "Solicitar casos pelo CUCA"
+	// "Solicitar casos pelo CUCA"
 	$scope.Solicitar_casos_pelo_CUCA = 
 	[
 	{
 		"manual"	: 	"Sobre os casos",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"casos"
 	},
 	{
 		"manual"	: 	"Cadastrar-se em base de dados",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"casos"
 	},
 	{
 		"manual"	: 	"Consultar casos disponíveis",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"casos"
 	},
 	{
 		"manual"	: 	"Disponibilizar link aos alunos",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"casos"
 	}
 	];
 
-	//manual "Disponibilizar link aos alunos"
+	// "Disponibilizar link aos alunos"
 	$scope.Disponibilizar_link_aos_alunos = 
 	[
 	{
 		"manual"	: 	"Sobre os casos",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"casos"
 	},
 	{
 		"manual"	: 	"Cadastrar-se em base de dados",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"casos"
 	},
 	{
 		"manual"	: 	"Consultar casos disponíveis",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"casos"
 	},
 	{
 		"manual"	: 	"Solicitar casos pelo CUCA",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"casos"
 	}
 	];
 
@@ -961,42 +1178,48 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	// ASSUNTO: SIMULADORES
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-	//manual "Conhecer simuladores"
+	// "Conhecer simuladores"
 	$scope.Conhecer_simuladores = 
 	[
 	{
 		"manual" 	: 	"Solicitar simulador",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"simuladores"
 	},
 	{
 		"manual" 	: 	"Disponibilizar link aos alunos",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"simuladores"
 	}
 	];
 
-	//manual "Solicitar simulador"
+	// "Solicitar simulador"
 	$scope.Solicitar_simulador = 
 	[
 	{
 		"manual" 	: 	"Conhecer simuladores",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"simuladores"
 	},
 	{
 		"manual" 	: 	"Disponibilizar link aos alunos",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"simuladores"
 	}
 	];
 
-	//manual "Disponibilizar link aos alunos"
+	// "Disponibilizar link aos alunos"
 	$scope.Disponibilizar_link_aos_alunos = 
 	[
 	{
 		"manual" 	: 	"Conhecer simuladores",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"simuladores"
 	},
 	{
 		"manual" 	: 	"Solicitar simulador",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"simuladores"
 	}
 	];
 
@@ -1004,21 +1227,23 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	// ASSUNTO: CURSOS
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-	//manual "Acessar"
+	// "Acessar"
 	$scope.Acessar = 
 	[
 	{
 		"manual" 	: 	"Gerenciar",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"cursosOnline"
 	}
 	];
 
-	//manual "Gerenciar"
+	// "Gerenciar"
 	$scope.Gerenciar = 
 	[
 	{
 		"manual" 	: 	"Acessar",
-		"Link" 		: 	"#"
+		"Link" 		: 	"#",
+		"tipoIcone"	: 	"cursosOnline"
 	}
-	]
+	];
 });

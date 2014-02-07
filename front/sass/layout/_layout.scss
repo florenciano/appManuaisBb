@@ -1,9 +1,9 @@
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    B- content
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*  ===============================================================
+   
+    REGRAS DE ESTILO: VISUAL DESIGNER
+    As regras de estilo foram criadas dentro do conceito do mobile-first
 
-//  $settings SASS/COMPASS
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+================================================================== */
 
 /////////////////////////////////////////////////////////////////////
 // Vars
@@ -102,6 +102,7 @@ $meioGrid: $grid / 2;
 /////////////////////////////////////////////////////////////////////
 // Resets
 /////////////////////////////////////////////////////////////////////
+
 html, body { height: 100%; min-height: 100%;}
 
 * {
@@ -125,7 +126,9 @@ body {
 /* Media query MOBILE
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @media only screen and (min-width:160px) {
+    
     // pop-up para alerta de pequena resolução
+    // solução baseada nos alerts Bootstrap
    .alert {
         padding: ($meioGrid - 5);
         border: 1px solid transparent;
@@ -159,6 +162,8 @@ body {
         right: -21px;
         color: inherit;
     }
+
+    // regras para o header: logo + nome do projeto
     .logo {
         margin: ($meioGrid /2) 0 auto;
         img {
@@ -183,20 +188,15 @@ body {
             margin: ($meioGrid/4) 0 0;
         }
     }
-    // geral
-    .containerMain {
-        border-top: 1px solid $corBorda;
-        padding-top: $meioGrid;
-    }
+
+    // regra para o container
+    .containerMain { border-top: 1px solid $corBorda; padding-top: $meioGrid; }
 
     // display mostrando a qtde de links encontrados
-    #display {
-        margin-top: 5px;
-        text-align: center;
-        @include font(normal, 1.1em);
-    }
+    // NOTA: desontinuado a partir da versão 3
+    #display { margin-top: 5px; text-align: center; @include font(normal, 1.1em); }
 
-    // busca: search
+    // regras para a área de busca 'input'
     .inputSearch {
         input[type="text"] {
             color: $corTexto;
@@ -213,10 +213,10 @@ body {
                 border: 1px solid $corDefault;
             }
         }
-
         p { line-height: $meioGrid + 2;}
 
         // btn expandir e recolher
+        // NOTA: descontinuado a partir da versão 3
         .interat {
             margin: 0 .5em;
             a.expandir {
@@ -227,26 +227,31 @@ body {
                 margin-right: .5em;
                 background: url("../img/ui/rec-exp.png") -1px center no-repeat;
             }
-
             a.recolher {
                 @extend .expandir;
                 background: url("../img/ui/rec-exp.png") -26px center no-repeat;
             }
         }
+
     }
-    // icones do menu
+
+    /* regras para a seção de busca dos manuais */
+    
+    // definindo estilos dos ícones dos assuntos
     .icoBlackboard  { background: url("../img/ui/icoBlackboard.png") left center no-repeat; }
     .icoCatme       { background: url("../img/ui/icoCatme.png") left center no-repeat; }
     .icoClickers    { background: url("../img/ui/icoClickers.png") left center no-repeat; }
     .icoCasos       { background: url("../img/ui/icoCaso.png") left center no-repeat; }
     .icoSimuladores { background: url("../img/ui/icoSimulador.png") left center no-repeat; }
     .icoCursosOnline  { background: url("../img/ui/icoCurso.png") left center no-repeat; }
+    .icoFaq  { background: url("../img/ui/icoFaq.png") left center no-repeat; }
 
-    // navigation
+    // regras que afetam títulos dos assuntos, listas, sublistas e links
     .navigationMain {
         @include transition(all .40s ease);
         margin-top: $meioGrid;
 
+        // regra da categoria vigente do manual ex: categoria 'Trabalhos' do Blackboard
         .selectedCategory {
             border: 1px solid $corDefault;
             padding: ($meioGrid / 4) 0;
@@ -259,11 +264,11 @@ body {
             margin: 0;
             @include font(bold, 1.4em);
             display: block;
-            padding: ($meioGrid - 12) 0 ($meioGrid - 12) $grid ;
+            padding: ($meioGrid - 8) 0 ($meioGrid - 8) $grid ;
             min-height: $grid - 2;
         }
         ol, ul {
-            margin: 0 0 2px 0;
+            margin: 0 0 0 0;
             padding: 0;
             list-style: none;
             display: block;
@@ -271,14 +276,23 @@ body {
             float: left;
 
             li {
-                margin: 2px 0;
+                margin: 0;
                 padding: 0;
                 padding-left: $meioGrid;
                 float: left;
                 width: 100%;
                 @include radius();
 
-                // add header line
+                a {
+                    margin: 0;
+                    padding: 0 ($meioGrid / 4);
+                    text-decoration: none;
+                    @include font(normal, 1em);
+                    display: inline-block;
+                    height: 100%;
+                }
+
+                // NOTA: descontinuado a partir da versão 3
                 .containerCategory {
                     display: block;
                     width: 100%;
@@ -306,18 +320,11 @@ body {
                     // nome da categoria alimentado via angularjs
                     span.titleCategory { margin-left: .75em; width: 85%; max-width: 405px}
                 }
-                a {
-                    margin: 0;
-                    padding: 0 ($meioGrid / 4);
-                    text-decoration: none;
-                    @include font(normal, 1em);
-                    display: inline-block;
-                    height: 100%;
-                }
-                // nivel 2 of the list
+
+                // definindo as sublistas
+                // NOTA: descontinuado a partir da versão 3
                 ul {
                     clear: both;
-                    // list of the all manual by category
                     li {
                         border: none;
                         margin: ($meioGrid / 4) 0;
@@ -325,8 +332,6 @@ body {
                         display: block;
                         line-height: 1em;
                         padding: 0;
-
-                        // name of manual
                         a {
                             @include font(normal, 1.1em);
                             @include corLink();
@@ -340,32 +345,28 @@ body {
             }
         }
 
-        // qdo não houver categorias
-        // Acabou virando o modelo principal
+        // regras que afetam o GUI da área do menu
+        // OBS: acabou virando o modelo principal
+        // NOTA: Adotado a partir da versão 3 quando não se tinha
+        // categoria entre os assuntos
         .noCategory {
             p { 
                 margin: 3px 0;
                 padding-left: $meioGrid / 2;
-                @include font(bold, 1.3em);
+                @include font(bold, 1.2em);
             }
             li {
                 a {
                     @include corLink();
                     @include font(normal, 1.15em);
-                    /* retirado para adaptar no box do Blackboard
-                    margin-left: $grid + 2; */
                     padding: 0;
                 }
-                &:last-child { margin-bottom: $meioGrid / 2 }
+                &:last-child { margin-bottom: $meioGrid / 4 }
             }
         }
-        hr {
-            clear: both;
-            margin: ($meioGrid / 2) 0;
-            border-top: 1px solid $corBorda;
-        }
 
-        // faq
+        hr { clear: both; margin: ($meioGrid / 2) 0; border-top: 1px solid $corBorda; }
+
         .faqBusca {
             margin-top: ($meioGrid / 2);
             display: block;
@@ -385,7 +386,6 @@ body {
             }
         }
 
-        // did not find what i wanted
         .outros {
             clear: both;
             padding: $meioGrid 0;
@@ -401,6 +401,7 @@ body {
     }
 
     // divise navigation and content [only mobile]
+    // NOTA: descontinuado a partir da versão 2
     .divisionMobile {
         height: 20px;
         display: block;
@@ -409,7 +410,7 @@ body {
         border-top: 1px solid $corBorda;
     }
 
-    // Header Content Main
+    // regras de estilo que afetam o header do manual. ex: breadbrumb, data de atualização
    .headerContent  {
         margin: 0;
         @include font(normal, 1.1em);
@@ -434,10 +435,9 @@ body {
         hr { margin: 0; }
     }
 
-    // Content Main
-    .mainContent .contentMain {
-        margin-top: $meioGrid + 10;
-    }
+    .mainContent .contentMain { margin-top: $meioGrid + 10; }
+
+    // regras que afetam o conteúdo do manual
     .contentMain {
         h1 {
             @include font(bold, 2em);
@@ -473,6 +473,7 @@ body {
             }
         }
     }
+
     .voltarSumario {
         display: block;
         padding-bottom: $meioGrid;
@@ -491,7 +492,7 @@ body {
         }
     }
     
-    // controla o alinhamento das img dos prints do manual
+    // controla o alinhamento das img dos manuais
     .imgLeft { margin-left: 0; }
     .imgRight { margin-right: 0; }
 
@@ -503,13 +504,12 @@ body {
         height: $meioGrid / 2;
     }
 
-    // content img and boxText
+    // regras dos estilos do box sobre as imagens
     .imageContainer {
         display: block;
         position: relative;
         margin: 20px 0 !important;
 
-        // highlighted box
         .boxDestaque {
             display: block;
             @include radius($meioGrid/5);
@@ -522,6 +522,7 @@ body {
                 margin: 0;
             }
         }
+
         .boxDestaqueAdicional {
             display: block;
             @include radius($meioGrid/5);
@@ -536,7 +537,6 @@ body {
                 a { @include corLinkUpBox($corSec01); }
             }
         }
-
     }
 
     // saiba mais
@@ -559,6 +559,7 @@ body {
             @include font(bold, 1.1em);
             line-height: 1.7em;
         }
+
         ul {
             margin: 0;
             padding: 0;
@@ -567,7 +568,7 @@ body {
                 display: block;
                 height: $grid;
                 margin: ($meioGrid / 4) 0;
-                background: url("../img/ui/icoSaibaMaisManuais.png") 5px center no-repeat;
+                // background: url("../img/ui/icoSaibaMaisManuais.png") 5px center no-repeat;
                 padding: 0;
                 @include radius();
 
@@ -582,25 +583,32 @@ body {
                         line-height: 1.4em;
                     }
                 }
+
             }
-            // inserindo icones nas listas dos manuais complementares
-            .default { background: url("../img/ui/icoSaibaMaisManuais.png") 5px center no-repeat; }
-            .arquivo { background: url("../img/ui/icoSaibaMaisArquivo.png") 5px center no-repeat; } // [Arquivo] (pode ser PDF, DOC, PPT etc.)
-            .video { background: url("../img/ui/icoSaibaMaisVideo.png") 5px center no-repeat; } // [Vídeo] (videoaula ou tutorial narrado)
-            .site { background: url("../img/ui/icoSaibaMaisSite.png") 5px center no-repeat; } // [Site] (link para portais ou páginas específicas)
-            .curso { background: url("../img/ui/icoSaibaMaisCurso.png") 5px center no-repeat; } // [Curso] (indicação de algum curso, workshop etc.)
-            .livro { background: url("../img/ui/icoSaibaMaisLivro.png") 5px center no-repeat; } // [Livro] (indicação de bibliografia)
-            .discussao { background: url("../img/ui/icoSaibaMaisDiscussao.png") 5px center no-repeat; } // [Discussão] (indicação de algum fórum ou lista de discussão, comunidade de prática etc.)
+
+            // inserindo icones nas listas dos manuais relacionados
+            .blackboard     { background: url("../img/ui/icoBlackboard2.png") 5px center no-repeat; }
+            .catme          { background: url("../img/ui/icoCatme2.png") 5px center no-repeat; }
+            .clickers       { background: url("../img/ui/icoClickers2.png") 5px center no-repeat; }
+            .casos          { background: url("../img/ui/icoCaso2.png") 5px center no-repeat; }
+            .simuladores    { background: url("../img/ui/icoSimulador2.png") 5px center no-repeat; }
+            .cursosOnline   { background: url("../img/ui/icoCurso2.png") 5px center no-repeat; }
+
+            // inserindo icones nas listas dos materiais complementares
+            .default    { background: url("../img/ui/icoSaibaMaisManuais.png") 5px center no-repeat; }
+            .arquivo    { background: url("../img/ui/icoSaibaMaisArquivo.png") 5px center no-repeat; } // [Arquivo] (pode ser PDF, DOC, PPT etc.)
+            .video      { background: url("../img/ui/icoSaibaMaisVideo.png") 5px center no-repeat; } // [Vídeo] (videoaula ou tutorial narrado)
+            .site       { background: url("../img/ui/icoSaibaMaisSite.png") 5px center no-repeat; } // [Site] (link para portais ou páginas específicas)
+            .curso      { background: url("../img/ui/icoSaibaMaisCurso.png") 5px center no-repeat; } // [Curso] (indicação de algum curso, workshop etc.)
+            .livro      { background: url("../img/ui/icoSaibaMaisLivro.png") 5px center no-repeat; } // [Livro] (indicação de bibliografia)
+            .discussao  { background: url("../img/ui/icoSaibaMaisDiscussao.png") 5px center no-repeat; } // [Discussão] (indicação de algum fórum ou lista de discussão, comunidade de prática etc.)
+
         }
     }
 
     // area de respiro após o wrapper
-    .respiro {
-        display: block;
-        height: 1px;
-        float: left;
-        width: 100%;
-    }
+    .respiro { display: block; height: 1px; float: left; width: 100%; }
+
 }
 
 // rwd convert in 100%
@@ -625,17 +633,17 @@ body {
     // ocultando o pop-up de alerta de pequena resolução
     .alert { display: none !important }
 
-    // wrapper
     .wrapper { margin: $grid auto; }
 
-    // contentMain
+    // regra para o container geral dos conteúdos.
+    // Aqui é inserida a linha divisória entre a área da busca e do conteúdo
     .containerMain {
         padding-top: 0;
         float: left;
         background: transparent url("../img/ui/borderDivision.png") 33.33% top repeat-y;
     }
 
-    // header
+    // redefinindo o header: logo + nome do projeto
     .wrapper > header { padding: $meioGrid 0; }
     .logo {
         margin: 0;
@@ -659,8 +667,8 @@ body {
         }
     }
 
-    // navigation
     .buscaMain { padding-top: $meioGrid; }
+    
     .inputSearch {
         input[type="text"],
         input [type="text"]:focus {
@@ -672,18 +680,14 @@ body {
             padding: 0 .5em;
             @include font(normal, 1.1em);
         }
-        p {
-            text-align: center;
-        }
-        .interat {
-            margin: 0 .5em 0 0;
-        }
+        p { text-align: center; }
+        .interat { margin: 0 .5em 0 0; }
     }
 
     .navigationMain {
         h5 {
-            padding: ($meioGrid - 12) 0 ($meioGrid - 12)  $grid ;
-            @include font(bold, 1.6em);
+            padding: ($meioGrid - 4) 0 ($meioGrid - 4)  $grid;
+            // @include font(bold, 1.6em);
         }
         hr { margin: ($meioGrid / 4) 0;}
         ol, ul {
@@ -692,39 +696,23 @@ body {
                 margin: ($meioGrid / 10) 0;
                 padding: 0 ($meioGrid / 2);
                 .containerCategory {
-                    span.titleCategory {
-                        max-width: 180px;
-                    }
+                    span.titleCategory { max-width: 180px; }
                 }
                 ul {
                     margin-bottom:  $meioGrid / 2;
                     li {
                         margin: ($meioGrid / 4) 0;
-                        &:last-child {
-                            margin-bottom: 0;
-                        }
+                        &:last-child { margin-bottom: 0; }
                         a { margin-bottom:  0; }
                     }
                 }
             }
-        }
 
-        .noCategory {
-            margin: 0;
-            li {
-                a {
-                    margin-left: $meioGrid / 2;
-                }
-            }
-            &:last-child {
-                margin-bottom: $meioGrid / 2;
-            }
         }
     }
 
     .divisionMobile { display: none; }
 
-    // content img and boxText
     .imageContainer {
         display: block;
         position: relative;
@@ -734,7 +722,6 @@ body {
         }
     }
 
-    // saibaMais
     .saibaMais {
         ul {
             li { margin-bottom: 0; }
@@ -750,16 +737,15 @@ body {
     // ocultando o pop-up de alerta de pequena resolução
     .alert { display: none !important }
 
-
-    // wrapper
     .wrapper { margin: $grid auto; }
 
+    // regra para o container geral dos conteúdos.
+    // Aqui é inserida a linha divisória entre a área da busca e do conteúdo
     .containerMain { 
         padding-top: 0;
         float: left;
         background: transparent url("../img/ui/borderDivision.png") 33.33% top repeat-y; }
 
-    // contentMain
     .contentMain {
         padding-top: 0;
         h1 {
@@ -773,12 +759,12 @@ body {
             @include font(bold, 1.4em);
         }
     }
+
     .mainContent { padding: 0 $meioGrid; }
 
-    // header
+    // redefinindo o header: logo + nome do projeto
     .wrapper > header { padding: $meioGrid 0; }
-    .logo {
-        margin: 0;
+    .logo { margin: 0;
         img { max-width: 100%; }
     }
     .titleHeader {
@@ -800,7 +786,6 @@ body {
         }
     }
 
-    // navigation
     .buscaMain { padding: $grid $meioGrid 0;}
 
     .inputSearch {
@@ -818,60 +803,41 @@ body {
             text-align: left;
             margin-bottom: $grid - 10;
         }
-        .interat {
-            margin: 0 .5em 0 ($meioGrid / 2);
-        }
+        .interat { margin: 0 .5em 0 ($meioGrid / 2); }
     }
 
-    .navigation  {
-        @include transition(all 0.4s ease);
-    }
+    .navigation { @include transition(all 0.4s ease); }
+    
     .navigationMain {
-        h5 {
-            @include font(bold, 1.6em);
-            padding-left: $grid +2;
-        }
-        hr { margin: ($meioGrid - 5) 0;}
+        h5 { @include font(bold, 1.4em); padding-left: $grid +2; }
+
+        hr { margin: ($meioGrid - 5) 0; }
+
         ol, ul {
 
             li {
                 .containerCategory {
-                    .titleCategory {
-                        width: 85%;
-                        max-width: 285px; }
+                    .titleCategory { width: 85%; max-width: 285px; }
                 }
-                ul {
-                    margin: ($meioGrid / 4) 0;
+                ul { margin: ($meioGrid / 4) 0;
                     li {
                         margin: 0 0 ($meioGrid / 2) 0;
-                        &:last-child {
-                            margin-bottom: 0;
-                        }
+                        &:last-child { margin-bottom: 0; }
                         a { padding-left: $grid + 2; }
                     }
                 }
             }
         }
-        .noCategory {
-            li {
-                a { margin-left: 0; }
-                &:last-child {
-                    margin-bottom: $meioGrid / 2;
-                }
-            }
-        }
-        .outros {
 
-        }
     }
     .faqBusca {
         h5 {
           a { margin-left: 2px !important; }
         }
     }
+
     .divisionMobile { display: none; }
 
-    // saibaMais
     .saibaMais {
         ul {
             li { margin-bottom: 0; }

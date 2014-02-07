@@ -1,20 +1,32 @@
-/////////////////////////////////////////////////////////////
-//  Here will be the position coordinates individual box
-//
-//  1] Nome of the category;
-//  2] Number of the box;
-//
-/////////////////////////////////////////////////////////////
+/* ===============================================================
+   
+    COORDENADAS DAS POSIÇÕES DOS BOXES SOBRE AS IMAGENS DO MANUAL
+    1- Nome of the category;
+    2- Number of the box;
+
+================================================================== */
 
 /* DESKTOP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @media only screen and (min-width: 960px) and (max-width: 1920px) {
     
-    /*  BLACKBOARD
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        // Materiais
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-        // 1- Carregar materiais no ambiente virtual
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    // ASSUNTO: BLACKBOARD
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    // CATEGORIA: Conhecendo o ambiente
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    
+    // O que é Blackboard
+
+    // Acessar pelo computador
+
+    // Acessar por dispositivos móveis
+
+
+    // CATEGORIA: Materiais
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    
+    // Carregar materiais no ambiente virtual
 
     // @include                         settingsBoxImagem(width, left, top, right, bottom)
     #BbMateriaisCarregarMateriais1 { @include settingsBoxImagem(40%, 35px, auto, auto, -70px) }
@@ -31,7 +43,11 @@
     #BbMateriaisCarregarMateriais12 { @include settingsBoxImagem(45%, auto, auto, 20px, -70px) }
     #BbMateriaisCarregarMateriais13 { @include settingsBoxImagem(35%, auto, auto, 20px, -20px) }
 
-    // 2- Compartilhar materiais com os alunos
+    // Compartilhar materiais com os alunos
+
+    // Alterar ou excluir um material compartilhado
+
+    // Aproveitar materiais de um curso para outro
 }
 
 
@@ -39,11 +55,23 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @media handheld, only screen and (min-width: 768px) and (max-width: 960px), only screen  and (min-device-width: 768px) and (max-device-width: 960px) and (orientation:portrait) {
 
-    /*  BLACKBOARD
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        // Materiais
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-        // 1- Carregar materiais no ambiente virtual
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    // ASSUNTO: BLACKBOARD
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    // CATEGORIA: Conhecendo o ambiente
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    // O que é Blackboard
+
+    // Acessar pelo computador
+
+    // Acessar por dispositivos móveis
+
+
+    // CATEGORIA: Materiais
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    
+    // Carregar materiais no ambiente virtual
 
 	// @include                        settingsBoxImagem(width, left, top, right, bottom)
 	#BbMateriaisCarregarMateriais1 { @include settingsBoxImagem(45%, 10px, auto, auto, -90px) }
@@ -60,6 +88,11 @@
     #BbMateriaisCarregarMateriais12 { @include settingsBoxImagem(45%, auto, auto, 20px, -70px) }
     #BbMateriaisCarregarMateriais13 { @include settingsBoxImagem(45%, auto, auto, 0px, -45px) }
 
+    // Compartilhar materiais com os alunos
+
+    // Alterar ou excluir um material compartilhado
+
+    // Aproveitar materiais de um curso para outro
 }
 
 

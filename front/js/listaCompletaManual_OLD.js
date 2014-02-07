@@ -1,21 +1,22 @@
+/* ===============================================================
+	
+	MATRIZ DA LISTA DOS MANUAIS
+
+   	Este documento é responsável por alimentar a lista
+   	de todos os manuais existentes.
+
+================================================================== */
+
 var manuaisBB = angular.module('manuaisBB', []);
 
 manuaisBB.controller('listaMenu', function ($scope) {
 
-	$scope.countLink = function() {
-		// exibir info somente após a digitação no campo
-		var display = $( "#display");
-		if( display.css( "display", "none" ) ) { display.css( "display", "block" ); }
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	// ASSUNTO: BLACKBOARD
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	// CATEGORIA: Conhecendo o ambiente
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-	}
-
-	$scope.lorem = [
-		{
-			'categoria'		: 	'Conhecendo o ambiente',
-		}
-	];
-	
-	// Blackboard: conhecer o ambiente
 	$scope.BbConhecerAmbiente = [
 	{
 		'manual'		: 	'O que é Blackboard',
@@ -31,7 +32,8 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	}
 	];
 
-	// Blackboard: Materiais
+	// CATEGORIA: Materiais
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 	$scope.BbMateriais = [
 	{
 		'manual'			: 	'Carregar materiais no ambiente virtual',
@@ -51,7 +53,8 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	}
 	];
 
-	// Blackboard: Comunicação e Interação
+	// CATEGORIA: Comunicação e Interação
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 	$scope.BbComunicacaoInteracao = [
 	{
 		'manual'			: 	'Enviar avisos aos alunos',
@@ -75,7 +78,8 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	}
 	];
 
-	// Blackboard: Trabalhos
+	// CATEGORIA: Trabalhos
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 	$scope.BbTrabalhos = [
 	{
 		'manual'			: 	'Receber trabalhos sem verificação de plágio',
@@ -91,7 +95,8 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	}
 	];
 
-	// Blackboard: Grupos
+	// CATEGORIA: Grupos
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 	$scope.BbGrupos = [
 	{
 		'manual'			: 	'Criar Grupos',
@@ -99,7 +104,8 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	}
 	];
 
-	// Blackboard: Testes e Pesquisas
+	// CATEGORIA: Testes e Pesquisas
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 	$scope.BbTestesPesquisas = [
 	{
 		'manual'			: 	'Criar ou alterar testes (com nota)',
@@ -119,7 +125,8 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	}
 	];
 
-	// Blackboard: Rubrics
+	// CATEGORIA: Rubrics
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 	$scope.BbRubrics = [
 	{
 		'manual'			: 	'Criar uma Rubric',
@@ -135,7 +142,8 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	}
 	];
 
-	// Blackboard: Avaliação
+	// CATEGORIA: Avaliação
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 	$scope.BbAvaliacao = [
 	{
 		'manual'			: 	'Configurar a Central de Notas',
@@ -179,7 +187,8 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	}
 	];
 
-	// Blackboard: calendário
+	// CATEGORIA: Calendário
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 	$scope.BbCalendario = [
 	{
 		'manual'			: 	'Criar e visualizar eventos',
@@ -191,7 +200,11 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	}
 	];
 
-	// Catme: sobre a ferramenta
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	// ASSUNTO: CATME
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	// CATEGORIA: sobre a ferramenta
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 	$scope.catmeSobreFerramenta = [
 	{
 		'manual'			: 	'O que é Catme',
@@ -207,7 +220,8 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	}
 	];
 
-	// Catme: Aplicar uma pesquisa de avaliação
+	// CATEGORIA: Aplicar uma pesquisa de avaliação
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 	$scope.catmeAplicarPesquisaAval = [
 	{
 		'manual'			: 	'Preparar listagem de alunos',
@@ -227,7 +241,8 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	}
 	];
 
-	// Catme: Analisar os resultados
+	// CATEGORIA: Analisar os resultados
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 	$scope.catmeAnalisarResultados = [
 	{
 		'manual'			: 	'Acessar resultados de uma avaliação existente',
@@ -239,7 +254,10 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	}
 	];
 
-	// Votadores eletrônicos: clickers
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	// ASSUNTO: VOTADORES ELETRÔNICOS: CLICKERS
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 	$scope.clickers = [
 	{
 		'manual'			: 	'Informações do software',
@@ -275,7 +293,10 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	}
 	];
 
-	// Casos
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	// ASSUNTO: CASOS
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	
 	$scope.casos = [
 	{
 		'manual'			: 	'Sobre os casos',
@@ -299,7 +320,9 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	}
 	];
 
-	// Simuladores
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	// ASSUNTO: SIMULADORES
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 	$scope.simuladores = [
 	{
 		'manual'			: 	'Conhecer simuladores',
@@ -315,7 +338,9 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	}
 	];
 
-	// Cursos online
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	// ASSUNTO: CURSOS ONLINE
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 	$scope.cursosOnline = [
 	{
 		'manual'			: 	'Acessar',
@@ -326,5 +351,19 @@ manuaisBB.controller('listaMenu', function ($scope) {
 		'linkManual'		: 	'/blackboard/sub2'
 	}
 	];
+
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+	/*
+        Função que informa abaixo no 'input' de busca um display
+        totalizando o número de manuais encontrados.
+        NOTA: Esta função foi desativada a partir da versão 5
+    */
+	$scope.countLink = function() {
+		var display = $( "#display");
+		if( display.css( "display", "none" ) ) { display.css( "display", "block" ); }
+	}
+
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 	
 });
