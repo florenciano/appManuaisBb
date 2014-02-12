@@ -87,9 +87,8 @@ $( document ).ready( function() {
     // aqui será realizado uma varredura para cada título existente da página
     // e seus respectivos conteúdos de textos serão inseridos na listagem do sumário
     todosTitulos.each(function(){
-        var ancora = this.firstChild;
         var tagA = $( "<a>" );
-            tagA.attr( "href","#" + ancora.name );
+            tagA.attr( "href","#" + this.id );
 
         var contentTagA = $(this).text();
         tagA.append( contentTagA );

@@ -12,12 +12,12 @@
 <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css">
 
 <!--[if IE]>
-    <link href="css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="../css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
 <![endif]-->
 
 <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <script>window.html5 || document.write('<script src="js/libs/html5shiv.js"><\/script>')</script>
+    <script>window.html5 || document.write('<script src="../js/libs/html5shiv.js"><\/script>')</script>
 <![endif]-->
 </head>
 <body>
@@ -28,39 +28,16 @@
             <form id="busca" action="">
                 <label for="pesquisa"></label>
                 <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Busca por título ou palavra-chave" ng-model="searchText"><br>
-                <!-- mostrar a quantidade de links encontrados 
-
-                     Adicionar ng-change="countLink()" no input.text
-
-                <span id="display" style="display:none">
-                <strong>{{
-                (BbConhecerAmbiente |filter:{manual: searchText}).length + 
-                (BbMateriais |filter:{manual: searchText}).length +
-                (BbComunicacaoInteracao |filter:{manual: searchText}).length + 
-                (BbTrabalhos |filter:{manual: searchText}).length +
-                (BbGrupos |filter:{manual: searchText}).length + 
-                (BbTestesPesquisas |filter:{manual: searchText}).length +
-                (BbRubrics |filter:{manual: searchText}).length + 
-                (BbAvaliacao |filter:{manual: searchText}).length +
-                (BbCalendario |filter:{manual: searchText}).length +
-                (catmeSobreFerramenta |filter:{manual: searchText}).length + 
-                (catmeAplicarPesquisaAval |filter:{manual: searchText}).length +
-                (catmeAnalisarResultados |filter:{manual: searchText}).length +
-                (clickers |filter:{manual: searchText}).length +
-                (casos |filter:{manual: searchText}).length + 
-                (simuladores |filter:{manual: searchText}).length +
-                (cursosOnline |filter:{manual: searchText}).length }}</strong>
-                item(ns) encontrado(s)</span> -->
             </form>
         </div>
 
         <nav role="navigation" class="navigationMain">
-            <h5 class="icoBlackboard"><a name="inicio"></a>Blackboard</h5>
+            <h5 class="icoBlackboard">Blackboard</h5>
             <ol class="noCategory">
                 <div ng-repeat="item in BbConhecerAmbiente | filter: {manual:searchText}">
                     <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                     <li class="sublist" ng-show="item.manual.length > 1">
-                        <a href="{{item.linkManual}}">{{item.manual}}</a>
+                        <a href="{{item.linkManual}}" target="_blank">{{item.manual}}</a>
                     </li>    
                 </div>
             </ol>
@@ -68,7 +45,7 @@
                 <div ng-repeat="item in BbMateriais | filter: {manual:searchText}">
                     <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                     <li class="sublist" ng-show="item.manual.length > 1">
-                        <a href="{{item.linkManual}}">{{item.manual}}</a>
+                        <a href="{{item.linkManual}}" target="_blank">{{item.manual}}</a>
                     </li>
                 </div>
             </ol>
@@ -76,7 +53,7 @@
                 <div ng-repeat="item in BbComunicacaoInteracao | filter: {manual:searchText}">
                     <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                     <li class="sublist" ng-show="item.manual.length > 1">
-                        <a href="{{item.linkManual}}">{{item.manual}}</a>
+                        <a href="{{item.linkManual}}" target="_blank">{{item.manual}}</a>
                     </li>
                 </div>
             </ol>
@@ -84,7 +61,7 @@
                 <div ng-repeat="item in BbTrabalhos | filter: {manual:searchText}">
                     <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                     <li class="sublist" ng-show="item.manual.length > 1">
-                        <a href="{{item.linkManual}}">{{item.manual}}</a>
+                        <a href="{{item.linkManual}}" target="_blank">{{item.manual}}</a>
                     </li>
                 </div>
             </ol>
@@ -92,7 +69,7 @@
                 <div ng-repeat="item in BbGrupos | filter: {manual:searchText}">
                     <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                     <li class="sublist" ng-show="item.manual.length > 1">
-                        <a href="{{item.linkManual}}">{{item.manual}}</a>
+                        <a href="{{item.linkManual}}" target="_blank">{{item.manual}}</a>
                     </li>
                 </div>
             </ol>
@@ -100,7 +77,7 @@
                 <div ng-repeat="item in BbTestesPesquisas | filter: {manual:searchText}">
                     <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                     <li class="sublist" ng-show="item.manual.length > 1">
-                        <a href="{{item.linkManual}}">{{item.manual}}</a>
+                        <a href="{{item.linkManual}}" target="_blank">{{item.manual}}</a>
                     </li>
                 </div>
             </ol>
@@ -108,7 +85,7 @@
                 <div ng-repeat="item in BbRubrics | filter: {manual:searchText}">
                     <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                     <li class="sublist" ng-show="item.manual.length > 1">
-                        <a href="{{item.linkManual}}">{{item.manual}}</a>
+                        <a href="{{item.linkManual}}" target="_blank">{{item.manual}}</a>
                     </li>
                 </div>
             </ol>
@@ -116,7 +93,7 @@
                 <div ng-repeat="item in BbAvaliacao | filter: {manual:searchText}">
                     <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                     <li class="sublist" ng-show="item.manual.length > 1">
-                        <a href="{{item.linkManual}}">{{item.manual}}</a>
+                        <a href="{{item.linkManual}}" target="_blank">{{item.manual}}</a>
                     </li>
                 </div>
             </ol>
@@ -124,7 +101,7 @@
                 <div ng-repeat="item in BbCalendario | filter: {manual:searchText}">
                     <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                     <li class="sublist" ng-show="item.manual.length > 1">
-                        <a href="{{item.linkManual}}">{{item.manual}}</a>
+                        <a href="{{item.linkManual}}" target="_blank">{{item.manual}}</a>
                     </li>
                 </div>
             </ol>
@@ -134,7 +111,7 @@
                 <div ng-repeat="item in catmeSobreFerramenta | filter: {manual:searchText}">
                     <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                     <li class="sublist" ng-show="item.manual.length > 1">
-                        <a href="{{item.linkManual}}">{{item.manual}}</a>
+                        <a href="{{item.linkManual}}" target="_blank">{{item.manual}}</a>
                     </li>
                 </div>
             </ol>
@@ -142,7 +119,7 @@
                 <div ng-repeat="item in catmeAplicarPesquisaAval | filter: {manual:searchText}">
                     <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                     <li class="sublist" ng-show="item.manual.length > 1">
-                        <a href="{{item.linkManual}}">{{item.manual}}</a>
+                        <a href="{{item.linkManual}}" target="_blank">{{item.manual}}</a>
                     </li>
                 </div>
             </ol>
@@ -150,7 +127,7 @@
                 <div ng-repeat="item in catmeAnalisarResultados | filter: {manual:searchText}">
                     <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                     <li class="sublist" ng-show="item.manual.length > 1">
-                        <a href="{{item.linkManual}}">{{item.manual}}</a>
+                        <a href="{{item.linkManual}}" target="_blank">{{item.manual}}</a>
                     </li>
                 </div>
             </ol>
@@ -160,7 +137,7 @@
                 <div ng-repeat="item in clickers | filter: {manual:searchText}">
                     <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                     <li class="sublist" ng-show="item.manual.length > 1">
-                        <a href="{{item.linkManual}}">{{item.manual}}</a>
+                        <a href="{{item.linkManual}}" target="_blank">{{item.manual}}</a>
                     </li>
                 </div>
             </ol>
@@ -170,7 +147,7 @@
                 <div ng-repeat="item in casos | filter: {manual:searchText}">
                     <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                     <li class="sublist" ng-show="item.manual.length > 1">
-                        <a href="{{item.linkManual}}">{{item.manual}}</a>
+                        <a href="{{item.linkManual}}" target="_blank">{{item.manual}}</a>
                     </li>
                 </div>
             </ol>
@@ -180,7 +157,7 @@
                 <div ng-repeat="item in simuladores | filter: {manual:searchText}">
                     <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                     <li class="sublist" ng-show="item.manual.length > 1">
-                        <a href="{{item.linkManual}}">{{item.manual}}</a>
+                        <a href="{{item.linkManual}}" target="_blank">{{item.manual}}</a>
                     </li>
                 </div>
             </ol>
@@ -190,19 +167,19 @@
                 <div ng-repeat="item in cursosOnline | filter: {manual:searchText}">
                     <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                     <li class="sublist" ng-show="item.manual.length > 1">
-                        <a href="{{item.linkManual}}">{{item.manual}}</a>
+                        <a href="{{item.linkManual}}" target="_blank">{{item.manual}}</a>
                     </li>
                 </div>
             </ol>
 
             <div class="faqBusca icoFaq">
                 <h5>
-                    <a href="#" >FAQ</a>
+                    <a href="../faq/index.html" target="_blank">FAQ</a>
                 </h5>
             </div>
             <div class="outros">
                 <h6>
-                    <a href="#titleManual">Não encontrou o que queria?</a>
+                    <a href="../nao-encontrou-o-que-queria/index.html" target="_blank">Não encontrou o que queria?</a>
                 </h6>
             </div>
         </nav>

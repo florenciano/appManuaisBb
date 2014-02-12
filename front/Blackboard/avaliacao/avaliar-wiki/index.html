@@ -84,7 +84,7 @@
 
                         <ol class="noCategory" ng-repeat="item in BbMateriais | filter: {manual:searchText}">
                             <li class="nameCategory">
-                                <p class="selectedCategory" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
                             <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
@@ -139,7 +139,7 @@
 
                         <ol class="noCategory" ng-repeat="item in BbAvaliacao | filter: {manual:searchText}">
                             <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                <p class="selectedCategory" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
                             <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
@@ -251,7 +251,7 @@
                             <p>
                                 <span class="nameCategory">Blackboard </span>
                                 <span>&#62; </span>
-                                Carregar materiais no ambiente virtual 
+                                Avaliar wiki
                             </p>
                         </div>
                     </section>
@@ -262,17 +262,16 @@
                     1- Texto do título h1 é o mesmo do 'p' da div.breadcrumb;
                     2- div.sumario aparece logo depois da introdução do texto 'quando houver' e serve para listar todos os subtítulos da página definidos pela tag 'h2';
                     3- toda tag 'h2' receberá esta sintaxe:
-                    '<h2><a name="Titulo1" class="ancora"></a>Texto aqui</h2>'
+                    '<h2 id="subTituloX">Texto aqui</h2>'
                     É necessário adicionar um número identificador na âncora;
 
                      -->
 
                     <article class="contentMain row">
                         <h1>
-                            Carregar materiais no ambiente virtual
+                            Avaliar wiki
                         </h1>
                         <p>Para compartilhar materiais nas disciplinas é importante ter em mente quais arquivos são específicos da disciplina e não se repetirão em disciplinas futuras (plano de aula, por exemplo) e quais arquivos podem ser reutilizados em diferentes turmas/disciplinas, como estudos de caso, artigos etc.</p>
-                        <p>O primeiro passo é carregar esses arquivos “menos voláteis” na <strong>Coleção de conteúdos</strong>, uma espécie de <em>pendrive virtual</em> em que o professor pode alocar todo seu material. Uma vez carregados neste local, os arquivos podem ser referenciados em diferentes ambientes, evitando que tenham de ser recarregados a cada nova turma</p>
 
                         <div class="margemParaImagem" style="margin-top:20px"></div>
 
@@ -311,109 +310,6 @@
 
                         <div class="margemParaImagem" style="margin-top:110px"></div>
 
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/materiais/carregar-materiais-no-ambiente-virtual/step2.png" alt="" class="imgLeft">
-                            <div class="boxDestaque" id="BbMateriaisCarregarMateriais3">
-                                <p>Os arquivos podem ser inseridos na <strong>Coleção de conteúdos</strong> de duas maneiras. Em <strong>Carregar arquivos</strong> é possível selecionar um ou mais arquivos de uma só vez. Em <strong>Carregar pacote</strong> o arquivo .zip ou .rar é descompactado automaticamente ao ser inserido.</p>
-                            </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:50px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/materiais/carregar-materiais-no-ambiente-virtual/step3.png" alt="" class="imgLeft">
-                            <div class="boxDestaque" id="BbMateriaisCarregarMateriais4">
-                                <p>Após clicar em <strong>Carregar arquivos</strong>, escolha a opção <strong>Múltiplos arquivos</strong>  no canto superior direito.</p>
-                                <p><img src="../../../img/Blackboard/materiais/carregar-materiais-no-ambiente-virtual/step4.png" alt="" style="margin-top:10px"></p>
-                            </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:80px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/materiais/carregar-materiais-no-ambiente-virtual/step5.png" alt="" class="imgLeft">
-                            <div class="boxDestaque" id="BbMateriaisCarregarMateriais5">
-                                <p>Utilize o botão <strong>Procurar</strong> para localizar os arquivos e/ou pastas em seu computador ou dispositivo móvel ou, se preferir, arraste os arquivos ou pastas diretamente para a lista</p>
-                            </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:30px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/materiais/carregar-materiais-no-ambiente-virtual/step6.png" alt="" class="imgLeft">
-                            <div class="boxDestaqueAdicional" id="BbMateriaisCarregarMateriais6">
-                                <p>Se desejar remover um arquivo da lista, clique no ícone do item correspondente.</p>
-                                <p style="margin-top:10px">Ao terminar, clique em <strong>Enviar</strong>.</p>
-                            </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:30px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/materiais/carregar-materiais-no-ambiente-virtual/step7.png" alt="" class="imgLeft">
-                            <div class="boxDestaque" id="BbMateriaisCarregarMateriais7">
-                                <p>Também é possível selecionar um único arquivo compactado.</p>
-                            </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:30px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/materiais/carregar-materiais-no-ambiente-virtual/step8.png" alt="" class="imgLeft">
-                            <div class="boxDestaque" id="BbMateriaisCarregarMateriais8">
-                                <p>Selecione o arquivo em <strong>Escolher arquivo</strong> e confirme clicando em <strong>Enviar</strong>.</p>
-                            </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:60px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/materiais/carregar-materiais-no-ambiente-virtual/step9.png" alt="" class="imgLeft">
-                            <div class="boxDestaque" id="BbMateriaisCarregarMateriais9">
-                                <p>O arquivo será automaticamente descompactado dentro da <strong>Coleção de contéudos</strong>.</p>
-                            </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
-
-                        <p>Se houver necessidade de substituir um arquivo inserido na <strong>Coleção de conteúdos</strong> você pode fazer a troca sem que isso interfira nos materiais que já foram compartilhados nos ambientes virtuais das disciplinas.</p>
-
-                        <div class="margemParaImagem" style="margin-top:20px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/materiais/carregar-materiais-no-ambiente-virtual/step10.png" alt="">
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:10px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/materiais/carregar-materiais-no-ambiente-virtual/step11.png" alt="" class="imgRight">
-                            <div class="boxDestaque" id="BbMateriaisCarregarMateriais11">
-                                <p>Ao substituir o arquivo, todas as disciplinas que utilizam o arquivo serão automaticamente atualizadas.</p>
-                            </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
-
-                        <p>No ambiente da disciplina, quando for inserir um material que está na <strong>Coleção de conteúdos</strong>, escolha a opção <strong>Procurar Coleção de conteúdo</strong>. Para buscar arquivos que estão salvos no seu computador, rede ou pendrive, escolha <strong>Procurar Meu computador</strong>. Neste caso, o arquivo ficará vinculado à disciplina.</p>
-
-                        <div class="margemParaImagem" style="margin-top:20px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/materiais/carregar-materiais-no-ambiente-virtual/step12.png" alt="">
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:30px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/materiais/carregar-materiais-no-ambiente-virtual/step13.png" alt="">
-                            <div class="boxDestaque" id="BbMateriaisCarregarMateriais13">
-                                <p>Localize o arquivo nos <strong>Meus Conteúdos</strong>, marque-o na lista e clique em <strong>Enviar</strong>.</p>
-                            </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:60px"></div>
-
                         <!-- 
                         
                         ÂNCORAS [VOLTAR AO SUMÁRIO]
@@ -425,9 +321,11 @@
 
                     </article>
 
+                    <!-- Devido aos poucos itens do 'Saiba Mais'
                     <div id="ancoraSaibaMais" class="voltarSumario fix">
                         <a href="#pesquisa">Início</a>
                     </div>
+                    -->
                     
                     <!-- inicio do box Saiba mais -->
                     <section class="saibaMais row fix">
@@ -436,14 +334,14 @@
                         <h4 id="relacionado">Manuais relacionados</h4>
                         <ul  ng-controller="manuaisRelacionados">
                             <!-- class="default"  -->
-                            <li ng-repeat="item in Carregar_materiais_no_ambiente_virtual" class="ng-class: item.tipoIcone">
+                            <li ng-repeat="item in Avaliar_wiki" class="ng-class: item.tipoIcone">
                                 <div><a href="{{item.Link}}">{{item.manual}}</a></div>
                             </li>
                         </ul>
                         
                         <h4 id="complementar">Materiais complementares</h4>
                         <ul ng-controller="materiaisComplementares">
-                            <li ng-repeat="item in Carregar_materiais_no_ambiente_virtual " class="ng-class: item.tipoIcone">
+                            <li ng-repeat="item in Avaliar_wiki" class="ng-class: item.tipoIcone">
                                 <div><a href="{{item.Link}}" target="_blank">{{item.manual}}</a></div>
                             </li>
                         </ul>

@@ -32,15 +32,15 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	/////////////////////////////////////////////////////////////////
 	{
 		'manual'		: 	'O que é Blackboard',
-		'linkManual'	: 	'/href/sub1'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/conhecendo-o-ambiente/o-que-e-blackboard/'
 	},
 	{
 		'manual'		: 	'Acessar pelo computador',
-		'linkManual'	: 	'/href/sub2'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/conhecendo-o-ambiente/acessar-pelo-computador/'
 	},
 	{
 		'manual'		: 	'Acessar por dispositivos móveis',
-		'linkManual'	: 	'/href/sub3'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/conhecendo-o-ambiente/acessar-por-dispositivos-moveis/'
 	}
 	];
 
@@ -55,19 +55,19 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	/////////////////////////////////////////////////////////////////
 	{
 		'manual'			: 	'Carregar materiais no ambiente virtual',
-		'linkManual'		: 	'#'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/materiais/carregar-materiais-no-ambiente-virtual/'
 	},
 	{
 		'manual'			: 	'Compartilhar materiais com os alunos',
-		'linkManual'		: 	'/blackboard/sub2'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/materiais/compartilhar-materiais-com-os-alunos/'
 	},
 	{
 		'manual'			: 	'Alterar ou excluir um material compartilhado',
-		'linkManual'		: 	'/blackboard/sub3'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/materiais/alterar-ou-excluir-um-material-compartilhado/'
 	},
 	{
 		'manual'			: 	'Aproveitar materiais de um curso para outro',
-		'linkManual'		: 	'/blackboard/sub3'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/materiais/aproveitar-materiais-de-um-curso-para-outro/'
 	}
 	];
 
@@ -83,23 +83,27 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	/////////////////////////////////////////////////////////////////
 	{
 		'manual'			: 	'Enviar avisos aos alunos',
-		'linkManual'		: 	'/blackboard/sub1'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/comunicacao-e-interacao/enviar-avisos-aos-alunos/'
 	},
 	{
 		'manual'			: 	'Enviar e-mail pelo ambiente',
-		'linkManual'		: 	'/blackboard/sub2'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/comunicacao-e-interacao/enviar-email-pelo-ambiente/'
 	},
 	{
 		'manual'			: 	'Criar fórum de discussão',
-		'linkManual'		: 	'/blackboard/sub3'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/comunicacao-e-interacao/criar-um-forum-de-discussao/'
 	},
 	{
 		'manual'			: 	'Criar blog',
-		'linkManual'		: 	'/blackboard/sub3'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/comunicacao-e-interacao/criar-um-blog/'
+	},
+	{
+		'manual'			: 	'Criar diário',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/comunicacao-e-interacao/criar-diario/'
 	},
 	{
 		'manual'			: 	'Criar wiki',
-		'linkManual'		: 	'/blackboard/sub4'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/comunicacao-e-interacao/criar-wiki/'
 	}
 	];
 
@@ -114,15 +118,15 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	/////////////////////////////////////////////////////////////////
 	{
 		'manual'			: 	'Receber trabalhos sem verificação de plágio (Exercício)',
-		'linkManual'		: 	'/blackboard/sub1'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/trabalhos/receber-trabalhos-sem-verificacao-de-plagio/'
 	},
 	{
 		'manual'			: 	'Receber trabalhos com verificação de plágio (SafeAssignment)',
-		'linkManual'		: 	'/blackboard/sub2'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/trabalhos/receber-trabalhos-com-verificacao-de-plagio/'
 	},
 	{
 		'manual'			: 	'Submeter arquivos para verificação de plágio ou criar base de comparação (SafeAssign)',
-		'linkManual'		: 	'/blackboard/sub3'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/trabalhos/submeter-arquivos-para-verificacao-de-plagio-ou-criar-base-de-comparacao/'
 	}
 	];
 
@@ -137,7 +141,7 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	/////////////////////////////////////////////////////////////////
 	{
 		'manual'			: 	'Criar Grupos',
-		'linkManual'		: 	'/blackboard/sub1'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/grupos/criar-grupos/'
 	}
 	];
 
@@ -152,19 +156,19 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	/////////////////////////////////////////////////////////////////
 	{
 		'manual'			: 	'Criar ou alterar testes (com nota)',
-		'linkManual'		: 	'/blackboard/sub1'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/criar-ou-alterar-testes-com-nota/'
 	},
 	{
 		'manual'			: 	'Criar ou alterar pesquisas (sem nota)',
-		'linkManual'		: 	'/blackboard/sub2'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/criar-ou-alterar-testes-sem-nota/'
 	},
 	{
 		'manual'			: 	'Conhecer os tipos de pergunta dos testes e pesquisas',
-		'linkManual'		: 	'/blackboard/sub3'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/conhecer-os-tipos-de-pergunta-dos-testes-e-pesquisas/'
 	},
 	{
 		'manual'			: 	'Importar testes e pesquisas do Word',
-		'linkManual'		: 	'/blackboard/sub3'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/importar-testes-e-pesquisas-do-word/'
 	}
 	];
 
@@ -179,15 +183,15 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	/////////////////////////////////////////////////////////////////
 	{
 		'manual'			: 	'Criar Rubric',
-		'linkManual'		: 	'/blackboard/sub1'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/rubrics/criar-uma-rubric/'
 	},
 	{
 		'manual'			: 	'Associar Rubric a atividades',
-		'linkManual'		: 	'/blackboard/sub2'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/rubrics/associar-rubric-a-atividades/'
 	},
 	{
 		'manual'			: 	'Associar Rubric a colunas na Central de Notas',
-		'linkManual'		: 	'/blackboard/sub3'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/rubrics/associar-rubric-a-colunas-na-central-de-notas/'
 	}
 	];
 
@@ -202,47 +206,47 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	/////////////////////////////////////////////////////////////////
 	{
 		'manual'			: 	'Configurar a Central de Notas',
-		'linkManual'		: 	'/blackboard/sub1'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/configurar-a-central-de-notas/'
 	},
 	{
 		'manual'			: 	'Dar nota a atividades feitas fora do ambiente',
-		'linkManual'		: 	'/blackboard/sub2'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/dar-nota-a-atividades-feitas-fora-do-ambiente/'
 	},
 	{
 		'manual'			: 	'Calcular a média do aluno',
-		'linkManual'		: 	'/blackboard/sub3'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/calcular-a-media-do-aluno/'
 	},
 	{
 		'manual'			: 	'Corrigir trabalhos sem verificação de plágio (Exercício)',
-		'linkManual'		: 	'/blackboard/sub1'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/corrigir-trabalhos-sem-verificacao-de-plagio/'
 	},
 	{
 		'manual'			: 	'Corrigir trabalhos com verificação de plágio (SafeAssignment)',
-		'linkManual'		: 	'/blackboard/sub2'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/corrigir-trabalhos-com-verificacao-de-plagio/'
 	},
 	{
 		'manual'			: 	'Avaliar fórum de discussão',
-		'linkManual'		: 	'/blackboard/sub345'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/avaliar-forum-de-discussao/'
 	},
 	{
 		'manual'			: 	'Avaliar blog',
-		'linkManual'		: 	'/blackboard/sub256'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/avaliar-blog/'
 	},
 	{
 		'manual'			: 	'Avaliar diário',
-		'linkManual'		: 	'/blackboard/sub770'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/avaliar-diario/'
 	},
 	{
 		'manual'			: 	'Avaliar wiki',
-		'linkManual'		: 	'/blackboard/sub3345'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/avaliar-wiki/'
 	},
 	{
 		'manual'			: 	'Corrigir com Rubric',
-		'linkManual'		: 	'/blackboard/sub3'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/corrigir-com-rubric/'
 	},
 	{
 		'manual'			: 	'Exportar as notas para o sistema acadêmico',
-		'linkManual'		: 	'/blackboard/sub3'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/exportar-as-notas-para-o-sistema-academico/'
 	}
 	];
 
@@ -257,11 +261,11 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	/////////////////////////////////////////////////////////////////
 	{
 		'manual'			: 	'Criar e visualizar eventos',
-		'linkManual'		: 	'/blackboard/sub1'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/calendario/criar-e-visualizar-eventos/'
 	},
 	{
 		'manual'			: 	'Sincronizar com e-mail pessoal',
-		'linkManual'		: 	'/blackboard/sub2'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/calendario/sincronizar-com-email-pessoal/'
 	}
 	];
 

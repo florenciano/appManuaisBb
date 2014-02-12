@@ -17,13 +17,13 @@ $font: "Tahoma", "arial", "sans-serif";
 }
 
 // colors
-$corDefault: #cf1432;
-$corTitle: #3c3c3c;
-$corTexto: #4b4b4b;
-$corDefaultDark: #7b0012;
-$corBorda: #c8c8c8;
-$corSec01: #f57d8c;
-$corSec02: #e64b64;
+$corDefault: #cf1432; // red insper
+$corTitle: #3c3c3c; // title h1 html
+$corTexto: #4b4b4b; // default text content
+$corDefaultDark: #7b0012; // red dark GUI
+$corBorda: #c8c8c8; // gray default
+$corSec01: #f57d8c; // secundary GUI
+$corSec02: #e64b64; // secundary2 GUI
 
 @mixin corLink() {
     text-decoration: none;
@@ -124,6 +124,10 @@ body {
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* Media query MOBILE
+
+// As regras que afetarão todas as medias queries ficam declaradas
+// aqui. O projeto foi desenvolvido sob o conceito 'mobile first'.
+// Mesmo após ser abdicado a aplicação para mobiles.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @media only screen and (min-width:160px) {
     
@@ -363,6 +367,7 @@ body {
                 }
                 &:last-child { margin-bottom: $meioGrid / 4 }
             }
+            .nameCategory { padding: 0; margin: 0}
         }
 
         hr { clear: both; margin: ($meioGrid / 2) 0; border-top: 1px solid $corBorda; }
@@ -453,6 +458,52 @@ body {
             line-height: 1.6em;
             a { @include corLink(); }
         }
+
+        /////////////////////////////////////////////////////////////
+        // Aqui ficarão declaradas as novas regras conforme
+        // for produzido o material. Ex: listas, tabelas, videos etc
+        /////////////////////////////////////////////////////////////
+
+        //regras gerais para section e li
+        section { @include font(normal, 1.2em);
+            a { @include corLink(); }
+        }
+        li { 
+            list-style-type: square;
+            margin: ($meioGrid / 4) 0;
+         }
+         li:first-child { margin-top: 0}
+        
+        // O que é blackboard: quais instituições
+        .containerSec { 
+            width: 80%;
+            margin: 0 auto;
+            display: block;
+            border: 1px solid $corBorda;
+            @include radius();
+            p {
+                @include font(bold, 1.2em);
+                margin: ($meioGrid / 2) ($meioGrid / 2) ($meioGrid / 2) $grid;
+            }
+        }
+        
+        // O que é blackboard: principais funções
+        .funcBlackboard {
+            h4 {
+                background-color: $corTexto;
+                color: #fff;
+                text-align: center;
+                padding: 1em 0;
+                margin: 0;
+                display: block;
+            }
+            ul{
+                margin: 0;
+                padding: ($meioGrid / 2) 0 ($meioGrid / 2) ($grid - 10px);
+                border: 1px solid $corBorda;
+            }
+        }
+
     }
 
     // sumario: content dinamic
@@ -712,6 +763,23 @@ body {
     }
 
     .divisionMobile { display: none; }
+
+    /////////////////////////////////////////////////////////////
+    // Aqui ficarão declaradas as novas regras conforme
+    // for produzido o material. Ex: listas, tabelas, videos etc
+    /////////////////////////////////////////////////////////////
+    
+    .contentMain .funcBlackboard h4 { @include font(normal, 11px) }
+    .contentMain .funcBlackboard ul { 
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li {
+            list-style-type: none;
+            margin: ($meioGrid / 4) 0;
+            text-align: center
+        }
+    }
 
     .imageContainer {
         display: block;

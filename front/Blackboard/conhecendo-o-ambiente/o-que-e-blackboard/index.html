@@ -75,7 +75,7 @@
 
                         <ol class="noCategory" ng-repeat="item in BbConhecerAmbiente | filter: {manual:searchText}">
                             <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                <p class="selectedCategory" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
                             <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
@@ -84,7 +84,7 @@
 
                         <ol class="noCategory" ng-repeat="item in BbMateriais | filter: {manual:searchText}">
                             <li class="nameCategory">
-                                <p class="selectedCategory" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
                             <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
@@ -243,7 +243,7 @@
                         <div class="cabecalho fix">
                             <p>
                                 <!-- adicionar a data da produção do material -->
-                                <span><strong>Atualizado: </strong>10/02/2014</span>
+                                <span><strong>Atualizado: </strong>12/02/2014</span>
                             </p>
                         </div>
                         <hr>
@@ -251,7 +251,7 @@
                             <p>
                                 <span class="nameCategory">Blackboard </span>
                                 <span>&#62; </span>
-                                Carregar materiais no ambiente virtual 
+                                O que é Blackboard 
                             </p>
                         </div>
                     </section>
@@ -262,17 +262,17 @@
                     1- Texto do título h1 é o mesmo do 'p' da div.breadcrumb;
                     2- div.sumario aparece logo depois da introdução do texto 'quando houver' e serve para listar todos os subtítulos da página definidos pela tag 'h2';
                     3- toda tag 'h2' receberá esta sintaxe:
-                    '<h2><a name="Titulo1" class="ancora"></a>Texto aqui</h2>'
-                    É necessário adicionar um número identificador na âncora;
+                    '<h2 id="subTituloX">Texto aqui</h2>'
+                    É necessário adicionar um número identificador;
 
                      -->
 
                     <article class="contentMain row">
                         <h1>
-                            Carregar materiais no ambiente virtual
+                            O que é Blackboard
                         </h1>
-                        <p>Para compartilhar materiais nas disciplinas é importante ter em mente quais arquivos são específicos da disciplina e não se repetirão em disciplinas futuras (plano de aula, por exemplo) e quais arquivos podem ser reutilizados em diferentes turmas/disciplinas, como estudos de caso, artigos etc.</p>
-                        <p>O primeiro passo é carregar esses arquivos “menos voláteis” na <strong>Coleção de conteúdos</strong>, uma espécie de <em>pendrive virtual</em> em que o professor pode alocar todo seu material. Uma vez carregados neste local, os arquivos podem ser referenciados em diferentes ambientes, evitando que tenham de ser recarregados a cada nova turma</p>
+                        <p><strong>Blackboard</strong> é um ambiente virtual de aprendizagem em que os alunos têm acesso às notas, testes de proficiência, cursos <em>online</em> e materiais compartilhados pelos professores nas disciplinas presenciais.</p>
+                        <p>O ambiente é mundialmente reconhecido por sua facilidade de uso e múltiplas funcionalidades, sendo utilizado nas seguintes instituições:</p>
 
                         <div class="margemParaImagem" style="margin-top:20px"></div>
 
@@ -299,121 +299,80 @@
 
                         -->
 
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/materiais/carregar-materiais-no-ambiente-virtual/step1.png" alt="" class="">
-                            <div class="boxDestaque" id="BbMateriaisCarregarMateriais1">
-                                <p>Carregue os materiais pasta <strong>Meus Conteúdos</strong>. Essa pasta é individual e não tem vínculo com qualquer disciplina.</p>
+                        <section class="row fix instBlackboard">
+                            <div class="c6">
+                                <div class="containerSec">
+                                    <p>Exterior</p>
+                                    <ul>
+                                        <li>Stanford University</li>
+                                        <li>Princeton University</li>
+                                        <li>Tulane University</li>
+                                        <li>Tecnológico de Monterrey</li>
+                                        <li>University of Manchester</li>
+                                        <li>Texas Tech University</li>
+                                        <li>Arizona State University</li>
+                                        <li>Seneca (Canada)</li>
+                                        <li>California State University</li>
+                                        <li>Sena</li>
+                                    </ul>
+                                </div>  
                             </div>
-                            <div class="boxDestaqueAdicional" id="BbMateriaisCarregarMateriais2">
-                                <p>Para facilitar a organização dos arquivos, separe-os em pastas e subpastas. Um exemplo é dividir os materiais em categorias: exercícios, casos, apresentações de slides etc.</p>
+                            <div class="c6">
+                                <div class="containerSec">
+                                    <p>Brasil</p>
+                                    <ul>
+                                        <li>Anhembi Morumbi</li>
+                                        <li>ESPM</li>
+                                        <li>FAAP</li>
+                                        <li>FGV</li>
+                                        <li>Fundação Dom Cabral</li>
+                                        <li>IESB</li>
+                                        <li>Senac São Paulo</li>
+                                    </ul>    
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:110px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/materiais/carregar-materiais-no-ambiente-virtual/step2.png" alt="" class="imgLeft">
-                            <div class="boxDestaque" id="BbMateriaisCarregarMateriais3">
-                                <p>Os arquivos podem ser inseridos na <strong>Coleção de conteúdos</strong> de duas maneiras. Em <strong>Carregar arquivos</strong> é possível selecionar um ou mais arquivos de uma só vez. Em <strong>Carregar pacote</strong> o arquivo .zip ou .rar é descompactado automaticamente ao ser inserido.</p>
-                            </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:50px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/materiais/carregar-materiais-no-ambiente-virtual/step3.png" alt="" class="imgLeft">
-                            <div class="boxDestaque" id="BbMateriaisCarregarMateriais4">
-                                <p>Após clicar em <strong>Carregar arquivos</strong>, escolha a opção <strong>Múltiplos arquivos</strong>  no canto superior direito.</p>
-                                <p><img src="../../../img/Blackboard/materiais/carregar-materiais-no-ambiente-virtual/step4.png" alt="" style="margin-top:10px"></p>
-                            </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:80px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/materiais/carregar-materiais-no-ambiente-virtual/step5.png" alt="" class="imgLeft">
-                            <div class="boxDestaque" id="BbMateriaisCarregarMateriais5">
-                                <p>Utilize o botão <strong>Procurar</strong> para localizar os arquivos e/ou pastas em seu computador ou dispositivo móvel ou, se preferir, arraste os arquivos ou pastas diretamente para a lista</p>
-                            </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:30px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/materiais/carregar-materiais-no-ambiente-virtual/step6.png" alt="" class="imgLeft">
-                            <div class="boxDestaqueAdicional" id="BbMateriaisCarregarMateriais6">
-                                <p>Se desejar remover um arquivo da lista, clique no ícone do item correspondente.</p>
-                                <p style="margin-top:10px">Ao terminar, clique em <strong>Enviar</strong>.</p>
-                            </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:30px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/materiais/carregar-materiais-no-ambiente-virtual/step7.png" alt="" class="imgLeft">
-                            <div class="boxDestaque" id="BbMateriaisCarregarMateriais7">
-                                <p>Também é possível selecionar um único arquivo compactado.</p>
-                            </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:30px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/materiais/carregar-materiais-no-ambiente-virtual/step8.png" alt="" class="imgLeft">
-                            <div class="boxDestaque" id="BbMateriaisCarregarMateriais8">
-                                <p>Selecione o arquivo em <strong>Escolher arquivo</strong> e confirme clicando em <strong>Enviar</strong>.</p>
-                            </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:60px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/materiais/carregar-materiais-no-ambiente-virtual/step9.png" alt="" class="imgLeft">
-                            <div class="boxDestaque" id="BbMateriaisCarregarMateriais9">
-                                <p>O arquivo será automaticamente descompactado dentro da <strong>Coleção de contéudos</strong>.</p>
-                            </div>
-                        </div>
+                        </section>
 
                         <div class="margemParaImagem" style="margin-top:40px"></div>
+                        
+                        <p>Algumas de suas principais funcionalidades, são:</p>
 
-                        <p>Se houver necessidade de substituir um arquivo inserido na <strong>Coleção de conteúdos</strong> você pode fazer a troca sem que isso interfira nos materiais que já foram compartilhados nos ambientes virtuais das disciplinas.</p>
-
-                        <div class="margemParaImagem" style="margin-top:20px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/materiais/carregar-materiais-no-ambiente-virtual/step10.png" alt="">
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:10px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/materiais/carregar-materiais-no-ambiente-virtual/step11.png" alt="" class="imgRight">
-                            <div class="boxDestaque" id="BbMateriaisCarregarMateriais11">
-                                <p>Ao substituir o arquivo, todas as disciplinas que utilizam o arquivo serão automaticamente atualizadas.</p>
+                        <section class="row fix funcBlackboard">
+                            <div class="c3">
+                                <h4>Comunicação</h4>
+                                <ul>
+                                    <li>E-mail</li>
+                                    <li>Mural de avisos</li>
+                                </ul>
                             </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
-
-                        <p>No ambiente da disciplina, quando for inserir um material que está na <strong>Coleção de conteúdos</strong>, escolha a opção <strong>Procurar Coleção de conteúdo</strong>. Para buscar arquivos que estão salvos no seu computador, rede ou pendrive, escolha <strong>Procurar Meu computador</strong>. Neste caso, o arquivo ficará vinculado à disciplina.</p>
-
-                        <div class="margemParaImagem" style="margin-top:20px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/materiais/carregar-materiais-no-ambiente-virtual/step12.png" alt="">
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:30px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/materiais/carregar-materiais-no-ambiente-virtual/step13.png" alt="">
-                            <div class="boxDestaque" id="BbMateriaisCarregarMateriais13">
-                                <p>Localize o arquivo nos <strong>Meus Conteúdos</strong>, marque-o na lista e clique em <strong>Enviar</strong>.</p>
+                            <div class="c3">
+                                <h4>Colaboração</h4>
+                                <ul>
+                                    <li>Blog</li>
+                                    <li>Wiki</li>
+                                    <li>Chat</li>
+                                    <li>Fórum de discussão</li>
+                                    <li>Grupo</li>
+                                </ul>
                             </div>
-                        </div>
+                            <div class="c3">
+                                <h4>Compartilhamento</h4>
+                                <ul>
+                                    <li>Planos de aula</li>
+                                    <li>Materiais de aula</li>
+                                </ul>
+                            </div>
+                            <div class="c3">
+                                <h4>Avaliação</h4>
+                                <ul>
+                                    <li>Teste</li>
+                                    <li>Entrega de trabalho</li>
+                                    <li>Central de notas</li>
+                                </ul>
+                            </div>
+                        </section>
 
                         <div class="margemParaImagem" style="margin-top:60px"></div>
-
                         <!-- 
                         
                         ÂNCORAS [VOLTAR AO SUMÁRIO]
@@ -425,9 +384,10 @@
 
                     </article>
 
+                    <!-- Devido aos poucos itens do 'Saiba Mais'
                     <div id="ancoraSaibaMais" class="voltarSumario fix">
                         <a href="#pesquisa">Início</a>
-                    </div>
+                    </div> -->
                     
                     <!-- inicio do box Saiba mais -->
                     <section class="saibaMais row fix">
@@ -436,14 +396,14 @@
                         <h4 id="relacionado">Manuais relacionados</h4>
                         <ul  ng-controller="manuaisRelacionados">
                             <!-- class="default"  -->
-                            <li ng-repeat="item in Carregar_materiais_no_ambiente_virtual" class="ng-class: item.tipoIcone">
+                            <li ng-repeat="item in O_que_e_Blackboard" class="ng-class: item.tipoIcone">
                                 <div><a href="{{item.Link}}">{{item.manual}}</a></div>
                             </li>
                         </ul>
                         
                         <h4 id="complementar">Materiais complementares</h4>
                         <ul ng-controller="materiaisComplementares">
-                            <li ng-repeat="item in Carregar_materiais_no_ambiente_virtual " class="ng-class: item.tipoIcone">
+                            <li ng-repeat="item in O_que_e_Blackboard" class="ng-class: item.tipoIcone">
                                 <div><a href="{{item.Link}}" target="_blank">{{item.manual}}</a></div>
                             </li>
                         </ul>

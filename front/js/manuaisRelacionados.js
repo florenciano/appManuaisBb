@@ -30,15 +30,15 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 	
 	// "O que é Blackboard"
-	$scope.O_que_é_Blackboard = 
+	$scope.O_que_e_Blackboard = 
 	[
 	{	"manual"	: 	"Acessar pelo computador",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/conhecendo-o-ambiente/acessar-pelo-computador/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{	
 		"manual"	: 	"Acessar por dispositivos móveis",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/conhecendo-o-ambiente/acessar-por-dispositivos-moveis/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
@@ -48,17 +48,17 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"Acessar por dispositivos móveis",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/conhecendo-o-ambiente/acessar-por-dispositivos-moveis/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
 	// "Acessar por dispositivos móveis"
-	$scope.Acessar_por_dispositivos_móveis = 
+	$scope.Acessar_por_dispositivos_moveis = 
 	[
 	{
 		"manual"	: 	"Acessar pelo computador",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/conhecendo-o-ambiente/acessar-pelo-computador/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
@@ -71,17 +71,17 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"Compartilhar materiais com os alunos",
-		"Link" 		:  	"#",
+		"Link" 		:  	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/materiais/compartilhar-materiais-com-os-alunos/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Alterar ou excluir um material compartilhado", 
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/materiais/alterar-ou-excluir-um-material-compartilhado/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Aproveitar materiais de um curso para outro", 
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/materiais/aproveitar-materiais-de-um-curso-para-outro/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
@@ -91,17 +91,17 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"Carregar materiais no ambiente virtual",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/materiais/carregar-materiais-no-ambiente-virtual/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Alterar ou excluir um material compartilhado",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/materiais/alterar-ou-excluir-um-material-compartilhado/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Aproveitar materiais de um curso para outro",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/materiais/aproveitar-materiais-de-um-curso-para-outro/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
@@ -111,17 +111,17 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"Carregar materiais no ambiente virtual",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/materiais/carregar-materiais-no-ambiente-virtual/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Compartilhar materiais com os alunos",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/materiais/compartilhar-materiais-com-os-alunos/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Aproveitar materiais de um curso para outro",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/materiais/aproveitar-materiais-de-um-curso-para-outro/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
@@ -131,17 +131,17 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"Carregar materiais no ambiente virtual",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/materiais/carregar-materiais-no-ambiente-virtual/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual" 	: 	"Compartilhar materiais com os alunos",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/materiais/compartilhar-materiais-com-os-alunos/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Alterar ou excluir um material compartilhado",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/materiais/alterar-ou-excluir-um-material-compartilhado/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
@@ -154,7 +154,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"Enviar e-mail pelo ambiente",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/comunicacao-e-interacao/enviar-email-pelo-ambiente/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
@@ -164,22 +164,22 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"Enviar avisos aos alunos",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/comunicacao-e-interacao/enviar-avisos-aos-alunos/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
 	// "Criar um fórum de discussão"
-	$scope.Criar_um_fórum_de_discussão = 
+	$scope.Criar_forum_de_discussao = 
 	[
 	{
 		"manual"	: 	"Avaliar fórum de discussão", 
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/avaliar-forum-de-discussao/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Criar blog",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/comunicacao-e-interacao/criar-um-blog/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
@@ -189,17 +189,17 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"Avaliar blog",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/avaliar-blog/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Criar diário",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/comunicacao-e-interacao/criar-diario/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Criar um fórum de discussão",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/comunicacao-e-interacao/criar-um-forum-de-discussao/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
@@ -208,13 +208,13 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	$scope.Criar_diário = 
 	[
 	{
-		"Manual"	: 	"Avaliar diário",
-		"Link" 		: 	"#",
+		"manual"	: 	"Avaliar diário",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/avaliar-diario/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{
-		"Manual"	: 	"Criar blog",
-		"Link" 		: 	"#",
+		"manual"	: 	"Criar blog",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/comunicacao-e-interacao/criar-um-blog/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
@@ -224,8 +224,8 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	$scope.Criar_wiki = 
 	[
 	{
-		"Manual"	: 	"Avaliar wiki",
-		"Link" 		: 	"#",
+		"manual"	: 	"Avaliar wiki",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/avaliar-wiki/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
@@ -234,49 +234,49 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 	// "Receber trabalhos sem verificação de plágio (exercicício)"
-	$scope.Receber_trabalhos_sem_verificação_de_plágio = 
+	$scope.Receber_trabalhos_sem_verificacao_de_plagio = 
 	[
 	{
 		"manual"	: 	"Corrigir trabalhos sem verificação de plágio (Exercício)",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/corrigir-trabalhos-sem-verificacao-de-plagio/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Receber trabalhos com verificação de plágio (SafeAssignment)",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/trabalhos/receber-trabalhos-com-verificacao-de-plagio/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
 	// "Receber trabalhos com verificação de plágio (SafeAssignment)"
-	$scope.Receber_trabalhos_com_verificação_de_plágio = 
+	$scope.Receber_trabalhos_com_verificacao_de_plagio = 
 	[
 	{
-		"manual"	: 	"Corrigir trabalhos com verificação de plágio",
-		"Link" 		: 	"#",
+		"manual"	: 	"Corrigir trabalhos com verificação de plágio (SafeAssignment)",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/corrigir-trabalhos-com-verificacao-de-plagio/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Receber trabalhos com verificação de plágio (SafeAssignment)",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/trabalhos/receber-trabalhos-com-verificacao-de-plagio/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Receber trabalhos sem verificação de plágio (Exercício)",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/trabalhos/receber-trabalhos-sem-verificacao-de-plagio/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
 	// "Submeter arquivos para verificação de plágio ou criar base de comparação"
-	$scope.Submeter_arquivos_para_verificação_de_plágio_ou_criar_base_de_comparação = 
+	$scope.Submeter_arquivos_para_verificacao_de_plagio_ou_criar_base_de_comparacao = 
 	[
 	{	"manual"	: 	"Receber trabalhos com verificação de plágio (SafeAssignment)",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/trabalhos/receber-trabalhos-com-verificacao-de-plagio/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{	"manual"	: 	"Corrigir trabalhos com verificação de plágio (SafeAssignment)",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/corrigir-trabalhos-com-verificacao-de-plagio/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
@@ -289,7 +289,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"Receber trabalhos sem verificação de plágio (Exercício)",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/trabalhos/receber-trabalhos-sem-verificacao-de-plagio/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
@@ -302,17 +302,17 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"Criar ou alterar pesquisas (sem nota)", 
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/criar-ou-alterar-testes-sem-nota/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Conhecer os tipos de pergunta dos testes e pesquisas", 
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/conhecer-os-tipos-de-pergunta-dos-testes-e-pesquisas/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Importar testes e pesquisas do Word", 
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/importar-testes-e-pesquisas-do-word/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
@@ -322,17 +322,17 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"Criar ou alterar testes (com nota)", 
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/criar-ou-alterar-testes-com-nota/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Conhecer os tipos de pergunta dos testes e pesquisas", 
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/conhecer-os-tipos-de-pergunta-dos-testes-e-pesquisas/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Importar testes e pesquisas do Word", 
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/importar-testes-e-pesquisas-do-word/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
@@ -342,12 +342,12 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"Criar ou alterar testes (com nota)", 
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/criar-ou-alterar-testes-com-nota/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Criar ou alterar pesquisas (sem nota)", 
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/criar-ou-alterar-testes-sem-nota/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
@@ -357,17 +357,17 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"Criar ou alterar testes (com nota)", 
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/criar-ou-alterar-testes-com-nota/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Criar ou alterar pesquisas (sem nota)", 
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/criar-ou-alterar-testes-sem-nota/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Importar testes e pesquisas do Word", 
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/importar-testes-e-pesquisas-do-word/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
@@ -380,17 +380,17 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"Associar Rubric a atividades",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/rubrics/associar-rubric-a-atividades/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Associar Rubric a colunas na Central de Notas",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/rubrics/associar-rubric-a-colunas-na-central-de-notas/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual"	: 	"Corrigir com Rubric",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/rubrics/criar-uma-rubric/corrigir-com-rubric/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
@@ -400,7 +400,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"Associar Rubric a colunas na Central de Notas", 
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/rubrics/associar-rubric-a-colunas-na-central-de-notas/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
@@ -410,7 +410,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"Corrigir com Rubric", 
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/corrigir-com-rubric/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
@@ -423,54 +423,57 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"		: 	"Calcular a média do aluno",
-		"Link" 			: 	"#",
+		"Link" 			: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/calcular-a-media-do-aluno/",
 		"tipoIcone"		: 	"blackboard"
 	},
 	{
 		"manual"		: 	"Exportar as notas para o sistema acadêmico",
-		"Link" 			: 	"#",
+		"Link" 			: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/exportar-as-notas-para-o-sistema-academico/",
 		"tipoIcone"		: 	"blackboard"
 	}
 	];
 
 	// "Dar nota a atividades feitas fora do ambiente"
+	$scope.Dar_nota_a_atividades_feitas_fora_do_ambiente = 
+	[
+	];
 
 	// "Calcular a média do aluno"
-	$scope.Calcular_a_média_do_aluno = 
+	$scope.Calcular_a_media_do_aluno = 
 	[
 	{
 		"manual"	: 	"Exportar as notas para o sistema acadêmico",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/exportar-as-notas-para-o-sistema-academico/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
 	// "Corrigir trabalhos sem verificação de plágio (Exercício)"
-	$scope.Corrigir_trabalhos_sem_verificação_de_plágio = 
+	$scope.Corrigir_trabalhos_sem_verificacao_de_plagio = 
 	[
 	{
-		"manual"	: 	"Receber trabalhos sem verificação de plágio", 
-		"Link" 		: 	"#",
+		"manual"	: 	"Receber trabalhos sem verificação de plágio (Exercício)", 
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/trabalhos/receber-trabalhos-sem-verificacao-de-plagio/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
 	// "Corrigir trabalhos com verificação de plágio (SafeAssignment)"
-	$scope.Corrigir_trabalhos_com_verificação_de_plágio = 
+	$scope.Corrigir_trabalhos_com_verificacao_de_plagio = 
 	[
 	{
 		"manual"	: 	"Receber trabalhos com verificação de plágio (SafeAssignment)", 
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/trabalhos/receber-trabalhos-com-verificacao-de-plagio/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
 	// "Avaliar fórum de discussão"
-	$scope.Avaliar_fórum_de_discussão = 
+	$scope.Avaliar_forum_de_discussao = 
 	[
 	{
 		"manual"	: 	"Criar fórum de discussão", 
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/comunicacao-e-interacao/criar-um-forum-de-discussao/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
@@ -480,7 +483,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"Criar blog", 
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/comunicacao-e-interacao/criar-um-blog/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
@@ -490,7 +493,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"Criar diário", 
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/comunicacao-e-interacao/criar-diario/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
@@ -500,7 +503,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"Criar wiki", 
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/comunicacao-e-interacao/criar-wiki/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
@@ -511,32 +514,32 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual" 	: 	"Criar Rubric",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/rubrics/criar-uma-rubric/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual" 	: 	"Associar Rubric a atividades",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/rubrics/associar-rubric-a-atividades/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual" 	: 	"Associar Rubric a colunas na Central de Notas",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/rubrics/associar-rubric-a-colunas-na-central-de-notas/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
 	// "Exportar as notas para o sistema acadêmico"
-	$scope.Exportar_as_notas_para_o_sistema_acadêmico = 
+	$scope.Exportar_as_notas_para_o_sistema_academico = 
 	[
 	{
 		"manual" 	: 	"Calcular a média do aluno",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/calcular-a-media-do-aluno/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{
 		"manual" 	: 	"Configurar a Central de Notas",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/configurar-a-central-de-notas/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
@@ -549,7 +552,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual" 	: 	"Sincronizar com e-mail pessoal",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/calendario/sincronizar-com-email-pessoal/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
@@ -559,7 +562,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual" 	: 	"Criar e visualizar eventos",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/calendario/criar-e-visualizar-eventos/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];

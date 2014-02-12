@@ -98,7 +98,7 @@ manuaisBB.controller("materiaisComplementares", function ($scope) {
 	];
 
 	// "Alterar ou excluir um manual compartilhado"
-	$scope.Alterar_ou_excluir_um_manual_compartilhado = 
+	$scope.Alterar_ou_excluir_um_material_compartilhado = 
 	[
 	];
 
@@ -126,7 +126,7 @@ manuaisBB.controller("materiaisComplementares", function ($scope) {
 	];
 
 	// "Criar fórum de discussão"
-	$scope.Criar_fórum_de_discussão = 
+	$scope.Criar_forum_de_discussao = 
 	[
 	{	"manual"	: 	"Creating a Forum",
 		"Link" 		: 	"http://ondemand.blackboard.com/r91/movies/bb91_discussion_board_create_forum.htm",
@@ -219,11 +219,11 @@ manuaisBB.controller("materiaisComplementares", function ($scope) {
 	}
 	];
 
-	// CATEGORIA: Comunicação e Interação
+	// CATEGORIA: Trabalhos
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 	// "Receber trabalhos sem verificação de plágio (Exercício)"
-	$scope.Receber_trabalhos_sem_verificação_de_plágio = 
+	$scope.Receber_trabalhos_sem_verificacao_de_plagio = 
 	[
 	{	
 		"manual"	: 	"Inline Assignment Grading",
@@ -238,17 +238,7 @@ manuaisBB.controller("materiaisComplementares", function ($scope) {
 	];
 
 	// "Receber trabalhos com verificação de plágio (SafeAssignment)"
-	$scope.Receber_trabalhos_com_verificação_de_plágio = 
-	[
-	{	
-		"manual"	: 	"Using SafeAssign",
-		"Link" 		: 	"http://ondemand.blackboard.com/r91/movies/bb91_assignments_safeassign.htm",
-		"tipoIcone" : 	"video"
-	}
-	];
-
-	// "Receber trabalhos com verificação de plágio (SafeAssignment)"
-	$scope.Receber_trabalhos_com_verificação_de_plágio = 
+	$scope.Receber_trabalhos_com_verificacao_de_plagio = 
 	[
 	{	
 		"manual"	: 	"Using SafeAssign",
@@ -755,5 +745,88 @@ manuaisBB.controller("materiaisComplementares", function ($scope) {
 	$scope.Calcular_a_media_do_aluno  = 
 	[
 	];
+
+	// "Corrigir trabalhos sem verificação de plágio (Exercício)"
+	$scope.Corrigir_trabalhos_sem_verificacao_de_plagio = 
+	[
+	{	
+		"manual"	: 	"Inline Assignment Grading",
+		"Link" 		: 	"http://ondemand.blackboard.com/r91/movies/bb91_inline_grading.htm",
+		"tipoIcone" : 	"video"
+	},
+	{	
+		"manual"	: 	"Downloading Assignments",
+		"Link" 		: 	"http://ondemand.blackboard.com/r91/movies/bb91_assignments_downloading_assignments.htm",
+		"tipoIcone" : 	"video"
+	}
+	];
+
+	// "Avaliar fórum de discussão"
+	$scope.Avaliar_forum_de_discussao = 
+	[
+	{	
+		"manual"	: 	"Grading Discussion Board Forums",
+		"Link" 		: 	"http://ondemand.blackboard.com/r91/movies/bb91_discussion_board_grade_forum.htm",
+		"tipoIcone" : 	"video"
+	},
+	{	
+		"manual"	: 	"Grading Discussion Board Threads",
+		"Link" 		: 	"http://ondemand.blackboard.com/r91/movies/bb91_discussion_board_grade_threads.htm",
+		"tipoIcone" : 	"video"
+	}
+	];
+
+	// "Avaliar wiki"
+	$scope.Avaliar_wiki = 
+	[
+	{	
+		"manual"	: 	"Grading a Wiki",
+		"Link" 		: 	"http://ondemand.blackboard.com/r91/movies/bb91_course_tools_grade_a_wiki.htm",
+		"tipoIcone" : 	"video"
+	}
+	];
+
+	// "Avaliar com Rubric"
+	$scope.Corrigir_com_Rubric = 
+	[
+	{	
+		"manual"	: 	"Creating a Grading Rubric",
+		"Link" 		: 	"http://youtu.be/ReR0icb-4Vk",
+		"tipoIcone" : 	"video"
+	},
+	{	
+		"manual"	: 	"Associating a Rubric with a Gradable Item",
+		"Link" 		: 	"http://ondemand.blackboard.com/r91/movies/bb91_course_tools_associate_rubric.htm",
+		"tipoIcone" : 	"video"
+	},
+	{	
+		"manual"	: 	"Grading with Rubrics",
+		"Link" 		: 	"http://ondemand.blackboard.com/r91/movies/bb91_course_tools_grade_with_rubrics.htm",
+		"tipoIcone" : 	"video"
+	}
+	];
+
+	// "Exportar as notas para o sistema acadêmico"
+	$scope.Exportar_as_notas_para_o_sistema_academico = 
+	[
+	];
+
+	// CATEGORIA: Calendário
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 	
+	// "Criar e visualizar eventos"
+	$scope.Criar_e_visualizar_eventos = 
+	[
+	{	
+		"manual"	: 	"Calendar",
+		"Link" 		: 	"http://ondemand.blackboard.com/r91/movies/bb91_course_tools_calendar.htm",
+		"tipoIcone" : 	"video"
+	}
+	];
+
+	// "Sincronizar com e-mail pessoal"
+	$scope.Sincronizar_com_eMail_pessoal = 
+	[
+	];
+
 });
