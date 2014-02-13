@@ -15,20 +15,13 @@
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
     // CATEGORIA: Conhecendo o ambiente
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-    
-    // O que é Blackboard
-
-    // Acessar pelo computador
 
     // Acessar por dispositivos móveis
-
+    #BbConhecendoAcessarPorDispositivos1 { @include settingsBoxImagem(42%, 20px, auto, auto, -30px) }
 
     // CATEGORIA: Materiais
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-    
     // Carregar materiais no ambiente virtual
-
-    // @include                         settingsBoxImagem(width, left, top, right, bottom)
     #BbMateriaisCarregarMateriais1 { @include settingsBoxImagem(40%, 35px, auto, auto, -70px) }
     #BbMateriaisCarregarMateriais2 { @include settingsBoxImagem(45%, auto, auto, 20px, -70px) }
     #BbMateriaisCarregarMateriais3 { @include settingsBoxImagem(55%, auto, auto, 20px, -10px) }
@@ -44,7 +37,27 @@
     #BbMateriaisCarregarMateriais13 { @include settingsBoxImagem(35%, auto, auto, 20px, -20px) }
 
     // Compartilhar materiais com os alunos
-
+    // @include                                      settingsBoxImagem(width, left, top, right, bottom)
+    #BbMateraisCompartilharMateriaisAlunos1 { @include settingsBoxImagem(40%, auto, 30px, 0, auto) }
+    #BbMateraisCompartilharMateriaisAlunos2 { @include settingsBoxImagem(40%, auto, 30px, 0, auto) }
+    #BbMateraisCompartilharMateriaisAlunos3 { @include settingsBoxImagem(60%, auto, auto, 0, -60px) }
+    #BbMateraisCompartilharMateriaisAlunos4 { @include settingsBoxImagem(33%, auto, 50px, 40px, auto) }
+    #BbMateraisCompartilharMateriaisAlunos5 { @include settingsBoxImagem(45%, auto, auto, 0, 0) }
+    #BbMateraisCompartilharMateriaisAlunos6 { @include settingsBoxImagem(50%, auto, 15px, 0, auto) }
+    #BbMateraisCompartilharMateriaisAlunos7 { @include settingsBoxImagem(40%, auto, 170px, 0, auto) }
+    #BbMateraisCompartilharMateriaisAlunos8 { @include settingsBoxImagem(40%, auto, 270px, 0, auto) }
+    #BbMateraisCompartilharMateriaisAlunos9 { @include settingsBoxImagem(40%, auto, 420px, 0, auto) }
+    #BbMateraisCompartilharMateriaisAlunos10 { @include settingsBoxImagem(40%, auto, 0, 0, auto) }
+    #BbMateraisCompartilharMateriaisAlunos11 { @include settingsBoxImagem(40%, auto, 80px, 0, auto) }
+    #BbMateraisCompartilharMateriaisAlunos12 { @include settingsBoxImagem(50%, auto, auto, 10px, 40px) }
+    #BbMateraisCompartilharMateriaisAlunos13 { @include settingsBoxImagem(56%, auto, 80px, 0, auto) }
+    #BbMateraisCompartilharMateriaisAlunos14 { @include settingsBoxImagem(45%, auto, 0, 0, auto) }
+    #BbMateraisCompartilharMateriaisAlunos15 { @include settingsBoxImagem(50%, auto, auto, 0, 40px) }
+    #BbMateraisCompartilharMateriaisAlunos16 { @include settingsBoxImagem(40%, auto, auto, 20px, -50px) }
+    #BbMateraisCompartilharMateriaisAlunos17 { @include settingsBoxImagem(40%, auto, 40px, 0, auto) }
+    #BbMateraisCompartilharMateriaisAlunos18 { @include settingsBoxImagem(40%, auto, auto, 0, 90px) }
+    #BbMateraisCompartilharMateriaisAlunos19 { @include settingsBoxImagem(40%, auto, 40px, 20px, auto) }
+    
     // Alterar ou excluir um material compartilhado
 
     // Aproveitar materiais de um curso para outro
@@ -60,20 +73,13 @@
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
     // CATEGORIA: Conhecendo o ambiente
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-    // O que é Blackboard
-
-    // Acessar pelo computador
-
+    
     // Acessar por dispositivos móveis
-
+    #BbConhecendoAcessarPorDispositivos1 { @include settingsBoxImagem(60%, 20px, auto, auto, -30px) }
 
     // CATEGORIA: Materiais
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-    
     // Carregar materiais no ambiente virtual
-
-	// @include                        settingsBoxImagem(width, left, top, right, bottom)
 	#BbMateriaisCarregarMateriais1 { @include settingsBoxImagem(45%, 10px, auto, auto, -90px) }
 	#BbMateriaisCarregarMateriais2 { @include settingsBoxImagem(45%, auto, auto, 0px, -90px) }
     #BbMateriaisCarregarMateriais3 { @include settingsBoxImagem(50%, auto, auto, 0px, -35px) }
@@ -89,19 +95,28 @@
     #BbMateriaisCarregarMateriais13 { @include settingsBoxImagem(45%, auto, auto, 0px, -45px) }
 
     // Compartilhar materiais com os alunos
+    // @include                         settingsBoxImagem(width, left, top, right, bottom)
+    #BbMateraisCompartilharMateriaisAlunos1 { @include settingsBoxImagem(40%, 35px, auto, auto, -70px) }
+    #BbMateraisCompartilharMateriaisAlunos2 { @include settingsBoxImagem(40%, 35px, auto, auto, -70px) }
+    #BbMateraisCompartilharMateriaisAlunos3 { @include settingsBoxImagem(40%, 35px, auto, auto, -70px) }
+    #BbMateraisCompartilharMateriaisAlunos4 { @include settingsBoxImagem(40%, 35px, auto, auto, -70px) }
+    #BbMateraisCompartilharMateriaisAlunos5 { @include settingsBoxImagem(40%, 35px, auto, auto, -70px) }
+    #BbMateraisCompartilharMateriaisAlunos6 { @include settingsBoxImagem(40%, 35px, auto, auto, -70px) }
+    #BbMateraisCompartilharMateriaisAlunos7 { @include settingsBoxImagem(40%, 35px, auto, auto, -70px) }
+    #BbMateraisCompartilharMateriaisAlunos8 { @include settingsBoxImagem(40%, 35px, auto, auto, -70px) }
+    #BbMateraisCompartilharMateriaisAlunos9 { @include settingsBoxImagem(40%, 35px, auto, auto, -70px) }
+    #BbMateraisCompartilharMateriaisAlunos10 { @include settingsBoxImagem(40%, 35px, auto, auto, -70px) }
+    #BbMateraisCompartilharMateriaisAlunos11 { @include settingsBoxImagem(40%, 35px, auto, auto, -70px) }
+    #BbMateraisCompartilharMateriaisAlunos12 { @include settingsBoxImagem(40%, 35px, auto, auto, -70px) }
+    #BbMateraisCompartilharMateriaisAlunos13 { @include settingsBoxImagem(40%, 35px, auto, auto, -70px) }
+    #BbMateraisCompartilharMateriaisAlunos14 { @include settingsBoxImagem(40%, 35px, auto, auto, -70px) }
+    #BbMateraisCompartilharMateriaisAlunos15 { @include settingsBoxImagem(40%, 35px, auto, auto, -70px) }
+    #BbMateraisCompartilharMateriaisAlunos16 { @include settingsBoxImagem(40%, 35px, auto, auto, -70px) }
+    #BbMateraisCompartilharMateriaisAlunos17 { @include settingsBoxImagem(40%, 35px, auto, auto, -70px) }
+    #BbMateraisCompartilharMateriaisAlunos18 { @include settingsBoxImagem(40%, 35px, auto, auto, -70px) }
+
 
     // Alterar ou excluir um material compartilhado
 
     // Aproveitar materiais de um curso para outro
-}
-
-
-/* MOBILE
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-@media only screen and (min-width:320px) {
-        
-    // @include           settingsBoxImagem(width, left, top, right, bottom)
-    
-    // Até o presente momento abortou o desenvolvimento do projeto em mobile
-
 }

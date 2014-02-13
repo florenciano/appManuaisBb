@@ -442,16 +442,19 @@ button.close {
     // for produzido o material. Ex: listas, tabelas, videos etc
     /////////////////////////////////////////////////////////////
 
-    //regras gerais para section e li
-    section { @include font(normal, 1.2em);
-        a { @include corLink(); }
-    }
-    li { 
-        list-style-type: square;
-        margin: ($meioGrid / 4) 0;
-     }
+    //regras gerais
+    section { @include font(normal, 1em); }
+    a { @include corLink(); }
+    li { list-style-type: square; margin: ($meioGrid / 4) 0; }
     li:first-child { margin-top: 0}
-        
+    table { 
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        border:1px solid #c8c8c8;
+        td { vertical-align: middle; text-align: center }
+    }
+    
     // O que é blackboard: quais instituições
     .containerSec { 
         width: 80%;
@@ -460,7 +463,7 @@ button.close {
         border: 1px solid $corBorda;
         @include radius();
         p {
-            @include font(bold, 1.2em);
+            @include font(bold, 1em);
             margin: ($meioGrid / 2) ($meioGrid / 2) ($meioGrid / 2) $grid;
         }
     }
@@ -468,20 +471,28 @@ button.close {
     // O que é blackboard: principais funções
     .funcBlackboard {
         h4 {
-            background-color: $corTexto;
+            background-color: $corDefault;
             color: #fff;
             text-align: center;
             padding: 1em 0;
             margin: 0;
             display: block;
         }
-        ul{
+        ul {
             margin: 0;
             padding: ($meioGrid / 2) 0 ($meioGrid / 2) ($grid - 10px);
             border: 1px solid $corBorda;
         }
     }
-
+    
+    // Acessar pelo computador: tabelas
+    .plataformasTable {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        td { border: 1px solid $corBorda; padding: ($meioGrid / 4); }
+    }
 }
 
 // sumario: content dinamic
@@ -496,7 +507,8 @@ button.close {
         padding: 0;
         list-style: none;
         li {
-            margin-bottom: ($meioGrid / 2);
+            list-style-type: none;;
+            margin: 0 0 ($meioGrid / 2) 0;
             &:last-child { margin-bottom: 0;}
             a { @include corLink(); @include font(normal, 1.2em); }
         }

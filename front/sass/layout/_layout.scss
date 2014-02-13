@@ -111,7 +111,7 @@ html, body { height: 100%; min-height: 100%;}
     // Trasition removed in all style, it's not a good pratice
 }
 body {
-    @include font(normal, 10px);
+    @include font(normal, 12px);
     color: $corTexto;
 }
 
@@ -139,7 +139,7 @@ body {
         width: 90%;
         margin: $meioGrid auto;
         @include radius();
-        @include font(normal, 1.1em);
+        @include font(normal, .9em);
         @include transition(none !important)
     }
     .alert-dismissable {
@@ -152,7 +152,7 @@ body {
     }
     button.close {
         float: right;
-        @include font(bold, 1.6em);
+        @include font(bold, 1.4em);
         line-height: 1;
         text-shadow: 0 1px 0 #fff;
         opacity: .3;
@@ -178,7 +178,7 @@ body {
         text-align: center;
         padding-bottom: $meioGrid;
         .title {
-            @include font(bold, 1.8em);
+            @include font(bold, 1.6em);
             margin: 0;
         }
         .description {
@@ -208,7 +208,6 @@ body {
             height: $grid - 8;
             padding: 0 1em;
             @include radius();
-            @include font(normal, 1.2em);
             @include bShadow(inset, 0, 0, 5px, 0, rgba(0,0,0,0.25));
             border: 1px solid $corBorda;
             &:focus {
@@ -266,7 +265,7 @@ body {
         h5 {
             clear: both;
             margin: 0;
-            @include font(bold, 1.4em);
+            @include font(bold, 1.2em);
             display: block;
             padding: ($meioGrid - 8) 0 ($meioGrid - 8) $grid ;
             min-height: $grid - 2;
@@ -291,7 +290,6 @@ body {
                     margin: 0;
                     padding: 0 ($meioGrid / 4);
                     text-decoration: none;
-                    @include font(normal, 1em);
                     display: inline-block;
                     height: 100%;
                 }
@@ -307,7 +305,6 @@ body {
                         min-height: 100%;
                         padding: ($meioGrid / 4) 0;
                         float: left;
-                        @include font(normal, 1.2em);
                     }
                     // btn [+]
                     span.click {
@@ -337,7 +334,6 @@ body {
                         line-height: 1em;
                         padding: 0;
                         a {
-                            @include font(normal, 1.1em);
                             @include corLink();
                             margin: 0;
                             padding: 0 0 0 ($grid + 2);
@@ -357,12 +353,11 @@ body {
             p { 
                 margin: 3px 0;
                 padding-left: $meioGrid / 2;
-                @include font(bold, 1.2em);
+                @include font(bold, 1em);
             }
             li {
                 a {
                     @include corLink();
-                    @include font(normal, 1.15em);
                     padding: 0;
                 }
                 &:last-child { margin-bottom: $meioGrid / 4 }
@@ -397,9 +392,9 @@ body {
             text-align: center;
             h6 {
                 margin: 0;
+                @include font(normal, 1em); // para sobrescrever o reset 'h6' 0.667em
                 a {
                     @include corLink();
-                    @include font(normal, 12px);
                 }
             }
         }
@@ -418,7 +413,6 @@ body {
     // regras de estilo que afetam o header do manual. ex: breadbrumb, data de atualização
    .headerContent  {
         margin: 0;
-        @include font(normal, 1.1em);
         .cabecalho {
             padding: $meioGrid 0;
             display: block;
@@ -444,8 +438,9 @@ body {
 
     // regras que afetam o conteúdo do manual
     .contentMain {
+        // @include font(normal, 12px);
         h1 {
-            @include font(bold, 2em);
+            @include font(bold, 1.8em);
             line-height: 1em;
             color: $corTitle;
         }
@@ -454,7 +449,6 @@ body {
         }
         h2 + p { margin-top: 0; }
         p {
-            @include font(normal, 1.2em);
             line-height: 1.6em;
             a { @include corLink(); }
         }
@@ -464,15 +458,18 @@ body {
         // for produzido o material. Ex: listas, tabelas, videos etc
         /////////////////////////////////////////////////////////////
 
-        //regras gerais para section e li
-        section { @include font(normal, 1.2em);
-            a { @include corLink(); }
+        //regras gerais
+        section { @include font(normal, 1em); }
+        a { @include corLink(); }
+        li { list-style-type: square; margin: ($meioGrid / 4) 0; }
+        li:first-child { margin-top: 0}
+        table { 
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+            border:1px solid #c8c8c8;
+            td { vertical-align: middle; text-align: center }
         }
-        li { 
-            list-style-type: square;
-            margin: ($meioGrid / 4) 0;
-         }
-         li:first-child { margin-top: 0}
         
         // O que é blackboard: quais instituições
         .containerSec { 
@@ -482,7 +479,7 @@ body {
             border: 1px solid $corBorda;
             @include radius();
             p {
-                @include font(bold, 1.2em);
+                @include font(bold, 1em);
                 margin: ($meioGrid / 2) ($meioGrid / 2) ($meioGrid / 2) $grid;
             }
         }
@@ -490,37 +487,59 @@ body {
         // O que é blackboard: principais funções
         .funcBlackboard {
             h4 {
-                background-color: $corTexto;
+                background-color: $corDefault;
                 color: #fff;
                 text-align: center;
                 padding: 1em 0;
                 margin: 0;
                 display: block;
             }
-            ul{
+            ul {
                 margin: 0;
                 padding: ($meioGrid / 2) 0 ($meioGrid / 2) ($grid - 10px);
                 border: 1px solid $corBorda;
             }
         }
-
-    }
+        
+        // Acessar pelo computador: tabelas
+        .plataformasTable {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            tr:nth-child(odd) { background-color: #f0f0f0; } //cores especificas para este caso
+            tr:nth-child(even) { background-color: #dcdcdc; } //cores especificas para este caso
+            tr:first-child { 
+                background-color: #737373; 
+                td { color: #fff; border-color: #fff; }
+            }
+            td {
+                border: 1px solid $corBorda;
+                border-width: 0px 1px 1px 0px;
+                padding: ($meioGrid / 4);
+            }
+            tr:last-child td { border-width: 0px 1px 0px 0px; }
+            tr td:last-child { border-width: 0px 0px 1px 0px; }
+            tr:last-child td:last-child{ border-width: 0px 0px 0px 0px; }
+            }
+        }
 
     // sumario: content dinamic
     .sumario {
         margin: $grid 0 !important;
         h3 {
             margin: 0 0 ($meioGrid / 4);
-            @include font(bold, 1.4em);
+            @include font(bold, 1.2em);
         }
         ul {
             margin: 0;
             padding: 0;
             list-style: none;
             li {
-                margin-bottom: ($meioGrid / 2);
+                list-style-type: none;;
+                margin: 0 0 ($meioGrid / 2) 0;
                 &:last-child { margin-bottom: 0;}
-                a { @include corLink(); @include font(normal, 1.2em); }
+                a { @include corLink(); }
             }
         }
     }
@@ -532,7 +551,6 @@ body {
         a {
             float: right;
             @include corLink();
-            @include font(normal, 1.1em);
             &:before {
                 content: "";
                 height: 1.2em;
@@ -568,7 +586,6 @@ body {
             border: 3px solid $corDefault;
             padding: $meioGrid / 2;
             p {
-                @include font(normal, 1.3em);
                 line-height: 1.5em;
                 margin: 0;
             }
@@ -582,7 +599,6 @@ body {
             border: 0;
             color: #fff;
             p {
-                @include font(normal, 1.3em);
                 line-height: 1.5em;
                 margin: 0;
                 a { @include corLinkUpBox($corSec01); }
@@ -619,7 +635,6 @@ body {
                 display: block;
                 height: $grid;
                 margin: ($meioGrid / 4) 0;
-                // background: url("../img/ui/icoSaibaMaisManuais.png") 5px center no-repeat;
                 padding: 0;
                 @include radius();
 
@@ -630,7 +645,6 @@ body {
                     padding: 0 ($meioGrid / 2) 0 ($grid + 10);
                     a {
                         @include corLink();
-                        @include font(normal, 1.2em);
                         line-height: 1.4em;
                     }
                 }
@@ -703,7 +717,7 @@ body {
     .titleHeader {
         padding-bottom: 0;
         .title {
-            @include font(bold, 2.35em);
+            @include font(bold, 2em);
             border-bottom: 3px solid $corDefault;
             width: 78%;
             padding: 0 0 ($meioGrid / 4) 0;
@@ -729,7 +743,6 @@ body {
         }
         input[type="text"] {
             padding: 0 .5em;
-            @include font(normal, 1.1em);
         }
         p { text-align: center; }
         .interat { margin: 0 .5em 0 0; }
@@ -738,7 +751,6 @@ body {
     .navigationMain {
         h5 {
             padding: ($meioGrid - 4) 0 ($meioGrid - 4)  $grid;
-            // @include font(bold, 1.6em);
         }
         hr { margin: ($meioGrid / 4) 0;}
         ol, ul {
@@ -769,15 +781,17 @@ body {
     // for produzido o material. Ex: listas, tabelas, videos etc
     /////////////////////////////////////////////////////////////
     
-    .contentMain .funcBlackboard h4 { @include font(normal, 11px) }
-    .contentMain .funcBlackboard ul { 
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        li {
+    .contentMain .funcBlackboard {
+        h4 { @include font(normal, .875em); }
+        ul { 
             list-style-type: none;
-            margin: ($meioGrid / 4) 0;
-            text-align: center
+            margin: 0;
+            padding: 0;
+            li {
+                list-style-type: none;
+                margin: ($meioGrid / 4) 0;
+                text-align: center
+            }
         }
     }
 
@@ -785,9 +799,6 @@ body {
         display: block;
         position: relative;
         margin: 40px 0 !important;
-        .boxDestaque {
-            p { @include font(normal, 1.2em); }
-        }
     }
 
     .saibaMais {
@@ -817,14 +828,14 @@ body {
     .contentMain {
         padding-top: 0;
         h1 {
-            @include font(bold, 2.2em);
+            @include font(bold, 2em);
             margin-bottom: 0;
         }
         h1 + p {
             margin-top: 0;
         }
         h2 {
-            @include font(bold, 1.4em);
+            @include font(bold, 1.2em);
         }
     }
 
@@ -839,14 +850,14 @@ body {
         text-align: right;
         margin-top: $meioGrid / 2;
         .title {
-            @include font(bold, 2.8em);
+            @include font(bold, 2.55em);
             border-bottom: 3px solid $corDefault;
             width: 69%;
             padding: 0 0 ($meioGrid / 4) 0;
             margin: 0 0 0 8.13%;
         }
         .description {
-            @include font(bold, 2em);
+            @include font(bold, 1.8em);
             color: #fff;
             padding: ($meioGrid / 2) ($grid - 10);
             height: auto;
@@ -863,10 +874,7 @@ body {
             -moz-box-shadow: none;
             box-shadow: none;
         }
-        input[type="text"] {
-            padding: 0 1em;
-            @include font(normal, 1.1em);
-        }
+        input[type="text"] { padding: 0 1em; }
         p {
             text-align: left;
             margin-bottom: $grid - 10;
@@ -877,12 +885,11 @@ body {
     .navigation { @include transition(all 0.4s ease); }
     
     .navigationMain {
-        h5 { @include font(bold, 1.4em); padding-left: $grid +2; }
+        h5 { @include font(bold, 1.2em); padding-left: $grid +2; }
 
         hr { margin: ($meioGrid - 5) 0; }
 
         ol, ul {
-
             li {
                 .containerCategory {
                     .titleCategory { width: 85%; max-width: 285px; }
