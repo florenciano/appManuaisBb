@@ -588,6 +588,7 @@ body {
             p {
                 line-height: 1.5em;
                 margin: 0;
+                img { display: inline-block; }
             }
         }
 
@@ -601,9 +602,11 @@ body {
             p {
                 line-height: 1.5em;
                 margin: 0;
+                img { display: inline-block; }
                 a { @include corLinkUpBox($corSec01); }
             }
         }
+        .icos { margin: 0 .5em; } // ícones nos box de destaques
     }
 
     // saiba mais
@@ -724,7 +727,7 @@ body {
             margin: 0 0 0 $meioGrid;
         }
         .description {
-            @include font(bold, 1.6em);
+            @include font(bold, 1.4em);
             color: #fff;
             padding: ($meioGrid / 2) ($grid - 10);
             height: auto;

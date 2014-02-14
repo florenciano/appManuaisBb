@@ -12,35 +12,83 @@
 // CATEGORIA: Conhecendo o ambiente
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-// O que é Blackboard
-
-// Acessar pelo computador
-
 // Acessar por dispositivos móveis
-
+#BbConhecendoAcessarPorDispositivos1 { @include settingsBoxImagem(42%, 20px, auto, auto, -30px) }
 
 // CATEGORIA: Materiais
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
 // Carregar materiais no ambiente virtual
-
-// @include                        settingsBoxImagem(width, left, top, right, bottom)
-#BbMateriaisCarregarMateriais1 { @include settingsBoxImagem(45%, 10px, auto, auto, -90px) }
-#BbMateriaisCarregarMateriais2 { @include settingsBoxImagem(45%, auto, auto, 0px, -90px) }
-#BbMateriaisCarregarMateriais3 { @include settingsBoxImagem(50%, auto, auto, 0px, -35px) }
-#BbMateriaisCarregarMateriais4 { @include settingsBoxImagem(50%, auto, auto, 20px, -70px) }
-#BbMateriaisCarregarMateriais5 { @include settingsBoxImagem(65%, auto, 150px, 10px, auto) }
-#BbMateriaisCarregarMateriais6 { @include settingsBoxImagem(55%, 90px, 75px, auto, auto) }
-#BbMateriaisCarregarMateriais7 { @include settingsBoxImagem(45%, auto, auto, 20px, 60px) }
-#BbMateriaisCarregarMateriais8 { @include settingsBoxImagem(55%, auto, auto, 100px, -40px) }
-#BbMateriaisCarregarMateriais9 { @include settingsBoxImagem(50%, auto, 60px, 10px, auto) }
+#BbMateriaisCarregarMateriais1 { @include settingsBoxImagem(40%, 35px, auto, auto, -70px) }
+#BbMateriaisCarregarMateriais2 { @include settingsBoxImagem(45%, auto, auto, 20px, -70px) }
+#BbMateriaisCarregarMateriais3 { @include settingsBoxImagem(55%, auto, auto, 20px, -10px) }
+#BbMateriaisCarregarMateriais4 { @include settingsBoxImagem(40%, auto, auto, 20px, -50px) }
+#BbMateriaisCarregarMateriais5 { @include settingsBoxImagem(50%, auto, 180px, 30px, auto) }
+#BbMateriaisCarregarMateriais6 { @include settingsBoxImagem(35%, 170px, 60px, auto, auto) }
+#BbMateriaisCarregarMateriais7 { @include settingsBoxImagem(30%, auto, auto, 110px, 20px) }
+#BbMateriaisCarregarMateriais8 { @include settingsBoxImagem(40%, auto, auto, 90px, -40px) }
+#BbMateriaisCarregarMateriais9 { @include settingsBoxImagem(40%, auto, 80px, 60px, auto) }
 #BbMateriaisCarregarMateriais10 { @include settingsBoxImagem(45%, auto, auto, 20px, -70px) }
-#BbMateriaisCarregarMateriais11 { @include settingsBoxImagem(50%, 0px, 110px, auto, auto) }
+#BbMateriaisCarregarMateriais11 { @include settingsBoxImagem(45%, 20px, 100px, auto, auto) }
 #BbMateriaisCarregarMateriais12 { @include settingsBoxImagem(45%, auto, auto, 20px, -70px) }
-#BbMateriaisCarregarMateriais13 { @include settingsBoxImagem(45%, auto, auto, 0px, -45px) }
+#BbMateriaisCarregarMateriais13 { @include settingsBoxImagem(35%, auto, auto, 20px, -20px) }
 
 // Compartilhar materiais com os alunos
+#BbMateraisCompartilharMateriaisAlunos1 { @include settingsBoxImagem(40%, auto, 30px, 0, auto) }
+#BbMateraisCompartilharMateriaisAlunos2 { @include settingsBoxImagem(40%, auto, 120px, 0, auto) }
+#BbMateraisCompartilharMateriaisAlunos3 { @include settingsBoxImagem(60%, auto, auto, 0, -60px) }
+#BbMateraisCompartilharMateriaisAlunos4 { @include settingsBoxImagem(33%, auto, 50px, 40px, auto) }
+#BbMateraisCompartilharMateriaisAlunos5 { @include settingsBoxImagem(45%, auto, auto, 0, 0) }
+#BbMateraisCompartilharMateriaisAlunos6 { @include settingsBoxImagem(50%, auto, 15px, 0, auto) }
+#BbMateraisCompartilharMateriaisAlunos6b { @include settingsBoxImagem(40%, auto, 20px, 0, auto) }
+#BbMateraisCompartilharMateriaisAlunos7 { @include settingsBoxImagem(40%, auto, 170px, 0, auto) }
+#BbMateraisCompartilharMateriaisAlunos8 { @include settingsBoxImagem(40%, auto, 270px, 0, auto) }
+#BbMateraisCompartilharMateriaisAlunos9 { @include settingsBoxImagem(40%, auto, 420px, 0, auto) }
+#BbMateraisCompartilharMateriaisAlunos10 { @include settingsBoxImagem(40%, auto, auto, 0, 10px) }
+#BbMateraisCompartilharMateriaisAlunos11 { @include settingsBoxImagem(40%, auto, 80px, 0, auto) }
+#BbMateraisCompartilharMateriaisAlunos12 { @include settingsBoxImagem(50%, auto, auto, 10px, 40px) }
+#BbMateraisCompartilharMateriaisAlunos13 { @include settingsBoxImagem(56%, auto, 80px, 0, auto) }
+#BbMateraisCompartilharMateriaisAlunos14 { @include settingsBoxImagem(45%, auto, 0, 0, auto) }
+#BbMateraisCompartilharMateriaisAlunos15 { @include settingsBoxImagem(50%, auto, auto, 0, 40px) }
+#BbMateraisCompartilharMateriaisAlunos16 { @include settingsBoxImagem(40%, auto, auto, 20px, 40px) }
+#BbMateraisCompartilharMateriaisAlunos17 { @include settingsBoxImagem(40%, auto, 40px, 0, auto) }
+#BbMateraisCompartilharMateriaisAlunos18 { @include settingsBoxImagem(40%, auto, auto, 0, 90px) }
+#BbMateraisCompartilharMateriaisAlunos19 { @include settingsBoxImagem(40%, auto, 40px, 20px, auto) }
 
 // Alterar ou excluir um material compartilhado
+#BbMateriaisAlterarOuExcluir1 { @include settingsBoxImagem(30%, 160px, auto, auto, -50px) }
 
 // Aproveitar materiais de um curso para outro
+#BbMateriaisAproveitarMateriais1 { @include settingsBoxImagem(35%, auto, 110px, 30px, auto) }
+#BbMateriaisAproveitarMateriais2 { @include settingsBoxImagem(52%, auto, -20px, 20px, auto) }
+#BbMateriaisAproveitarMateriais3 { @include settingsBoxImagem(35%, auto, auto, 20px, 20px) }
+#BbMateriaisAproveitarMateriais4 { @include settingsBoxImagem(40%, auto, -20px, 20px, auto) }
+#BbMateriaisAproveitarMateriais5 { @include settingsBoxImagem(50%, auto, auto, 0, -80px) }
+
+
+// CATEGORIA: Comunicação e Interação
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// Enviar avisos aos alunos
+#BbComunicacaoEnviarAvisosAlunos1 { @include settingsBoxImagem(40%, auto, 25px, 0, auto) }
+#BbComunicacaoEnviarAvisosAlunos2 { @include settingsBoxImagem(35%, auto, 105px, 0, auto) }
+#BbComunicacaoEnviarAvisosAlunos3 { @include settingsBoxImagem(40%, 40px, auto, auto, 0) }
+#BbComunicacaoEnviarAvisosAlunos4 { @include settingsBoxImagem(30%, auto, 100px, 50px, auto) }
+#BbComunicacaoEnviarAvisosAlunos5 { @include settingsBoxImagem(40%, auto, 60px, 0, auto) }
+
+// Enviar email pelo ambiente
+#BbComunicacaoEnviarEmailAmb1 { @include settingsBoxImagem(55%, 25%, auto, auto, -90px) }
+
+// Criar fórum de discussão
+// @include                          settingsBoxImagem(width, left, top, right, bottom)
+#BbComunicacaoCriarForum1 { @include settingsBoxImagem(40%, auto, 0, 20px, auto) }
+#BbComunicacaoCriarForum2 { @include settingsBoxImagem(40%, auto, 20px, 20px, auto) }
+#BbComunicacaoCriarForum3 { @include settingsBoxImagem(40%, auto, 30px, 20px, auto) }
+#BbComunicacaoCriarForum4 { @include settingsBoxImagem(40%, auto, 50px, 20px, auto) }
+#BbComunicacaoCriarForum5 { @include settingsBoxImagem(50%, auto, 130px, 20px, auto) }
+#BbComunicacaoCriarForum6 { @include settingsBoxImagem(40%, auto, 20px, 0, auto) }
+#BbComunicacaoCriarForum7 { @include settingsBoxImagem(40%, auto, 130px, 0, auto) }
+#BbComunicacaoCriarForum8 { @include settingsBoxImagem(40%, auto, 260px, 0, auto) }
+#BbComunicacaoCriarForum9 { @include settingsBoxImagem(47%, auto, 40px, 20px, auto) }
+#BbComunicacaoCriarForum10 { @include settingsBoxImagem(45%, auto, auto, 0, 20px) }
+#BbComunicacaoCriarForum11 { @include settingsBoxImagem(39%, auto, 40px, 0, auto) }
+#BbComunicacaoCriarForum12 { @include settingsBoxImagem(40%, auto, 40px, 0, auto) }
+#BbComunicacaoCriarForum13 { @include settingsBoxImagem(58%, auto, auto, 0, 20px) }
