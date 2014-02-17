@@ -582,8 +582,10 @@ body {
         .boxDestaque {
             display: block;
             @include radius($meioGrid/5);
-            background-color: #e6e6e6;
-            border: 3px solid $corDefault;
+            // background-color: #e6e6e6;
+            // border: 3px solid $corDefault;
+            background-color: #fff;
+            border: 2px solid $corDefault;
             padding: $meioGrid / 2;
             p {
                 line-height: 1.5em;
