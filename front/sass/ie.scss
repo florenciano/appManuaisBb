@@ -5,6 +5,9 @@
 
 ================================================================== */
 
+@import "plugins/normalizr";
+@import "plugins/gridiculous";
+
 /////////////////////////////////////////////////////////////////////
 // Vars
 /////////////////////////////////////////////////////////////////////
@@ -554,8 +557,10 @@ button.close {
     .boxDestaque {
         display: block;
         @include radius($meioGrid/5);
-        background-color: #e6e6e6;
-        border: 3px solid $corDefault;
+        // background-color: #e6e6e6;
+        // border: 3px solid $corDefault;
+        background-color: #fff;
+        border: 2px solid $corDefault;
         padding: $meioGrid / 2;
         p {
             @include font(normal, 1.3em);
@@ -577,6 +582,15 @@ button.close {
             margin: 0;
             a { @include corLinkUpBox($corSec01); }
         }
+    }
+
+    .icos { margin: 0 .5em; } // ícones nos box de destaques
+    // textos em ênfase dentro dos boxes
+    .enfaseBox { 
+        color: #fff;
+        text-transform: uppercase;
+        background-color: $corDefault;
+        padding: 2px .5em;
     }
 }
 
@@ -791,6 +805,13 @@ button.close {
     *zoom: 1;
 }
 
+.fltLeft {
+    float: left;
+}
+
+.fltRight {
+    float: right;
+}
 /* $Helper classes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @import "layout/boxesIe";

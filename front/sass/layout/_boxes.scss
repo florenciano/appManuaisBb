@@ -68,7 +68,6 @@
     #BbMateriaisAproveitarMateriais4 { @include settingsBoxImagem(40%, auto, -20px, 20px, auto) }
     #BbMateriaisAproveitarMateriais5 { @include settingsBoxImagem(50%, auto, auto, 0, -80px) }
 
-
     // CATEGORIA: Comunicação e Interação
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
     // Enviar avisos aos alunos
@@ -162,7 +161,6 @@
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
     
     // Criar grupos
-    // @include                  settingsBoxImagem(width, left, top, right, bottom)
     #BbGruposCriarGrupos1 { @include settingsBoxImagem(35%, auto, 30px, 0, auto) }
     #BbGruposCriarGrupos2 { @include settingsBoxImagem(42%, auto, 150px, 0, auto) }
     #BbGruposCriarGrupos3 { @include settingsBoxImagem(40%, auto, auto, 0, 150px) }
@@ -175,6 +173,30 @@
     #BbGruposCriarGrupos10 { @include settingsBoxImagem(33%, auto, 30px, 0, auto) }
     #BbGruposCriarGrupos11 { @include settingsBoxImagem(42%, auto, auto, 0, 250px) }
     #BbGruposCriarGrupos12 { @include settingsBoxImagem(48%, auto, auto, 0, 130px) }
+
+    // CATEGORIA: Testes e pesquisas
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    
+    // Criar ou alterar testes com nota
+    // @include                               settingsBoxImagem(W%,  l,   t,   r,   b)
+    #BbTesPesquisaCriarTesComNota1 { @include settingsBoxImagem(31%, auto, 85px, 0, auto) }
+    #BbTesPesquisaCriarTesComNota2 { @include settingsBoxImagem(47%, auto, auto, 0, 0) }
+    #BbTesPesquisaCriarTesComNota3 { @include settingsBoxImagem(54%, auto, 60px, 0, auto) }
+    #BbTesPesquisaCriarTesComNota4 { @include settingsBoxImagem(35%, 0, 0, auto, auto) }
+    #BbTesPesquisaCriarTesComNota5 { @include settingsBoxImagem(27%, 34%, auto, auto, -70px) }
+    #BbTesPesquisaCriarTesComNota6 { @include settingsBoxImagem(27%, auto, 45px, 0, auto) }
+    #BbTesPesquisaCriarTesComNota7 { @include settingsBoxImagem(37%, auto, 120px, 0, auto) }
+    #BbTesPesquisaCriarTesComNota8 { @include settingsBoxImagem(40%, auto, 40px, 0, auto) }
+    #BbTesPesquisaCriarTesComNota9 { @include settingsBoxImagem(33%, auto, auto, 25%, 30%) }
+    #BbTesPesquisaCriarTesComNota10 { @include settingsBoxImagem(40%, auto, 0, 0, auto) }
+    #BbTesPesquisaCriarTesComNota11 { @include settingsBoxImagem(40%, auto, 25%, 0, auto) }
+    #BbTesPesquisaCriarTesComNota12 { @include settingsBoxImagem(34%, auto, auto, 0, 15%) }
+    #BbTesPesquisaCriarTesComNota13 { @include settingsBoxImagem(36%, auto, auto, 0, 0) }
+    #BbTesPesquisaCriarTesComNota14 { @include settingsBoxImagem(40%, auto, 21%, 0, auto) }
+    #BbTesPesquisaCriarTesComNota15 { @include settingsBoxImagem(38%, auto, 30%, 0, auto) }
+    #BbTesPesquisaCriarTesComNota16 { @include settingsBoxImagem(50%, auto, 30%, 0, auto) }
+    #BbTesPesquisaCriarTesComNota17 { @include settingsBoxImagem(31%, auto, 35%, 0, auto) }
+    #BbTesPesquisaCriarTesComNota18 { @include settingsBoxImagem(54%, auto, auto, 0, 25%) }
 
 }
 
@@ -336,7 +358,6 @@
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
     
     // Criar grupos
-    // @include                  settingsBoxImagem(width, left, top, right, bottom)
     #BbGruposCriarGrupos1 { @include settingsBoxImagem(35%, auto, 0, 0, auto) }
     #BbGruposCriarGrupos2 { @include settingsBoxImagem(46%, auto, 90px, 0, auto) }
     #BbGruposCriarGrupos3 { @include settingsBoxImagem(40%, auto, auto, 0, 120px) }
@@ -349,5 +370,29 @@
     #BbGruposCriarGrupos10 { @include settingsBoxImagem(47%, auto, 0, 0, auto) }
     #BbGruposCriarGrupos11 { @include settingsBoxImagem(46%, auto, auto, 0, 180px) }
     #BbGruposCriarGrupos12 { @include settingsBoxImagem(37%, auto, auto, 0, 80px) }
+
+    // CATEGORIA: Testes e pesquisas
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    
+    // Criar ou alterar testes com nota
+    // @include                               settingsBoxImagem(W%,  l,   t,   r,   b)
+    #BbTesPesquisaCriarTesComNota1 { @include settingsBoxImagem(45%, auto, 10px, 0, auto) }
+    #BbTesPesquisaCriarTesComNota2 { @include settingsBoxImagem(47%, auto, auto, 0, 0) }
+    #BbTesPesquisaCriarTesComNota3 { @include settingsBoxImagem(54%, auto, 60px, 0, auto) }
+    #BbTesPesquisaCriarTesComNota4 { @include settingsBoxImagem(46%, 0, 45px, auto, auto) }
+    #BbTesPesquisaCriarTesComNota5 { @include settingsBoxImagem(40%, 34%, auto, auto, -80px) }
+    #BbTesPesquisaCriarTesComNota6 { @include settingsBoxImagem(44%, auto, 45px, 0, auto) }
+    #BbTesPesquisaCriarTesComNota7 { @include settingsBoxImagem(37%, auto, 80px, 0, auto) }
+    #BbTesPesquisaCriarTesComNota8 { @include settingsBoxImagem(40%, auto, 40px, 0, auto) }
+    #BbTesPesquisaCriarTesComNota9 { @include settingsBoxImagem(33%, auto, auto, 25%, 10%) }
+    #BbTesPesquisaCriarTesComNota10 { @include settingsBoxImagem(45%, auto, -20px, 0, auto) }
+    #BbTesPesquisaCriarTesComNota11 { @include settingsBoxImagem(45%, auto, 25%, 0, auto) }
+    #BbTesPesquisaCriarTesComNota12 { @include settingsBoxImagem(45%, auto, auto, 0, 10%) }
+    #BbTesPesquisaCriarTesComNota13 { @include settingsBoxImagem(45%, auto, auto, 0, -30px) }
+    #BbTesPesquisaCriarTesComNota14 { @include settingsBoxImagem(52%, auto, 21%, 0, auto) }
+    #BbTesPesquisaCriarTesComNota15 { @include settingsBoxImagem(53%, auto, 30%, 0, auto) }
+    #BbTesPesquisaCriarTesComNota16 { @include settingsBoxImagem(59%, auto, 30%, 0, auto) }
+    #BbTesPesquisaCriarTesComNota17 { @include settingsBoxImagem(40%, auto, 35%, 0, auto) }
+    #BbTesPesquisaCriarTesComNota18 { @include settingsBoxImagem(54%, auto, auto, 0, 15%) }
 
 }

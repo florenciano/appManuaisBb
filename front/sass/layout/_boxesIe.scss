@@ -2,7 +2,7 @@
    
     COORDENADAS DAS POSIÇÕES DOS BOXES SOBRE AS IMAGENS DO MANUAL
     Exclusivo para validação em Internet Explorer 8
-    Copie as info do arquivo 'box.scss'.
+    Copie as info do arquivo 'boxes.scss'.
 
 ================================================================== */
 
@@ -64,7 +64,6 @@
 #BbMateriaisAproveitarMateriais4 { @include settingsBoxImagem(40%, auto, -20px, 20px, auto) }
 #BbMateriaisAproveitarMateriais5 { @include settingsBoxImagem(50%, auto, auto, 0, -80px) }
 
-
 // CATEGORIA: Comunicação e Interação
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 // Enviar avisos aos alunos
@@ -78,7 +77,6 @@
 #BbComunicacaoEnviarEmailAmb1 { @include settingsBoxImagem(55%, 25%, auto, auto, -90px) }
 
 // Criar fórum de discussão
-// @include                          settingsBoxImagem(width, left, top, right, bottom)
 #BbComunicacaoCriarForum1 { @include settingsBoxImagem(40%, auto, 0, 20px, auto) }
 #BbComunicacaoCriarForum2 { @include settingsBoxImagem(40%, auto, 20px, 20px, auto) }
 #BbComunicacaoCriarForum3 { @include settingsBoxImagem(40%, auto, 30px, 20px, auto) }
@@ -92,3 +90,106 @@
 #BbComunicacaoCriarForum11 { @include settingsBoxImagem(39%, auto, 40px, 0, auto) }
 #BbComunicacaoCriarForum12 { @include settingsBoxImagem(40%, auto, 40px, 0, auto) }
 #BbComunicacaoCriarForum13 { @include settingsBoxImagem(58%, auto, auto, 0, 20px) }
+
+// Criar blog
+#BbComunicacaoCriarBlog1 { @include settingsBoxImagem(40%, auto, auto, 0, 20px) }
+#BbComunicacaoCriarBlog2 { @include settingsBoxImagem(40%, auto, auto, 0, 40px) }
+#BbComunicacaoCriarBlog3 { @include settingsBoxImagem(40%, auto, auto, 0, 40px) }
+#BbComunicacaoCriarBlog4 { @include settingsBoxImagem(36%, auto, auto, 60px, 0) }
+#BbComunicacaoCriarBlog5 { @include settingsBoxImagem(25%, auto, 40px, 10%, auto) }
+#BbComunicacaoCriarBlog6 { @include settingsBoxImagem(26%, auto, auto, 0, 0) }
+#BbComunicacaoCriarBlog7 { @include settingsBoxImagem(40%, auto, 80px, 0, auto) }
+#BbComunicacaoCriarBlog8 { @include settingsBoxImagem(25%, auto, auto, 40px, 0) }
+#BbComunicacaoCriarBlog9 { @include settingsBoxImagem(35%, auto, auto, 0, 80px) }
+#BbComunicacaoCriarBlog10 { @include settingsBoxImagem(40%, 20px, 200px, auto, auto) }
+#BbComunicacaoCriarBlog11 { @include settingsBoxImagem(40%, auto, auto, 0, 0) }
+
+// Criar wiki
+#BbComunicacaoCriarWiki1 { @include settingsBoxImagem(40%, auto, auto, 0, 20px) }
+#BbComunicacaoCriarWiki2 { @include settingsBoxImagem(31%, auto, auto, 30px, 60px) }
+#BbComunicacaoCriarWiki3 { @include settingsBoxImagem(35%, auto, auto, 0, 20px) }
+#BbComunicacaoCriarWiki4 { @include settingsBoxImagem(35%, auto, auto, 40px, 0) }
+#BbComunicacaoCriarWiki5 { @include settingsBoxImagem(26%, auto, auto, 0, 15px) }
+#BbComunicacaoCriarWiki6 { @include settingsBoxImagem(43%, auto, auto, 0, 180px) }
+#BbComunicacaoCriarWiki7 { @include settingsBoxImagem(46%, auto, 100px, 0, auto) }
+#BbComunicacaoCriarWiki8 { @include settingsBoxImagem(45%, auto, auto, 0, -60px) }
+#BbComunicacaoCriarWiki9 { @include settingsBoxImagem(40%, auto, auto, 10%, 35%) }
+#BbComunicacaoCriarWiki10 { @include settingsBoxImagem(40%, auto, auto, 40px, 10%) }
+
+// Criar diário
+#BbComunicacaoCriarDiario1 { @include settingsBoxImagem(40%, auto, auto, 0, 0) }
+#BbComunicacaoCriarDiario2 { @include settingsBoxImagem(40%, auto, 40px, 0, auto) }
+#BbComunicacaoCriarDiario3 { @include settingsBoxImagem(32%, 40%, auto, auto, 30px) }
+#BbComunicacaoCriarDiario4 { @include settingsBoxImagem(40%, auto, auto, 0, 0) }
+#BbComunicacaoCriarDiario5 { @include settingsBoxImagem(25%, auto, 30px, 40px, auto) }
+#BbComunicacaoCriarDiario6 { @include settingsBoxImagem(26%, auto, auto, 40px, 0) }
+#BbComunicacaoCriarDiario7 { @include settingsBoxImagem(35%, auto, 25%, 0, auto) }
+#BbComunicacaoCriarDiario8 { @include settingsBoxImagem(20%, auto, auto, 40px, -20px) }
+#BbComunicacaoCriarDiario9 { @include settingsBoxImagem(34%, auto, auto, 0, 30%) }
+#BbComunicacaoCriarDiario10 { @include settingsBoxImagem(40%, 20px, 50%, auto, auto) }
+#BbComunicacaoCriarDiario11 { @include settingsBoxImagem(40%, auto, auto, 5%, -40px) }
+
+// CATEGORIA: Trabalhos
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+// Receber trabalhos com verificação de plágio (SafeAssignment)
+#BbTrabalhosRecTrabSemPlagio1 { @include settingsBoxImagem(42%, auto, auto, 0, 40px) }
+#BbTrabalhosRecTrabSemPlagio2 { @include settingsBoxImagem(40%, auto, 30%, 0, auto) }
+#BbTrabalhosRecTrabSemPlagio3 { @include settingsBoxImagem(30%, auto, auto, 0, 0) }
+#BbTrabalhosRecTrabSemPlagio4 { @include settingsBoxImagem(40%, auto, auto, 0, 40%) }
+#BbTrabalhosRecTrabSemPlagio5 { @include settingsBoxImagem(45%, auto, auto, 0, 25%) }
+#BbTrabalhosRecTrabSemPlagio6 { @include settingsBoxImagem(60%, 23%, auto, auto, -70px) }
+
+// Receber trabalhos com verificação de plágio (Exercício)
+#BbTrabalhosRecTrabComPlagio1 { @include settingsBoxImagem(50%, auto, auto, 0, -20px) }
+#BbTrabalhosRecTrabComPlagio2 { @include settingsBoxImagem(25%, auto, 30px, 40px, auto) }
+#BbTrabalhosRecTrabComPlagio3 { @include settingsBoxImagem(26%, auto, auto, 0, 80px) }
+#BbTrabalhosRecTrabComPlagio4 { @include settingsBoxImagem(54%, auto, 40px, 0, auto) }
+#BbTrabalhosRecTrabComPlagio5 { @include settingsBoxImagem(42%, auto, auto, 0, 70px) }
+#BbTrabalhosRecTrabComPlagio6 { @include settingsBoxImagem(59%, 20%, auto, auto, -100px) }
+
+// Submeter arquivos para verificação de plágio ou criar base de comparação (SafeAssign)
+#BbMateriaisCarregarMateriais1 { @include settingsBoxImagem(60%, auto, auto, 20%, -150px) }
+#BbMateriaisCarregarMateriais2 { @include settingsBoxImagem(52%, auto, auto, 24%, -150px) }
+
+
+// CATEGORIA: Grupos
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+// Criar grupos
+#BbGruposCriarGrupos1 { @include settingsBoxImagem(35%, auto, 30px, 0, auto) }
+#BbGruposCriarGrupos2 { @include settingsBoxImagem(42%, auto, 150px, 0, auto) }
+#BbGruposCriarGrupos3 { @include settingsBoxImagem(40%, auto, auto, 0, 150px) }
+#BbGruposCriarGrupos4 { @include settingsBoxImagem(40%, auto, auto, 0, 0) }
+#BbGruposCriarGrupos5 { @include settingsBoxImagem(45%, auto, auto, 0, 0) }
+#BbGruposCriarGrupos6 { @include settingsBoxImagem(44%, 0, auto, 0, 20px) }
+#BbGruposCriarGrupos7 { @include settingsBoxImagem(33%, auto, 30px, 0, auto) }
+#BbGruposCriarGrupos8 { @include settingsBoxImagem(43%, auto, auto, 0, 260px) }
+#BbGruposCriarGrupos9 { @include settingsBoxImagem(39%, auto, auto, 0, 50%) }
+#BbGruposCriarGrupos10 { @include settingsBoxImagem(33%, auto, 30px, 0, auto) }
+#BbGruposCriarGrupos11 { @include settingsBoxImagem(42%, auto, auto, 0, 250px) }
+#BbGruposCriarGrupos12 { @include settingsBoxImagem(48%, auto, auto, 0, 130px) }
+
+// CATEGORIA: Testes e pesquisas
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+// Criar ou alterar testes com nota
+// @include                               settingsBoxImagem(W%,  l,   t,   r,   b)
+#BbTesPesquisaCriarTesComNota1 { @include settingsBoxImagem(31%, auto, 85px, 0, auto) }
+#BbTesPesquisaCriarTesComNota2 { @include settingsBoxImagem(47%, auto, auto, 0, 0) }
+#BbTesPesquisaCriarTesComNota3 { @include settingsBoxImagem(54%, auto, 60px, 0, auto) }
+#BbTesPesquisaCriarTesComNota4 { @include settingsBoxImagem(35%, 0, 0, auto, auto) }
+#BbTesPesquisaCriarTesComNota5 { @include settingsBoxImagem(27%, 34%, auto, auto, -70px) }
+#BbTesPesquisaCriarTesComNota6 { @include settingsBoxImagem(27%, auto, 45px, 0, auto) }
+#BbTesPesquisaCriarTesComNota7 { @include settingsBoxImagem(37%, auto, 120px, 0, auto) }
+#BbTesPesquisaCriarTesComNota8 { @include settingsBoxImagem(40%, auto, 40px, 0, auto) }
+#BbTesPesquisaCriarTesComNota9 { @include settingsBoxImagem(33%, auto, auto, 25%, 30%) }
+#BbTesPesquisaCriarTesComNota10 { @include settingsBoxImagem(40%, auto, 0, 0, auto) }
+#BbTesPesquisaCriarTesComNota11 { @include settingsBoxImagem(40%, auto, 25%, 0, auto) }
+#BbTesPesquisaCriarTesComNota12 { @include settingsBoxImagem(34%, auto, auto, 0, 15%) }
+#BbTesPesquisaCriarTesComNota13 { @include settingsBoxImagem(36%, auto, auto, 0, 0) }
+#BbTesPesquisaCriarTesComNota14 { @include settingsBoxImagem(40%, auto, 21%, 0, auto) }
+#BbTesPesquisaCriarTesComNota15 { @include settingsBoxImagem(38%, auto, 30%, 0, auto) }
+#BbTesPesquisaCriarTesComNota16 { @include settingsBoxImagem(50%, auto, 30%, 0, auto) }
+#BbTesPesquisaCriarTesComNota17 { @include settingsBoxImagem(31%, auto, 35%, 0, auto) }
+#BbTesPesquisaCriarTesComNota18 { @include settingsBoxImagem(54%, auto, auto, 0, 25%) }

@@ -609,6 +609,13 @@ body {
             }
         }
         .icos { margin: 0 .5em; } // ícones nos box de destaques
+        // textos em ênfase dentro dos boxes
+        .enfaseBox { 
+            color: #fff;
+            text-transform: uppercase;
+            background-color: $corDefault;
+            padding: 2px .5em;
+        } 
     }
 
     // saiba mais
@@ -958,4 +965,12 @@ body {
 
 .fix {
     *zoom: 1;
+}
+
+.fltLeft {
+    float: left;
+}
+
+.fltRight {
+    float: right;
 }
