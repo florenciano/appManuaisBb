@@ -243,7 +243,7 @@
                         <div class="cabecalho fix">
                             <p>
                                 <!-- adicionar a data da produção do material -->
-                                <span><strong>Atualizado: </strong>10/02/2014</span>
+                                <span><strong>Atualizado: </strong>23/02/2014</span>
                             </p>
                         </div>
                         <hr>
@@ -262,7 +262,7 @@
                     1- Texto do título h1 é o mesmo do 'p' da div.breadcrumb;
                     2- div.sumario aparece logo depois da introdução do texto 'quando houver' e serve para listar todos os subtítulos da página definidos pela tag 'h2';
                     3- toda tag 'h2' receberá esta sintaxe:
-                    '<h2><a name="Titulo1" class="ancora"></a>Texto aqui</h2>'
+                    '<h2 id="subTituloX">Texto aqui</h2>'
                     É necessário adicionar um número identificador na âncora;
 
                      -->
@@ -271,9 +271,9 @@
                         <h1>
                             Importar testes e pesquisas do Word
                         </h1>
-                        <p>Para compartilhar materiais nas disciplinas é importante ter em mente quais arquivos são específicos da disciplina e não se repetirão em disciplinas futuras (plano de aula, por exemplo) e quais arquivos podem ser reutilizados em diferentes turmas/disciplinas, como estudos de caso, artigos etc.</p>
+                        <p>Se você tiver um grande volume de testes criados em um documento de texto, talvez seja mais fácil importá-los no Blackboard do que inseri-los um a um.</p>
+                        <p>O processo de importação é um pouco trabalhoso, por isso, se a quantidade de perguntas não for grande, recomendamos o processo tradicional de criação de teste.</p>
 
-                        <div class="margemParaImagem" style="margin-top:20px"></div>
 
                         <div class="sumario row">
                             <h3 id="sumarioAncora">Sumário</h3>
@@ -298,17 +298,175 @@
 
                         -->
 
+                        <h2 id="subTitulo1">Formatação do documento</h2>
+                        <p>Prepare as questões:</p>
                         <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/materiais/carregar-materiais-no-ambiente-virtual/step1.png" alt="" class="">
-                            <div class="boxDestaque" id="BbMateriaisCarregarMateriais1">
-                                <p>Carregue os materiais pasta <strong>Meus Conteúdos</strong>. Essa pasta é individual e não tem vínculo com qualquer disciplina.</p>
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/importar-testes-e-pesquisas-do-word/step1.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTesPesquisaImportarWord1">
+                                <div class="row fltLeft" style="margin-bottom:5px">
+                                    <div class="c3">
+                                        <img src="../../../img/Blackboard/testes-e-pesquisas/importar-testes-e-pesquisas-do-word/step1a.png" alt="">
+                                    </div>
+                                    <div class="c9">
+                                        <p>Defina a pontuação separando os decimais com <span class="enfaseBox">.</span> <strong>(opcional)</strong></p>
+                                    </div>
+                                </div>
+
+                                <div class="row fltLeft" style="margin-bottom:5px">
+                                    <div class="c3">
+                                        <img src="../../../img/Blackboard/testes-e-pesquisas/importar-testes-e-pesquisas-do-word/step1b.png" alt="">
+                                    </div>
+                                    <div class="c9">
+                                        <p>Escreva o enunciado enumerando com <span class="enfaseBox">.</span> ou <span class="enfaseBox">&#41;</span> (com espaço)</p>
+                                    </div>
+                                </div>
+
+                                <div class="row fltLeft" style="margin-bottom:5px">
+                                    <div class="c3">
+                                        <img src="../../../img/Blackboard/testes-e-pesquisas/importar-testes-e-pesquisas-do-word/step1c.png" alt="">
+                                    </div>
+                                    <div class="c9">
+                                        <p>Escreva o feedback correto após <span class="enfaseBox">&#126;</span> e o incorreto após <span class="enfaseBox">&#64;</span> (com espaço) <strong>(opcional)</strong></p>
+                                    </div>
+                                </div>
+
+                                <div class="row fltLeft" style="margin-bottom:5px">
+                                    <div class="c3">
+                                        <img src="../../../img/Blackboard/testes-e-pesquisas/importar-testes-e-pesquisas-do-word/step1d.png" alt="">
+                                    </div>
+                                    <div class="c9">
+                                        <p>Liste as alternativas enumerando com <span class="enfaseBox">.</span> ou <span class="enfaseBox">&#41;</span> (com espaço) e indique a correta com um <span class="enfaseBox">&#42;</span> (sem espaço)</p>
+                                    </div>
+                                </div>
+
+                                <div class="row fltLeft">
+                                    <div class="c3">
+                                        <img src="../../../img/Blackboard/testes-e-pesquisas/importar-testes-e-pesquisas-do-word/step1e.png" alt="">
+                                    </div>
+                                    <div class="c9">
+                                        <p>Deixe um parágrafo vazio entre as perguntas</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="boxDestaqueAdicional" id="BbMateriaisCarregarMateriais2">
-                                <p>Para facilitar a organização dos arquivos, separe-os em pastas e subpastas. Um exemplo é dividir os materiais em categorias: exercícios, casos, apresentações de slides etc.</p>
+
+                            <div class="boxDestaqueAdicional" id="BbTesPesquisaImportarWord2">
+                                <p>Fique atento aos espaços que devem ser dados entre os caracteres:</p>
+                                <p><img src="../../../img/Blackboard/testes-e-pesquisas/importar-testes-e-pesquisas-do-word/step2.png" alt=""></p>
                             </div>
                         </div>
 
-                        <div class="margemParaImagem" style="margin-top:110px"></div>
+                        <div class="margemParaImagem" style="margin-top:200px"></div>
+
+                        <h2 id="subTitulo2">Tipos de pergunta</h2>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/importar-testes-e-pesquisas-do-word/step3.png" alt="" class="">
+                            <div class="boxDestaque" id="BbTesPesquisaImportarWord3">
+                                <p>Para exibir feedbacks individuais por alternativa, escreva-os imediatamente após a alternativa seguidos do símbolo &#64; (com espaço):</p>
+                                <ul>
+                                    <li>3. Pergunta?</li>
+                                    <li>a. alternativa</li>
+                                    <li>&#64; Feedback para alternativa a.</li>
+                                    <li>&#42;b. alternativa correta</li>
+                                    <li>&#64; Feedback para alternativa b.</li>
+                                    <li>c. alternativa</li>
+                                    <li>&#64; Feedback para alternativa c.</li>
+                                </ul>
+                            </div>
+
+                            <div class="boxDestaqueAdicional" id="BbTesPesquisaImportarWord4">
+                                <p>O arquivo com as questões deve ser salvo em um dos seguintes formatos:</p>
+                                <ul>
+                                    <li>rich-text (.rtf)</li>
+                                    <li>texto (.txt)</li>
+                                    <li>Microsoft Word (.doc ou .docx)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:280px"></div>
+
+                        <h2 id="subTitulo3">Instalação do aplicativo</h2>
+                        <p>O Blackboard não reconhece os arquivos de texto na importação dos testes. Por isso, é necessário utilizar um programa que irá ler o documento com as questões e convertê-lo para um formato aceito.</p>
+                        <p>Dentre os programas disponíveis, indicamos o <em>Respondus</em>. A versão <em>trial</em> pode ser baixada gratuitamente no endereço: <a href="http://www.respondus.com/" target="_blank">http://www.respondus.com/</a> e utilizada por 30 dias.</p>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/importar-testes-e-pesquisas-do-word/step4.png" alt="" class="imgLeft">
+                        </div>
+
+                         <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                         <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/importar-testes-e-pesquisas-do-word/step5.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTesPesquisaImportarWord5">
+                                <p>Siga corretamente as instruções de instalação.</p>
+                                <p>Se estiver nas dependências do Insper, talvez seja necessário solicitar ao <em>Help-Desk</em> que instale o programa, devido às restrições de acesso.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <h2 id="subTitulo4">Geração do arquivo de importação</h2>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/importar-testes-e-pesquisas-do-word/step6.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTesPesquisaImportarWord6">
+                                <p>No primeiro acesso será solicitada a senha enviada por e-mail.</p>
+                                <p>Nos demais acessos, basta clicar em <strong>Continue 30-day Trial</strong>.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/importar-testes-e-pesquisas-do-word/step7.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTesPesquisaImportarWord7">
+                                <p>Marque a opção <strong>Exam</strong> para criar testes e <strong>Survey</strong> para criar pesquisas.</p>
+                            </div>
+                            <div class="boxDestaqueAdicional" id="BbTesPesquisaImportarWord8">
+                                <p>Se na visualização você identificar erros, corrija o documento de texto e repita os procedimentos.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/importar-testes-e-pesquisas-do-word/step8.png" alt="" class="imgLeft">
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/importar-testes-e-pesquisas-do-word/step9.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTesPesquisaImportarWord9">
+                                <p>Escolha a opção de <strong>Pool</strong> para exportação em um <strong>Banco de testes</strong> ou escolha <strong>Test with points</strong> para Testes e <strong>Survey - no points</strong> no caso de Pesquisas.</p>
+                            </div>
+                            <div class="boxDestaque" id="BbTesPesquisaImportarWord10">
+                                <p>Um arquivo no formato .zip será gerado no local indicado.</p>
+                                <p>É esse arquivo compactado que será importado no Blackboard.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <h2 id="subTitulo5">Importação do arquivo de questões</h2>
+                        <p>Para importar testes de um arquivo de texto:</p>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/importar-testes-e-pesquisas-do-word/step10.png" alt="" class="imgLeft">
+                            <div class="boxDestaqueAdicional" id="BbTesPesquisaImportarWord11">
+                                <p>Se no <strong>Respondus</strong> você escolheu a opção de <strong>Pool</strong>, faça a importação pelo <strong>Banco de testes</strong>.</p>
+                                <p>Caso contrário, clique em <strong>Testes</strong> ou <strong>Pesquisas</strong>, a depender da sua escolha.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/importar-testes-e-pesquisas-do-word/step11.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTesPesquisaImportarWord12">
+                                <p>Para visualizar o resultado e fazer alterações tanto nas perguntas quanto no teste, clique em <strong>Editar</strong>.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:150px"></div>
 
                         <!-- 
                         

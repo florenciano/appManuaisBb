@@ -302,7 +302,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"Criar ou alterar pesquisas (sem nota)", 
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/criar-ou-alterar-testes-sem-nota/",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/criar-ou-alterar-pesquisas-sem-nota/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{
@@ -347,7 +347,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	},
 	{
 		"manual"	: 	"Criar ou alterar pesquisas (sem nota)", 
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/criar-ou-alterar-testes-sem-nota/",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/criar-ou-alterar-pesquisas-sem-nota/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
@@ -362,7 +362,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	},
 	{
 		"manual"	: 	"Criar ou alterar pesquisas (sem nota)", 
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/criar-ou-alterar-testes-sem-nota/",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/criar-ou-alterar-pesquisas-sem-nota/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{

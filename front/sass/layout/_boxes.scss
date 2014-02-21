@@ -178,7 +178,6 @@
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
     
     // Criar ou alterar testes com nota
-    // @include                               settingsBoxImagem(W%,  l,   t,   r,   b)
     #BbTesPesquisaCriarTesComNota1 { @include settingsBoxImagem(31%, auto, 85px, 0, auto) }
     #BbTesPesquisaCriarTesComNota2 { @include settingsBoxImagem(47%, auto, auto, 0, 0) }
     #BbTesPesquisaCriarTesComNota3 { @include settingsBoxImagem(54%, auto, 60px, 0, auto) }
@@ -197,6 +196,60 @@
     #BbTesPesquisaCriarTesComNota16 { @include settingsBoxImagem(50%, auto, 30%, 0, auto) }
     #BbTesPesquisaCriarTesComNota17 { @include settingsBoxImagem(31%, auto, 35%, 0, auto) }
     #BbTesPesquisaCriarTesComNota18 { @include settingsBoxImagem(54%, auto, auto, 0, 25%) }
+    #BbTesPesquisaCriarTesComNota19 { @include settingsBoxImagem(27%, auto, auto, 0, 0) }
+    #BbTesPesquisaCriarTesComNota20 { @include settingsBoxImagem(41%, auto, auto, 0, 25%) }
+    #BbTesPesquisaCriarTesComNota21 { @include settingsBoxImagem(61%, auto, auto, 15%, -80px) }
+    #BbTesPesquisaCriarTesComNota22 { @include settingsBoxImagem(26%, auto, auto, 0, 0) }
+    #BbTesPesquisaCriarTesComNota23 { @include settingsBoxImagem(54%, auto, 70px, 0, auto) }
+
+    // Criar ou alterar pesquisas sem nota
+    #BbTesPesquisaCriarPesSemNota1 { @include settingsBoxImagem(30%, auto, 0, 0, auto) }
+    #BbTesPesquisaCriarPesSemNota2 { @include settingsBoxImagem(34%, auto, 50%, 0, auto) }
+    #BbTesPesquisaCriarPesSemNota3 { @include settingsBoxImagem(42%, auto, 0, 0, auto) }
+    #BbTesPesquisaCriarPesSemNota4 { @include settingsBoxImagem(25%, auto, 40px, 0, auto) }
+    #BbTesPesquisaCriarPesSemNota5 { @include settingsBoxImagem(33%, auto, auto, 0, 40px) }
+    #BbTesPesquisaCriarPesSemNota6 { @include settingsBoxImagem(51%, auto, 0, 0, auto) }
+    #BbTesPesquisaCriarPesSemNota7 { @include settingsBoxImagem(44%, auto, 25%, 0, auto) }
+    #BbTesPesquisaCriarPesSemNota8 { @include settingsBoxImagem(34%, auto, auto, 0, 18%) }
+    #BbTesPesquisaCriarPesSemNota9 { @include settingsBoxImagem(36%, auto, auto, 0, 0) }
+    #BbTesPesquisaCriarPesSemNota10 { @include settingsBoxImagem(36%, auto, 40px, 0, auto) }
+    #BbTesPesquisaCriarPesSemNota11 { @include settingsBoxImagem(38%, auto, auto, 0, 180px) }
+    #BbTesPesquisaCriarPesSemNota12 { @include settingsBoxImagem(31%, auto, 40px, 0, auto) }
+    #BbTesPesquisaCriarPesSemNota13 { @include settingsBoxImagem(38%, auto, auto, 0, 20%) }
+    #BbTesPesquisaCriarPesSemNota14 { @include settingsBoxImagem(31%, auto, auto, 0, 0) }
+    #BbTesPesquisaCriarPesSemNota15 { @include settingsBoxImagem(40%, auto, 90px, 0, auto) }
+    #BbTesPesquisaCriarPesSemNota16 { @include settingsBoxImagem(33%, auto, auto, 0, 0) }
+    #BbTesPesquisaCriarPesSemNota17 { @include settingsBoxImagem(33%, auto, auto, 0, 100px) }
+    #BbTesPesquisaCriarPesSemNota18 { @include settingsBoxImagem(33%, auto, auto, 0, 0) }
+    #BbTesPesquisaCriarPesSemNota19 { @include settingsBoxImagem(33%, auto, auto, 33%, -60px) }
+    #BbTesPesquisaCriarPesSemNota20 { @include settingsBoxImagem(33%, auto, auto, 180px, 40%) }
+    #BbTesPesquisaCriarPesSemNota21 { @include settingsBoxImagem(38%, auto, auto, 0, 40px) }
+    #BbTesPesquisaCriarPesSemNota22 { @include settingsBoxImagem(33%, auto, auto, 0, 0) }
+    #BbTesPesquisaCriarPesSemNota23 { @include settingsBoxImagem(35%, auto, 0, 0, auto) }
+    #BbTesPesquisaCriarPesSemNota24 { @include settingsBoxImagem(33%, auto, auto, 40px, 0) }
+    #BbTesPesquisaCriarPesSemNota25 { @include settingsBoxImagem(24%, auto, auto, 70px, 50px) }
+    #BbTesPesquisaCriarPesSemNota26 { @include settingsBoxImagem(37%, auto, 0, 0, auto) }
+    #BbTesPesquisaCriarPesSemNota27 { @include settingsBoxImagem(47%, auto, auto, 0, 80px) }
+    #BbTesPesquisaCriarPesSemNota28 { @include settingsBoxImagem(40%, auto, auto, 0, 80px) }
+    #BbTesPesquisaCriarPesSemNota29 { @include settingsBoxImagem(47%, auto, auto, 0, 80px) }
+    #BbTesPesquisaCriarPesSemNota30 { @include settingsBoxImagem(47%, auto, auto, 0, 80px) }
+    #BbTesPesquisaCriarPesSemNota31 { @include settingsBoxImagem(41%, auto, auto, 0, 80px) }
+    #BbTesPesquisaCriarPesSemNota32 { @include settingsBoxImagem(35%, auto, auto, 0, 80px) }
+
+    // Importar testes e pesquisas do word
+    // @include                           settingsBoxImagem(W%,  l,   t,   r,   b)
+    #BbTesPesquisaImportarWord1 { @include settingsBoxImagem(48%, auto, 0, 0, auto) }
+    #BbTesPesquisaImportarWord2 { @include settingsBoxImagem(60%, auto, auto, 15%, -160px) }
+    #BbTesPesquisaImportarWord3 { @include settingsBoxImagem(42%, 5%, auto, auto, -240px) }
+    #BbTesPesquisaImportarWord4 { @include settingsBoxImagem(36%, auto, auto, 15%, -180px) }
+    #BbTesPesquisaImportarWord5 { @include settingsBoxImagem(44%, auto, 40%, 0, auto) }
+    #BbTesPesquisaImportarWord6 { @include settingsBoxImagem(31%, auto, 130px, 18%, auto) }
+    #BbTesPesquisaImportarWord7 { @include settingsBoxImagem(34%, 5%, 130px, auto, auto) }
+    #BbTesPesquisaImportarWord8 { @include settingsBoxImagem(44%, 5%, auto, auto, 30px) }
+    #BbTesPesquisaImportarWord9 { @include settingsBoxImagem(48%, auto, 20%, 0, auto) }
+    #BbTesPesquisaImportarWord10 { @include settingsBoxImagem(30%, auto, auto, 60px, 20%) }
+    #BbTesPesquisaImportarWord11 { @include settingsBoxImagem(42%, auto, 40%, 0, auto) }
+    #BbTesPesquisaImportarWord12 { @include settingsBoxImagem(45%, auto, auto, 31%, -80px) }
 
 }
 
@@ -394,5 +447,62 @@
     #BbTesPesquisaCriarTesComNota16 { @include settingsBoxImagem(59%, auto, 30%, 0, auto) }
     #BbTesPesquisaCriarTesComNota17 { @include settingsBoxImagem(40%, auto, 35%, 0, auto) }
     #BbTesPesquisaCriarTesComNota18 { @include settingsBoxImagem(54%, auto, auto, 0, 15%) }
+    #BbTesPesquisaCriarTesComNota19 { @include settingsBoxImagem(27%, auto, auto, 0, 0) }
+    #BbTesPesquisaCriarTesComNota20 { @include settingsBoxImagem(41%, auto, auto, 0, 25%) }
+    #BbTesPesquisaCriarTesComNota21 { @include settingsBoxImagem(61%, auto, auto, 15%, -100px) }
+    #BbTesPesquisaCriarTesComNota22 { @include settingsBoxImagem(24%, auto, auto, 0, 0) }
+    #BbTesPesquisaCriarTesComNota23 { @include settingsBoxImagem(54%, auto, 70px, 0, auto) }
+
+    // Criar ou alterar pesquisas sem nota
+    #BbTesPesquisaCriarPesSemNota1 { @include settingsBoxImagem(41%, auto, 0, 0, auto) }
+    #BbTesPesquisaCriarPesSemNota2 { @include settingsBoxImagem(47%, auto, 60%, 0, auto) }
+    #BbTesPesquisaCriarPesSemNota3 { @include settingsBoxImagem(42%, auto, 0, 0, auto) }
+    #BbTesPesquisaCriarPesSemNota4 { @include settingsBoxImagem(35%, auto, 40px, 0, auto) }
+    #BbTesPesquisaCriarPesSemNota5 { @include settingsBoxImagem(33%, auto, auto, 0, 40px) }
+    #BbTesPesquisaCriarPesSemNota6 { @include settingsBoxImagem(50%, auto, -40px, 0, auto) }
+    #BbTesPesquisaCriarPesSemNota7 { @include settingsBoxImagem(50%, auto, 20%, 0, auto) }
+    #BbTesPesquisaCriarPesSemNota8 { @include settingsBoxImagem(48%, auto, auto, 0, 9%) }
+    #BbTesPesquisaCriarPesSemNota9 { @include settingsBoxImagem(52%, auto, auto, 0, -10px) }
+    #BbTesPesquisaCriarPesSemNota10 { @include settingsBoxImagem(50%, auto, 40px, 0, auto) }
+    #BbTesPesquisaCriarPesSemNota11 { @include settingsBoxImagem(49%, auto, auto, 0, 180px) }
+    #BbTesPesquisaCriarPesSemNota12 { @include settingsBoxImagem(44%, auto, 40px, 0, auto) }
+    #BbTesPesquisaCriarPesSemNota13 { @include settingsBoxImagem(45%, auto, auto, 0, 20%) }
+    #BbTesPesquisaCriarPesSemNota14 { @include settingsBoxImagem(24%, auto, auto, 0, -20px) }
+    #BbTesPesquisaCriarPesSemNota15 { @include settingsBoxImagem(45%, auto, 30px, 155px, auto) }
+    #BbTesPesquisaCriarPesSemNota16 { @include settingsBoxImagem(35%, auto, auto, 0, -50px) }
+    #BbTesPesquisaCriarPesSemNota17 { @include settingsBoxImagem(33%, auto, auto, 0, 100px) }
+    #BbTesPesquisaCriarPesSemNota18 { @include settingsBoxImagem(33%, auto, auto, 0, 0) }
+    #BbTesPesquisaCriarPesSemNota19 { @include settingsBoxImagem(33%, auto, auto, 33%, -60px) }
+    #BbTesPesquisaCriarPesSemNota20 { @include settingsBoxImagem(33%, auto, auto, 40px, 40%) }
+    #BbTesPesquisaCriarPesSemNota21 { @include settingsBoxImagem(46%, auto, auto, 0, 40px) }
+    #BbTesPesquisaCriarPesSemNota22 { @include settingsBoxImagem(33%, auto, auto, 0, 0) }
+    #BbTesPesquisaCriarPesSemNota23 { @include settingsBoxImagem(43%, auto, 0, 0, auto) }
+    #BbTesPesquisaCriarPesSemNota24 { @include settingsBoxImagem(43%, auto, auto, 0, 0) }
+    #BbTesPesquisaCriarPesSemNota25 { @include settingsBoxImagem(35%, auto, auto, 0, 50px) }
+    #BbTesPesquisaCriarPesSemNota26 { @include settingsBoxImagem(47%, auto, 0, 0, auto) }
+    #BbTesPesquisaCriarPesSemNota27 { @include settingsBoxImagem(47%, auto, auto, 0, 50px) }
+    #BbTesPesquisaCriarPesSemNota28 { @include settingsBoxImagem(32%, auto, auto, 0, 80px) }
+    #BbTesPesquisaCriarPesSemNota29 { @include settingsBoxImagem(47%, auto, auto, 0, 80px) }
+    #BbTesPesquisaCriarPesSemNota30 { @include settingsBoxImagem(47%, auto, auto, 0, 80px) }
+    #BbTesPesquisaCriarPesSemNota31 { @include settingsBoxImagem(33%, auto, auto, 0, 80px) }
+    #BbTesPesquisaCriarPesSemNota32 { @include settingsBoxImagem(35%, auto, auto, 0, 80px) }
+
+    // Importar testes e pesquisas do word
+    #BbTesPesquisaImportarWord1 { @include settingsBoxImagem(45%, auto, 0, 0, auto) }
+
+    // Importar testes e pesquisas do word
+    // @include                           settingsBoxImagem(W%,  l,   t,   r,   b)
+    #BbTesPesquisaImportarWord1 { @include settingsBoxImagem(54%, auto, 0, 0, auto) }
+    #BbTesPesquisaImportarWord2 { @include settingsBoxImagem(60%, 0, auto, auto, -160px) }
+    #BbTesPesquisaImportarWord3 { @include settingsBoxImagem(50%, 0, auto, auto, -240px) }
+    #BbTesPesquisaImportarWord4 { @include settingsBoxImagem(36%, auto, auto, 0, -180px) }
+    #BbTesPesquisaImportarWord5 { @include settingsBoxImagem(60%, auto, 56%, 0, auto) }
+    #BbTesPesquisaImportarWord6 { @include settingsBoxImagem(36%, auto, 30px, 0, auto) }
+    #BbTesPesquisaImportarWord7 { @include settingsBoxImagem(37%, 5%, 70px, auto, auto) }
+    #BbTesPesquisaImportarWord8 { @include settingsBoxImagem(44%, 5%, auto, auto, -10px) }
+    #BbTesPesquisaImportarWord9 { @include settingsBoxImagem(48%, auto, 10%, 0, auto) }
+    #BbTesPesquisaImportarWord10 { @include settingsBoxImagem(42%, auto, auto, 0, 0) }
+    #BbTesPesquisaImportarWord11 { @include settingsBoxImagem(50%, auto, 30%, 0, auto) }
+    #BbTesPesquisaImportarWord12 { @include settingsBoxImagem(63%, auto, auto, 20%, -80px) }
 
 }
