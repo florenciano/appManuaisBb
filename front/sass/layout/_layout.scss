@@ -594,6 +594,7 @@ body {
                 img { display: inline-block; }
             }
             ul { margin: 0; }
+            .c12 { padding: 0;}
         }
 
         .boxDestaqueAdicional {
@@ -611,6 +612,7 @@ body {
                 a { @include corLinkUpBox($corSec01); }
             }
             ul { margin: 0; }
+            .c12 { padding: 0;}
         }
         .icos { margin: 0 .5em; } // ícones nos box de destaques
         // textos em ênfase dentro dos boxes

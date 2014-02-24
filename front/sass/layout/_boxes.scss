@@ -237,7 +237,6 @@
     #BbTesPesquisaCriarPesSemNota32 { @include settingsBoxImagem(35%, auto, auto, 0, 80px) }
 
     // Importar testes e pesquisas do word
-    // @include                           settingsBoxImagem(W%,  l,   t,   r,   b)
     #BbTesPesquisaImportarWord1 { @include settingsBoxImagem(48%, auto, 0, 0, auto) }
     #BbTesPesquisaImportarWord2 { @include settingsBoxImagem(60%, auto, auto, 15%, -160px) }
     #BbTesPesquisaImportarWord3 { @include settingsBoxImagem(42%, 5%, auto, auto, -240px) }
@@ -250,6 +249,67 @@
     #BbTesPesquisaImportarWord10 { @include settingsBoxImagem(30%, auto, auto, 60px, 20%) }
     #BbTesPesquisaImportarWord11 { @include settingsBoxImagem(42%, auto, 40%, 0, auto) }
     #BbTesPesquisaImportarWord12 { @include settingsBoxImagem(45%, auto, auto, 31%, -80px) }
+
+    // CATEGORIA: Rubrics
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    // Criar Rubric
+    #BbRubricsCriarRubric1 { @include settingsBoxImagem(38%, auto, auto, 0, 40%) }
+    #BbRubricsCriarRubric2 { @include settingsBoxImagem(35%, auto, auto, 0, 10px) }
+    #BbRubricsCriarRubric3 { @include settingsBoxImagem(40%, auto, auto, 0, 40%) }
+    #BbRubricsCriarRubric4 { @include settingsBoxImagem(32%, auto, auto, 0, 20px) }
+
+    // Associar Rubric a atividades
+    #BbRubricsAssociarRubricAtiv1 { @include settingsBoxImagem(38%, auto, 40%, 40px, auto) }
+    #BbRubricsAssociarRubricAtiv2 { @include settingsBoxImagem(90%, auto, auto, 5%, -190px) }
+
+    // Associar Rubric a atividades
+    #BbRubricsAssociarRubricCentralNotas1 { @include settingsBoxImagem(41%, auto, 27%, 40px, auto) }
+
+    // CATEGORIA: Avaliacao
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    // Configurar a central de notas
+    #BbAvaliacaoConfigCentralNotas1 { @include settingsBoxImagem(37%, 0, auto, auto, -20px) }
+    #BbAvaliacaoConfigCentralNotas2 { @include settingsBoxImagem(35%, auto, auto, 0, 0) }
+    #BbAvaliacaoConfigCentralNotas3 { @include settingsBoxImagem(27%, auto, 15%, 0, auto) }
+    #BbAvaliacaoConfigCentralNotas4 { @include settingsBoxImagem(29%, auto, 35%, 0, auto) }
+    #BbAvaliacaoConfigCentralNotas5 { @include settingsBoxImagem(27%, auto, auto, 40px, 0) }
+
+    // Configurar a central de notas
+    #BbAvaliacaoDarNotaForAmb1 { @include settingsBoxImagem(34%, auto, 20%, 0, auto) }
+    #BbAvaliacaoDarNotaForAmb2 { @include settingsBoxImagem(41%, auto, 50%, 0, auto) }
+    #BbAvaliacaoDarNotaForAmb3 { @include settingsBoxImagem(36%, auto, auto, 0, 20%) }
+    #BbAvaliacaoDarNotaForAmb4 { @include settingsBoxImagem(44%, auto, auto, 0, 0) }
+    #BbAvaliacaoDarNotaForAmb5 { @include settingsBoxImagem(37%, 10%, auto, auto, -20px) }
+    #BbAvaliacaoDarNotaForAmb6 { @include settingsBoxImagem(30%, 0, auto, auto, 20px) }
+
+    // Configurar a central de notas
+    #BbAvaliacaoCalcularMediaAl1 { @include settingsBoxImagem(40%, auto, 25%, 0, auto) }
+    #BbAvaliacaoCalcularMediaAl2 { @include settingsBoxImagem(37%, auto, auto, 0, 35%) }
+
+    // Corrigir trabalhos sem verificação de plágio
+    #BbAvaliacaoCorrigirSemPlagio1 { @include settingsBoxImagem(31%, auto, 20px, 0, auto) }
+    #BbAvaliacaoCorrigirSemPlagio2 { @include settingsBoxImagem(49%, auto, auto, 5%, 0) }
+    #BbAvaliacaoCorrigirSemPlagio3 { @include settingsBoxImagem(34%, 0, 29%, auto, auto) }
+    #BbAvaliacaoCorrigirSemPlagio4 { @include settingsBoxImagem(23%, auto, 25%, 0, auto) }
+    #BbAvaliacaoCorrigirSemPlagio5 { @include settingsBoxImagem(24%, auto, auto, 0, 15%) }
+    #BbAvaliacaoCorrigirSemPlagio6 { @include settingsBoxImagem(31%, auto, 15%, 0, auto) }
+    #BbAvaliacaoCorrigirSemPlagio7 { @include settingsBoxImagem(35%, auto, auto, 0, 5%) }
+
+    // Corrigir trabalhos com verificação de plágio
+    #BbAvaliacaoCorrigirComPlagio1 { @include settingsBoxImagem(28%, auto, 35px, 0, auto) }
+    #BbAvaliacaoCorrigirComPlagio2 { @include settingsBoxImagem(49%, auto, auto, 5%, 0) }
+    #BbAvaliacaoCorrigirComPlagio3 { @include settingsBoxImagem(30%, auto, 25%, 0, auto) }
+    #BbAvaliacaoCorrigirComPlagio4 { @include settingsBoxImagem(27%, auto, 50%, 0, auto) }
+    #BbAvaliacaoCorrigirComPlagio5 { @include settingsBoxImagem(23%, auto, auto, 0, 0) }
+
+    // Avaliar fórum de discussão
+    // @include                               settingsBoxImagem(W%,  l,   t,   r,   b)
+    #BbAvaliacaoAvForumDiscussao1 { @include settingsBoxImagem(36%, auto, 40%, 10%, auto) }
+    #BbAvaliacaoAvForumDiscussao2 { @include settingsBoxImagem(30%, auto, 25%, 5%, auto) }
+    #BbAvaliacaoAvForumDiscussao3 { @include settingsBoxImagem(34%, auto, 50px, 5%, auto) }
+    #BbAvaliacaoAvForumDiscussao4 { @include settingsBoxImagem(32%, auto, 0, 0, auto) }
 
 }
 
@@ -504,5 +564,68 @@
     #BbTesPesquisaImportarWord10 { @include settingsBoxImagem(42%, auto, auto, 0, 0) }
     #BbTesPesquisaImportarWord11 { @include settingsBoxImagem(50%, auto, 30%, 0, auto) }
     #BbTesPesquisaImportarWord12 { @include settingsBoxImagem(63%, auto, auto, 20%, -80px) }
+
+    // CATEGORIA: Rubrics
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    // Criar Rubric
+    #BbRubricsCriarRubric1 { @include settingsBoxImagem(44%, auto, auto, 0, 26%) }
+    #BbRubricsCriarRubric2 { @include settingsBoxImagem(55%, auto, auto, 0, -10px) }
+    #BbRubricsCriarRubric3 { @include settingsBoxImagem(32%, auto, auto, 0, 40%) }
+    #BbRubricsCriarRubric4 { @include settingsBoxImagem(43%, auto, auto, 0, 20px) }
+
+    // Associar Rubric a atividades
+    #BbRubricsAssociarRubricAtiv1 { @include settingsBoxImagem(54%, auto, 37%, 0, auto) }
+    #BbRubricsAssociarRubricAtiv2 { @include settingsBoxImagem(100%, auto, auto, 0, -230px) }
+
+    // Associar Rubric a atividades
+    #BbRubricsAssociarRubricCentralNotas1 { @include settingsBoxImagem(41%, auto, 20%, 40px, auto) }
+
+    // CATEGORIA: Avaliacao
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    // Configurar a central de notas
+    #BbAvaliacaoConfigCentralNotas1 { @include settingsBoxImagem(55%, 0, auto, auto, -20px) }
+    #BbAvaliacaoConfigCentralNotas2 { @include settingsBoxImagem(38%, auto, auto, 0, -20px) }
+    #BbAvaliacaoConfigCentralNotas3 { @include settingsBoxImagem(30%, auto, 15%, 0, auto) }
+    #BbAvaliacaoConfigCentralNotas4 { @include settingsBoxImagem(29%, auto, 35%, 0, auto) }
+    #BbAvaliacaoConfigCentralNotas5 { @include settingsBoxImagem(37%, auto, auto, 0, -20px) }
+
+    // Configurar a central de notas
+    #BbAvaliacaoDarNotaForAmb1 { @include settingsBoxImagem(42%, auto, 10%, 0, auto) }
+    #BbAvaliacaoDarNotaForAmb2 { @include settingsBoxImagem(41%, auto, 35%, 0, auto) }
+    #BbAvaliacaoDarNotaForAmb3 { @include settingsBoxImagem(43%, auto, auto, 0, 30%) }
+    #BbAvaliacaoDarNotaForAmb4 { @include settingsBoxImagem(42%, auto, auto, 0, 0) }
+    #BbAvaliacaoDarNotaForAmb5 { @include settingsBoxImagem(30%, 0, auto, auto, 0) }
+    #BbAvaliacaoDarNotaForAmb6 { @include settingsBoxImagem(27%, 0, auto, auto, 0) }
+
+    // Configurar a central de notas
+    #BbAvaliacaoCalcularMediaAl1 { @include settingsBoxImagem(32%, auto, 10%, 0, auto) }
+    #BbAvaliacaoCalcularMediaAl2 { @include settingsBoxImagem(37%, auto, auto, 0, 30%) }
+
+    // Corrigir trabalhos sem verificação de plágio
+    #BbAvaliacaoCorrigirSemPlagio1 { @include settingsBoxImagem(44%, 0, 22px, auto, auto) }
+    #BbAvaliacaoCorrigirSemPlagio2 { @include settingsBoxImagem(69%, auto, auto, 0, -10px) }
+    #BbAvaliacaoCorrigirSemPlagio3 { @include settingsBoxImagem(34%, 0, 29%, auto, auto) }
+    #BbAvaliacaoCorrigirSemPlagio4 { @include settingsBoxImagem(29%, auto, 14%, 0, auto) }
+    #BbAvaliacaoCorrigirSemPlagio5 { @include settingsBoxImagem(27%, 150px, auto, auto, 0) }
+    #BbAvaliacaoCorrigirSemPlagio6 { @include settingsBoxImagem(35%, auto, 20%, 0, auto) }
+    #BbAvaliacaoCorrigirSemPlagio7 { @include settingsBoxImagem(49%, auto, auto, 0, 19%) }
+
+        // Corrigir trabalhos com verificação de plágio
+    // @include                               settingsBoxImagem(W%,  l,   t,   r,   b)
+    #BbAvaliacaoCorrigirComPlagio1 { @include settingsBoxImagem(40%, 0, 15px, auto, auto) }
+    #BbAvaliacaoCorrigirComPlagio2 { @include settingsBoxImagem(40%, auto, auto, 0, 0) }
+    #BbAvaliacaoCorrigirComPlagio3 { @include settingsBoxImagem(29%, auto, 0, 0, auto) }
+    #BbAvaliacaoCorrigirComPlagio4 { @include settingsBoxImagem(47%, auto, 50%, 0, auto) }
+    #BbAvaliacaoCorrigirComPlagio5 { @include settingsBoxImagem(44%, auto, auto, 0, 0) }
+
+    // Avaliar fórum de discussão
+    // @include                               settingsBoxImagem(W%,  l,   t,   r,   b)
+    #BbAvaliacaoAvForumDiscussao1 { @include settingsBoxImagem(50%, auto, 40%, 0, auto) }
+    #BbAvaliacaoAvForumDiscussao2 { @include settingsBoxImagem(30%, auto, 25%, 0, auto) }
+    #BbAvaliacaoAvForumDiscussao3 { @include settingsBoxImagem(26%, auto, 10%, 0, auto) }
+    #BbAvaliacaoAvForumDiscussao4 { @include settingsBoxImagem(23%, auto, -40px, 0, auto) }
+
 
 }
