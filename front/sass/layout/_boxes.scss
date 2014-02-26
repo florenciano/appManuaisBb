@@ -305,11 +305,55 @@
     #BbAvaliacaoCorrigirComPlagio5 { @include settingsBoxImagem(23%, auto, auto, 0, 0) }
 
     // Avaliar fórum de discussão
-    // @include                               settingsBoxImagem(W%,  l,   t,   r,   b)
     #BbAvaliacaoAvForumDiscussao1 { @include settingsBoxImagem(36%, auto, 40%, 10%, auto) }
     #BbAvaliacaoAvForumDiscussao2 { @include settingsBoxImagem(30%, auto, 25%, 5%, auto) }
     #BbAvaliacaoAvForumDiscussao3 { @include settingsBoxImagem(34%, auto, 50px, 5%, auto) }
     #BbAvaliacaoAvForumDiscussao4 { @include settingsBoxImagem(32%, auto, 0, 0, auto) }
+
+    // Avaliar blog
+    #BbAvaliacaoCriarBlog1 { @include settingsBoxImagem(36%, auto, 40%, 0, auto) }
+    #BbAvaliacaoCriarBlog2 { @include settingsBoxImagem(32%, auto, 20%, 0, auto) }
+    #BbAvaliacaoCriarBlog3 { @include settingsBoxImagem(36%, auto, 40%, 0, auto) }
+    #BbAvaliacaoCriarBlog4 { @include settingsBoxImagem(30%, auto, 20%, 0, auto) }
+
+    // Avaliar Diário
+    #BbAvaliacaoAvaliarDiario1 { @include settingsBoxImagem(36%, auto, 40%, 10%, auto) }
+    #BbAvaliacaoAvaliarDiario2 { @include settingsBoxImagem(32%, auto, 20%, 0, auto) }
+    #BbAvaliacaoAvaliarDiario3 { @include settingsBoxImagem(36%, auto, 40%, 0, auto) }
+    #BbAvaliacaoAvaliarDiario4 { @include settingsBoxImagem(50%, auto, 20px, 20px, auto) }
+
+    // Avaliar Wiki
+    #BbAvaliacaoAvaliarWiki1 { @include settingsBoxImagem(35%, auto, auto, 35%, -50px) }
+    #BbAvaliacaoAvaliarWiki2 { @include settingsBoxImagem(36%, auto, 40%, 0, auto) }
+    #BbAvaliacaoAvaliarWiki3 { @include settingsBoxImagem(36%, auto, 40%, 0, auto) }
+    #BbAvaliacaoAvaliarWiki4 { @include settingsBoxImagem(40%, auto, 40%, 0, auto) }
+    #BbAvaliacaoAvaliarWiki5 { @include settingsBoxImagem(36%, auto, auto, 0, 6%) }
+    #BbAvaliacaoAvaliarWiki6 { @include settingsBoxImagem(36%, auto, 40%, 0, auto) }
+    #BbAvaliacaoAvaliarWiki7 { @include settingsBoxImagem(45%, auto, 30%, 10%, auto) }
+
+    // Corrigir com Rubric
+    #BbAvaliacaoCorrigirRubric1 { @include settingsBoxImagem(33%, auto, 33%, 0, auto) }
+    #BbAvaliacaoCorrigirRubric2 { @include settingsBoxImagem(25%, auto, auto, 0, 0) }
+    #BbAvaliacaoCorrigirRubric3 { @include settingsBoxImagem(30%, auto, auto, 0, 0) }
+
+    // Exportar as notas para o sistema acadêmico
+    #BbAvaliacaoExSistAcademico1 { @include settingsBoxImagem(40%, auto, auto, 30%, -140px) }
+    #BbAvaliacaoExSistAcademico2 { @include settingsBoxImagem(30%, 0, auto, auto, -60px) }
+    #BbAvaliacaoExSistAcademico3 { @include settingsBoxImagem(58%, auto, auto, 0, -60px) }
+
+    // CATEGORIA: Calendário
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    // Criar e visualizar eventos
+    // @include                                          settingsBoxImagem(W%,  l,   t,   r,   b)
+    #BbCalendarioCriarVisualizarEventos1 { @include settingsBoxImagem(27%, auto, 10%, 0, auto) }
+    #BbCalendarioCriarVisualizarEventos2 { @include settingsBoxImagem(35%, auto, auto, 0, 40%) }
+    #BbCalendarioCriarVisualizarEventos3 { @include settingsBoxImagem(35%, auto, auto, 0, 5%) }
+    #BbCalendarioCriarVisualizarEventos4 { @include settingsBoxImagem(33%, auto, 13%, 0, auto) }
+    #BbCalendarioCriarVisualizarEventos5 { @include settingsBoxImagem(37%, auto, auto, 0, 0) }
+    #BbCalendarioCriarVisualizarEventos6 { @include settingsBoxImagem(35%, auto, auto, 0, 20%) }
+    #BbCalendarioCriarVisualizarEventos7 { @include settingsBoxImagem(30%, auto, auto, 0, 20%) }
+    #BbCalendarioCriarVisualizarEventos8 { @include settingsBoxImagem(43%, auto, auto, 0, 20%) }
 
 }
 
@@ -612,8 +656,7 @@
     #BbAvaliacaoCorrigirSemPlagio6 { @include settingsBoxImagem(35%, auto, 20%, 0, auto) }
     #BbAvaliacaoCorrigirSemPlagio7 { @include settingsBoxImagem(49%, auto, auto, 0, 19%) }
 
-        // Corrigir trabalhos com verificação de plágio
-    // @include                               settingsBoxImagem(W%,  l,   t,   r,   b)
+    // Corrigir trabalhos com verificação de plágio
     #BbAvaliacaoCorrigirComPlagio1 { @include settingsBoxImagem(40%, 0, 15px, auto, auto) }
     #BbAvaliacaoCorrigirComPlagio2 { @include settingsBoxImagem(40%, auto, auto, 0, 0) }
     #BbAvaliacaoCorrigirComPlagio3 { @include settingsBoxImagem(29%, auto, 0, 0, auto) }
@@ -621,11 +664,56 @@
     #BbAvaliacaoCorrigirComPlagio5 { @include settingsBoxImagem(44%, auto, auto, 0, 0) }
 
     // Avaliar fórum de discussão
-    // @include                               settingsBoxImagem(W%,  l,   t,   r,   b)
     #BbAvaliacaoAvForumDiscussao1 { @include settingsBoxImagem(50%, auto, 40%, 0, auto) }
     #BbAvaliacaoAvForumDiscussao2 { @include settingsBoxImagem(30%, auto, 25%, 0, auto) }
     #BbAvaliacaoAvForumDiscussao3 { @include settingsBoxImagem(26%, auto, 10%, 0, auto) }
     #BbAvaliacaoAvForumDiscussao4 { @include settingsBoxImagem(23%, auto, -40px, 0, auto) }
+    
+    // Avaliar blog
+    #BbAvaliacaoCriarBlog1 { @include settingsBoxImagem(36%, auto, 40%, 0, auto) }
+    #BbAvaliacaoCriarBlog2 { @include settingsBoxImagem(30%, auto, 0, 0, auto) }
+    #BbAvaliacaoCriarBlog3 { @include settingsBoxImagem(42%, auto, 40%, 0, auto) }
+    #BbAvaliacaoCriarBlog4 { @include settingsBoxImagem(30%, auto, 5%, 0, auto) }
 
+    // Avaliar Diário
+    #BbAvaliacaoAvaliarDiario1 { @include settingsBoxImagem(51%, auto, 40%, 0, auto) }
+    #BbAvaliacaoAvaliarDiario2 { @include settingsBoxImagem(27%, auto, 20%, 0, auto) }
+    #BbAvaliacaoAvaliarDiario3 { @include settingsBoxImagem(50%, auto, 37%, 0, auto) }
+    #BbAvaliacaoAvaliarDiario4 { @include settingsBoxImagem(45%, auto, 0, 0, auto) }
+
+    // Avaliar Wiki
+    // @include                             settingsBoxImagem(W%,  l,   t,   r,   b)
+    #BbAvaliacaoAvaliarWiki1 { @include settingsBoxImagem(50%, auto, auto, 35%, -50px) }
+    #BbAvaliacaoAvaliarWiki2 { @include settingsBoxImagem(33%, auto, 0, 0, auto) }
+    #BbAvaliacaoAvaliarWiki3 { @include settingsBoxImagem(23%, auto, 0, 0, auto) }
+    #BbAvaliacaoAvaliarWiki4 { @include settingsBoxImagem(40%, auto, 40%, 0, auto) }
+    #BbAvaliacaoAvaliarWiki5 { @include settingsBoxImagem(43%, auto, auto, 0, 0) }
+    #BbAvaliacaoAvaliarWiki6 { @include settingsBoxImagem(48%, auto, 40%, 0, auto) }
+    #BbAvaliacaoAvaliarWiki7 { @include settingsBoxImagem(45%, auto, 30%, 0, auto) }
+
+    // Corrigir com Rubric
+    #BbAvaliacaoCorrigirRubric1 { @include settingsBoxImagem(29%, auto, 31%, 0, auto) }
+    #BbAvaliacaoCorrigirRubric2 { @include settingsBoxImagem(35%, auto, auto, 0, -50px) }
+    #BbAvaliacaoCorrigirRubric3 { @include settingsBoxImagem(45%, auto, auto, 0, -30px) }
+
+    // Exportar as notas para o sistema acadêmico
+    // @include                             settingsBoxImagem(W%,  l,   t,   r,   b)
+    #BbAvaliacaoExSistAcademico1 { @include settingsBoxImagem(42%, auto, auto, 30%, -170px) }
+    #BbAvaliacaoExSistAcademico2 { @include settingsBoxImagem(40%, 0, auto, auto, -60px) }
+    #BbAvaliacaoExSistAcademico3 { @include settingsBoxImagem(46%, auto, auto, 0, -60px) }
+
+    // CATEGORIA: Calendário
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    // Criar e visualizar eventos
+    // @include                                          settingsBoxImagem(W%,  l,   t,   r,   b)
+    #BbCalendarioCriarVisualizarEventos1 { @include settingsBoxImagem(38%, auto, 10%, 0, auto) }
+    #BbCalendarioCriarVisualizarEventos2 { @include settingsBoxImagem(43%, auto, auto, 0, 54%) }
+    #BbCalendarioCriarVisualizarEventos3 { @include settingsBoxImagem(35%, auto, auto, 0, 15%) }
+    #BbCalendarioCriarVisualizarEventos4 { @include settingsBoxImagem(29%, auto, 0, 0, auto) }
+    #BbCalendarioCriarVisualizarEventos5 { @include settingsBoxImagem(48%, auto, auto, 0, 0) }
+    #BbCalendarioCriarVisualizarEventos6 { @include settingsBoxImagem(35%, auto, auto, 0, 15%) }
+    #BbCalendarioCriarVisualizarEventos7 { @include settingsBoxImagem(42%, auto, auto, 0, 20%) }
+    #BbCalendarioCriarVisualizarEventos8 { @include settingsBoxImagem(43%, auto, auto, 0, 20%) }
 
 }
