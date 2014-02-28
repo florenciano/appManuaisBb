@@ -117,7 +117,7 @@ html, body { height: 100%; min-height: 100%;}
     // Trasition removed in all style, it's not a good pratice
 }
 body {
-    @include font(normal, 10px);
+    @include font(normal, 12px);
     color: $corTexto;
 }
 
@@ -176,7 +176,7 @@ button.close {
     text-align: center;
     padding-bottom: $meioGrid;
     .title {
-        @include font(bold, 1.8em);
+        @include font(bold, 1.6em);
         margin: 0;
     }
     .description {
@@ -206,7 +206,6 @@ button.close {
         height: auto;
         padding: .5em 1em;
         @include radius();
-        @include font(normal, 1.2em);
         @include bShadow(inset, 0, 0, 5px, 0, rgba(0,0,0,0.25));
         border: 1px solid $corBorda;
         &:focus {
@@ -247,7 +246,7 @@ button.close {
     h5 {
         clear: both;
         margin: 0;
-        @include font(bold, 1.4em);
+        @include font(bold, 1.2em);
         display: block;
         padding: ($meioGrid - 8) 0 ($meioGrid - 8) $grid ;
         min-height: auto;
@@ -272,7 +271,6 @@ button.close {
                 margin: 0;
                 padding: 0 ($meioGrid / 4);
                 text-decoration: none;
-                @include font(normal, 1em);
                 display: inline-block;
                 height: 100%;
             }
@@ -288,7 +286,6 @@ button.close {
                     min-height: 100%;
                     padding: ($meioGrid / 4) 0;
                     float: left;
-                    @include font(normal, 1.2em);
                 }
                 // btn [+]
                 span.click {
@@ -338,12 +335,11 @@ button.close {
         p { 
             margin: 0 0 ($meioGrid / 4) 0;
             padding-left: $meioGrid / 2;
-            @include font(bold, 1.2em);
+            @include font(bold, 1em);
         }
         li {
             a {
                 @include corLink();
-                @include font(normal, 1.15em);
                 padding: 0;
             }
             &:last-child { margin-bottom: $meioGrid / 4 }
@@ -380,7 +376,7 @@ button.close {
             margin: 0;
             a {
                 @include corLink();
-                @include font(normal, 12px);
+                @include font(normal, 1em);
             }
         }
     }
@@ -435,7 +431,6 @@ button.close {
     }
     h2 + p { margin-top: 0; }
     p {
-        @include font(normal, 1.2em);
         line-height: 1.6em;
         a { @include corLink(); }
     }
@@ -503,7 +498,7 @@ button.close {
     margin: $grid 0 !important;
     h3 {
         margin: 0 0 ($meioGrid / 4);
-        @include font(bold, 1.4em);
+        @include font(bold, 1.2em);
     }
     ul {
         margin: 0;
@@ -513,7 +508,7 @@ button.close {
             list-style-type: none;;
             margin: 0 0 ($meioGrid / 2) 0;
             &:last-child { margin-bottom: 0;}
-            a { @include corLink(); @include font(normal, 1.2em); }
+            a { @include corLink(); }
         }
     }
 }
@@ -525,7 +520,6 @@ button.close {
     a {
         float: right;
         @include corLink();
-        @include font(normal, 1.1em);
         &:before {
             content: "";
             height: 1.2em;
@@ -563,9 +557,10 @@ button.close {
         border: 2px solid $corDefault;
         padding: $meioGrid / 2;
         p {
-            @include font(normal, 1.3em);
+            @include font(normal, 1.1em);
             line-height: 1.5em;
             margin: 0;
+            img { display: inline-block }
         }
     }
 
@@ -577,10 +572,11 @@ button.close {
         border: 0;
         color: #fff;
         p {
-            @include font(normal, 1.3em);
+            @include font(normal, 1.1em);
             line-height: 1.5em;
             margin: 0;
             a { @include corLinkUpBox($corSec01); }
+            img { display: inline-block }
         }
     }
 
@@ -634,7 +630,7 @@ button.close {
                 padding: 0 ($meioGrid / 2) 0 ($grid + 10);
                 a {
                     @include corLink();
-                    @include font(normal, 1.2em);
+                    @include font(normal, 1em);
                     line-height: 1.4em;
                 }
             }
@@ -682,14 +678,14 @@ button.close {
 .contentMain {
     padding-top: 0;
     h1 {
-        @include font(bold, 2.2em);
+        @include font(bold, 1.8em);
         margin-bottom: 0;
     }
     h1 + p {
         margin-top: 0;
     }
     h2 {
-        @include font(bold, 1.4em);
+        @include font(bold, 1.2em);
     }
 }
 
@@ -704,14 +700,14 @@ button.close {
     text-align: right;
     margin-top: $meioGrid / 2;
     .title {
-        @include font(bold, 2.8em);
+        @include font(bold, 2em);
         border-bottom: 3px solid $corDefault;
         width: 69%;
         padding: 0 0 ($meioGrid / 4) 0;
         margin: 0 0 0 8.13%;
     }
     .description {
-        @include font(bold, 2em);
+        @include font(bold, 1.4em);
         color: #fff;
         padding: ($meioGrid / 2) ($grid - 10);
         height: auto;
@@ -724,7 +720,7 @@ button.close {
 .navigation { @include transition(all 0.4s ease); }
 
 .navigationMain {
-    h5 { @include font(bold, 1.4em); padding-left: $grid +2; }
+    h5 { @include font(bold, 1.2em); padding-left: $grid +2; }
 
     hr { margin: ($meioGrid - 5) 0; }
 

@@ -18,39 +18,39 @@
 // CATEGORIA: Materiais
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 // Carregar materiais no ambiente virtual
-#BbMateriaisCarregarMateriais1 { @include settingsBoxImagem(40%, 35px, auto, auto, -70px) }
-#BbMateriaisCarregarMateriais2 { @include settingsBoxImagem(45%, auto, auto, 20px, -70px) }
-#BbMateriaisCarregarMateriais3 { @include settingsBoxImagem(55%, auto, auto, 20px, -10px) }
-#BbMateriaisCarregarMateriais4 { @include settingsBoxImagem(40%, auto, auto, 20px, -50px) }
-#BbMateriaisCarregarMateriais5 { @include settingsBoxImagem(50%, auto, 180px, 30px, auto) }
-#BbMateriaisCarregarMateriais6 { @include settingsBoxImagem(35%, 170px, 60px, auto, auto) }
+#BbMateriaisCarregarMateriais1 { @include settingsBoxImagem(36%, 0, auto, auto, -50px) }
+#BbMateriaisCarregarMateriais2 { @include settingsBoxImagem(50%, auto, auto, 0, -50px) }
+#BbMateriaisCarregarMateriais3 { @include settingsBoxImagem(48%, auto, auto, 20px, -10px) }
+#BbMateriaisCarregarMateriais4 { @include settingsBoxImagem(46%, auto, auto, 20px, -50px) }
+#BbMateriaisCarregarMateriais5 { @include settingsBoxImagem(55%, auto, 180px, 30px, auto) }
+#BbMateriaisCarregarMateriais6 { @include settingsBoxImagem(29%, 170px, 60px, auto, auto) }
 #BbMateriaisCarregarMateriais7 { @include settingsBoxImagem(30%, auto, auto, 110px, 20px) }
-#BbMateriaisCarregarMateriais8 { @include settingsBoxImagem(40%, auto, auto, 90px, -40px) }
-#BbMateriaisCarregarMateriais9 { @include settingsBoxImagem(40%, auto, 80px, 60px, auto) }
+#BbMateriaisCarregarMateriais8 { @include settingsBoxImagem(37%, auto, auto, 90px, -40px) }
+#BbMateriaisCarregarMateriais9 { @include settingsBoxImagem(44%, auto, 80px, 60px, auto) }
 #BbMateriaisCarregarMateriais10 { @include settingsBoxImagem(45%, auto, auto, 20px, -70px) }
-#BbMateriaisCarregarMateriais11 { @include settingsBoxImagem(45%, 20px, 100px, auto, auto) }
+#BbMateriaisCarregarMateriais11 { @include settingsBoxImagem(47%, 20px, 100px, auto, auto) }
 #BbMateriaisCarregarMateriais12 { @include settingsBoxImagem(45%, auto, auto, 20px, -70px) }
-#BbMateriaisCarregarMateriais13 { @include settingsBoxImagem(35%, auto, auto, 20px, -20px) }
+#BbMateriaisCarregarMateriais13 { @include settingsBoxImagem(27%, auto, auto, 20px, -20px) }
 
 // Compartilhar materiais com os alunos
 #BbMateraisCompartilharMateriaisAlunos1 { @include settingsBoxImagem(40%, auto, 30px, 0, auto) }
 #BbMateraisCompartilharMateriaisAlunos2 { @include settingsBoxImagem(40%, auto, 120px, 0, auto) }
-#BbMateraisCompartilharMateriaisAlunos3 { @include settingsBoxImagem(60%, auto, auto, 0, -60px) }
+#BbMateraisCompartilharMateriaisAlunos3 { @include settingsBoxImagem(56%, auto, auto, 0, -60px) }
 #BbMateraisCompartilharMateriaisAlunos4 { @include settingsBoxImagem(33%, auto, 50px, 40px, auto) }
-#BbMateraisCompartilharMateriaisAlunos5 { @include settingsBoxImagem(45%, auto, auto, 0, 0) }
-#BbMateraisCompartilharMateriaisAlunos6 { @include settingsBoxImagem(50%, auto, 15px, 0, auto) }
+#BbMateraisCompartilharMateriaisAlunos5 { @include settingsBoxImagem(41%, auto, auto, 0, 0) }
+#BbMateraisCompartilharMateriaisAlunos6 { @include settingsBoxImagem(52%, auto, 15px, 0, auto) }
 #BbMateraisCompartilharMateriaisAlunos6b { @include settingsBoxImagem(40%, auto, 20px, 0, auto) }
-#BbMateraisCompartilharMateriaisAlunos7 { @include settingsBoxImagem(40%, auto, 170px, 0, auto) }
-#BbMateraisCompartilharMateriaisAlunos8 { @include settingsBoxImagem(40%, auto, 270px, 0, auto) }
-#BbMateraisCompartilharMateriaisAlunos9 { @include settingsBoxImagem(40%, auto, 420px, 0, auto) }
+#BbMateraisCompartilharMateriaisAlunos7 { @include settingsBoxImagem(33%, auto, 170px, 0, auto) }
+#BbMateraisCompartilharMateriaisAlunos8 { @include settingsBoxImagem(32%, auto, 260px, 0, auto) }
+#BbMateraisCompartilharMateriaisAlunos9 { @include settingsBoxImagem(33%, auto, 435px, 0, auto) }
 #BbMateraisCompartilharMateriaisAlunos10 { @include settingsBoxImagem(40%, auto, auto, 0, 10px) }
 #BbMateraisCompartilharMateriaisAlunos11 { @include settingsBoxImagem(40%, auto, 80px, 0, auto) }
 #BbMateraisCompartilharMateriaisAlunos12 { @include settingsBoxImagem(50%, auto, auto, 10px, 40px) }
-#BbMateraisCompartilharMateriaisAlunos13 { @include settingsBoxImagem(56%, auto, 80px, 0, auto) }
+#BbMateraisCompartilharMateriaisAlunos13 { @include settingsBoxImagem(39%, auto, 80px, 0, auto) }
 #BbMateraisCompartilharMateriaisAlunos14 { @include settingsBoxImagem(45%, auto, 0, 0, auto) }
 #BbMateraisCompartilharMateriaisAlunos15 { @include settingsBoxImagem(50%, auto, auto, 0, 40px) }
 #BbMateraisCompartilharMateriaisAlunos16 { @include settingsBoxImagem(40%, auto, auto, 20px, 40px) }
-#BbMateraisCompartilharMateriaisAlunos17 { @include settingsBoxImagem(40%, auto, 40px, 0, auto) }
+#BbMateraisCompartilharMateriaisAlunos17 { @include settingsBoxImagem(37%, auto, 40px, 0, auto) }
 #BbMateraisCompartilharMateriaisAlunos18 { @include settingsBoxImagem(40%, auto, auto, 0, 90px) }
 #BbMateraisCompartilharMateriaisAlunos19 { @include settingsBoxImagem(40%, auto, 40px, 20px, auto) }
 
@@ -64,8 +64,10 @@
 #BbMateriaisAproveitarMateriais4 { @include settingsBoxImagem(40%, auto, -20px, 20px, auto) }
 #BbMateriaisAproveitarMateriais5 { @include settingsBoxImagem(50%, auto, auto, 0, -80px) }
 
+
 // CATEGORIA: Comunicação e Interação
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 // Enviar avisos aos alunos
 #BbComunicacaoEnviarAvisosAlunos1 { @include settingsBoxImagem(40%, auto, 25px, 0, auto) }
 #BbComunicacaoEnviarAvisosAlunos2 { @include settingsBoxImagem(35%, auto, 105px, 0, auto) }
@@ -78,23 +80,23 @@
 
 // Criar fórum de discussão
 #BbComunicacaoCriarForum1 { @include settingsBoxImagem(40%, auto, 0, 20px, auto) }
-#BbComunicacaoCriarForum2 { @include settingsBoxImagem(40%, auto, 20px, 20px, auto) }
+#BbComunicacaoCriarForum2 { @include settingsBoxImagem(31%, auto, 20px, 20px, auto) }
 #BbComunicacaoCriarForum3 { @include settingsBoxImagem(40%, auto, 30px, 20px, auto) }
 #BbComunicacaoCriarForum4 { @include settingsBoxImagem(40%, auto, 50px, 20px, auto) }
 #BbComunicacaoCriarForum5 { @include settingsBoxImagem(50%, auto, 130px, 20px, auto) }
-#BbComunicacaoCriarForum6 { @include settingsBoxImagem(40%, auto, 20px, 0, auto) }
-#BbComunicacaoCriarForum7 { @include settingsBoxImagem(40%, auto, 130px, 0, auto) }
-#BbComunicacaoCriarForum8 { @include settingsBoxImagem(40%, auto, 260px, 0, auto) }
+#BbComunicacaoCriarForum6 { @include settingsBoxImagem(34%, auto, 20px, 0, auto) }
+#BbComunicacaoCriarForum7 { @include settingsBoxImagem(34%, auto, 130px, 0, auto) }
+#BbComunicacaoCriarForum8 { @include settingsBoxImagem(36%, auto, 260px, 0, auto) }
 #BbComunicacaoCriarForum9 { @include settingsBoxImagem(47%, auto, 40px, 20px, auto) }
 #BbComunicacaoCriarForum10 { @include settingsBoxImagem(45%, auto, auto, 0, 20px) }
 #BbComunicacaoCriarForum11 { @include settingsBoxImagem(39%, auto, 40px, 0, auto) }
-#BbComunicacaoCriarForum12 { @include settingsBoxImagem(40%, auto, 40px, 0, auto) }
+#BbComunicacaoCriarForum12 { @include settingsBoxImagem(37%, auto, 40px, 0, auto) }
 #BbComunicacaoCriarForum13 { @include settingsBoxImagem(58%, auto, auto, 0, 20px) }
 
 // Criar blog
 #BbComunicacaoCriarBlog1 { @include settingsBoxImagem(40%, auto, auto, 0, 20px) }
-#BbComunicacaoCriarBlog2 { @include settingsBoxImagem(40%, auto, auto, 0, 40px) }
-#BbComunicacaoCriarBlog3 { @include settingsBoxImagem(40%, auto, auto, 0, 40px) }
+#BbComunicacaoCriarBlog2 { @include settingsBoxImagem(31%, auto, auto, 0, 40px) }
+#BbComunicacaoCriarBlog3 { @include settingsBoxImagem(31%, auto, auto, 0, 40px) }
 #BbComunicacaoCriarBlog4 { @include settingsBoxImagem(36%, auto, auto, 60px, 0) }
 #BbComunicacaoCriarBlog5 { @include settingsBoxImagem(25%, auto, 40px, 10%, auto) }
 #BbComunicacaoCriarBlog6 { @include settingsBoxImagem(26%, auto, auto, 0, 0) }
@@ -111,9 +113,9 @@
 #BbComunicacaoCriarWiki4 { @include settingsBoxImagem(35%, auto, auto, 40px, 0) }
 #BbComunicacaoCriarWiki5 { @include settingsBoxImagem(26%, auto, auto, 0, 15px) }
 #BbComunicacaoCriarWiki6 { @include settingsBoxImagem(43%, auto, auto, 0, 180px) }
-#BbComunicacaoCriarWiki7 { @include settingsBoxImagem(46%, auto, 100px, 0, auto) }
+#BbComunicacaoCriarWiki7 { @include settingsBoxImagem(41%, auto, 100px, 0, auto) }
 #BbComunicacaoCriarWiki8 { @include settingsBoxImagem(45%, auto, auto, 0, -60px) }
-#BbComunicacaoCriarWiki9 { @include settingsBoxImagem(40%, auto, auto, 10%, 35%) }
+#BbComunicacaoCriarWiki9 { @include settingsBoxImagem(32%, auto, auto, 10%, 35%) }
 #BbComunicacaoCriarWiki10 { @include settingsBoxImagem(40%, auto, auto, 40px, 10%) }
 
 // Criar diário
@@ -129,13 +131,14 @@
 #BbComunicacaoCriarDiario10 { @include settingsBoxImagem(40%, 20px, 50%, auto, auto) }
 #BbComunicacaoCriarDiario11 { @include settingsBoxImagem(40%, auto, auto, 5%, -40px) }
 
+
 // CATEGORIA: Trabalhos
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 // Receber trabalhos com verificação de plágio (SafeAssignment)
 #BbTrabalhosRecTrabSemPlagio1 { @include settingsBoxImagem(42%, auto, auto, 0, 40px) }
 #BbTrabalhosRecTrabSemPlagio2 { @include settingsBoxImagem(40%, auto, 30%, 0, auto) }
-#BbTrabalhosRecTrabSemPlagio3 { @include settingsBoxImagem(30%, auto, auto, 0, 0) }
+#BbTrabalhosRecTrabSemPlagio3 { @include settingsBoxImagem(30%, auto, auto, 0, -30px) }
 #BbTrabalhosRecTrabSemPlagio4 { @include settingsBoxImagem(40%, auto, auto, 0, 40%) }
 #BbTrabalhosRecTrabSemPlagio5 { @include settingsBoxImagem(45%, auto, auto, 0, 25%) }
 #BbTrabalhosRecTrabSemPlagio6 { @include settingsBoxImagem(60%, 23%, auto, auto, -70px) }
@@ -149,8 +152,8 @@
 #BbTrabalhosRecTrabComPlagio6 { @include settingsBoxImagem(59%, 20%, auto, auto, -100px) }
 
 // Submeter arquivos para verificação de plágio ou criar base de comparação (SafeAssign)
-#BbMateriaisCarregarMateriais1 { @include settingsBoxImagem(60%, auto, auto, 20%, -150px) }
-#BbMateriaisCarregarMateriais2 { @include settingsBoxImagem(52%, auto, auto, 24%, -150px) }
+#BbTrabalhosSubmeter1 { @include settingsBoxImagem(60%, auto, auto, 20%, -150px) }
+#BbTrabalhosSubmeter2 { @include settingsBoxImagem(52%, auto, auto, 24%, -150px) }
 
 
 // CATEGORIA: Grupos
@@ -170,11 +173,11 @@
 #BbGruposCriarGrupos11 { @include settingsBoxImagem(42%, auto, auto, 0, 250px) }
 #BbGruposCriarGrupos12 { @include settingsBoxImagem(48%, auto, auto, 0, 130px) }
 
+
 // CATEGORIA: Testes e pesquisas
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 // Criar ou alterar testes com nota
-// @include                               settingsBoxImagem(W%,  l,   t,   r,   b)
 #BbTesPesquisaCriarTesComNota1 { @include settingsBoxImagem(31%, auto, 85px, 0, auto) }
 #BbTesPesquisaCriarTesComNota2 { @include settingsBoxImagem(47%, auto, auto, 0, 0) }
 #BbTesPesquisaCriarTesComNota3 { @include settingsBoxImagem(54%, auto, 60px, 0, auto) }
@@ -193,3 +196,186 @@
 #BbTesPesquisaCriarTesComNota16 { @include settingsBoxImagem(50%, auto, 30%, 0, auto) }
 #BbTesPesquisaCriarTesComNota17 { @include settingsBoxImagem(31%, auto, 35%, 0, auto) }
 #BbTesPesquisaCriarTesComNota18 { @include settingsBoxImagem(54%, auto, auto, 0, 25%) }
+#BbTesPesquisaCriarTesComNota19 { @include settingsBoxImagem(27%, auto, auto, 0, 0) }
+#BbTesPesquisaCriarTesComNota20 { @include settingsBoxImagem(41%, auto, auto, 0, 25%) }
+#BbTesPesquisaCriarTesComNota21 { @include settingsBoxImagem(61%, auto, auto, 15%, -80px) }
+#BbTesPesquisaCriarTesComNota22 { @include settingsBoxImagem(26%, auto, auto, 0, 0) }
+#BbTesPesquisaCriarTesComNota23 { @include settingsBoxImagem(54%, auto, 70px, 0, auto) }
+
+// Criar ou alterar pesquisas sem nota
+#BbTesPesquisaCriarPesSemNota1 { @include settingsBoxImagem(30%, auto, 0, 0, auto) }
+#BbTesPesquisaCriarPesSemNota2 { @include settingsBoxImagem(34%, auto, 50%, 0, auto) }
+#BbTesPesquisaCriarPesSemNota3 { @include settingsBoxImagem(42%, auto, 0, 0, auto) }
+#BbTesPesquisaCriarPesSemNota4 { @include settingsBoxImagem(25%, auto, 40px, 0, auto) }
+#BbTesPesquisaCriarPesSemNota5 { @include settingsBoxImagem(33%, auto, auto, 0, 40px) }
+#BbTesPesquisaCriarPesSemNota6 { @include settingsBoxImagem(51%, auto, 0, 0, auto) }
+#BbTesPesquisaCriarPesSemNota7 { @include settingsBoxImagem(44%, auto, 25%, 0, auto) }
+#BbTesPesquisaCriarPesSemNota8 { @include settingsBoxImagem(34%, auto, auto, 0, 18%) }
+#BbTesPesquisaCriarPesSemNota9 { @include settingsBoxImagem(36%, auto, auto, 0, 0) }
+#BbTesPesquisaCriarPesSemNota10 { @include settingsBoxImagem(36%, auto, 40px, 0, auto) }
+#BbTesPesquisaCriarPesSemNota11 { @include settingsBoxImagem(38%, auto, auto, 0, 180px) }
+#BbTesPesquisaCriarPesSemNota12 { @include settingsBoxImagem(31%, auto, 40px, 0, auto) }
+#BbTesPesquisaCriarPesSemNota13 { @include settingsBoxImagem(38%, auto, auto, 0, 20%) }
+#BbTesPesquisaCriarPesSemNota14 { @include settingsBoxImagem(31%, auto, auto, 0, 0) }
+#BbTesPesquisaCriarPesSemNota15 { @include settingsBoxImagem(40%, auto, 90px, 0, auto) }
+#BbTesPesquisaCriarPesSemNota16 { @include settingsBoxImagem(33%, auto, auto, 0, -40px) }
+#BbTesPesquisaCriarPesSemNota17 { @include settingsBoxImagem(33%, auto, auto, 0, 100px) }
+#BbTesPesquisaCriarPesSemNota18 { @include settingsBoxImagem(33%, auto, auto, 0, 0) }
+#BbTesPesquisaCriarPesSemNota19 { @include settingsBoxImagem(33%, auto, auto, 33%, -60px) }
+#BbTesPesquisaCriarPesSemNota20 { @include settingsBoxImagem(33%, auto, auto, 180px, 40%) }
+#BbTesPesquisaCriarPesSemNota21 { @include settingsBoxImagem(38%, auto, auto, 0, 40px) }
+#BbTesPesquisaCriarPesSemNota22 { @include settingsBoxImagem(33%, auto, auto, 0, 0) }
+#BbTesPesquisaCriarPesSemNota23 { @include settingsBoxImagem(35%, auto, 0, 0, auto) }
+#BbTesPesquisaCriarPesSemNota24 { @include settingsBoxImagem(33%, auto, auto, 40px, 0) }
+#BbTesPesquisaCriarPesSemNota25 { @include settingsBoxImagem(24%, auto, auto, 70px, 50px) }
+#BbTesPesquisaCriarPesSemNota26 { @include settingsBoxImagem(37%, auto, 0, 0, auto) }
+#BbTesPesquisaCriarPesSemNota27 { @include settingsBoxImagem(47%, auto, auto, 0, 80px) }
+#BbTesPesquisaCriarPesSemNota28 { @include settingsBoxImagem(40%, auto, auto, 0, 80px) }
+#BbTesPesquisaCriarPesSemNota29 { @include settingsBoxImagem(47%, auto, auto, 0, 80px) }
+#BbTesPesquisaCriarPesSemNota30 { @include settingsBoxImagem(47%, auto, auto, 0, 80px) }
+#BbTesPesquisaCriarPesSemNota31 { @include settingsBoxImagem(41%, auto, auto, 0, 80px) }
+#BbTesPesquisaCriarPesSemNota32 { @include settingsBoxImagem(35%, auto, auto, 0, 80px) }
+
+// Importar testes e pesquisas do word
+#BbTesPesquisaImportarWord1 { @include settingsBoxImagem(48%, auto, 0, 0, auto) }
+#BbTesPesquisaImportarWord2 { @include settingsBoxImagem(60%, auto, auto, 15%, -160px) }
+#BbTesPesquisaImportarWord3 { @include settingsBoxImagem(42%, 5%, auto, auto, -240px) }
+#BbTesPesquisaImportarWord4 { @include settingsBoxImagem(36%, auto, auto, 15%, -180px) }
+#BbTesPesquisaImportarWord5 { @include settingsBoxImagem(44%, auto, 40%, 0, auto) }
+#BbTesPesquisaImportarWord6 { @include settingsBoxImagem(31%, auto, 130px, 18%, auto) }
+#BbTesPesquisaImportarWord7 { @include settingsBoxImagem(34%, 5%, 130px, auto, auto) }
+#BbTesPesquisaImportarWord8 { @include settingsBoxImagem(44%, 5%, auto, auto, 30px) }
+#BbTesPesquisaImportarWord9 { @include settingsBoxImagem(48%, auto, 20%, 0, auto) }
+#BbTesPesquisaImportarWord10 { @include settingsBoxImagem(30%, auto, auto, 60px, 20%) }
+#BbTesPesquisaImportarWord11 { @include settingsBoxImagem(42%, auto, 40%, 0, auto) }
+#BbTesPesquisaImportarWord12 { @include settingsBoxImagem(45%, auto, auto, 31%, -80px) }
+
+
+// CATEGORIA: Rubrics
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+// Criar Rubric
+#BbRubricsCriarRubric1 { @include settingsBoxImagem(38%, auto, auto, 0, 40%) }
+#BbRubricsCriarRubric2 { @include settingsBoxImagem(35%, auto, auto, 0, 10px) }
+#BbRubricsCriarRubric3 { @include settingsBoxImagem(40%, auto, auto, 0, 40%) }
+#BbRubricsCriarRubric4 { @include settingsBoxImagem(32%, auto, auto, 0, 20px) }
+
+// Associar Rubric a atividades
+#BbRubricsAssociarRubricAtiv1 { @include settingsBoxImagem(38%, auto, 40%, 40px, auto) }
+#BbRubricsAssociarRubricAtiv2 { @include settingsBoxImagem(90%, auto, auto, 5%, -190px) }
+
+// Associar Rubric a atividades
+#BbRubricsAssociarRubricCentralNotas1 { @include settingsBoxImagem(41%, auto, 27%, 40px, auto) }
+
+
+// CATEGORIA: Avaliacao
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+// Configurar a central de notas
+#BbAvaliacaoConfigCentralNotas1 { @include settingsBoxImagem(37%, 0, auto, auto, -20px) }
+#BbAvaliacaoConfigCentralNotas2 { @include settingsBoxImagem(35%, auto, auto, 0, 0) }
+#BbAvaliacaoConfigCentralNotas3 { @include settingsBoxImagem(22%, auto, 15%, 0, auto) }
+#BbAvaliacaoConfigCentralNotas4 { @include settingsBoxImagem(29%, auto, 35%, 0, auto) }
+#BbAvaliacaoConfigCentralNotas5 { @include settingsBoxImagem(27%, auto, auto, 40px, 0) }
+
+// Configurar a central de notas
+#BbAvaliacaoDarNotaForAmb1 { @include settingsBoxImagem(34%, auto, 20%, 0, auto) }
+#BbAvaliacaoDarNotaForAmb2 { @include settingsBoxImagem(41%, auto, 50%, 0, auto) }
+#BbAvaliacaoDarNotaForAmb3 { @include settingsBoxImagem(36%, auto, auto, 0, 20%) }
+#BbAvaliacaoDarNotaForAmb4 { @include settingsBoxImagem(44%, auto, auto, 0, 0) }
+#BbAvaliacaoDarNotaForAmb5 { @include settingsBoxImagem(37%, 10%, auto, auto, -20px) }
+#BbAvaliacaoDarNotaForAmb6 { @include settingsBoxImagem(30%, 0, auto, auto, 20px) }
+
+// Configurar a central de notas
+#BbAvaliacaoCalcularMediaAl1 { @include settingsBoxImagem(40%, auto, 25%, 0, auto) }
+#BbAvaliacaoCalcularMediaAl2 { @include settingsBoxImagem(37%, auto, auto, 0, 35%) }
+
+// Corrigir trabalhos sem verificação de plágio
+#BbAvaliacaoCorrigirSemPlagio1 { @include settingsBoxImagem(31%, auto, 20px, 0, auto) }
+#BbAvaliacaoCorrigirSemPlagio2 { @include settingsBoxImagem(49%, auto, auto, 5%, 0) }
+#BbAvaliacaoCorrigirSemPlagio3 { @include settingsBoxImagem(34%, 0, 29%, auto, auto) }
+#BbAvaliacaoCorrigirSemPlagio4 { @include settingsBoxImagem(23%, auto, 25%, 0, auto) }
+#BbAvaliacaoCorrigirSemPlagio5 { @include settingsBoxImagem(24%, auto, auto, 0, 15%) }
+#BbAvaliacaoCorrigirSemPlagio6 { @include settingsBoxImagem(31%, auto, 15%, 0, auto) }
+#BbAvaliacaoCorrigirSemPlagio7 { @include settingsBoxImagem(35%, auto, auto, 0, 5%) }
+
+// Corrigir trabalhos com verificação de plágio
+#BbAvaliacaoCorrigirComPlagio1 { @include settingsBoxImagem(28%, auto, 35px, 0, auto) }
+#BbAvaliacaoCorrigirComPlagio2 { @include settingsBoxImagem(49%, auto, auto, 5%, 0) }
+#BbAvaliacaoCorrigirComPlagio3 { @include settingsBoxImagem(30%, auto, 25%, 0, auto) }
+#BbAvaliacaoCorrigirComPlagio4 { @include settingsBoxImagem(27%, auto, 50%, 0, auto) }
+#BbAvaliacaoCorrigirComPlagio5 { @include settingsBoxImagem(23%, auto, auto, 0, 0) }
+
+// Avaliar fórum de discussão
+#BbAvaliacaoAvForumDiscussao1 { @include settingsBoxImagem(36%, auto, 40%, 10%, auto) }
+#BbAvaliacaoAvForumDiscussao2 { @include settingsBoxImagem(30%, auto, 25%, 5%, auto) }
+#BbAvaliacaoAvForumDiscussao3 { @include settingsBoxImagem(34%, auto, 50px, 5%, auto) }
+#BbAvaliacaoAvForumDiscussao4 { @include settingsBoxImagem(32%, auto, 0, 0, auto) }
+
+// Avaliar blog
+#BbAvaliacaoCriarBlog1 { @include settingsBoxImagem(36%, auto, 40%, 0, auto) }
+#BbAvaliacaoCriarBlog2 { @include settingsBoxImagem(32%, auto, 20%, 0, auto) }
+#BbAvaliacaoCriarBlog3 { @include settingsBoxImagem(36%, auto, 40%, 0, auto) }
+#BbAvaliacaoCriarBlog4 { @include settingsBoxImagem(30%, auto, 20%, 0, auto) }
+
+// Avaliar Diário
+#BbAvaliacaoAvaliarDiario1 { @include settingsBoxImagem(36%, auto, 40%, 10%, auto) }
+#BbAvaliacaoAvaliarDiario2 { @include settingsBoxImagem(32%, auto, 20%, 0, auto) }
+#BbAvaliacaoAvaliarDiario3 { @include settingsBoxImagem(36%, auto, 40%, 0, auto) }
+#BbAvaliacaoAvaliarDiario4 { @include settingsBoxImagem(50%, auto, 20px, 20px, auto) }
+
+// Avaliar Wiki
+#BbAvaliacaoAvaliarWiki1 { @include settingsBoxImagem(35%, auto, auto, 35%, -50px) }
+#BbAvaliacaoAvaliarWiki2 { @include settingsBoxImagem(36%, auto, 40%, 0, auto) }
+#BbAvaliacaoAvaliarWiki3 { @include settingsBoxImagem(36%, auto, 40%, 0, auto) }
+#BbAvaliacaoAvaliarWiki4 { @include settingsBoxImagem(40%, auto, 40%, 0, auto) }
+#BbAvaliacaoAvaliarWiki5 { @include settingsBoxImagem(36%, auto, auto, 0, 6%) }
+#BbAvaliacaoAvaliarWiki6 { @include settingsBoxImagem(36%, auto, 40%, 0, auto) }
+#BbAvaliacaoAvaliarWiki7 { @include settingsBoxImagem(45%, auto, 30%, 10%, auto) }
+
+// Corrigir com Rubric
+#BbAvaliacaoCorrigirRubric1 { @include settingsBoxImagem(33%, auto, 33%, 0, auto) }
+#BbAvaliacaoCorrigirRubric2 { @include settingsBoxImagem(25%, auto, auto, 0, 0) }
+#BbAvaliacaoCorrigirRubric3 { @include settingsBoxImagem(30%, auto, auto, 0, 0) }
+
+// Exportar as notas para o sistema acadêmico
+#BbAvaliacaoExSistAcademico1 { @include settingsBoxImagem(40%, auto, auto, 30%, -140px) }
+#BbAvaliacaoExSistAcademico2 { @include settingsBoxImagem(30%, 0, auto, auto, -80px) }
+#BbAvaliacaoExSistAcademico3 { @include settingsBoxImagem(58%, auto, auto, 0, -80px) }
+
+// CATEGORIA: Calendário
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+// Criar e visualizar eventos
+#BbCalendarioCriarVisualizarEventos1 { @include settingsBoxImagem(27%, auto, 10%, 0, auto) }
+#BbCalendarioCriarVisualizarEventos2 { @include settingsBoxImagem(35%, auto, auto, 0, 40%) }
+#BbCalendarioCriarVisualizarEventos3 { @include settingsBoxImagem(35%, auto, auto, 0, 5%) }
+#BbCalendarioCriarVisualizarEventos4 { @include settingsBoxImagem(33%, auto, 13%, 0, auto) }
+#BbCalendarioCriarVisualizarEventos5 { @include settingsBoxImagem(37%, auto, auto, 0, 0) }
+#BbCalendarioCriarVisualizarEventos6 { @include settingsBoxImagem(35%, auto, auto, 0, 20%) }
+#BbCalendarioCriarVisualizarEventos7 { @include settingsBoxImagem(30%, auto, auto, 0, 20%) }
+#BbCalendarioCriarVisualizarEventos8 { @include settingsBoxImagem(38%, auto, auto, 0, 20%) }
+
+// Sincronizar com e-mail pessoal
+// @include                               settingsBoxImagem(W%,  l,   t,   r,   b)
+#BbCalendarioSincronizarEmail1 { @include settingsBoxImagem(25%, auto, -30px, 0, auto) }
+#BbCalendarioSincronizarEmail2 { @include settingsBoxImagem(23%, 60px, 25%, auto, auto) }
+#BbCalendarioSincronizarEmail3 { @include settingsBoxImagem(26%, 20px, 30%, auto, auto) }
+#BbCalendarioSincronizarEmail3b { @include settingsBoxImagem(16%, auto, 30px, 0, auto) }
+#BbCalendarioSincronizarEmail4 { @include settingsBoxImagem(57%, auto, auto, 19%, -85px) }
+#BbCalendarioSincronizarEmail5 { @include settingsBoxImagem(27%, auto, 0, 0, auto) }
+#BbCalendarioSincronizarEmail6 { @include settingsBoxImagem(41%, 0, 50%, auto, auto) }
+#BbCalendarioSincronizarEmail7 { @include settingsBoxImagem(27%, 40px, 45%, auto, auto) }
+#BbCalendarioSincronizarEmail8 { @include settingsBoxImagem(27%, auto, 0, 0, auto) }
+#BbCalendarioSincronizarEmail9 { @include settingsBoxImagem(27%, auto, 0, 0, auto) }
+#BbCalendarioSincronizarEmail10 { @include settingsBoxImagem(27%, auto, 30%, 0, auto) }
+#BbCalendarioSincronizarEmail11 { @include settingsBoxImagem(27%, auto, 0, 0, auto) }
+#BbCalendarioSincronizarEmail12 { @include settingsBoxImagem(27%, auto, auto, 0, 20%) }
+#BbCalendarioSincronizarEmail13 { @include settingsBoxImagem(27%, auto, 0, 0, auto) }
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// ASSUNTO: CATME
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// CATEGORIA: Lorem ipsum
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
