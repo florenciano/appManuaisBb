@@ -574,16 +574,16 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 	// "O que é Catme"
-	$scope.O_que_é_Catme = 
+	$scope.O_que_e_Catme = 
 	[
 	{
 		"manual"	: 	"Funcionamento do Catme",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/sobre-a-ferramenta/funcionamento-do-catme/",
 		"tipoIcone"	: 	"catme"
 	},
 	{
 		"manual"	: 	"Criar conta",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/sobre-a-ferramenta/criar-conta/",
 		"tipoIcone"	: 	"catme"
 	}
 	];
@@ -593,12 +593,12 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"O que é Catme",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/sobre-a-ferramenta/o-que-e-catme/",
 		"tipoIcone"	: 	"catme"
 	},
 	{
 		"manual"	: 	"Criar conta",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/sobre-a-ferramenta/funcionamento-do-catme/",
 		"tipoIcone"	: 	"catme"
 	}
 	];
@@ -608,12 +608,12 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"O que é Catme",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/sobre-a-ferramenta/o-que-e-catme/",
 		"tipoIcone"	: 	"catme"
 	},
 	{
 		"manual"	: 	"Funcionamento do Catme",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/sobre-a-ferramenta/funcionamento-do-catme/",
 		"tipoIcone"	: 	"catme"
 	}
 	];
@@ -626,17 +626,17 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"Criar classe", 
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-classe/",
 		"tipoIcone"	: 	"catme"
 	},
 	{
 		"manual"	: 	"Criar pesquisa de avaliação", 
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-pesquisa-de-avaliacao/",
 		"tipoIcone"	: 	"catme"
 	},
 	{
-		"manual"	: 	"Editar informações", 
-		"Link" 		: 	"#",
+		"manual"	: 	"Editar informações da pesquisa", 
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/editar-iformacoes-da-pesquisa/",
 		"tipoIcone"	: 	"catme"
 	}
 	];
@@ -646,57 +646,57 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"Preparar listagem de alunos", 
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/preparar-listagem-de-alunos/",
 		"tipoIcone"	: 	"catme"
 	},
 	{
 		"manual"	: 	"Criar pesquisa de avaliação", 
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-pesquisa-de-avaliacao/",
 		"tipoIcone"	: 	"catme"
 	},
 	{
-		"manual"	: 	"Editar informações", 
-		"Link" 		: 	"#",
+		"manual"	: 	"Editar informações da pesquisa", 
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/editar-iformacoes-da-pesquisa/",
 		"tipoIcone"	: 	"catme"
 	}
 	];
 
 	// "Criar pesquisa de avaliação"
-	$scope.Criar_pesquisa_de_avaliação = 
+	$scope.Criar_pesquisa_de_avaliacao = 
 	[
 	{
 		"manual"	: 	"Preparar listagem de alunos", 
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/preparar-listagem-de-alunos/",
 		"tipoIcone"	: 	"catme"
 	},
 	{
 		"manual"	: 	"Criar classe", 
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-classe/",
 		"tipoIcone"	: 	"catme"
 	},
 	{
-		"manual"	: 	"Editar informações", 
-		"Link" 		: 	"#",
+		"manual"	: 	"Editar informações da pesquisa", 
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/editar-iformacoes-da-pesquisa/",
 		"tipoIcone"	: 	"catme"
 	}
 	];
 
 	// "Editar informações"
-	$scope.Editar_informações = 
+	$scope.Editar_informacoes = 
 	[
 	{
 		"manual"	: 	"Preparar listagem de alunos", 
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/preparar-listagem-de-alunos/",
 		"tipoIcone"	: 	"catme"
 	},
 	{
 		"manual"	: 	"Criar classe", 
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-classe/",
 		"tipoIcone"	: 	"catme"
 	},
 	{
 		"manual"	: 	"Criar pesquisa de avaliação", 
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-pesquisa-de-avaliacao/",
 		"tipoIcone"	: 	"catme"
 	}
 	];
@@ -705,11 +705,11 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 	// "Acessar resultados de uma avaliação existente"
-	$scope.Acessar_resultados_de_uma_avaliação_existente = 
+	$scope.Acessar_resultados_de_uma_avaliacao_existente = 
 	[
 	{
 		"manual" 	: 	"Trabalhar resultados no Excel",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/analisar-os-resultados/trabalhar-resultados-no-excel/",
 		"tipoIcone"	: 	"catme"
 	}
 	];
@@ -719,7 +719,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual" 	: 	"Acessar resultados de uma avaliação existente",
-		"Link" 		: 	"#",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/analisar-os-resultados/acessar-resultados-de-uma-avaliacao-existente/",
 		"tipoIcone"	: 	"catme"
 	}
 	];
@@ -729,7 +729,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 	// "Informações do software"
-	$scope.Informações_do_software = 
+	$scope.Informacoes_do_software = 
 	[
 	{
 		"manual"	: 	"Informações do hardware",
@@ -769,7 +769,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	];
 
 	// "Informações do hardware"
-	$scope.Informações_do_hardware = 
+	$scope.Informacoes_do_hardware = 
 	[
 	{
 		"manual"	: 	"Informações do software",
@@ -929,7 +929,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	];
 
 	// "Salvar sessão"
-	$scope.Salvar_sessão = 
+	$scope.Salvar_sessao = 
 	[
 	{
 		"manual"	: 	"Informações do software",
@@ -969,7 +969,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	];
 
 	// "Gerar e acessar relatórios"
-	$scope.Gerar_e_acessar_relatórios = 
+	$scope.Gerar_e_acessar_relatorios = 
 	[
 	{
 		"manual" 	: 	"Informações do software",

@@ -283,15 +283,15 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	},
 	{
 		'manual'			: 	'O que é Catme',
-		'linkManual'		: 	'/blackboard/sub1'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/sobre-a-ferramenta/o-que-e-catme/'
 	},
 	{
 		'manual'			: 	'Funcionamento do Catme',
-		'linkManual'		: 	'/blackboard/sub2'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/sobre-a-ferramenta/funcionamento-do-catme/'
 	},
 	{
 		'manual'			: 	'Criar conta',
-		'linkManual'		: 	'/blackboard/sub2'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/sobre-a-ferramenta/criar-conta/'
 	}
 	];
 
@@ -305,19 +305,19 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	},
 	{
 		'manual'			: 	'Preparar listagem de alunos',
-		'linkManual'		: 	'/blackboard/sub1'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/preparar-listagem-de-alunos/'
 	},
 	{
 		'manual'			: 	'Criar classe',
-		'linkManual'		: 	'/blackboard/sub2'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-classe/'
 	},
 	{
 		'manual'			: 	'Criar pesquisa de avaliação',
-		'linkManual'		: 	'/blackboard/sub2'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-pesquisa-de-avaliacao/'
 	},
 	{
-		'manual'			: 	'Editar informações',
-		'linkManual'		: 	'/blackboard/sub2'
+		'manual'			: 	'Editar informações da pesquisa',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/editar-informacoes-de-pesquisa'
 	}
 	];
 
@@ -331,11 +331,11 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	},
 	{
 		'manual'			: 	'Acessar resultados de uma avaliação existente',
-		'linkManual'		: 	'/blackboard/sub1'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/analisar-os-resultados/acessar-resultados-de-uma-avaliacao-existente/'
 	},
 	{
 		'manual'			: 	'Trabalhar resultados no Excel',
-		'linkManual'		: 	'/blackboard/sub2'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/analisar-os-resultados/trabalhar-resultados-no-excel/'
 	}
 	];
 

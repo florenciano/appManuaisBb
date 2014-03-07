@@ -5,59 +5,96 @@
 	<title>Manuais Blackboard - documentação</title>
 	<link rel="stylesheet" href="pure-min.css">
 	<style type="text/css">
-		body{ color: #3c3c3c; }
+		body{ color: #3c3c3c; font-family: helvetica, arial, sans-serif;}
 		.wrapper {
 			margin: 1em auto;
 			max-width: 1024px;
 			padding: 1em;
 		}
+		/* estyle document. Use if necessary */
+		.nameProject {
+			color: #fff;
+			background-color: #cf1432;
+			padding: .25em;
+			font-weight: normal;
+			margin: 0;
+			font-size: 87.5%;
+			display: inline-block;
+		}
+		a, a:hover, a:active, a:focus {
+			color: #cf1432;
+		}
+		ul li {
+			margin: .25em 0;
+			font-size: 92.5%;
+		}
+		ul li ul li {
+			font-size: 100%;
+		}
+		figcaption {
+			border-left: 3px solid #737373;
+			padding: .25em .5em;
+			font-size: 82.5%;
+			margin: .5em 0 1em 0;
+		}
 	</style>
 </head>
 <body>
 	<div class="wrapper">
-		<h1><a name="inicio"></a>Manuais Blackboard: documentação do Projeto</h1>
-		<p><strong>Caro leitor</strong>, o presente documento esclarece todas as diretrizes necessárias ao(s) desenvolvedor(es) responsável(is) visando atender qualquer alteração necessária no projeto ou, simplesmente, o contínuo desenvolvimento do mesmo, no que se refere exclusivamente ao desenvolvimento Front-end. Aqui também esta descritas todas as lógicas de funcionamento, detalhamento da estrutura de diretórios e a função de cada página produzida.</p>
+		<h1 id="inicio">Reformulação dos manuais</h1>
+		<h2 class="nameProject">Documentação do Projeto</h2>
+		<p>O presente documento esclarece todas as diretrizes necessárias ao(s) desenvolvedor(es) responsável(is) visando atender qualquer alteração necessária no projeto ou, simplesmente, o contínuo desenvolvimento do mesmo.</p>
+		<p>Aqui também estão descritas todas as lógicas de funcionamento [scripts, markups, regras de estilos], detalhamento da estrutura de diretórios [links, regra de rotulagem e sistema de navegação].</p>
 
 		<hr>
 
-		<h3>sumário</a></h3>
+		<h3>Sumário</a></h3>
 		<ul>
-			<li><a href="#detalhesGeral">Detalhes geral do Projeto</a></li>
-			<li><a href="#habilidades">Habilidades requeridas do desenvolvedor do Projeto</a></li>
+			<li><a href="#detalhesGeral">Detalhes gerais do Projeto</a></li>
+			<li><a href="#habilidades">Habilidades requeridas</a></li>
 			<li><a href="#estruturaProjeto">Estrutura do Projeto</a></li>
 		</ul>
 
 		<hr>
 
-		<h2><a name="detalhesGeral"></a>Detalhes geral do Projeto</h2>
+		<!-- DETALHES GERAIS -->
+		<h2><a name="detalhesGeral"></a>Detalhes gerais do Projeto</h2>
 		<p><strong>Nome do Projeto</strong>
-		<br>Manuais Blackboard</p>
+		<br>Reformulação dos manuais</p>
+
 		<p><strong>Diretório de gravação do Projeto</strong>
 		<br>Material armazenado no computador no seguinte endereço*: <strong>D:\wamp\www\projetos\appManuaisBb\front</strong>
 		<br><small>* diretório <em>default</em> de desenvolvimento de projetos. Segue a diretriz de endereço recomendado e gerenciada pelo <a href="http://www.wampserver.com/en/">Wamp</a> (plataforma de desenvolvimento de aplicação web).</small></p>
+		<p>Um backup deste projeto esta sendo armazenada em: <br>
+		<strong>U:\TAI\Projetos\Projetos 2014\Reformulacao_manuais\Professor\DI\Para_Producao</strong> <br>tendo como nome do arquivo: <em>bckRefManuais <small>[DATA DA ÚLTIMA ATUALIZAÇÃO]</small></em></p>
+		
 		<p><strong>Objetivo do Projeto</strong>
 		<br>Transpor os manuais do Blackboard da versão .pdf para .html mantendo a mesma (ou a mais próxima de) experiência de uso do modelo de origem.</p>
+		
 		<p><strong>Requisitos mínimos do Projeto</strong>
 		<br>Responsive web design (RWD); Cross-browser compatível com todos os browser que recebem suporte do Blackboard (<a href="http://help.blackboard.com/en-us/Learn/9.1_SP_12_and_SP_13/Administrator/010_Release_Notes/025_SP13_Release_Notes/Browser_Support">veja lista</a>).</p>
+		
 		<p><strong>Metas do Projeto</strong></p>
 		<ul>
 			<li>Permitir que o usuário tira as principais dúvidas referente ao Blackboard por meio da navegação das páginas do projeto;</li>
 			<li>Facilitar a busca por determinados assuntos de interesses;</li>
 			<li>Poder imprimir o documento mantendo a mesma experiência do formato original .pdf;</li>
 		</ul>
+		
 		<p><strong>Início de desenvolvimento do Projeto</strong>
 		<br>dezembro de 2013</p>
 		<p><a href="#inicio">Subir</a></p>
 
 		<hr>
 		
-		<h2><a name="habilidades"></a>Habilidades requeridas do desenvolvedor do Projeto</h2>
-		<p>O desenvolver ou o responsável pela manutenção e/ou contínuo desenvolvimento do Projeto precisa ter as seguintes competências ou experiências de uso:</p>
+		<!-- HABILIDADES -->
+		<h2><a name="habilidades"></a>Habilidades requeridas</h2>
+		<p>Para realizar quaisquer alterações no projeto é necessário identificar as tecnologias implementadas no projeto. É recomendável que o desenvolver ou o responsável pela manutenção do Projeto tenha familariedade com estas tecnologias abaixo:</p>
 		<ul>
 			<li>HTML5</li>
 			<li>COMPASS (<a href="http://compass-style.org">mais informação</a>)</li>
 			<li>SASS (<a href="http://sass-lang.com">mais informação</a>)</li>
-			<li>CSS direcionado a impressão</li>
+			<li>CSS3 <s>e CSS direcionado a impressão</s></li>
 			<li>Javascript e biblitoteca de script jQuery</li>
 			<li>AngularJS (<a href="http://angularjs.org">mais informação</a>)</li>	
 		</ul>
@@ -65,21 +102,42 @@
 
 		<hr>
 		
+		<!-- ESTRUTURA DO PROJETO -->
 		<h2><a name="estruturaProjeto"></a>Estrutura do Projeto</h2>
-		<p>O projeto esta sob a seguintes estrutura de diretórios:</p>
-		<p><img src="img/estruturaDiretorio.png" alt="Estrutura principal de diretórios"></p>
-		<h4>Diretrizes da estrutura de diretório</h4>
-		<p>A estrutura de diretórios esta segue as recomendações de boas práticas para o desenvolvimento de projetos web. Esta estrutura esta baseado num dos mais popular <a href="http://html5boilerplate.com/">templantes boilerplate</a> disponível para desenvolvimento front-end. A seguir a função de cada diretório desta estrutura:</p>
+		<!-- <p>O projeto esta sob a seguintes estrutura de diretórios:</p> -->
+		<!-- <h4>Diretrizes da estrutura de diretório</h4> -->
+		<p>A estrutura de diretórios foi definida com base nas recomendações de boas práticas para o desenvolvimento de projetos web. A estrutura inicial seguiu as diretrizes do <a href="http://html5boilerplate.com/">boilerplate templantes</a> disponível para desenvolvimento front-end, no entanto, para atender as necessidades peculiares do Projeto ocorreu pequenas modificações. Segue abaixo a estrutura principal de diretórios:</p>
+		<p>
+			<figure>
+				<img src="img/estruturaDiretorio.png" alt="Estrutura principal de diretórios">
+				<figcaption>Estrutura inicial do projeto</figcaption>
+			</figure>
+		</p>
 		<ul>
 			<li>
 				<strong>Diretório raiz (front)</strong>
-				<p>Diretório responsável para armazenar o arquivo <em>índice</em> do diretório (index.html) e as demais, quando houver, páginas HTML. Os subs-diretórios também ficarão alocados aqui. Ainda sobre este diretório fica reservado a alocação de outros arquivos que complementam o desenvolvimento necessário do projeto podendo aumentar esta lista conforme necessidade.</p>
-				<ul>
-					<li><em>404.html</em></li>
-					<li><em>humans.txt</em></li>
-					<li><em>robots.txt</em></li>
-					<li><em>favicon.ico</em></li>
-				</ul>
+				<p>Diretório responsável para armazenar o arquivo <em>índice</em> do diretório (index.html). Ainda sobre este diretório fica reservado a alocação de outros <strong>arquivos</strong> que complementam o desenvolvimento necessário do projeto, por exemplo: <em>favicon.ico</em>.</p>
+				<p>Para atender as recomendações do conceito <em>Friendly URLs</em> foram criados novos diretórios para cada <strong>tema</strong> de manual a ser produzido. Para facilitar a identificação destes itens a letra inicial fica gravado em caixa alta.</p>
+				<p>
+				<figure>
+					<img src="img/estruturaTemas.png" alt="Estrutura de diretórios com as pastas de cada tema">
+					<figcaption>As pastas de cada tema estão identificados na imagem pelos bullets. Estas pastas agrupam os HTMLs.</figcaption>
+				</figure>
+				</p>
+				<p>Uma vez definido o temas, o próximo passo é novamente agrupar os HTMLs por <strong>assunto</strong>. Abaixo segue um exemplo com o tema Blackboard.</p>
+				<p>
+				<figure>
+					<img src="img/estruturaBlackboard.png" alt="Estrutura de diretórios: tema Blackboard">
+					<figcaption>Um exemplo da aplicação dos diretórios para o tema Blackboard.</figcaption>
+				</figure>
+				</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, recusandae, ducimus expedita eos laudantium sit sed nesciunt iure laboriosam distinctio odio dicta alias ipsum beatae quos quas nulla quo doloremque!.</p>
+				<p>
+				<figure>
+					<img src="img/estruturaAssunto.png" alt="Estrutura de diretórios: tema Blackboard">
+					<figcaption>Um exemplo da aplicação do asssunto 'Avaliação' para o tema Blackboard. Estas pastas agrupam os HTMLs e contribuem para gerar links amigáveis [Friendly URLs].</figcaption>
+				</figure>
+				</p>
 			</li>
 			<li>
 				<strong>Diretório de imagens (img)</strong>

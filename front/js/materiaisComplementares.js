@@ -1,6 +1,6 @@
 /* ===============================================================
 	
-	MATRIZ DOS MANUAIS RELACIONADOS
+	MATRIZ DOS MANUAIS COMPLEMENTARES
 
    	Este documento é responsável por alimentar a lista dos
    	'Materiais complementares' de cada manual.

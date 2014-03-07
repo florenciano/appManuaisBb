@@ -524,6 +524,63 @@ body {
             }
         }
 
+        // Novos elementos do catme
+        
+        // O que é a ferramenta Catme
+        .boxURLCatme {
+            display: block;
+            border: 2px solid $corDefault;
+            width: 30%;
+            margin: 2em auto;
+            text-align: center;
+            padding: 1em 0;
+            @include radius();
+        }
+        section.destCatme {
+            width: 75%;
+            left: 12.5%;
+            padding: .5em;
+            float: left;
+            margin: ($meioGrid / 4) !important;
+            
+            .boxDestaqueAdicional {
+                @include radius(10px);
+                padding: 1.75em 0;
+            }
+        }
+
+        // Listagem geral 
+        section.destListagem {
+            width: 82%;
+            left: 9%;
+            padding: .5em;
+            float: left;
+            margin: ($meioGrid / 4) !important;
+
+            .atencaoListagemAl {
+                padding: 1em !important;
+                @include radius(10px);
+                
+                h3 { margin: .25em 0 .75em 0; }
+            }
+        }
+
+        // listagem de alunos
+        .listagemAlunos {
+            p { margin: 0; }
+            ul {
+                margin: 0;    
+                padding: 0 0 0 1.25em;
+            }
+            img { margin-top: $meioGrid / 4 }
+        }
+
+        
+
+        /////////////////////////////////////////////////////////////
+        // fim das novas regras
+        /////////////////////////////////////////////////////////////
+
     // sumario: content dinamic
     .sumario {
         margin: $grid 0 !important;
