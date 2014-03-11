@@ -377,6 +377,7 @@
     #BbCalendarioSincronizarEmail12 { @include settingsBoxImagem(27%, auto, auto, 0, 20%) }
     #BbCalendarioSincronizarEmail13 { @include settingsBoxImagem(27%, auto, 0, 0, auto) }
 
+    
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
     // ASSUNTO: CATME
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -399,12 +400,43 @@
     #CatmePesqAvalPrepararList2 { @include settingsBoxImagem(33%, auto, auto, 0, -20px) }
 
     // Criar classe
-    // @include                                  settingsBoxImagem(W%,  l,   t,   r,   b)
     #CatmePesqAvalCriarClasse1 { @include settingsBoxImagem(50%, auto, auto, 0, 50px) }
     #CatmePesqAvalCriarClasse2 { @include settingsBoxImagem(47%, auto, auto, 0, 24%) }
     #CatmePesqAvalCriarClasse3 { @include settingsBoxImagem(45%, auto, auto, 0, 70px ) }
 
+    // Criar pesquisa de avaliação
+    #CatmePesqAvalCriarPesq1 { @include settingsBoxImagem(44%, auto, auto, 0, 80px) }
+    #CatmePesqAvalCriarPesq2 { @include settingsBoxImagem(30%, auto, auto, 0, 70px) }
+    #CatmePesqAvalCriarPesq3 { @include settingsBoxImagem(45%, auto, auto, 0, 60px) }
+    #CatmePesqAvalCriarPesq4 { @include settingsBoxImagem(30%, auto, auto, 0, 60px) }
+    #CatmePesqAvalCriarPesq5 { @include settingsBoxImagem(55%, auto, auto, 22.5%, -90px) }
+    #CatmePesqAvalCriarPesq6 { @include settingsBoxImagem(50%, auto, auto, 0, 60px) }
+    #CatmePesqAvalCriarPesq7 { @include settingsBoxImagem(55%, auto, auto, 0, 0) }
+    #CatmePesqAvalCriarPesq8 { @include settingsBoxImagem(56%, auto, auto, 22%, -310px) }
 
+    // Criar pesquisa de avaliação
+    #CatmePesqAvalEditarInfo1 { @include settingsBoxImagem(38%, auto, auto, 0, 50px) }
+    #CatmePesqAvalEditarInfo2 { @include settingsBoxImagem(50%, 0, auto, auto, 10px) }
+    #CatmePesqAvalEditarInfo3 { @include settingsBoxImagem(30%, 0, auto, auto, 15px) }
+
+    // CATEGORIA: Analisar os resultados
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    // Acessar resultados de uma avaliação
+    #CatmeAnalisarAcessarRes1 { @include settingsBoxImagem(40%, auto, auto, 0, 20px) }
+    #CatmeAnalisarAcessarRes2 { @include settingsBoxImagem(38%, auto, auto, 0, 0) }
+    #CatmeAnalisarAcessarRes3 { @include settingsBoxImagem(42%, auto, auto, 0, 40px) }
+    #CatmeAnalisarAcessarRes4 { @include settingsBoxImagem(38%, 0, auto, auto, -60px) }
+    #CatmeAnalisarAcessarRes5 { @include settingsBoxImagem(62%, auto, auto, 19%, -120px) }
+    #CatmeAnalisarAcessarRes6 { @include settingsBoxImagem(46%, auto, auto, 32%, -90px) }
+    #CatmeAnalisarAcessarRes7 { @include settingsBoxImagem(45%, 0, auto, auto, -20px) }
+
+    // Trabalhar resultados no excel
+    // @include                          settingsBoxImagem(W%,  l,   t,   r,   b)
+    #CatmeAnalisarResTrabExcel1 { @include settingsBoxImagem(40%, auto, auto, 0, 0) }
+    #CatmeAnalisarResTrabExcel2 { @include settingsBoxImagem(26%, auto, auto, 0, 40px) }
+    #CatmeAnalisarResTrabExcel3 { @include settingsBoxImagem(30%, auto, auto, 10%, 50%) }
+    #CatmeAnalisarResTrabExcel4 { @include settingsBoxImagem(32%, auto, 10%, 0, auto) }
 
 }
 
@@ -813,9 +845,42 @@
     #CatmePesqAvalPrepararList2 { @include settingsBoxImagem(80%, auto, auto, 0, -30px) }
 
     // Criar classe
-    // @include                                  settingsBoxImagem(W%,  l,   t,   r,   b)
     #CatmePesqAvalCriarClasse1 { @include settingsBoxImagem(52%, auto, auto, 0, 50px) }
     #CatmePesqAvalCriarClasse2 { @include settingsBoxImagem(55%, auto, auto, 0, 10%) }
     #CatmePesqAvalCriarClasse3 { @include settingsBoxImagem(48%, auto, auto, 0, 60px) }
+
+    // Criar pesquisa de avaliação
+    #CatmePesqAvalCriarPesq1 { @include settingsBoxImagem(44%, auto, auto, 0, 80px) }
+    #CatmePesqAvalCriarPesq2 { @include settingsBoxImagem(45%, auto, auto, 0, 50px) }
+    #CatmePesqAvalCriarPesq3 { @include settingsBoxImagem(50%, auto, auto, 0, 45px) }
+    #CatmePesqAvalCriarPesq4 { @include settingsBoxImagem(45%, auto, auto, 0, 40px) }
+    #CatmePesqAvalCriarPesq5 { @include settingsBoxImagem(75%, auto, auto, 12.5%, -90px) }
+    #CatmePesqAvalCriarPesq6 { @include settingsBoxImagem(60%, auto, auto, 0, 45px) }
+    #CatmePesqAvalCriarPesq7 { @include settingsBoxImagem(55%, auto, auto, 0, -20px) }
+    #CatmePesqAvalCriarPesq8 { @include settingsBoxImagem(80%, auto, auto, 10%, -310px) }
+
+    // Criar pesquisa de avaliação
+    #CatmePesqAvalEditarInfo1 { @include settingsBoxImagem(30%, auto, auto, 0, 10px) }
+    #CatmePesqAvalEditarInfo2 { @include settingsBoxImagem(45%, 0, auto, auto, 0) }
+    #CatmePesqAvalEditarInfo3 { @include settingsBoxImagem(30%, 10px, auto, auto, 0) }
+
+    // CATEGORIA: Analisar os resultados
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    // Acessar resultados de uma avaliação
+    #CatmeAnalisarAcessarRes1 { @include settingsBoxImagem(40%, auto, auto, 0, 20px) }
+    #CatmeAnalisarAcessarRes2 { @include settingsBoxImagem(38%, auto, auto, 0, 0) }
+    #CatmeAnalisarAcessarRes3 { @include settingsBoxImagem(60%, auto, auto, 0, 20px) }
+    #CatmeAnalisarAcessarRes4 { @include settingsBoxImagem(35%, 0, auto, auto, -80px) }
+    #CatmeAnalisarAcessarRes5 { @include settingsBoxImagem(90%, auto, auto, 5%, -120px) }
+    #CatmeAnalisarAcessarRes6 { @include settingsBoxImagem(64%, auto, auto, 16%, -90px) }
+    #CatmeAnalisarAcessarRes7 { @include settingsBoxImagem(55%, 0, auto, auto, -30px) }
+
+    // Trabalhar resultados no excel
+    // @include                          settingsBoxImagem(W%,  l,   t,   r,   b)
+    #CatmeAnalisarResTrabExcel1 { @include settingsBoxImagem(30%, auto, auto, 0, -20px) }
+    #CatmeAnalisarResTrabExcel2 { @include settingsBoxImagem(46%, auto, auto, 0, 40px) }
+    #CatmeAnalisarResTrabExcel3 { @include settingsBoxImagem(42%, auto, auto, 0, 44%) }
+    #CatmeAnalisarResTrabExcel4 { @include settingsBoxImagem(45%, auto, 10%, 0, auto) }
 
 }

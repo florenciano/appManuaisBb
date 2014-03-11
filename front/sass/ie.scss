@@ -443,8 +443,10 @@ button.close {
     //regras gerais
     section { @include font(normal, 1em); }
     a { @include corLink(); }
-    li { list-style-type: square; margin: ($meioGrid / 4) 0; }
-    li:first-child { margin-top: 0}
+    li { 
+        list-style-type: square;
+        margin: ($meioGrid / 4) 0;
+    }
     table { 
         width: 100%;
         border-collapse: collapse;
@@ -489,7 +491,113 @@ button.close {
         padding: 0;
         width: 100%;
         height: 100%;
-        td { border: 1px solid $corBorda; padding: ($meioGrid / 4); }
+        td {
+            border: 1px solid $corBorda;
+            border-width: 0px 1px 1px 0px;
+            padding: ($meioGrid / 4);
+        }
+    }
+
+    // Novos elementos do catme
+    
+    // O que é a ferramenta Catme
+    .boxURLCatme {
+        display: block;
+        border: 2px solid $corDefault;
+        width: 30%;
+        margin: 2em auto;
+        text-align: center;
+        padding: 1em 0;
+        @include radius();
+    }
+    .boxURLListExistente{
+        width: 45%;
+        margin: 1em auto;
+    }
+    section.destCatme {
+        width: 75%;
+        left: 12.5%;
+        padding: .5em;
+        float: left;
+        margin: ($meioGrid / 4) !important;
+        
+        .boxDestaqueAdicional {
+            @include radius(10px);
+            padding: 1.75em 0;
+        }
+    }
+
+    // Listagem geral 
+    section.destListagem {
+        width: 82%;
+        left: 9%;
+        padding: .5em;
+        float: left;
+        margin: ($meioGrid / 4) !important;
+
+        .atencaoListagemAl {
+            padding: 1em !important;
+            @include radius(10px);
+            
+            h3 { margin: .25em 0 .75em 0; }
+        }
+    }
+
+    // listagem de alunos
+    .listagemAlunos {
+        p { margin: 0; }
+        ul {
+            margin: 0;    
+            padding: 0 0 0 1.25em;
+            li {
+               ul { 
+                    li { list-style-type: circle; }
+                }
+            }
+        }
+        img { margin-top: $meioGrid / 4 }
+        .recuoList{ margin-top: 0;}
+    }
+
+    // pesquisa de avaliação
+    .pesqAvaliacao {
+        @include radius($meioGrid/5);
+        padding: $meioGrid / 2;
+        background-color: $corDefaultDark;
+        border: 0;
+        color: #fff;
+        // sobrescrevendo regras
+        width: 77% !important;
+        margin-left: 11.5% !important;
+        p {
+            line-height: 1.5em;
+            margin: 0 0 .5em;
+            img { display: inline-block; }
+            a { @include corLinkUpBox($corSec01); }
+        }
+    }
+    // acessar resultados de uma avaliacao existente
+    .tableAvalExistente {
+        margin:0px;
+        padding:0px;
+        width:100%;
+        border:1px solid $corBorda;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    .tableAvalExistente th[scope="col"] {
+        background-color: #737373;
+        color: #fff;
+        height: 3em;
+        border: 1px solid #555;
+    }
+    .tableAvalExistente tr td {
+        vertical-align: top;
+        border:1px solid $corBorda;
+        border-width:0px 1px 1px 0px;
+        text-align:left;
+        padding:5px;
+        color:#000000;
     }
 
     /////////////////////////////////////////////////////////////
@@ -544,8 +652,14 @@ button.close {
         ul {
             margin: 0;    
             padding: 0 0 0 1.25em;
+            li {
+               ul { 
+                    li { list-style-type: circle; }
+                }
+            }
         }
         img { margin-top: $meioGrid / 4 }
+        .recuoList{ margin-top: 0;}
     }
 
 

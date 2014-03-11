@@ -461,7 +461,10 @@ body {
         //regras gerais
         section { @include font(normal, 1em); }
         a { @include corLink(); }
-        li { list-style-type: square; margin: ($meioGrid / 4) 0; }
+        li { 
+            list-style-type: square;
+            margin: ($meioGrid / 4) 0;
+        }
         li:first-child { margin-top: 0}
         table { 
             width: 100%;
@@ -536,6 +539,10 @@ body {
             padding: 1em 0;
             @include radius();
         }
+        .boxURLListExistente{
+            width: 45%;
+            margin: 1em auto;
+        }
         section.destCatme {
             width: 75%;
             left: 12.5%;
@@ -571,10 +578,78 @@ body {
             ul {
                 margin: 0;    
                 padding: 0 0 0 1.25em;
+                li {
+                   ul { 
+                        li { list-style-type: circle; }
+                    }
+                }
             }
             img { margin-top: $meioGrid / 4 }
+            .recuoList{ margin-top: 0;}
         }
 
+        // pesquisa de avaliação
+        .pesqAvaliacao {
+            @include radius($meioGrid/5);
+            padding: $meioGrid / 2;
+            background-color: $corDefaultDark;
+            border: 0;
+            color: #fff;
+            // sobrescrevendo regras
+            width: 77% !important;
+            margin-left: 11.5% !important;
+            p {
+                line-height: 1.5em;
+                margin: 0 0 .5em;
+                &:last-child { margin: 0 }
+                img { display: inline-block; }
+                a { @include corLinkUpBox($corSec01); }
+            }
+        }
+        // acessar resultados de uma avaliacao existente
+        .tableAvalExistente {
+            margin:0px;
+            padding:0px;
+            width:100%;
+            border:1px solid $corBorda;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        .tableAvalExistente th[scope="col"] {
+            background-color: #737373;
+            color: #fff;
+            height: 3em;
+            border: 1px solid #555;
+        }
+        .tableAvalExistente tr:nth-child(odd) { background-color:#ebebeb; }
+        .tableAvalExistente tr:nth-child(even) { background-color:#ffffff; }
+        .tableAvalExistente tr td {
+            vertical-align: top;
+            border:1px solid $corBorda;
+            border-width:0px 1px 1px 0px;
+            text-align:left;
+            padding:5px;
+            color:#000000;
+        }.tableAvalExistente tr:last-child td {
+            border-width:0px 1px 0px 0px;
+        }.tableAvalExistente tr td:last-child {
+            border-width:0px 0px 1px 0px;
+        }.tableAvalExistente tr:last-child td:last-child {
+            border-width:0px 0px 0px 0px;
+        }
+        .tableAvalExistente tr:first-child td {
+            background-color:#3c3c3c;
+            border:0px solid $corBorda;
+            text-align:center;
+            border-width:0px 0px 1px 1px;
+            color:#ffffff;
+        }
+        .tableAvalExistente tr:first-child td:first-child {
+            border-width:0px 0px 1px 0px;
+        }
+        .tableAvalExistente tr:first-child td:last-child {
+            border-width:0px 0px 1px 1px;
+        }
         
 
         /////////////////////////////////////////////////////////////
@@ -868,6 +943,20 @@ body {
                 text-align: center
             }
         }
+    }
+
+    // catme
+
+    // criar pesquisa de avaliacao
+    .pesqAvaliacao {
+        width: auto !important;
+        margin-left: 0 !important;
+        img { margin-top: 20% }
+    }
+    // acessar resultados avaliação existente
+    .boxURLListExistente {
+        width: 65%;
+        margin: 1em auto;
     }
 
     .imageContainer {
