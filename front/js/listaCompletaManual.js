@@ -254,9 +254,9 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 	$scope.BbCalendario = [
 	{
-		'categoria' 	: 	'Calendario',
-		'manual'		: 	'',
-		'linkManual'	: 	''
+		'categoria' 		: 	'Calendario',
+		'manual'			: 	'',
+		'linkManual'		: 	''
 	},
 	/////////////////////////////////////////////////////////////////
 	{
@@ -277,9 +277,9 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 	$scope.catmeSobreFerramenta = [
 	{
-		'categoria' 	: 	'Sobre a ferramenta', // Este equivale ao nome da categoria
-		'manual'		: 	'',
-		'linkManual'	: 	''
+		'categoria' 		: 	'Sobre a ferramenta', // Este equivale ao nome da categoria
+		'manual'			: 	'',
+		'linkManual'		: 	''
 	},
 	{
 		'manual'			: 	'O que é Catme',
@@ -299,9 +299,9 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 	$scope.catmeAplicarPesquisaAval = [
 	{
-		'categoria' 	: 	'Aplicar uma pesquisa de avaliação', // Este equivale ao nome da categoria
-		'manual'		: 	'',
-		'linkManual'	: 	''
+		'categoria' 		: 	'Aplicar uma pesquisa de avaliação', // Este equivale ao nome da categoria
+		'manual'			: 	'',
+		'linkManual'		: 	''
 	},
 	{
 		'manual'			: 	'Preparar listagem de alunos',
@@ -317,7 +317,7 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	},
 	{
 		'manual'			: 	'Editar informações da pesquisa',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/editar-informacoes-de-pesquisa'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/editar-informacoes-da-pesquisa/'
 	}
 	];
 
@@ -325,9 +325,9 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 	$scope.catmeAnalisarResultados = [
 	{
-		'categoria' 	: 	'Analisar os resultados', // Este equivale ao nome da categoria
-		'manual'		: 	'',
-		'linkManual'	: 	''
+		'categoria' 		: 	'Analisar os resultados', // Este equivale ao nome da categoria
+		'manual'			: 	'',
+		'linkManual'		: 	''
 	},
 	{
 		'manual'			: 	'Acessar resultados de uma avaliação existente',

@@ -636,7 +636,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	},
 	{
 		"manual"	: 	"Editar informações da pesquisa", 
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/editar-iformacoes-da-pesquisa/",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/editar-informacoes-da-pesquisa/",
 		"tipoIcone"	: 	"catme"
 	}
 	];
@@ -656,7 +656,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	},
 	{
 		"manual"	: 	"Editar informações da pesquisa", 
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/editar-iformacoes-da-pesquisa/",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/editar-informacoes-da-pesquisa/",
 		"tipoIcone"	: 	"catme"
 	}
 	];
@@ -676,7 +676,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	},
 	{
 		"manual"	: 	"Editar informações da pesquisa", 
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/editar-iformacoes-da-pesquisa/",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/editar-informacoes-da-pesquisa/",
 		"tipoIcone"	: 	"catme"
 	}
 	];
