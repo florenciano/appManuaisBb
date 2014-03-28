@@ -185,7 +185,52 @@
                         </ol>
 
                         <h5 class="icoClickers">Votadores eletrônicos (clickers)</h5>
-                        <ol class="noCategory" ng-repeat="item in clickers | filter: {manual:searchText}">
+                        <ol class="noCategory" ng-repeat="item in clickerSobreFerramenta | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerUtilizarVotadores | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerPrepararSlides | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerIdentificarVoto | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerPromoverVotacao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerAnalisarResultados | filter: {manual:searchText}">
                             <li class="nameCategory">
                                 <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
@@ -243,7 +288,7 @@
                         <div class="cabecalho fix">
                             <p>
                                 <!-- adicionar a data da produção do material -->
-                                <span><strong>Atualizado: </strong>10/02/2014</span>
+                                <span><strong>Atualizado: </strong>27/03/2014</span>
                             </p>
                         </div>
                         <hr>
@@ -271,8 +316,7 @@
                         <h1>
                             Conhecer os tipos de pergunta dos testes e pesquisas
                         </h1>
-                        <p>Para compartilhar materiais nas disciplinas é importante ter em mente quais arquivos são específicos da disciplina e não se repetirão em disciplinas futuras (plano de aula, por exemplo) e quais arquivos podem ser reutilizados em diferentes turmas/disciplinas, como estudos de caso, artigos etc.</p>
-
+                        
                         <div class="margemParaImagem" style="margin-top:20px"></div>
 
                         <div class="sumario row">
@@ -298,17 +342,161 @@
 
                         -->
 
+                        <h2 id="subTitulo3">Pergunta de correspondência </h2>
+                        <p>Nas perguntas de correspondência os alunos devem relacionar os itens de uma coluna aos itens de outra. Esse tipo de questão é configurado em duas etapas: primeiro são definidas as perguntas e respostas. Em seguida, as perguntas e respostas são relacionadas.</p>
                         <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/materiais/carregar-materiais-no-ambiente-virtual/step1.png" alt="" class="">
-                            <div class="boxDestaque" id="BbMateriaisCarregarMateriais1">
-                                <p>Carregue os materiais pasta <strong>Meus Conteúdos</strong>. Essa pasta é individual e não tem vínculo com qualquer disciplina.</p>
-                            </div>
-                            <div class="boxDestaqueAdicional" id="BbMateriaisCarregarMateriais2">
-                                <p>Para facilitar a organização dos arquivos, separe-os em pastas e subpastas. Um exemplo é dividir os materiais em categorias: exercícios, casos, apresentações de slides etc.</p>
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/criar-ou-alterar-pesquisas-sem-nota/step12.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTesPesquisaCriarPesSemNota17">
+                                <p>Escreva a instrução para que o aluno saiba o que deve ser feito.</p>
                             </div>
                         </div>
 
-                        <div class="margemParaImagem" style="margin-top:110px"></div>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/criar-ou-alterar-pesquisas-sem-nota/step13.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTesPesquisaCriarPesSemNota18">
+                                <p>A opção <strong>Permitir Crédito Parcial</strong> permite que parte do total de pontos seja considerada quando a resposta não estiver completamente correta. </p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/criar-ou-alterar-pesquisas-sem-nota/step14.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTesPesquisaCriarPesSemNota19">
+                                <p>Crie de quatro a vinte perguntas com suas respectivas respostas.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:80px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/criar-ou-alterar-pesquisas-sem-nota/step15.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTesPesquisaCriarPesSemNota20">
+                                <p>Escolha se as respostas serão exibidas em ordem aleatória ou defina a ordem de exibição.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/criar-ou-alterar-pesquisas-sem-nota/step16.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTesPesquisaCriarPesSemNota21">
+                                <p>Escreva os comentários que serão exibidos aos alunos caso eles acertem e caso errem a pergunta.</p>
+                                <p>Se você marcou a opção de crédito parcial, as respostas que estiverem parcialmente corretas receberão os comentários de uma resposta incorreta.</p>
+                                <p>Por fim, clique em <strong>Enviar</strong>.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <h2 id="subTitulo4">Pergunta de múltipla escolha</h2>
+                        <p>As perguntas de múltipla escolha permitem que os alunos escolham apenas uma resposta correta entre várias.</p>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/criar-ou-alterar-pesquisas-sem-nota/step17.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTesPesquisaCriarPesSemNota22">
+                                <p>Elabore o enunciado de forma que somente uma resposta esteja correta.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/criar-ou-alterar-pesquisas-sem-nota/step18.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTesPesquisaCriarPesSemNota23">
+                                <p>Escolha a formatação dos itens das respostas e defina se elas aparecerão na vertical ou na horizontal.</p>
+                                <p>A opção <strong>Permitir Crédito Parcia</strong>l permite que parte do total de pontos seja considerada quando a resposta não estiver completamente correta. </p>
+                                <p>Defina se as respostas aparecerão na ordem ou aleatoriamente.</p>
+                            </div>
+                            <div class="boxDestaque" id="BbTesPesquisaCriarPesSemNota24">
+                                <p>Inclua as opções de respostas à pergunta (mínimo de quatro e máximo de vinte) e indique qual delas é a correta.</p>
+                                <p>Escreva os comentários que serão exibidos aos alunos caso acertem e caso errem a pergunta.</p>
+                                <p>Por fim, clique em <strong>Enviar</strong>.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <h2 id="subTitulo5">Pergunta de resposta múltipla</h2>
+                        <p>As perguntas de resposta múltipla permitem que os alunos escolham mais de uma resposta correta entre várias.</p>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/criar-ou-alterar-pesquisas-sem-nota/step17.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTesPesquisaCriarPesSemNota25">
+                                <p>No <strong>Texto da Pergunta</strong> elabore o enunciado.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/criar-ou-alterar-pesquisas-sem-nota/step19.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTesPesquisaCriarPesSemNota26">
+                                <p>Escolha a formatação dos itens das respostas e defina se elas aparecerão na vertical ou na horizontal.</p>
+                                <p>A opção <strong>Permitir Crédito Parcial</strong> permite que parte do total de pontos seja considerada quando a resposta não estiver completamente correta. </p>
+                                <p>Defina se as respostas aparecerão na ordem ou aleatoriamente.</p>
+                            </div>
+                            <div class="boxDestaque" id="BbTesPesquisaCriarPesSemNota27">
+                                <p>Inclua as opções de respostas à pergunta (mínimo de quatro e máximo de vinte) e indique quais delas são as corretas.</p>
+                                <p>Escreva os comentários que serão exibidos aos alunos caso eles acertem e caso errem a pergunta.</p>
+                                <p>Se você marcou a opção de crédito parcial, as respostas que estiverem parcialmente corretas receberão os comentários de uma resposta incorreta.</p>
+                                <p>Por fim, clique em <strong>Enviar</strong>.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <h2 id="subTitulo6">Pergunta de verdadeiro/falso</h2>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/criar-ou-alterar-pesquisas-sem-nota/step17.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTesPesquisaCriarPesSemNota28">
+                                <p>Elabore o enunciado em forma de afirmação.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/criar-ou-alterar-pesquisas-sem-nota/step20.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTesPesquisaCriarPesSemNota29">
+                                <p>Defina se as duas opções de respostas aparecerão na vertical ou na horizontal e indique se a afirmação escrita no enunciado é verdadeira ou falsa.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/criar-ou-alterar-pesquisas-sem-nota/step21.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTesPesquisaCriarPesSemNota30">
+                                <p>Escreva os comentários que serão exibidos aos alunos caso acertem e caso errem a pergunta.</p>
+                                <p>Por fim, clique em <strong>Enviar</strong>.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <h2 id="subTitulo6">Pergunta de redação</h2>
+                        <p>As perguntas dissertativas permitem que os alunos insiram sua resposta em uma caixa de texto. Esse tipo de pergunta não é corrigido automaticamente. Em vez disso, o professor deve avaliar as tentativas dos alunos na <strong>Central de notas</strong>.</p>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/criar-ou-alterar-pesquisas-sem-nota/step17.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTesPesquisaCriarPesSemNota31">
+                                <p>No <strong>Texto da Pergunta</strong> elabore o enunciado.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/criar-ou-alterar-pesquisas-sem-nota/step22.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTesPesquisaCriarPesSemNota32">
+                                <p>Se julgar necessário, insira um exemplo de resposta correta. O preenchimento deste campo não é obrigatório.</p>
+                                <p>A resposta é exibida somente após o aluno finalizar o teste.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
 
                         <!-- 
                         

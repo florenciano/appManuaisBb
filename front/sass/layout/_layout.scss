@@ -17,11 +17,11 @@ $font: "Tahoma", "arial", "sans-serif";
 }
 
 // colors
-$corDefault: #cf1432; // red insper
-$corTitle: #3c3c3c; // title h1 html
-$corTexto: #4b4b4b; // default text content
+$corDefault: #c00026; // red insper
+$corTitle: #2d2d2d; // title h1 html
+$corTexto: #414042; // default text content
+$corBorda: #bcbec0; // gray default
 $corDefaultDark: #7b0012; // red dark GUI
-$corBorda: #c8c8c8; // gray default
 $corSec01: #f57d8c; // secundary GUI
 $corSec02: #e64b64; // secundary2 GUI
 
@@ -450,7 +450,7 @@ body {
         h2 + p { margin-top: 0; }
         p {
             line-height: 1.6em;
-            a { @include corLink(); }
+            a { @include corLink(); display: inline}
         }
 
         /////////////////////////////////////////////////////////////

@@ -727,323 +727,205 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 	// ASSUNTO: VOTADORES ELETRÔNICOS (CLICKERS)
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	// CATEGORIA: Sobre a ferramenta
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-	// "Informações do software"
-	$scope.Informacoes_do_software = 
+	// "O que são votadores eletrônicos (clickers)"
+	$scope.o_que_sao_votadores_eletronicos = 
 	[
 	{
-		"manual"	: 	"Informações do hardware",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Como utilizar",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Criar pergunta",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Criar lista",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Salvar sessão",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Gerar e acessar relatórios",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Controle dos aparelhos",
-		"Link" 		: 	"#",
+		"manual"	: 	"Funcionamento dos votadores eletrônicos",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/sobre-a-ferramenta/funcionamento-dos-votadores-eletronicos/",
 		"tipoIcone"	: 	"clickers"
 	}
 	];
 
-	// "Informações do hardware"
-	$scope.Informacoes_do_hardware = 
+	// "Funcionamento dos votadores eletrônicos"
+	$scope.funcionamento_dos_votadores = 
 	[
 	{
-		"manual"	: 	"Informações do software",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Como utilizar",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Criar pergunta",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Criar lista",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Salvar sessão",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Gerar e acessar relatórios",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Controle dos aparelhos",
-		"Link" 		: 	"#",
+		"manual"	: 	"O que são votadores eletrônicos (clickers)",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/sobre-a-ferramenta/o-que-sao-votadores-eletronicos/",
 		"tipoIcone"	: 	"clickers"
 	}
 	];
 
-	// "Como utilizar"
-	$scope.Como_utilizar = 
+	// CATEGORIA: Utilizar votadores eletrônicos
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+	// "Abrir PowerPoint com plug-in do TurningPoint"
+	$scope.abrir_powerpoint_com_plugin_do_turningpoint = 
 	[
 	{
-		"manual"	: 	"Informações do software",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Informações do hardware",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Criar pergunta",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Criar lista",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Salvar sessão",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Gerar e acessar relatórios",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Controle dos aparelhos",
-		"Link" 		: 	"#",
+		"manual"	: 	"Criar questões e configurar votação nos slides",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/preparar-slides/criar-questoes/",
 		"tipoIcone"	: 	"clickers"
 	}
 	];
 
-	// "Criar pergunta"
-	$scope.Criar_pergunta = 
+	// CATEGORIA: Preparar slides
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+	// "Criar questões e configurar votação nos slides"
+	$scope.criar_questoes_e_configurar_votacao_nos_slides = 
 	[
 	{
-		"manual"	: 	"Informações do software",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Informações do hardware",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Como utilizar",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Criar lista",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Salvar sessão",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Gerar e acessar relatórios",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Controle dos aparelhos",
-		"Link" 		: 	"#",
+		"manual"	: 	"Inserir cronômetro nos slides (opcional)",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/preparar-slides/inserir-cronometro/",
 		"tipoIcone"	: 	"clickers"
 	}
 	];
 
-	// "Criar lista"
-	$scope.Criar_lista = 
+	// CATEGORIA: Identificar os votos dos alunos
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+	// "Criar lista de alunos"
+	$scope.criar_lista_de_alunos = 
 	[
 	{
-		"manual" 	: 	"Informações do software",
-		"Link" 		: 	"#",
+		"manual"	: 	"Vincular lista de alunos aos slides",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/vincular-lista-alunos/",
 		"tipoIcone"	: 	"clickers"
 	},
 	{
-		"manual" 	: 	"Informações do hardware",
-		"Link" 		: 	"#",
+		"manual"	: 	"Editar lista de alunos",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/editar-lista-alunos/",
 		"tipoIcone"	: 	"clickers"
 	},
 	{
-		"manual" 	: 	"Como utilizar",
-		"Link" 		: 	"#",
+		"manual"	: 	"Criar lista de controle",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/criar-lista-controle/",
+		"tipoIcone"	: 	"clickers"
+	}
+	];
+
+	// "Vincular lista de alunos aos slides"
+	$scope.vincular_lista_de_alunos_aos_slides = 
+	[
+	{
+		"manual"	: 	"Criar lista de alunos",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/criar-lista-alunos/",
 		"tipoIcone"	: 	"clickers"
 	},
 	{
-		"manual" 	: 	"Criar pergunta",
-		"Link" 		: 	"#",
+		"manual"	: 	"Editar lista de alunos",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/editar-lista-alunos/",
 		"tipoIcone"	: 	"clickers"
 	},
 	{
-		"manual" 	: 	"Salvar sessão",
-		"Link" 		: 	"#",
+		"manual"	: 	"Criar lista de controle",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/criar-lista-controle/",
+		"tipoIcone"	: 	"clickers"
+	}
+	];
+
+	// "Editar lista de alunos"
+	$scope.editar_lista_de_alunos = 
+	[
+	{
+		"manual"	: 	"Criar lista de alunos",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/criar-lista-alunos/",
 		"tipoIcone"	: 	"clickers"
 	},
 	{
-		"manual" 	: 	"Gerar e acessar relatórios",
-		"Link" 		: 	"#",
+		"manual"	: 	"Vincular lista de alunos aos slides",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/vincular-lista-alunos/",
 		"tipoIcone"	: 	"clickers"
 	},
 	{
-		"manual" 	: 	"Controle dos aparelhos",
-		"Link" 		: 	"#",
+		"manual"	: 	"Criar lista de controle",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/criar-lista-controle/",
+		"tipoIcone"	: 	"clickers"
+	}
+	];
+
+	// CATEGORIA: Promover votação em sala
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+	// "Preparar apresentação"
+	$scope.preparar_apresentacao = 
+	[
+	{
+		"manual"	: 	"Durante a aula",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/durante-aula/",
+		"tipoIcone"	: 	"clickers"
+	},
+	{
+		"manual"	: 	"Salvar sessão",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/salvar-sessao/",
+		"tipoIcone"	: 	"clickers"
+	},
+	{
+		"manual"	: 	"Continuar sessão",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/continuar-sessao/",
+		"tipoIcone"	: 	"clickers"
+	}
+	];
+
+	// "Durante a aula"
+	$scope.durante_a_aula = 
+	[
+	{
+		"manual"	: 	"Preparar apresentação",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/preparar-apresentacao/",
+		"tipoIcone"	: 	"clickers"
+	},
+	{
+		"manual"	: 	"Salvar sessão",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/salvar-sessao/",
+		"tipoIcone"	: 	"clickers"
+	},
+	{
+		"manual"	: 	"Continuar sessão",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/continuar-sessao/",
 		"tipoIcone"	: 	"clickers"
 	}
 	];
 
 	// "Salvar sessão"
-	$scope.Salvar_sessao = 
+	$scope.salvar_sessao = 
 	[
 	{
-		"manual"	: 	"Informações do software",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Informações do hardware",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Como utilizar",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Criar pergunta",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Criar lista",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Gerar e acessar relatórios",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Controle dos aparelhos",
-		"Link" 		: 	"#",
+		"manual"	: 	"Continuar sessão",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/continuar-sessao/",
 		"tipoIcone"	: 	"clickers"
 	}
 	];
 
-	// "Gerar e acessar relatórios"
-	$scope.Gerar_e_acessar_relatorios = 
+	// "Continuar sessão"
+	$scope.continuar_sessao = 
 	[
 	{
-		"manual" 	: 	"Informações do software",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual" 	: 	"Informações do hardware",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual" 	: 	"Como utilizar",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual" 	: 	"Criar pergunta",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual" 	: 	"Criar lista",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual" 	: 	"Salvar sessão",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual" 	: 	"Controle dos aparelhos",
-		"Link" 		: 	"#",
+		"manual"	: 	"Salvar sessão",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/salvar-sessao/",
 		"tipoIcone"	: 	"clickers"
 	}
 	];
 
-	// "Controle dos aparelhos"
-	$scope.Controle_dos_aparelhos = 
+	// CATEGORIA: Analisar os resultados
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+	// "Visualizar resultados da votação"
+	$scope.visualizar_resultados_da_votacao = 
 	[
 	{
-		"manual"	: 	"Informações do software",
-		"Link" 		: 	"#",
+		"manual"	: 	"Trabalhar resultados no Excel",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/analisar-resultados/trabalhar-resultados-excel/",
 		"tipoIcone"	: 	"clickers"
 	},
 	{
-		"manual"	: 	"Informações do hardware",
-		"Link" 		: 	"#",
+		"manual"	: 	"Salvar sessão",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/salvar-sessao/",
 		"tipoIcone"	: 	"clickers"
-	},
+	}
+	];
+
+	// "Trabalhar resultados no Excel"
+	$scope.trabalhar_resultados_no_excel = 
+	[
 	{
-		"manual"	: 	"Como utilizar",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Criar pergunta",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Criar lista",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual	" 	: 	"Salvar sessão",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"clickers"
-	},
-	{
-		"manual"	: 	"Gerar e acessar relatórios",
-		"Link" 		: 	"#",
+		"manual"	: 	"Salvar sessão",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/salvar-sessao/",
 		"tipoIcone"	: 	"clickers"
 	}
 	];

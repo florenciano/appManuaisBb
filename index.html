@@ -92,11 +92,11 @@
 		<p>Para realizar quaisquer alterações no projeto é necessário identificar as tecnologias implementadas no projeto. É recomendável que o desenvolver ou o responsável pela manutenção do Projeto tenha familariedade com estas tecnologias abaixo:</p>
 		<ul>
 			<li>HTML5</li>
-			<li>COMPASS (<a href="http://compass-style.org">mais informação</a>)</li>
-			<li>SASS (<a href="http://sass-lang.com">mais informação</a>)</li>
+			<li>Framework de autoração de CSS: COMPASS (<a href="http://compass-style.org">mais informação</a>)</li>
+			<li>Extensão de linguagem CSS: SASS (<a href="http://sass-lang.com">mais informação</a>).</li>
 			<li>CSS3 <s>e CSS direcionado a impressão</s></li>
 			<li>Javascript e biblitoteca de script jQuery</li>
-			<li>AngularJS (<a href="http://angularjs.org">mais informação</a>)</li>	
+			<li>Framework MVW Javascript: AngularJS (<a href="http://angularjs.org">mais informação</a>)</li>	
 		</ul>
 		<p><a href="#inicio">Subir</a></p>
 
@@ -127,32 +127,72 @@
 				<p>Uma vez definido o temas, o próximo passo é novamente agrupar os HTMLs por <strong>assunto</strong>. Abaixo segue um exemplo com o tema Blackboard.</p>
 				<p>
 				<figure>
-					<img src="img/estruturaBlackboard.png" alt="Estrutura de diretórios: tema Blackboard">
+					<img src="img/estruturaBlackboard.png" alt="Estrutura de diretórios: assuntos relacionados ao Blackboard">
 					<figcaption>Um exemplo da aplicação dos diretórios para o tema Blackboard.</figcaption>
 				</figure>
 				</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, recusandae, ducimus expedita eos laudantium sit sed nesciunt iure laboriosam distinctio odio dicta alias ipsum beatae quos quas nulla quo doloremque!.</p>
+				<p>E para cada assunto segue a mesma regra para os <strong>tópicos</strong> existentes.</p>
 				<p>
 				<figure>
-					<img src="img/estruturaAssunto.png" alt="Estrutura de diretórios: tema Blackboard">
-					<figcaption>Um exemplo da aplicação do asssunto 'Avaliação' para o tema Blackboard. Estas pastas agrupam os HTMLs e contribuem para gerar links amigáveis [Friendly URLs].</figcaption>
+					<img src="img/estruturaAssunto.png" alt="Estrutura de diretórios: tópicos do assunto escolhido">
+					<figcaption>Um exemplo de aplicação do asssunto 'Avaliação'. Cada tópico recebe uma pasta.</figcaption>
 				</figure>
 				</p>
+				<p>Os documentos HTML´s tem o mesmo none: <strong>index.html</strong></p>
 			</li>
 			<li>
 				<strong>Diretório de imagens (img)</strong>
-				<p>Ficarão alocados neste diretórios todas as imagens necessárias para o desenvolvimento do projeto.</p>
+				<p>Ficarão alocados neste diretórios todas as imagens necessárias para o desenvolvimento do projeto. Os dois principais temas são:</p>
+				<ul>
+					<li>
+						<p><strong>Diretório de imagens 'ui'</strong>
+						<br>Local exclusivo de armazenamento das imagens da GUI (Graphical User Interface). O local de armazenamento da GUI estão armazenados em diretório fora da raiz do Projeto denominada 'layouts'.</p>
+					</li>
+					<li>
+						<p><strong>Diretório de imagens 'geral'</strong>
+						<br>Local de armazenamento default das imagens dos Manuais. Estão alocados dentro de seus respectivos: temas/assuntos/tópcios. A regra adotada é numerar sequencialmente as imagens de acordo com a ordem de leitura do conteúdo. ex: step1.png; step2.png... step<em>n</em>.png.</p>
 
-				<p><strong><small>Diretório de imagens blackboard</small></strong>
-				<br>Local de armazenamento das imagens do manual. Seus subdiretórios podem aumentar conforme a expansão no desenvolvimento do projeto.</p>
+						<p>Para facilitar futuramente quaisquer necessidades de alterações das imagens uma cópia dos arquivos em formato aberto de edição '.psd' foi adicionado no mesmo diretório seguindo a mesma regra de nomenclatura descrita acima. Por convenção acrescentamos um sinal de underline '_' no início do nome. Ex: _step1.psd; _stpe<em>n</em>.psd. No entanto, recomendamos não subir para o repositório tais documentos.</p>
+					</li>
+				</ul>
+				<p>O armazenamento das imagens seguem o mesmo critério adotado na padronização de estruturação dos documentos HTML´s. Na prática, há um agrupamento por temas, por assuntos, e por tópicos.</p>
+				<figure>
+					<img src="img/pastaImg.png" alt="Pasta imagem do projeto">
+					<figcaption>Um preview da pasta <em>img</em>. Separação dos arquivos 'ui' dos demais conteúdos usados no Projeto. A nomenclatura das pastas seguem o mesmo critério adotado nos documentos HTML´s.</figcaption>
+				</figure>
 
-				<p><strong><small>Diretório de imagens ui</small></strong>
-				<br>Local exclusivo de armazenamento das imagens da GUI(Graphical User Interface).</p>
-
+				<figure>
+					<img src="img/pastaImg2.png" alt="Estrutura das pastas de imagens">
+					<figcaption>Exemplo da estrutura de uma determinada pasta. Nomes e árvore de pasta seguindo o mesmo critérios dos HTML´s e rotulagem dos arquivos, tanto para uso dos manuais quanto para os arquivos de edições '.psd'.</figcaption>
+				</figure>
 			</li>
 			<li>
 				<strong>Diretório de estilos (sass)</strong>
-				<p>Neste diretório ficarão alocados os arquivos <em>.sass</em> que gerarão os documentos <em>.css</em> do projeto. O diretório <em>plugins</em> contém os recursos adicionais de estilos, podendo ser adicionados quantos forem necessários.</p>
+				<p>Neste diretório ficarão alocados os arquivos <em>.scss</em> que gerarão os documentos <em>.css</em> do projeto. A pasta esta separada em duas divisões: 
+				<ul>
+					<li>
+						<p><strong>layouts</strong>: reponsável pela organização dos arquivos .scss principais do Projeto. Eles geram os .css necessários para construir a interface dos documentos.</p>
+					</li>
+					<li>
+						<p><strong>plugins</strong> = responsável pelos  arquivos de estilos adicionais para o desenvolvimento do Projeto. No momento estão sendo utilizados: _normalizr.scss (<a href="http://necolas.github.io/normalize.css/" target="_blank">ver plugin</a>) e _gridiculous.scss (<a href="http://gridiculo.us/" target="_blank">ver plugin</a>).</p>
+					</li>
+				</ul>
+				<figure>
+					<img src="img/pastaSass.png" alt="Estrutura de diretórios dos arquios css">
+					<figcaption>Estrutura dos arquivos CSS.</figcaption>
+				</figure>
+				<p><strong>Compilando .scss para .css</strong></p>
+				<p>Para gerar os arquivos .css segue as orientações a seguir:</p>
+				<ul>
+					<li>Abra o programa <strong>Command Prompt with Ruby</strong>; </li>
+					<li>Acesse o diretório d: em seguida &#60;Enter&#62;;</li>
+					<li>Digite o comando cd &#60;<strong>diretório do Projeto</strong>&#62;;</li>
+					<li>Por fim o comando: <code>compass watch</code>;</li>
+				</ul>
+				<figure>
+					<img src="img/comandSass.png" alt="Linha de comando para compilar arquivos .scss">
+					<figcaption>Procedimento para gerar os arquivos .css</figcaption>
+				</figure>
 			</li>
 			<li>
 				<strong>Diretório de scripts e suas bibliotecas (js)</strong>

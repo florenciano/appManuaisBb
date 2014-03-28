@@ -342,41 +342,133 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 	// ASSUNTO: VOTADORES ELETRÔNICOS: CLICKERS
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	// CATEGORIA: Sobre a ferramenta
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	$scope.clickerSobreFerramenta = [
+	{
+		'categoria' 		: 	'Sobre a ferramenta', // Este equivale ao nome da categoria
+		'manual'			: 	'',
+		'linkManual'		: 	''
+	},
+	{
+		'manual'			: 	'O que são votadores eletrônicos (clickers)',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/sobre-a-ferramenta/o-que-sao-votadores-eletronicos/'
+	},
+	{
+		'manual'			: 	'Funcionamento dos votadores eletrônicos',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/sobre-a-ferramenta/funcionamento-dos-votadores-eletronicos/'
+	}
+	];
 
-	$scope.clickers = [
+	// CATEGORIA: Utilizar votadores eletrônicos
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	$scope.clickerUtilizarVotadores = [
 	{
-		'manual'			: 	'Informações do software',
-		'linkManual'		: 	'/blackboard/sub1'
+		'categoria' 		: 	'Utilizar votadores eletrônicos', // Este equivale ao nome da categoria
+		'manual'			: 	'',
+		'linkManual'		: 	''
 	},
 	{
-		'manual'			: 	'Informações do hardware',
-		'linkManual'		: 	'/blackboard/sub2'
+		'manual'			: 	'Instalar software TurningPoint',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/utilizar-votadores-eletronicos/instalar-software-turningPoint/'
 	},
 	{
-		'manual'			: 	'Como utilizar',
-		'linkManual'		: 	'/blackboard/sub1'
+		'manual'			: 	'Reservar aparelhos com HelpDesk',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/utilizar-votadores-eletronicos/reservar-aparelhos-helpDesk/'
 	},
 	{
-		'manual'			: 	'Criar pergunta',
-		'linkManual'		: 	'/blackboard/sub2'
+		'manual'			: 	'Abrir PowerPoint com plug-in do TurningPoint',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/utilizar-votadores-eletronicos/abrir-powerPoint/'
+	}
+	];
+
+	// CATEGORIA: Preparar slides
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	$scope.clickerPrepararSlides = [
+	{
+		'categoria' 		: 	'Preparar slides', // Este equivale ao nome da categoria
+		'manual'			: 	'',
+		'linkManual'		: 	''
 	},
 	{
-		'manual'			: 	'Criar lista',
-		'linkManual'		: 	'/blackboard/sub1'
+		'manual'			: 	'Criar questões e configurar votação nos slides',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/preparar-slides/criar-questoes/'
+	},
+	{
+		'manual'			: 	'Inserir cronômetro nos slides (opcional)',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/preparar-slides/inserir-cronometro/'
+	}
+	];
+
+	// CATEGORIA: Identificar os votos dos alunos
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	$scope.clickerIdentificarVoto = [
+	{
+		'categoria' 		: 	'Identificar os votos dos alunos', // Este equivale ao nome da categoria
+		'manual'			: 	'',
+		'linkManual'		: 	''
+	},
+	{
+		'manual'			: 	'Criar lista de alunos',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/criar-lista-alunos/'
+	},
+	{
+		'manual'			: 	'Vincular lista de alunos aos slides',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/vincular-lista-alunos/'
+	},
+	{
+		'manual'			: 	'Editar lista de alunos',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/editar-lista-alunos/'
+	}
+	];
+
+	// CATEGORIA: Promover votação em sala
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	$scope.clickerPromoverVotacao = [
+	{
+		'categoria' 		: 	'Promover votação em sala', // Este equivale ao nome da categoria
+		'manual'			: 	'',
+		'linkManual'		: 	''
+	},
+	{
+		'manual'			: 	'Criar lista de controle',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/criar-lista-controle/'
+	},
+	{
+		'manual'			: 	'Preparar apresentação',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/preparar-apresentacao/'
+	},
+	{
+		'manual'			: 	'Durante a aula',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/durante-aula/'
 	},
 	{
 		'manual'			: 	'Salvar sessão',
-		'linkManual'		: 	'/blackboard/sub2'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/salvar-sessao/'
 	},
 	{
-		'manual'			: 	'Gerar e acessar relatórios',
-		'linkManual'		: 	'/blackboard/sub1'
-	},
-	{
-		'manual'			: 	'Controle dos aparelhos',
-		'linkManual'		: 	'/blackboard/sub2'
+		'manual'			: 	'Continuar sessão',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/continuar-sessao/'
 	}
 	];
+
+	// CATEGORIA: Analisar os resultados
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	$scope.clickerAnalisarResultados = [
+	{
+		'categoria' 		: 	'Analisar os resultados', // Este equivale ao nome da categoria
+		'manual'			: 	'',
+		'linkManual'		: 	''
+	},
+	{
+		'manual'			: 	'Visualizar resultados da votação',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/analisar-resultados/visualizar-resultados-votacao/'
+	},
+	{
+		'manual'			: 	'Trabalhar resultados no Excel',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/analisar-resultados/trabalhar-resultados-excel/'
+	}
+	]
 
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 	// ASSUNTO: CASOS

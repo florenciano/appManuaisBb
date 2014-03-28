@@ -432,11 +432,30 @@
     #CatmeAnalisarAcessarRes7 { @include settingsBoxImagem(45%, 0, auto, auto, -20px) }
 
     // Trabalhar resultados no excel
-    // @include                          settingsBoxImagem(W%,  l,   t,   r,   b)
     #CatmeAnalisarResTrabExcel1 { @include settingsBoxImagem(40%, auto, auto, 0, 0) }
     #CatmeAnalisarResTrabExcel2 { @include settingsBoxImagem(26%, auto, auto, 0, 40px) }
     #CatmeAnalisarResTrabExcel3 { @include settingsBoxImagem(30%, auto, auto, 10%, 50%) }
     #CatmeAnalisarResTrabExcel4 { @include settingsBoxImagem(32%, auto, 10%, 0, auto) }
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    // ASSUNTO: Clickers
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    // CATEGORIA: Sobre a ferramenta
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    // Funcionamento dos votadores eletrônicos
+    // @include                          settingsBoxImagem(W%,  l,   t,   r,   b)
+    #ClickerSobreFerramenta1 { @include settingsBoxImagem(31%, 20px, 16%, auto, auto) }
+    #ClickerSobreFerramenta2 { @include settingsBoxImagem(28%, auto, 12%, 15px, auto) }
+    #ClickerSobreFerramenta3 { @include settingsBoxImagem(30%, 20px, 48%, auto, auto) }
+    #ClickerSobreFerramenta4 { @include settingsBoxImagem(30%, auto, auto, 60px, 9%) }
+
+    #ClickerSobreFerramenta5 { @include settingsBoxImagem(36%, 270px, 14%, auto, auto) }
+    #ClickerSobreFerramenta6 { @include settingsBoxImagem(30%, auto, 45%, 30px, auto) }
+    #ClickerSobreFerramenta7 { @include settingsBoxImagem(36%, 30px, auto, auto, 30px) }
+
+    #ClickerSobreFerramenta8 { @include settingsBoxImagem(25%, 20px, 25%, auto, auto) }
+    #ClickerSobreFerramenta9 { @include settingsBoxImagem(28%, auto, auto, 30px, 20%) }
 
 }
 
@@ -882,5 +901,25 @@
     #CatmeAnalisarResTrabExcel2 { @include settingsBoxImagem(46%, auto, auto, 0, 40px) }
     #CatmeAnalisarResTrabExcel3 { @include settingsBoxImagem(42%, auto, auto, 0, 44%) }
     #CatmeAnalisarResTrabExcel4 { @include settingsBoxImagem(45%, auto, 10%, 0, auto) }
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    // ASSUNTO: Clickers
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    // CATEGORIA: Sobre a ferramenta
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    // Funcionamento dos votadores eletrônicos
+    // @include                          settingsBoxImagem(W%,  l,   t,   r,   b)
+    #ClickerSobreFerramenta1 { @include settingsBoxImagem(31%, 20px, 16%, auto, auto) }
+    #ClickerSobreFerramenta2 { @include settingsBoxImagem(27%, auto, 6%, 15px, auto) }
+    #ClickerSobreFerramenta3 { @include settingsBoxImagem(27%, 20px, 41%, auto, auto) }
+    #ClickerSobreFerramenta4 { @include settingsBoxImagem(36%, auto, auto, 15px, 3%) }
+
+    #ClickerSobreFerramenta5 { @include settingsBoxImagem(51%, 190px, 10%, auto, auto) }
+    #ClickerSobreFerramenta6 { @include settingsBoxImagem(27%, auto, 39%, 35px, auto) }
+    #ClickerSobreFerramenta7 { @include settingsBoxImagem(41%, 0, auto, auto, -20px) }
+
+    #ClickerSobreFerramenta8 { @include settingsBoxImagem(27%, 10px, 22%, auto, auto) }
+    #ClickerSobreFerramenta9 { @include settingsBoxImagem(28%, auto, auto, 20px, 5%) }
 
 }
