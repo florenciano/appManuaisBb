@@ -40,7 +40,7 @@ $corSec02: #e64b64; // secundary2 GUI
 @mixin corLinkUpBox($corDigitada) {
     text-decoration: none;
     color: $corDigitada;
-    display: inline-block;
+    // display: inline-block;
     &:visited {
         color: $corDigitada;
     }
@@ -461,11 +461,13 @@ body {
         //regras gerais
         section { @include font(normal, 1em); }
         a { @include corLink(); }
-        li { 
-            list-style-type: square;
-            margin: ($meioGrid / 4) 0;
+        ul {
+            li { 
+                list-style-type: square;
+                margin: ($meioGrid / 4) 0;
+            }
+            li:first-child { margin-top: 0}
         }
-        li:first-child { margin-top: 0}
         table { 
             width: 100%;
             border-collapse: collapse;
@@ -651,6 +653,72 @@ body {
             border-width:0px 0px 1px 1px;
         }
         
+        // REGRAS PARA O CLICKERS
+
+        // instalar o software TurningPoint
+        .boxInstalarTurning {
+            @extend .boxURLCatme;
+            width: 40%;
+            background-color: #7b0012;
+            color: #fff;
+            padding: $meioGrid / 4;
+            border: none;
+        }
+
+        // Reservar aparelhos com HelpDesk
+        .boxImagem {
+            margin: 0;
+            padding: 0;
+            figcaption {
+                @include font(normal, 93.75%);
+                text-align: center;
+                margin-top: $meioGrid / 4;
+            }
+        }
+
+        // Inserir cronômetro nos slides
+        .boxErrado {
+            //format
+            background-color: #f2dede;
+            border: 1px solid #ebccd1;
+            color: #a94442;
+            text-align: center;
+            
+            // boxFlex
+            width: 100%;
+            margin: 0 auto;
+            padding: ($meioGrid - 5) ($meioGrid / 4);
+            display: block;
+
+            // radius
+            @include radius();
+
+            p { 
+                margin: 0;
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            span {
+                display: block;
+                height: 45px; 
+                width: 45px; 
+                margin: $meioGrid auto ($meioGrid / 4);
+                background: #DF110D url(../img/Clickers/preparar-slides/inserir-cronometro/icoErrado.png) center center no-repeat;
+                border-radius: 500px;
+            }
+        }
+        .boxCerto { 
+            @extend .boxErrado;
+
+            // format
+            background-color: #dff0d8;
+            border: 1px solid #d6e9c6;
+            color: #3c763d;
+
+            span { background: #4bc44d url(../img/Clickers/preparar-slides/inserir-cronometro/icoCerto.png) center center no-repeat; }
+        }
+
 
         /////////////////////////////////////////////////////////////
         // fim das novas regras
@@ -747,13 +815,17 @@ body {
             .c12 { padding: 0;}
         }
         .icos { margin: 0 .5em; } // ícones nos box de destaques
+       
         // textos em ênfase dentro dos boxes
         .enfaseBox { 
             color: #fff;
             text-transform: uppercase;
             background-color: $corDefault;
             padding: 2px .5em;
-        } 
+        }
+
+        h4 { margin: 0 0 ($meioGrid / 4) 0; }
+
     }
 
     // saiba mais

@@ -443,9 +443,12 @@ button.close {
     //regras gerais
     section { @include font(normal, 1em); }
     a { @include corLink(); }
-    li { 
-        list-style-type: square;
-        margin: ($meioGrid / 4) 0;
+    ul {
+        li { 
+            list-style-type: square;
+            margin: ($meioGrid / 4) 0;
+        }
+        li:first-child { margin-top: 0}
     }
     table { 
         width: 100%;
@@ -600,11 +603,6 @@ button.close {
         color:#000000;
     }
 
-    /////////////////////////////////////////////////////////////
-    // fim das novas regras
-    /////////////////////////////////////////////////////////////
-    
-
     // Novos elementos do catme
     
     // O que é a ferramenta Catme
@@ -662,6 +660,65 @@ button.close {
         .recuoList{ margin-top: 0;}
     }
 
+    // Regras para o Clickers
+
+    // instalar o software TurningPoint
+    .boxInstalarTurning {
+        @extend .boxURLCatme;
+        width: 40%;
+        background-color: #7b0012;
+        color: #fff;
+        padding: $meioGrid / 4;
+        border: none;
+    }
+
+    // Inserir cronômetro nos slides
+    .boxErrado {
+        //format
+        background-color: #f2dede;
+        border: 1px solid #ebccd1;
+        color: #a94442;
+        text-align: center;
+        
+        // boxFlex
+        width: 100%;
+        margin: 0 auto;
+        padding: ($meioGrid - 5) ($meioGrid / 4);
+        display: block;
+
+        // radius
+        @include radius();
+
+        p { 
+            margin: 0;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        span {
+            display: block;
+            height: 45px; 
+            width: 45px; 
+            margin: $meioGrid auto ($meioGrid / 4);
+            background: #DF110D url(../img/Clickers/preparar-slides/inserir-cronometro/icoErrado.png) center center no-repeat;
+            border-radius: 500px;
+        }
+    }
+    .boxCerto { 
+        @extend .boxErrado;
+
+        // format
+        background-color: #dff0d8;
+        border: 1px solid #d6e9c6;
+        color: #3c763d;
+
+        span { background: #4bc44d url(../img/Clickers/preparar-slides/inserir-cronometro/icoCerto.png) center center no-repeat; }
+    }
+
+    /////////////////////////////////////////////////////////////
+    // fim das novas regras
+    /////////////////////////////////////////////////////////////
+    
 
 }
 
@@ -760,6 +817,8 @@ button.close {
         background-color: $corDefault;
         padding: 2px .5em;
     }
+
+    h4 { margin: 0 0 ($meioGrid / 4) 0; }
 }
 
 // saiba mais

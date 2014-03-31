@@ -444,18 +444,63 @@
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
     // Funcionamento dos votadores eletrônicos
-    // @include                          settingsBoxImagem(W%,  l,   t,   r,   b)
     #ClickerSobreFerramenta1 { @include settingsBoxImagem(31%, 20px, 16%, auto, auto) }
     #ClickerSobreFerramenta2 { @include settingsBoxImagem(28%, auto, 12%, 15px, auto) }
     #ClickerSobreFerramenta3 { @include settingsBoxImagem(30%, 20px, 48%, auto, auto) }
     #ClickerSobreFerramenta4 { @include settingsBoxImagem(30%, auto, auto, 60px, 9%) }
-
     #ClickerSobreFerramenta5 { @include settingsBoxImagem(36%, 270px, 14%, auto, auto) }
     #ClickerSobreFerramenta6 { @include settingsBoxImagem(30%, auto, 45%, 30px, auto) }
     #ClickerSobreFerramenta7 { @include settingsBoxImagem(36%, 30px, auto, auto, 30px) }
-
     #ClickerSobreFerramenta8 { @include settingsBoxImagem(25%, 20px, 25%, auto, auto) }
     #ClickerSobreFerramenta9 { @include settingsBoxImagem(28%, auto, auto, 30px, 20%) }
+
+    // CATEGORIA: Utilizar votadores eletronicos
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    // Instalar software TurnningPoint
+    #ClickerInstalarTurning1 { @include settingsBoxImagem(40%, auto, 15%, 20px, auto) }
+
+    // Abrir PowerPoint com TurnnginPoint
+    #ClickerAbrirPowerPoint1 { @include settingsBoxImagem(48%, auto, 45%, 20px, auto) }
+
+    // CATEGORIA: Prepara slides
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    // Criar questões e configurar votação nos slides
+    #ClickerCriarQuestoes1 { @include settingsBoxImagem(44%, auto, 30%, 0, auto) }
+    #ClickerCriarQuestoes2 { @include settingsBoxImagem(32%, auto, 65%, 0, auto) }
+    #ClickerCriarQuestoes3 { @include settingsBoxImagem(40%, auto, auto, 30%, -25%) }
+
+    #ClickerCriarQuestoes4 { @include settingsBoxImagem(50%, 20px, 0, auto, auto) }
+    #ClickerCriarQuestoes5 { @include settingsBoxImagem(50%, 20px, 0, auto, auto) }
+    #ClickerCriarQuestoes6 { @include settingsBoxImagem(50%, 20px, 0, auto, auto) }
+    #ClickerCriarQuestoes7 { @include settingsBoxImagem(46%, 20px, 0, auto, auto) }
+    #ClickerCriarQuestoes8 { @include settingsBoxImagem(31%, auto, 20%%, 80px, auto) }
+
+    // Criar questões e configurar votação nos slides
+    #ClickerInserirCronometro1 { @include settingsBoxImagem(29%, auto, 30%, 80px, auto) }
+    #ClickerInserirCronometro2 { @include settingsBoxImagem(38%, auto, auto, 20px, 50px) }
+    #ClickerInserirCronometro3 { @include settingsBoxImagem(40%, auto, auto, 30%, -30%) }
+    #ClickerInserirCronometro4 { @include settingsBoxImagem(40%, auto, 45%, 40px, auto) }
+
+    // CATEGORIA: Identificar votos dos alunos
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    // Criar lista alunos
+    #ClickerCriarListaAlunos1 { @include settingsBoxImagem(30%, auto, 20%, 40px, auto) }
+    #ClickerCriarListaAlunos2 { @include settingsBoxImagem(43%, auto, 50px, 0, auto) }
+    #ClickerCriarListaAlunos3 { @include settingsBoxImagem(36%, auto, 20%, 0, auto) }
+    #ClickerCriarListaAlunos4 { @include settingsBoxImagem(40%, auto, auto, 20px, 20%) }
+
+    // Vincular lista de alunos
+    // @include                          settingsBoxImagem(W%,  l,   t,   r,   b)
+    #ClickerVincularListaAlunos1 { @include settingsBoxImagem(32%, auto, auto, 0, -80%) }
+    #ClickerVincularListaAlunos2 { @include settingsBoxImagem(24%, auto, auto, 0, -10%) }
+    #ClickerVincularListaAlunos3 { @include settingsBoxImagem(30%, auto, auto, 35%, -15%) }
+    #ClickerVincularListaAlunos4 { @include settingsBoxImagem(30%, auto, auto, 0, -20%) }    #ClickerVincularListaAlunos5 { @include settingsBoxImagem(30%, auto, 0, 0, auto) }
+    #ClickerVincularListaAlunos5 { @include settingsBoxImagem(40%, auto, auto, 30%, -20%) } 
+    #ClickerVincularListaAlunos6 { @include settingsBoxImagem(30%, auto, auto, 0, -20%) }
+
 
 }
 
@@ -921,5 +966,55 @@
 
     #ClickerSobreFerramenta8 { @include settingsBoxImagem(27%, 10px, 22%, auto, auto) }
     #ClickerSobreFerramenta9 { @include settingsBoxImagem(28%, auto, auto, 20px, 5%) }
+
+    // CATEGORIA: Utilizar votadores eletronicos
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    // Instalar software TurnningPoint
+    #ClickerInstalarTurning1 { @include settingsBoxImagem(45%, auto, 15%, 0, auto) }
+
+    // Abrir PowerPoint com TurnnginPoint
+    #ClickerAbrirPowerPoint1 { @include settingsBoxImagem(40%, auto, 45%, 20px, auto) }
+
+
+    // CATEGORIA: Prepara slides
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    // Criar questões e configurar votação nos slides
+    #ClickerCriarQuestoes1 { @include settingsBoxImagem(44%, auto, 30%, 0, auto) }
+    #ClickerCriarQuestoes2 { @include settingsBoxImagem(36%, auto, 65%, 0, auto) }
+    #ClickerCriarQuestoes3 { @include settingsBoxImagem(60%, auto, auto, 20%, -34%) }
+    #ClickerCriarQuestoes4 { @include settingsBoxImagem(50%, 0, 0, auto, auto) }
+    #ClickerCriarQuestoes5 { @include settingsBoxImagem(54%, 0, 0, auto, auto) }
+    #ClickerCriarQuestoes6 { @include settingsBoxImagem(50%, 0, 0, auto, auto) }
+    #ClickerCriarQuestoes7 { @include settingsBoxImagem(53%, 0, 0, auto, auto) }
+    #ClickerCriarQuestoes8 { @include settingsBoxImagem(44%, auto, 20%, 0, auto) }
+
+    // Criar questões e configurar votação nos slides
+    // @include                          settingsBoxImagem(W%,  l,   t,   r,   b)
+    #ClickerInserirCronometro1 { @include settingsBoxImagem(42%, auto, 20px, 0, auto) }
+    #ClickerInserirCronometro2 { @include settingsBoxImagem(41%, auto, 90px, 0, auto) }
+    #ClickerInserirCronometro3 { @include settingsBoxImagem(58%, auto, auto, 26%, -40%) }
+    #ClickerInserirCronometro4 { @include settingsBoxImagem(50%, auto, 45%, 0, auto) }
+
+
+    // CATEGORIA: Identificar votos dos alunos
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    // Criar lista alunos
+    #ClickerCriarListaAlunos1 { @include settingsBoxImagem(60%, auto, 25%, 0, auto) }
+    #ClickerCriarListaAlunos2 { @include settingsBoxImagem(43%, auto, 50px, 0, auto) }
+    #ClickerCriarListaAlunos3 { @include settingsBoxImagem(42%, auto, 20%, 0, auto) }
+    #ClickerCriarListaAlunos4 { @include settingsBoxImagem(40%, auto, auto, 0, 0) }
+
+    // Vincular lista de alunos
+    // @include                          settingsBoxImagem(W%,  l,   t,   r,   b)
+    #ClickerVincularListaAlunos1 { @include settingsBoxImagem(65%, auto, auto, 0, -80%) }
+    #ClickerVincularListaAlunos2 { @include settingsBoxImagem(34%, auto, auto, 0, -10%) }
+    #ClickerVincularListaAlunos3 { @include settingsBoxImagem(44%, auto, auto, 33%, -15%) }
+    #ClickerVincularListaAlunos4 { @include settingsBoxImagem(42%, auto, auto, 0, -30%) }    #ClickerVincularListaAlunos5 { @include settingsBoxImagem(30%, auto, 0, 0, auto) }
+    #ClickerVincularListaAlunos5 { @include settingsBoxImagem(40%, auto, auto, 30%, -20%) } 
+    #ClickerVincularListaAlunos6 { @include settingsBoxImagem(43%, auto, auto, 0, -20%) }
+
 
 }
