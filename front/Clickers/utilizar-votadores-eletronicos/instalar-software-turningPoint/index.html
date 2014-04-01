@@ -196,7 +196,7 @@
 
                         <ol class="noCategory" ng-repeat="item in clickerUtilizarVotadores | filter: {manual:searchText}">
                             <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                <p class="selectedCategory" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
                             <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
@@ -356,7 +356,7 @@
 
                          -->
                         <div class="imageContainer row">
-                            <img src="../../../img/Clickers/utilizar-votadores-eletronicos/instalar-software-turningPoint/step1.png" alt="" class="">
+                            <img src="../../../img/Clickers/utilizar-votadores-eletronicos/instalar-software-turningPoint/step1.png" alt="" class="imgLeft">
                             <div class="boxDestaque" id="ClickerInstalarTurning1">
                                 <p>Para fazer a instalação, acesse o <a href="http://www.turningtechnologies.com/responsesystemsupport/downloads" target="_blank">site da TurningTechnologies</a>, faça o download da versão instalável do software "TurningPoint 5" e instale-o em seu computador.</p>
                             </div>

@@ -461,6 +461,10 @@ body {
         //regras gerais
         section { @include font(normal, 1em); }
         a { @include corLink(); }
+        ol {
+            li { margin: ($meioGrid / 4) 0; }
+            li:first-child { margin-top: 0; }
+        }
         ul {
             li { 
                 list-style-type: square;
@@ -717,6 +721,80 @@ body {
             color: #3c763d;
 
             span { background: #4bc44d url(../img/Clickers/preparar-slides/inserir-cronometro/icoCerto.png) center center no-repeat; }
+        }
+
+        // Editar lista de alunos
+        .ClikcerListaAlunos { list-style-type:upper-latin; }
+
+        // Criar lista de controle
+        .tableListaControle { 
+            caption {
+                font-weight: bold;
+                margin: ($meioGrid / 4) 0;
+            }
+            tr {
+                td { text-align: center; }
+            }
+        }
+
+        //  Preparar apresentação
+        .prepararAp {
+            font-weight: bold;
+            span { font-weight: normal; }
+        }
+
+        // Durante a aula
+        .duranteAula {
+            .boxDestaqueAdicional {
+                p {
+                    padding-left: $meioGrid / 2; padding-right: $meioGrid / 2;
+                } 
+                h4 {
+                    margin-left: $meioGrid / 2;
+                }  
+            } 
+        }
+
+        .numb1, .numb2, .numb3, .numb4 {
+            margin-top: $meioGrid / 4;
+            border: 1px solid $corDefault !important;
+            > span {
+                color: #fff;
+                @include font(bold, 112.5%);
+                background-color: $corDefault;
+                @include radius(500px);
+                text-align: center;
+
+                width: 25px;
+                height: 25px;
+                line-height: 25px;
+                display: block;
+                margin: 0 auto ($meioGrid / 2);
+            }
+            p:not(:last-child) {
+                border-bottom: 1px solid $corBorda;
+                padding-bottom: $meioGrid / 4;    
+            }
+            .verde, .vermelho {
+                padding: 0 ($meioGrid / 4);
+                color: #fff;
+            }
+            .verde {
+                background-color: green;
+            }
+            .vermelho {
+                background-color: red;
+            }
+        }
+
+        // Continuar sessão
+        section.continuarSessao {
+            width: 50%;
+            left: 24.5%;
+            h4 { margin-left: $meioGrid  / 2; }
+            p {
+                padding-left: $meioGrid / 2; padding-right: $meioGrid / 2;
+            }
         }
 
 

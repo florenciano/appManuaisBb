@@ -214,7 +214,7 @@
 
                         <ol class="noCategory" ng-repeat="item in clickerIdentificarVoto | filter: {manual:searchText}">
                             <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                <p class="selectedCategory" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
                             <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
@@ -288,7 +288,7 @@
                         <div class="cabecalho fix">
                             <p>
                                 <!-- adicionar a data da produção do material -->
-                                <span><strong>Atualizado: </strong>27/03/2014</span>
+                                <span><strong>Atualizado: </strong>01/04/2014</span>
                             </p>
                         </div>
                         <hr>
@@ -296,7 +296,7 @@
                             <p>
                                 <span class="nameCategory">votadores eletrônicos (clickers) </span>
                                 <span>&#62; </span>
-                                Instalar software TurningPoint
+                                Editar lista de alunos
                             </p>
                         </div>
                     </section>
@@ -314,7 +314,7 @@
 
                     <article class="contentMain row">
                         <h1>
-                            Instalar software TurningPoint
+                            Editar lista de alunos
                         </h1>
 
                         <div class="sumario row">
@@ -340,15 +340,20 @@
 
                         -->
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, odit accusamus eligendi doloremque. Ratione, accusantium, eveniet tempore saepe maxime nulla minus deserunt hic enim at adipisci aspernatur provident necessitatibus magnam!</p>
-                        <div class="imageContainer row">
-                            <img src="../../../img/Clickers/sobre-a-ferramenta/funcionamento-dos-votadores-eletronicos/step1.png" alt="" class="">
-                            <div class="boxDestaque" id="ClickerSobreFerramenta1">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, vel, vitae, facilis, esse natus nesciunt voluptates debitis quod aliquid minima ipsam in dolorum sed consectetur explicabo quisquam aperiam. Cum, sint?</p>
-                            </div>
-                        </div>
+                        <p>A qualquer momento, antes ou durante a votação, é possível editar a lista de alunos que participará da votação. Isso pode ser feito tanto pelo TurningPoint quanto pelo PowerPoint.</p>
+                        <ol class="ClikcerListaAlunos">
+                            <li>Pelo TurningPoint:</li>
+                        </ol>
+                        <img src="../../../img/Clickers/identificar-votos-alunos/editar-lista-alunos/step1.png" alt="" class="">
 
                         <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <ol class="ClikcerListaAlunos" start="2">
+                            <li>Pelo PowerPoint:</li>
+                        </ol>
+                        <img src="../../../img/Clickers/identificar-votos-alunos/editar-lista-alunos/step2.png" alt="" class="">
+
+                        <div class="margemParaImagem" style="margin-top:100px"></div>
                         <!-- 
                         
                         ÂNCORAS [VOLTAR AO SUMÁRIO]

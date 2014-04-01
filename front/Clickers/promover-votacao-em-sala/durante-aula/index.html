@@ -223,7 +223,7 @@
 
                         <ol class="noCategory" ng-repeat="item in clickerPromoverVotacao | filter: {manual:searchText}">
                             <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                <p class="selectedCategory" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
                             <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
@@ -288,7 +288,7 @@
                         <div class="cabecalho fix">
                             <p>
                                 <!-- adicionar a data da produção do material -->
-                                <span><strong>Atualizado: </strong>27/03/2014</span>
+                                <span><strong>Atualizado: </strong>01/04/2014</span>
                             </p>
                         </div>
                         <hr>
@@ -296,7 +296,7 @@
                             <p>
                                 <span class="nameCategory">votadores eletrônicos (clickers) </span>
                                 <span>&#62; </span>
-                                Instalar software TurningPoint
+                                Durante a aula
                             </p>
                         </div>
                     </section>
@@ -314,7 +314,7 @@
 
                     <article class="contentMain row">
                         <h1>
-                            Instalar software TurningPoint
+                            Durante a aula
                         </h1>
 
                         <div class="sumario row">
@@ -340,15 +340,69 @@
 
                         -->
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, odit accusamus eligendi doloremque. Ratione, accusantium, eveniet tempore saepe maxime nulla minus deserunt hic enim at adipisci aspernatur provident necessitatibus magnam!</p>
+                        <ol>
+                            <li> Disponibilize os votadores eletrônicos aos alunos, gerenciando a entrega com a <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/criar-lista-controle/">lista de controle</a>.</li>
+                            <li>Antes de iniciar a votação explique como será a dinâmica da aula e mostre como utilizar os votadores eletrônicos. Recomenda-se exibir o <a href="../../clickers-modelo-orientacao.pptx">slide de orientação</a>, sobretudo nas primeiras dinâmicas.</li>
+                            <li>Durante a apresentação (tecla F5 do teclado), a seguinte barra de controle será exibida nos slides que contiverem perguntas.</li>
+                        </ol>
+
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+
                         <div class="imageContainer row">
-                            <img src="../../../img/Clickers/sobre-a-ferramenta/funcionamento-dos-votadores-eletronicos/step1.png" alt="" class="">
-                            <div class="boxDestaque" id="ClickerSobreFerramenta1">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, vel, vitae, facilis, esse natus nesciunt voluptates debitis quod aliquid minima ipsam in dolorum sed consectetur explicabo quisquam aperiam. Cum, sint?</p>
+                            <img src="../../../img/Clickers/promover-votacao-em-sala/durante-aula/step1.png" alt="" class="">
+
+                            <div class="boxDestaque numb1" id="clickersDuranteAula1">
+                                <span>1</span>
+                                <p>Limpa os votos do slide atual.</p>
+                                <p>Recomendada caso a aplicação tenha fechado involuntariamente.</p>
+                            </div>
+
+                            <div class="boxDestaque numb2" id="clickersDuranteAula2">
+                            <span>2</span>
+                                <p>Monitora os votos durante a votação ("quem respondeu o quê").</p>
+                                <p>Opção não recomendada, pois pode inibir a participação dos alunos.</p>
+                            </div>
+
+                            <div class="boxDestaque numb3" id="clickersDuranteAula3">
+                            <span>3</span>
+                                <p>Computa número de votos.</p>
+                            </div>
+
+                            <div class="boxDestaque numb4" id="clickersDuranteAula4">
+                            <span>4</span>
+                                <p>
+                                    Exibe o status da votação: <br>
+                                    Aberta : <span class="verde">verde</span>
+                                    <br>
+                                    Fechada : <span class="vermelho">Vermelho</span>
+                                </p>
                             </div>
                         </div>
 
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <div class="margemParaImagem" style="margin-top:260px"></div>
+
+                        <ol start="4">
+                            <li>
+                                Para abrir o período de votação em cada questão:
+                            </li>
+                            <ul>
+                                <li>Caso utilize a <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/preparar-slides/criar-questoes/">configuração recomendada</a>, após exibição do slide, dê um clique para ativar a votação</li>
+                                <li>Se estiver usando a configuração-padrão (opção não recomendada) a votação será aberta simultaneamente à exibição do slide.</li>
+                            </ul>
+                            <li>Para fechar o período de votação em cada questão, basta dar um clique.</li>
+                            <li>O gráfico com a computação dos votos é exibido ao término de cada votação.</li>
+                        </ol>
+
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+
+                        <!-- reaproveitando a classe de outra pag -->
+                        <section class="imageContainer destCatme duranteAula">
+                            <div class="c12 boxDestaqueAdicional">
+                                <p>Caso utilize <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/preparar-slides/inserir-cronometro/">cronômetro</a>, o período de votação será finalizado automaticamente ao término do tempo programado. Para fechar a votação antes do tempo (por exemplo, se todos já tiverem votado) basta dar um clique a qualquer momento.</p>
+                            </div>
+                        </section>
+
+                        <div class="margemParaImagem" style="height:80px"></div>
                         <!-- 
                         
                         ÂNCORAS [VOLTAR AO SUMÁRIO]

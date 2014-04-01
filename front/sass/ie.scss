@@ -443,6 +443,10 @@ button.close {
     //regras gerais
     section { @include font(normal, 1em); }
     a { @include corLink(); }
+    ol {
+        li { margin: ($meioGrid / 4) 0; }
+        li:first-child { margin-top: 0; }
+    }
     ul {
         li { 
             list-style-type: square;
@@ -494,10 +498,20 @@ button.close {
         padding: 0;
         width: 100%;
         height: 100%;
+        tr:nth-child(odd) { background-color: #f0f0f0; } //cores especificas para este caso
+        tr:nth-child(even) { background-color: #dcdcdc; } //cores especificas para este caso
+        tr:first-child { 
+            background-color: #737373; 
+            td { color: #fff; border-color: #fff; }
+        }
         td {
             border: 1px solid $corBorda;
             border-width: 0px 1px 1px 0px;
             padding: ($meioGrid / 4);
+        }
+        tr:last-child td { border-width: 0px 1px 0px 0px; }
+        tr td:last-child { border-width: 0px 0px 1px 0px; }
+        tr:last-child td:last-child{ border-width: 0px 0px 0px 0px; }
         }
     }
 
@@ -575,6 +589,7 @@ button.close {
         p {
             line-height: 1.5em;
             margin: 0 0 .5em;
+            &:last-child { margin: 0 }
             img { display: inline-block; }
             a { @include corLinkUpBox($corSec01); }
         }
@@ -594,6 +609,8 @@ button.close {
         height: 3em;
         border: 1px solid #555;
     }
+    .tableAvalExistente tr:nth-child(odd) { background-color:#ebebeb; }
+    .tableAvalExistente tr:nth-child(even) { background-color:#ffffff; }
     .tableAvalExistente tr td {
         vertical-align: top;
         border:1px solid $corBorda;
@@ -601,66 +618,28 @@ button.close {
         text-align:left;
         padding:5px;
         color:#000000;
+    }.tableAvalExistente tr:last-child td {
+        border-width:0px 1px 0px 0px;
+    }.tableAvalExistente tr td:last-child {
+        border-width:0px 0px 1px 0px;
+    }.tableAvalExistente tr:last-child td:last-child {
+        border-width:0px 0px 0px 0px;
     }
-
-    // Novos elementos do catme
+    .tableAvalExistente tr:first-child td {
+        background-color:#3c3c3c;
+        border:0px solid $corBorda;
+        text-align:center;
+        border-width:0px 0px 1px 1px;
+        color:#ffffff;
+    }
+    .tableAvalExistente tr:first-child td:first-child {
+        border-width:0px 0px 1px 0px;
+    }
+    .tableAvalExistente tr:first-child td:last-child {
+        border-width:0px 0px 1px 1px;
+    }
     
-    // O que é a ferramenta Catme
-    .boxURLCatme {
-        display: block;
-        border: 2px solid $corDefault;
-        width: 30%;
-        margin: 2em auto;
-        text-align: center;
-        padding: 1em 0;
-        @include radius();
-    }
-    section.destCatme {
-        width: 75%;
-        left: 12.5%;
-        padding: .5em;
-        float: left;
-        margin: ($meioGrid / 4) !important;
-        
-        .boxDestaqueAdicional {
-            @include radius(10px);
-            padding: 1.75em 0;
-        }
-    }
-
-    // Listagem geral 
-    section.destListagem {
-        width: 82%;
-        left: 9%;
-        padding: .5em;
-        float: left;
-        margin: ($meioGrid / 4) !important;
-
-        .atencaoListagemAl {
-            padding: 1em !important;
-            @include radius(10px);
-            
-            h3 { margin: .25em 0 .75em 0; }
-        }
-    }
-
-    // listagem de alunos
-    .listagemAlunos {
-        p { margin: 0; }
-        ul {
-            margin: 0;    
-            padding: 0 0 0 1.25em;
-            li {
-               ul { 
-                    li { list-style-type: circle; }
-                }
-            }
-        }
-        img { margin-top: $meioGrid / 4 }
-        .recuoList{ margin-top: 0;}
-    }
-
-    // Regras para o Clickers
+    // REGRAS PARA O CLICKERS
 
     // instalar o software TurningPoint
     .boxInstalarTurning {
@@ -670,6 +649,17 @@ button.close {
         color: #fff;
         padding: $meioGrid / 4;
         border: none;
+    }
+
+    // Reservar aparelhos com HelpDesk
+    .boxImagem {
+        margin: 0;
+        padding: 0;
+        figcaption {
+            @include font(normal, 93.75%);
+            text-align: center;
+            margin-top: $meioGrid / 4;
+        }
     }
 
     // Inserir cronômetro nos slides
@@ -715,12 +705,84 @@ button.close {
         span { background: #4bc44d url(../img/Clickers/preparar-slides/inserir-cronometro/icoCerto.png) center center no-repeat; }
     }
 
+    // Editar lista de alunos
+    .ClikcerListaAlunos { list-style-type:upper-latin; }
+
+    // Criar lista de controle
+    .tableListaControle { 
+        caption {
+            font-weight: bold;
+            margin: ($meioGrid / 4) 0;
+        }
+        tr {
+            td { text-align: center; }
+        }
+    }
+
+    //  Preparar apresentação
+    .prepararAp {
+        font-weight: bold;
+        span { font-weight: normal; }
+    }
+
+    // Durante a aula
+    .duranteAula {
+        .boxDestaqueAdicional {
+            p {
+                padding-left: $meioGrid / 2; padding-right: $meioGrid / 2;
+            } 
+            h4 {
+                margin-left: $meioGrid / 2;
+            }  
+        } 
+    }
+
+    .numb1, .numb2, .numb3, .numb4 {
+        margin-top: $meioGrid / 4;
+        border: 1px solid $corDefault !important;
+        > span {
+            color: #fff;
+            @include font(bold, 112.5%);
+            background-color: $corDefault;
+            @include radius(500px);
+            text-align: center;
+
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            display: block;
+            margin: 0 auto ($meioGrid / 2);
+        }
+        p:not(:last-child) {
+            border-bottom: 1px solid $corBorda;
+            padding-bottom: $meioGrid / 4;    
+        }
+        .verde, .vermelho {
+            padding: 0 ($meioGrid / 4);
+            color: #fff;
+        }
+        .verde {
+            background-color: green;
+        }
+        .vermelho {
+            background-color: red;
+        }
+    }
+
+    // Continuar sessão
+    section.continuarSessao {
+        width: 50%;
+        left: 24.5%;
+        h4 { margin-left: $meioGrid  / 2; }
+        p {
+            padding-left: $meioGrid / 2; padding-right: $meioGrid / 2;
+        }
+    }
+
     /////////////////////////////////////////////////////////////
     // fim das novas regras
     /////////////////////////////////////////////////////////////
     
-
-}
 
 // sumario: content dinamic
 .sumario {
