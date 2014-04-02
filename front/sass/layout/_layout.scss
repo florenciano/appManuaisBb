@@ -28,7 +28,7 @@ $corSec02: #e64b64; // secundary2 GUI
 @mixin corLink() {
     text-decoration: none;
     color: $corDefault;
-    display: inline-block;
+    // display: inline-block;
     &:visited {
         color: $corDefaultDark
     }

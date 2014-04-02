@@ -31,7 +31,7 @@ $corSec02: #e64b64;
 @mixin corLink() {
     text-decoration: none;
     color: $corDefault;
-    display: inline-block;
+    // display: inline-block;
     &:visited {
         color: $corDefaultDark
     }
@@ -43,7 +43,7 @@ $corSec02: #e64b64;
 @mixin corLinkUpBox($corDigitada) {
     text-decoration: none;
     color: $corDigitada;
-    display: inline-block;
+    // display: inline-block;
     &:visited {
         color: $corDigitada;
     }

@@ -148,7 +148,7 @@
     #BbTrabalhosRecTrabSemPlagio6 { @include settingsBoxImagem(60%, 23%, auto, auto, -70px) }
 
     // Receber trabalhos com verificação de plágio (Exercício)
-    #BbTrabalhosRecTrabComPlagio1 { @include settingsBoxImagem(50%, auto, auto, 0, -20px) }
+    #BbTrabalhosRecTrabComPlagio1 { @include settingsBoxImagem(45%, auto, auto, 20px, -20px) }
     #BbTrabalhosRecTrabComPlagio2 { @include settingsBoxImagem(25%, auto, 30px, 40px, auto) }
     #BbTrabalhosRecTrabComPlagio3 { @include settingsBoxImagem(26%, auto, auto, 0, 80px) }
     #BbTrabalhosRecTrabComPlagio4 { @include settingsBoxImagem(54%, auto, 40px, 0, auto) }
