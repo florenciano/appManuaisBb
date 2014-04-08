@@ -314,6 +314,11 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 		"manual"	: 	"Importar testes e pesquisas do Word", 
 		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/importar-testes-e-pesquisas-do-word/",
 		"tipoIcone"	: 	"blackboard"
+	},
+	{
+		"manual"	: 	"Gerar relatórios de testes", 
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/gerar-relatorios-de-testes/",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
@@ -349,6 +354,11 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 		"manual"	: 	"Criar ou alterar pesquisas (sem nota)", 
 		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/criar-ou-alterar-pesquisas-sem-nota/",
 		"tipoIcone"	: 	"blackboard"
+	},
+	{
+		"manual"	: 	"Gerar relatórios de testes", 
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/gerar-relatorios-de-testes/",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
@@ -363,6 +373,26 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	{
 		"manual"	: 	"Criar ou alterar pesquisas (sem nota)", 
 		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/criar-ou-alterar-pesquisas-sem-nota/",
+		"tipoIcone"	: 	"blackboard"
+	},
+	{
+		"manual"	: 	"Importar testes e pesquisas do Word", 
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/importar-testes-e-pesquisas-do-word/",
+		"tipoIcone"	: 	"blackboard"
+	}
+	];
+
+	// "Gerar relatórios de testes"
+	$scope.Gerar_relatorios_de_testes = 
+	[
+	{
+		"manual"	: 	"Criar ou alterar testes (com nota)", 
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/criar-ou-alterar-testes-com-nota/",
+		"tipoIcone"	: 	"blackboard"
+	},
+	{
+		"manual"	: 	"Conhecer os tipos de pergunta dos testes e pesquisas", 
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/conhecer-os-tipos-de-pergunta-dos-testes-e-pesquisas/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{

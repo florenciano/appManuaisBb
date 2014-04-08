@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br" ng-app="manuaisBB">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Tecnlogias de Aprendizagem - Manuais de utilização</title>
+<meta name="viewport" content="width=device-width">
+<meta name="msapplication-TileImage" content="tile.png"/>
+<meta name="msapplication-TileColor" content="#d02034"/>
+
+<link rel="stylesheet" type="text/css" media="print" href="../../../css/print.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../../../css/main.css">
+
+<!--[if IE]><link rel="shortcut icon" href="favicon.ico"><![endif]-->
+<link rel="icon" href="../../../favicon-16.png" sizes="16x16">
+<link rel="icon" href="../../../favicon-32.png" sizes="32x32">
+<link rel="icon" href="../../../favicon-48.png" sizes="48x48">
+<link rel="icon" href="../../../favicon-64.png" sizes="64x64">
+<link rel="icon" href="../../../favicon-128.png" sizes="128x128">
+
+<!--
+1- iPad com Retina Display;
+2- iPhone com Retina Display;
+3- Primeira e segunda geração de iPad;
+4- Versões antigas de iPhone, iPod Touch e Android 2.2+
+-->
+<link rel="apple-touch-icon" sizes="144x144" href="../../../apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../../apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../../apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+
+<!--[if IE]>
+    <link href="../../../css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script>window.html5 || document.write('<script src="../../../js/libs/html5shiv.js"><\/script>')</script>
+<![endif]-->
+
+</head>
+<body>
+    <!-- alert para visualização abaixo de 768px -->
+    <div class="alert alert-warning alert-dismissable">
+        <button type="button" class="close">&times;</button>
+        Melhor visualizado com resolução de 768px de largura ou superior.
+    </div>
+
+    <div class="wrapper">
+        
+        <header id="top" class="wfull fix">
+            <div class="logo c4">
+                <img src="../../../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
+            </div>
+            <div class="titleHeader c8">
+                <p class="title">Tecnologias de Aprendizagem</p>
+                <p class="description">Manuais de utilização</p>
+            </div>
+        </header>
+
+        <div id="main" role="main" class="fix wfull">
+            <div class="containerMain fix row">
+
+                <!-- início da área da busca -->
+                <section class="buscaMain c4" ng-controller="listaMenu">
+                    <div class="inputSearch">
+                        <form id="busca">
+                            <label for="pesquisa"></label>
+                            <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Busca por título ou palavra-chave" ng-model="searchText">
+                        </form>
+                    </div>
+
+                    <nav role="navigation" class="navigationMain">
+                        <h5 class="icoBlackboard">Blackboard</h5>
+
+                        <ol class="noCategory" ng-repeat="item in BbConhecerAmbiente | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>    
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbMateriais | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbComunicacaoInteracao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbTrabalhos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbGrupos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbTestesPesquisas | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="selectedCategory" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbRubrics | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbAvaliacao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbCalendario | filter: {manual:searchText}">
+                        <li class="nameCategory">
+                            <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            
+                        </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                    </nav>
+                </section>
+
+                <!-- início do conteúdo do manual -->
+                <section class="mainContent c8">
+                    <section class="headerContent row">
+                        <div class="cabecalho fix">
+                            <p>
+                                <!-- adicionar a data da produção do material -->
+                                <span><strong>Atualizado: </strong>09/04/2014</span>
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="breadcrumb">
+                            <p>
+                                <span class="nameCategory">Blackboard </span>
+                                <span>&#62; </span>
+                                Gerar relatórios de testes
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- 
+                    
+                    INTRODUCAO
+                    1- Texto do título h1 é o mesmo do 'p' da div.breadcrumb;
+                    2- div.sumario aparece logo depois da introdução do texto 'quando houver' e serve para listar todos os subtítulos da página definidos pela tag 'h2';
+                    3- toda tag 'h2' receberá esta sintaxe:
+                    '<h2 id="subTituloX">Texto aqui</h2>'
+                    É necessário adicionar um número identificador na âncora;
+
+                     -->
+
+                    <article class="contentMain row">
+                        <h1>
+                            Gerar relatórios de testes
+                        </h1>
+                        <p>Uma vez que um teste é implementado no ambiente da disciplina ou comunidade é possível extrair uma série de relatórios.</p>
+
+
+                        <div class="sumario row">
+                            <h3 id="sumarioAncora">Sumário</h3>
+                        </div>
+
+                        <!--
+                        
+                        IMAGENS E BOX DE TEXTO
+                        1- Alinhamento das imgs adicionar as classes: imgLeft ou imgRight. O comportamenteo padrão é centralizado;
+                        2- Adicionar um id para cada box.
+                        REGRAS:
+                        - nome pasta assunto. ex: Bb, Catme, Casos, Clickers +
+                        - nome da categoria [se houver]. ex: materiais, avaliação, trabalhos +
+                        - nome do manual: as duas palavras iniciais. ex: criar pesquisa, associar rubric +
+                        - numero identificador sequencial.
+
+                        MODELO: BbMateriaisCarregarMateriais1
+
+                        3- No CSS vc controla a posição de cada um. Há + de 1 media queries para adaptar!;
+                        4- A classe 'boxDestaque' é o padrão. Para box com informações adicionais em fundo vermelho usar a classe 'boxDestaqueAdicional';
+                        5- Após cada div.imageContainer inserir a div.respiro para aplicar uma margem entre eles. Insira um valor de margin-top no próprio html, visto que há inúmeras necessidades de tamanhos de margin;
+
+                        -->
+
+                        <h2 id="subTitulo1">Estatísticas de coluna</h2>
+                        <p>Exibe informações como nota máxima, mínima, média etc., além da contagem de notas por faixas de pontuação.</p>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/igerar-relatorios-de-testes/step1.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTesPesquisagerarRel1">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, distinctio facere maiores?</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <h2 id="subTitulo2">Estatísticas de tentativas</h2>
+                        <p>Exibe, para cada pergunta do teste, o percentual de escolha de cada uma das alternativas. Também mostra a pontuação média de cada pergunta.</p>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/gerar-relatorios-de-testes/step2.png" alt="" class="">
+                            <div class="boxDestaque" id="BbTesPesquisagerarRel2">
+                                <p>Para exibir feedbacks individuais por alternativa, escreva-os imediatamente após a alternativa seguidos do símbolo <span class="enfaseBox">&#64;</span> (com espaço):</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <h2 id="subTitulo3">Estatísticas de desempenho</h2>
+                        <p>Fornece estatísticas sobre o desempenho geral do teste e das perguntas individuais. Esse relatório ajuda a identificar perguntas que possam ser fracos discriminadores do desempenho dos alunos.</p>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/gerar-relatorios-de-testes/step3.png" alt="" class="imgLeft">
+                        </div>
+
+                         <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <!-- 
+                        
+                        ÂNCORAS [VOLTAR AO SUMÁRIO]
+                        1- Adicionar a div.row vazia antes de cada subtítulo ('h2'). Ela será respónsável também de inserir a âncora para retornar ao sumário lá em cima;
+                        2- a div#ancoraSaibaMais fica após o fechamento desta tag 'article'. Ela é por padrão fixa em todos os manuais. Em situações em que o manual não tiver 'Manuais relacionados' e 'Manuais Complementares' esta div desaparece;
+                        3- Depois da tag section.saibaMais há a única âncora da página que não recebe condicionais;
+
+                         -->
+
+                    </article>
+
+                    <!-- Devido aos poucos itens do 'Saiba Mais'
+                    <div id="ancoraSaibaMais" class="voltarSumario fix">
+                        <a href="#pesquisa">Início</a>
+                    </div> -->
+                    
+                    <!-- inicio do box Saiba mais -->
+                    <section class="saibaMais row fix">
+                        <h2 id="titulo4" class="ancora">Saiba Mais</h2>
+                        
+                        <h4 id="relacionado">Manuais relacionados</h4>
+                        <ul  ng-controller="manuaisRelacionados">
+                            <!-- class="default"  -->
+                            <li ng-repeat="item in Gerar_relatorios_de_testes" class="ng-class: item.tipoIcone">
+                                <div><a href="{{item.Link}}">{{item.manual}}</a></div>
+                            </li>
+                        </ul>
+                        
+                        <h4 id="complementar">Materiais complementares</h4>
+                        <ul ng-controller="materiaisComplementares">
+                            <li ng-repeat="item in Gerar_relatorios_de_testes" class="ng-class: item.tipoIcone">
+                                <div><a href="{{item.Link}}" target="_blank">{{item.manual}}</a></div>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <div class="voltarSumario fix">
+                        <a href="#pesquisa">Início</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="fix respiro"></div>
+
+<!-- Scripts: plugins -->
+<script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
+<script src="../../../js/libs/angular.js"></script>
+<script src="../../../js/libs/jquery.placeholder.js"></script>
+
+<!-- Scripts: controllers do AngularJs -->
+<script src="../../../js/listaCompletaManualWS.js"></script>
+<script src="../../../js/manuaisRelacionadosWS.js"></script>
+<script src="../../../js/materiaisComplementaresWS.js"></script>
+
+<!-- Scripts: do projeto -->
+<script src="../../../js/main.js"></script>
+</body>
+</html>

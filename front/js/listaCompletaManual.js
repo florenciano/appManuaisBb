@@ -169,6 +169,10 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	{
 		'manual'			: 	'Importar testes e pesquisas do Word',
 		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/importar-testes-e-pesquisas-do-word/'
+	},
+	{
+		'manual'			: 	'Gerar relatórios de testes ',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/gerar-relatorios-de-testes/'
 	}
 	];
 
