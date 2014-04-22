@@ -148,15 +148,15 @@
 
                         <ol class="noCategory" ng-repeat="item in BbCalendario | filter: {manual:searchText}">
                         <li class="nameCategory">
-                            <p class="selectedCategory" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             
                         </li>
-                            <li class="sublist" ng-show="item.manual.length > 1">
+                            <li class="sublist ng-class: addMark()" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
                             </li>
                         </ol>
 
-                        <h5 class="icoCatme">Catme</h5>
+                        <!-- <h5 class="icoCatme">Catme</h5>
                         <ol class="noCategory" ng-repeat="item in catmeSobreFerramenta | filter: {manual:searchText}">
                             <li class="nameCategory">
                                 <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
@@ -278,7 +278,7 @@
                             <h6>
                                 <a href="../../../nao-encontrou-o-que-queria/index.html">Não encontrou o que queria?</a>
                             </h6>
-                        </div>
+                        </div> -->
                     </nav>
                 </section>
 
@@ -313,9 +313,7 @@
                      -->
 
                     <article class="contentMain row">
-                        <h1>
-                            Criar e visualizar eventos
-                        </h1>
+                        <h1>Criar e visualizar eventos</h1>
                         <p>O <strong>Calendário</strong> ajuda a gerenciar:</p>
                         <ul>
                             <li>Prazos de atividades.</li>

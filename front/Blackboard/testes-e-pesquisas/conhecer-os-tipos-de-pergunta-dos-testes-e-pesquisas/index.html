@@ -121,9 +121,9 @@
 
                         <ol class="noCategory" ng-repeat="item in BbTestesPesquisas | filter: {manual:searchText}">
                             <li class="nameCategory">
-                                <p class="selectedCategory" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
-                            <li class="sublist" ng-show="item.manual.length > 1">
+                            <li class="sublist ng-class: addMark()" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
                             </li>
                         </ol>
@@ -156,7 +156,7 @@
                             </li>
                         </ol>
 
-                        <h5 class="icoCatme">Catme</h5>
+                        <!-- <h5 class="icoCatme">Catme</h5>
                         <ol class="noCategory" ng-repeat="item in catmeSobreFerramenta | filter: {manual:searchText}">
                             <li class="nameCategory">
                                 <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
@@ -278,7 +278,7 @@
                             <h6>
                                 <a href="../../../nao-encontrou-o-que-queria/">Não encontrou o que queria?</a>
                             </h6>
-                        </div>
+                        </div> -->
                     </nav>
                 </section>
 
@@ -313,9 +313,7 @@
                      -->
 
                     <article class="contentMain row">
-                        <h1>
-                            Conhecer os tipos de pergunta dos testes e pesquisas
-                        </h1>
+                        <h1>Conhecer os tipos de pergunta dos testes e pesquisas</h1>
                         
                         <div class="margemParaImagem" style="margin-top:20px"></div>
 
@@ -342,7 +340,7 @@
 
                         -->
 
-                        <h2 id="subTitulo3">Pergunta de correspondência </h2>
+                        <h2 id="subTitulo1">Pergunta de correspondência </h2>
                         <p>Nas perguntas de correspondência os alunos devem relacionar os itens de uma coluna aos itens de outra. Esse tipo de questão é configurado em duas etapas: primeiro são definidas as perguntas e respostas. Em seguida, as perguntas e respostas são relacionadas.</p>
                         <div class="imageContainer row">
                             <img src="../../../img/Blackboard/testes-e-pesquisas/criar-ou-alterar-pesquisas-sem-nota/step12.png" alt="" class="imgLeft">
@@ -391,7 +389,7 @@
 
                         <div class="margemParaImagem" style="margin-top:40px"></div>
 
-                        <h2 id="subTitulo4">Pergunta de múltipla escolha</h2>
+                        <h2 id="subTitulo2">Pergunta de múltipla escolha</h2>
                         <p>As perguntas de múltipla escolha permitem que os alunos escolham apenas uma resposta correta entre várias.</p>
 
                         <div class="imageContainer row">
@@ -419,7 +417,7 @@
 
                         <div class="margemParaImagem" style="margin-top:40px"></div>
 
-                        <h2 id="subTitulo5">Pergunta de resposta múltipla</h2>
+                        <h2 id="subTitulo3">Pergunta de resposta múltipla</h2>
                         <p>As perguntas de resposta múltipla permitem que os alunos escolham mais de uma resposta correta entre várias.</p>
 
                         <div class="imageContainer row">
@@ -448,7 +446,7 @@
 
                         <div class="margemParaImagem" style="margin-top:40px"></div>
 
-                        <h2 id="subTitulo6">Pergunta de verdadeiro/falso</h2>
+                        <h2 id="subTitulo4">Pergunta de verdadeiro/falso</h2>
                         <div class="imageContainer row">
                             <img src="../../../img/Blackboard/testes-e-pesquisas/criar-ou-alterar-pesquisas-sem-nota/step17.png" alt="" class="imgLeft">
                             <div class="boxDestaque" id="BbTesPesquisaCriarPesSemNota28">
@@ -477,7 +475,7 @@
 
                         <div class="margemParaImagem" style="margin-top:40px"></div>
 
-                        <h2 id="subTitulo6">Pergunta de redação</h2>
+                        <h2 id="subTitulo5">Pergunta de redação</h2>
                         <p>As perguntas dissertativas permitem que os alunos insiram sua resposta em uma caixa de texto. Esse tipo de pergunta não é corrigido automaticamente. Em vez disso, o professor deve avaliar as tentativas dos alunos na <strong>Central de notas</strong>.</p>
                         <div class="imageContainer row">
                             <img src="../../../img/Blackboard/testes-e-pesquisas/criar-ou-alterar-pesquisas-sem-nota/step17.png" alt="" class="imgLeft">

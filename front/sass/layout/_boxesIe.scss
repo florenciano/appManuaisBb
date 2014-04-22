@@ -250,6 +250,18 @@
 #BbTesPesquisaImportarWord11 { @include settingsBoxImagem(44%, auto, 40%, 0, auto) }
 #BbTesPesquisaImportarWord12 { @include settingsBoxImagem(46%, auto, auto, 31%, -80px) }
 
+// Gerar relatórios de testes
+#BbTesPesquisagerarRel1 { @include settingsBoxImagem(32%, auto, auto, 20px, 20px) }
+ #BbTesPesquisagerarRel2 { @include settingsBoxImagem(30%, auto, 90px, 20px, auto) }
+#BbTesPesquisagerarRel3 { @include settingsBoxImagem(25%, auto, auto, 20px, 20px) }
+#BbTesPesquisagerarRel4 { @include settingsBoxImagem(41%, auto, auto, 0, 20px) }
+#BbTesPesquisagerarRel5 { @include settingsBoxImagem(34%, auto, auto, 0, -30px) }
+#BbTesPesquisagerarRel6 { @include settingsBoxImagem(50%, 25%, auto, 0, -160px) }
+#BbTesPesquisagerarRel7 { @include settingsBoxImagem(37%, auto, auto, 0, -60px) }
+#BbTesPesquisagerarRel8 { @include settingsBoxImagem(29%, auto, 40px, 0, auto) }
+#BbTesPesquisagerarRel9 { @include settingsBoxImagem(40%, auto, 40%, 0, auto) }
+#BbTesPesquisagerarRel10 { @include settingsBoxImagem(25%, auto, auto, 40px, 120px) }
+
 
 // CATEGORIA: Rubrics
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

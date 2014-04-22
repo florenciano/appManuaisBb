@@ -93,9 +93,9 @@
 
                         <ol class="noCategory" ng-repeat="item in BbComunicacaoInteracao | filter: {manual:searchText}">
                             <li class="nameCategory">
-                                <p class="selectedCategory" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
-                            <li class="sublist" ng-show="item.manual.length > 1">
+                            <li class="sublist ng-class: addMark()" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
                             </li>
                         </ol>
@@ -313,9 +313,7 @@
                      -->
 
                     <article class="contentMain row">
-                        <h1>
-                            Criar blog
-                        </h1>
+                        <h1>Criar blog</h1>
                         <p>É possível disponibilizar ao aluno o acesso à ferramenta <strong>Blog</strong>, que pode conter um ou mais blogs, ou disponibilizar o link direto a um blog específico.</p>
                         <p>Para inserir a ferramenta de <strong>Blog</strong> em uma área de conteúdo da disciplina.</p>
 

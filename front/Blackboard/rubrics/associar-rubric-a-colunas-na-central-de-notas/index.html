@@ -130,9 +130,9 @@
 
                         <ol class="noCategory" ng-repeat="item in BbRubrics | filter: {manual:searchText}">
                             <li class="nameCategory">
-                                <p class="selectedCategory" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
-                            <li class="sublist" ng-show="item.manual.length > 1">
+                            <li class="sublist ng-class: addMark()" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
                             </li>
                         </ol>
@@ -156,7 +156,7 @@
                             </li>
                         </ol>
 
-                        <h5 class="icoCatme">Catme</h5>
+                        <!-- <h5 class="icoCatme">Catme</h5>
                         <ol class="noCategory" ng-repeat="item in catmeSobreFerramenta | filter: {manual:searchText}">
                             <li class="nameCategory">
                                 <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
@@ -278,7 +278,7 @@
                             <h6>
                                 <a href="../../../nao-encontrou-o-que-queria/index.html">Não encontrou o que queria?</a>
                             </h6>
-                        </div>
+                        </div> -->
                     </nav>
                 </section>
 
@@ -313,9 +313,7 @@
                      -->
 
                     <article class="contentMain row">
-                        <h1>
-                            Asssociar Rubric a colunas na central de notas
-                        </h1>
+                        <h1>Associar Rubric a colunas na Central de Notas</h1>
                         <p>Também é possível associar uma Rubric a colunas da Central de Notas. A ferramenta SafeAssignment, por exemplo, não permite o vínculo de uma Rubric no momento de sua criação.</p>
                         <p>Portanto, a única maneira de corrigir uma atividades desse tipo com Rubric é por meio da sua coluna na Central de Notas. O mesmo se aplica a colunas criadas sem vínculo de entrega dos alunos no Blackboard (Ex.: Prova, Participação etc.).</p>
 

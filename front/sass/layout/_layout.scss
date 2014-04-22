@@ -256,10 +256,14 @@ body {
 
         // regra da categoria vigente do manual ex: categoria 'Trabalhos' do Blackboard
         .selectedCategory {
-            border: 1px solid $corDefault;
-            padding: ($meioGrid / 4) 0;
-            margin-top: $meioGrid / 2;
+            // border: 1px solid $corDefault;
+            background-color: $corDefault;
+            padding: ($meioGrid / 4) ($meioGrid / 4) ($meioGrid / 4) ($meioGrid - 5);
+            margin: 0;
             @include radius();
+            a, a.hover, a.active, a.visited {
+                color: #fff !important;
+            }
         }
 
         h5 {
@@ -797,6 +801,43 @@ body {
             }
         }
 
+        ////////////////////////////////////
+        // Blackboard [EXCEÇÃO]
+        ////////////////////////////////////
+        // Gerar relatórios de testes
+        .tiposRel {
+            p {
+                border: 1px solid $corBorda;
+                border-top: none;
+                margin: 0;
+                padding: ($meioGrid / 2);
+            }
+        }
+        section.analiseTeste {
+            width: 60%;
+            left: 15%;
+            .boxDestaqueAdicional {
+                padding: $meioGrid / 2;
+            }
+        }
+        .resumoRel {
+            img {
+                margin-top: $meioGrid / 2;
+            }
+            img.valNegativo { margin-top: -5px;}
+            ul {
+                padding-left: $meioGrid;
+            }
+        }
+        .perguntasTableRel {
+            tr {
+                td { 
+                    width: 50%;
+                    vertical-align: middle;
+                }
+            }
+        }
+
 
         /////////////////////////////////////////////////////////////
         // fim das novas regras
@@ -1032,7 +1073,7 @@ body {
         }
     }
 
-    .buscaMain { padding-top: $meioGrid; }
+    .buscaMain { padding-top: $meioGrid; padding-bottom: $meioGrid;}
     
     .inputSearch {
         input[type="text"],
@@ -1179,7 +1220,7 @@ body {
         }
     }
 
-    .buscaMain { padding: $grid $meioGrid 0;}
+    .buscaMain { padding: $grid $meioGrid;}
 
     .inputSearch {
         input[type="text"],

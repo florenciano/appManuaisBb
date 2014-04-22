@@ -171,7 +171,7 @@ manuaisBB.controller('listaMenu', function ($scope) {
 		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/importar-testes-e-pesquisas-do-word/'
 	},
 	{
-		'manual'			: 	'Gerar relatórios de testes ',
+		'manual'			: 	'Gerar relatórios de testes',
 		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/gerar-relatorios-de-testes/'
 	}
 	];
@@ -548,6 +548,22 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	}
 
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+	/*
+        Esta função add o '.selectedCategory' no menu
+        incluir na marcação class='ng-class: teste1()'
+        Atribuir apenas na categoria referente ao manual
+    */
+	$scope.addMark = function() {
+        var title = $( ".contentMain h1" );
+        var links = $( ".sublist a" );
+        
+        links.each( function () {
+            if( $( this ).text() == $( title ).text() ) {
+                $( this ).parent().addClass( "selectedCategory" );
+            }
+        });
+	}
 
 	
 });

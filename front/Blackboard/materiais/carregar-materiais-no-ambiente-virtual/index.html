@@ -84,9 +84,9 @@
 
                         <ol class="noCategory" ng-repeat="item in BbMateriais | filter: {manual:searchText}">
                             <li class="nameCategory">
-                                <p class="selectedCategory" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
-                            <li class="sublist" ng-show="item.manual.length > 1">
+                            <li class="sublist ng-class: addMark()" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
                             </li>
                         </ol>
@@ -156,7 +156,7 @@
                             </li>
                         </ol>
                         
-                        <h5 class="icoCatme">Catme</h5>
+                        <!-- <h5 class="icoCatme">Catme</h5>
                         <ol class="noCategory" ng-repeat="item in catmeSobreFerramenta | filter: {manual:searchText}">
                             <li class="nameCategory">
                                 <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
@@ -278,7 +278,7 @@
                             <h6>
                                 <a href="../../../nao-encontrou-o-que-queria/index.html">Não encontrou o que queria?</a>
                             </h6>
-                        </div>
+                        </div> -->
                     </nav>
                 </section>
 
@@ -313,9 +313,7 @@
                      -->
 
                     <article class="contentMain row">
-                        <h1>
-                            Carregar materiais no ambiente virtual
-                        </h1>
+                        <h1>Carregar materiais no ambiente virtual</h1>
                         <p>Para compartilhar materiais nas disciplinas é importante ter em mente quais arquivos são específicos da disciplina e não se repetirão em disciplinas futuras (plano de aula, por exemplo) e quais arquivos podem ser reutilizados em diferentes turmas/disciplinas, como estudos de caso, artigos etc.</p>
                         <p>O primeiro passo é carregar esses arquivos “menos voláteis” na <strong>Coleção de conteúdos</strong>, uma espécie de <em>pendrive virtual</em> em que o professor pode alocar todo seu material. Uma vez carregados neste local, os arquivos podem ser referenciados em diferentes ambientes, evitando que tenham de ser recarregados a cada nova turma</p>
 

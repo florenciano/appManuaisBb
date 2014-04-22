@@ -218,4 +218,16 @@ manuaisBB.controller('listaMenu', function ($scope) {
 		// <ul> ng-show="item.show"
 	}
 
+	$scope.teste1 = function() {
+        var title = $( ".contentMain h1" );
+        var links = $( ".sublist a" );
+        
+        links.each( function () {
+            if( $( this ).text() == $( title ).text() ) {
+                $( this ).parent().addClass( "selectedCategory" );
+            }
+        });
+		// console.log(this.length, "8=D");
+	}
+
 });

@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br" ng-app="manuaisBB">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Tecnlogias de Aprendizagem - Manuais de utilização</title>
+<meta name="viewport" content="width=device-width">
+<meta name="msapplication-TileImage" content="tile.png"/>
+<meta name="msapplication-TileColor" content="#d02034"/>
+
+<link rel="stylesheet" type="text/css" media="print" href="../../../css/print.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../../../css/main.css">
+
+<!--[if IE]><link rel="shortcut icon" href="favicon.ico"><![endif]-->
+<link rel="icon" href="../../../favicon-16.png" sizes="16x16">
+<link rel="icon" href="../../../favicon-32.png" sizes="32x32">
+<link rel="icon" href="../../../favicon-48.png" sizes="48x48">
+<link rel="icon" href="../../../favicon-64.png" sizes="64x64">
+<link rel="icon" href="../../../favicon-128.png" sizes="128x128">
+
+<!--
+1- iPad com Retina Display;
+2- iPhone com Retina Display;
+3- Primeira e segunda geração de iPad;
+4- Versões antigas de iPhone, iPod Touch e Android 2.2+
+-->
+<link rel="apple-touch-icon" sizes="144x144" href="../../../apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../../apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../../apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+
+<!--[if IE]>
+    <link href="../../../css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script>window.html5 || document.write('<script src="../../../js/libs/html5shiv.js"><\/script>')</script>
+<![endif]-->
+
+</head>
+<body>
+    <!-- alert para visualização abaixo de 768px -->
+    <div class="alert alert-warning alert-dismissable">
+        <button type="button" class="close">&times;</button>
+        Melhor visualizado com resolução de 768px de largura ou superior.
+    </div>
+
+    <div class="wrapper">
+        
+        <header id="top" class="wfull fix">
+            <div class="logo c4">
+                <img src="../../../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
+            </div>
+            <div class="titleHeader c8">
+                <p class="title">Tecnologias de Aprendizagem</p>
+                <p class="description">Manuais de utilização</p>
+            </div>
+        </header>
+
+        <div id="main" role="main" class="fix wfull">
+            <div class="containerMain fix row">
+
+                <!-- início da área da busca -->
+                <section class="buscaMain c4" ng-controller="listaMenu">
+                    <div class="inputSearch">
+                        <form id="busca">
+                            <label for="pesquisa"></label>
+                            <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Busca por título ou palavra-chave" ng-model="searchText">
+                        </form>
+                    </div>
+
+                    <nav role="navigation" class="navigationMain">
+                        <h5 class="icoBlackboard">Blackboard</h5>
+
+                        <ol class="noCategory" ng-repeat="item in BbConhecerAmbiente | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>    
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbMateriais | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbComunicacaoInteracao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbTrabalhos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbGrupos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbTestesPesquisas | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist ng-class: addMark()" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbRubrics | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbAvaliacao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbCalendario | filter: {manual:searchText}">
+                        <li class="nameCategory">
+                            <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            
+                        </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                    </nav>
+                </section>
+
+                <!-- início do conteúdo do manual -->
+                <section class="mainContent c8">
+                    <section class="headerContent row">
+                        <div class="cabecalho fix">
+                            <p>
+                                <!-- adicionar a data da produção do material -->
+                                <span><strong>Atualizado: </strong>09/04/2014</span>
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="breadcrumb">
+                            <p>
+                                <span class="nameCategory">Blackboard </span>
+                                <span>&#62; </span>
+                                Gerar relatórios de testes
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- 
+                    
+                    INTRODUCAO
+                    1- Texto do título h1 é o mesmo do 'p' da div.breadcrumb;
+                    2- div.sumario aparece logo depois da introdução do texto 'quando houver' e serve para listar todos os subtítulos da página definidos pela tag 'h2';
+                    3- toda tag 'h2' receberá esta sintaxe:
+                    '<h2 id="subTituloX">Texto aqui</h2>'
+                    É necessário adicionar um número identificador na âncora;
+
+                     -->
+
+                    <article class="contentMain row">
+                        <h1>Gerar relatórios de testes</h1>
+                        <p>Uma vez que um teste é implementado no ambiente da disciplina ou comunidade é possível extrair uma série de relatórios.</p>
+                        <!-- utilizando classe de outra pagina -->
+                        <section class="row fix funcBlackboard tiposRel">
+                            <div class="c4">
+                                <h4>Estatísticas de coluna</h4>
+                                <p>Exibe informações como nota máxima, mínima, média etc., além da contagem de notas por faixas de pontuação.</p>
+                            </div>
+                            <div class="c4">
+                                <h4>Estatísticas de tentativas</h4>
+                                <p>Exibe, para cada pergunta do teste, o percentual de escolha de cada uma das alternativas. Também mostra a pontuação média de cada pergunta.</p>
+                            </div>
+                            <div class="c4">
+                                <h4>Estatísticas de desempenho</h4>
+                                <p>Fornece estatísticas sobre o desempenho geral do teste e das perguntas individuais. Esse relatório ajuda a identificar perguntas que possam ser fracos discriminadores do desempenho dos alunos.</p>
+                            </div>
+                        </section>
+
+
+                        <div class="sumario row">
+                            <h3 id="sumarioAncora">Sumário</h3>
+                        </div>
+
+                        <!--
+                        
+                        IMAGENS E BOX DE TEXTO
+                        1- Alinhamento das imgs adicionar as classes: imgLeft ou imgRight. O comportamenteo padrão é centralizado;
+                        2- Adicionar um id para cada box.
+                        REGRAS:
+                        - nome pasta assunto. ex: Bb, Catme, Casos, Clickers +
+                        - nome da categoria [se houver]. ex: materiais, avaliação, trabalhos +
+                        - nome do manual: as duas palavras iniciais. ex: criar pesquisa, associar rubric +
+                        - numero identificador sequencial.
+
+                        MODELO: BbMateriaisCarregarMateriais1
+
+                        3- No CSS vc controla a posição de cada um. Há + de 1 media queries para adaptar!;
+                        4- A classe 'boxDestaque' é o padrão. Para box com informações adicionais em fundo vermelho usar a classe 'boxDestaqueAdicional';
+                        5- Após cada div.imageContainer inserir a div.respiro para aplicar uma margem entre eles. Insira um valor de margin-top no próprio html, visto que há inúmeras necessidades de tamanhos de margin;
+
+                        -->
+
+                        <h2 id="subTitulo1">Estatísticas de coluna</h2>
+                        <p>Exibe informações como nota máxima, mínima, média etc., além da contagem de notas por faixas de pontuação.</p>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/gerar-relatorios-de-testes/step1.png" alt="" class="">
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/gerar-relatorios-de-testes/step2.png" alt="" class="">
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <h2 id="subTitulo2">Estatísticas de tentativas</h2>
+                        <p>Exibe, para cada pergunta do teste, o percentual de escolha de cada uma das alternativas. Também mostra a pontuação média de cada pergunta.</p>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/gerar-relatorios-de-testes/step3.png" alt="" class="">
+                            <div class="boxDestaque" id="BbTesPesquisagerarRel1">
+                                <p><strong>Resultado</strong> corresponde à média atingida pelos alunos no teste. </p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/gerar-relatorios-de-testes/step4.png" alt="" class="">
+                            <div class="boxDestaque" id="BbTesPesquisagerarRel2">
+                                <p>No exemplo, cada pergunta do teste vale 2,0 pontos. A pontuação média dos alunos na questão foi 0,87.</p>
+                            </div>
+                            <div class="boxDestaque" id="BbTesPesquisagerarRel3">
+                                <p>O sinal <span class="enfaseBox">v</span> indica qual das alternativas é a correta.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/gerar-relatorios-de-testes/step5.png" alt="" class="imgLeft">
+                            <div class="boxDestaqueAdicional" id="BbTesPesquisagerarRel4">
+                                <p>As perguntas que no momento da criação do teste foram selecionadas por meio das opções <strong>Criar conjunto de perguntas</strong> ou <strong>Criar bloco aleatório</strong> não possuem estatísticas.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <p>As estatísticas são calculadas com base na configuração da opção <strong>Tentativas de pontuação usando</strong>. Se a opção estiver configurada como <strong>Média de tentativas</strong>, todas as tentativas serão incluídas nas estatísticas:</p>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/gerar-relatorios-de-testes/step6.png" alt="" class="">
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <h2 id="subTitulo3">Estatísticas de desempenho</h2>
+                        <p>Fornece estatísticas sobre o desempenho geral do teste e das perguntas individuais. Esse relatório ajuda a identificar perguntas que possam ser fracos discriminadores do desempenho dos alunos.</p>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/gerar-relatorios-de-testes/step7.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTesPesquisagerarRel5">
+                                <p>Um e-mail de confirmação é enviado assim que o relatório é gerado.</p>
+                            </div>
+                            <div class="boxDestaqueAdicional" id="BbTesPesquisagerarRel6">
+                                <p>Caso o teste possua perguntas que necessitam de pontuação manual e ainda não foram corrigidas, as estatísticas serão geradas somente para as perguntas pontuadas. Para obter melhores resultados, o relatório deve ser gerado após atribuição das notas manuais.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:180px"></div>
+                        <p>A análise de um teste inclui resumo, índice de discriminação e nível de dificuldade, além da informação detalhada por pergunta.</p>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/gerar-relatorios-de-testes/step8.png" alt="" class="">
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <section class="row fix resumoRel">
+                            <div class="c12">
+                                <div class="c2">
+                                    <img src="../../../img/Blackboard/testes-e-pesquisas/gerar-relatorios-de-testes/step8a.png" alt="">
+                                </div>
+                                <div class="c10">
+                                    <p>O resumo traz as estatísticas gerais do teste, como número total de pontos, quantidade de perguntas, quantidade de alunos que ainda estão fazendo o teste e que já o finalizaram, pontuação e tempo médios.</p>
+                                </div>
+                            </div>
+                            <div class="c12">
+                                <div class="c2">
+                                    <img src="../../../img/Blackboard/testes-e-pesquisas/gerar-relatorios-de-testes/step8b.png" alt="">
+                                </div>
+                                <div class="c10">
+                                    <p>A discriminação mostra o número de perguntas que se enquadram nas categorias <strong>Boa</strong> (maior que 0,3), <strong>Mediana</strong> (entre 0,1 e 0,3) e <strong>Ruim</strong> (menos de 0,1).</p>
+                                </div>
+                            </div>
+                            <div class="c12">
+                                <div class="c2">
+                                    <img src="../../../img/Blackboard/testes-e-pesquisas/gerar-relatorios-de-testes/step8c.png" alt="">
+                                </div>
+                                <div class="c10">
+                                    <p>A <strong>dificuldade</strong> corresponde à porcentagem de estudantes que responderam a pergunta corretamente. Mostra o número de perguntas nas categorias <strong>Fácil</strong> (maior que 80%), <strong>Mediana</strong> (entre 30% e 80%) e <strong>Difícil</strong> (menos de 30%).</p>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="imageContainer destCatme analiseTeste">
+                            <div class="c12 boxDestaqueAdicional">
+                                <p>As perguntas com valores de discriminação nas categorias Boa e Mediana são melhores para estabelecer a diferenciação entre alunos com níveis de conhecimento mais altos e mais baixos.</p>
+                            </div>
+                        </section>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <!-- <p>A análise de um teste inclui resumo, índice de discriminação e nível de dificuldade, além da informação detalhada por pergunta.</p> -->
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/gerar-relatorios-de-testes/step9.png" alt="" class="">
+                            <div class="boxDestaque" id="BbTesPesquisagerarRel7">
+                                <p>Filtre as perguntas por tipo de questão, discriminação e nível de dificuldade.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:80px"></div>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/gerar-relatorios-de-testes/step10.png" alt="" class="">
+                        </div>
+                        
+                        <section class="row fix resumoRel" id="relGeralTeste">
+                            <div class="c12">
+                                <div class="c2">
+                                    <img src="../../../img/Blackboard/testes-e-pesquisas/gerar-relatorios-de-testes/step10a.png" alt="">
+                                </div>
+                                <div class="c10">
+                                    <p>O resumo traz as estatísticas gerais do teste, como número total de pontos, quantidade de perguntas, quantidade de alunos que ainda estão fazendo o teste e que já o finalizaram, pontuação e tempo médios.</p>
+                                    <ul>
+                                        <li><strong>Discriminação </strong>- indica o quanto uma pergunta diferencia os alunos entre os que conhecem o assunto e os que não conhecem. Perguntas representam um excelente discriminador quando os alunos que a respondem corretamente também apresentam um bom desempenho no teste. Os valores podem variar de -1,0 a +1,0. Valores de discriminação inferiores a 0,1 ou negativos indicam que é necessário revisar a pergunta. Valores de discriminação não podem ser calculados quando a pontuação de dificuldade da pergunta for 100% ou quando todos os alunos receberem a mesma pontuação em uma pergunta.</li>
+                                        <li><strong>Dificuldade </strong>- porcentagem de estudantes que responderam a pergunta corretamente. Os valores de dificuldade podem variar de 0% a 100%, com uma alta porcentagem indicando que a pergunta foi fácil. As perguntas nas categorias Fácil (maior que 80%) e Difícil (menor que 30%) devem ser revisadas.</li>
+                                        <li><strong>Número de tentativas avaliadas</strong> - número de tentativas de perguntas onde a avaliação está finalizada. Números mais altos de tentativas avaliadas geram cálculos de estatísticas mais confiáveis.</li>
+                                        <li><strong>Pontuação média</strong> - se em um pergunta houver tentativas que necessitam de avaliação, apenas as tentativas avaliadas serão usadas para calcular a pontuação média.</li>
+                                        <li><strong>Desvio padrão</strong> - medida da distância entre o desvio de pontuação da pontuação média. Se as pontuações são bem agrupadas, com a maioria dos valores estando próximos da média, o desvio padrão é pequeno. Se o conjunto de dados está amplamente espalhado, com valores distantes da média, o desvio padrão será maior.</li>
+                                        <li><strong>Erro padrão </strong>- uma estimativa da quantidade de variabilidade na pontuação de um aluno devido à probabilidade. Quanto menor o erro padrão de medição, mais precisa será a medição apresentada pela pergunta do teste.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- usando classe de outra pagina -->
+                        <section class="row fix">
+                            <table cellspacing="0" cellpadding="0" class="tableAvalExistente perguntasTableRel">
+                            <tbody>
+                                <tr>
+                                    <td>De modo geral, perguntas bem formuladas incluem:</td>
+                                    <td>De modo geral, as perguntas para as quais é recomendável uma revisão incluem:</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>Dificuldade:<strong> Mediana </strong>(30% a 80%).</li>
+                                            <li>Discriminação: <strong>Bom</strong> ou <strong>Mediano</strong> (&#62; 0,1).</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>Dificuldade:<strong> Fácil </strong>(&#62; 80%) <strong>ou Difícil </strong>(&#60; 30%).</li>
+                                            <li>Discriminação:<strong> Ruim </strong>(&#60; 0,1).</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </section>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/gerar-relatorios-de-testes/step11.png" alt="" class="">
+                        </div>
+                        
+                        <section class="row fix resumoRel">
+                            <div class="c12">
+                                <div class="c2">
+                                    <img src="../../../img/Blackboard/testes-e-pesquisas/gerar-relatorios-de-testes/step11a.png" alt="">
+                                </div>
+                                <div class="c10">
+                                    <p>Símbolos que aparecem próximos às perguntas alertam sobre possíveis problemas:</p>
+                                    <ul>
+                                        <li><strong>Revisão recomendada</strong>: Esta condição é acionada quando os valores de discriminação são inferiores a 0,1 ou quando os valores de dificuldade são maiores que 80% (a pergunta foi muito fácil) ou menores que 30% (a pergunta foi muito difícil). Revise a pergunta para determinar se é necessário reformulá-la.</li>
+                                        <li><strong>As perguntas podem ter mudado após a implementação</strong>: Indica que uma parte da pergunta mudou desde que o teste foi implantado. Alterar qualquer parte de uma pergunta após a implantação do teste pode dar a conotação de que os dados da pergunta talvez não sejam confiáveis.</li>
+                                        <li><strong>Nem todos os envios foram avaliados</strong>: aprece em testes contendo perguntas que requerem avaliação manual, como por exemplo, perguntas dissertativas. Em testes contendo uma pergunta dissertativa com tentativas de 50 alunos, esse indicador é exibido até que o instrutor avalie todas as 50 tentativas. A ferramenta Análise de itens utiliza apenas tentativas que foram avaliadas no momento da execução do relatório.</li>
+                                        <li><strong>(QS)</strong> e <strong>(RB)</strong>: Indica que uma pergunta se origina de um conjunto de perguntas ou bloco aleatório. Devido ao envio de perguntas aleatórias, é possível que para algumas perguntas haja mais tentativas que para outras.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <p>Para ver detalhes de cada questão:</p>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/gerar-relatorios-de-testes/step12.png" alt="" class="">
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/testes-e-pesquisas/gerar-relatorios-de-testes/step13.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTesPesquisagerarRel8">
+                                <p>O resumo inicial da pergunta corresponde às mesmas informações exibidas no <a href="#relGeralTeste">relatório geral do teste</a>.</p>
+                            </div>
+                            <div class="boxDestaque" id="BbTesPesquisagerarRel9">
+                                <p>A seção <strong>Pergunta</strong> exibe o enunciado da questão e as opções de resposta. As informações exibidas no relatório variam de acordo com o tipo de questão.</p>
+                            </div>
+                            <div class="boxDestaque" id="BbTesPesquisagerarRel10">
+                                <p>O sinal <span class="enfaseBox">v</span> indica qual das alternativas é a correta.</p>
+                            </div>
+                        </div>
+
+                        <section class="row fix resumoRel">
+                            <div class="c12">
+                                <div class="c2">
+                                    <img src="../../../img/Blackboard/testes-e-pesquisas/gerar-relatorios-de-testes/step8a.png" alt="" class="valNegativo">
+                                </div>
+                                <div class="c10">
+                                    <p>Informações exibidas no relatório de acordo com o tipo de questão:</p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+
+                        <section class="row fix">
+                            <table cellspacing="0" cellpadding="0" class="tableAvalExistente perguntasTableRel">
+                            <tbody>
+                                <tr>
+                                    <td>Tipo de pergunta</td>
+                                    <td>Informação listada no relatório</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>Múltipla Escolha</li>
+                                            <li>Resposta Múltipla</li>
+                                            <li>Verdadeiro/Falso</li>
+                                            <li>E/Ou</li>
+                                            <li>Escala de opinião</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>Número de alunos que selecionaram cada uma das opções de resposta.</li>
+                                            <li>Distribuição das respostas dos alunos entre os quartis da classe.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>Correspondência</li>
+                                            <li>Ordenação</li>
+                                            <li>Preencha os Vários Espaços em Branco</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>Número de alunos que selecionaram cada uma das opções de resposta.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>Fórmula Calculada</li>
+                                            <li>Valor Numérico Calculado</li>
+                                            <li>Preencha os espaços em branco</li>
+                                            <li>Hot Spot</li>
+                                            <li>Quiz Bowl</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>Número de alunos que acertaram, erraram ou ignoraram a pergunta.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>Redação</li>
+                                            <li>Resposta do Arquivo</li>
+                                            <li>Resposta Abreviada</li>
+                                            <li>Frase Confusa</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>Apenas o enunciado da pergunta.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </section>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <section class="row fix resumoRel">
+                            <div class="c12">
+                                <div class="c2">
+                                    <img src="../../../img/Blackboard/testes-e-pesquisas/gerar-relatorios-de-testes/step8b.png" alt="" class="valNegativo">
+                                </div>
+                                <div class="c10">
+                                    <p>Distribuição das respostas:</p>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+                        <p>Os tipos de pergunta Múltipla Escolha, Resposta Múltipla, Verdadeiro/Falso, E/Ou e Escala de opinião incluem a distribuição de respostas entre os quartis da classe. Esta opção mostra os tipos de alunos que selecionaram as respostas corretas ou incorretas.</p>
+                        <ul>
+                            <li>Top 25%: Número de alunos que selecionaram essa alternativa e alcançaram notas no primeiro quartil (maiores notas nesse teste).</li>
+                            <li>2º 25%: Número de alunos que selecionaram essa alternativa e alcançaram notas no segundo quartil.</li>
+                            <li>3º 25%: Número de alunos que selecionaram essa alternativa e alcançaram notas no terceiro quartil.</li>
+                            <li>Últimos 25%: Número de alunos que selecionaram essa alternativa e alcançaram notas no último quartil (notas mais baixas nesse teste).</li>
+                        </ul>
+                        <section class="imageContainer destCatme analiseTeste">
+                            <div class="c12 boxDestaqueAdicional">
+                                <p>Os quartis são medidas de localização que dividem a amostra de dados de tipo quantitativo em quatro partes, cada uma com uma porcentagem de dados aproximadamente igual.</p>
+                            </div>
+                        </section>
+
+                        <div class="margemParaImagem" style="height:60px"></div>
+
+                        <!-- 
+                        
+                        ÂNCORAS [VOLTAR AO SUMÁRIO]
+                        1- Adicionar a div.row vazia antes de cada subtítulo ('h2'). Ela será respónsável também de inserir a âncora para retornar ao sumário lá em cima;
+                        2- a div#ancoraSaibaMais fica após o fechamento desta tag 'article'. Ela é por padrão fixa em todos os manuais. Em situações em que o manual não tiver 'Manuais relacionados' e 'Manuais Complementares' esta div desaparece;
+                        3- Depois da tag section.saibaMais há a única âncora da página que não recebe condicionais;
+
+                         -->
+
+                    </article>
+
+                    <!-- Devido aos poucos itens do 'Saiba Mais'
+                    <div id="ancoraSaibaMais" class="voltarSumario fix">
+                        <a href="#pesquisa">Início</a>
+                    </div> -->
+                    
+                    <!-- inicio do box Saiba mais -->
+                    <section class="saibaMais row fix">
+                        <h2 id="titulo4" class="ancora">Saiba Mais</h2>
+                        
+                        <h4 id="relacionado">Manuais relacionados</h4>
+                        <ul  ng-controller="manuaisRelacionados">
+                            <!-- class="default"  -->
+                            <li ng-repeat="item in Gerar_relatorios_de_testes" class="ng-class: item.tipoIcone">
+                                <div><a href="{{item.Link}}">{{item.manual}}</a></div>
+                            </li>
+                        </ul>
+                        
+                        <h4 id="complementar">Materiais complementares</h4>
+                        <ul ng-controller="materiaisComplementares">
+                            <li ng-repeat="item in Gerar_relatorios_de_testes" class="ng-class: item.tipoIcone">
+                                <div><a href="{{item.Link}}" target="_blank">{{item.manual}}</a></div>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <div class="voltarSumario fix">
+                        <a href="#pesquisa">Início</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="fix respiro"></div>
+
+<!-- Scripts: plugins -->
+<script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
+<script src="../../../js/libs/angular.js"></script>
+<script src="../../../js/libs/jquery.placeholder.js"></script>
+
+<!-- Scripts: controllers do AngularJs -->
+<script src="../../../js/listaCompletaManual.js"></script>
+<script src="../../../js/manuaisRelacionados.js"></script>
+<script src="../../../js/materiaisComplementares.js"></script>
+
+<!-- Scripts: do projeto -->
+<script src="../../../js/main.js"></script>
+</body>
+</html>
