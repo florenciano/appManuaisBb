@@ -358,7 +358,7 @@
                                     <img src="../../../img/Blackboard/testes-e-pesquisas/gerar-relatorios-de-testes/step10a.png" alt="">
                                 </div>
                                 <div class="c10">
-                                    <p>O resumo traz as estatísticas gerais do teste, como número total de pontos, quantidade de perguntas, quantidade de alunos que ainda estão fazendo o teste e que já o finalizaram, pontuação e tempo médios.</p>
+                                    <p>Resumo das estatísticas de cada pergunta do teste:</p>
                                     <ul>
                                         <li><strong>Discriminação </strong>- indica o quanto uma pergunta diferencia os alunos entre os que conhecem o assunto e os que não conhecem. Perguntas representam um excelente discriminador quando os alunos que a respondem corretamente também apresentam um bom desempenho no teste. Os valores podem variar de -1,0 a +1,0. Valores de discriminação inferiores a 0,1 ou negativos indicam que é necessário revisar a pergunta. Valores de discriminação não podem ser calculados quando a pontuação de dificuldade da pergunta for 100% ou quando todos os alunos receberem a mesma pontuação em uma pergunta.</li>
                                         <li><strong>Dificuldade </strong>- porcentagem de estudantes que responderam a pergunta corretamente. Os valores de dificuldade podem variar de 0% a 100%, com uma alta porcentagem indicando que a pergunta foi fácil. As perguntas nas categorias Fácil (maior que 80%) e Difícil (menor que 30%) devem ser revisadas.</li>
@@ -413,7 +413,7 @@
                                     <ul>
                                         <li><strong>Revisão recomendada</strong>: Esta condição é acionada quando os valores de discriminação são inferiores a 0,1 ou quando os valores de dificuldade são maiores que 80% (a pergunta foi muito fácil) ou menores que 30% (a pergunta foi muito difícil). Revise a pergunta para determinar se é necessário reformulá-la.</li>
                                         <li><strong>As perguntas podem ter mudado após a implementação</strong>: Indica que uma parte da pergunta mudou desde que o teste foi implantado. Alterar qualquer parte de uma pergunta após a implantação do teste pode dar a conotação de que os dados da pergunta talvez não sejam confiáveis.</li>
-                                        <li><strong>Nem todos os envios foram avaliados</strong>: aprece em testes contendo perguntas que requerem avaliação manual, como por exemplo, perguntas dissertativas. Em testes contendo uma pergunta dissertativa com tentativas de 50 alunos, esse indicador é exibido até que o instrutor avalie todas as 50 tentativas. A ferramenta Análise de itens utiliza apenas tentativas que foram avaliadas no momento da execução do relatório.</li>
+                                        <li><strong>Nem todos os envios foram avaliados</strong>: Aparece em testes contendo perguntas que requerem avaliação manual, como por exemplo, perguntas dissertativas. Em testes contendo uma pergunta dissertativa com tentativas de 50 alunos, esse indicador é exibido até que o instrutor avalie todas as 50 tentativas. A ferramenta Análise de itens utiliza apenas tentativas que foram avaliadas no momento da execução do relatório.</li>
                                         <li><strong>(QS)</strong> e <strong>(RB)</strong>: Indica que uma pergunta se origina de um conjunto de perguntas ou bloco aleatório. Devido ao envio de perguntas aleatórias, é possível que para algumas perguntas haja mais tentativas que para outras.</li>
                                     </ul>
                                 </div>
@@ -572,7 +572,7 @@
                     
                     <!-- inicio do box Saiba mais -->
                     <section class="saibaMais row fix">
-                        <h2 id="titulo4" class="ancora">Saiba Mais</h2>
+                        <h2 id="saiba-mais" class="ancora">Saiba Mais</h2>
                         
                         <h4 id="relacionado">Manuais relacionados</h4>
                         <ul  ng-controller="manuaisRelacionados">

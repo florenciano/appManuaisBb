@@ -8,15 +8,15 @@
 <meta name="msapplication-TileImage" content="tile.png"/>
 <meta name="msapplication-TileColor" content="#d02034"/>
 
-<link rel="stylesheet" type="text/css" media="print" href="../../../css/print.css">
-<link rel="stylesheet" type="text/css" media="screen" href="../../../css/main.css">
+<link rel="stylesheet" type="text/css" media="print" href="../../css/print.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../../css/main.css">
 
 <!--[if IE]><link rel="shortcut icon" href="favicon.ico"><![endif]-->
-<link rel="icon" href="../../../favicon-16.png" sizes="16x16">
-<link rel="icon" href="../../../favicon-32.png" sizes="32x32">
-<link rel="icon" href="../../../favicon-48.png" sizes="48x48">
-<link rel="icon" href="../../../favicon-64.png" sizes="64x64">
-<link rel="icon" href="../../../favicon-128.png" sizes="128x128">
+<link rel="icon" href="../../favicon-16.png" sizes="16x16">
+<link rel="icon" href="../../favicon-32.png" sizes="32x32">
+<link rel="icon" href="../../favicon-48.png" sizes="48x48">
+<link rel="icon" href="../../favicon-64.png" sizes="64x64">
+<link rel="icon" href="../../favicon-128.png" sizes="128x128">
 
 <!--
 1- iPad com Retina Display;
@@ -24,18 +24,18 @@
 3- Primeira e segunda geração de iPad;
 4- Versões antigas de iPhone, iPod Touch e Android 2.2+
 -->
-<link rel="apple-touch-icon" sizes="144x144" href="../../../apple-touch-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="114x114" href="../../../apple-touch-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="72x72" href="../../../apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 
 <!--[if IE]>
-    <link href="../../../css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="../../css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
 <![endif]-->
 
 <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <script>window.html5 || document.write('<script src="../../../js/libs/html5shiv.js"><\/script>')</script>
+    <script>window.html5 || document.write('<script src="../../js/libs/html5shiv.js"><\/script>')</script>
 <![endif]-->
 
 </head>
@@ -50,7 +50,7 @@
         
         <header id="top" class="wfull fix">
             <div class="logo c4">
-                <img src="../../../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
+                <img src="../../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
             </div>
             <div class="titleHeader c8">
                 <p class="title">Tecnologias de Aprendizagem</p>
@@ -158,7 +158,7 @@
 
                         <h5 class="icoCatme">Catme</h5>
                         <ol class="noCategory" ng-repeat="item in catmeSobreFerramenta | filter: {manual:searchText}">
-                            <li class="nameCategory">
+                            <li class="nameCategory selectedCategory">
                                 <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
                             <li class="sublist" ng-show="item.manual.length > 1">
@@ -271,12 +271,12 @@
 
                         <div class="faqBusca icoFaq">
                             <h5>
-                                <a href="../../../faq/index.html" >FAQ</a>
+                                <a href="../../faq/index.html" >FAQ</a>
                             </h5>
                         </div>
                         <div class="outros">
                             <h6>
-                                <a href="../../../nao-encontrou-o-que-queria/index.html">Não encontrou o que queria?</a>
+                                <a href="../../nao-encontrou-o-que-queria/index.html">Não encontrou o que queria?</a>
                             </h6>
                         </div>
                     </nav>
@@ -288,7 +288,7 @@
                         <div class="cabecalho fix">
                             <p>
                                 <!-- adicionar a data da produção do material -->
-                                <span><strong>Atualizado: </strong>07/03/2014</span>
+                                <span><strong>Atualizado: </strong>06/03/2014</span>
                             </p>
                         </div>
                         <hr>
@@ -296,7 +296,7 @@
                             <p>
                                 <span class="nameCategory">Catme </span>
                                 <span>&#62; </span>
-                                Criar classe
+                                Sobre a ferramenta
                             </p>
                         </div>
                     </section>
@@ -313,14 +313,19 @@
                      -->
 
                     <article class="contentMain row">
-                        <h1>
-                            Criar classe
-                        </h1>
-                        <p>Antes de criar uma pesquisa é preciso criar uma classe no Catme.</p>
+                        <h1>Sobre a ferramenta</h1>
 
                         <div class="sumario row">
                             <h3 id="sumarioAncora">Sumário</h3>
                         </div>
+
+                        <h2 id="o-que-e-catme">
+                            O que é a ferramenta Catme
+                        </h2>
+                        <p><strong>Catme Smarter Teamwork</strong> é uma ferramenta que permite realizar pesquisas de avaliação entre pares.</p>
+                        <p>Concebida em 2003 por pesquisadores de diferentes instituições norte-americanas, atualmente o Catme é utilizado em mais de 600 países, sendo 30% desse total fora dos Estados Unidos.</p>
+                        
+                        <div class="boxURLCatme">Acesse <a href="http://info.catme.org/" target="_blank" title="CATME Smarter Teamwork">info.catme.org</a></div>
 
                         <!--
                         
@@ -341,46 +346,104 @@
 
                         -->
 
-                        <div class="imageContainer row">
-                            <img src="../../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-classe/step1.png" alt="" class="">
-                        </div>
+                        <p>A ferramenta possibilita:</p>
+                        <ul>
+                            <li>Coletar informações dos alunos e fornecer feedback individualizado.</li>
+                            <li>Entender a dinâmica de funcionamento das equipes, analisando a contribuição de cada aluno para o andamento do time.</li>
+                            <li>Tomar ciência de possíveis problemas que estejam ocorrendo nas equipes de trabalho.</li>
+                        </ul>
+                        
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
 
+                        <section class="imageContainer destCatme">
+                            <div class="c12 boxDestaqueAdicional">
+                                <div class="c3"><img src="../../img/Catme/sobre-a-ferramenta/o-que-e-catme/step1a.png" alt=""></div>
+                                <div class="c9">
+                                    <p>O vídeo <a href="http://www.youtube.com/watch?v=O1g7_H86-ZU" target="_blank">Overview of CATME Team-Maker System</a> mostra o passo a passo para criação de uma pesquisa.</p>
+                                    <p>Duração: 14min</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="imageContainer destCatme">
+                            <div class="c12 boxDestaqueAdicional">
+                                <div class="c3"><img src="../../img/Catme/sobre-a-ferramenta/o-que-e-catme/step1b.png" alt=""></div>
+                                <div class="c9">
+                                    <p>Para informações detalhadas sobre o funcionamento do Catme recomendamos a leitura da <a href="#">página de ajuda</a> (para acessar é preciso criar uma conta e fazer o login).</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="imageContainer destCatme">
+                            <div class="c12 boxDestaqueAdicional">
+                                <div class="c3"><img src="../../img/Catme/sobre-a-ferramenta/o-que-e-catme/step1c.png" alt=""></div>
+                                <div class="c9">
+                                    <p>Em 2013 o Catme passou a ser adotado na <strong>Graduação</strong> para avaliação da competência "trabalho em equipe". A ferramenta, no entanto, está disponível a todos os professores interessados.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="margemParaImagem row fix" style="height:40px"></div>
+                        
+                        <!--
+                        #######################################################
+                        -->
+
+                        <h2 id="funcionamento">Funcionamento do Catme</h2>
+                        <p>O Catme trabalha com uma estrutura hierárquica básica de dois elementos: <strong>Class</strong> e <strong>Activity</strong></p>
+                        <p>Primeiramente é necessário criarmos uma <strong>Class</strong>, categoria maior dentro da qual criamos uma ou mais <strong>Activities</strong>, que são as pesquisas de avaliação de pares</p>
+                        <p>Ao criarmos uma pesquisa devemos informar quem serão os alunos participantes. Normalmente eles correspondem aos alunos de uma mesma turma/disciplina.</p>
+
+                        <div class="imageContainer row">
+                            <div class="boxDestaque" id="CatmeFuncCatme1">
+                                <p>Ao associar os alunos a uma determinada  pesquisa é possível usar dois critérios para informar quais são suas equipes:</p>
+                                <ul>
+                                    <li>Team-Maker: as equipes são definidas automaticamente com base em critérios demográficos.</li>
+                                    <li>CATME BARS: as equipes são informadas ao Catme juntamente com a listagem de alunos. <strong>Esta deve ser a opção escolhida</strong>.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="margemParaImagem" style="margin-top:180px"></div>
+
+                        <p>Embora os alunos sejam associados a uma pesquisa em específico, é possível reaproveitá-los de uma pesquisa para outra.</p>
+                        
+                        <div class="imageContainer row">
+                            <img src="../../img/Catme/sobre-a-ferramenta/funcionamento-do-catme/step1.png" alt="" class="">
+                        </div>
+                        
                         <div class="margemParaImagem" style="margin-top:40px"></div>
 
+                        <!-- 
+                        ##########################################################
+                        -->
+
+                        <h2 id="criar-conta">Criar conta</h2>
+
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+
                         <div class="imageContainer row">
-                            <img src="../../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-classe/step2.png" alt="" class="">
-                            <div class="boxDestaque" id="CatmePesqAvalCriarClasse1">
-                                <p>Preencha os dados da classe informando “Insper” no campo <strong>Institution</strong>.</p>
-                                <p>Em <strong>Type</strong>, selecione o contexto em que a pesquisa será aplicada. Para as aulas tradicionais, escolha "Lecture".</p>
+                            <img src="../../img/Catme/sobre-a-ferramenta/criar-conta/step1.png" alt="" class="">
+                            <div class="boxDestaque" id="CatmeSobreCriarConta1">
+                                <p>Preencha seus dados pessoais, informando “Insper” no campo <strong>Institution</strong> e seu e-mail do Insper no campo <strong>Email Address</strong>.</p>
+                            </div>
+                            <div class="boxDestaqueAdicional" id="CatmeSobreCriarConta2">
+                                <p>Após análise das informações pelos administradores do Catme um <strong>e-mail será enviado para finalização do cadastro</strong>.</p>
                             </div>
                         </div>
 
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <div class="margemParaImagem" style="margin-top:140px"></div>
 
                         <div class="imageContainer row">
-                            <img src="../../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-classe/step3.png" alt="" class="">
-                            <div class="boxDestaque" id="CatmePesqAvalCriarClasse2">
-                                <p>Defina se os alunos deverão passar por uma "simulação" de avaliação de pares para calibração das respostas antes da pesquisa "real".</p>
-                                <p>Ao selecionar esta opção, os alunos avaliam alunos fictícios com base em descrições fictícias de comportamentos. Ao final é exibida uma comparação entre a avaliação realizada pelo aluno <em>versus</em> a avaliação correta determinada pelo sistema.</p>
+                            <img src="../../img/Catme/sobre-a-ferramenta/criar-conta/step2.png" alt="" class="">
+                            <div class="boxDestaque" id="CatmeSobreCriarConta3">
+                                <p>Acesse a mensagem enviada para o e-mail cadastrado, clique no link indicado e crie uma senha com no mínimo 6 caracteres.</p>
+                                <p>Com a conta criada, acesse o link <a href="http://info.catme.org" target="_blank">info.catme.org</a> e clique em <strong>Login to Existing Account</strong>.</p>
                             </div>
                         </div>
 
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <div class="margemParaImagem" style="margin-top:200px"></div>
 
-                        <div class="imageContainer row">
-                            <img src="../../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-classe/step4.png" alt="" class="">
-                            <div class="boxDestaque" id="CatmePesqAvalCriarClasse3">
-                                <p>Determine se as mensagens de resultados serão exibidas aos alunos (sugerimos marcar esta opção).</p>
-                            </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-classe/step5.png" alt="" class="">
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:80px"></div>
                         <!-- 
                         
                         ÂNCORAS [VOLTAR AO SUMÁRIO]
@@ -404,14 +467,14 @@
                         <h4 id="relacionado">Manuais relacionados</h4>
                         <ul  ng-controller="manuaisRelacionados">
                             <!-- class="default"  -->
-                            <li ng-repeat="item in Criar_classe" class="ng-class: item.tipoIcone">
+                            <li ng-repeat="item in Sobre_a_ferramenta" class="ng-class: item.tipoIcone">
                                 <div><a href="{{item.Link}}">{{item.manual}}</a></div>
                             </li>
                         </ul>
                         
                         <h4 id="complementar">Materiais complementares</h4>
                         <ul ng-controller="materiaisComplementares">
-                            <li ng-repeat="item in Criar_classe" class="ng-class: item.tipoIcone">
+                            <li ng-repeat="item in Sobre_a_ferramenta" class="ng-class: item.tipoIcone">
                                 <div><a href="{{item.Link}}" target="_blank">{{item.manual}}</a></div>
                             </li>
                         </ul>
@@ -427,16 +490,16 @@
     <div class="fix respiro"></div>
 
 <!-- Scripts: plugins -->
-<script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
-<script src="../../../js/libs/angular.js"></script>
-<script src="../../../js/libs/jquery.placeholder.js"></script>
+<script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
+<script src="../../js/libs/angular.js"></script>
+<script src="../../js/libs/jquery.placeholder.js"></script>
 
 <!-- Scripts: controllers do AngularJs -->
-<script src="../../../js/listaCompletaManual.js"></script>
-<script src="../../../js/manuaisRelacionados.js"></script>
-<script src="../../../js/materiaisComplementares.js"></script>
+<script src="../../js/listaCompletaManual.js"></script>
+<script src="../../js/manuaisRelacionados.js"></script>
+<script src="../../js/materiaisComplementares.js"></script>
 
 <!-- Scripts: do projeto -->
-<script src="../../../js/main.js"></script>
+<script src="../../js/main.js"></script>
 </body>
 </html>

@@ -8,15 +8,15 @@
 <meta name="msapplication-TileImage" content="tile.png"/>
 <meta name="msapplication-TileColor" content="#d02034"/>
 
-<link rel="stylesheet" type="text/css" media="print" href="../../../css/print.css">
-<link rel="stylesheet" type="text/css" media="screen" href="../../../css/main.css">
+<link rel="stylesheet" type="text/css" media="print" href="../../css/print.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../../css/main.css">
 
 <!--[if IE]><link rel="shortcut icon" href="favicon.ico"><![endif]-->
-<link rel="icon" href="../../../favicon-16.png" sizes="16x16">
-<link rel="icon" href="../../../favicon-32.png" sizes="32x32">
-<link rel="icon" href="../../../favicon-48.png" sizes="48x48">
-<link rel="icon" href="../../../favicon-64.png" sizes="64x64">
-<link rel="icon" href="../../../favicon-128.png" sizes="128x128">
+<link rel="icon" href="../../favicon-16.png" sizes="16x16">
+<link rel="icon" href="../../favicon-32.png" sizes="32x32">
+<link rel="icon" href="../../favicon-48.png" sizes="48x48">
+<link rel="icon" href="../../favicon-64.png" sizes="64x64">
+<link rel="icon" href="../../favicon-128.png" sizes="128x128">
 
 <!--
 1- iPad com Retina Display;
@@ -24,18 +24,18 @@
 3- Primeira e segunda geração de iPad;
 4- Versões antigas de iPhone, iPod Touch e Android 2.2+
 -->
-<link rel="apple-touch-icon" sizes="144x144" href="../../../apple-touch-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="114x114" href="../../../apple-touch-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="72x72" href="../../../apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 
 <!--[if IE]>
-    <link href="../../../css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="../../css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
 <![endif]-->
 
 <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <script>window.html5 || document.write('<script src="../../../js/libs/html5shiv.js"><\/script>')</script>
+    <script>window.html5 || document.write('<script src="../../js/libs/html5shiv.js"><\/script>')</script>
 <![endif]-->
 
 </head>
@@ -50,7 +50,7 @@
         
         <header id="top" class="wfull fix">
             <div class="logo c4">
-                <img src="../../../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
+                <img src="../../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
             </div>
             <div class="titleHeader c8">
                 <p class="title">Tecnologias de Aprendizagem</p>
@@ -186,8 +186,8 @@
 
                         <h5 class="icoClickers">Votadores eletrônicos (clickers)</h5>
                         <ol class="noCategory" ng-repeat="item in clickerSobreFerramenta | filter: {manual:searchText}">
-                            <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            <li class="nameCategory selectedCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
                             <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
@@ -271,12 +271,12 @@
 
                         <div class="faqBusca icoFaq">
                             <h5>
-                                <a href="../../../faq/index.html" >FAQ</a>
+                                <a href="../../faq/index.html" >FAQ</a>
                             </h5>
                         </div>
                         <div class="outros">
                             <h6>
-                                <a href="../../../nao-encontrou-o-que-queria/index.html">Não encontrou o que queria?</a>
+                                <a href="../../nao-encontrou-o-que-queria/index.html">Não encontrou o que queria?</a>
                             </h6>
                         </div>
                     </nav>
@@ -288,15 +288,15 @@
                         <div class="cabecalho fix">
                             <p>
                                 <!-- adicionar a data da produção do material -->
-                                <span><strong>Atualizado: </strong>07/03/2014</span>
+                                <span><strong>Atualizado: </strong>25/03/2014</span>
                             </p>
                         </div>
                         <hr>
                         <div class="breadcrumb">
                             <p>
-                                <span class="nameCategory">Catme </span>
+                                <span class="nameCategory">votadores eletrônicos (clickers) </span>
                                 <span>&#62; </span>
-                                Criar classe
+                                Sobre a ferramenta
                             </p>
                         </div>
                     </section>
@@ -313,14 +313,13 @@
                      -->
 
                     <article class="contentMain row">
-                        <h1>
-                            Criar classe
-                        </h1>
-                        <p>Antes de criar uma pesquisa é preciso criar uma classe no Catme.</p>
-
+                        <h1>Sobre a ferramenta</h1>
+                        
                         <div class="sumario row">
                             <h3 id="sumarioAncora">Sumário</h3>
                         </div>
+
+                        <h2 id="o-que-sao">O que são votadores eletrônicos (clickers)</h2>
 
                         <!--
                         
@@ -341,46 +340,75 @@
 
                         -->
 
+                        <section class="row fix">
+                            <div class="c9">  
+                                <p>Votadores eletrônicos (clickers) são aparelhos portáteis que possibilitam aos alunos responderem instantaneamente a questões propostas pelo professor.</p>
+                                <p>Atrelado aos votadores existe um software – TurningPoint – que controla as respostas selecionadas, gerando relatórios imediatos dos resultados obtidos em cada votação.</p>
+                                <p>Os votos podem ser anônimos ou identificados, abrindo um leque de diferentes dinâmicas que podem ser aplicadas em sala.</p>
+                                <p>O recurso possibilita:</p>
+                                <ul>
+                                    <li>Verificar o nível de compreensão dos alunos em tempo real, permitindo ao professor adaptar a dinâmica da aula de acordo com o ritmo da turma.</li>
+                                    <li>Comparar o desempenho dos alunos ao longo das aulas, uma vez que os resultados das votações são armazenados em relatórios.</li>
+                                    <li>Medir o nível de eficiência de diferentes metodologias de ensino.</li>
+                                    <li>Etc.</li>
+                                </ul>
+                            </div>
+                            <div class="c3">
+                                <img src="../../img/Clickers/sobre-a-ferramenta/o-que-sao-votadores-eletronicos/step1.png" alt="" class="imgRight">  
+                            </div>
+                        </section>
+
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+
+                        <!-- 
+                        ################################################################
+                        -->
+
+                        <h2 id="funcionamento-votadores">
+                            Funcionamento dos votadores eletrônicos
+                        </h2>
+
+                        <p>Para utilizar os votadores eletrônicos são necessários os seguintes procedimentos:</p>
                         <div class="imageContainer row">
-                            <img src="../../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-classe/step1.png" alt="" class="">
+                            <img src="../../img/Clickers/sobre-a-ferramenta/funcionamento-dos-votadores-eletronicos/step1.png" alt="" class="">
+                            <div class="boxDestaque" id="ClickerSobreFerramenta1">
+                                <p><a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/utilizar-votadores-eletronicos/reservar-aparelhos-helpDesk/">Verificar junto ao Help Desk</a> a disponibilidade dos equipamentos no dia e hora desejados.</p>
+                            </div>
+                            <div class="boxDestaque" id="ClickerSobreFerramenta2">
+                                <p><a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/utilizar-votadores-eletronicos/instalar-software-turningPoint/">Instalar software TurningPoint</a> no computador (uma aba do aplicativo será criada no PowerPoint).</p>
+                            </div>
+                            <div class="boxDestaque" id="ClickerSobreFerramenta3">
+                                <p>Em uma apresentação de slides, <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/preparar-slides/criar-questoes/">criar sequência de questões e configurar as regras de votação</a>.</p>
+                            </div>
+                            <div class="boxDestaque" id="ClickerSobreFerramenta4">
+                                <p>Caso a votação não seja anônima, <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/criar-lista-alunos/">informar quem são os alunos</a> (por exemplo, a partir da lista de alunos do Blackboard).</p>
+                            </div>
                         </div>
 
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <div class="imageContainer row">
+                            <img src="../../img/Clickers/sobre-a-ferramenta/funcionamento-dos-votadores-eletronicos/step2.png" alt="" class="">
+                            <div class="boxDestaque" id="ClickerSobreFerramenta5">
+                                <p>Distribuir votadores aos alunos mediante assinatura de <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/criar-lista-controle/">lista de controle</a>.</p>
+                            </div>
+                            <div class="boxDestaque" id="ClickerSobreFerramenta6">
+                                <p>Durante a apresentação de slides, lançar perguntas à turma.</p>
+                            </div>
+                            <div class="boxDestaque" id="ClickerSobreFerramenta7">
+                                <p>Aguardar votação dos alunos com base nas opções oferecidas para cada questão (os resultados são processados e apresentados instantaneamente).</p>
+                            </div>
+                        </div>
 
                         <div class="imageContainer row">
-                            <img src="../../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-classe/step2.png" alt="" class="">
-                            <div class="boxDestaque" id="CatmePesqAvalCriarClasse1">
-                                <p>Preencha os dados da classe informando “Insper” no campo <strong>Institution</strong>.</p>
-                                <p>Em <strong>Type</strong>, selecione o contexto em que a pesquisa será aplicada. Para as aulas tradicionais, escolha "Lecture".</p>
+                            <img src="../../img/Clickers/sobre-a-ferramenta/funcionamento-dos-votadores-eletronicos/step3.png" alt="" class="">
+                            <div class="boxDestaque" id="ClickerSobreFerramenta8">
+                                <p>Solicitar aos alunos a devolução dos votadores.</p>
+                            </div>
+                            <div class="boxDestaque" id="ClickerSobreFerramenta9">
+                                <p><a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/analisar-resultados/visualizar-resultados-votacao/">Salvar os relatórios</a> (opcional).</p>
                             </div>
                         </div>
 
                         <div class="margemParaImagem" style="margin-top:40px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-classe/step3.png" alt="" class="">
-                            <div class="boxDestaque" id="CatmePesqAvalCriarClasse2">
-                                <p>Defina se os alunos deverão passar por uma "simulação" de avaliação de pares para calibração das respostas antes da pesquisa "real".</p>
-                                <p>Ao selecionar esta opção, os alunos avaliam alunos fictícios com base em descrições fictícias de comportamentos. Ao final é exibida uma comparação entre a avaliação realizada pelo aluno <em>versus</em> a avaliação correta determinada pelo sistema.</p>
-                            </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-classe/step4.png" alt="" class="">
-                            <div class="boxDestaque" id="CatmePesqAvalCriarClasse3">
-                                <p>Determine se as mensagens de resultados serão exibidas aos alunos (sugerimos marcar esta opção).</p>
-                            </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-classe/step5.png" alt="" class="">
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:80px"></div>
                         <!-- 
                         
                         ÂNCORAS [VOLTAR AO SUMÁRIO]
@@ -404,14 +432,14 @@
                         <h4 id="relacionado">Manuais relacionados</h4>
                         <ul  ng-controller="manuaisRelacionados">
                             <!-- class="default"  -->
-                            <li ng-repeat="item in Criar_classe" class="ng-class: item.tipoIcone">
+                            <li ng-repeat="item in Sobre_a_ferramenta_clickers" class="ng-class: item.tipoIcone">
                                 <div><a href="{{item.Link}}">{{item.manual}}</a></div>
                             </li>
                         </ul>
                         
                         <h4 id="complementar">Materiais complementares</h4>
                         <ul ng-controller="materiaisComplementares">
-                            <li ng-repeat="item in Criar_classe" class="ng-class: item.tipoIcone">
+                            <li ng-repeat="item in Sobre_a_ferramenta_clickers" class="ng-class: item.tipoIcone">
                                 <div><a href="{{item.Link}}" target="_blank">{{item.manual}}</a></div>
                             </li>
                         </ul>
@@ -427,16 +455,16 @@
     <div class="fix respiro"></div>
 
 <!-- Scripts: plugins -->
-<script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
-<script src="../../../js/libs/angular.js"></script>
-<script src="../../../js/libs/jquery.placeholder.js"></script>
+<script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
+<script src="../../js/libs/angular.js"></script>
+<script src="../../js/libs/jquery.placeholder.js"></script>
 
 <!-- Scripts: controllers do AngularJs -->
-<script src="../../../js/listaCompletaManual.js"></script>
-<script src="../../../js/manuaisRelacionados.js"></script>
-<script src="../../../js/materiaisComplementares.js"></script>
+<script src="../../js/listaCompletaManual.js"></script>
+<script src="../../js/manuaisRelacionados.js"></script>
+<script src="../../js/materiaisComplementares.js"></script>
 
 <!-- Scripts: do projeto -->
-<script src="../../../js/main.js"></script>
+<script src="../../js/main.js"></script>
 </body>
 </html>

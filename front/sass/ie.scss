@@ -240,6 +240,7 @@ button.close {
         border: 1px solid $corDefault;
         padding: ($meioGrid / 4) 0;
         margin-top: $meioGrid / 2;
+        color: #fff;
         @include radius();
     }
 
@@ -931,7 +932,7 @@ button.close {
         color: #e64b64;
         margin: 0 0 ($meioGrid / 4) 0;
         border-bottom: 1px solid #e64b64;
-        @include font(bold, 1.2em);
+        @include font(bold, 1.4em);
         line-height: 1.6em;
     }
 

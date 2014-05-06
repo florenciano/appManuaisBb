@@ -8,15 +8,15 @@
 <meta name="msapplication-TileImage" content="tile.png"/>
 <meta name="msapplication-TileColor" content="#d02034"/>
 
-<link rel="stylesheet" type="text/css" media="print" href="../../../css/print.css">
-<link rel="stylesheet" type="text/css" media="screen" href="../../../css/main.css">
+<link rel="stylesheet" type="text/css" media="print" href="../../css/print.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../../css/main.css">
 
 <!--[if IE]><link rel="shortcut icon" href="favicon.ico"><![endif]-->
-<link rel="icon" href="../../../favicon-16.png" sizes="16x16">
-<link rel="icon" href="../../../favicon-32.png" sizes="32x32">
-<link rel="icon" href="../../../favicon-48.png" sizes="48x48">
-<link rel="icon" href="../../../favicon-64.png" sizes="64x64">
-<link rel="icon" href="../../../favicon-128.png" sizes="128x128">
+<link rel="icon" href="../../favicon-16.png" sizes="16x16">
+<link rel="icon" href="../../favicon-32.png" sizes="32x32">
+<link rel="icon" href="../../favicon-48.png" sizes="48x48">
+<link rel="icon" href="../../favicon-64.png" sizes="64x64">
+<link rel="icon" href="../../favicon-128.png" sizes="128x128">
 
 <!--
 1- iPad com Retina Display;
@@ -24,18 +24,18 @@
 3- Primeira e segunda geração de iPad;
 4- Versões antigas de iPhone, iPod Touch e Android 2.2+
 -->
-<link rel="apple-touch-icon" sizes="144x144" href="../../../apple-touch-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="114x114" href="../../../apple-touch-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="72x72" href="../../../apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 
 <!--[if IE]>
-    <link href="../../../css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="../../css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
 <![endif]-->
 
 <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <script>window.html5 || document.write('<script src="../../../js/libs/html5shiv.js"><\/script>')</script>
+    <script>window.html5 || document.write('<script src="../../js/libs/html5shiv.js"><\/script>')</script>
 <![endif]-->
 
 </head>
@@ -50,7 +50,7 @@
         
         <header id="top" class="wfull fix">
             <div class="logo c4">
-                <img src="../../../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
+                <img src="../../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
             </div>
             <div class="titleHeader c8">
                 <p class="title">Tecnologias de Aprendizagem</p>
@@ -204,8 +204,8 @@
                         </ol>
 
                         <ol class="noCategory" ng-repeat="item in clickerPrepararSlides | filter: {manual:searchText}">
-                            <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            <li class="nameCategory selectedCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
                             <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
@@ -271,12 +271,12 @@
 
                         <div class="faqBusca icoFaq">
                             <h5>
-                                <a href="../../../faq/index.html" >FAQ</a>
+                                <a href="../../faq/index.html" >FAQ</a>
                             </h5>
                         </div>
                         <div class="outros">
                             <h6>
-                                <a href="../../../nao-encontrou-o-que-queria/index.html">Não encontrou o que queria?</a>
+                                <a href="../../nao-encontrou-o-que-queria/index.html">Não encontrou o que queria?</a>
                             </h6>
                         </div>
                     </nav>
@@ -288,15 +288,15 @@
                         <div class="cabecalho fix">
                             <p>
                                 <!-- adicionar a data da produção do material -->
-                                <span><strong>Atualizado: </strong>07/03/2014</span>
+                                <span><strong>Atualizado: </strong>31/03/2014</span>
                             </p>
                         </div>
                         <hr>
                         <div class="breadcrumb">
                             <p>
-                                <span class="nameCategory">Catme </span>
+                                <span class="nameCategory">votadores eletrônicos (clickers) </span>
                                 <span>&#62; </span>
-                                Criar classe
+                                Preparar slides
                             </p>
                         </div>
                     </section>
@@ -313,14 +313,15 @@
                      -->
 
                     <article class="contentMain row">
-                        <h1>
-                            Criar classe
-                        </h1>
-                        <p>Antes de criar uma pesquisa é preciso criar uma classe no Catme.</p>
-
+                        <h1>Preparar slides</h1>
+                        
                         <div class="sumario row">
                             <h3 id="sumarioAncora">Sumário</h3>
                         </div>
+
+                        <h2 id="preparar-slides">
+                            Criar questões e configurar votação nos slides
+                        </h2>
 
                         <!--
                         
@@ -341,46 +342,154 @@
 
                         -->
 
+                        <p>Antes de tudo, <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/utilizar-votadores-eletronicos/abrir-powerPoint/">abra o PowerPoint com o plug-in do TurningPoint</a>.</p>
+                        <p>Cada slide que contém uma questão para votação pode ser formatado e configurado de maneira diferente. No entanto, visando otimizar o tempo de preparação da apresentação e manter sua uniformidade, sugere-se configurar um slide-modelo e replicá-lo para as demais questões, efetuando somente a troca dos enunciados e alternativas.</p>
+                        
                         <div class="imageContainer row">
-                            <img src="../../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-classe/step1.png" alt="" class="">
+                            <img src="../../img/Clickers/preparar-slides/criar-questoes/step1.png" alt="" class="imgLeft">
+                            <div class="boxDestaqueAdicional" id="ClickerCriarQuestoes1">
+                                <p>O exemplo utiliza uma questão do tipo "Multiple Choice", mas existem outros formatos de questão.</p>
+                            </div>
+                            <div class="boxDestaque" id="ClickerCriarQuestoes2">
+                                <p>Clique sobre os quadros para editar o enunciado e as alternativas, separando-as com "Enter".</p>
+                            </div>
+                            <div class="boxDestaqueAdicional" id="ClickerCriarQuestoes3">
+                                <p>Após inserir o enunciado e as alternativas, é possível mudar a disposição dos elementos na tela, bem como alterar o estilo dos textos.</p>
+                            </div>
                         </div>
 
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <div class="margemParaImagem" style="margin-top:120px"></div>
+
+                        <p>Para editar as opções de uma questão criada, clique sobre a caixa das alternativas e utilize o quadro <strong>Slide Preferences</strong>.</p>
 
                         <div class="imageContainer row">
-                            <img src="../../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-classe/step2.png" alt="" class="">
-                            <div class="boxDestaque" id="CatmePesqAvalCriarClasse1">
-                                <p>Preencha os dados da classe informando “Insper” no campo <strong>Institution</strong>.</p>
-                                <p>Em <strong>Type</strong>, selecione o contexto em que a pesquisa será aplicada. Para as aulas tradicionais, escolha "Lecture".</p>
+                            <img src="../../img/Clickers/preparar-slides/criar-questoes/step2.png" alt="" class="imgRight">
+                            <div class="boxDestaque" id="ClickerCriarQuestoes4">
+                                <h4>Question Options</h4>
+                                <ul>
+                                    <li><strong>Anonymous</strong>: os votos não serão identificados.</li>
+                                    <li><strong>Multiple Responses</strong>: permite que cada aluno vote mais de uma vez na mesma questão. Sugere-se não marcar esta opção.</li>
+                                </ul>
                             </div>
                         </div>
 
                         <div class="margemParaImagem" style="margin-top:40px"></div>
 
                         <div class="imageContainer row">
-                            <img src="../../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-classe/step3.png" alt="" class="">
-                            <div class="boxDestaque" id="CatmePesqAvalCriarClasse2">
-                                <p>Defina se os alunos deverão passar por uma "simulação" de avaliação de pares para calibração das respostas antes da pesquisa "real".</p>
-                                <p>Ao selecionar esta opção, os alunos avaliam alunos fictícios com base em descrições fictícias de comportamentos. Ao final é exibida uma comparação entre a avaliação realizada pelo aluno <em>versus</em> a avaliação correta determinada pelo sistema.</p>
+                            <img src="../../img/Clickers/preparar-slides/criar-questoes/step3.png" alt="" class="imgRight">
+                            <div class="boxDestaque" id="ClickerCriarQuestoes5">
+                                <h4>Polling Options</h4>
+                                <ul>
+                                    <li><strong>Automatically Open Polling</strong>: a votação começa assim que o slide é exibido. Sugere-se não marcar esta opção, ficando sob responsabilidade do professor iniciar a votação.</li>
+                                    <li><strong>Show Results</strong>: define se o resultado da votação será exibido aos alunos e em que momento.</li>
+                                    <li><strong>First Response Only</strong>: computa apenas o primeiro voto dos alunos. Sugere-se não marcar esta opção, possibilitando que os alunos mudem de opinião durante o período de votação.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:120px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../img/Clickers/preparar-slides/criar-questoes/step4.png" alt="" class="imgRight">
+                            <div class="boxDestaque" id="ClickerCriarQuestoes6">
+                                <h4>Scoring Options</h4>
+                                <ul>
+                                    <li><strong>Correct/Incorrect Point Value</strong>: define a pontuação para cada resposta correta e incorreta. Admite valores decimais e negativos.</li>
+                                    <li><strong>Speed Scoring</strong>: pontos variam de acordo com a velocidade de resposta dos alunos.</li>
+                                    <li><strong>Show Advanced Scoring</strong>: permite configurar pontos diferentes para cada questão.</li>
+                                    <li><strong>Gabarito</strong>: indica quais são as alternativas corretas e incorretas. Em caso de pesquisas, deve-se selecionar a opção "no value".</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <p>Para editar as configurações do gráfico, clique sobre a caixa do gráfico e utilize o quadro <strong>Slide Preferences</strong>.</p>
+                        <div class="imageContainer row">
+                            <img src="../../img/Clickers/preparar-slides/criar-questoes/step5.png" alt="" class="imgRight">
+                            <div class="boxDestaque" id="ClickerCriarQuestoes7">
+                                <ul>
+                                    <li><strong>Chart Colors</strong>: define a cor correspondente às alternativas. Caso a questão possua alternativas corretas/incorretas, sugere-se a opção "Correct/Incorrect".</li>
+                                    <li><strong>Chart Labels</strong>: define os rótulos do gráfico. Caso os textos das alternativas sejam curtos, sugere-se a opção "Answer Text", que exibe o próprio texto da alternativa. Caso os textos sejam longos, sugere-se a opção "Bullets", que exibe no gráfico apenas a indicação da alternativa (ex.: a, b, c).</li>
+                                    <li><strong>Chart Values</strong>: formato dos valores exibidos no gráfico.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:100px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../img/Clickers/preparar-slides/criar-questoes/step6.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="ClickerCriarQuestoes8">
+                                <p>Para alterar o tipo de gráfico, utilize a opção <strong>Objects</strong> do menu.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+
+                        <!-- 
+                        #########################################################
+                        -->
+
+                        <h2 id="inserir-cronometro">
+                            Inserir cronômetro nos slides (opcional)
+                        </h2>
+
+                        <p>Embora o controle de abertura e fechamento da votação possa ser feito manualmente, é possível inserir um cronômetro para controlar automaticamente o fechamento da votação.</p>
+                        <div class="imageContainer row">
+                            <img src="../../img/Clickers/preparar-slides/inserir-cronometro/step1.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="ClickerInserirCronometro1">
+                                <p>Escolha um dentre os formatos possíveis de cronômetro.</p>
+                            </div>
+                            <div class="boxDestaqueAdicional" id="ClickerInserirCronometro2">
+                                <p>Após a inserção do cronômetro, é possível arrastá-lo para qualquer posição da tela.</p>
                             </div>
                         </div>
 
                         <div class="margemParaImagem" style="margin-top:40px"></div>
 
                         <div class="imageContainer row">
-                            <img src="../../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-classe/step4.png" alt="" class="">
-                            <div class="boxDestaque" id="CatmePesqAvalCriarClasse3">
-                                <p>Determine se as mensagens de resultados serão exibidas aos alunos (sugerimos marcar esta opção).</p>
+                            <img src="../../img/Clickers/preparar-slides/inserir-cronometro/step2.png" alt="" class="">
+                            <div class="boxDestaque" id="ClickerInserirCronometro3">
+                                <p>Edite o texto do cronômetro para definir o tempo de votação da questão em segundos.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:100px"></div>
+
+                        <p>Por padrão, o cronômetro não vem configurado para ser exibido aos alunos no momento em que a votação é aberta. Para contornar esse problema, é necessário ajustar as configurações de animação do cronômetro.</p>
+                        <div class="imageContainer row">
+                            <img src="../../img/Clickers/preparar-slides/inserir-cronometro/step3.png" alt="" class="">
+                            <div class="boxDestaque" id="ClickerInserirCronometro4">
+                                <p>Configure o cronômetro (indicado como "TPCountdown" na lista de animações) para iniciar junto com a abertura da votação (indicada como "TPStartPoll").</p>
                             </div>
                         </div>
 
                         <div class="margemParaImagem" style="margin-top:40px"></div>
 
                         <div class="imageContainer row">
-                            <img src="../../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-classe/step5.png" alt="" class="">
+                            <div class="c6">
+                                <div class="boxErrado">
+                                    <img src="../../img/Clickers/preparar-slides/inserir-cronometro/step4.png" alt="" class="">
+                                    <span></span>
+                                    <!-- <h4>Errado</h4> -->
+                                    <p>Neste exemplo, o primeiro clique só abre a votação (TPStartPoll), sendo necessário outro clique, com a votação já aberta, para exibir o cronômetro.</p>    
+                                </div>
+                            </div>
+                            <div class="c6">
+                                <div class="boxCerto">
+                                    <img src="../../img/Clickers/preparar-slides/inserir-cronometro/step5.png" alt="" class="">
+                                    <span></span>
+                                    <!-- <h4>Certo</h4> -->
+                                    <p>Neste exemplo, o primeiro clique abre a votação e já exibe o cronômetro.</p>
+                                </div>
+                                
+                            </div>
                         </div>
 
-                        <div class="margemParaImagem" style="margin-top:80px"></div>
+                        <div class="margemParaImagem" style="height:80px"></div>
+
+
                         <!-- 
                         
                         ÂNCORAS [VOLTAR AO SUMÁRIO]
@@ -404,14 +513,14 @@
                         <h4 id="relacionado">Manuais relacionados</h4>
                         <ul  ng-controller="manuaisRelacionados">
                             <!-- class="default"  -->
-                            <li ng-repeat="item in Criar_classe" class="ng-class: item.tipoIcone">
+                            <li ng-repeat="item in Preparar_slides" class="ng-class: item.tipoIcone">
                                 <div><a href="{{item.Link}}">{{item.manual}}</a></div>
                             </li>
                         </ul>
                         
                         <h4 id="complementar">Materiais complementares</h4>
                         <ul ng-controller="materiaisComplementares">
-                            <li ng-repeat="item in Criar_classe" class="ng-class: item.tipoIcone">
+                            <li ng-repeat="item in Preparar_slides" class="ng-class: item.tipoIcone">
                                 <div><a href="{{item.Link}}" target="_blank">{{item.manual}}</a></div>
                             </li>
                         </ul>
@@ -427,16 +536,16 @@
     <div class="fix respiro"></div>
 
 <!-- Scripts: plugins -->
-<script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
-<script src="../../../js/libs/angular.js"></script>
-<script src="../../../js/libs/jquery.placeholder.js"></script>
+<script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
+<script src="../../js/libs/angular.js"></script>
+<script src="../../js/libs/jquery.placeholder.js"></script>
 
 <!-- Scripts: controllers do AngularJs -->
-<script src="../../../js/listaCompletaManual.js"></script>
-<script src="../../../js/manuaisRelacionados.js"></script>
-<script src="../../../js/materiaisComplementares.js"></script>
+<script src="../../js/listaCompletaManual.js"></script>
+<script src="../../js/manuaisRelacionados.js"></script>
+<script src="../../js/materiaisComplementares.js"></script>
 
 <!-- Scripts: do projeto -->
-<script src="../../../js/main.js"></script>
+<script src="../../js/main.js"></script>
 </body>
 </html>

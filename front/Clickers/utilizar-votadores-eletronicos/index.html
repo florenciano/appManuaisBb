@@ -8,15 +8,15 @@
 <meta name="msapplication-TileImage" content="tile.png"/>
 <meta name="msapplication-TileColor" content="#d02034"/>
 
-<link rel="stylesheet" type="text/css" media="print" href="../../../css/print.css">
-<link rel="stylesheet" type="text/css" media="screen" href="../../../css/main.css">
+<link rel="stylesheet" type="text/css" media="print" href="../../css/print.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../../css/main.css">
 
 <!--[if IE]><link rel="shortcut icon" href="favicon.ico"><![endif]-->
-<link rel="icon" href="../../../favicon-16.png" sizes="16x16">
-<link rel="icon" href="../../../favicon-32.png" sizes="32x32">
-<link rel="icon" href="../../../favicon-48.png" sizes="48x48">
-<link rel="icon" href="../../../favicon-64.png" sizes="64x64">
-<link rel="icon" href="../../../favicon-128.png" sizes="128x128">
+<link rel="icon" href="../../favicon-16.png" sizes="16x16">
+<link rel="icon" href="../../favicon-32.png" sizes="32x32">
+<link rel="icon" href="../../favicon-48.png" sizes="48x48">
+<link rel="icon" href="../../favicon-64.png" sizes="64x64">
+<link rel="icon" href="../../favicon-128.png" sizes="128x128">
 
 <!--
 1- iPad com Retina Display;
@@ -24,18 +24,18 @@
 3- Primeira e segunda geração de iPad;
 4- Versões antigas de iPhone, iPod Touch e Android 2.2+
 -->
-<link rel="apple-touch-icon" sizes="144x144" href="../../../apple-touch-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="114x114" href="../../../apple-touch-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="72x72" href="../../../apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 
 <!--[if IE]>
-    <link href="../../../css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="../../css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
 <![endif]-->
 
 <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <script>window.html5 || document.write('<script src="../../../js/libs/html5shiv.js"><\/script>')</script>
+    <script>window.html5 || document.write('<script src="../../js/libs/html5shiv.js"><\/script>')</script>
 <![endif]-->
 
 </head>
@@ -50,7 +50,7 @@
         
         <header id="top" class="wfull fix">
             <div class="logo c4">
-                <img src="../../../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
+                <img src="../../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
             </div>
             <div class="titleHeader c8">
                 <p class="title">Tecnologias de Aprendizagem</p>
@@ -195,8 +195,8 @@
                         </ol>
 
                         <ol class="noCategory" ng-repeat="item in clickerUtilizarVotadores | filter: {manual:searchText}">
-                            <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            <li class="nameCategory selectedCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
                             <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
@@ -271,12 +271,12 @@
 
                         <div class="faqBusca icoFaq">
                             <h5>
-                                <a href="../../../faq/index.html" >FAQ</a>
+                                <a href="../../faq/index.html" >FAQ</a>
                             </h5>
                         </div>
                         <div class="outros">
                             <h6>
-                                <a href="../../../nao-encontrou-o-que-queria/index.html">Não encontrou o que queria?</a>
+                                <a href="../../nao-encontrou-o-que-queria/index.html">Não encontrou o que queria?</a>
                             </h6>
                         </div>
                     </nav>
@@ -288,15 +288,15 @@
                         <div class="cabecalho fix">
                             <p>
                                 <!-- adicionar a data da produção do material -->
-                                <span><strong>Atualizado: </strong>07/03/2014</span>
+                                <span><strong>Atualizado: </strong>27/03/2014</span>
                             </p>
                         </div>
                         <hr>
                         <div class="breadcrumb">
                             <p>
-                                <span class="nameCategory">Catme </span>
+                                <span class="nameCategory">votadores eletrônicos (clickers) </span>
                                 <span>&#62; </span>
-                                Criar classe
+                                Utilizar votadores eletrônicos
                             </p>
                         </div>
                     </section>
@@ -313,14 +313,13 @@
                      -->
 
                     <article class="contentMain row">
-                        <h1>
-                            Criar classe
-                        </h1>
-                        <p>Antes de criar uma pesquisa é preciso criar uma classe no Catme.</p>
-
+                        <h1>Utilizar votadores eletrônicos</h1>
+                        
                         <div class="sumario row">
                             <h3 id="sumarioAncora">Sumário</h3>
                         </div>
+
+                        <h2 id="instalar-software">Instalar software TurningPoint</h2>
 
                         <!--
                         
@@ -341,46 +340,13 @@
 
                         -->
 
-                        <div class="imageContainer row">
-                            <img src="../../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-classe/step1.png" alt="" class="">
+                        <p>Para preparar os slides com as questões e analisar os resultados da utilização de votadores eletrônicos é necessário utilizar o software <strong>TurningPoint</strong>.</p>
+                        <p>Quando instalado, o software ativa uma nova aba no PowerPoint que permite <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/preparar-slides/criar-questoes/">configurar as questões nos slides</a>.</p>
+                        <p>O TurningPoint também permite <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/criar-lista-alunos/">editar listas de alunos</a> e <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/analisar-resultados/visualizar-resultados-votacao/">analisar relatórios</a> das votações aplicadas.</p>
+                        <div class="boxInstalarTurning">
+                            <p>Os computadores do Lounge dos Professores (7º andar) já possuem o software Instalado.</p>
                         </div>
 
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-classe/step2.png" alt="" class="">
-                            <div class="boxDestaque" id="CatmePesqAvalCriarClasse1">
-                                <p>Preencha os dados da classe informando “Insper” no campo <strong>Institution</strong>.</p>
-                                <p>Em <strong>Type</strong>, selecione o contexto em que a pesquisa será aplicada. Para as aulas tradicionais, escolha "Lecture".</p>
-                            </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-classe/step3.png" alt="" class="">
-                            <div class="boxDestaque" id="CatmePesqAvalCriarClasse2">
-                                <p>Defina se os alunos deverão passar por uma "simulação" de avaliação de pares para calibração das respostas antes da pesquisa "real".</p>
-                                <p>Ao selecionar esta opção, os alunos avaliam alunos fictícios com base em descrições fictícias de comportamentos. Ao final é exibida uma comparação entre a avaliação realizada pelo aluno <em>versus</em> a avaliação correta determinada pelo sistema.</p>
-                            </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-classe/step4.png" alt="" class="">
-                            <div class="boxDestaque" id="CatmePesqAvalCriarClasse3">
-                                <p>Determine se as mensagens de resultados serão exibidas aos alunos (sugerimos marcar esta opção).</p>
-                            </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-classe/step5.png" alt="" class="">
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:80px"></div>
                         <!-- 
                         
                         ÂNCORAS [VOLTAR AO SUMÁRIO]
@@ -389,6 +355,80 @@
                         3- Depois da tag section.saibaMais há a única âncora da página que não recebe condicionais;
 
                          -->
+                        <div class="imageContainer row">
+                            <img src="../../img/Clickers/utilizar-votadores-eletronicos/instalar-software-turningPoint/step1.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="ClickerInstalarTurning1">
+                                <p>Para fazer a instalação, acesse o <a href="http://www.turningtechnologies.com/responsesystemsupport/downloads" target="_blank">site da TurningTechnologies</a>, faça o download da versão instalável do software "TurningPoint 5" e instale-o em seu computador.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <!-- 
+                        #######################################################3
+                        -->
+
+                        <h2 id="reservar-aparelhos">Reservar aparelhos com Help Desk</h2>
+
+                        <p>Escreva <strong>com antecedência</strong> para <a href="mailto:blackboard@insper.edu.br?subject=Agenda%20de%20Workshops%202014">ReservasNotebookSP@insper.edu.br</a> informando:!</p>
+                        <ul>
+                            <li>Data/hora de início e término da utilização.</li>
+                            <li>Nome/número da sala de aula.</li>
+                            <li>Nome da turma.</li>
+                            <li>Número de alunos da turma.</li>
+                        </ul>
+                        <p>Ao confirmar a disponibilidade, o Help Desk encaminhará uma lista contendo o código de identificação de cada votador. Caso a votação não seja anônima, será necessário complementar essa lista com o <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/criar-lista-alunos/">nome dos alunos que participarão da votação</a>.</p>
+
+                        <div class="imageContainer row">
+                            <figure class="boxImagem">
+                                <img src="../../img/Clickers/utilizar-votadores-eletronicos/reservar-aparelhos-helpDesk/step1.png" alt="" class="">
+                                <figcaption>Modelo de lista enviada pelo Help Desk contendo a identificação de cada votador</figcaption>
+                            </figure>
+                        </div>
+
+                        <p>No dia e local agendados, o Help Desk providenciará os seguintes equipamentos:</p>
+                        <ul>
+                            <li>Notebook com software TurningPoint instalado.</li>
+                            <li>Antena receptora.</li>
+                            <li>Kit com votadores eletrônicos.</li>
+                        </ul>
+                        <p>O Help Desk também é responsável por recolher o notebook e os votadores ao término da aula.</p>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <!-- 
+                        ######################################################
+                        -->
+
+                        <h2 id="abrir-turning-point">
+                            Abrir PowerPoint com plug-in do TurningPoint
+                        </h2>
+
+                        <p>Para que o plug-in do TurningPoint seja executado no PowerPoint é necessário abrir a apresentação de slides a partir do aplicativo!</p>
+                        <p>Esse procedimento é necessário para qualquer ação que envolva o PowerPoint no uso dos votadores eletrônicos, tanto na <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/preparar-slides/criar-questoes/">preparação dos slides</a> quanto na aplicação em sala de aula.</p>
+                       
+                        <div class="imageContainer row">
+                            <img src="../../img/Clickers/utilizar-votadores-eletronicos/abrir-powerPoint/step1.png" alt="" class="imgLeft">
+                            <div class="boxDestaqueAdicional" id="ClickerAbrirPowerPoint1">
+                                <p>Se um arquivo PPT é aberto diretamente pelo PowerPoint, o plug-in do TurningPoint não é executado, mesmo que o <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/utilizar-votadores-eletronicos/instalar-software-turningPoint/">software já esteja instalado</a>.</p>
+                            </div>
+                        </div>
+
+                        <p>Ao abrir uma apresentação a partir do TurningPoint, uma aba correspondente ao aplicativo será exibida no menu de opções do PowerPoint.</p>
+
+                        <div class="imageContainer row">
+                            <img src="../../img/Clickers/utilizar-votadores-eletronicos/abrir-powerPoint/step2.png" alt="" class="">
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <p>Se preferir, é possível configurar que o plug-in do TurningPoint sempre seja aberto junto com o PowerPoint.</p>
+
+                        <div class="imageContainer row">
+                            <img src="../../img/Clickers/utilizar-votadores-eletronicos/abrir-powerPoint/step3.png" alt="" class="imgLeft">
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:80px"></div>
 
                     </article>
 
@@ -404,14 +444,14 @@
                         <h4 id="relacionado">Manuais relacionados</h4>
                         <ul  ng-controller="manuaisRelacionados">
                             <!-- class="default"  -->
-                            <li ng-repeat="item in Criar_classe" class="ng-class: item.tipoIcone">
+                            <li ng-repeat="item in Utilizar_votadores_eletronicos" class="ng-class: item.tipoIcone">
                                 <div><a href="{{item.Link}}">{{item.manual}}</a></div>
                             </li>
                         </ul>
                         
                         <h4 id="complementar">Materiais complementares</h4>
                         <ul ng-controller="materiaisComplementares">
-                            <li ng-repeat="item in Criar_classe" class="ng-class: item.tipoIcone">
+                            <li ng-repeat="item in Utilizar_votadores_eletronicos" class="ng-class: item.tipoIcone">
                                 <div><a href="{{item.Link}}" target="_blank">{{item.manual}}</a></div>
                             </li>
                         </ul>
@@ -427,16 +467,16 @@
     <div class="fix respiro"></div>
 
 <!-- Scripts: plugins -->
-<script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
-<script src="../../../js/libs/angular.js"></script>
-<script src="../../../js/libs/jquery.placeholder.js"></script>
+<script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
+<script src="../../js/libs/angular.js"></script>
+<script src="../../js/libs/jquery.placeholder.js"></script>
 
 <!-- Scripts: controllers do AngularJs -->
-<script src="../../../js/listaCompletaManual.js"></script>
-<script src="../../../js/manuaisRelacionados.js"></script>
-<script src="../../../js/materiaisComplementares.js"></script>
+<script src="../../js/listaCompletaManual.js"></script>
+<script src="../../js/manuaisRelacionados.js"></script>
+<script src="../../js/materiaisComplementares.js"></script>
 
 <!-- Scripts: do projeto -->
-<script src="../../../js/main.js"></script>
+<script src="../../js/main.js"></script>
 </body>
 </html>

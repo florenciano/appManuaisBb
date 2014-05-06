@@ -260,6 +260,7 @@ body {
             background-color: $corDefault;
             padding: ($meioGrid / 4) ($meioGrid / 4) ($meioGrid / 4) ($meioGrid - 5);
             margin: 0;
+            color: #fff;
             @include radius();
             a, a.hover, a.active, a.visited {
                 color: #fff !important;
@@ -1190,7 +1191,7 @@ body {
             margin-top: 0;
         }
         h2 {
-            @include font(bold, 1.2em);
+            @include font(bold, 1.4em);
         }
     }
 

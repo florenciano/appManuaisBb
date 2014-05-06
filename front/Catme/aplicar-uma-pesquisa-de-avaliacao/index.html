@@ -8,15 +8,15 @@
 <meta name="msapplication-TileImage" content="tile.png"/>
 <meta name="msapplication-TileColor" content="#d02034"/>
 
-<link rel="stylesheet" type="text/css" media="print" href="../../../css/print.css">
-<link rel="stylesheet" type="text/css" media="screen" href="../../../css/main.css">
+<link rel="stylesheet" type="text/css" media="print" href="../../css/print.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../../css/main.css">
 
 <!--[if IE]><link rel="shortcut icon" href="favicon.ico"><![endif]-->
-<link rel="icon" href="../../../favicon-16.png" sizes="16x16">
-<link rel="icon" href="../../../favicon-32.png" sizes="32x32">
-<link rel="icon" href="../../../favicon-48.png" sizes="48x48">
-<link rel="icon" href="../../../favicon-64.png" sizes="64x64">
-<link rel="icon" href="../../../favicon-128.png" sizes="128x128">
+<link rel="icon" href="../../favicon-16.png" sizes="16x16">
+<link rel="icon" href="../../favicon-32.png" sizes="32x32">
+<link rel="icon" href="../../favicon-48.png" sizes="48x48">
+<link rel="icon" href="../../favicon-64.png" sizes="64x64">
+<link rel="icon" href="../../favicon-128.png" sizes="128x128">
 
 <!--
 1- iPad com Retina Display;
@@ -24,18 +24,18 @@
 3- Primeira e segunda geração de iPad;
 4- Versões antigas de iPhone, iPod Touch e Android 2.2+
 -->
-<link rel="apple-touch-icon" sizes="144x144" href="../../../apple-touch-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="114x114" href="../../../apple-touch-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="72x72" href="../../../apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 
 <!--[if IE]>
-    <link href="../../../css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="../../css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
 <![endif]-->
 
 <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <script>window.html5 || document.write('<script src="../../../js/libs/html5shiv.js"><\/script>')</script>
+    <script>window.html5 || document.write('<script src="../../js/libs/html5shiv.js"><\/script>')</script>
 <![endif]-->
 
 </head>
@@ -50,7 +50,7 @@
         
         <header id="top" class="wfull fix">
             <div class="logo c4">
-                <img src="../../../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
+                <img src="../../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
             </div>
             <div class="titleHeader c8">
                 <p class="title">Tecnologias de Aprendizagem</p>
@@ -167,7 +167,7 @@
                         </ol>
 
                         <ol class="noCategory" ng-repeat="item in catmeAplicarPesquisaAval | filter: {manual:searchText}">
-                            <li class="nameCategory">
+                            <li class="nameCategory selectedCategory">
                                 <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
                             <li class="sublist" ng-show="item.manual.length > 1">
@@ -271,12 +271,12 @@
 
                         <div class="faqBusca icoFaq">
                             <h5>
-                                <a href="../../../faq/index.html" >FAQ</a>
+                                <a href="../../faq/index.html" >FAQ</a>
                             </h5>
                         </div>
                         <div class="outros">
                             <h6>
-                                <a href="../../../nao-encontrou-o-que-queria/index.html">Não encontrou o que queria?</a>
+                                <a href="../../nao-encontrou-o-que-queria/index.html">Não encontrou o que queria?</a>
                             </h6>
                         </div>
                     </nav>
@@ -288,7 +288,7 @@
                         <div class="cabecalho fix">
                             <p>
                                 <!-- adicionar a data da produção do material -->
-                                <span><strong>Atualizado: </strong>10/03/2014</span>
+                                <span><strong>Atualizado: </strong>07/03/2014</span>
                             </p>
                         </div>
                         <hr>
@@ -296,7 +296,7 @@
                             <p>
                                 <span class="nameCategory">Catme </span>
                                 <span>&#62; </span>
-                                Criar pesquisa de avaliação
+                                Aplicar uma pesquisa de avaliação
                             </p>
                         </div>
                     </section>
@@ -313,14 +313,14 @@
                      -->
 
                     <article class="contentMain row">
-                        <h1>
-                            Criar pesquisa de avaliação
-                        </h1>
-                        <p><a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-classe/">Com a classe criada</a>, é preciso adicionar a atividade (pesquisa) que será respondida pelos alunos.</p>
-
+                        <h1>Aplicar uma pesquisa de avaliação</h1>
+                        
                         <div class="sumario row">
                             <h3 id="sumarioAncora">Sumário</h3>
                         </div>
+                        <h2 id="preparar-listagem">Preparar listagem de alunos</h2>
+                        <p>Durante a criação da pesquisa o Catme solicitará a lista de alunos que participarão da atividade.</p>
+                        <p>Caso os alunos pertençam todos à mesma turma é possível gerar a listagem a partir do Blackboard:</p>
 
                         <!--
                         
@@ -342,13 +342,185 @@
                         -->
 
                         <div class="imageContainer row">
-                            <img src="../../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-pesquisa-de-avaliacao/step1.png" alt="" class="">
+                            <img src="../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/preparar-listagem-de-alunos/step1.png" alt="" class="">
                         </div>
 
                         <div class="margemParaImagem" style="margin-top:40px"></div>
 
                         <div class="imageContainer row">
-                            <img src="../../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-pesquisa-de-avaliacao/step2.png" alt="" class="">
+                            <img src="../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/preparar-listagem-de-alunos/step2.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="CatmePesqAvalPrepararList1">
+                                <p>Copie a lista completa de alunos do Blackboard para o Bloco de Notas e, na sequência, copie os dados do Bloco de Notas para uma planilha Excel.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/preparar-listagem-de-alunos/step3.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="CatmePesqAvalPrepararList2">
+                                <p>Formate os dados no Excel respeitando a seguinte ordem de colunas: First; Last; Email; ID; Team.</p>
+                                <p>O cabeçalho deve sempre seguir esse padrão de nomenclatura.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <p>Existem algumas restrições na geração da listagem de alunos:</p>
+                        <div class="imageContainer row">
+                            <img src="../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/preparar-listagem-de-alunos/step4.png" alt="" class="">
+                        </div>
+                        
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+
+                        <!-- começo da listagem -->
+                        <section class="row fix listagemAlunos">
+                            <div class="c2"><img src="../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/preparar-listagem-de-alunos/step4a.png" alt="" class="imgRight"></div>
+                            <div class="c10">
+                                <p><strong>First</strong></p>
+                                <ul>
+                                    <li>Primeiro nome do aluno</li>
+                                    <li>Máximo de 20 caracteres</li>
+                                </ul>
+                            </div>
+                        </section>
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+
+                        <section class="row fix listagemAlunos">
+                            <div class="c2"><img src="../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/preparar-listagem-de-alunos/step4b.png" alt="" class="imgRight"></div>
+                            <div class="c10">
+                                <p><strong>Last</strong></p>
+                                <ul>
+                                    <li>Segundo nome + sobrenome do aluno</li>
+                                    <li>Máximo de 20 caracteres</li>
+                                </ul>
+                            </div>
+                        </section>
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+
+                        <section class="row fix listagemAlunos">
+                            <div class="c2"><img src="../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/preparar-listagem-de-alunos/step4c.png" alt="" class="imgRight"></div>
+                            <div class="c10">
+                                <p><strong>Email</strong></p>
+                                <ul>
+                                    <li>Endereço de e-mail <strong>Insper</strong> do aluno</li>
+                                    <li>Máximo de 40 caracteres</li>
+                                </ul>
+                            </div>
+                        </section>
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+
+                        <section class="row fix listagemAlunos">
+                            <div class="c2"><img src="../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/preparar-listagem-de-alunos/step4d.png" alt="" class="imgRight"></div>
+                            <div class="c10">
+                                <p><strong>ID</strong></p>
+                                <ul>
+                                    <li>Nome de usuário do aluno (mesmo usado para acessar os sistemas do Insper)</li>
+                                    <li>Máximo de 15 caracteres</li>
+                                </ul>
+                            </div>
+                        </section>
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+
+                        <section class="row fix listagemAlunos">
+                            <div class="c2"><img src="../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/preparar-listagem-de-alunos/step4e.png" alt="" class="imgRight"></div>
+                            <div class="c10">
+                                <p><strong>Team</strong></p>
+                                <ul>
+                                    <li>Identificação da equipe</li>
+                                    <li>Máximo de 30 caracteres</li>
+                                </ul>
+                            </div>
+                        </section>
+                        
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+
+                        <section class="imageContainer destListagem">
+                            <div class="boxDestaqueAdicional atencaoListagemAl">
+                                <h3>Atenção!</h3>
+                                <p>O Catme aceita letras, números, hifens e espaços nos campos. No entanto, caracteres especiais: <span class="enfaseBox">Ç</span> <span class="enfaseBox">&#64;</span> <span class="enfaseBox">!</span> <span class="enfaseBox">?</span> <span class="enfaseBox">&#35;</span> <span class="enfaseBox">&#36;</span> <span class="enfaseBox">%</span> <span class="enfaseBox">&#34;</span> <span class="enfaseBox">&#38;</span> <span class="enfaseBox">&#42;</span> etc. e acentuação <span class="enfaseBox">não são aceitos</span> e devem ser substituídos manualmente antes da importação para o sistema.</p>
+                            </div>
+                        </section>
+                        <div class="margemParaImagem" style="height:40px"></div>
+
+                        <section class="row fix">
+                            <div class="c5">
+                                <p>Uma vez formatados os dados no Excel o arquivo deve ser salvo em formato <strong>Texto (separado por tabulações)</strong>.</p>
+                            </div>
+                            <div class="c7">
+                                <img src="../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/preparar-listagem-de-alunos/step5.png" alt="" class="">
+                            </div>
+                        </section>
+
+                        <div class="margemParaImagem" style="margin-top:60px"></div>
+
+                        <!-- 
+                        ########################################################
+                        -->
+
+                        <h2 id="criar-classe">
+                            Criar classe
+                        </h2>
+                        <p>Antes de criar uma pesquisa é preciso criar uma classe no Catme.</p>
+
+                        <div class="imageContainer row">
+                            <img src="../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-classe/step1.png" alt="" class="">
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-classe/step2.png" alt="" class="">
+                            <div class="boxDestaque" id="CatmePesqAvalCriarClasse1">
+                                <p>Preencha os dados da classe informando “Insper” no campo <strong>Institution</strong>.</p>
+                                <p>Em <strong>Type</strong>, selecione o contexto em que a pesquisa será aplicada. Para as aulas tradicionais, escolha "Lecture".</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-classe/step3.png" alt="" class="">
+                            <div class="boxDestaque" id="CatmePesqAvalCriarClasse2">
+                                <p>Defina se os alunos deverão passar por uma "simulação" de avaliação de pares para calibração das respostas antes da pesquisa "real".</p>
+                                <p>Ao selecionar esta opção, os alunos avaliam alunos fictícios com base em descrições fictícias de comportamentos. Ao final é exibida uma comparação entre a avaliação realizada pelo aluno <em>versus</em> a avaliação correta determinada pelo sistema.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-classe/step4.png" alt="" class="">
+                            <div class="boxDestaque" id="CatmePesqAvalCriarClasse3">
+                                <p>Determine se as mensagens de resultados serão exibidas aos alunos (sugerimos marcar esta opção).</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-classe/step5.png" alt="" class="">
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:80px"></div>
+
+                        <!-- 
+                        ########################################################
+                        -->
+
+                        <h2 id="criar-pesquisa">
+                            Criar pesquisa de avaliação
+                        </h2>
+                        <p><a href="#criar-classe">Com a classe criada</a>, é preciso adicionar a atividade (pesquisa) que será respondida pelos alunos.</p>
+
+                        <div class="imageContainer row">
+                            <img src="../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-pesquisa-de-avaliacao/step1.png" alt="" class="">
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-pesquisa-de-avaliacao/step2.png" alt="" class="">
                             <div class="boxDestaque" id="CatmePesqAvalCriarPesq1">
                                 <p>Escolha <strong>CATME BARS</strong>, uma vez que as equipes serão informadas ao Catme na listagem de alunos.</p>
                             </div>
@@ -357,7 +529,7 @@
                         <div class="margemParaImagem" style="margin-top:40px"></div>
 
                         <div class="imageContainer row">
-                            <img src="../../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-pesquisa-de-avaliacao/step3.png" alt="" class="">
+                            <img src="../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-pesquisa-de-avaliacao/step3.png" alt="" class="">
                             <div class="boxDestaque" id="CatmePesqAvalCriarPesq2">
                                 <p>Preencha os dados da atividade.</p>
                             </div>
@@ -366,7 +538,7 @@
                         <div class="margemParaImagem" style="margin-top:40px"></div>
 
                         <div class="imageContainer row">
-                            <img src="../../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-pesquisa-de-avaliacao/step4.png" alt="" class="">
+                            <img src="../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-pesquisa-de-avaliacao/step4.png" alt="" class="">
                             <div class="boxDestaque" id="CatmePesqAvalCriarPesq3">
                                 <p>Escolha os critérios de avaliação e, se necessário, edite o texto inicial da pesquisa. <strong>Sugerimos que os critérios propostos sejam mantidos</strong>.</p>
                             </div>
@@ -375,9 +547,9 @@
                         <div class="margemParaImagem" style="margin-top:40px"></div>
 
                         <div class="imageContainer row">
-                            <img src="../../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-pesquisa-de-avaliacao/step5.png" alt="" class="">
+                            <img src="../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-pesquisa-de-avaliacao/step5.png" alt="" class="">
                             <div class="boxDestaque" id="CatmePesqAvalCriarPesq4">
-                                <p>Faça a importação da lista de alunos <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/preparar-listagem-de-alunos/">configurada previamente</a></strong>.</p>
+                                <p>Faça a importação da lista de alunos <a href="#preparar-listagem">configurada previamente</a></strong>.</p>
                             </div>
                             <div class="boxDestaqueAdicional" id="CatmePesqAvalCriarPesq5">
                                 <p>Após a importação é possível adicionar novos alunos em <strong>Append</strong>. O botão <strong>Replace</strong> descarta a lista de alunos carregada previamente e substitui pela nova lista selecionada.</p>
@@ -387,9 +559,9 @@
                         <div class="margemParaImagem" style="margin-top:100px"></div>
 
                         <div class="imageContainer row">
-                            <img src="../../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-pesquisa-de-avaliacao/step6.png" alt="" class="">
+                            <img src="../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-pesquisa-de-avaliacao/step6.png" alt="" class="">
                             <div class="boxDestaque" id="CatmePesqAvalCriarPesq6">
-                                <p>Escolha quem, além de você, terá acesso aos dados da pesquisa (Ex.: DEA/NID, coordenadores etc.). Para isso, é necessário que a pessoa <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/sobre-a-ferramenta/criar-conta/">possua uma conta no Catme</a>.</p>
+                                <p>Escolha quem, além de você, terá acesso aos dados da pesquisa (Ex.: DEA/NID, coordenadores etc.). Para isso, é necessário que a pessoa <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/sobre-a-ferramenta/#criar-conta">possua uma conta no Catme</a>.</p>
                             </div>
                         </div>
 
@@ -397,7 +569,7 @@
 
                         <section class="row fix pesqAvaliacao">
                             <div class="c2">
-                                <img src="../../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-pesquisa-de-avaliacao/step6a.png" alt="" class="">
+                                <img src="../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-pesquisa-de-avaliacao/step6a.png" alt="" class="">
                             </div>
                             <div class="c10">
                                 <p>Na <strong>Graduação</strong>, sugerimos a inclusão  das colaboradoras Elúbian Sanchez (<a href="mailto:elubianms@insper.edu.br?subject=Contato CATME">elubianms@insper.edu.br</a>) e Maritza Elias (<a href="mailto:maritzase@insper.edu.br?subject=Contato CATME">maritzase@insper.edu.br</a>) do DEA/TAI para acompanhamento e utilização dos dados para Assessment.</p>    
@@ -406,12 +578,12 @@
                         <div class="margemParaImagem row fix" style="margin-top:10px"></div>
 
                         <div class="imageContainer row">
-                            <img src="../../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-pesquisa-de-avaliacao/step7.png" alt="" class="imgRight">
+                            <img src="../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-pesquisa-de-avaliacao/step7.png" alt="" class="imgRight">
                         </div>
 
                         <div class="margemParaImagem row fix" style="margin-top:40px"></div>
                         <div class="imageContainer row">
-                            <img src="../../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-pesquisa-de-avaliacao/step8.png" alt="" class="imgLeft">
+                            <img src="../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-pesquisa-de-avaliacao/step8.png" alt="" class="imgLeft">
                             <div class="boxDestaque" id="CatmePesqAvalCriarPesq7">
                                 <p>Ao delegar o acesso a outras pessoas, elas podem ver os resultados das pesquisas e enviar avisos de lembrete para os alunos. No entanto, é possível dar acessos adicionais, para:</p>
                                 <ul>
@@ -425,21 +597,94 @@
                         <div class="margemParaImagem row fix" style="margin-top:40px"></div>
 
                         <div class="imageContainer row">
-                            <img src="../../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-pesquisa-de-avaliacao/step9.png" alt="" class="">
+                            <img src="../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-pesquisa-de-avaliacao/step9.png" alt="" class="">
                         </div>
 
                         <div class="margemParaImagem row fix" style="margin-top:40px"></div>
 
                         <div class="imageContainer row">
-                            <img src="../../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-pesquisa-de-avaliacao/step10.png" alt="" class="">
+                            <img src="../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-pesquisa-de-avaliacao/step10.png" alt="" class="">
                             <div class="boxDestaqueAdicional" id="CatmePesqAvalCriarPesq8">
                                 <h3>Atenção!</h3>
                                 <p>Assim que todas as etapas forem concluídas os alunos receberão por e-mail um convite para participar da atividade.</p>
-                                <p><img src="../../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-pesquisa-de-avaliacao/step11.png" alt="" class=""></p>
+                                <p><img src="../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-pesquisa-de-avaliacao/step11.png" alt="" class=""></p>
                             </div>
                         </div>
 
                         <div class="margemParaImagem row fix" style="margin-top:360px"></div>
+
+                        <!-- 
+                        ########################################################
+                        -->
+
+                        <h2 id="editar-informacoes-pesquisa">
+                            Editar informações da pesquisa
+                        </h2>
+
+                        <div class="imageContainer row">
+                            <img src="../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/editar-informacoes-da-pesquisa/step1.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="CatmePesqAvalEditarInfo1">
+                                <p>Na página inicial, clique no nome da classe ou da pesquisa que pretende editar.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        
+                        <section class="row fix listagemAlunos">
+                            <div class="c2"><img src="../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/editar-informacoes-da-pesquisa/step1a.png" alt="" class="imgRight"></div>
+                            <div class="c10">
+                                <p><strong>Class:</strong></p>
+                                <ul>
+                                    <li>Alterar informações configuradas durante a criação</li>
+                                    <li>Criar novas pesquisas: <strong>Add Activity</strong></li>
+                                    <li>Excluir classe: <strong>Delete Class</strong></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+                        <section class="row fix listagemAlunos">
+                            <div class="c2"><img src="../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/editar-informacoes-da-pesquisa/step1b.png" alt="" class="imgRight"></div>
+                            <div class="c10">
+                                <p><strong>Activity:</strong></p>
+                                <ul>
+                                    <li>Alterar nome <strong>(Activity Name)</strong> e texto introdutório <strong>(Edit Activity Intro)</strong></li>
+                                    <li>Trocar datas de início e fim de aplicação da pesquisa <strong>(Start Date e End Date)</strong></li>
+                                    <li>Escolher categorias a serem avaliadas <strong>(Categories)</strong></li>
+                                    <li>Delegar acesso à pesquisa para outros usuários <strong>(Delegate Faculty)</strong></li>
+                                    <li>Simular visualização que os alunos fazem da pesquisa <strong>(Preview instrument as student)</strong></li>
+                                    <li>Editar lista de alunos:
+                                        <ul>
+                                            <li>Adicionar alunos novos <strong>(Add Individual)</strong></li>
+                                            <li>Editar lista existente <strong>(Edit Students)</strong></li>
+                                            <li>Substituir lista de alunos <strong>(Replace)</strong></li>
+                                        </ul>
+                                    </li>
+                                    <li>Excluir pesquisa <strong>(Delete Activity)</strong></li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/editar-informacoes-da-pesquisa/step2.png" alt="" class="imgRight">
+                            <div class="boxDestaque" id="CatmePesqAvalEditarInfo2">
+                                <p>Pesquisas que por algum motivo requerem atenção são agrupadas em uma primeira tabela. As pendências de cada pesquisa são indicadas ao lado, em vermelho. Clicando sobre este texto é possível resolver o problema.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../img/Catme/aplicar-uma-pesquisa-de-avaliacao/editar-informacoes-da-pesquisa/step3.png" alt="" class="imgRight">
+                            <div class="boxDestaque" id="CatmePesqAvalEditarInfo3">
+                                <p>A tabela inferior exibe a lista completa de pesquisas já criadas, em aplicação ou não.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:60px"></div>
+
+
                         <!-- 
                         
                         ÂNCORAS [VOLTAR AO SUMÁRIO]
@@ -463,14 +708,14 @@
                         <h4 id="relacionado">Manuais relacionados</h4>
                         <ul  ng-controller="manuaisRelacionados">
                             <!-- class="default"  -->
-                            <li ng-repeat="item in Criar_pesquisa_de_avaliacao" class="ng-class: item.tipoIcone">
+                            <li ng-repeat="item in Aplicar_uma_pesquisa_de_avaliacao" class="ng-class: item.tipoIcone">
                                 <div><a href="{{item.Link}}">{{item.manual}}</a></div>
                             </li>
                         </ul>
                         
                         <h4 id="complementar">Materiais complementares</h4>
                         <ul ng-controller="materiaisComplementares">
-                            <li ng-repeat="item in Criar_pesquisa_de_avaliacao" class="ng-class: item.tipoIcone">
+                            <li ng-repeat="item in Aplicar_uma_pesquisa_de_avaliacao" class="ng-class: item.tipoIcone">
                                 <div><a href="{{item.Link}}" target="_blank">{{item.manual}}</a></div>
                             </li>
                         </ul>
@@ -486,16 +731,16 @@
     <div class="fix respiro"></div>
 
 <!-- Scripts: plugins -->
-<script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
-<script src="../../../js/libs/angular.js"></script>
-<script src="../../../js/libs/jquery.placeholder.js"></script>
+<script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
+<script src="../../js/libs/angular.js"></script>
+<script src="../../js/libs/jquery.placeholder.js"></script>
 
 <!-- Scripts: controllers do AngularJs -->
-<script src="../../../js/listaCompletaManual.js"></script>
-<script src="../../../js/manuaisRelacionados.js"></script>
-<script src="../../../js/materiaisComplementares.js"></script>
+<script src="../../js/listaCompletaManual.js"></script>
+<script src="../../js/manuaisRelacionados.js"></script>
+<script src="../../js/materiaisComplementares.js"></script>
 
 <!-- Scripts: do projeto -->
-<script src="../../../js/main.js"></script>
+<script src="../../js/main.js"></script>
 </body>
 </html>

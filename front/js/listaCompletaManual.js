@@ -287,15 +287,15 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	},
 	{
 		'manual'			: 	'O que é Catme',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/sobre-a-ferramenta/o-que-e-catme/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/sobre-a-ferramenta/#o-que-e-catme'
 	},
 	{
 		'manual'			: 	'Funcionamento do Catme',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/sobre-a-ferramenta/funcionamento-do-catme/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/sobre-a-ferramenta/#funcionamento'
 	},
 	{
 		'manual'			: 	'Criar conta',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/sobre-a-ferramenta/criar-conta/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/sobre-a-ferramenta/#criar-conta'
 	}
 	];
 
@@ -309,19 +309,19 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	},
 	{
 		'manual'			: 	'Preparar listagem de alunos',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/preparar-listagem-de-alunos/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/'
 	},
 	{
 		'manual'			: 	'Criar classe',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-classe/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/#criar-classe'
 	},
 	{
 		'manual'			: 	'Criar pesquisa de avaliação',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/criar-pesquisa-de-avaliacao/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/#criar-pesquisa'
 	},
 	{
 		'manual'			: 	'Editar informações da pesquisa',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/editar-informacoes-da-pesquisa/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/#editar-informacoes-pesquisa'
 	}
 	];
 
@@ -335,11 +335,15 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	},
 	{
 		'manual'			: 	'Acessar resultados de uma avaliação existente',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/analisar-os-resultados/acessar-resultados-de-uma-avaliacao-existente/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/analisar-os-resultados/'
 	},
+	// {
+	// 	'manual'			: 	'Trabalhar resultados no Excel',
+	// 	'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/analisar-os-resultados/trabalhar-resultados-no-excel/'
+	// }
 	{
 		'manual'			: 	'Trabalhar resultados no Excel',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/analisar-os-resultados/trabalhar-resultados-no-excel/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/analisar-os-resultados/#resultados-no-excel'
 	}
 	];
 
@@ -356,11 +360,11 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	},
 	{
 		'manual'			: 	'O que são votadores eletrônicos (clickers)',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/sobre-a-ferramenta/o-que-sao-votadores-eletronicos/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/sobre-a-ferramenta/'
 	},
 	{
 		'manual'			: 	'Funcionamento dos votadores eletrônicos',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/sobre-a-ferramenta/funcionamento-dos-votadores-eletronicos/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/sobre-a-ferramenta/#funcionamento-votadores'
 	}
 	];
 
@@ -374,15 +378,15 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	},
 	{
 		'manual'			: 	'Instalar software TurningPoint',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/utilizar-votadores-eletronicos/instalar-software-turningPoint/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/utilizar-votadores-eletronicos/'
 	},
 	{
 		'manual'			: 	'Reservar aparelhos com HelpDesk',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/utilizar-votadores-eletronicos/reservar-aparelhos-helpDesk/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/utilizar-votadores-eletronicos/#reservar-aparelhos'
 	},
 	{
 		'manual'			: 	'Abrir PowerPoint com plug-in do TurningPoint',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/utilizar-votadores-eletronicos/abrir-powerPoint/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/utilizar-votadores-eletronicos/#abrir-turning-point'
 	}
 	];
 
@@ -396,11 +400,11 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	},
 	{
 		'manual'			: 	'Criar questões e configurar votação nos slides',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/preparar-slides/criar-questoes/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/preparar-slides/'
 	},
 	{
 		'manual'			: 	'Inserir cronômetro nos slides (opcional)',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/preparar-slides/inserir-cronometro/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/preparar-slides/#inserir-cronometro'
 	}
 	];
 
@@ -414,15 +418,15 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	},
 	{
 		'manual'			: 	'Criar lista de alunos',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/criar-lista-alunos/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/'
 	},
 	{
 		'manual'			: 	'Vincular lista de alunos aos slides',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/vincular-lista-alunos/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/'
 	},
 	{
 		'manual'			: 	'Editar lista de alunos',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/editar-lista-alunos/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/'
 	}
 	];
 
@@ -551,7 +555,7 @@ manuaisBB.controller('listaMenu', function ($scope) {
 
 	/*
         Esta função add o '.selectedCategory' no menu
-        incluir na marcação class='ng-class: teste1()'
+        incluir na marcação class='ng-class: addMark()'
         Atribuir apenas na categoria referente ao manual
     */
 	$scope.addMark = function() {

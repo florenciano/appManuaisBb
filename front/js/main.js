@@ -22,7 +22,7 @@ $( document ).ready( function() {
 
 
     /*
-        Fechar pop-up de alerta de pequena resolução este alerta
+        Fechar pop-up de alerta de pequena resolução. Este alerta
         aparece quando a resolução de tela é inferior a 768px [tablet]
         NOTA: Implantado a partir da versão 4
     */
@@ -49,7 +49,8 @@ $( document ).ready( function() {
 
     /*
         Criando a lista de sumário e suas respectivas âncoras.
-        A lista só aparece no DOM se houver algum título no interior dos manuais
+        A lista só aparece no DOM se houver algum subTítulo em marcação 'h2'
+        no interior dos manuais.
     */
     var divSumario, anchor, todosTitulos, tagUl, count;
 
@@ -70,23 +71,16 @@ $( document ).ready( function() {
             tagDiv.append( tagAnchor );
 
             // criando a <div> que será o container para o sumário antes de cada <h2>
-            $(this).prev().append( tagDiv );
+            // $(this).prev().append( tagDiv );
+            $( tagDiv ).insertBefore( $(this) );
         });
 
-        // Não queremos que aparece a âncora antes do 1º Título do manual
-        var allAnchor = $( ".voltarSumario" );
-        allAnchor[0].style.display = "none";
-
-        // A última âncora que irá aparecer próximo do 'Saiba mais' terá
-        // uma margem de estilo maior para separar do conteúdo da matéria
-        var lastAnchor = allAnchor.slice( -1 )[0];
-        lastAnchor.style.marginTop = "40px";
     }
 
     // criando as listas
-    // aqui será realizado uma varredura para cada título existente da página
+    // aqui será realizado uma varredura para cada subTítulo existente na página
     // e seus respectivos conteúdos de textos serão inseridos na listagem do sumário
-    todosTitulos.each(function(){
+    todosTitulos.each( function() {
         var tagA = $( "<a>" );
             tagA.attr( "href","#" + this.id );
 
@@ -100,7 +94,7 @@ $( document ).ready( function() {
     });
 
     // Aqui fica as condições para que seja exibida no DOM
-    // se houver mais de um título (lembre-se que sempre haverá 1: 'Saiba Mais')
+    // se houver mais de um subTítulo (lembre-se que sempre haverá pelo menos um: 'Saiba Mais')
     // caso não há nenhum subtítulo então não insira 'as divs' do sumário
     // porém a última âncora precisa do espaçamento entre conteúdo e box do Saiba Mais
     if( todosTitulos.length > 1 ) {
@@ -110,6 +104,21 @@ $( document ).ready( function() {
         divSumario.css( "display", "none" );
         anchor.css( "margin-top", "40px" );
     }
+
+    // Não queremos que aparece a âncora antes do 1º subTítulo do manual
+    // quando este mesmo vier imediatamente após a lista de sumário.
+    var allAnchor = $( ".voltarSumario" );
+    if(allAnchor[0].previousElementSibling.className == "sumario row") {
+        allAnchor[0].style.display = "none";
+    }
+
+    // O título 'Saiba mais' também é marcado com 'h2', portanto,
+    // irá aparecer uma âncora indesejada dentro do box. Eliminamos.
+    var sumarioOut = $( ".saibaMais .voltarSumario" );
+    sumarioOut.remove();
+
+    // var lastAnchor = allAnchor.slice( -1 )[0];
+    // lastAnchor.style.marginTop = "40px";
 
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
     
