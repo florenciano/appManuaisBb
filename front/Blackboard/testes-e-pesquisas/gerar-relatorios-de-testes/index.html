@@ -155,6 +155,129 @@
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
                             </li>
                         </ol>
+                        <!-- 
+                        <h5 class="icoCatme">Catme</h5>
+                        <ol class="noCategory" ng-repeat="item in catmeSobreFerramenta | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in catmeAplicarPesquisaAval | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in catmeAnalisarResultados | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <h5 class="icoClickers">Votadores eletrônicos (clickers)</h5>
+                        <ol class="noCategory" ng-repeat="item in clickerSobreFerramenta | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerUtilizarVotadores | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerPrepararSlides | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerIdentificarVoto | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerPromoverVotacao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerAnalisarResultados | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+                        
+                        <h5 class="icoCursosOnline">Casos, Simuladores e Cursos online</h5>
+                        <ol class="noCategory" ng-repeat="item in SobreOsRecursos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in ConsultarRecursosDisponiveis | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in UtilizarRecursos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <div class="faqBusca icoFaq">
+                            <h5>
+                                <a href="../../../faq/index.html" >FAQ</a>
+                            </h5>
+                        </div>
+                        <div class="outros">
+                            <h6>
+                                <a href="../../../nao-encontrou-o-que-queria/index.html">Não encontrou o que queria?</a>
+                            </h6>
+                        </div>
+                         -->
 
                     </nav>
                 </section>

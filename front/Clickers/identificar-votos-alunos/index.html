@@ -239,30 +239,28 @@
                             </li>
                         </ol>
                         
-                        <h5 class="icoCasos">Casos</h5>
-                        <ol class="noCategory" ng-repeat="item in casos | filter: {manual:searchText}">
+                        <h5 class="icoCursosOnline">Casos, Simuladores e Cursos online</h5>
+                        <ol class="noCategory" ng-repeat="item in SobreOsRecursos | filter: {manual:searchText}">
                             <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
                             <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
                             </li>
                         </ol>
 
-                        <h5 class="icoSimuladores">Simuladores</h5>
-                        <ol class="noCategory" ng-repeat="item in simuladores | filter: {manual:searchText}">
+                        <ol class="noCategory" ng-repeat="item in ConsultarRecursosDisponiveis | filter: {manual:searchText}">
                             <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
                             <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
                             </li>
                         </ol>
 
-                        <h5 class="icoCursosOnline">Cursos online</h5>
-                        <ol class="noCategory" ng-repeat="item in cursosOnline | filter: {manual:searchText}">
-                            <li class="nameCategory">    
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                        <ol class="noCategory" ng-repeat="item in UtilizarRecursos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
                             <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
@@ -296,7 +294,7 @@
                             <p>
                                 <span class="nameCategory">votadores eletrônicos (clickers) </span>
                                 <span>&#62; </span>
-                                Criar lista de alunos
+                                Identificar os votos dos alunos
                             </p>
                         </div>
                     </section>
@@ -313,14 +311,13 @@
                      -->
 
                     <article class="contentMain row">
-                        <h1>
-                            Criar lista de alunos
-                        </h1>
-
+                        <h1>Identificar os votos dos alunos</h1>
+                        
                         <div class="sumario row">
                             <h3 id="sumarioAncora">Sumário</h3>
                         </div>
 
+                        <h2 id="criar-lista-alunos">Criar lista de alunos</h2>
                         <!--
                         
                         IMAGENS E BOX DE TEXTO
@@ -370,14 +367,123 @@
                         <div class="imageContainer row">
                             <img src="../../img/Clickers/identificar-votos-alunos/criar-lista-alunos/step3.png" alt="" class="imgLeft">
                             <div class="boxDestaque" id="ClickerCriarListaAlunos3">
-                                <p>Cole os dados na <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/utilizar-votadores-eletronicos/reservar-aparelhos-helpDesk/">planilha fornecida pelo Help Desk</a>, que já contém o código de identificação de cada aparelho.</p>
+                                <p>Cole os dados na <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/utilizar-votadores-eletronicos/#reservar-aparelhos">planilha fornecida pelo Help Desk</a>, que já contém o código de identificação de cada aparelho.</p>
                             </div>
                             <div class="boxDestaqueAdicional" id="ClickerCriarListaAlunos4">
-                                <p>Após a criação da lista de alunos, é necessário <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/vincular-lista-alunos/">vincular a lista à apresentação do PowerPoint</a>.</p>
+                                <p>Após a criação da lista de alunos, é necessário <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/#vincular-lista-alunos">vincular a lista à apresentação do PowerPoint</a>.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <!-- 
+                        ########################################################
+                        -->
+
+                        <h2 id="vincular-lista-alunos">Vincular lista de alunos aos slides</h2>
+
+                        <p>Antes de tudo, <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/utilizar-votadores-eletronicos/#abrir-turning-point">abra o PowerPoint com o plug-in do TurningPoint</a>. Caso já tenha preparado sua apresentação de slides, localize o arquivo.</p>
+                        <div class="imageContainer row">
+                            <img src="../../img/Clickers/identificar-votos-alunos/vincular-lista-alunos/step1.png" alt="" class="">
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <p>Há duas maneiras de passar a lista de alunos criada no Excel para o TurningPoint.</p>
+                        <ol>
+                            <li>Copiar os dados do Excel e colar no TurningPoint.</li>
+                        </ol>
+
+                        <div class="imageContainer row">
+                            <img src="../../img/Clickers/identificar-votos-alunos/vincular-lista-alunos/step2.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="ClickerVincularListaAlunos1">
+                            <p>Primeiramente, ordene as colunas do TurningPoint na seguinte ordem (clicando e arrastando):</p>
+                            <ol>
+                                <li>Device ID(s)</li>
+                                <li>User ID</li>
+                                <li>First Name</li>
+                                <li>Last Name</li>
+                            </ol>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:120px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../img/Clickers/identificar-votos-alunos/vincular-lista-alunos/step3.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="ClickerVincularListaAlunos2">
+                                <p>Copie as quatro colunas da planilha Excel.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:60px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../img/Clickers/identificar-votos-alunos/vincular-lista-alunos/step4.png" alt="" class="">
+                            <div class="boxDestaque" id="ClickerVincularListaAlunos3">
+                                <p>Cole os dados no TurningPoint.</p>
                             </div>
                         </div>
 
                         <div class="margemParaImagem" style="margin-top:80px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../img/Clickers/identificar-votos-alunos/vincular-lista-alunos/step5.png" alt="" class="">
+                            <div class="boxDestaque" id="ClickerVincularListaAlunos4">
+                                <p>No slide, selecione a lista criada.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        
+                        <ol start="2">
+                            <li>Salvar a planilha Excel com a lista de alunos em formato CSV e importá-la no TurningPoint.</li>
+                        </ol>
+                        <div class="imageContainer row">
+                            <img src="../../img/Clickers/identificar-votos-alunos/vincular-lista-alunos/step6.png" alt="" class="">
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        
+                        <div class="imageContainer row">
+                            <img src="../../img/Clickers/identificar-votos-alunos/vincular-lista-alunos/step7.png" alt="" class="">
+                            <div class="boxDestaqueAdicional" id="ClickerVincularListaAlunos5">
+                                <h4>Atenção!</h4>
+                                <p>Antes de salvar, confira se a lista foi criada corretamente, sem duplicidade de colunas.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:120px"></div>
+                        
+                        <div class="imageContainer row">
+                            <img src="../../img/Clickers/identificar-votos-alunos/vincular-lista-alunos/step8.png" alt="" class="">
+                            <div class="boxDestaque" id="ClickerVincularListaAlunos6">
+                                <p>No slide, selecione a lista criada.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:80px"></div>
+
+                        <!-- 
+                        ############################################
+                        -->
+
+                        <h2 id="editar-lista-alunos">Editar lista de alunos</h2>
+
+                        <p>A qualquer momento, antes ou durante a votação, é possível editar a lista de alunos que participará da votação. Isso pode ser feito tanto pelo TurningPoint quanto pelo PowerPoint.</p>
+                        <ol class="ClikcerListaAlunos">
+                            <li>Pelo TurningPoint:</li>
+                        </ol>
+                        <img src="../../img/Clickers/identificar-votos-alunos/editar-lista-alunos/step1.png" alt="" class="">
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <ol class="ClikcerListaAlunos" start="2">
+                            <li>Pelo PowerPoint:</li>
+                        </ol>
+                        <img src="../../img/Clickers/identificar-votos-alunos/editar-lista-alunos/step2.png" alt="" class="">
+
+                        <div class="margemParaImagem" style="margin-top:100px"></div>
 
                     </article>
 

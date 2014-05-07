@@ -8,15 +8,15 @@
 <meta name="msapplication-TileImage" content="tile.png"/>
 <meta name="msapplication-TileColor" content="#d02034"/>
 
-<link rel="stylesheet" type="text/css" media="print" href="../../../css/print.css">
-<link rel="stylesheet" type="text/css" media="screen" href="../../../css/main.css">
+<link rel="stylesheet" type="text/css" media="print" href="../../css/print.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../../css/main.css">
 
 <!--[if IE]><link rel="shortcut icon" href="favicon.ico"><![endif]-->
-<link rel="icon" href="../../../favicon-16.png" sizes="16x16">
-<link rel="icon" href="../../../favicon-32.png" sizes="32x32">
-<link rel="icon" href="../../../favicon-48.png" sizes="48x48">
-<link rel="icon" href="../../../favicon-64.png" sizes="64x64">
-<link rel="icon" href="../../../favicon-128.png" sizes="128x128">
+<link rel="icon" href="../../favicon-16.png" sizes="16x16">
+<link rel="icon" href="../../favicon-32.png" sizes="32x32">
+<link rel="icon" href="../../favicon-48.png" sizes="48x48">
+<link rel="icon" href="../../favicon-64.png" sizes="64x64">
+<link rel="icon" href="../../favicon-128.png" sizes="128x128">
 
 <!--
 1- iPad com Retina Display;
@@ -24,18 +24,18 @@
 3- Primeira e segunda geração de iPad;
 4- Versões antigas de iPhone, iPod Touch e Android 2.2+
 -->
-<link rel="apple-touch-icon" sizes="144x144" href="../../../apple-touch-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="114x114" href="../../../apple-touch-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="72x72" href="../../../apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 
 <!--[if IE]>
-    <link href="../../../css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="../../css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
 <![endif]-->
 
 <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <script>window.html5 || document.write('<script src="../../../js/libs/html5shiv.js"><\/script>')</script>
+    <script>window.html5 || document.write('<script src="../../js/libs/html5shiv.js"><\/script>')</script>
 <![endif]-->
 
 </head>
@@ -50,7 +50,7 @@
         
         <header id="top" class="wfull fix">
             <div class="logo c4">
-                <img src="../../../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
+                <img src="../../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
             </div>
             <div class="titleHeader c8">
                 <p class="title">Tecnologias de Aprendizagem</p>
@@ -93,9 +93,9 @@
 
                         <ol class="noCategory" ng-repeat="item in BbComunicacaoInteracao | filter: {manual:searchText}">
                             <li class="nameCategory">
-                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
-                            <li class="sublist ng-class: addMark()" ng-show="item.manual.length > 1">
+                            <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
                             </li>
                         </ol>
@@ -156,7 +156,7 @@
                             </li>
                         </ol>
 
-                        <!-- <h5 class="icoCatme">Catme</h5>
+                        <h5 class="icoCatme">Catme</h5>
                         <ol class="noCategory" ng-repeat="item in catmeSobreFerramenta | filter: {manual:searchText}">
                             <li class="nameCategory">
                                 <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
@@ -222,8 +222,8 @@
                         </ol>
 
                         <ol class="noCategory" ng-repeat="item in clickerPromoverVotacao | filter: {manual:searchText}">
-                            <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            <li class="nameCategory selectedCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
                             <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
@@ -269,14 +269,14 @@
 
                         <div class="faqBusca icoFaq">
                             <h5>
-                                <a href="../../../faq/index.html" >FAQ</a>
+                                <a href="../../faq/index.html" >FAQ</a>
                             </h5>
                         </div>
                         <div class="outros">
                             <h6>
-                                <a href="../../../nao-encontrou-o-que-queria/index.html">Não encontrou o que queria?</a>
+                                <a href="../../nao-encontrou-o-que-queria/index.html">Não encontrou o que queria?</a>
                             </h6>
-                        </div> -->
+                        </div>
                     </nav>
                 </section>
 
@@ -286,15 +286,15 @@
                         <div class="cabecalho fix">
                             <p>
                                 <!-- adicionar a data da produção do material -->
-                                <span><strong>Atualizado: </strong>14/02/2014</span>
+                                <span><strong>Atualizado: </strong>01/04/2014</span>
                             </p>
                         </div>
                         <hr>
                         <div class="breadcrumb">
                             <p>
-                                <span class="nameCategory">Blackboard </span>
+                                <span class="nameCategory">votadores eletrônicos (clickers) </span>
                                 <span>&#62; </span>
-                                Criar um fórum de discussão
+                                Promover votação em sala
                             </p>
                         </div>
                     </section>
@@ -311,15 +311,12 @@
                      -->
 
                     <article class="contentMain row">
-                        <h1>Criar fórum de discussão</h1>
-                        <p>É possível disponibilizar ao aluno o acesso à ferramenta <strong>Fórum</strong>, que pode conter um ou mais fóruns de discussão, ou disponibilizar o link direto a um fórum específico.</p>
-                        <p>Para inserir a ferramenta de <strong>Fórum</strong> em uma área de conteúdo da disciplina:</p>
-
-                        <div class="margemParaImagem" style="margin-top:20px"></div>
-
+                        <h1>Promover votação em sala</h1>
                         <div class="sumario row">
                             <h3 id="sumarioAncora">Sumário</h3>
                         </div>
+
+                        <h2 id="criar-lista-controle">Criar lista de controle</h2>
 
                         <!--
                         
@@ -340,143 +337,170 @@
 
                         -->
 
+                        <p>Ao utilizar votadores eletrônicos em sala de aula é necessário criar uma lista de controle de entrega dos aparelhos.</p>
+                        <p>Exemplo:</p>
+                        <!-- reaproveitando uma classe de outra pagina -->
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tableAvalExistente tableListaControle">
+                            <caption>
+                                Cabeçalho sugerido: <br>
+                                [Nome do Curso] – [Nome da Disciplina] – [Nome do Professor] – [Data]
+                            </caption>
+                            <tr>
+                                <th scope="col">Aparelho</th>
+                                <th scope="col">Primeiro Nome</th>
+                                <th scope="col">Último Nome</th>
+                                <th scope="col">Assinatura</th>
+                            </tr>
+                            <tr>
+                                <td>01</td>
+                                <td>Silvia</td>
+                                <td>Fernanda Corrêa</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>02</td>
+                                <td>Vinicius</td>
+                                <td>Cassio Barqueiro</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </table>
+                        <p>Sugere-se criar a lista de controle a partir da <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/criar-lista-alunos/">lista de alunos informada ao TurningPoint para identificação dos votos</a>.</p>
+                        <p>A lista de controle deve ser impressa e disponibilizada aos alunos no momento da entrega dos aparelhos. É importante guardar as assinaturas como histórico.</p>
+
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+
+                        <!--
+                        #####################################################
+                         -->
+
+                        <h2 id="preparar-apresentacao">Preparar apresentação</h2>
+
+                        <ul>
+                            <li>Chegue na sala de aula com no mínimo 15 minutos de antecedência. Os <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/utilizar-votadores-eletronicos/reservar-aparelhos-helpDesk/">equipamentos reservados</a> já estarão montados pelo Help Desk.</li>
+                            <li>No notebook trazido pelo Help Desk, <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/utilizar-votadores-eletronicos/abrir-powerPoint/">abra o PowerPoint com o plug-in do TurningPoint</a> e, em seguida, localize a apresentação de slides preparada previamente.</li>
+                            <li><a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/vincular-lista-alunos/">Vincule a lista de alunos à apresentação de slides</a>.</li>
+                        </ul>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        
                         <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/comunicacao-e-interacao/criar-um-forum-de-discussao/step1.png" alt="" class="imgLeft">
+                            <img src="../../img/Clickers/promover-votacao-em-sala/preparacao-sala/step1.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="ClickePrepararAp1">
+                                <p>No caso de nova sessão de votação, limpe possíveis dados de testes ou votações anteriores da base de dados:</p>
+                                <ol class="ClikcerListaAlunos prepararAp">
+                                    <li>Session: <span>limpa os votos de todos os slides. Opção recomendada antes do início de uma nova aula.</span></li>
+                                    <li>Charts: <span>limpa os votos apenas do slide que está sendo exibido na tela.</span></li>
+                                </ol>
+                            </div>
+                            
                         </div>
 
                         <div class="margemParaImagem" style="margin-top:40px"></div>
 
+                        <!--
+                        #####################################################
+                        -->
+
+                        <h2 id="durante-aula">Durante a aula</h2>
+
+                        <ol>
+                            <li> Disponibilize os votadores eletrônicos aos alunos, gerenciando a entrega com a <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/criar-lista-controle/">lista de controle</a>.</li>
+                            <li>Antes de iniciar a votação explique como será a dinâmica da aula e mostre como utilizar os votadores eletrônicos. Recomenda-se exibir o <a href="../clickers-modelo-orientacao.pptx">slide de orientação</a>, sobretudo nas primeiras dinâmicas.</li>
+                            <li>Durante a apresentação (tecla F5 do teclado), a seguinte barra de controle será exibida nos slides que contiverem perguntas.</li>
+                        </ol>
+
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+
                         <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/comunicacao-e-interacao/criar-um-forum-de-discussao/step2.png" alt="" class="imgLeft">
-                            <div class="boxDestaque" id="BbComunicacaoCriarForum1">
-                                <p>A página geral dá acesso a <strong>todos</strong> os fóruns criados na disciplina.</p>
-                                <p>Após selecionar essa opção, defina o nome do link e as configurações de disponibilidade.</p>
+                            <img src="../../img/Clickers/promover-votacao-em-sala/durante-aula/step1.png" alt="" class="">
+
+                            <div class="boxDestaque numb1" id="clickersDuranteAula1">
+                                <span>1</span>
+                                <p>Limpa os votos do slide atual.</p>
+                                <p>Recomendada caso a aplicação tenha fechado involuntariamente.</p>
+                            </div>
+
+                            <div class="boxDestaque numb2" id="clickersDuranteAula2">
+                            <span>2</span>
+                                <p>Monitora os votos durante a votação ("quem respondeu o quê").</p>
+                                <p>Opção não recomendada, pois pode inibir a participação dos alunos.</p>
+                            </div>
+
+                            <div class="boxDestaque numb3" id="clickersDuranteAula3">
+                            <span>3</span>
+                                <p>Computa número de votos.</p>
+                            </div>
+
+                            <div class="boxDestaque numb4" id="clickersDuranteAula4">
+                            <span>4</span>
+                                <p>
+                                    Exibe o status da votação: <br>
+                                    Aberta : <span class="verde">verde</span>
+                                    <br>
+                                    Fechada : <span class="vermelho">Vermelho</span>
+                                </p>
                             </div>
                         </div>
 
+                        <div class="margemParaImagem" style="margin-top:260px"></div>
+
+                        <ol start="4">
+                            <li>
+                                Para abrir o período de votação em cada questão:
+                            </li>
+                            <ul>
+                                <li>Caso utilize a <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/preparar-slides/criar-questoes/">configuração recomendada</a>, após exibição do slide, dê um clique para ativar a votação</li>
+                                <li>Se estiver usando a configuração-padrão (opção não recomendada) a votação será aberta simultaneamente à exibição do slide.</li>
+                            </ul>
+                            <li>Para fechar o período de votação em cada questão, basta dar um clique.</li>
+                            <li>O gráfico com a computação dos votos é exibido ao término de cada votação.</li>
+                        </ol>
+
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+
+                        <section class="imageContainer destCatme duranteAula">
+                            <div class="c12 boxDestaqueAdicional">
+                                <p>Caso utilize <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/preparar-slides/inserir-cronometro/">cronômetro</a>, o período de votação será finalizado automaticamente ao término do tempo programado. Para fechar a votação antes do tempo (por exemplo, se todos já tiverem votado) basta dar um clique a qualquer momento.</p>
+                            </div>
+                        </section>
+
+                        <div class="margemParaImagem" style="height:40px"></div>
+
+                        <!--
+                        #####################################################
+                        -->
+
+                        <h2 id="salvar-sessao">Salvar sessão</h2>
+
+                        <p>Ao término da aula é preciso salvar as informações da votação. Isso permite <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/continuar-sessao/">continuá-la posteriormente</a> (em outra aula, por exemplo), bem como <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/analisar-resultados/visualizar-resultados-votacao/">acessar os resultados</a> e <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/analisar-resultados/trabalhar-resultados-excel/">exportá-los para Excel</a>.</p>
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+                        <div class="imageContainer row">
+                            <img src="../../img/Clickers/promover-votacao-em-sala/salvar-sessao/step1.png" alt="" class="">
+                        </div>
+
                         <div class="margemParaImagem" style="margin-top:40px"></div>
 
+                        <!--
+                        #####################################################
+                        -->
+
+                        <h2 id="continuar-sessao">Continuar sessão</h2>
+
+                        <p>É possível utilizar a mesma apresentação de slides em diversas aulas, mantendo o histórico das votações.</p>
                         <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/comunicacao-e-interacao/criar-um-forum-de-discussao/step3.png" alt="" class="imgLeft">
-                            <div class="boxDestaque" id="BbComunicacaoCriarForum2">
-                                <p>É criado um link <strong>geral</strong> para todos os fóruns existentes na disciplina.</p>
+                            <img src="../../img/Clickers/promover-votacao-em-sala/continuar-sessao/step1.png" alt="" class="">
+                            <div class="boxDestaque" id="ClickerContinuarSessao1">
+                                <p>Selecione a opção <strong>Continue</strong> e localize a <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/continuar-sessao/">sessão salva anteriormente</a> (<strong>.tpzx</strong>).</p>
                             </div>
                         </div>
-
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/comunicacao-e-interacao/criar-um-forum-de-discussao/step4.png" alt="" class="imgLeft">
-                            <div class="boxDestaque" id="BbComunicacaoCriarForum3">
-                                <p>Uma vez que a ferramenta já está disponível é preciso criar um fórum de discussão.</p>
+                        <section class="imageContainer destCatme continuarSessao">
+                            <div class="c12 boxDestaqueAdicional">
+                                <h4>Atenção!</h4>
+                                <p>Em caso de <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/criar-lista-alunos/">votação identificada</a>, é importante que os alunos utilizem os mesmos aparelhos que utilizaram na sessão anterior.</p>
                             </div>
-                        </div>
+                        </section>
 
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
-
-                        <p>Para inserir um fórum específico na área de conteúdo da disciplina:</p>
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/comunicacao-e-interacao/criar-um-forum-de-discussao/step1.png" alt="" class="imgLeft">
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/comunicacao-e-interacao/criar-um-forum-de-discussao/step5.png" alt="" class="imgLeft">
-                            <div class="boxDestaque" id="BbComunicacaoCriarForum4">
-                                <p>Primeiramente é necessário criar o fórum e, na sequência, selecioná-lo na lista.</p>
-                            </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
-
-                        <p>Para criar um fórum de discussão:</p>
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/comunicacao-e-interacao/criar-um-forum-de-discussao/step6.png" alt="" class="imgLeft">
-                            <div class="boxDestaque" id="BbComunicacaoCriarForum5">
-                                <p>Defina o nome do <strong>Fórum</strong> e escreva as instruções.</p>
-                                <p>Se necessário, configure as restrições de data/hora.</p>
-                            </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/comunicacao-e-interacao/criar-um-forum-de-discussao/step7.png" alt="" class="imgLeft">
-                            <div class="boxDestaque" id="BbComunicacaoCriarForum6">
-                                <p>Caso o Fórum seja avaliado, a participação dos alunos pode ser acompanhada na <strong>Central de notas</strong>.</p>
-                            </div>
-                            <div class="boxDestaque" id="BbComunicacaoCriarForum7">
-                                <p><strong>Linhas de discussão</strong> são assuntos dentro de um determinado <strong>Fórum</strong>.</p>
-                            </div>
-                            <div class="boxDestaque" id="BbComunicacaoCriarForum8">
-                                <p>Ao se "inscrever" em linhas de discussão ou fóruns, os usuários recebem por e-mail as mensagens postadas.</p>
-                            </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
-
-                        <p>Caso esteja inserindo um fórum específico na área de conteúdo da disciplina:</p>
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/comunicacao-e-interacao/criar-um-forum-de-discussao/step8.png" alt="" class="imgLeft">
-                            <div class="boxDestaque" id="BbComunicacaoCriarForum9">
-                                <p>Selecione o fórum na lista e, na tela seguinte, defina o nome do link e as configurações de disponibilidade.</p>
-                            </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
-
-                        <p>Com o fórum criado é preciso criar uma linha de discussão com a pergunta ou provocação inicial. A depender da configuração do fórum no momento de sua criação, novas linhas poderão ser criadas pelos próprios alunos. </p>
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/comunicacao-e-interacao/criar-um-forum-de-discussao/step9.png" alt="" class="imgLeft">
-                            <div class="boxDestaque" id="BbComunicacaoCriarForum10">
-                                <p>Uma vez criada a linha, basta clicar no link correspondente para acompanhar a discussão.</p>
-                            </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/comunicacao-e-interacao/criar-um-forum-de-discussao/step10.png" alt="" class="imgLeft">
-                            <div class="boxDestaque" id="BbComunicacaoCriarForum11">
-                                <p>Clique na mensagem desejada e em Responder. Escolha Citação para agregar, abaixo da sua resposta, um histórico com a mensagem que está sendo respondida.</p>
-                            </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/comunicacao-e-interacao/criar-um-forum-de-discussao/step11.png" alt="" class="imgLeft">
-                            <div class="boxDestaque" id="BbComunicacaoCriarForum12">
-                                <p>Para ler em sequência todas as mensagens já postadas, basta coletá-las.</p>
-                            </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
-
-                        <p>É possível atribuir diferentes perfis de participação aos usuários da disciplina:</p>
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/comunicacao-e-interacao/criar-um-forum-de-discussao/step12.png" alt="" class="imgLeft">
-                        </div>
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/comunicacao-e-interacao/criar-um-forum-de-discussao/step13.png" alt="" class="imgLeft">
-                        </div>
-
-                        <p>Para criar um <strong>Fórum</strong> específico para um Grupo de alunos, a opção Fórum de Discussão deve ser marcada no momento de criação do grupo. Somente os alunos do grupo terão permissão para visualizar e participar das discussões.</p>
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/comunicacao-e-interacao/criar-um-forum-de-discussao/step14.png" alt="" class="imgLeft">
-                        </div>
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
-
-                        <p>Para acompanhar a discussão dos grupos nos fóruns, basta selecionar a opção <strong>Fórum de discussão</strong> no menu <strong>Ferramentas do curso</strong>.</p>
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/comunicacao-e-interacao/criar-um-forum-de-discussao/step15.png" alt="" class="imgLeft">
-                            <div class="boxDestaque" id="BbComunicacaoCriarForum13">
-                                <p>Ao disponibilizar a ferramenta de <strong>Fórum</strong> a um grupo ou conjunto de grupos é criado um fórum específico para cada grupo.</p>
-                            </div>
-                        </div>
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <div class="margemParaImagem" style="height:80px"></div>
 
                         <!-- 
                         
@@ -489,9 +513,10 @@
 
                     </article>
 
+                    <!-- Devido aos poucos itens do 'Saiba Mais'
                     <div id="ancoraSaibaMais" class="voltarSumario fix">
                         <a href="#pesquisa">Início</a>
-                    </div>
+                    </div> -->
                     
                     <!-- inicio do box Saiba mais -->
                     <section class="saibaMais row fix">
@@ -500,14 +525,14 @@
                         <h4 id="relacionado">Manuais relacionados</h4>
                         <ul  ng-controller="manuaisRelacionados">
                             <!-- class="default"  -->
-                            <li ng-repeat="item in Criar_forum_de_discussao" class="ng-class: item.tipoIcone">
+                            <li ng-repeat="item in Promover_votacao_sala" class="ng-class: item.tipoIcone">
                                 <div><a href="{{item.Link}}">{{item.manual}}</a></div>
                             </li>
                         </ul>
                         
                         <h4 id="complementar">Materiais complementares</h4>
                         <ul ng-controller="materiaisComplementares">
-                            <li ng-repeat="item in Criar_forum_de_discussao" class="ng-class: item.tipoIcone">
+                            <li ng-repeat="item in Promover_votacao_sala" class="ng-class: item.tipoIcone">
                                 <div><a href="{{item.Link}}" target="_blank">{{item.manual}}</a></div>
                             </li>
                         </ul>
@@ -523,16 +548,16 @@
     <div class="fix respiro"></div>
 
 <!-- Scripts: plugins -->
-<script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
-<script src="../../../js/libs/angular.js"></script>
-<script src="../../../js/libs/jquery.placeholder.js"></script>
+<script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
+<script src="../../js/libs/angular.js"></script>
+<script src="../../js/libs/jquery.placeholder.js"></script>
 
 <!-- Scripts: controllers do AngularJs -->
-<script src="../../../js/listaCompletaManual.js"></script>
-<script src="../../../js/manuaisRelacionados.js"></script>
-<script src="../../../js/materiaisComplementares.js"></script>
+<script src="../../js/listaCompletaManual.js"></script>
+<script src="../../js/manuaisRelacionados.js"></script>
+<script src="../../js/materiaisComplementares.js"></script>
 
 <!-- Scripts: do projeto -->
-<script src="../../../js/main.js"></script>
+<script src="../../js/main.js"></script>
 </body>
 </html>

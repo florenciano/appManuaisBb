@@ -287,7 +287,7 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	},
 	{
 		'manual'			: 	'O que é Catme',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/sobre-a-ferramenta/#o-que-e-catme'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/sobre-a-ferramenta/'
 	},
 	{
 		'manual'			: 	'Funcionamento do Catme',
@@ -360,11 +360,11 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	},
 	{
 		'manual'			: 	'O que são votadores eletrônicos (clickers)',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/sobre-a-ferramenta/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/sobre-a-ferramenta/'
 	},
 	{
 		'manual'			: 	'Funcionamento dos votadores eletrônicos',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/sobre-a-ferramenta/#funcionamento-votadores'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/sobre-a-ferramenta/#funcionamento-votadores'
 	}
 	];
 
@@ -422,11 +422,11 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	},
 	{
 		'manual'			: 	'Vincular lista de alunos aos slides',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/#vincular-lista-alunos'
 	},
 	{
 		'manual'			: 	'Editar lista de alunos',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/#editar-lista-alunos'
 	}
 	];
 
@@ -440,23 +440,23 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	},
 	{
 		'manual'			: 	'Criar lista de controle',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/criar-lista-controle/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/#editar-lista-alunos/'
 	},
 	{
 		'manual'			: 	'Preparar apresentação',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/preparar-apresentacao/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/#preparar-apresentacao'
 	},
 	{
 		'manual'			: 	'Durante a aula',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/durante-aula/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/#durante-aula'
 	},
 	{
 		'manual'			: 	'Salvar sessão',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/salvar-sessao/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/#salvar-sessao'
 	},
 	{
 		'manual'			: 	'Continuar sessão',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/continuar-sessao/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/#continuar-sessao'
 	}
 	];
 
@@ -470,74 +470,87 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	},
 	{
 		'manual'			: 	'Visualizar resultados da votação',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/analisar-resultados/visualizar-resultados-votacao/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/analisar-resultados/'
 	},
 	{
 		'manual'			: 	'Trabalhar resultados no Excel',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/analisar-resultados/trabalhar-resultados-excel/'
-	}
-	]
-
-	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-	// ASSUNTO: CASOS
-	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-	$scope.casos = [
-	{
-		'manual'			: 	'Sobre os casos',
-		'linkManual'		: 	'/blackboard/sub1'
-	},
-	{
-		'manual'			: 	'Cadastrar-se em base de dados',
-		'linkManual'		: 	'/blackboard/sub2'
-	},
-	{
-		'manual'			: 	'Consultar casos disponíveis',
-		'linkManual'		: 	'/blackboard/sub1'
-	},
-	{
-		'manual'			: 	'Solicitar casos pelo CUCA',
-		'linkManual'		: 	'/blackboard/sub2'
-	},
-	{
-		'manual'			: 	'Disponibilizar link aos alunos',
-		'linkManual'		: 	'/blackboard/sub1'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/analisar-resultados/#trabalhar-resultados-excel'
 	}
 	];
 
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-	// ASSUNTO: SIMULADORES
+	// ASSUNTO: CASOS, SIMULADORES E CURSOS ONLINE
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-	$scope.simuladores = [
+	// CATEGORIA: Sobre os recursos
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	$scope.SobreOsRecursos = [
 	{
-		'manual'			: 	'Conhecer simuladores',
-		'linkManual'		: 	'/blackboard/sub1'
+		'categoria' 		: 	'Sobre os recursos', // Este equivale ao nome da categoria
+		'manual'			: 	'',
+		'linkManual'		: 	''
 	},
 	{
-		'manual'			: 	'Solicitar simulador',
-		'linkManual'		: 	'/blackboard/sub2'
+		'manual'			: 	'Casos',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/sobre-os-recursos/'
 	},
 	{
-		'manual'			: 	'Disponibilizar link aos alunos',
-		'linkManual'		: 	'/blackboard/sub1'
+		'manual'			: 	'Simuladores',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/sobre-os-recursos/#simuladores'
+	},
+	{
+		'manual'			: 	'Cursos online',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/sobre-os-recursos/#cursos-online'
 	}
 	];
 
+	// CATEGORIA: Consultar recursos disponíveis
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-	// ASSUNTO: CURSOS ONLINE
-	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-	
-	$scope.cursosOnline = [
+	$scope.ConsultarRecursosDisponiveis = [
 	{
-		'manual'			: 	'Acessar',
-		'linkManual'		: 	'/blackboard/sub1'
+		'categoria' 		: 	'Consultar recursos disponíveis', // Este equivale ao nome da categoria
+		'manual'			: 	'',
+		'linkManual'		: 	''
 	},
 	{
-		'manual'			: 	'Gerenciar',
-		'linkManual'		: 	'/blackboard/sub2'
+		'manual'			: 	'Casos, simuladores e cursos online de Harvard',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/consultar-recursos-disponiveis/'
+	},
+	{
+		'manual'			: 	'Casos de Darden',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/consultar-recursos-disponiveis/#casos-darden'
+	},
+	{
+		'manual'			: 	'Casos Insper',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/consultar-recursos-disponiveis/#casos-insper'
 	}
 	];
+
+	// CATEGORIA: Utilizar recursos
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	$scope.UtilizarRecursos = [
+	{
+		'categoria' 		: 	'Utilizar recursos', // Este equivale ao nome da categoria
+		'manual'			: 	'',
+		'linkManual'		: 	''
+	},
+	{
+		'manual'			: 	'Solicitar, acompanhar e cancelar casos pelo CUCA',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/utilizar-recursos/'
+	},
+	{
+		'manual'			: 	'Solicitar, acompanhar e cancelar simuladores',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/utilizar-recursos/#solicitar-simuladores'
+	},
+	{
+		'manual'			: 	'Solicitar, acompanhar e cancelar cursos online',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/utilizar-recursos/#solicitar-cursos'
+	},
+	{
+		'manual'			: 	'Disponibilizar links de casos, simuladores e cursos online aos alunos',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/utilizar-recursos/#disponibilizar-links'
+	}
+	];
+
 
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 

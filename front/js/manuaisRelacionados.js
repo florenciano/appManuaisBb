@@ -695,7 +695,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"Sobre a ferramenta",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/sobre-a-ferramenta/",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/sobre-a-ferramenta/",
 		"tipoIcone"	: 	"clickers"
 	},
 	{
@@ -726,7 +726,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"Sobre a ferramenta",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/sobre-a-ferramenta/",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/sobre-a-ferramenta/",
 		"tipoIcone"	: 	"clickers"
 	},
 	{
@@ -757,7 +757,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"Sobre a ferramenta",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/sobre-a-ferramenta/",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/sobre-a-ferramenta/",
 		"tipoIcone"	: 	"clickers"
 	},
 	{
@@ -788,7 +788,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"Sobre a ferramenta",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/sobre-a-ferramenta/",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/sobre-a-ferramenta/",
 		"tipoIcone"	: 	"clickers"
 	},
 	{
@@ -819,7 +819,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"Sobre a ferramenta",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/sobre-a-ferramenta/",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/sobre-a-ferramenta/",
 		"tipoIcone"	: 	"clickers"
 	},
 	{
@@ -836,208 +836,66 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 		"manual"	: 	"Identificar os votos dos alunos",
 		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/",
 		"tipoIcone"	: 	"clickers"
+	},
+	{
+		"manual"	: 	"Promover votação em sala",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/",
+		"tipoIcone"	: 	"clickers"
 	}
 	];
 
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-	// ASSUNTO: CASOS
+	// ASSUNTO: CASOS, SIMULADORES E CURSOS ONLINE
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	// CATEGORIA: Sobre os recursos
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-	// "Sobre os casos"
-	$scope.Sobre_os_casos = 
+	$scope.sobre_os_Recursos = 
 	[
 	{
-		"manual"	: 	"Cadastrar-se em base de dados",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"casos"
+		"manual"	: 	"Consultar recursos disponíveis",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/",
+		"tipoIcone"	: 	"cursosOnline"
 	},
 	{
-		"manual"	: 	"Consultar casos disponíveis",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"casos"
-	},
-	{
-		"manual"	: 	"Solicitar casos pelo CUCA",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"casos"
-	},
-	{
-		"manual"	: 	"Disponibilizar link aos alunos",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"casos"
-	}
-	];
-
-	// "Cadastrar-se em base de dados"
-	$scope.CadastrarSe_em_base_de_dados = 
-	[
-	{
-		"manual"	: 	"Sobre os casos",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"casos"
-	},
-	{
-		"manual"	: 	"Consultar casos disponíveis",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"casos"
-	},
-	{
-		"manual"	: 	"Solicitar casos pelo CUCA",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"casos"
-	},
-	{
-		"manual"	: 	"Disponibilizar link aos alunos",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"casos"
-	}
-	];
-
-	// "Consultar casos disponíveis"
-	$scope.Consultar_casos_disponíveis = 
-	[
-	{
-		"manual"	: 	"Sobre os casos",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"casos"
-	},
-	{
-		"manual"	: 	"Cadastrar-se em base de dados",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"casos"
-	},
-	{
-		"manual"	: 	"Solicitar casos pelo CUCA",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"casos"
-	},
-	{
-		"manual"	: 	"Disponibilizar link aos alunos",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"casos"
-	}
-	];
-
-	// "Solicitar casos pelo CUCA"
-	$scope.Solicitar_casos_pelo_CUCA = 
-	[
-	{
-		"manual"	: 	"Sobre os casos",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"casos"
-	},
-	{
-		"manual"	: 	"Cadastrar-se em base de dados",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"casos"
-	},
-	{
-		"manual"	: 	"Consultar casos disponíveis",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"casos"
-	},
-	{
-		"manual"	: 	"Disponibilizar link aos alunos",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"casos"
-	}
-	];
-
-	// "Disponibilizar link aos alunos"
-	$scope.Disponibilizar_link_aos_alunos = 
-	[
-	{
-		"manual"	: 	"Sobre os casos",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"casos"
-	},
-	{
-		"manual"	: 	"Cadastrar-se em base de dados",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"casos"
-	},
-	{
-		"manual"	: 	"Consultar casos disponíveis",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"casos"
-	},
-	{
-		"manual"	: 	"Solicitar casos pelo CUCA",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"casos"
-	}
-	];
-
-	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-	// ASSUNTO: SIMULADORES
-	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-	// "Conhecer simuladores"
-	$scope.Conhecer_simuladores = 
-	[
-	{
-		"manual" 	: 	"Solicitar simulador",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"simuladores"
-	},
-	{
-		"manual" 	: 	"Disponibilizar link aos alunos",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"simuladores"
-	}
-	];
-
-	// "Solicitar simulador"
-	$scope.Solicitar_simulador = 
-	[
-	{
-		"manual" 	: 	"Conhecer simuladores",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"simuladores"
-	},
-	{
-		"manual" 	: 	"Disponibilizar link aos alunos",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"simuladores"
-	}
-	];
-
-	// "Disponibilizar link aos alunos"
-	$scope.Disponibilizar_link_aos_alunos = 
-	[
-	{
-		"manual" 	: 	"Conhecer simuladores",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"simuladores"
-	},
-	{
-		"manual" 	: 	"Solicitar simulador",
-		"Link" 		: 	"#",
-		"tipoIcone"	: 	"simuladores"
-	}
-	];
-
-	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-	// ASSUNTO: CURSOS
-	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-	// "Acessar"
-	$scope.Acessar = 
-	[
-	{
-		"manual" 	: 	"Gerenciar",
-		"Link" 		: 	"#",
+		"manual"	: 	"Utilizar recursos",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/",
 		"tipoIcone"	: 	"cursosOnline"
 	}
 	];
 
-	// "Gerenciar"
-	$scope.Gerenciar = 
+	// CATEGORIA: Consultar recursos disponíveis
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+	$scope.consultar_recursos_disponiveis = 
 	[
 	{
-		"manual" 	: 	"Acessar",
-		"Link" 		: 	"#",
+		"manual"	: 	"Sobre os recursos",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/",
+		"tipoIcone"	: 	"cursosOnline"
+	},
+	{
+		"manual"	: 	"Utilizar recursos",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/",
 		"tipoIcone"	: 	"cursosOnline"
 	}
 	];
+
+	// CATEGORIA: Utilizar recursos
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+	$scope.utilizar_recursos = 
+	[
+	{
+		"manual"	: 	"Sobre os recursos",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/",
+		"tipoIcone"	: 	"cursosOnline"
+	},
+	{
+		"manual"	: 	"Consultar recursos disponíveis",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/",
+		"tipoIcone"	: 	"cursosOnline"
+	}
+	];
+	
 });

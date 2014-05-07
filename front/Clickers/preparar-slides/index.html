@@ -239,30 +239,28 @@
                             </li>
                         </ol>
                         
-                        <h5 class="icoCasos">Casos</h5>
-                        <ol class="noCategory" ng-repeat="item in casos | filter: {manual:searchText}">
+                        <h5 class="icoCursosOnline">Casos, Simuladores e Cursos online</h5>
+                        <ol class="noCategory" ng-repeat="item in SobreOsRecursos | filter: {manual:searchText}">
                             <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
                             <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
                             </li>
                         </ol>
 
-                        <h5 class="icoSimuladores">Simuladores</h5>
-                        <ol class="noCategory" ng-repeat="item in simuladores | filter: {manual:searchText}">
+                        <ol class="noCategory" ng-repeat="item in ConsultarRecursosDisponiveis | filter: {manual:searchText}">
                             <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
                             <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
                             </li>
                         </ol>
 
-                        <h5 class="icoCursosOnline">Cursos online</h5>
-                        <ol class="noCategory" ng-repeat="item in cursosOnline | filter: {manual:searchText}">
-                            <li class="nameCategory">    
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                        <ol class="noCategory" ng-repeat="item in UtilizarRecursos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
                             <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
@@ -342,7 +340,7 @@
 
                         -->
 
-                        <p>Antes de tudo, <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/utilizar-votadores-eletronicos/abrir-powerPoint/">abra o PowerPoint com o plug-in do TurningPoint</a>.</p>
+                        <p>Antes de tudo, <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/utilizar-votadores-eletronicos/#abrir-turning-point">abra o PowerPoint com o plug-in do TurningPoint</a>.</p>
                         <p>Cada slide que contém uma questão para votação pode ser formatado e configurado de maneira diferente. No entanto, visando otimizar o tempo de preparação da apresentação e manter sua uniformidade, sugere-se configurar um slide-modelo e replicá-lo para as demais questões, efetuando somente a troca dos enunciados e alternativas.</p>
                         
                         <div class="imageContainer row">

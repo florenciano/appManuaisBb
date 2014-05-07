@@ -239,30 +239,28 @@
                             </li>
                         </ol>
                         
-                        <h5 class="icoCasos">Casos</h5>
-                        <ol class="noCategory" ng-repeat="item in casos | filter: {manual:searchText}">
+                        <h5 class="icoCursosOnline">Casos, Simuladores e Cursos online</h5>
+                        <ol class="noCategory" ng-repeat="item in SobreOsRecursos | filter: {manual:searchText}">
                             <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
                             <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
                             </li>
                         </ol>
 
-                        <h5 class="icoSimuladores">Simuladores</h5>
-                        <ol class="noCategory" ng-repeat="item in simuladores | filter: {manual:searchText}">
+                        <ol class="noCategory" ng-repeat="item in ConsultarRecursosDisponiveis | filter: {manual:searchText}">
                             <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
                             <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
                             </li>
                         </ol>
 
-                        <h5 class="icoCursosOnline">Cursos online</h5>
-                        <ol class="noCategory" ng-repeat="item in cursosOnline | filter: {manual:searchText}">
-                            <li class="nameCategory">    
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                        <ol class="noCategory" ng-repeat="item in UtilizarRecursos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
                             <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
@@ -372,23 +370,23 @@
                         <div class="imageContainer row">
                             <img src="../../img/Clickers/sobre-a-ferramenta/funcionamento-dos-votadores-eletronicos/step1.png" alt="" class="">
                             <div class="boxDestaque" id="ClickerSobreFerramenta1">
-                                <p><a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/utilizar-votadores-eletronicos/reservar-aparelhos-helpDesk/">Verificar junto ao Help Desk</a> a disponibilidade dos equipamentos no dia e hora desejados.</p>
+                                <p><a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/utilizar-votadores-eletronicos/#reservar-aparelhos">Verificar junto ao Help Desk</a> a disponibilidade dos equipamentos no dia e hora desejados.</p>
                             </div>
                             <div class="boxDestaque" id="ClickerSobreFerramenta2">
-                                <p><a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/utilizar-votadores-eletronicos/instalar-software-turningPoint/">Instalar software TurningPoint</a> no computador (uma aba do aplicativo será criada no PowerPoint).</p>
+                                <p><a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/utilizar-votadores-eletronicos/">Instalar software TurningPoint</a> no computador (uma aba do aplicativo será criada no PowerPoint).</p>
                             </div>
                             <div class="boxDestaque" id="ClickerSobreFerramenta3">
-                                <p>Em uma apresentação de slides, <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/preparar-slides/criar-questoes/">criar sequência de questões e configurar as regras de votação</a>.</p>
+                                <p>Em uma apresentação de slides, <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/preparar-slides/">criar sequência de questões e configurar as regras de votação</a>.</p>
                             </div>
                             <div class="boxDestaque" id="ClickerSobreFerramenta4">
-                                <p>Caso a votação não seja anônima, <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/criar-lista-alunos/">informar quem são os alunos</a> (por exemplo, a partir da lista de alunos do Blackboard).</p>
+                                <p>Caso a votação não seja anônima, <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/">informar quem são os alunos</a> (por exemplo, a partir da lista de alunos do Blackboard).</p>
                             </div>
                         </div>
 
                         <div class="imageContainer row">
                             <img src="../../img/Clickers/sobre-a-ferramenta/funcionamento-dos-votadores-eletronicos/step2.png" alt="" class="">
                             <div class="boxDestaque" id="ClickerSobreFerramenta5">
-                                <p>Distribuir votadores aos alunos mediante assinatura de <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/promover-votacao-em-sala/criar-lista-controle/">lista de controle</a>.</p>
+                                <p>Distribuir votadores aos alunos mediante assinatura de <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/#editar-lista-alunos/">lista de controle</a>.</p>
                             </div>
                             <div class="boxDestaque" id="ClickerSobreFerramenta6">
                                 <p>Durante a apresentação de slides, lançar perguntas à turma.</p>
@@ -404,7 +402,7 @@
                                 <p>Solicitar aos alunos a devolução dos votadores.</p>
                             </div>
                             <div class="boxDestaque" id="ClickerSobreFerramenta9">
-                                <p><a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/analisar-resultados/visualizar-resultados-votacao/">Salvar os relatórios</a> (opcional).</p>
+                                <p><a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/analisar-resultados/">Salvar os relatórios</a> (opcional).</p>
                             </div>
                         </div>
 

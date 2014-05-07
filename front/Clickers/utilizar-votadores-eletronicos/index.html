@@ -239,30 +239,28 @@
                             </li>
                         </ol>
                         
-                        <h5 class="icoCasos">Casos</h5>
-                        <ol class="noCategory" ng-repeat="item in casos | filter: {manual:searchText}">
+                        <h5 class="icoCursosOnline">Casos, Simuladores e Cursos online</h5>
+                        <ol class="noCategory" ng-repeat="item in SobreOsRecursos | filter: {manual:searchText}">
                             <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
                             <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
                             </li>
                         </ol>
 
-                        <h5 class="icoSimuladores">Simuladores</h5>
-                        <ol class="noCategory" ng-repeat="item in simuladores | filter: {manual:searchText}">
+                        <ol class="noCategory" ng-repeat="item in ConsultarRecursosDisponiveis | filter: {manual:searchText}">
                             <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
                             <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
                             </li>
                         </ol>
 
-                        <h5 class="icoCursosOnline">Cursos online</h5>
-                        <ol class="noCategory" ng-repeat="item in cursosOnline | filter: {manual:searchText}">
-                            <li class="nameCategory">    
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                        <ol class="noCategory" ng-repeat="item in UtilizarRecursos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
                             <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
@@ -341,8 +339,8 @@
                         -->
 
                         <p>Para preparar os slides com as questões e analisar os resultados da utilização de votadores eletrônicos é necessário utilizar o software <strong>TurningPoint</strong>.</p>
-                        <p>Quando instalado, o software ativa uma nova aba no PowerPoint que permite <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/preparar-slides/criar-questoes/">configurar as questões nos slides</a>.</p>
-                        <p>O TurningPoint também permite <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/criar-lista-alunos/">editar listas de alunos</a> e <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/analisar-resultados/visualizar-resultados-votacao/">analisar relatórios</a> das votações aplicadas.</p>
+                        <p>Quando instalado, o software ativa uma nova aba no PowerPoint que permite <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/preparar-slides/">configurar as questões nos slides</a>.</p>
+                        <p>O TurningPoint também permite <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/#editar-lista-alunos">editar listas de alunos</a> e <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/analisar-resultados/">analisar relatórios</a> das votações aplicadas.</p>
                         <div class="boxInstalarTurning">
                             <p>Os computadores do Lounge dos Professores (7º andar) já possuem o software Instalado.</p>
                         </div>
@@ -377,7 +375,7 @@
                             <li>Nome da turma.</li>
                             <li>Número de alunos da turma.</li>
                         </ul>
-                        <p>Ao confirmar a disponibilidade, o Help Desk encaminhará uma lista contendo o código de identificação de cada votador. Caso a votação não seja anônima, será necessário complementar essa lista com o <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/criar-lista-alunos/">nome dos alunos que participarão da votação</a>.</p>
+                        <p>Ao confirmar a disponibilidade, o Help Desk encaminhará uma lista contendo o código de identificação de cada votador. Caso a votação não seja anônima, será necessário complementar essa lista com o <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/identificar-votos-alunos/">nome dos alunos que participarão da votação</a>.</p>
 
                         <div class="imageContainer row">
                             <figure class="boxImagem">
@@ -405,12 +403,12 @@
                         </h2>
 
                         <p>Para que o plug-in do TurningPoint seja executado no PowerPoint é necessário abrir a apresentação de slides a partir do aplicativo!</p>
-                        <p>Esse procedimento é necessário para qualquer ação que envolva o PowerPoint no uso dos votadores eletrônicos, tanto na <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/preparar-slides/criar-questoes/">preparação dos slides</a> quanto na aplicação em sala de aula.</p>
+                        <p>Esse procedimento é necessário para qualquer ação que envolva o PowerPoint no uso dos votadores eletrônicos, tanto na <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/preparar-slides/">preparação dos slides</a> quanto na aplicação em sala de aula.</p>
                        
                         <div class="imageContainer row">
                             <img src="../../img/Clickers/utilizar-votadores-eletronicos/abrir-powerPoint/step1.png" alt="" class="imgLeft">
                             <div class="boxDestaqueAdicional" id="ClickerAbrirPowerPoint1">
-                                <p>Se um arquivo PPT é aberto diretamente pelo PowerPoint, o plug-in do TurningPoint não é executado, mesmo que o <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/utilizar-votadores-eletronicos/instalar-software-turningPoint/">software já esteja instalado</a>.</p>
+                                <p>Se um arquivo PPT é aberto diretamente pelo PowerPoint, o plug-in do TurningPoint não é executado, mesmo que o <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Clickers/utilizar-votadores-eletronicos/">software já esteja instalado</a>.</p>
                             </div>
                         </div>
 

@@ -239,35 +239,7 @@
                             </li>
                         </ol>
                         
-                        <h5 class="icoCasos">Casos</h5>
-                        <ol class="noCategory" ng-repeat="item in casos | filter: {manual:searchText}">
-                            <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
-                            </li>
-                            <li class="sublist" ng-show="item.manual.length > 1">
-                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
-                            </li>
-                        </ol>
-
-                        <h5 class="icoSimuladores">Simuladores</h5>
-                        <ol class="noCategory" ng-repeat="item in simuladores | filter: {manual:searchText}">
-                            <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
-                            </li>
-                            <li class="sublist" ng-show="item.manual.length > 1">
-                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
-                            </li>
-                        </ol>
-
-                        <h5 class="icoCursosOnline">Cursos online</h5>
-                        <ol class="noCategory" ng-repeat="item in cursosOnline | filter: {manual:searchText}">
-                            <li class="nameCategory">    
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
-                            </li>
-                            <li class="sublist" ng-show="item.manual.length > 1">
-                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
-                            </li>
-                        </ol>
+                        
 
                         <div class="faqBusca icoFaq">
                             <h5>
