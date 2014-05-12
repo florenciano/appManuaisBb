@@ -185,7 +185,52 @@
                         </ol>
 
                         <h5 class="icoClickers">Votadores eletrônicos (clickers)</h5>
-                        <ol class="noCategory" ng-repeat="item in clickers | filter: {manual:searchText}">
+                        <ol class="noCategory" ng-repeat="item in clickerSobreFerramenta | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerUtilizarVotadores | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerPrepararSlides | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerIdentificarVoto | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerPromoverVotacao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerAnalisarResultados | filter: {manual:searchText}">
                             <li class="nameCategory">
                                 <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
@@ -194,30 +239,28 @@
                             </li>
                         </ol>
                         
-                        <h5 class="icoCasos">Casos</h5>
-                        <ol class="noCategory" ng-repeat="item in casos | filter: {manual:searchText}">
+                        <h5 class="icoCursosOnline">Casos, Simuladores e Cursos online</h5>
+                        <ol class="noCategory" ng-repeat="item in SobreOsRecursos | filter: {manual:searchText}">
                             <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
                             <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
                             </li>
                         </ol>
 
-                        <h5 class="icoSimuladores">Simuladores</h5>
-                        <ol class="noCategory" ng-repeat="item in simuladores | filter: {manual:searchText}">
+                        <ol class="noCategory" ng-repeat="item in ConsultarRecursosDisponiveis | filter: {manual:searchText}">
                             <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
                             <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
                             </li>
                         </ol>
 
-                        <h5 class="icoCursosOnline">Cursos online</h5>
-                        <ol class="noCategory" ng-repeat="item in cursosOnline | filter: {manual:searchText}">
-                            <li class="nameCategory">    
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                        <ol class="noCategory" ng-repeat="item in UtilizarRecursos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
                             <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
@@ -226,12 +269,14 @@
 
                         <div class="faqBusca icoFaq">
                             <h5>
-                                <a href="index.html" >FAQ</a>
+                            <ol class="noCategory">
+                                <li><a href="../../faq/index.html" class="">FAQ</a></li>
+                            </ol>
                             </h5>
                         </div>
                         <div class="outros">
                             <h6>
-                                <a href="../nao-encontrou-o-que-queria/index.html">Não encontrou o que queria?</a>
+                                <a href="../../nao-encontrou-o-que-queria/index.html">Não encontrou o que queria?</a>
                             </h6>
                         </div>
                     </nav>
@@ -247,18 +292,162 @@
                             </p>
                         </div>
                         <hr>
-                        <!-- <div class="breadcrumb">
-                            <p><span class="nameCategory">home </span></p>
-                        </div> -->
+                        <div class="breadcrumb">
+                            <p><span class="nameCategory">FAQ </span></p>
+                        </div>
                     </section>
 
                     <article class="contentMain row">
-                        <h1>
-                            Aqui fica o conteúdo do FAQ
-                        </h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, amet, quis, eligendi, eum doloremque consequatur maxime temporibus velit odit repellendus deleniti porro ullam vel rerum eaque suscipit molestias. Tempore, distinctio.
+                        <p class="exp-rec">
+                            <a class="expandAll"><img src="../img/ui/expandir.png" alt="Expandir tudo">Expandir tudo</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="colapseAll"><img src="../img/ui/recolher.png" alt="Recolher tudo">Recolher tudo</a>
                         </p>
+                        <!-- Blackboard -->
+                        <section class="blackboard-faq">
+                            <header>
+                                <h1>Blackboard</h1>
+                            </header>
+                            <dl>
+                                <dt class="question">
+                                    <h4><a href="#624356">Acima de tudo, é fundamental ressaltar que a consolidação das estruturas facilita a criação do sistema de formação?</a></h4>
+                                </dt>
+                                <dd class="answer">
+                                    <p>A certificação de metodologias que nos auxiliam a lidar com a percepção das dificuldades estende o alcance e a importância das novas proposições. </p>
+                                    <p>Não obstante, o comprometimento entre as equipes talvez venha a ressaltar a relatividade dos modos de operação convencionais.</p>
+                                </dd>
+
+                                <dt class="question">
+                                    <h4><a href="#654">Não podemos esquecer que o desenvolvimento contínuo de distintas forma?</a></h4>
+                                </dt>
+                                <dd class="answer">
+                                    <p>A prática cotidiana prova que a competitividade nas transações comerciais prepara-nos para enfrentar situações atípicas decorrentes de alternativas às soluções ortodoxas. Evidentemente, o entendimento das metas propostas maximiza as possibilidades por conta dos índices pretendidos. Do mesmo modo, a expansão dos mercados mundiais garante a contribuição de um grupo importante na determinação das formas de ação.</p>
+                                </dd>
+
+                                <dt class="question">
+                                    <h4><a href="#323434">Neste sentido, o fenômeno da Internet deve passar por modificações?</a></h4>
+                                </dt>
+                                <dd class="answer">
+                                    <p> cuidado em identificar pontos críticos no consenso sobre a necessidade de qualificação pode nos levar a considerar a reestruturação do investimento em reciclagem técnica.</p>
+                                </dd>
+
+                                <dt class="question">
+                                    <h4><a href="#22323">Faz parte de um processo de gerenciamento dos modos de operação convencionais?</a></h4>
+                                </dt>
+                                <dd class="answer">
+                                    <p>Todas estas questões, devidamente ponderadas, levantam dúvidas sobre se a revolução dos costumes aponta para a melhoria dos paradigmas corporativos.</p>
+                                </dd>
+                            </dl>
+                        </section>
+
+                        <!-- Catne -->
+                        <section class="catme-faq">
+                            <header>
+                                <h1>Catme</h1>
+                            </header>
+                            <dl>
+                                <dt class="question">
+                                    <h4><a href="#89">Acima de tudo, é fundamental ressaltar que a consolidação das estruturas facilita a criação do sistema de formação?</a></h4>
+                                </dt>
+                                <dd class="answer">
+                                    <p>A certificação de metodologias que nos auxiliam a lidar com a percepção das dificuldades estende o alcance e a importância das novas proposições. </p>
+                                    <p>Não obstante, o comprometimento entre as equipes talvez venha a ressaltar a relatividade dos modos de operação convencionais.</p>
+                                </dd>
+
+                                <dt class="question">
+                                    <h4><a href="#6756754">Não podemos esquecer que o desenvolvimento contínuo de distintas forma?</a></h4>
+                                </dt>
+                                <dd class="answer">
+                                    <p>A prática cotidiana prova que a competitividade nas transações comerciais prepara-nos para enfrentar situações atípicas decorrentes de alternativas às soluções ortodoxas. Evidentemente, o entendimento das metas propostas maximiza as possibilidades por conta dos índices pretendidos. Do mesmo modo, a expansão dos mercados mundiais garante a contribuição de um grupo importante na determinação das formas de ação.</p>
+                                </dd>
+
+                                <dt class="question">
+                                    <h4><a href="#67765567">Neste sentido, o fenômeno da Internet deve passar por modificações?</a></h4>
+                                </dt>
+                                <dd class="answer">
+                                    <p> cuidado em identificar pontos críticos no consenso sobre a necessidade de qualificação pode nos levar a considerar a reestruturação do investimento em reciclagem técnica.</p>
+                                </dd>
+
+                                <dt class="question">
+                                    <h4><a href="#67567">Faz parte de um processo de gerenciamento dos modos de operação convencionais?</a></h4>
+                                </dt>
+                                <dd class="answer">
+                                    <p>Todas estas questões, devidamente ponderadas, levantam dúvidas sobre se a revolução dos costumes aponta para a melhoria dos paradigmas corporativos.</p>
+                                </dd>
+                            </dl>
+                        </section>
+
+                        <!-- cliquers -->
+                        <section class="clickers-faq">
+                            <header>
+                                <h1>Votadores eletrônicos (clickers)</h1>
+                            </header>
+                            <dl>
+                                <dt class="question">
+                                    <h4><a href="#334">Acima de tudo, é fundamental ressaltar que a consolidação das estruturas facilita a criação do sistema de formação?</a></h4>
+                                </dt>
+                                <dd class="answer">
+                                    <p>A certificação de metodologias que nos auxiliam a lidar com a percepção das dificuldades estende o alcance e a importância das novas proposições. </p>
+                                    <p>Não obstante, o comprometimento entre as equipes talvez venha a ressaltar a relatividade dos modos de operação convencionais.</p>
+                                </dd>
+
+                                <dt class="question">
+                                    <h4><a href="#423423">Não podemos esquecer que o desenvolvimento contínuo de distintas forma?</a></h4>
+                                </dt>
+                                <dd class="answer">
+                                    <p>A prática cotidiana prova que a competitividade nas transações comerciais prepara-nos para enfrentar situações atípicas decorrentes de alternativas às soluções ortodoxas. Evidentemente, o entendimento das metas propostas maximiza as possibilidades por conta dos índices pretendidos. Do mesmo modo, a expansão dos mercados mundiais garante a contribuição de um grupo importante na determinação das formas de ação.</p>
+                                </dd>
+
+                                <dt class="question">
+                                    <h4><a href="#42342">Neste sentido, o fenômeno da Internet deve passar por modificações?</a></h4>
+                                </dt>
+                                <dd class="answer">
+                                    <p> cuidado em identificar pontos críticos no consenso sobre a necessidade de qualificação pode nos levar a considerar a reestruturação do investimento em reciclagem técnica.</p>
+                                </dd>
+
+                                <dt class="question">
+                                    <h4><a href="#56546">Faz parte de um processo de gerenciamento dos modos de operação convencionais?</a></h4>
+                                </dt>
+                                <dd class="answer">
+                                    <p>Todas estas questões, devidamente ponderadas, levantam dúvidas sobre se a revolução dos costumes aponta para a melhoria dos paradigmas corporativos.</p>
+                                </dd>
+                            </dl>
+                        </section>
+
+                        <!-- recursos -->
+                        <section class="recursos-faq">
+                            <header>
+                                <h1>Casos, Simuladores e Cursos online</h1>
+                            </header>
+                            <dl>
+                                <dt class="question">
+                                    <h4><a href="#624356">Acima de tudo, é fundamental ressaltar que a consolidação das estruturas facilita a criação do sistema de formação?</a></h4>
+                                </dt>
+                                <dd class="answer">
+                                    <p>A certificação de metodologias que nos auxiliam a lidar com a percepção das dificuldades estende o alcance e a importância das novas proposições. </p>
+                                    <p>Não obstante, o comprometimento entre as equipes talvez venha a ressaltar a relatividade dos modos de operação convencionais.</p>
+                                </dd>
+
+                                <dt class="question">
+                                    <h4><a href="#654">Não podemos esquecer que o desenvolvimento contínuo de distintas forma?</a></h4>
+                                </dt>
+                                <dd class="answer">
+                                    <p>A prática cotidiana prova que a competitividade nas transações comerciais prepara-nos para enfrentar situações atípicas decorrentes de alternativas às soluções ortodoxas. Evidentemente, o entendimento das metas propostas maximiza as possibilidades por conta dos índices pretendidos. Do mesmo modo, a expansão dos mercados mundiais garante a contribuição de um grupo importante na determinação das formas de ação.</p>
+                                </dd>
+
+                                <dt class="question">
+                                    <h4><a href="#323434">Neste sentido, o fenômeno da Internet deve passar por modificações?</a></h4>
+                                </dt>
+                                <dd class="answer">
+                                    <p> cuidado em identificar pontos críticos no consenso sobre a necessidade de qualificação pode nos levar a considerar a reestruturação do investimento em reciclagem técnica.</p>
+                                </dd>
+
+                                <dt class="question">
+                                    <h4><a href="#22323">Faz parte de um processo de gerenciamento dos modos de operação convencionais?</a></h4>
+                                </dt>
+                                <dd class="answer">
+                                    <p>Todas estas questões, devidamente ponderadas, levantam dúvidas sobre se a revolução dos costumes aponta para a melhoria dos paradigmas corporativos.</p>
+                                </dd>
+                            </dl>
+                        </section>
                     </article>
 
                 </section>

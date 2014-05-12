@@ -46,6 +46,51 @@ $( document ).ready( function() {
     */
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+    /*
+        PÁGINA : FAQ
+        Expansão e contraçã das respostas do FAQ
+    */
+    var respFaq = $( ".answer" ),
+        pergFaq = $( ".question" ),
+        displayTxt = $( "<span>" ),
+        expandirTudo = $( ".expandAll" ),
+        recollherTudo = $( ".colapseAll" );
+    
+    // Escondendo as respostas... e montando o display
+    // Optamos por fazer isto via script e não CSS devido a acessibilidade
+    $( respFaq ).css( "display", "none" );
+    $( displayTxt ).addClass( "display" ).text( "[+]" ).prependTo( ".question h4 a" );
+
+    // alterando txt display
+    function altDisplayTxt( element ) {
+        if( element.text() == "[+]" ) {
+            element.text( "[-]" );
+        } else {
+            element.text( "[+]" );
+        }
+    }
+
+    // revelando e ocultando as respotas
+    $( pergFaq ).click( function(e) {
+        e.preventDefault;
+        $( this ).next( ".answer" ).toggle();
+        altDisplayTxt( $(this).find( ".display ") );
+    });
+    
+    // btn Expandir tudo
+    expandirTudo.click( function(e) {
+        e.preventDefault;
+        respFaq.show();
+        $( ".display" ).text( "[-]" );
+    });
+    // btn Recolher tudo
+    recollherTudo.click( function(e) {
+        e.preventDefault;
+        respFaq.hide();
+        $( ".display" ).text( "[+]" );
+    });
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 
     /*
         Criando a lista de sumário e suas respectivas âncoras.
@@ -108,6 +153,10 @@ $( document ).ready( function() {
     // Não queremos que aparece a âncora antes do 1º subTítulo do manual
     // quando este mesmo vier imediatamente após a lista de sumário.
     var allAnchor = $( ".voltarSumario" );
+
+    // desabilitando o script em páginas sem subtítulo ex: FAQ
+    if(allAnchor.length == 0) { return false }
+
     if(allAnchor[0].previousElementSibling.className == "sumario row") {
         allAnchor[0].style.display = "none";
     }
@@ -139,7 +188,6 @@ $( document ).ready( function() {
     }
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-
     /*
         Controlando as informações que serão exibidas no box 'Saiba mais'
         1:  Há manuais que NÃO terão os 'Manuais Relacionados';
@@ -168,5 +216,6 @@ $( document ).ready( function() {
         hideSaibaMaisDoSumario();
     }
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 
 });

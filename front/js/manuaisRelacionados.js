@@ -854,12 +854,12 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"Consultar recursos disponíveis",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/consultar-recursos-disponiveis/",
 		"tipoIcone"	: 	"cursosOnline"
 	},
 	{
 		"manual"	: 	"Utilizar recursos",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/utilizar-recursos/",
 		"tipoIcone"	: 	"cursosOnline"
 	}
 	];
@@ -871,12 +871,12 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"Sobre os recursos",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/sobre-os-recursos/",
 		"tipoIcone"	: 	"cursosOnline"
 	},
 	{
 		"manual"	: 	"Utilizar recursos",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/utilizar-recursos/",
 		"tipoIcone"	: 	"cursosOnline"
 	}
 	];
@@ -888,12 +888,12 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"Sobre os recursos",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/sobre-os-recursos/",
 		"tipoIcone"	: 	"cursosOnline"
 	},
 	{
 		"manual"	: 	"Consultar recursos disponíveis",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/consultar-recursos-disponiveis/",
 		"tipoIcone"	: 	"cursosOnline"
 	}
 	];

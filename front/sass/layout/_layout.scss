@@ -125,8 +125,8 @@ body {
 
 /* Media query MOBILE
 
-// As regras que afetarão todas as medias queries ficam declaradas
-// aqui. O projeto foi desenvolvido sob o conceito 'mobile first'.
+// As regras que afetarão todas as medias queries ficam declaradas aqui.
+// O projeto foi desenvolvido sob o conceito 'mobile first'.
 // Mesmo após ser abdicado a aplicação para mobiles.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @media only screen and (min-width:160px) {
@@ -217,26 +217,8 @@ body {
             }
         }
         p { line-height: $meioGrid + 2;}
-
-        // btn expandir e recolher
-        // NOTA: descontinuado a partir da versão 3
-        .interat {
-            margin: 0 .5em;
-            a.expandir {
-                height: $meioGrid + 4;
-                display: inline-block;
-                width: $meioGrid + 4;
-                text-indent: -9999px;
-                margin-right: .5em;
-                background: url("../img/ui/rec-exp.png") -1px center no-repeat;
-            }
-            a.recolher {
-                @extend .expandir;
-                background: url("../img/ui/rec-exp.png") -26px center no-repeat;
-            }
-        }
-
     }
+
 
     /* regras para a seção de busca dos manuais */
     
@@ -266,7 +248,6 @@ body {
                 color: #fff !important;
             }
         }
-
         h5 {
             clear: both;
             margin: 0;
@@ -297,55 +278,6 @@ body {
                     text-decoration: none;
                     display: inline-block;
                     height: 100%;
-                }
-
-                // NOTA: descontinuado a partir da versão 3
-                .containerCategory {
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                    span {
-                        display: inline-block;
-                        height: 100%;
-                        min-height: 100%;
-                        padding: ($meioGrid / 4) 0;
-                        float: left;
-                    }
-                    // btn [+]
-                    span.click {
-                        width: 15%;
-                        max-width: ($grid - 8);
-                        text-align: center;
-                        a {
-                            @include corLink();
-                            &:visited {
-                                color: $corDefault;
-                            }
-                        }
-                    }
-                    // nome da categoria alimentado via angularjs
-                    span.titleCategory { margin-left: .75em; width: 85%; max-width: 405px}
-                }
-
-                // definindo as sublistas
-                // NOTA: descontinuado a partir da versão 3
-                ul {
-                    clear: both;
-                    li {
-                        border: none;
-                        margin: ($meioGrid / 4) 0;
-                        min-height: 1em;
-                        display: block;
-                        line-height: 1em;
-                        padding: 0;
-                        a {
-                            @include corLink();
-                            margin: 0;
-                            padding: 0 0 0 ($grid + 2);
-                            height: 100%;
-                            width: 100%;
-                        }
-                    }
                 }
             }
         }
@@ -839,6 +771,86 @@ body {
             }
         }
 
+        /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            PÁGINA: FAQ 
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+        // btns de expandir e recolher
+        .exp-rec {
+            .expandAll {
+                display: inline-block;
+                line-height: 1em;
+                height: 100%;
+                padding: 2px;
+                cursor: pointer;
+                img {
+                    margin: -3px .5em 0 0;
+                    display: inline-block;
+                }
+            }
+            .colapseAll {
+                @extend .expandAll;
+            }
+        }
+
+        // title of the sessions
+        .blackboard-faq,
+        .catme-faq,
+        .clickers-faq,
+        .recursos-faq {
+            header {
+                h1 { @include font(bold, 1.6em); }    
+            }
+        }
+
+        // questions and answer of the sessions
+        .question {
+            padding: ($meioGrid / 4) 0;
+            margin: 5px 0 0 0;
+            h4 { 
+                margin: 0;
+                padding: 0;
+                @include font(normal, 1em);
+                span {
+                    width: $meioGrid + 5;
+                    display: inline-block;
+                }
+            }
+        }
+        .answer {
+            margin: 0 0 $meioGrid ($meioGrid + 5);
+            p { margin: ($meioGrid / 4) 0 0; }
+        }
+
+        // icones de expandir e recolher
+        // estas classes serão alteradas via script
+        .icoExpandir { background: url("../img/ui/expandir.png") no-repeat left center; }
+        .icoRecolher { background: url("../img/ui/recolher.png") no-repeat left center; }
+
+        /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            PÁGINA: INDEX 
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+        .linhaIndex {
+            width: 50%;
+            margin: ($grid * 1.5) auto;
+            border-color: $corBorda;
+        }
+        .legendaIndex {
+            @include font(normal, 116.67%);
+            p {
+                margin: 0 0 ($meioGrid / 2) 0;
+                padding: 0;
+                line-height: 1.325em;
+                span.icoContato {
+                    background: transparent url("../img/ui/icoContatoIndex.png") no-repeat center center;
+                    width: $grid - 10;
+                    text-align: center;
+                    display: block;
+                    height: 24px;
+                    margin: 0 auto;
+                }
+            }
+        }
+
 
         /////////////////////////////////////////////////////////////
         // fim das novas regras
@@ -1087,7 +1099,7 @@ body {
             padding: 0 .5em;
         }
         p { text-align: center; }
-        .interat { margin: 0 .5em 0 0; }
+        // .interat { margin: 0 .5em 0 0; }
     }
 
     .navigationMain {
@@ -1163,6 +1175,19 @@ body {
         }
     }
 
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    // INDEX
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    .legendaIndex {
+        @include font(normal, 100%);
+        background: #fff;
+        padding: $meioGrid / 5;
+        border: 1px solid #faa61a;
+        p { margin: 0; 
+            span.icoContato { margin-bottom: $meioGrid / 4;}
+        }
+    }
+
 }
 
 /* Media query DESKTOP
@@ -1235,7 +1260,7 @@ body {
             text-align: left;
             margin-bottom: $grid - 10;
         }
-        .interat { margin: 0 .5em 0 ($meioGrid / 2); }
+        // .interat { margin: 0 .5em 0 ($meioGrid / 2); }
     }
 
     .navigation { @include transition(all 0.4s ease); }
@@ -1318,3 +1343,5 @@ body {
 .fltRight {
     float: right;
 }
+
+.right { text-align: right }

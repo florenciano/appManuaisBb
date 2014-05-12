@@ -395,7 +395,7 @@ manuaisBB.controller("materiaisComplementares", function ($scope) {
 	},
 	{
 		"manual"  		: 	"The Sample Quiz - Help Prepare Students for Online Tests (Kate Britt)",
-		"Link" 			: 	"http://connections.blackboard.com/posts/d6c87e40ac",
+		"Link" 			: 	"https://insper.blackboard.com/bbcswebdav/xid-529250_4",
 		"tipoIcone" 	: 	"arquivo"
 	} 
 	];
