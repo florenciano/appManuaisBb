@@ -180,7 +180,7 @@ manuaisBB.controller("materiaisComplementares", function ($scope) {
 	];
 
 	// "Criar diário"
-	$scope.Criar_diário = 
+	$scope.Criar_diario = 
 	[
 	{	
 		"manual"	: 	"Getting Started with Journal Prompts to Improve Student",

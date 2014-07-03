@@ -205,7 +205,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	];
 
 	// "Criar diário"
-	$scope.Criar_diário = 
+	$scope.Criar_diario = 
 	[
 	{
 		"manual"	: 	"Avaliar diário",
@@ -257,8 +257,8 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 		"tipoIcone"	: 	"blackboard"
 	},
 	{
-		"manual"	: 	"Receber trabalhos com verificação de plágio (SafeAssignment)",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/trabalhos/receber-trabalhos-com-verificacao-de-plagio/",
+		"manual"	: 	"Submeter arquivos para verificação de plágio ou criar base de comparação (SafeAssign)",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/trabalhos/submeter-arquivos-para-verificacao-de-plagio-ou-criar-base-de-comparacao/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{
@@ -374,12 +374,12 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 		"manual"	: 	"Criar ou alterar pesquisas (sem nota)", 
 		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/criar-ou-alterar-pesquisas-sem-nota/",
 		"tipoIcone"	: 	"blackboard"
-	},
-	{
-		"manual"	: 	"Importar testes e pesquisas do Word", 
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/importar-testes-e-pesquisas-do-word/",
-		"tipoIcone"	: 	"blackboard"
 	}
+	// {
+	// 	"manual"	: 	"Importar testes e pesquisas do Word", 
+	// 	"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/importar-testes-e-pesquisas-do-word/",
+	// 	"tipoIcone"	: 	"blackboard"
+	// }
 	];
 
 	// "Gerar relatórios de testes"
@@ -519,7 +519,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	];
 
 	// "Avaliar diário"
-	$scope.diário = 
+	$scope.Avaliar_diario = 
 	[
 	{
 		"manual"	: 	"Criar diário", 

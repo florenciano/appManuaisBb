@@ -99,7 +99,7 @@
     #BbComunicacaoCriarForum2 { @include settingsBoxImagem(31%, auto, 20px, 20px, auto) }
     #BbComunicacaoCriarForum3 { @include settingsBoxImagem(40%, auto, 30px, 20px, auto) }
     #BbComunicacaoCriarForum4 { @include settingsBoxImagem(40%, auto, 50px, 20px, auto) }
-    #BbComunicacaoCriarForum5 { @include settingsBoxImagem(50%, auto, 130px, 20px, auto) }
+    #BbComunicacaoCriarForum5 { @include settingsBoxImagem(45%, auto, 80px, 20px, auto) }
     #BbComunicacaoCriarForum6 { @include settingsBoxImagem(34%, auto, 20px, 0, auto) }
     #BbComunicacaoCriarForum7 { @include settingsBoxImagem(34%, auto, 130px, 0, auto) }
     #BbComunicacaoCriarForum8 { @include settingsBoxImagem(36%, auto, 260px, 0, auto) }
@@ -1109,5 +1109,444 @@
     // @include                          settingsBoxImagem(W%,  l,   t,   r,   b)
     #ClickerVisResVotacao1 { @include settingsBoxImagem(45%, auto, 40px, 0, auto) }
 
-
 }
+
+/* TABLET
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@media only screen and (max-width:767px) {
+    // CATEGORIA: Blackboard
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    // INDEX
+    #posLegendaIndex1,
+    #posLegendaIndex2,
+    #posLegendaIndex3,
+    #posLegendaIndex4,
+    #posLegendaIndex5,
+    #posLegendaIndex6,
+    #posLegendaIndex7,
+    #posLegendaIndex8,
+
+    // Carregar materiais no ambiente virtual
+    #BbMateriaisCarregarMateriais1,
+    #BbMateriaisCarregarMateriais2,
+    #BbMateriaisCarregarMateriais3,
+    #BbMateriaisCarregarMateriais4,
+    #BbMateriaisCarregarMateriais5,
+    #BbMateriaisCarregarMateriais6,
+    #BbMateriaisCarregarMateriais7,
+    #BbMateriaisCarregarMateriais7,
+    #BbMateriaisCarregarMateriais9,
+    #BbMateriaisCarregarMateriais10,
+    #BbMateriaisCarregarMateriais11,
+    #BbMateriaisCarregarMateriais12,
+    #BbMateriaisCarregarMateriais13,
+    
+    // Compartilhar materiais com os alunos
+    #BbMateraisCompartilharMateriaisAlunos1,
+    #BbMateraisCompartilharMateriaisAlunos2,
+    #BbMateraisCompartilharMateriaisAlunos3,
+    #BbMateraisCompartilharMateriaisAlunos4,
+    #BbMateraisCompartilharMateriaisAlunos5,
+    #BbMateraisCompartilharMateriaisAlunos6,
+    #BbMateraisCompartilharMateriaisAlunos7,
+    #BbMateraisCompartilharMateriaisAlunos8,
+    #BbMateraisCompartilharMateriaisAlunos9,
+    #BbMateraisCompartilharMateriaisAlunos10,
+    #BbMateraisCompartilharMateriaisAlunos11,
+    #BbMateraisCompartilharMateriaisAlunos12,
+    #BbMateraisCompartilharMateriaisAlunos13,
+    #BbMateraisCompartilharMateriaisAlunos14,
+    #BbMateraisCompartilharMateriaisAlunos15,
+    #BbMateraisCompartilharMateriaisAlunos16,
+    #BbMateraisCompartilharMateriaisAlunos17,
+    #BbMateraisCompartilharMateriaisAlunos18,
+    #BbMateraisCompartilharMateriaisAlunos19,
+    
+    // Aproveitar materiais de um curso para outro
+    #BbMateriaisAproveitarMateriais1,
+    #BbMateriaisAproveitarMateriais2,
+    #BbMateriaisAproveitarMateriais3,
+    #BbMateriaisAproveitarMateriais4,
+    #BbMateriaisAproveitarMateriais5
+
+    // Enviar avisos aos alunos
+    #BbComunicacaoEnviarAvisosAlunos1,
+    #BbComunicacaoEnviarAvisosAlunos2,
+    #BbComunicacaoEnviarAvisosAlunos3,
+    #BbComunicacaoEnviarAvisosAlunos4,
+    #BbComunicacaoEnviarAvisosAlunos5,
+
+    // Criar fórum de discussão
+    #BbComunicacaoCriarForum1,
+    #BbComunicacaoCriarForum2,
+    #BbComunicacaoCriarForum3,
+    #BbComunicacaoCriarForum4,
+    #BbComunicacaoCriarForum5,
+    #BbComunicacaoCriarForum6,
+    #BbComunicacaoCriarForum7,
+    #BbComunicacaoCriarForum8,
+    #BbComunicacaoCriarForum9,
+    #BbComunicacaoCriarForum10,
+    #BbComunicacaoCriarForum11,
+    #BbComunicacaoCriarForum12,
+    #BbComunicacaoCriarForum13,
+
+    // Criar blog
+    #BbComunicacaoCriarBlog1,
+    #BbComunicacaoCriarBlog2,
+    #BbComunicacaoCriarBlog3,
+    #BbComunicacaoCriarBlog4,
+    #BbComunicacaoCriarBlog5,
+    #BbComunicacaoCriarBlog6,
+    #BbComunicacaoCriarBlog7,
+    #BbComunicacaoCriarBlog8,
+    #BbComunicacaoCriarBlog9,
+    #BbComunicacaoCriarBlog10,
+    #BbComunicacaoCriarBlog11,
+
+    // Criar wiki
+    #BbComunicacaoCriarWiki1,
+    #BbComunicacaoCriarWiki2,
+    #BbComunicacaoCriarWiki3,
+    #BbComunicacaoCriarWiki4,
+    #BbComunicacaoCriarWiki5,
+    #BbComunicacaoCriarWiki6,
+    #BbComunicacaoCriarWiki7,
+    #BbComunicacaoCriarWiki8,
+    #BbComunicacaoCriarWiki9,
+    #BbComunicacaoCriarWiki10,
+
+    // Criar diário
+    #BbComunicacaoCriarDiario1,
+    #BbComunicacaoCriarDiario2,
+    #BbComunicacaoCriarDiario3,
+    #BbComunicacaoCriarDiario4,
+    #BbComunicacaoCriarDiario5,
+    #BbComunicacaoCriarDiario6,
+    #BbComunicacaoCriarDiario7,
+    #BbComunicacaoCriarDiario8,
+    #BbComunicacaoCriarDiario9,
+    #BbComunicacaoCriarDiario10,
+    #BbComunicacaoCriarDiario11,
+
+    // Receber trabalhos com verificação de plágio (SafeAssignment)
+    #BbTrabalhosRecTrabSemPlagio1,
+    #BbTrabalhosRecTrabSemPlagio2,
+    #BbTrabalhosRecTrabSemPlagio3,
+    #BbTrabalhosRecTrabSemPlagio4,
+    #BbTrabalhosRecTrabSemPlagio5,
+    #BbTrabalhosRecTrabSemPlagio6,
+
+    // Receber trabalhos com verificação de plágio (Exercício)
+    #BbTrabalhosRecTrabComPlagio1,
+    #BbTrabalhosRecTrabComPlagio2,
+    #BbTrabalhosRecTrabComPlagio3,
+    #BbTrabalhosRecTrabComPlagio4,
+    #BbTrabalhosRecTrabComPlagio5,
+    #BbTrabalhosRecTrabComPlagio6,
+
+    // Criar grupos
+    #BbGruposCriarGrupos1,
+    #BbGruposCriarGrupos2,
+    #BbGruposCriarGrupos3,
+    #BbGruposCriarGrupos4,
+    #BbGruposCriarGrupos5,
+    #BbGruposCriarGrupos6,
+    #BbGruposCriarGrupos7,
+    #BbGruposCriarGrupos8,
+    #BbGruposCriarGrupos9,
+    #BbGruposCriarGrupos10,
+    #BbGruposCriarGrupos11,
+    #BbGruposCriarGrupos12,
+
+    // Criar ou alterar testes com nota
+    #BbTesPesquisaCriarTesComNota1,
+    #BbTesPesquisaCriarTesComNota2,
+    #BbTesPesquisaCriarTesComNota3,
+    #BbTesPesquisaCriarTesComNota4,
+    #BbTesPesquisaCriarTesComNota5,
+    #BbTesPesquisaCriarTesComNota6,
+    #BbTesPesquisaCriarTesComNota7,
+    #BbTesPesquisaCriarTesComNota8,
+    #BbTesPesquisaCriarTesComNota9,
+    #BbTesPesquisaCriarTesComNota10,
+    #BbTesPesquisaCriarTesComNota11,
+    #BbTesPesquisaCriarTesComNota12,
+    #BbTesPesquisaCriarTesComNota13,
+    #BbTesPesquisaCriarTesComNota14,
+    #BbTesPesquisaCriarTesComNota15,
+    #BbTesPesquisaCriarTesComNota16,
+    #BbTesPesquisaCriarTesComNota17,
+    #BbTesPesquisaCriarTesComNota18,
+    #BbTesPesquisaCriarTesComNota19,
+    #BbTesPesquisaCriarTesComNota20,
+    #BbTesPesquisaCriarTesComNota21,
+    #BbTesPesquisaCriarTesComNota22,
+    #BbTesPesquisaCriarTesComNota23,
+
+    // Criar ou alterar pesquisas sem nota
+    #BbTesPesquisaCriarPesSemNota1,
+    #BbTesPesquisaCriarPesSemNota2,
+    #BbTesPesquisaCriarPesSemNota3,
+    #BbTesPesquisaCriarPesSemNota4,
+    #BbTesPesquisaCriarPesSemNota5,
+    #BbTesPesquisaCriarPesSemNota6,
+    #BbTesPesquisaCriarPesSemNota7,
+    #BbTesPesquisaCriarPesSemNota8,
+    #BbTesPesquisaCriarPesSemNota9,
+    #BbTesPesquisaCriarPesSemNota10,
+    #BbTesPesquisaCriarPesSemNota11,
+    #BbTesPesquisaCriarPesSemNota12,
+    #BbTesPesquisaCriarPesSemNota13,
+    #BbTesPesquisaCriarPesSemNota14,
+    #BbTesPesquisaCriarPesSemNota15,
+    #BbTesPesquisaCriarPesSemNota16,
+    #BbTesPesquisaCriarPesSemNota17,
+    #BbTesPesquisaCriarPesSemNota18,
+    #BbTesPesquisaCriarPesSemNota19,
+    #BbTesPesquisaCriarPesSemNota20,
+    #BbTesPesquisaCriarPesSemNota21,
+    #BbTesPesquisaCriarPesSemNota22,
+    #BbTesPesquisaCriarPesSemNota23,
+    #BbTesPesquisaCriarPesSemNota24,
+    #BbTesPesquisaCriarPesSemNota25,
+    #BbTesPesquisaCriarPesSemNota26,
+    #BbTesPesquisaCriarPesSemNota27,
+    #BbTesPesquisaCriarPesSemNota28,
+    #BbTesPesquisaCriarPesSemNota29,
+    #BbTesPesquisaCriarPesSemNota30,
+    #BbTesPesquisaCriarPesSemNota31,
+    #BbTesPesquisaCriarPesSemNota32,
+
+    // Importar testes e pesquisas do word
+    #BbTesPesquisaImportarWord1,
+    #BbTesPesquisaImportarWord2,
+    #BbTesPesquisaImportarWord3,
+    #BbTesPesquisaImportarWord4,
+    #BbTesPesquisaImportarWord5,
+    #BbTesPesquisaImportarWord6,
+
+    // Gerar relatórios de testes
+    #BbTesPesquisagerarRel1,
+    #BbTesPesquisagerarRel2,
+    #BbTesPesquisagerarRel3,
+    #BbTesPesquisagerarRel4,
+    #BbTesPesquisagerarRel5,
+    #BbTesPesquisagerarRel6,
+    #BbTesPesquisagerarRel7,
+    #BbTesPesquisagerarRel8,
+    #BbTesPesquisagerarRel9,
+    #BbTesPesquisagerarRel10,
+
+    // Criar Rubric
+    #BbRubricsCriarRubric1,
+    #BbRubricsCriarRubric2,
+    #BbRubricsCriarRubric3,
+    #BbRubricsCriarRubric4,
+
+    // Configurar a central de notas
+    #BbAvaliacaoConfigCentralNotas1,
+    #BbAvaliacaoConfigCentralNotas2,
+    #BbAvaliacaoConfigCentralNotas3,
+    #BbAvaliacaoConfigCentralNotas4,
+    #BbAvaliacaoConfigCentralNotas5,
+
+    // Configurar a central de notas
+    #BbAvaliacaoDarNotaForAmb1,
+    #BbAvaliacaoDarNotaForAmb2,
+    #BbAvaliacaoDarNotaForAmb3,
+    #BbAvaliacaoDarNotaForAmb4,
+    #BbAvaliacaoDarNotaForAmb5,
+    #BbAvaliacaoDarNotaForAmb6,
+
+    // Corrigir trabalhos sem verificação de plágio
+    #BbAvaliacaoCorrigirSemPlagio1,
+    #BbAvaliacaoCorrigirSemPlagio2,
+    #BbAvaliacaoCorrigirSemPlagio3,
+    #BbAvaliacaoCorrigirSemPlagio4,
+    #BbAvaliacaoCorrigirSemPlagio5,
+    #BbAvaliacaoCorrigirSemPlagio6,
+    #BbAvaliacaoCorrigirSemPlagio7,
+
+    // Avaliar fórum de discussão
+    #BbAvaliacaoAvForumDiscussao1,
+    #BbAvaliacaoAvForumDiscussao2,
+    #BbAvaliacaoAvForumDiscussao3,
+    #BbAvaliacaoAvForumDiscussao4,
+
+    // Avaliar blog
+    #BbAvaliacaoCriarBlog1,
+    #BbAvaliacaoCriarBlog2,
+    #BbAvaliacaoCriarBlog3,
+    #BbAvaliacaoCriarBlog4,
+
+    // Avaliar Diário
+    #BbAvaliacaoAvaliarDiario1,
+    #BbAvaliacaoAvaliarDiario2,
+    #BbAvaliacaoAvaliarDiario3,
+    #BbAvaliacaoAvaliarDiario4,
+
+    // Avaliar Wiki
+    #BbAvaliacaoAvaliarWiki1,
+    #BbAvaliacaoAvaliarWiki2,
+    #BbAvaliacaoAvaliarWiki3,
+    #BbAvaliacaoAvaliarWiki4,
+    #BbAvaliacaoAvaliarWiki5,
+    #BbAvaliacaoAvaliarWiki6,
+    #BbAvaliacaoAvaliarWiki7,
+
+    // Corrigir com Rubric
+    #BbAvaliacaoCorrigirRubric1,
+    #BbAvaliacaoCorrigirRubric2,
+    #BbAvaliacaoCorrigirRubric3,
+
+
+    // Corrigir trabalhos com verificação de plágio
+    #BbAvaliacaoCorrigirComPlagio1,
+    #BbAvaliacaoCorrigirComPlagio2,
+    #BbAvaliacaoCorrigirComPlagio3,
+    #BbAvaliacaoCorrigirComPlagio4,
+    #BbAvaliacaoCorrigirComPlagio5,
+
+    // Exportar as notas para o sistema acadêmico
+    #BbAvaliacaoExSistAcademico1,
+    #BbAvaliacaoExSistAcademico2,
+    #BbAvaliacaoExSistAcademico3,
+
+    // Criar e visualizar eventos
+    #BbCalendarioCriarVisualizarEventos1,
+    #BbCalendarioCriarVisualizarEventos2,
+    #BbCalendarioCriarVisualizarEventos3,
+    #BbCalendarioCriarVisualizarEventos4,
+    #BbCalendarioCriarVisualizarEventos5,
+    #BbCalendarioCriarVisualizarEventos6,
+    #BbCalendarioCriarVisualizarEventos7,
+    #BbCalendarioCriarVisualizarEventos8,
+
+    // Sincronizar com e-mail pessoal
+    #BbCalendarioSincronizarEmail1,
+    #BbCalendarioSincronizarEmail2,
+    #BbCalendarioSincronizarEmail3,
+    #BbCalendarioSincronizarEmail4,
+    #BbCalendarioSincronizarEmail5,
+    #BbCalendarioSincronizarEmail6,
+    #BbCalendarioSincronizarEmail7,
+    #BbCalendarioSincronizarEmail8,
+    #BbCalendarioSincronizarEmail9,
+    #BbCalendarioSincronizarEmail10,
+    #BbCalendarioSincronizarEmail11,
+    #BbCalendarioSincronizarEmail12,
+    #BbCalendarioSincronizarEmail13,
+
+    
+    // Criar conta
+    #CatmeSobreCriarConta1,
+    #CatmeSobreCriarConta2,
+    #CatmeSobreCriarConta3,
+
+    // Criar classe
+    #CatmePesqAvalCriarClasse1,
+    #CatmePesqAvalCriarClasse2,
+    #CatmePesqAvalCriarClasse3,
+
+    // Criar pesquisa de avaliação
+    #CatmePesqAvalCriarPesq1,
+    #CatmePesqAvalCriarPesq2,
+    #CatmePesqAvalCriarPesq3,
+    #CatmePesqAvalCriarPesq4,
+    #CatmePesqAvalCriarPesq5,
+    #CatmePesqAvalCriarPesq6,
+    #CatmePesqAvalCriarPesq7,
+    #CatmePesqAvalCriarPesq8,
+
+    // Criar pesquisa de avaliação
+    #CatmePesqAvalEditarInfo1,
+    #CatmePesqAvalEditarInfo2,
+    #CatmePesqAvalEditarInfo3,
+
+    // Acessar resultados de uma avaliação
+    #CatmeAnalisarAcessarRes1,
+    #CatmeAnalisarAcessarRes2,
+    #CatmeAnalisarAcessarRes3,
+    #CatmeAnalisarAcessarRes4,
+    #CatmeAnalisarAcessarRes5,
+    #CatmeAnalisarAcessarRes6,
+    #CatmeAnalisarAcessarRes7,
+
+    // Trabalhar resultados no excel
+    #CatmeAnalisarResTrabExcel1,
+    #CatmeAnalisarResTrabExcel2,
+    #CatmeAnalisarResTrabExcel3,
+    #CatmeAnalisarResTrabExcel4,
+
+    // Funcionamento dos votadores eletrônicos
+    #ClickerSobreFerramenta1,
+    #ClickerSobreFerramenta2,
+    #ClickerSobreFerramenta3,
+    #ClickerSobreFerramenta4,
+    #ClickerSobreFerramenta5,
+    #ClickerSobreFerramenta6,
+    #ClickerSobreFerramenta7,
+    #ClickerSobreFerramenta8,
+    #ClickerSobreFerramenta9,
+
+    // Criar questões e configurar votação nos slides
+    #ClickerCriarQuestoes1,
+    #ClickerCriarQuestoes2,
+    #ClickerCriarQuestoes3,
+    #ClickerCriarQuestoes4,
+    #ClickerCriarQuestoes5,
+    #ClickerCriarQuestoes6,
+    #ClickerCriarQuestoes7,
+    #ClickerCriarQuestoes8,
+
+    // Criar questões e configurar votação nos slides
+    #ClickerInserirCronometro1,
+    #ClickerInserirCronometro2,
+    #ClickerInserirCronometro3,
+
+    // Criar lista alunos
+    #ClickerCriarListaAlunos1,
+    #ClickerCriarListaAlunos2,
+    #ClickerCriarListaAlunos3,
+    #ClickerCriarListaAlunos4,
+
+    // Vincular lista de alunos
+    #ClickerVincularListaAlunos1,
+    #ClickerVincularListaAlunos2,
+    #ClickerVincularListaAlunos3,
+    #ClickerVincularListaAlunos4,
+    #ClickerVincularListaAlunos5,
+    #ClickerVincularListaAlunos6,
+
+    // Durante a aula
+    #clickersDuranteAula1,
+    #clickersDuranteAula2,
+    #clickersDuranteAula3,
+    #clickersDuranteAula4,
+
+
+
+    // importar testes e pesquisa do word
+    #BbTesPesquisaImportarWord1,
+    #BbTesPesquisaImportarWord2,
+    #BbTesPesquisaImportarWord3,
+    #BbTesPesquisaImportarWord4,
+    #BbTesPesquisaImportarWord5,
+    #BbTesPesquisaImportarWord6,
+    #BbTesPesquisaImportarWord7,
+    #BbTesPesquisaImportarWord8,
+    #BbTesPesquisaImportarWord9,
+    #BbTesPesquisaImportarWord10,
+    #BbTesPesquisaImportarWord11,
+    #BbTesPesquisaImportarWord12
+    {
+        clear: both;
+        width: 100%;
+        float: left;
+        margin: 5px 0 0 0;
+    }
+}
+
+
