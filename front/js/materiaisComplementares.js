@@ -246,6 +246,16 @@ manuaisBB.controller("materiaisComplementares", function ($scope) {
 		"tipoIcone" : 	"video"
 	}
 	];
+	
+	// "Receber trabalhos para autoavaliação e avaliação de colegas"
+	$scope.Receber_trabalhos_para_autoavaliacao_e_avaliacao_de_colegas = 
+	[
+	{	
+		"manual"	: 	"Self and Peer Assessment",
+		"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_SP_10_and_SP_11/Instructor/070_Assignments/005_Self_and_Peer_Assessment",
+		"tipoIcone" : 	"site"
+	}
+	];
 
 	// CATEGORIA: Testes e Pesquisas
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

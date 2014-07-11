@@ -184,7 +184,7 @@
                             </li>
                         </ol>
 
-                        <h5 class="icoClickers">Votadores eletrônicos (clickers)</h5>
+                        <!-- <h5 class="icoClickers">Votadores eletrônicos (clickers)</h5>
                         <ol class="noCategory" ng-repeat="item in clickerSobreFerramenta | filter: {manual:searchText}">
                             <li class="nameCategory">
                                 <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
@@ -237,18 +237,46 @@
                             <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
                             </li>
+                        </ol> -->
+
+                        <h5 class="icoCursosOnline">Casos, Simuladores e Cursos online</h5>
+                        <ol class="noCategory" ng-repeat="item in SobreOsRecursos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in ConsultarRecursosDisponiveis | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in UtilizarRecursos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
                         </ol>
                         
-                        
-
                         <div class="faqBusca icoFaq">
                             <h5>
-                                <a href="../../faq/index.html" >FAQ</a>
+                            <ol class="noCategory">
+                                <li><a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/faq/index.html" class="">FAQ</a></li>
+                            </ol>
                             </h5>
                         </div>
                         <div class="outros">
                             <h6>
-                                <a href="../../nao-encontrou-o-que-queria/index.html">Não encontrou o que queria?</a>
+                                <a href="mailto:tai@insper.edu.br?subject=TAI%20-%20Manuais%20de%20utiliza&#231;&#227;o">Não encontrou o que queria?</a>
                             </h6>
                         </div>
                     </nav>

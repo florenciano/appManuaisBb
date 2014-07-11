@@ -818,12 +818,19 @@ body {
         .answer {
             margin: 0 0 $meioGrid ($meioGrid + 5);
             p { margin: ($meioGrid / 4) 0 0; }
+            ul, ol { 
+                padding: 0 0 0 1.25em;
+                li { line-height: 1.25em; } 
+            }
         }
 
         // icones de expandir e recolher
         // estas classes serão alteradas via script
         .icoExpandir { background: url("../img/ui/expandir.png") no-repeat left center; }
         .icoRecolher { background: url("../img/ui/recolher.png") no-repeat left center; }
+
+        // listas
+
 
         /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
             PÁGINA: INDEX 
@@ -947,16 +954,17 @@ body {
         }
         .icos { margin: 0 .5em; } // ícones nos box de destaques
        
-        // textos em ênfase dentro dos boxes
-        .enfaseBox { 
-            color: #fff;
-            text-transform: uppercase;
-            background-color: $corDefault;
-            padding: 2px .5em;
-        }
 
         h4 { margin: 0 0 ($meioGrid / 4) 0; }
 
+    }
+
+    // textos em ênfase dentro dos boxes
+    .enfaseBox { 
+        color: #fff;
+        text-transform: uppercase;
+        background-color: $corDefault;
+        padding: 2px .5em;
     }
 
     // saiba mais

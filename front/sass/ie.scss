@@ -865,6 +865,10 @@ button.close {
     .answer {
         margin: 0 0 $meioGrid ($meioGrid + 5);
         p { margin: ($meioGrid / 4) 0 0; }
+        ul, ol { 
+            padding: 0 0 0 1.25em;
+            li { line-height: 1.25em; } 
+        }
     }
 
     // icones de expandir e recolher

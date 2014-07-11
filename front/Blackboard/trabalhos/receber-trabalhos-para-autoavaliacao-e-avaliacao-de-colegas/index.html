@@ -102,9 +102,9 @@
 
                         <ol class="noCategory" ng-repeat="item in BbTrabalhos | filter: {manual:searchText}">
                             <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
-                            <li class="sublist" ng-show="item.manual.length > 1">
+                            <li class="sublist ng-class: addMark()" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
                             </li>
                         </ol>
@@ -139,9 +139,9 @@
 
                         <ol class="noCategory" ng-repeat="item in BbAvaliacao | filter: {manual:searchText}">
                             <li class="nameCategory">
-                                <p  class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
-                            <li class="sublist ng-class: addMark()" ng-show="item.manual.length > 1">
+                            <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
                             </li>
                         </ol>
@@ -288,7 +288,7 @@
                         <div class="cabecalho fix">
                             <p>
                                 <!-- adicionar a data da produção do material -->
-                                <span><strong>Atualizado: </strong>24/02/2014</span>
+                                <span><strong>Atualizado: </strong>11/07/2014</span>
                             </p>
                         </div>
                         <hr>
@@ -296,7 +296,7 @@
                             <p>
                                 <span class="nameCategory">Blackboard </span>
                                 <span>&#62; </span>
-                                Corrigir trabalhos sem verificação de plágio (Exercício)
+                                Receber trabalhos para autoavaliação e avaliação de colegas
                             </p>
                         </div>
                     </section>
@@ -313,7 +313,8 @@
                      -->
 
                     <article class="contentMain row">
-                        <h1>Corrigir trabalhos sem verificação de plágio (Exercício)</h1>
+                        <h1>Receber trabalhos para autoavaliação e avaliação de colegas</h1>
+                        <p>A ferramenta <strong>Autoavaliação e avaliação de colegas</strong>  possibilita que os alunos submetam trabalhos e, de acordo com critérios predefinidos, avaliem os trabalhos um dos outros. A avaliação pode ser anônima ou identificada.</p>
 
                         <div class="margemParaImagem" style="margin-top:20px"></div>
 
@@ -340,60 +341,164 @@
 
                         -->
 
+                        <h2 id="subTitulo1">Funcionamento da ferramenta</h2>
+                        <p>Uma vez disponível aos alunos, a atividade possui dois grandes momentos: primeiro, os alunos submetem seus trabalhos; na sequência, ocorre o período de avaliação. Acompanhe o fluxo complexo na ilustração.</p>
+
                         <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/avaliacao/corrigir-trabalhos-sem-verificacao-de-plagio/step1.png" alt="" class="imgLeft">
-                            <div class="boxDestaque" id="BbAvaliacaoCorrigirSemPlagio1">
-                                <p>Identifique a coluna do Exercício e selecione a tentativa nas células que possuem o símbolo <span class="enfaseBox">!</span>.</p>
+                            <img src="../../../img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step1.png" alt="" class="">
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao1">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                             </div>
-                            <div class="boxDestaqueAdicional" id="BbAvaliacaoCorrigirSemPlagio2">
-                                <p>A exclamação indica que a atividade precisa de correção.</p>
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao2">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, voluptates?</p>
+                            </div>
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao3">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            </div>
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao4">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, voluptates?</p>
+                            </div>
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao5">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                             </div>
                         </div>
 
                         <div class="margemParaImagem" style="margin-top:40px"></div>
 
-                        <p>O arquivo enviado pelo aluno será automaticamente exibido na tela:</p>
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/avaliacao/corrigir-trabalhos-sem-verificacao-de-plagio/step2.png" alt="" class="imgLeft">
-                            <div class="boxDestaque" id="BbAvaliacaoCorrigirSemPlagio3">
-                                <p>Acrescente anotações e comentários diretamente ao texto do aluno.</p>
-                            </div>
-                            <div class="boxDestaque" id="BbAvaliacaoCorrigirSemPlagio4">
-                                <p>Em <strong>Classificar</strong>, atribua a nota ao trabalho. Caso haja mais de uma tentativa é possível lançar uma nota para cada uma delas.</p>
-                            </div>
-                            <div class="boxDestaque" id="BbAvaliacaoCorrigirSemPlagio5">
-                                <p>Se necessário, deixe um feedback geral ao aluno.</p>
-                            </div>
-                        </div>
+                        <h2 id="subTitulo2">Restrições da ferramenta</h2>
+                        <p>Antes de usar a ferramenta, é necessário ter ciência de algumas restrições:</p>
+                        <h4 class="subTopicos">Só é possível criar atividades que envolvam a turma toda.</h4>
+                        <p>Não é possível criar atividades envolvendo apenas alguns alunos ou mesmo grupos específicos de alunos. No período de avaliação, o sistema faz o sorteio e distribuição dos trabalhos para correção considerando todos os alunos inscritos na disciplina.</p>
+                        <h4 class="subTopicos">Se algum aluno não submeter o trabalho no período de entrega, ainda assim entrará no sorteio e distribuição de trabalhos para correção.</h4>
+                        <p>Pode acontecer de alunos receberem para corrigir o trabalho “vazio” de quem não fez. Além disso, quem não fez a atividade receberá trabalhos para corrigir e, se não o fizer, deixará os colegas que seriam avaliados sem um dos feedbacks.</p>
+                        <h4 class="subTopicos">Não é possível modificar os prazos após sorteio e distribuição dos trabalhos.</h4>
+                        <p>Uma vez que o sistema sorteou e distribuiu os trabalhos para correção, não é possível alterar o prazo de entrega. Assim, se os alunos não tiverem entregue o trabalho no prazo, não terão uma segunda chance. Apesar disso, os trabalhos não entregues entrarão no sorteio para que os colegas o avaliem com nota zero.</p>
+                        <h4 class="subTopicos">Os critérios de avaliação permitem nota parcial, mas não admitem valores decimais.</h4>
+                        <p>O sistema só admite atribuição de notas inteiras na avaliação. Por exemplo: se determinado critério vale até 2 pontos e admite nota parcial, os alunos poderão atribuir as notas <span class="enfaseBox">0</span>, <span class="enfaseBox">1</span> ou <span class="enfaseBox">2</span>, mas não poderão atribuir notas quebradas, como <span class="enfaseBox">1,5</span>.</p>
+                        <h4 class="subTopicos">Os trabalhos submetidos não passam por verificação de plágio.</h4>
+                        <p>Para verificar eventuais plágios nos trabalhos enviados pelos alunos é necessário analisar os arquivos no <a href="#">SafeAssign</a>.</p>
 
                         <div class="margemParaImagem" style="margin-top:40px"></div>
 
-                        <p>Além das anotações diretamente na tela, você pode fazer o download dos trabalhos.</p>
-                        <p>Para baixar os arquivos separadamente:</p>
+                        <h2 id="subTitulo3">Criar atividade</h2>
                         <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/avaliacao/corrigir-trabalhos-sem-verificacao-de-plagio/step3.png" alt="" class="imgLeft">
-                        </div>
-
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
-
-                        <p>Para baixar todos os arquivos de uma única vez:</p>
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/avaliacao/corrigir-trabalhos-sem-verificacao-de-plagio/step4.png" alt="" class="imgLeft">
+                            <img src="../../../img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step2.png" alt="" class="imgLeft">
                         </div>
 
                         <div class="margemParaImagem" style="margin-top:40px"></div>
 
                         <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/avaliacao/corrigir-trabalhos-sem-verificacao-de-plagio/step5.png" alt="" class="imgLeft">
-                            <div class="boxDestaque" id="BbAvaliacaoCorrigirSemPlagio6">
-                                <p>Selecione de quais alunos/grupos você deseja baixar os trabalhos.</p>
+                            <img src="../../../img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step3.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao6">
+                                <p>Informe nome, instruções e período em que os alunos poderão submeter seus trabalhos.</p>
                             </div>
-                            <div class="boxDestaque" id="BbAvaliacaoCorrigirSemPlagio7">
-                                <p>Caso o exercício aceite mais de uma tentativa, selecione se deseja baixar apenas os arquivos da última tentativa ou os arquivos de todas as tentativas.</p>
+                        </div>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step4.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao7">
+                                <p>Informe período em que os alunos farão a avaliação de trabalhos dos colegas.</p>
+                            </div>
+                        </div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step5.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao8">
+                                <div class="row fltLeft">
+                                    <div class="c12"style="margin-bottom:5px">
+                                        <div class="c3">
+                                            <img src="../../../img/Blackboard/avaliacao/configurar-a-central-de-notas/step1a.png" alt="">
+                                        </div>
+                                        <div class="c9">
+                                            <p>Se “sim”, aluno não sabe de quem é o trabalho que recebeu para avaliar, nem quem o avaliou.</p> 
+                                        </div>    
+                                    </div>
+
+                                    <div class="c12"style="margin-bottom:5px">
+                                        <div class="c3">
+                                            <img src="../../../img/Blackboard/avaliacao/configurar-a-central-de-notas/step1b.png" alt="">
+                                        </div>
+                                        <div class="c9">
+                                            <p>Se “sim”, alunos também avaliarão seus próprios trabalhos.</p> 
+                                        </div>    
+                                    </div>
+
+                                    <div class="c12"style="margin-bottom:5px">
+                                        <div class="c3">
+                                            <img src="../../../img/Blackboard/avaliacao/configurar-a-central-de-notas/step1c.png" alt="">
+                                        </div>
+                                        <div class="c9">
+                                            <p>Se “sim”, após validação do professor, alunos recebem as notas/feedbacks de seus pares.</p> 
+                                        </div>    
+                                    </div>
+
+                                    <div class="c12"style="margin-bottom:5px">
+                                        <div class="c3">
+                                            <img src="../../../img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step5d.png" alt="">
+                                        </div>
+                                        <div class="c9">
+                                            <p>Quantos trabalhos cada aluno receberá para avaliar, (excluindo o seu próprio, em caso de autoavaliação).</p> 
+                                        </div>    
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step6.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao9">
+                                <p>Configure as regras de disponibilização da atividade para os alunos e confirme.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <h2 id="subTitulo3">Criar pergunta</h2>
+                        <p>Uma vez que a atividade é criada é preciso criar uma ou mais perguntas para que os alunos desenvolvam a atividade.</p>
+                        <p>Cada pergunta equivale a uma “entrega” que o aluno deve fazer, seja em forma de texto digitado no próprio ambiente, seja em forma de arquivo anexo.</p>
+                        <p>Se você deseja que os alunos entreguem um único arquivo, basta criar uma única pergunta, mesmo que o enunciado possua mais de um tópico. Se você deseja que os alunos apresentem diversas respostas, é necessário criar mais de uma pergunta.</p>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step7.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao10">
+                                <p>Em <strong>Texto da pergunta</strong>, insira o enunciado que os alunos enxergarão no momento que estiverem submetendo a resposta/arquivo.</p>
+                            </div>
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao11">
+                                <p>Em <strong>Resposta do modelo</strong>, insira a resposta esperada/considerada correta.</p>
+                                <p>Os alunos a enxergarão apenas no momento em que estiverem corrigindo atividades.</p>
+                            </div>
+                            <div class="boxDestaqueAdicional" id="BbTrabalhosRecTrabParaAutoavaliacao12">
+                                <p>O campo <strong>Resposta do modelo</strong> não é obrigatório. A depender do caso, você pode deixá-lo vazio, explicitando nos passos seguintes os critérios de avaliação.</p>
+                            </div>
+                        </div>
+
+                        <h2 id="subtitulo4">Adicionar critérios de correção</h2>
+                        <p>Após criar uma ou mais perguntas é necessário informar seu critério de correção. É com base nos critérios que os alunos realizarão a autoavaliação e avaliação dos colegas.</p>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step8.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao13">
+                                <p>Ao clicar em <strong>Critérios</strong>, você poderá criar um novo critério.</p>
+                                <p>Se preferir, você também pode criar critério de contagem de palavras <span class="enfaseBox">A</span> ou reaproveitar modelos de critérios <span class="enfaseBox">B</span>.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step9.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao14">
+                                <p>Descreva o critério.</p>
+                            </div>
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao15">
+                                <p>Informe o total de pontos e escolha o modelo de atribuição:</p>
+                                <ul>
+                                    <li>Tudo ou nada: não admite notas parciais. Ex.: se pontos possíveis for <strong>2</strong>, aluno só pode atribuir <strong>0</strong> ou <strong>2</strong>.</li>
+                                    <li>Crédito parcial: admite notas parciais (não decimais). Ex.: se pontos possíveis for <strong>2</strong>, aluno pode atribuir <strong>0</strong>, <strong>1</strong> ou <strong>2</strong>.</li>
+                                </ul>
+                            </div>
+                        </div>
+
 
                         <!-- 
                         
@@ -417,14 +522,14 @@
                         <h4 id="relacionado">Manuais relacionados</h4>
                         <ul  ng-controller="manuaisRelacionados">
                             <!-- class="default"  -->
-                            <li ng-repeat="item in Corrigir_trabalhos_sem_verificacao_de_plagio" class="ng-class: item.tipoIcone">
+                            <li ng-repeat="item in Receber_trabalhos_para_autoavaliacao_e_avaliacao_de_colegas" class="ng-class: item.tipoIcone">
                                 <div><a href="{{item.Link}}">{{item.manual}}</a></div>
                             </li>
                         </ul>
                         
                         <h4 id="complementar">Materiais complementares</h4>
                         <ul ng-controller="materiaisComplementares">
-                            <li ng-repeat="item in Corrigir_trabalhos_sem_verificacao_de_plagio" class="ng-class: item.tipoIcone">
+                            <li ng-repeat="item in Receber_trabalhos_para_autoavaliacao_e_avaliacao_de_colegas" class="ng-class: item.tipoIcone">
                                 <div><a href="{{item.Link}}" target="_blank">{{item.manual}}</a></div>
                             </li>
                         </ul>

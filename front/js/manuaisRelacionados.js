@@ -281,6 +281,12 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	}
 	];
 
+	// "Receber trabalhos para autoavaliação e avaliação de colegas"
+	// $scope.Receber_trabalhos_para_autoavaliacao_e_avaliacao_de_colegas = 
+	// [
+	
+	// ];
+
 	// CATEGORIA: Grupos
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
