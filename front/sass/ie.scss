@@ -237,9 +237,9 @@ button.close {
 
     // regra da categoria vigente do manual ex: categoria 'Trabalhos' do Blackboard
     .selectedCategory {
-        border: 1px solid $corDefault;
+        // border: 1px solid $corDefault;
         padding: ($meioGrid / 4) 0;
-        margin-top: $meioGrid / 2;
+        // margin-top: $meioGrid / 2;
         color: #fff;
         @include radius();
     }
@@ -514,6 +514,12 @@ button.close {
         tr td:last-child { border-width: 0px 0px 1px 0px; }
         tr:last-child td:last-child{ border-width: 0px 0px 0px 0px; }
         }
+    }
+
+    // ... avaliação entre colegas
+    .subTopicos {
+        margin: 0;
+        & + p { margin: 0 0 1em 0; }
     }
 
     // Novos elementos do catme
@@ -977,6 +983,7 @@ button.close {
             margin: 0;
             img { display: inline-block }
         }
+        ul {  }
     }
 
     .boxDestaqueAdicional {
@@ -993,6 +1000,7 @@ button.close {
             a { @include corLinkUpBox($corSec01); }
             img { display: inline-block }
         }
+        ul { padding-left: 2em; }
     }
 
     .icos { margin: 0 .5em; } // ícones nos box de destaques
@@ -1084,6 +1092,7 @@ button.close {
 .alert { display: none !important }
 
 .wrapper { margin: $grid auto; }
+.fixedWrapperIe { margin: 0; }
 
 // regra para o container geral dos conteúdos.
 // Aqui é inserida a linha divisória entre a área da busca e do conteúdo

@@ -9,7 +9,7 @@ $( document ).ready( function() {
     /*
         Emula o placeholder em browser antigo [lê-se IE]
     */
-    $( "input" ).placeholder();
+    // $( "input" ).placeholder();
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 

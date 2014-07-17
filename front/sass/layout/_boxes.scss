@@ -171,6 +171,33 @@
     #BbTrabalhosSubmeter1 { @include settingsBoxImagem(60%, auto, auto, 20%, -150px) }
     #BbTrabalhosSubmeter2 { @include settingsBoxImagem(52%, auto, auto, 24%, -150px) }
 
+    // Receber trabalhos para autoavaliação e avaliação de colegas
+    // @include                              settingsBoxImagem          (W%, l,  t,  r, b)
+    #BbTrabalhosRecTrabParaAutoavaliacao0 { @include settingsBoxImagem(50%, auto, 35%, 20%, auto) }
+    #BbTrabalhosRecTrabParaAutoavaliacao1 { @include settingsBoxImagem(43%, 10%, 30%, auto, auto) }
+    #BbTrabalhosRecTrabParaAutoavaliacao2 { @include settingsBoxImagem(35%, auto, 50%, 10%, auto) }
+    #BbTrabalhosRecTrabParaAutoavaliacao3 { @include settingsBoxImagem(45%, 5%, 30%, auto, auto) }
+    #BbTrabalhosRecTrabParaAutoavaliacao4 { @include settingsBoxImagem(40%, auto, 35%, 10%, auto)}
+    #BbTrabalhosRecTrabParaAutoavaliacao5 { @include settingsBoxImagem(30%, 15%, 50%, auto, auto)}
+
+    #BbTrabalhosRecTrabParaAutoavaliacao6 { @include settingsBoxImagem(50%, auto, 35%, 20%, auto)}
+    #BbTrabalhosRecTrabParaAutoavaliacao7 { @include settingsBoxImagem(40%, auto, auto, 0, -70px) }
+    #BbTrabalhosRecTrabParaAutoavaliacao8 { @include settingsBoxImagem(44%, auto, 0, 0, auto) }
+    #BbTrabalhosRecTrabParaAutoavaliacao9 { @include settingsBoxImagem(35%, auto, auto, 0, 90px) }
+    #BbTrabalhosRecTrabParaAutoavaliacao10 { @include settingsBoxImagem(40%, auto, 30%, 0, auto) }
+    #BbTrabalhosRecTrabParaAutoavaliacao11 { @include settingsBoxImagem(40%, auto, 60%, 0, auto) }
+    #BbTrabalhosRecTrabParaAutoavaliacao12 { @include settingsBoxImagem(49%, auto, auto, 0, 0) }
+    #BbTrabalhosRecTrabParaAutoavaliacao13 { @include settingsBoxImagem(39%, auto, 20px, 60px, auto) }
+    #BbTrabalhosRecTrabParaAutoavaliacao14 { @include settingsBoxImagem(25%, auto, 60px, 30%, auto) }
+    #BbTrabalhosRecTrabParaAutoavaliacao15 { @include settingsBoxImagem(40%, auto, auto, 15%, -40px) }
+    #BbTrabalhosRecTrabParaAutoavaliacao16 { @include settingsBoxImagem(50%, auto, auto, 0, 0) }
+    #BbTrabalhosRecTrabParaAutoavaliacao17 { @include settingsBoxImagem(60%, auto, auto, 20%, -80px) }
+    #BbTrabalhosRecTrabParaAutoavaliacao18 { @include settingsBoxImagem(35%, auto, 20%, 10%, auto) }
+    #BbTrabalhosRecTrabParaAutoavaliacao19 { @include settingsBoxImagem(40%, auto, 50px, 10%, auto) }
+    #BbTrabalhosRecTrabParaAutoavaliacao20 { @include settingsBoxImagem(30%, auto, 0, 0, auto) }
+    #BbTrabalhosRecTrabParaAutoavaliacao21 { @include settingsBoxImagem(35%, auto, 55%, 10%, auto) }
+    #BbTrabalhosRecTrabParaAutoavaliacao22 { @include settingsBoxImagem(30%, auto, 0, 10%, auto) }
+    #BbTrabalhosRecTrabParaAutoavaliacao23 { @include settingsBoxImagem(40%, auto, auto, 0, 40px) }
 
     // CATEGORIA: Grupos
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -520,7 +547,8 @@
     #ClickerVincularListaAlunos1 { @include settingsBoxImagem(32%, auto, auto, 0, -80%) }
     #ClickerVincularListaAlunos2 { @include settingsBoxImagem(24%, auto, auto, 0, -10%) }
     #ClickerVincularListaAlunos3 { @include settingsBoxImagem(30%, auto, auto, 35%, -15%) }
-    #ClickerVincularListaAlunos4 { @include settingsBoxImagem(30%, auto, auto, 0, -20%) }    #ClickerVincularListaAlunos5 { @include settingsBoxImagem(30%, auto, 0, 0, auto) }
+    #ClickerVincularListaAlunos4 { @include settingsBoxImagem(30%, auto, auto, 0, -20%) } 
+    #ClickerVincularListaAlunos5 { @include settingsBoxImagem(30%, auto, 0, 0, auto) }
     #ClickerVincularListaAlunos5 { @include settingsBoxImagem(40%, auto, auto, 30%, -20%) } 
     #ClickerVincularListaAlunos6 { @include settingsBoxImagem(30%, auto, auto, 0, -20%) }
 
@@ -722,6 +750,34 @@
     // Submeter arquivos para verificação de plágio ou criar base de comparação (SafeAssign)
     #BbTrabalhosSubmeter1 { @include settingsBoxImagem(100%, auto, auto, 0, -160px) }
     #BbTrabalhosSubmeter2 { @include settingsBoxImagem(76%, auto, auto, 12%, -150px) }
+
+    // Receber trabalhos para autoavaliação e avaliação de colegas
+    // @include                              settingsBoxImagem          (W%, l,  t,  r, b)
+    #BbTrabalhosRecTrabParaAutoavaliacao0 { @include settingsBoxImagem(60%, auto, 30%, 10%, auto) }
+    #BbTrabalhosRecTrabParaAutoavaliacao1 { @include settingsBoxImagem(40%, 0, 25%, auto, auto) }
+    #BbTrabalhosRecTrabParaAutoavaliacao2 { @include settingsBoxImagem(40%, auto, 40%, 0, auto) }
+    #BbTrabalhosRecTrabParaAutoavaliacao3 { @include settingsBoxImagem(39%, 0, 25%, auto, auto) }
+    #BbTrabalhosRecTrabParaAutoavaliacao4 { @include settingsBoxImagem(38%, auto, 30%, 0, auto)}
+    #BbTrabalhosRecTrabParaAutoavaliacao5 { @include settingsBoxImagem(35%, 0, 50%, auto, auto)}
+
+    #BbTrabalhosRecTrabParaAutoavaliacao6 { @include settingsBoxImagem(35%, auto, 0, 0, auto) }
+    #BbTrabalhosRecTrabParaAutoavaliacao7 { @include settingsBoxImagem(50%, auto, auto, 0, -70px) }
+    #BbTrabalhosRecTrabParaAutoavaliacao8 { @include settingsBoxImagem(45%, auto, -50px, 0, auto); z-index: 10; }
+    #BbTrabalhosRecTrabParaAutoavaliacao9 { @include settingsBoxImagem(50%, 10%, auto, auto, 30px) }
+    #BbTrabalhosRecTrabParaAutoavaliacao10 { @include settingsBoxImagem(50%, auto, 25%, 0, auto) }
+    #BbTrabalhosRecTrabParaAutoavaliacao11 { @include settingsBoxImagem(50%, auto, 50%, 0, auto) }
+    #BbTrabalhosRecTrabParaAutoavaliacao12 { @include settingsBoxImagem(43%, auto, auto, 0, 0) }
+    #BbTrabalhosRecTrabParaAutoavaliacao13 { @include settingsBoxImagem(50%, auto, 20px, 0, auto) }
+    #BbTrabalhosRecTrabParaAutoavaliacao14 { @include settingsBoxImagem(30%, auto, 20px, 20%, auto) }
+    #BbTrabalhosRecTrabParaAutoavaliacao15 { @include settingsBoxImagem(50%, auto, auto, 0, 0) }
+    #BbTrabalhosRecTrabParaAutoavaliacao16 { @include settingsBoxImagem(35%, auto, auto, 0, 0) }
+    #BbTrabalhosRecTrabParaAutoavaliacao17 { @include settingsBoxImagem(60%, auto, auto, 20%, -100px) }
+    #BbTrabalhosRecTrabParaAutoavaliacao18 { @include settingsBoxImagem(45%, auto, 20%, 0, auto) }
+    #BbTrabalhosRecTrabParaAutoavaliacao19 { @include settingsBoxImagem(40%, auto, 50px, 0, auto) }
+    #BbTrabalhosRecTrabParaAutoavaliacao20 { @include settingsBoxImagem(30%, auto, 0, 0, auto) }
+    #BbTrabalhosRecTrabParaAutoavaliacao21 { @include settingsBoxImagem(40%, auto, 55%, 0, auto) }
+    #BbTrabalhosRecTrabParaAutoavaliacao22 { @include settingsBoxImagem(40%, auto, 0, 0, auto) }
+    #BbTrabalhosRecTrabParaAutoavaliacao23 { @include settingsBoxImagem(40%, auto, auto, 0, 10px) }
 
     
     // CATEGORIA: Grupos
@@ -1245,6 +1301,32 @@
     #BbTrabalhosRecTrabComPlagio4,
     #BbTrabalhosRecTrabComPlagio5,
     #BbTrabalhosRecTrabComPlagio6,
+
+    // Receber trabalhos para autoavaliação e avaliação de colegas
+    #BbTrabalhosRecTrabParaAutoavaliacao0,
+    #BbTrabalhosRecTrabParaAutoavaliacao1,
+    #BbTrabalhosRecTrabParaAutoavaliacao2,
+    #BbTrabalhosRecTrabParaAutoavaliacao3,
+    #BbTrabalhosRecTrabParaAutoavaliacao4,
+    #BbTrabalhosRecTrabParaAutoavaliacao5,
+    #BbTrabalhosRecTrabParaAutoavaliacao6,
+    #BbTrabalhosRecTrabParaAutoavaliacao7,
+    #BbTrabalhosRecTrabParaAutoavaliacao8,
+    #BbTrabalhosRecTrabParaAutoavaliacao9,
+    #BbTrabalhosRecTrabParaAutoavaliacao10,
+    #BbTrabalhosRecTrabParaAutoavaliacao11,
+    #BbTrabalhosRecTrabParaAutoavaliacao12,
+    #BbTrabalhosRecTrabParaAutoavaliacao13,
+    #BbTrabalhosRecTrabParaAutoavaliacao14,
+    #BbTrabalhosRecTrabParaAutoavaliacao15,
+    #BbTrabalhosRecTrabParaAutoavaliacao16,
+    #BbTrabalhosRecTrabParaAutoavaliacao17,
+    #BbTrabalhosRecTrabParaAutoavaliacao18,
+    #BbTrabalhosRecTrabParaAutoavaliacao19,
+    #BbTrabalhosRecTrabParaAutoavaliacao20,
+    #BbTrabalhosRecTrabParaAutoavaliacao21,
+    #BbTrabalhosRecTrabParaAutoavaliacao22,
+    #BbTrabalhosRecTrabParaAutoavaliacao23,
 
     // Criar grupos
     #BbGruposCriarGrupos1,
