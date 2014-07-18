@@ -573,10 +573,51 @@
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
     // Visualizar resultados no excel
-    // @include                          settingsBoxImagem(W%,  l,   t,   r,   b)
     #ClickerVisResVotacao1 { @include settingsBoxImagem(40%, auto, 20px, 40px, auto) }
 
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    // ASSUNTO: RECURSOS
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    // CATEGORIA: Consultar recursos disponíveis
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    #RecursosConsultar1 { @include settingsBoxImagem(35%, auto, 10%, 10%, auto); }
+    #RecursosConsultar2 { @include settingsBoxImagem(30%, auto, 50%, 80px, auto); }
+    #RecursosConsultar3 { @include settingsBoxImagem(50%, auto, auto, 30px, 10px); }
+    #RecursosConsultar4 { @include settingsBoxImagem(51%, auto, 0, 0, auto); }
+    #RecursosConsultar5 { @include settingsBoxImagem(50%, auto, 54%, 30px, auto); }
+    #RecursosConsultar6 { @include settingsBoxImagem(37%, auto, 25%, 10%, auto); }
+    #RecursosConsultar7 { @include settingsBoxImagem(30%, auto, 75%, 10%, auto); }
+    #RecursosConsultar8 { @include settingsBoxImagem(60%, auto, auto, 20%, -60px); }
+    #RecursosConsultar9 { @include settingsBoxImagem(50%, auto, 47%, 10%, auto); }
+    #RecursosConsultar10 { @include settingsBoxImagem(45%, auto, auto, 10%, 0); }
+    #RecursosConsultar11 { @include settingsBoxImagem(35%, auto, 25%, 50px, auto); }
+    #RecursosConsultar12 { @include settingsBoxImagem(40%, auto, auto, 0, 10%); }
+    #RecursosConsultar13 { @include settingsBoxImagem(43%, auto, 0, 0, auto); }
+    #RecursosConsultar14 { @include settingsBoxImagem(37%, auto, 50%, 0, auto); }
+    #RecursosConsultar15 { @include settingsBoxImagem(55%, auto, auto, 22.5%, -140px); }
 
+    // CATEGORIA: Utilizar recurssos
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    // @include                    settingsBoxImagem(W%,  l,   t,   r,   b)
+    #RecursosUtilizar1 { @include settingsBoxImagem(45%, auto, 0, 0, auto); }
+    #RecursosUtilizar2 { @include settingsBoxImagem(41%, auto, 30%, 0, auto); }
+    #RecursosUtilizar3 { @include settingsBoxImagem(60%, auto, auto, 20%, -60px); }
+    #RecursosUtilizar4 { @include settingsBoxImagem(45%, auto, 0, 0, auto); }
+    #RecursosUtilizar5 { @include settingsBoxImagem(46%, auto, auto, 0, -40px); }
+    #RecursosUtilizar6 { @include settingsBoxImagem(60%, auto, -90px, 20%, auto); }
+    #RecursosUtilizar7 { @include settingsBoxImagem(45%, auto, 0, 0, auto); }
+    #RecursosUtilizar7a { @include settingsBoxImagem(37%, auto, auto, 0, 0); }
+    #RecursosUtilizar8 { @include settingsBoxImagem(37%, auto, auto, 0, 0); }
+    #RecursosUtilizar8a { @include settingsBoxImagem(30%, auto, 45%, 25%, auto); }
+    #RecursosUtilizar8b { @include settingsBoxImagem(30%, auto, 75%, 15%, auto); }
+    #RecursosUtilizar9 { @include settingsBoxImagem(35%, auto, auto, 0, 0); }
+    #RecursosUtilizar9a { @include settingsBoxImagem(35%, auto, 40%, 0, auto); }
+    #RecursosUtilizar10 { @include settingsBoxImagem(35%, auto, auto, 0, 26%); }
+    #RecursosUtilizar11 { @include settingsBoxImagem(60%, 0, auto, auto, -90px); }
+    #RecursosUtilizar12 { @include settingsBoxImagem(44%, auto, 0, 0, auto); }
+    #RecursosUtilizar13 { @include settingsBoxImagem(28%, auto, 10%, 0, auto); }
+    #RecursosUtilizar14 { @include settingsBoxImagem(50%, 0, auto, auto, 0); }
+    #RecursosUtilizar15 { @include settingsBoxImagem(35%, auto, 30%, 10%, auto); }
 }
 
 
@@ -1141,7 +1182,8 @@
     #ClickerVincularListaAlunos1 { @include settingsBoxImagem(65%, auto, auto, 0, -80%) }
     #ClickerVincularListaAlunos2 { @include settingsBoxImagem(34%, auto, auto, 0, -10%) }
     #ClickerVincularListaAlunos3 { @include settingsBoxImagem(44%, auto, auto, 33%, -15%) }
-    #ClickerVincularListaAlunos4 { @include settingsBoxImagem(42%, auto, auto, 0, -30%) }    #ClickerVincularListaAlunos5 { @include settingsBoxImagem(30%, auto, 0, 0, auto) }
+    #ClickerVincularListaAlunos4 { @include settingsBoxImagem(42%, auto, auto, 0, -30%) } 
+    #ClickerVincularListaAlunos5 { @include settingsBoxImagem(30%, auto, 0, 0, auto) }
     #ClickerVincularListaAlunos5 { @include settingsBoxImagem(40%, auto, auto, 30%, -20%) } 
     #ClickerVincularListaAlunos6 { @include settingsBoxImagem(43%, auto, auto, 0, -20%) }
 
@@ -1162,9 +1204,52 @@
     #ClickerContinuarSessao1 { @include settingsBoxImagem(40%, auto, 0, 0, auto) }
 
     // Visualizar resultados no excel
-    // @include                          settingsBoxImagem(W%,  l,   t,   r,   b)
     #ClickerVisResVotacao1 { @include settingsBoxImagem(45%, auto, 40px, 0, auto) }
 
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    // ASSUNTO: RECURSOS
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    // CATEGORIA: Consultar recursos disponíveis
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    // @include                    settingsBoxImagem(W%,  l,   t,   r,   b)
+    #RecursosConsultar1 { @include settingsBoxImagem(37%, auto, 10%, 0, auto); }
+    #RecursosConsultar2 { @include settingsBoxImagem(33%, auto, 50%, 0, auto); }
+    #RecursosConsultar3 { @include settingsBoxImagem(40%, auto, auto, 0, 0); }
+    #RecursosConsultar4 { @include settingsBoxImagem(50%, auto, 52%, 0, auto); }
+    #RecursosConsultar5 { @include settingsBoxImagem(65%, auto, 47%, 0, auto); }
+    #RecursosConsultar6 { @include settingsBoxImagem(50%, auto, 25%, 0, auto); }
+    #RecursosConsultar7 { @include settingsBoxImagem(30%, auto, 75%, 0, auto); }
+    #RecursosConsultar8 { @include settingsBoxImagem(60%, auto, auto, 20%, -80px); }
+    #RecursosConsultar9 { @include settingsBoxImagem(70%, auto, 40%, 0, auto); }
+    #RecursosConsultar10 { @include settingsBoxImagem(45%, auto, auto, 0, 0); }
+    #RecursosConsultar11 { @include settingsBoxImagem(35%, auto, 15%, 0, auto); }
+    #RecursosConsultar12 { @include settingsBoxImagem(40%, auto, auto, 0, 10%); }
+    #RecursosConsultar13 { @include settingsBoxImagem(43%, auto, 0, 0, auto); }
+    #RecursosConsultar14 { @include settingsBoxImagem(37%, auto, 40%, 0, auto); }
+    #RecursosConsultar15 { @include settingsBoxImagem(80%, auto, auto, 10%, -140px); }
+
+    // CATEGORIA: Utilizar recurssos
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    // @include                    settingsBoxImagem(W%,  l,   t,   r,   b)
+    #RecursosUtilizar1 { @include settingsBoxImagem(45%, auto, 0, 0, auto); }
+    #RecursosUtilizar2 { @include settingsBoxImagem(49%, auto, 30%, 0, auto); }
+    #RecursosUtilizar3 { @include settingsBoxImagem(80%, auto, auto, 10%, -60px); }
+    #RecursosUtilizar4 { @include settingsBoxImagem(60%, auto, 30px, 0, auto); }
+    #RecursosUtilizar5 { @include settingsBoxImagem(30%, auto, auto, 0, -50px); }
+    #RecursosUtilizar6 { @include settingsBoxImagem(80%, auto, -90px, 10%, auto); }
+    #RecursosUtilizar7 { @include settingsBoxImagem(45%, auto, 0, 0, auto); }
+    #RecursosUtilizar7a { @include settingsBoxImagem(51%, auto, auto, 0, 0); }
+    #RecursosUtilizar8 { @include settingsBoxImagem(55%, auto, auto, 0, -70px); }
+    #RecursosUtilizar8a { @include settingsBoxImagem(30%, auto, 45%, 25%, auto); }
+    #RecursosUtilizar8b { @include settingsBoxImagem(40%, auto, 80%, 0, auto); }
+    #RecursosUtilizar9 { @include settingsBoxImagem(49%, auto, auto, 0, -40px); }
+    #RecursosUtilizar9a { @include settingsBoxImagem(45%, auto, 0, 0, auto); }
+    #RecursosUtilizar10 { @include settingsBoxImagem(85%, auto, auto, 0, 36%); }
+    #RecursosUtilizar11 { @include settingsBoxImagem(60%, 0, auto, auto, -90px); }
+    #RecursosUtilizar12 { @include settingsBoxImagem(44%, auto, 0, 0, auto); }
+    #RecursosUtilizar13 { @include settingsBoxImagem(38%, auto, 10%, 5%, auto); }
+    #RecursosUtilizar14 { @include settingsBoxImagem(50%, 10%, auto, auto, 0); }
+    #RecursosUtilizar15 { @include settingsBoxImagem(35%, auto, 30%, 0, auto); }
 }
 
 /* TABLET
@@ -1623,6 +1708,24 @@
     #BbTesPesquisaImportarWord10,
     #BbTesPesquisaImportarWord11,
     #BbTesPesquisaImportarWord12
+
+    // recursos: consultar recursos disponiveis
+    #RecursosConsultar1,
+    #RecursosConsultar2,
+    #RecursosConsultar3,
+    #RecursosConsultar4,
+    #RecursosConsultar5,
+    #RecursosConsultar6,
+    #RecursosConsultar7,
+    #RecursosConsultar8,
+    #RecursosConsultar9,
+    #RecursosConsultar10,
+    #RecursosConsultar11,
+    #RecursosConsultar12,
+    #RecursosConsultar13,
+    #RecursosConsultar14,
+    #RecursosConsultar15
+
     {
         clear: both;
         width: 100%;

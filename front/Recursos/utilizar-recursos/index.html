@@ -8,8 +8,8 @@
 <meta name="msapplication-TileImage" content="tile.png"/>
 <meta name="msapplication-TileColor" content="#d02034"/>
 
-<link rel="stylesheet" type="text/css" media="print" href="../../css/print.css">
 <link rel="stylesheet" type="text/css" media="screen" href="../../css/main.css">
+<link rel="stylesheet" type="text/css" media="print" href="../../css/print.css">
 
 <!--[if IE]><link rel="shortcut icon" href="favicon.ico"><![endif]-->
 <link rel="icon" href="../../favicon-16.png" sizes="16x16">
@@ -184,7 +184,7 @@
                             </li>
                         </ol>
 
-                        <h5 class="icoClickers">Votadores eletrônicos (clickers)</h5>
+                        <!-- <h5 class="icoClickers">Votadores eletrônicos (clickers)</h5>
                         <ol class="noCategory" ng-repeat="item in clickerSobreFerramenta | filter: {manual:searchText}">
                             <li class="nameCategory">
                                 <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
@@ -237,7 +237,7 @@
                             <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
                             </li>
-                        </ol>
+                        </ol> -->
                         
                         <h5 class="icoCursosOnline">Casos, Simuladores e Cursos online</h5>
                         <ol class="noCategory" ng-repeat="item in SobreOsRecursos | filter: {manual:searchText}">
@@ -288,7 +288,7 @@
                         <div class="cabecalho fix">
                             <p>
                                 <!-- adicionar a data da produção do material -->
-                                <span><strong>Atualizado: </strong>08/05/2014</span>
+                                <span><strong>Atualizado: </strong>18/07/2014</span>
                             </p>
                         </div>
                         <hr>
@@ -313,14 +313,15 @@
                      -->
 
                     <article class="contentMain row">
-                        <h1>Utilizar os recursos</h1>
+                        <!-- <h1>Utilizar os recursos</h1> -->
                         
                         <div class="sumario row">
                             <h3 id="sumarioAncora">Sumário</h3>
                         </div>
 
                         <h2 id="solicitar-cuca">Solicitar, acompanhar e cancelar casos pelo CUCA</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, nam, illum, hic obcaecati modi reprehenderit ducimus id quia voluptate eos debitis odit ab error maiores voluptates beatae autem labore blanditiis?</p>
+                        <p>CUCA é um sistema de Controle de Utilização de Casos. Nele, informações de turmas, professores, cursos e disciplinas estão integradas com o sistema acadêmico Lyceum.</p>
+                        <p>Por meio do CUCA é possível solicitar casos para uso em sala de aula, acompanhar o andamento da solicitação ou mesmo cancelar uma solicitação de caso feita anteriormente.</p>
 
                         <!--
                         
@@ -342,13 +343,100 @@
                         -->
 
                         <div class="margemParaImagem" style="margin-top:20px"></div>
+                        
+                        <h4 class="subTopicos">Solicitar caso pelo CUCA</h4>
+                        <div class="imageContainer row">
+                            <img src="../../img/Recursos/utilizar-recursos/step1.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="RecursosUtilizar1">
+                                <p>Acesse o Cuca, faça seu login com o usuário de rede e escolha Professor na lista de opções.</p>
+                            </div>
+                            <div class="boxDestaque" id="RecursosUtilizar2">
+                                <p>Consulte o caso na caixa de busca e clique em <strong>Solicitar</strong>.</p>
+                                <p>O ícone <span class="enfaseBox" style="background-color:#15cd02">v</span> indica que o caso está disponível.</p>
+                            </div>
+                            <div class="boxDestaqueAdicional" id="RecursosUtilizar3">
+                                <p>Se o caso procurado não for encontrado, envie um e-mail para <a href="mailto:casos@insper.edu.br?subject=Casos%20Insper">casos@insper.edu.br</a> e verifique a viabilidade de uso.</p>
+                            </div>
+                        </div>
+                         <div class="margemParaImagem" style="margin-top:80px"></div>
+                        <div class="imageContainer row">
+                            <img src="../../img/Recursos/utilizar-recursos/step2.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="RecursosUtilizar4">
+                                <p>Preencha as informações referentes à disciplina.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                         <div class="imageContainer row">
+                            <img src="../../img/Recursos/utilizar-recursos/step3.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="RecursosUtilizar5">
+                                <p>É possível solicitar casos para diferentes turmas de uma mesma disciplina do programa.</p>
+                                <p>Para remover uma solicitação da lista, clique no <span class="enfaseBox">X</span> correspondente.</p>
+                            </div>
+                        </div>
+                        <p><span class="enfaseBox">6</span> Informações dos casos:</p>
+                        <ul>
+                            <li><strong>Entrega ao aluno</strong>: a partir de quando os alunos terão acesso ao caso para preparação prévia.</li>
+                            <li><strong>Aplicação em sala</strong>: quando o caso será discutido presencialmente.</li>
+                            <li><strong>GRUPO TURMA</strong>: qual turma utilizará o recurso.</li>
+                        </ul>
+                        <div class="margemParaImagem" style="margin-top:80px"></div>
+                        <div class="imageContainer row">
+                            <img src="../../img/Recursos/utilizar-recursos/step4.png" alt="" class="imgLeft">
+                            <div class="boxDestaqueAdicional" id="RecursosUtilizar6">
+                                <p>Caso o grupo de turma não apareça na lista suspensa é necessário abrir um chamado junto ao Help Desk (helpdesk@insper.edu.br).</p>
+                            </div>
+                            <div class="boxDestaque" id="RecursosUtilizar7">
+                                <p>Se necessário, escreva alguma observação na caixa de comentários e clique em <strong>Solicitar Caso</strong>.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        
+                        <h4 class="subTopicos">Localizar solicitação</h4>
+                        <div class="imageContainer row">
+                            <img src="../../img/Recursos/utilizar-recursos/step5.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="RecursosUtilizar7a">
+                                <p>Utilize os filtros para localizar a solicitação do caso e clique em <strong>Pesquisar</strong>.</p>
+                            </div>
+                        </div>
+
+                        <h4 class="subTopicos">Acompanhar solicitação</h4>
+                        <div class="imageContainer row">
+                            <img src="../../img/Recursos/utilizar-recursos/step6.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="RecursosUtilizar8">
+                                <p>Após localizar a solicitação, clique na informação da coluna <strong>Status</strong>. Será exibida uma tela com o WorkFlow da Solicitação.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:80px"></div>
+                        <h4 class="subTopicos">Cancelar solicitação</h4>
+                        <div class="imageContainer row">
+                            <img src="../../img/Recursos/utilizar-recursos/step7.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="RecursosUtilizar8a">
+                                <p>Para cancelar uma solicitação, clique em Cancelar e confirme.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
 
                         <!-- 
                         ################################################################
                         -->
 
                         <h2 id="solicitar-simuladores">Solicitar, acompanhar e cancelar simuladores</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, dolores, quas, mollitia ipsum repellendus ut saepe molestiae perspiciatis rem fuga necessitatibus aspernatur a nihil perferendis veritatis vel consequuntur quod quisquam.</p>
+                        <p>Para solicitar um simulador de Harvard é necessário:</p>
+                        <ol>
+                            <li>Localizá-lo no Portal de Harvard.</li>
+                            <li>Pedir autorização de uso para o coordenador do programa.</li>
+                            <li>Após autorização do coordenador, solicitar a compra das licenças, com antecedência mínima de uma semana, para <a href="mailto:cursosonline@insper.edu.br?subject=Simuladores">cursosonline@insper.edu.br</a>. No e-mail é necessário informar:</li>
+                            <ul>
+                                <li>Nome do recurso</li>
+                                <li>Nome da disciplina</li>
+                                <li>Número de licenças (quantidade de alunos)</li>
+                                <li>Período de utilização</li>
+                            </ul>
+                        </ol>
+                        <p>Após a compra das licenças, o link do recurso será enviado para <a href="#disponibilizar-links">disponibilização aos alunos no ambiente virtual da disciplina no Blackboard</a>.</p>
+                        <p>O cancelamento da solicitação deve ser feito pelo e-mail <a href="mailto:cursosonline@insper.edu.br?subject=Cursos%20online">cursosonline@insper.edu.br</a>.</p>
 
                         <div class="margemParaImagem" style="margin-top:40px"></div>
 
@@ -357,18 +445,118 @@
                         -->
 
                         <h2 id="solicitar-cursos">Solicitar, acompanhar e cancelar cursos online</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, dolores, quas, mollitia ipsum repellendus ut saepe molestiae perspiciatis rem fuga necessitatibus aspernatur a nihil perferendis veritatis vel consequuntur quod quisquam.</p>
+                        <p>Para solicitar um curso online de Harvard é necessário:</p>
+                        <ol>
+                            <li>Localizá-lo no Portal de Harvard.</li>
+                            <li>Pedir autorização de uso para o coordenador do programa.</li>
+                            <li>Após autorização do coordenador, solicitar a compra das licenças, com antecedência mínima de uma semana, para <a href="mailto:cursosonline@insper.edu.br?subject=Simuladores">cursosonline@insper.edu.br</a>. No e-mail é necessário informar:</li>
+                            <ul>
+                                <li>Nome do recurso</li>
+                                <li>Nome da disciplina</li>
+                                <li>Número de licenças (quantidade de alunos)</li>
+                                <li>Período de utilização</li>
+                            </ul>
+                        </ol>
+                        <p>Após a compra das licenças, o link do recurso será enviado para <a href="#disponibilizar-links">disponibilização aos alunos no ambiente virtual da disciplina no Blackboard</a>.</p>
+                        <p>O link do recurso também será enviado por e-mail aos alunos.</p>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <h4 class="subTopicos">Localizar curso online</h4>
+                        <p>Ao utilizar um curso online de Harvard, é importante acessar o ambiente, acompanhar o andamento da turma e extrair relatórios de participação.</p>
+                        <div class="imageContainer row">
+                            <img src="../../img/Recursos/utilizar-recursos/step8.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="RecursosUtilizar8b">
+                                <p>Clique em <strong>My Courses</strong> e acesse a turma que deseja consultar.</p>
+                            </div>
+                        </div>
 
                         <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <div class="imageContainer row">
+                            <img src="../../img/Recursos/utilizar-recursos/step9.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="RecursosUtilizar9">
+                                <p>Para exibir turmas já encerradas, clique em <strong>Show Closed Coursepacks</strong>.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <div class="imageContainer row">
+                            <img src="../../img/Recursos/utilizar-recursos/step10.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="RecursosUtilizar9a">
+                                <p>Ao visualizar a lista de cursos, clique em <strong>Manage Course Section</strong>.</p>
+                            </div>
+                            <div class="boxDestaqueAdicional" id="RecursosUtilizar10">
+                                <p><strong>Atenção</strong>: nunca clique no botão <span class="enfaseBox">X</span> da lista, pois ele excluir o curso.</p>
+                            </div>
+                        </div>
+                        <ul>
+                            <li><span class="enfaseBox">A</span> <strong>CLASS SUMMARY</strong>: permite acompanhar o andamento da turma. Pode-se consultar o rendimento individual dos alunos, bem como exportar o relatório em Excel.</li>
+                            <li><span class="enfaseBox">B</span> <strong>GROUP SETUP</strong>: se necessário, permite editar a nota de corte dos testes (recomenda-se deixar conforme o padrão de Harvard).</li>
+                            <li><span class="enfaseBox">C</span><strong> STUDENT VIEW</strong>: permite visualizar o conteúdo do curso exatamente como os alunos veem.</li>
+                        </ul>
+
+                        <h4 class="subTopicos">Acompanhar andamento e gerar relatório</h4>
+                        <div class="imageContainer row">
+                            <img src="../../img/Recursos/utilizar-recursos/step11.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="RecursosUtilizar11">
+                                <p><img src="../../img/Recursos/utilizar-recursos/step11a.png" alt=""></p>
+                                <p>Clique em Export to Excel para gerar a planilha do relatório. O ícone <span class="enfaseBox">X</span> indica que a nota está abaixo da nota de corte. O ícone <span class="enfaseBox" style="background-color:#15cd02">v</span> indica que a nota é igual ou superior à nota de corte.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:120px"></div>
+
+                         <div class="imageContainer row">
+                            <img src="../../img/Recursos/utilizar-recursos/step12.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="RecursosUtilizar12">
+                                <p><img src="../../img/Recursos/utilizar-recursos/step11b.png" alt=""></p>
+                                <p>Ao clicar em <strong>Detail</strong>, pode-se consultar o rendimento de cada aluno O ícone <span class="enfaseBox">X</span> indica que o aluno errou (resposta correta em amarelo). O ícone <span class="enfaseBox" style="background-color:#15cd02">v</span> indica que o aluno acertou.</p>
+                            </div>
+                        </div>
+
+                        <h4 class="subTopicos">Cancelar solicitação</h4>
+                        <p>O cancelamento da solicitação de um curso online deve ser feito pelo e-mail <a href="mailto:cursosonline@insper.edu.br?subject=Curos%20online%20-%20-cancelamento">cursosonline@insper.edu.br</a>.</p>
+
 
                         <!-- 
                         ################################################################
                         -->
 
                         <h2 id="disponibilizar-links">Disponibilizar links de casos, simuladores e cursos online aos alunos</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, dolores, quas, mollitia ipsum repellendus ut saepe molestiae perspiciatis rem fuga necessitatibus aspernatur a nihil perferendis veritatis vel consequuntur quod quisquam.</p>
+                        <p>Após solicitar os recursos que deseja utilizar, você receberá por e-mail os links de cada um desses recursos. Esses links devem ser disponibilizados aos alunos pelo ambiente virtual da disciplina.</p>
+
+                        <h4 class="subTopicos">Disponibilizar link do recurso no ambiente virtual</h4>
+                        <div class="imageContainer row">
+                            <img src="../../img/Recursos/utilizar-recursos/step13.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="RecursosUtilizar13">
+                                <p>Para disponibilizar o link do recurso aos alunos no ambiente virtual da disciplina, basta <a href="#">criar uma URL</a>.</p>
+                            </div>
+                        </div>
 
                         <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <h4 class="subTopicos">Disponibilizar link para público específico</h4>
+                        <p>Caso seja necessário restringir a visualização dos recursos a grupos específicos de alunos é preciso criar uma <strong>Versão Adaptável</strong> no link do recurso. Isso é útil, por exemplo, quando o recurso possui versões diferentes para cada grupo.</p>
+                        <p>Para isso, é preciso:</p>
+                        <ul>
+                            <li><a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/grupos/criar-grupos/">Criar grupos de alunos</a> (um para cada recurso, por exemplo)</li>
+                            <li><a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/materiais/compartilhar-materiais-com-os-alunos/%23subTitulo6">Criar links para os recursos</a></li>
+                            <li>Configurar o controle de acesso em cada link</li>
+                        </ul>
+                        <div class="imageContainer row">
+                            <img src="../../img/Recursos/utilizar-recursos/step14.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="RecursosUtilizar14">
+                                <p>No menu de opções do link que terá sua visualização restringida, selecione a opção <strong>Versão Adaptável</strong>.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <div class="imageContainer row">
+                            <img src="../../img/Recursos/utilizar-recursos/step15.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="RecursosUtilizar15">
+                                <p>Passe para a coluna à direita os alunos e/ou grupos que poderão acessar o recurso e clique em <strong>Enviar</strong>.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+                        <p>No exemplo, o caso “Seneca Systems” possui três links, um para cada “personagem” do caso. Para restringir o acesso de cada versão do caso somente aos seus “personagens”, foram criados previamente três grupos no Blackboard: um para cada versão. Após a publicação dos links na área de Conteúdo, cada um teve sua <strong>Versão Adaptável</strong> configurada de modo a restringir sua visualização ao grupo correspondente.</p>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
                         
                         <!-- 
                         
@@ -378,6 +566,7 @@
                         3- Depois da tag section.saibaMais há a única âncora da página que não recebe condicionais;
 
                          -->
+
 
                     </article>
 

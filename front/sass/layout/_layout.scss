@@ -106,12 +106,13 @@ html, body { height: 100%; min-height: 100%;}
 
 * {
     @include box-size(border-box);
-    @include transition(all .25s ease);
-    // Trasition removed in all style, it's not a good pratice
+    
 }
 body {
     @include font(normal, 12px);
     color: $corTexto;
+    // @include transition(all .20s ease);
+    // Trasition removed in all style, it's not a good pratice
 }
 
 .wrapper {
@@ -232,7 +233,7 @@ body {
 
     // regras que afetam títulos dos assuntos, listas, sublistas e links
     .navigationMain {
-        @include transition(all .40s ease);
+        // @include transition(all .40s ease);
         margin-top: $meioGrid;
 
         // regra da categoria vigente do manual ex: categoria 'Trabalhos' do Blackboard
@@ -369,7 +370,9 @@ body {
 
         hr { margin: 0; }
     }
+    .mainContent { 
 
+    }
     .mainContent .contentMain { margin-top: $meioGrid + 10; }
 
     // regras que afetam o conteúdo do manual
@@ -1007,7 +1010,10 @@ body {
                 img { display: inline-block; }
                 a { @include corLinkUpBox($corSec01); }
             }
-            ul { margin: 0; }
+            ul { 
+                margin: 0;
+                a { @include corLinkUpBox($corSec01); }
+            }
             .c12 { padding: 0;}
         }
         .icos { margin: 0 .5em; } // ícones nos box de destaques
@@ -1341,7 +1347,7 @@ body {
         // .interat { margin: 0 .5em 0 ($meioGrid / 2); }
     }
 
-    .navigation { @include transition(all 0.4s ease); }
+    // .navigation { @include transition(all 0.4s ease); }
     
     .navigationMain {
         h5 { @include font(bold, 1.2em); padding-left: $grid +2; }

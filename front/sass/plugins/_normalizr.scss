@@ -2,7 +2,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 // Vars
-$font: "Arial";
+$font: "tahoma";
 
 @mixin font($fstyle, $fsize) {
     font: $fstyle $fsize $font;
@@ -15,13 +15,12 @@ input,
 select,
 textarea {
     color: #222;
-    @include font(normal, 100%);
+    @include font(normal, 12px);
     margin: 0;
     padding: 0;
 }
-
 body {
-    @include font(normal, 100%);
+    @include font(normal, 12px);
     line-height: 1.6875;
     margin: 0;
     padding: 0;
