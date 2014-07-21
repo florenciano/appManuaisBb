@@ -235,7 +235,7 @@ button.close {
     // regra da categoria vigente do manual ex: categoria 'Trabalhos' do Blackboard
     .selectedCategory {
         // border: 1px solid $corDefault;
-        padding: ($meioGrid / 4) 0;
+        padding: ($meioGrid / 4) 0 ($meioGrid / 4) ($meioGrid / 4);
         // margin-top: $meioGrid / 2;
         color: #fff;
         @include radius();
