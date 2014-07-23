@@ -495,15 +495,15 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	},
 	{
 		'manual'			: 	'Casos',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/sobre-os-recursos/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/sobre-recursos/'
 	},
 	{
 		'manual'			: 	'Simuladores',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/sobre-os-recursos/#simuladores'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/sobre-recursos/#simuladores'
 	},
 	{
 		'manual'			: 	'Cursos online',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/sobre-os-recursos/#cursos-online'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/sobre-recursos/#cursos-online'
 	}
 	];
 

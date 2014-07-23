@@ -859,13 +859,13 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	$scope.sobre_os_Recursos = 
 	[
 	{
-		"manual"	: 	"Consultar recursos disponíveis",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/consultar-recursos-disponiveis/",
+		"manual"	: 	"Utilizar recursos",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/utilizar-recursos/",
 		"tipoIcone"	: 	"cursosOnline"
 	},
 	{
-		"manual"	: 	"Utilizar recursos",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/utilizar-recursos/",
+		"manual"	: 	"Consultar recursos disponíveis",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/consultar-recursos-disponiveis/",
 		"tipoIcone"	: 	"cursosOnline"
 	}
 	];
@@ -877,7 +877,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"Sobre os recursos",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/sobre-os-recursos/",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/sobre-recursos/",
 		"tipoIcone"	: 	"cursosOnline"
 	},
 	{
@@ -894,7 +894,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual"	: 	"Sobre os recursos",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/sobre-os-recursos/",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/sobre-recursos/",
 		"tipoIcone"	: 	"cursosOnline"
 	},
 	{
