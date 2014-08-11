@@ -579,6 +579,24 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
+	
+	// CATEGORIA: Geral
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	$scope.BbGeral = 
+	[
+	{
+		"manual" 	: 	"Criar grupos",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/grupos/criar-grupos/",
+		"tipoIcone"	: 	"blackboard"
+	},
+	{
+		"manual" 	: 	"Disponibilizar links de casos, simuladores e cursos online aos alunos",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/utilizar-recursos/#disponibilizar-links",
+		"tipoIcone"	: 	"blackboard"
+	}
+	];
+
+
 
 	// CATEGORIA: Calendário
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -899,8 +917,14 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	},
 	{
 		"manual"	: 	"Consultar recursos disponíveis",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/consultar-recursos-disponiveis/",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/geral/restringir-visualizacao-de-materiais/",
 		"tipoIcone"	: 	"cursosOnline"
+	},
+	{
+
+		"manual"	: 	"Restringir visualização de materiais ou atividades a público específico",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Recursos/consultar-recursos-disponiveis/",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 	

@@ -146,6 +146,16 @@
                             </li>
                         </ol>
 
+                        <ol class="noCategory" ng-repeat="item in BbGeral| filter: {manual:searchText}">
+                        <li class="nameCategory">
+                            <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            
+                        </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
                         <ol class="noCategory" ng-repeat="item in BbCalendario | filter: {manual:searchText}">
                         <li class="nameCategory">
                             <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
@@ -540,7 +550,7 @@
                         <ul>
                             <li><a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/grupos/criar-grupos/" target="_blank">Criar grupos de alunos</a> (um para cada recurso, por exemplo)</li>
                             <li><a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/materiais/compartilhar-materiais-com-os-alunos/" target="_blank">Criar links para os recursos</a></li>
-                            <li>Configurar o controle de acesso em cada link</li>
+                            <li><a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/geral/restringir-visualizacao-de-materiais/" target="_blank">Configurar o controle de acesso em cada link</a></li>
                         </ul>
                         <div class="imageContainer row">
                             <img src="../../img/Recursos/utilizar-recursos/step14.png" alt="" class="imgLeft">

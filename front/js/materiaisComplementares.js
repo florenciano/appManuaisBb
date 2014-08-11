@@ -835,6 +835,18 @@ manuaisBB.controller("materiaisComplementares", function ($scope) {
 	$scope.Exportar_as_notas_para_o_sistema_academico = 
 	[
 	];
+	
+	// CATEGORIA: Geral
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	// Restringir visualização de materiais ou atividades a público específico
+	$scope.BbGeral = 
+	[
+	{
+		"manual" 	: 	"Adding Adaptive Release Criteria",
+		"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_SP_10_and_SP_11/Instructor/040_Student_Course_Experience/Controlling_the_Release_of_Content/Adding_Adaptive_Release_Criteria",
+		"tipoIcone"	: 	"site"
+	}
+	];
 
 	// CATEGORIA: Calendário
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

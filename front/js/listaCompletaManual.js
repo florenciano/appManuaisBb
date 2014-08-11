@@ -277,6 +277,22 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	}
 	];
 
+	// NOVO *
+	// CATEGORIA: Geral
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	$scope.BbGeral = [
+	{
+		'categoria' 		: 	'Geral',
+		'manual'			: 	'',
+		'linkManual'		: 	''
+	},
+	/////////////////////////////////////////////////////////////////
+	{
+		'manual'			: 	'Restringir visualização de materiais ou atividades a público específico',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/geral/restringir-visualizacao-de-materiais/'
+	}
+	];
+
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 	// ASSUNTO: CATME
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

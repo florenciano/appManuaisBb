@@ -146,6 +146,16 @@
                             </li>
                         </ol>
 
+                        <ol class="noCategory" ng-repeat="item in BbGeral| filter: {manual:searchText}">
+                        <li class="nameCategory">
+                            <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            
+                        </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
                         <ol class="noCategory" ng-repeat="item in BbCalendario | filter: {manual:searchText}">
                         <li class="nameCategory">
                             <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
@@ -312,8 +322,8 @@
                                     <h4><a href="#Blackboard1">É possível aproveitar testes que já estejam digitados no Word?</a></h4>
                                 </dt>
                                 <dd class="answer">
-                                    <p>Sim. Existe uma ferramenta chamada Respondus 4.0 que permite importar os testes a partir de um documento do Word, desde que seguidas algumas regras simples de formatação. No site <a href="http://www.respondus.com/">http://www.respondus.com/</a>é possível baixar a versão trial. Uma licença para uso da ferramenta também foi adquirida pelo TAI.</p>
-                                    <p>NãoEmbora o procedimento seja simples, recomendamos que a importação via documento do Word seja utilizada somente quando houver grande número de questões. Para criar testes mais enxutos, ainda é mais prático inserir as perguntas diretamente no Blackboard.</p>
+                                    <p>Sim. Existe uma ferramenta chamada Respondus 4.0 que permite importar os testes a partir de um documento do Word, desde que seguidas algumas regras simples de formatação. No site <a href="http://www.respondus.com/">http://www.respondus.com/</a> é possível baixar a versão trial. Uma licença para uso da ferramenta também foi adquirida pelo TAI.</p>
+                                    <p>Não embora o procedimento seja simples, recomendamos que a importação via documento do Word seja utilizada somente quando houver grande número de questões. Para criar testes mais enxutos, ainda é mais prático inserir as perguntas diretamente no Blackboard.</p>
                                 </dd>
 
                                 <dt class="question">
@@ -323,7 +333,7 @@
                                     <p>Sim. Em geral, o professor deve se preocupar com as seguintes questões:</p>
                                     <ul>
                                         <li>Antecipadamente, reservar os notebooks junto ao Help Desk. Na aula anterior, o professor também pode questionar a turma sobre os alunos que desejam usar equipamento próprio. Dessa maneira, poderá estimar quantos notebooks deverão ser solicitados.</li>
-                                        <li>O teste não deverá estar disponível aos alunos antes do início de sua aplicação em sala. Há duas possibilidades: 1. Ao criar o teste, deixá-lo indisponível e, somente no momento da aplicação em sala, habilitá-lo. 2. Deixar o teste disponível, mas configurar uma senha de acesso; nesse caso, o professor só deve revelar a senha à turma no momento apropriado.</li>
+                                        <li>O teste não deverá estar disponível aos alunos antes do início de sua aplicação em sala. Há duas possibilidades: <strong>1</strong>. Ao criar o teste, deixá-lo indisponível e, somente no momento da aplicação em sala, habilitá-lo. <strong>2</strong>. Deixar o teste disponível, mas configurar uma senha de acesso; nesse caso, o professor só deve revelar a senha à turma no momento apropriado.</li>
                                         <li>Como os alunos finalizam o teste em diferentes momentos, não é recomendado que as respostas corretas sejam reveladas ao término da atividade. O professor deve disponibilizar as respostas corretas apenas após o último aluno finalizar o teste.</li>
                                         <li>O professor deve estar atento aos alunos não presentes em sala. Caso um aluno tenha faltado e feito o teste de casa, cabe ao professor aceitar ou não a atividade. Quando se usa senha, as chances de isso acontecer são menores.</li>
                                     </ul>

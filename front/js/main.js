@@ -73,20 +73,20 @@ $( document ).ready( function() {
     // revelando e ocultando as respotas
     $( pergFaq ).click( function(e) {
         e.preventDefault;
-        $( this ).next( ".answer" ).toggle();
+        $( this ).next( ".answer" ).toggle( 400 );
         altDisplayTxt( $(this).find( ".display ") );
     });
     
     // btn Expandir tudo
     expandirTudo.click( function(e) {
         e.preventDefault;
-        respFaq.show();
+        respFaq.show( 400 );
         $( ".display" ).text( "[-]" );
     });
     // btn Recolher tudo
     recollherTudo.click( function(e) {
         e.preventDefault;
-        respFaq.hide();
+        respFaq.hide( 400 );
         $( ".display" ).text( "[+]" );
     });
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
