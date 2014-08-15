@@ -783,6 +783,17 @@ button.close {
         }
     }
 
+    // Blackboard
+    // Padronização dos ambientes online da PGLS
+    h4.introdPadronizPGLS { 
+        @include font(normal, 125%);
+    }
+    .subTituloIntrod {
+        margin: 0;
+        font-size: 100%;
+        & + p { margin: 0; }
+    }
+
     ////////////////////////////////////
     // Blackboard [EXCEÇÃO]
     ////////////////////////////////////

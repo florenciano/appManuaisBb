@@ -596,6 +596,30 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	}
 	];
 
+	// Padronização dos ambientes online da
+	$scope.BbGeral_Padronizacao_PGLS = 
+	[
+	{
+		"manual" 	: 	"Carregar materiais no ambiente virtual",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/materiais/carregar-materiais-no-ambiente-virtual/",
+		"tipoIcone"	: 	"blackboard"
+	},
+	{
+		"manual" 	: 	"Compartilhar materiais com os alunos",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/materiais/compartilhar-materiais-com-os-alunos/",
+		"tipoIcone"	: 	"blackboard"
+	},
+	{
+		"manual" 	: 	"Alterar ou excluir um material compartilhado",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/materiais/alterar-ou-excluir-um-material-compartilhado/",
+		"tipoIcone"	: 	"blackboard"
+	},
+	{
+		"manual" 	: 	"Aproveitar materiais de um curso para outro",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/materiais/aproveitar-materiais-de-um-curso-para-outro/",
+		"tipoIcone"	: 	"blackboard"
+	}
+	];
 
 
 	// CATEGORIA: Calendário

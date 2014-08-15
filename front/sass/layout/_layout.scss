@@ -401,7 +401,7 @@ body {
         section { @include font(normal, 1em); }
         a { @include corLink(); }
         ol {
-            li { margin: ($meioGrid / 4) 0; }
+            li { margin: ($meioGrid / 4) 0; line-height: 1.45em; }
             li:first-child { margin-top: 0; }
         }
         ul {
@@ -739,6 +739,17 @@ body {
             p {
                 padding-left: $meioGrid / 2; padding-right: $meioGrid / 2;
             }
+        }
+
+        // Blackboard
+        // Padronização dos ambientes online da PGLS
+        h4.introdPadronizPGLS { 
+            @include font(normal, 125%);
+        }
+        .subTituloIntrod {
+            margin: 0;
+            font-size: 100%;
+            & + p { margin: 0; }
         }
 
         ////////////////////////////////////

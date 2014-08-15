@@ -290,6 +290,10 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	{
 		'manual'			: 	'Restringir visualização de materiais ou atividades a público específico',
 		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/geral/restringir-visualizacao-de-materiais/'
+	},
+	{
+		'manual'			: 	'Padronização dos ambientes online da PGLS',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/geral/padronizacao-ambiente-online-pgls/'
 	}
 	];
 

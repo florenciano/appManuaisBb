@@ -848,6 +848,16 @@ manuaisBB.controller("materiaisComplementares", function ($scope) {
 	}
 	];
 
+	// Padronização dos ambientes online da
+	// $scope.BbGeral_Padronizacao_PGLS = 
+	// [
+	// {
+	// 	"manual" 	: 	"teste2",
+	// 	"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_SP_10_and_SP_11/Instructor/040_Student_Course_Experience/Controlling_the_Release_of_Content/Adding_Adaptive_Release_Criteria",
+	// 	"tipoIcone"	: 	"site"
+	// }
+	// ];
+
 	// CATEGORIA: Calendário
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 	

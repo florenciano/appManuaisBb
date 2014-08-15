@@ -410,6 +410,11 @@
 #BbGeralRestringirVisualizacao7 {  @include settingsBoxImagem(50%, 25%, auto, auto, -90px) }
 #BbGeralRestringirVisualizacao8 {  @include settingsBoxImagem(40%, auto, auto, 0, 0) }
 
+// Padronização dos ambientes online da PGLS
+// @include                             settingsBoxImagem(W%,  l,   t,   r,   b)
+#BbGeralPadronizarPGLS1{  @include settingsBoxImagem(42%, 24%, auto, auto, 0) }
+
+
 
 
 // CATEGORIA: Calendário
