@@ -377,7 +377,6 @@ body {
 
     // regras que afetam o conteúdo do manual
     .contentMain {
-        // @include font(normal, 12px);
         h1 {
             @include font(bold, 1.8em);
             line-height: 1em;
@@ -418,7 +417,12 @@ body {
             border:1px solid #c8c8c8;
             td { vertical-align: middle; text-align: center }
         }
-        
+        figure { margin: 0 }
+        figcaption { 
+            color: #a3a3a3;
+            margin-bottom: $meioGrid / 4;
+            @include font(italic, 92.5%);
+        }
         // O que é blackboard: quais instituições
         .containerSec { 
             width: 80%;
@@ -475,6 +479,39 @@ body {
         .subTopicos {
             margin: 0;
             & + p { margin: 0 0 1em 0; }
+        }
+
+        // blackboard: receber trabalho com verficacao de plagio
+            // criei uma classe no article para atacar os elementos desta página
+        .recTrabComVerPlagio {
+            h4 { margin: 1em 0 .25em; font-size: 111.25%; }
+            ol, ul {
+                padding-left: 1.5em;
+                margin: 0;
+            }
+            .subListas {
+                padding: 0;
+                li {
+                    list-style: none;
+                    &::before {
+                        content: "\0336\ ";
+                        display: inline-block;
+                        padding: 0 .5em;
+                        margin-right: .5em;
+                    }
+                }
+            }
+            .subListasNivel2 {
+                padding-left: 3em;
+                li {
+                    list-style-type: disc;
+                    &::before {
+                        content: "";
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+            }
         }
 
         // Novos elementos do catme
@@ -741,7 +778,6 @@ body {
             }
         }
 
-        // Blackboard
         // Padronização dos ambientes online da PGLS
         h4.introdPadronizPGLS { 
             @include font(normal, 125%);
@@ -751,6 +787,87 @@ body {
             font-size: 100%;
             & + p { margin: 0; }
         }
+
+        // Exemplos de dinâmicas
+            // Box: 'Para Refletir' e 'Pontos Positivos'
+            .boxParaRefletir, .boxPontosPositivos {
+                box-shadow: 0 0 15px rgba(1,1,1,.2);
+                    -o-box-shadow: 0 0 15px rgba(1,1,1,.2);
+                    -ms-box-shadow: 0 0 15px rgba(1,1,1,.2);
+                    -moz-box-shadow: 0 0 15px rgba(1,1,1,.2);
+                    -webkit-box-shadow: 0 0 15px rgba(1,1,1,.2);
+                @include radius(4px);
+                border: 1px solid #ccc;
+                margin: ($meioGrid / 4) 0;
+                .titleBox {
+                    width: 100%;
+                    display: block;
+                    border-bottom: 2px solid #ccc;
+                    background: transparent url("../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/icoRefletir.png") no-repeat 10px center; // 20X20px tirar daqui
+                    h4 {
+                        padding: 1em 0;
+                        margin: 0;
+                        text-indent: $grid;
+                    }
+                }
+                .listBox {
+                    line-height: 1.4em;
+                    ul {
+                        padding: $meioGrid;
+                        margin: 0;
+                        li {
+                            list-style: none;
+                            position: relative;
+                            margin-bottom: $meioGrid / 2;
+                        }
+                    }
+                }
+            }
+            // Box: 'Para refletir'
+            .boxParaRefletir {
+                background-color: #fcf8e3;
+                border-color: #faebcc;
+                .titleBox { border-bottom-color: #f8b412; }
+            }
+            // Box: 'Pontos Positivos'
+            .boxPontosPositivos {
+                background-color: #fff;
+                border-color: #d6e9c6;
+                .titleBox {  
+                    border-bottom-color: #45c113; 
+                    background-image: url("../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/icoPositivos.png");
+                }
+                .listBox {
+                    ul {
+                        padding-left: $meioGrid * 1.5;
+                        li {
+                            &:before {
+                                content: "";
+                                display: inline-block;
+                                background: transparent;
+                                width: $meioGrid / 2;
+                                height: $meioGrid * 1.5;
+                                position: absolute;
+                                left: -20px;
+                                top: -5px;
+                            }
+                        }
+                        li.verdeClaro:before { background: transparent url("../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/bulletVerde.png") no-repeat center center; }
+                        li.verdeEscuro:before { background: transparent url("../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/bulletVerdeEscuro.png") no-repeat center center; }
+                        li.azul:before { background: transparent url("../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/bulletAzul.png") no-repeat center center; }
+                        li.rosa:before { background: transparent url("../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/bulletRosa.png") no-repeat center center; }
+                        li.amarelo:before { background: transparent url("../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/bulletAmarelo.png") no-repeat center center; }
+                        li.laranja:before { background: transparent url("../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/bulletLaranja.png") no-repeat center center; }
+                        li.roxo:before { background: transparent url("../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/bulletRoxo.png") no-repeat center center; }
+                    }
+                }
+            }
+            .tableExDinamicas {
+                font-size: 92.5%;
+                tr {
+                    td { width: 20%; vertical-align: middle; }
+                }
+            }
 
         ////////////////////////////////////
         // Blackboard [EXCEÇÃO]

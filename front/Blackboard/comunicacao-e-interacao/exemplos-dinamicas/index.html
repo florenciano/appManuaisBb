@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br" ng-app="manuaisBB">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Tecnologias de Aprendizagem - Manuais de utilização</title>
+<meta name="viewport" content="width=device-width">
+<meta name="msapplication-TileImage" content="tile.png"/>
+<meta name="msapplication-TileColor" content="#d02034"/>
+
+<link rel="stylesheet" type="text/css" media="print" href="../../../css/print.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../../../css/main.css">
+
+<!--[if IE]><link rel="shortcut icon" href="favicon.ico"><![endif]-->
+<link rel="icon" href="../../../favicon-16.png" sizes="16x16">
+<link rel="icon" href="../../../favicon-32.png" sizes="32x32">
+<link rel="icon" href="../../../favicon-48.png" sizes="48x48">
+<link rel="icon" href="../../../favicon-64.png" sizes="64x64">
+<link rel="icon" href="../../../favicon-128.png" sizes="128x128">
+
+<!--
+1- iPad com Retina Display;
+2- iPhone com Retina Display;
+3- Primeira e segunda geração de iPad;
+4- Versões antigas de iPhone, iPod Touch e Android 2.2+
+-->
+<link rel="apple-touch-icon" sizes="144x144" href="../../../apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../../apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../../apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+
+<!--[if IE]>
+    <link href="../../../css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script>window.html5 || document.write('<script src="../../../js/libs/html5shiv.js"><\/script>')</script>
+<![endif]-->
+
+</head>
+<body>
+    <!-- alert para visualização abaixo de 768px -->
+    <div class="alert alert-warning alert-dismissable">
+        <button type="button" class="close">&times;</button>
+        Melhor visualizado com resolução de 768px de largura ou superior.
+    </div>
+
+    <div class="wrapper">
+        
+        <header id="top" class="wfull fix">
+            <div class="logo c4">
+                <img src="../../../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
+            </div>
+            <div class="titleHeader c8">
+                <p class="title">Tecnologias de Aprendizagem</p>
+                <p class="description">Manuais de utilização</p>
+            </div>
+        </header>
+
+        <div id="main" role="main" class="fix wfull">
+            <div class="containerMain fix row">
+
+                <!-- início da área da busca -->
+                <section class="buscaMain c4" ng-controller="listaMenu">
+                    <div class="inputSearch">
+                        <form id="busca">
+                            <label for="pesquisa"></label>
+                            <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Busca por título ou palavra-chave" ng-model="searchText">
+                        </form>
+                    </div>
+
+                    <nav role="navigation" class="navigationMain">
+                        <h5 class="icoBlackboard">Blackboard</h5>
+
+                        <ol class="noCategory" ng-repeat="item in BbConhecerAmbiente | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>    
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbMateriais | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbComunicacaoInteracao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist ng-class: addMark()" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbTrabalhos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbGrupos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbTestesPesquisas | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbRubrics | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbAvaliacao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbGeral| filter: {manual:searchText}">
+                        <li class="nameCategory">
+                            <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            
+                        </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbCalendario | filter: {manual:searchText}">
+                        <li class="nameCategory">
+                            <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            
+                        </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <h5 class="icoCatme">Catme</h5>
+                        <ol class="noCategory" ng-repeat="item in catmeSobreFerramenta | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in catmeAplicarPesquisaAval | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in catmeAnalisarResultados | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <!-- <h5 class="icoClickers">Votadores eletrônicos (clickers)</h5>
+                        <ol class="noCategory" ng-repeat="item in clickerSobreFerramenta | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerUtilizarVotadores | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerPrepararSlides | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerIdentificarVoto | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerPromoverVotacao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerAnalisarResultados | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol> -->
+                        
+                        <h5 class="icoCursosOnline">Casos, Simuladores e Cursos online</h5>
+                        <ol class="noCategory" ng-repeat="item in SobreOsRecursos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in ConsultarRecursosDisponiveis | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in UtilizarRecursos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                         <div class="faqBusca icoFaq">
+                            <h5>
+                            <ol class="noCategory">
+                                <li><a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/faq/index.html" class="">FAQ</a></li>
+                            </ol>
+                            </h5>
+                        </div>
+                        <div class="outros">
+                            <h6>
+                                <a href="mailto:tai@insper.edu.br?subject=TAI%20-%20Manuais%20de%20utiliza&#231;&#227;o">Não encontrou o que queria?</a>
+                            </h6>
+                        </div>
+                    </nav>
+                </section>
+
+                <!-- início do conteúdo do manual -->
+                <section class="mainContent c8">
+                    <section class="headerContent row">
+                        <div class="cabecalho fix">
+                            <p>
+                                <!-- adicionar a data da produção do material -->
+                                <span><strong>Atualizado: </strong>03/09/2014</span>
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="breadcrumb">
+                            <p>
+                                <span class="nameCategory">Blackboard </span>
+                                <span>&#62; </span>
+                                Exemplos de dinâmicas
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- 
+                    
+                    INTRODUCAO
+                    1- Texto do título h1 é o mesmo do 'p' da div.breadcrumb;
+                    2- div.sumario aparece logo depois da introdução do texto 'quando houver' e serve para listar todos os subtítulos da página definidos pela tag 'h2';
+                    3- toda tag 'h2' receberá esta sintaxe:
+                    '<h2 id="subTituloX">Texto aqui</h2>'
+                    É necessário adicionar um número identificador;
+
+                     -->
+
+                    <article class="contentMain row">
+                        <h1>Exemplos de dinâmicas</h1>
+                        <p>Veja a seguir alguns exemplos de dinâmicas conduzidas por professores do Insper usando fórum, blog e wiki.</p>
+                        <p>Se tiver outros exemplos para compartilhar, escreva para <a href="mailto:blackboard@insper.edu.br">blackboard@insper.edu.br</a></p>
+
+
+                        <div class="sumario row">
+                            <h3 id="sumarioAncora">Sumário</h3>
+                        </div>
+
+                        <!--
+                        
+                        IMAGENS E BOX DE TEXTO
+                        1- Alinhamento das imgs adicionar as classes: imgLeft ou imgRight. O comportamenteo padrão é centralizado;
+                        2- Adicionar um id para cada box.
+                        REGRAS:
+                        - nome pasta assunto. ex: Bb, Catme, Casos, Clickers +
+                        - nome da categoria [se houver]. ex: materiais, avaliação, trabalhos +
+                        - nome do manual: as duas palavras iniciais. ex: criar pesquisa, associar rubric +
+                        - numero identificador sequencial.
+
+                        MODELO: BbMateriaisCarregarMateriais1
+
+                        3- No CSS vc controla a posição de cada um. Há + de 1 media queries para adaptar!;
+                        4- A classe 'boxDestaque' é o padrão. Para box com informações adicionais em fundo vermelho usar a classe 'boxDestaqueAdicional';
+                        5- Após cada div.imageContainer inserir a div.respiro para aplicar uma margem entre eles. Insira um valor de margin-top no próprio html, visto que há inúmeras necessidades de tamanhos de margin;
+
+                        -->
+
+                        <h2 id="subTitulo1">Fórum: esclarecimento de dúvidas</h2>
+                        <p>Alguns professores usam a ferramenta de Fórum para esclarecimento de dúvidas, seja de conteúdo, seja de aspectos formais de projetos ou exercícios. Um exemplo é o fórum de dúvidas sobre o Projeto Aplicativo na disciplina “Gestão de Projetos” (CBA – Certificates), ministrada pelo professor Guy Cliquet.</p>
+                        <p>Em turmas anteriores a 2014, o esclarecimento de dúvidas era feito apenas pessoalmente ou por e-mail, de modo que às vezes o professor acabava respondendo a mesma dúvida para alunos distintos.</p>
+                        <p>Por isso, a partir de 2014, o professor decidiu abrir um fórum especificamente para isso. Esse fórum foi dividido em diversas linhas de discussão, uma para cada entrega parcial. Os alunos não podem criar novas linhas de discussão e a participação no fórum não é avaliada.</p>
+                        <div class="imageContainer row">
+                            <figure>
+                                <figcaption>Imagem 1. Fórum da disciplina "Gestão de Projetos".</figcaption>
+                                <img src="../../../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/step1.png" alt="" class="imgLeft">
+                            </figure>
+                            <!-- box pontos positivo -->
+                            <div class="boxParaRefletir" id="BbExemplosDinamicas1">
+                                <div class="titleBox">
+                                    <h4>Para Refletir</h4>
+                                </div>
+                                <div class="listBox">
+                                    <ul>
+                                        <li>Quais os benefícios de abrir um fórum para esclarecimento de dúvidas sobre atividades?</li>
+                                        <li>Qual o esforço necessário, por parte do professor, para manter o fórum em operação?</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="imageContainer row">
+                            <figure>
+                                <figcaption>Imagem 2. Fórum da disciplina “Gestão de Projetos”.</figcaption>
+                                <img src="../../../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/step2.png" alt="" class="imgLeft">
+                            </figure>
+                            <div class="boxPontosPositivos" id="BbExemplosDinamicas2">
+                                <div class="titleBox">
+                                    <h4>Pontos Positivos</h4>
+                                </div>
+                                <div class="listBox">
+                                    <ul>
+                                        <li class="amarelo">Incentivo à interação com o professor e colaboração entre os pares.</li>
+                                        <li class="azul">Organização do fórum em linhas de discussão, para facilitar a consulta.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <h2 id="subTitulo2">Fórum: discussão de caso</h2>
+                        <p>O fórum também pode ser usado para discussão de caso, como fez a professora Marta Maia na disciplina “Estratégia da Tecnologia da Informação” (MBE) em 2012. Nesta atividade, os próprios alunos podiam criar novas linhas de discussão. A atividade seria avaliada qualitativamente.</p>
+                        <div class="imageContainer row">
+                            <figure>
+                                <figcaption>Imagem 3. Fórum da disciplina “Estratégia da Tecnologia da Informação”.</figcaption>
+                                <img src="../../../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/step3.png" alt="" class="imgLeft">
+                            </figure>
+                            <div class="boxPontosPositivos" id="BbExemplosDinamicas3">
+                                <div class="titleBox">
+                                    <h4>Pontos Positivos</h4>
+                                </div>
+                                <div class="listBox">
+                                    <ul>
+                                        <li class="verdeClaro">Instruções claras.</li>
+                                        <li class="amarelo">Incentivo à interação e colaboração entre os pares.</li>
+                                        <li class="roxo">Instruções técnicas.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="imageContainer row">
+                            <figure>
+                                <figcaption>Imagem 4. Linhas de discussão do fórum da disciplina “Estratégia de Tecnologia da Informação”.</figcaption>
+                                <img src="../../../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/step4.png" alt="" class="imgLeft">
+                            </figure>
+                            <div class="boxParaRefletir" id="BbExemplosDinamicas4">
+                                <div class="titleBox">
+                                    <h4>Para Refletir</h4>
+                                </div>
+                                <div class="listBox">
+                                    <ul>
+                                        <li>Mesmo que as regras tenham sido explicadas em sala, será que vale a pena também explicitá-las por escrito no fórum? Por quê?</li>
+                                        <li>Quais os prós e contras em permitir que os próprios alunos criem novas linhas de discussão?</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2 id="subTitulo3">Fórum: discussão prática</h2>
+                        <p>O fórum também pode ser usado para discussão teórica ou prática. Um exemplo é a disciplina “Estratégia Organizacional e Gestão de Clientes” (Santander – MGN III), que foi ministrada pela professora Letícia Costa em 2012. Nessa disciplina, a professora decidiu conduzir uma atividade (com nota) usando a ferramenta Fórum. O intuito era promover a discussão de aspectos práticos dos artigos lidos ao longo da disciplina.</p>
+                        <div class="imageContainer row">
+                            <figure>
+                                <figcaption>Imagem 5. Fórum da disciplina “Estratégia Organizacional e Gestão de Clientes”.</figcaption>
+                                <img src="../../../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/step5.png" alt="" class="">
+                            </figure>
+                            <div class="boxParaRefletir" id="BbExemplosDinamicas5">
+                                <div class="titleBox">
+                                    <h4>Para Refletir</h4>
+                                </div>
+                                <div class="listBox">
+                                    <ul>
+                                        <li>É melhor criar o link de atividade colaborativa no menu ou dentro de uma pasta? Por quê?</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <p>O fórum foi criado no menu da disciplina e possuía três linhas de discussão, uma para cada artigo. No entanto, no desenrolar da disciplina, Letícia acabou usando apenas a primeira para a discussão dos três artigos. Essa linha de discussão totalizou 117 publicações e contou com a participação ativa da professora na condução da atividade.</p>
+                        
+                        <div class="imageContainer row">
+                            <figure>
+                                <figcaption>Imagem 6. Linhas de discussão do fórum da disciplina “Estratégia Organizacional e Gestão de Clientes”.</figcaption>
+                                <img src="../../../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/step6.png" alt="" class="">
+                            </figure>
+                        </div>
+                        
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <figure>
+                                <figcaption>Imagem 7. Instruções gerais da primeira linha de discussão do fórum da disciplina “Estratégia Organizacional e Gestão de Clientes”.</figcaption>
+                                <img src="../../../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/step7.png" alt="" class="imgLeft">
+                            </figure>
+                            <div class="boxParaRefletir" id="BbExemplosDinamicas6">
+                                <div class="titleBox">
+                                    <h4>Para Refletir</h4>
+                                </div>
+                                <div class="listBox">
+                                    <ul>
+                                        <li>É importante estipular limites de tamanho para as postagens? Por quê?</li>
+                                        <li>Qual critério de tamanho de postagem é mais adequado: por linha ou por quantidade de caracteres? Por quê?</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="margemParaImagem" style="margin-top:40px"></div> -->
+
+                        <div class="imageContainer row">
+                            <figure>
+                                <figcaption>Imagem 8. Exemplo de mensagem docente no fórum da disciplina,“Estratégia Organizacional e Gestão de Clientes”.</figcaption>
+                                <img src="../../../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/step8.png" alt="" class="imgLeft">
+                            </figure>
+                            <div class="boxPontosPositivos" id="BbExemplosDinamicas7">
+                                <div class="titleBox">
+                                    <h4>Pontos Positivos</h4>
+                                </div>
+                                <div class="listBox">
+                                    <ul>
+                                        <li class="verdeClaro">Instruções claras e critérios de avaliação explícitos</li>
+                                        <li class="verdeEscuro">Fechamento e síntese dos principais tópicos discutidos.</li>
+                                        <li class="roxo">Novas perguntas norteadoras após exaustão dos tópicos iniciais.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+
+                        <h2 id="subTitulo4">Blog: discussão prática</h2>
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+                        <p style="width:40%">Após ter usado fórum na turma 3 da disciplina “Estratégia Organizacional e Gestão de Clientes” (Santander – MGN III), Letícia Costa considerou o uso do fórum muito demandante para o professor. Por isso, propôs o uso de um blog na turma 4 da mesma disciplina em 2013.</p>
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+                        <div class="imageContainer row">
+                            <figure>
+                                <figcaption>Imagem 9. Instruções gerais do blog da disciplina<br>“Estratégia Organizacional e Gestão de Clientes”.</figcaption>
+                                <img src="../../../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/step9.png" alt="" class="imgLeft">
+                            </figure>
+                            <div class="boxPontosPositivos" id="BbExemplosDinamicas8">
+                                <div class="titleBox">
+                                    <h4>Pontos Positivos</h4>
+                                </div>
+                                <div class="listBox">
+                                    <ul>
+                                        <li class="verdeClaro">Instruções claras e critérios de avaliação explícitos, principalmente com relação à forma (tamanho, prazo, periodicidade, quantidade etc.).</li>
+                                        <li class="amarelo">Incentivo à interação e colaboração entre os pares.</li>
+                                        <li class="azul">Aspectos motivacionais (eleição dos melhores).</li>
+                                        <li class="roxo">Instruções técnicas.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Cada um dos quatro blogs contou com cerca de quinze postagens em um período de duas semanas, ou seja, cada blog teve praticamente uma postagem por dia.</p>
+                        <p>Para avaliar os alunos no blog, a professora Letícia elaborou um Rubric:</p>
+                        <div class="imageContainer row">
+                            <figure>
+                                <figcaption>Imagem 10. Rubric de avaliação o blog da disciplina “Estratégia Organizacional e Gestão de Clientes”.</figcaption>
+                            </figure>
+                        </div>
+                        <!-- usando classe de outra tabela como base -->
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tableAvalExistente tableExDinamicas">
+                            <tr>
+                                <td style="background-color:#fff">&nbsp;</td>
+                                <td colspan="4">Níveis de resultado</td>
+                            </tr>
+                            <tr>
+                                <td>Critérios</td>
+                                <td><strong>Insatisfatório</strong><br>(Não atendeu ao mínimo requerido)</td>
+                                <td><strong>Básico</strong><br>(Apresentou o mínimo esperado para a atividade; ainda há oportunidade de melhoria)</td>
+                                <td><strong>Adequado ou Esperado</strong><br> (Apresentou o que era esperado)</td>
+                                <td><strong>Avançado</strong><br> (Superou o que era esperado)</td>
+                            </tr>
+                            <tr>
+                                <td>Postagens – <br><strong>Participação</strong><br>22,50%</td>
+                                <td>25%<br>Não atingiu o mínimo<br>(&#60;1/2 dias).</td>
+                                <td>50%<br>Atingiu o mínimo<br>(1/2 dias).</td>
+                                <td>75%<br>Ultrapassou o mínimo<br>(3).</td>
+                                <td>100%<br>Excedeu expectativas<br>(> 3).</td>
+                            </tr>
+                            <tr>
+                                <td>Postagens – <br><strong>Aderência ao Tema </strong><br>30,00%</td>
+                                <td>0%</td>
+                                <td>25%<br>Blog tangencia tema central (comentário interessante, mas pouco relacionado ao tema).</td>
+                                <td>70%<br>Blog discorre sobre algo relevante do tema.</td>
+                                <td>100%<br>Blog elabora raciocínio sobre o tema.</td>
+                            </tr>
+                            <tr>
+                                <td>Postagens – <br><strong>Contribuição para discussão</strong><br>22,50 %</td>
+                                <td>0%</td>
+                                <td>50%<br>Blog foca em descrição do problema ou produto da ferramenta.</td>
+                                <td>75%<br>Blog foca na identificação de causa de problema.</td>
+                                <td>100%<br>Blog propõe soluções/alternativas de solução.</td>
+                            </tr>
+                            <tr>
+                                <td>Comentários – <br><strong>Participação</strong><br>12,50%</td>
+                                <td>25%<br>Não atingiu o mínimo<br>(&#60; 2 por blog).</td>
+                                <td>50%<br>Atingiu o mínimo<br>(2 por blog).</td>
+                                <td>75%<br>Ultrapassou o mínimo<br>(3 a 4 por blog).</td>
+                                <td>100%<br>Excedeu expectativa<br>(&#62; 4 por blog).</td>
+                            </tr>
+                            <tr>
+                                <td>Comentários – <br><strong>Contribuição</strong><br>12,50%</td>
+                                <td>0%</td>
+                                <td>25%<br>Comentários não agregam à discussão<br>(ex: parabéns, bom ponto etc.)</td>
+                                <td>60%<br>Comentários agregam à discussão e colocam ponto adicional.</td>
+                                <td>100%<br>Comentários desenvolvem raciocínio.</td>
+                            </tr>
+                        </table>
+
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+                        <div class="imageContainer row">
+                            <p style="width:48%">Durante a atribuição de notas à atividade, Letícia sentiu dificuldade ao  avaliar os comentários dos alunos, já que a interface do Blackboard não é amigável para isso: como o Blackboard prevê avaliação apenas de postagens, é necessário entrar postagem por postagem e corrigir os comentários “à mão”.</p>
+                            <p style="width:48%">Além disso, durante a correção, não foi possível efetuar eventuais ajustes nos critérios preestabelecidos:  uma vez que um Rubric é usado para avaliar os alunos, o Blackboard não permite alterá-lo.</p>
+                            <div class="boxParaRefletir" id="BbExemplosDinamicas8b">
+                                <div class="titleBox">
+                                    <h4>Para Refletir</h4>
+                                </div>
+                                <div class="listBox">
+                                    <ul>
+                                        <li>Caso você use alguma ferramenta interativa (fórum, blog, wiki), como você elaboraria um Rubric para avaliar a participação dos alunos?</li>
+                                        <li>Seu Rubric estaria mais focado em critérios de forma ou de conteúdo?</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <h2 id="subTitulo5">Blog: autoavaliação</h2>
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+                        <div class="imageContainer row">
+                            <p style="width:50%">O segundo exemplo de uso de blog vem da disciplina “Métodos de Comunicação e Negociação” (Ed. Executiva – Programas Customizados – Santander – MGN II).</p>
+                            <p style="width:50%">Nesta disciplina blended, a professora Denise Manfredi propôs duas atividades com uso de blog: autoavaliação e pesquisa.</p>
+                            <p style="width:50%">Havia um texto introdutório para as atividades:</p>
+                            <div class="boxPontosPositivos" id="BbExemplosDinamicas9">
+                                <div class="titleBox">
+                                    <h4>Pontos Positivos</h4>
+                                </div>
+                                <div class="listBox">
+                                    <ul>
+                                        <li class="verdeClaro">Instruções detalhadas com critérios de forma e conteúdo.</li>
+                                        <li class="azul">Aspectos motivacionais.</li>
+                                        <li class="roxo">Questões norteadoras.</li>
+                                        <li class="amarelo">Incentivo à interação e colaboração entre os pares.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="imageContainer row">
+                            <figure>
+                                <figcaption>Imagem 11. Instruções gerais da atividade de<br>Métodos de Comunicação e Negociação.</figcaption>
+                                <img src="../../../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/step10.png" alt="" class="imgLeft">
+                            </figure>
+                        </div>
+
+                        <p>Além do texto introdutório, cada blog trazia instruções específicas:</p>
+                        <div class="imageContainer row">
+                            <figure>
+                                <figcaption>Imagem 12. Instruções específicas do blog “Autoavaliação” na disciplina Métodos de Comunicação e Negociação.</figcaption>
+                                <img src="../../../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/step10b.png" alt="" class="imgLeft">
+                            </figure>
+                            <div class="boxPontosPositivos" id="BbExemplosDinamicas10">
+                                <div class="titleBox">
+                                    <h4>Pontos Positivos</h4>
+                                </div>
+                                <div class="listBox">
+                                    <ul>
+                                        <li class="verdeClaro">Instruções detalhadas com critérios de forma e conteúdo.</li>
+                                        <li class="laranja">Questões norteadoras.</li>
+                                        <li class="roxo">Instruções técnicas.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+                        <div class="imageContainer row">
+                            <figure>
+                                <figcaption>Imagem 13. Instruções específicas do blog “Pesquisa”<br>na disciplina Métodos de Comunicação e Negociação.</figcaption>
+                                <img src="../../../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/step11.png" alt="" class="imgLeft">
+                            </figure>
+                            <div class="boxParaRefletir" id="BbExemplosDinamicas11">
+                                <div class="titleBox">
+                                    <h4>Para Refletir</h4>
+                                </div>
+                                <div class="listBox">
+                                    <ul>
+                                        <li>Que tipo de atividade você poderia fazer com blog?</li>
+                                        <li>Qual o esforço exigido do professor na preparação da atividade (ideia e configuração do ambiente virtual)?</li>
+                                        <li>Qual o esforço exigido do professor na condução da atividade (monitoramento e comentários no blog)?</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <h2 id="subTitulo6">Wiki: escrita colaborativa</h2>
+                        <p>Em 2013, na disciplina “Liderança Mobilizadora” (MGR – Santander), a professora Carla Grasso propôs uma atividade usando Wiki. A atividade consistia na elaboração em conjunto de um “Manual do Gestor” em duas etapas: a primeira feita em pequenos grupos; a segunda envolvendo coletivamente toda a turma. A ideia era não apenas lidar com os conceitos sobre liderança e gestão no manual, mas mensurar na prática o grau de liderança em pequenos grupos e, posteriormente, na sala como um todo (os alunos que conduzissem a elaboração geral estariam manifestando traços de liderança mobilizadora).</p>
+                        <div class="imageContainer row">
+                            <figure>
+                                <figcaption>Imagem 14. Instruções específicas do wiki na disciplina<br>“Liderança Mobilizadora”.</figcaption>
+                                <img src="../../../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/step12.png" alt="" class="imgLeft">
+                            </figure>
+                            <div class="boxPontosPositivos" id="BbExemplosDinamicas12">
+                                <div class="titleBox">
+                                    <h4>Pontos Positivos</h4>
+                                </div>
+                                <div class="listBox">
+                                    <ul>
+                                        <li class="verdeClaro">Instruções detalhadas com critérios de forma e conteúdo.</li>
+                                        <li class="laranja">Questões norteadoras.</li>
+                                        <li class="amarelo">Incentivo à interação e colaboração entre os pares.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="boxParaRefletir" id="BbExemplosDinamicas13">
+                                <div class="titleBox">
+                                    <h4>Para Refletir</h4>
+                                </div>
+                                <div class="listBox">
+                                    <ul>
+                                        <li>A atividade usou não apenas a ferramenta Wiki, mas em conjunto a ferramenta Diário. Que tipos de atividades colaborativas podem ser feitas combinando diferentes ferramentas?</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <p>No começo da Parte I, muitos alunos começaram a fazê-la individualmente. Apesar da clareza nas instruções publicadas no Blackboard, presencialmente houve ruído de informações. No passar dos dias, no entanto, o caminho foi realinhado.</p>
+                        <p>Após a Parte I, era necessário disponibilizar os textos construídos por cada grupo para a classe inteira. Como o Blackboard não permite “abrir” uma wiki de grupo, foi necessário salvar as wikis em documentos de texto e postá-los em uma pasta no Blackboard, algo que não havia sido previsto.</p>
+
+
+                        <div class="margemParaImagem" style="margin-top:60px"></div>
+
+                        <!-- 
+                        
+                        ÂNCORAS [VOLTAR AO SUMÁRIO]
+                        1- Adicionar a div.row vazia antes de cada subtítulo ('h2'). Ela será respónsável também de inserir a âncora para retornar ao sumário lá em cima;
+                        2- a div#ancoraSaibaMais fica após o fechamento desta tag 'article'. Ela é por padrão fixa em todos os manuais. Em situações em que o manual não tiver 'Manuais relacionados' e 'Manuais Complementares' esta div desaparece;
+                        3- Depois da tag section.saibaMais há a única âncora da página que não recebe condicionais;
+
+                         -->
+
+                    </article>
+
+                    <!-- Devido aos poucos itens 'Saiba Mais'
+                    <div id="ancoraSaibaMais" class="voltarSumario fix">
+                        <a href="#pesquisa">Início</a>
+                    </div> -->
+                    
+                    <!-- inicio do box Saiba mais -->
+                    <section class="saibaMais row fix">
+                        <h2 id="saiba-mais" class="ancora">Saiba Mais</h2>
+                        
+                        <h4 id="relacionado">Manuais relacionados</h4>
+                        <ul  ng-controller="manuaisRelacionados">
+                            <!-- class="default"  -->
+                            <li ng-repeat="item in Exemplos_dinamicas" class="ng-class: item.tipoIcone">
+                                <div><a href="{{item.Link}}">{{item.manual}}</a></div>
+                            </li>
+                        </ul>
+                        
+                        <h4 id="complementar">Materiais complementares</h4>
+                        <ul ng-controller="materiaisComplementares">
+                            <li ng-repeat="item in Exemplos_dinamicas" class="ng-class: item.tipoIcone">
+                                <div><a href="{{item.Link}}" target="_blank">{{item.manual}}</a></div>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <div class="voltarSumario fix">
+                        <a href="#pesquisa">Início</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="fix respiro"></div>
+
+<!-- Scripts: plugins -->
+<script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
+<script src="../../../js/libs/angular.js"></script>
+<script src="../../../js/libs/jquery.placeholder.js"></script>
+
+<!-- Scripts: controllers do AngularJs -->
+<script src="../../../js/listaCompletaManual.js"></script>
+<script src="../../../js/manuaisRelacionados.js"></script>
+<script src="../../../js/materiaisComplementares.js"></script>
+
+<!-- Scripts: do projeto -->
+<script src="../../../js/main.js"></script>
+
+<!-- Scripts: google analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53927287-1', 'auto');
+  ga('send', 'pageview');
+  // ga('set', '&uid', {{UA-53927287-1}});
+</script>
+</body>
+</html>

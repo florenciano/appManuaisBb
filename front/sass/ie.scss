@@ -519,6 +519,40 @@ button.close {
         & + p { margin: 0 0 1em 0; }
     }
 
+    // blackboard: receber trabalho com verficacao de plagio
+        // criei uma classe no article para atacar os elementos desta página
+    .recTrabComVerPlagio {
+        h4 { margin: 1em 0 .25em; font-size: 111.25%; }
+        ol, ul {
+            padding-left: 1.5em;
+            margin: 0;
+        }
+        .subListas {
+            padding: 0;
+            li {
+                list-style: none;
+                &::before {
+                    content: "\0336\ ";
+                    display: inline-block;
+                    padding: 0 .5em;
+                    margin-right: .5em;
+                }
+            }
+        }
+        .subListasNivel2 {
+            padding-left: 3em;
+            li {
+                list-style-type: disc;
+                &::before {
+                    content: "";
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+
     // Novos elementos do catme
     
     // O que é a ferramenta Catme
@@ -783,7 +817,6 @@ button.close {
         }
     }
 
-    // Blackboard
     // Padronização dos ambientes online da PGLS
     h4.introdPadronizPGLS { 
         @include font(normal, 125%);
@@ -793,6 +826,8 @@ button.close {
         font-size: 100%;
         & + p { margin: 0; }
     }
+
+    // exemplos de dinâmicas
 
     ////////////////////////////////////
     // Blackboard [EXCEÇÃO]

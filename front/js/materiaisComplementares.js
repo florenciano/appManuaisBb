@@ -219,6 +219,21 @@ manuaisBB.controller("materiaisComplementares", function ($scope) {
 	}
 	];
 
+	// "Criar wiki"
+	$scope.Exemplos_dinamicas = 
+	[
+	{	
+		"manual"	: 	"Blogs, Wikis and Discussion Boards",
+		"Link" 		: 	"http://www.cmu.edu/teaching/technology/blogs-wikis-discussionboards.html",
+		"tipoIcone" : 	"site"
+	},
+	{	
+		"manual"	: 	"Instructional Strategies: Discussion",
+		"Link" 		: 	"http://www.cmu.edu/teaching/designteach/design/instructionalstrategies/discussions.html",
+		"tipoIcone" : 	"site"
+	}
+	];
+
 	// CATEGORIA: Trabalhos
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
