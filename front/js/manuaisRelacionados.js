@@ -388,6 +388,42 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	// }
 	];
 
+	// "Copiar testes e pesquisas para outra disciplina"
+	$scope.Copiar_testes_pesquisas = 
+	[
+	{
+		"manual"	: 	"Criar ou alterar testes (com nota)", 
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/criar-ou-alterar-testes-com-nota/",
+		"tipoIcone"	: 	"blackboard"
+	},
+	{
+		"manual"	: 	"Criar ou alterar pesquisas (sem nota)", 
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/criar-ou-alterar-pesquisas-sem-nota/",
+		"tipoIcone"	: 	"blackboard"
+	},
+	{
+		"manual"	: 	"Conhecer os tipos de pergunta dos testes e pesquisas", 
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/conhecer-os-tipos-de-pergunta-dos-testes-e-pesquisas/",
+		"tipoIcone"	: 	"blackboard"
+	},
+	{
+		"manual"	: 	"Importar testes e pesquisas do Word", 
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/importar-testes-e-pesquisas-do-word/",
+		"tipoIcone"	: 	"blackboard"
+	},
+	{
+		"manual"	: 	"Gerar relatórios de testes", 
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/gerar-relatorios-de-testes/",
+		"tipoIcone"	: 	"blackboard"
+	},
+	{
+		"manual"	: 	"Boas práticas", 
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/boas-praticas/",
+		"tipoIcone"	: 	"blackboard"
+	},
+
+	];
+
 	// "Gerar relatórios de testes"
 	$scope.Gerar_relatorios_de_testes = 
 	[
@@ -406,6 +442,41 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/importar-testes-e-pesquisas-do-word/",
 		"tipoIcone"	: 	"blackboard"
 	}
+	];
+
+	// "Gerar relatórios de testes"
+	$scope.Boas_praticas = 
+	[
+	{
+		"manual"	: 	"Criar ou alterar testes (com nota)", 
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/criar-ou-alterar-testes-com-nota/",
+		"tipoIcone"	: 	"blackboard"
+	},
+	{
+		"manual"	: 	"Criar ou alterar pesquisas (sem nota)", 
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/criar-ou-alterar-pesquisas-sem-nota/",
+		"tipoIcone"	: 	"blackboard"
+	},
+	{
+		"manual"	: 	"Conhecer os tipos de pergunta dos testes e pesquisas", 
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/conhecer-os-tipos-de-pergunta-dos-testes-e-pesquisas/",
+		"tipoIcone"	: 	"blackboard"
+	},
+	{
+		"manual"	: 	"Importar testes e pesquisas do Word", 
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/importar-testes-e-pesquisas-do-word/",
+		"tipoIcone"	: 	"blackboard"
+	},
+	{
+		"manual"	: 	"Copiar testes e pesquisas para outra disciplina", 
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/copiar-testes-e-pesquisas/",
+		"tipoIcone"	: 	"blackboard"
+	},
+	{
+		"manual"	: 	"Gerar relatórios de testes", 
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/gerar-relatorios-de-testes/",
+		"tipoIcone"	: 	"blackboard"
+	},
 	];
 
 	// CATEGORIA: Rubric

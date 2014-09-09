@@ -175,12 +175,20 @@ manuaisBB.controller('listaMenu', function ($scope) {
 		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/conhecer-os-tipos-de-pergunta-dos-testes-e-pesquisas/'
 	},
 	{
+		'manual'			: 	'Copiar Testes e Pesquisas para outra Disciplina',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/copiar-testes-e-pesquisas/'
+	},
+	{
 		'manual'			: 	'Importar testes e pesquisas do Word',
 		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/importar-testes-e-pesquisas-do-word/'
 	},
 	{
 		'manual'			: 	'Gerar relatórios de testes',
 		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/gerar-relatorios-de-testes/'
+	},
+	{
+		'manual'			: 	'Boas práticas',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/boas-praticas/'
 	}
 	];
 

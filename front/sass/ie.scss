@@ -552,7 +552,56 @@ button.close {
         }
     }
 
+    // copiar testes e pesquisas de outra disciplina
+    .tableCopiarTestPesquisa {
+        .tableEnfaseText {
+            font-size: 111.25%;
+            line-height: 1.25em;
+            display: block;
+            margin: 10px 0 0;
+            // border-top: 1px solid rgba(255,255,255,.3);
+            padding-top: 5px;
+        }
+        margin: 0 auto !important;
+        width: 80% !important;
+        tr {
+            td { padding: 10px !important; }
+        }
+        tr:last-child {
+            td { line-height: 1.45em }
+        }
+        .opcao {
+            background-color: #fff;
+            padding: .25em;
+            color: #009491;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+    }
 
+    // Boas práticas
+    .tableBoasPraticas {
+        tr {
+            td { width: 40%; line-height: 1.45em; }
+            td:first-child { width: 20%; font-weight: bold; }
+        }
+        ul {
+            padding-left: 20px;
+            margin: 10px 0;
+            li { margin: 0; }
+        }
+        .nomeProf {
+            background-color: #f15a22;
+            color: #fff;
+            padding: .125em .25em;
+            margin-right: .5em;
+            border-radius: 2px;
+            font-size: 92.5%;
+            letter-spacing: 1px;
+            border: 1px solid #E7551F;
+        }
+    }
+        
     // Novos elementos do catme
     
     // O que é a ferramenta Catme

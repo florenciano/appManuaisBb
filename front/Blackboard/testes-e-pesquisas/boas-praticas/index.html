@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br" ng-app="manuaisBB">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Tecnologias de Aprendizagem - Manuais de utilização</title>
+<meta name="viewport" content="width=device-width">
+<meta name="msapplication-TileImage" content="tile.png"/>
+<meta name="msapplication-TileColor" content="#d02034"/>
+
+<link rel="stylesheet" type="text/css" media="print" href="../../../css/print.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../../../css/main.css">
+
+<!--[if IE]><link rel="shortcut icon" href="favicon.ico"><![endif]-->
+<link rel="icon" href="../../../favicon-16.png" sizes="16x16">
+<link rel="icon" href="../../../favicon-32.png" sizes="32x32">
+<link rel="icon" href="../../../favicon-48.png" sizes="48x48">
+<link rel="icon" href="../../../favicon-64.png" sizes="64x64">
+<link rel="icon" href="../../../favicon-128.png" sizes="128x128">
+
+<!--
+1- iPad com Retina Display;
+2- iPhone com Retina Display;
+3- Primeira e segunda geração de iPad;
+4- Versões antigas de iPhone, iPod Touch e Android 2.2+
+-->
+<link rel="apple-touch-icon" sizes="144x144" href="../../../apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../../apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../../apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+
+<!--[if IE]>
+    <link href="../../../css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script>window.html5 || document.write('<script src="../../../js/libs/html5shiv.js"><\/script>')</script>
+<![endif]-->
+
+</head>
+<body>
+    <!-- alert para visualização abaixo de 768px -->
+    <div class="alert alert-warning alert-dismissable">
+        <button type="button" class="close">&times;</button>
+        Melhor visualizado com resolução de 768px de largura ou superior.
+    </div>
+
+    <div class="wrapper">
+        
+        <header id="top" class="wfull fix">
+            <div class="logo c4">
+                <img src="../../../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
+            </div>
+            <div class="titleHeader c8">
+                <p class="title">Tecnologias de Aprendizagem</p>
+                <p class="description">Manuais de utilização</p>
+            </div>
+        </header>
+
+        <div id="main" role="main" class="fix wfull">
+            <div class="containerMain fix row">
+
+                <!-- início da área da busca -->
+                <section class="buscaMain c4" ng-controller="listaMenu">
+                    <div class="inputSearch">
+                        <form id="busca">
+                            <label for="pesquisa"></label>
+                            <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Busca por título ou palavra-chave" ng-model="searchText">
+                        </form>
+                    </div>
+
+                    <nav role="navigation" class="navigationMain">
+                        <h5 class="icoBlackboard">Blackboard</h5>
+
+                        <ol class="noCategory" ng-repeat="item in BbConhecerAmbiente | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>    
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbMateriais | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbComunicacaoInteracao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbTrabalhos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbGrupos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbTestesPesquisas | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist ng-class: addMark()" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbRubrics | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbAvaliacao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbGeral| filter: {manual:searchText}">
+                        <li class="nameCategory">
+                            <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            
+                        </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbCalendario | filter: {manual:searchText}">
+                        <li class="nameCategory">
+                            <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            
+                        </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+                        
+                        <h5 class="icoCatme">Catme</h5>
+                        <ol class="noCategory" ng-repeat="item in catmeSobreFerramenta | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in catmeAplicarPesquisaAval | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in catmeAnalisarResultados | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <!-- <h5 class="icoClickers">Votadores eletrônicos (clickers)</h5>
+                        <ol class="noCategory" ng-repeat="item in clickerSobreFerramenta | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerUtilizarVotadores | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerPrepararSlides | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerIdentificarVoto | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerPromoverVotacao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerAnalisarResultados | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol> -->
+                        
+                        <h5 class="icoCursosOnline">Casos, Simuladores e Cursos online</h5>
+                        <ol class="noCategory" ng-repeat="item in SobreOsRecursos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in ConsultarRecursosDisponiveis | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in UtilizarRecursos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <div class="faqBusca icoFaq">
+                            <h5>
+                            <ol class="noCategory">
+                                <li><a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/faq/index.html" class="">FAQ</a></li>
+                            </ol>
+                            </h5>
+                        </div>
+                        <div class="outros">
+                            <h6>
+                                <a href="mailto:tai@insper.edu.br?subject=TAI%20-%20Manuais%20de%20utiliza&#231;&#227;o">Não encontrou o que queria?</a>
+                            </h6>
+                        </div>
+
+                    </nav>
+                </section>
+
+                <!-- início do conteúdo do manual -->
+                <section class="mainContent c8">
+                    <section class="headerContent row">
+                        <div class="cabecalho fix">
+                            <p>
+                                <!-- adicionar a data da produção do material -->
+                                <span><strong>Atualizado: </strong>08/09/2014</span>
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="breadcrumb">
+                            <p>
+                                <span class="nameCategory">Blackboard </span>
+                                <span>&#62; </span>
+                                Boas práticas
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- 
+                    
+                    INTRODUCAO
+                    1- Texto do título h1 é o mesmo do 'p' da div.breadcrumb;
+                    2- div.sumario aparece logo depois da introdução do texto 'quando houver' e serve para listar todos os subtítulos da página definidos pela tag 'h2';
+                    3- toda tag 'h2' receberá esta sintaxe:
+                    '<h2 id="subTituloX">Texto aqui</h2>'
+                    É necessário adicionar um número identificador na âncora;
+
+                     -->
+
+                    <article class="contentMain row">
+                        <h1>Boas práticas</h1>
+                        <p>Veja a seguir algumas dicas, sugestões e exemplos de dinâmicas de uso de Testes e Pesquisas. Se tiver outros exemplos para compartilhar, escreva para <a href="mailto:blackboard@insper.edu.br">blackboard@insper.edu.br</a></p>
+
+                        <div class="sumario row">
+                            <h3 id="sumarioAncora">Sumário</h3>
+                        </div>
+
+                        <!--
+                        
+                        IMAGENS E BOX DE TEXTO
+                        1- Alinhamento das imgs adicionar as classes: imgLeft ou imgRight. O comportamenteo padrão é centralizado;
+                        2- Adicionar um id para cada box.
+                        REGRAS:
+                        - nome pasta assunto. ex: Bb, Catme, Casos, Clickers +
+                        - nome da categoria [se houver]. ex: materiais, avaliação, trabalhos +
+                        - nome do manual: as duas palavras iniciais. ex: criar pesquisa, associar rubric +
+                        - numero identificador sequencial.
+
+                        MODELO: BbMateriaisCarregarMateriais1
+
+                        3- No CSS vc controla a posição de cada um. Há + de 1 media queries para adaptar!;
+                        4- A classe 'boxDestaque' é o padrão. Para box com informações adicionais em fundo vermelho usar a classe 'boxDestaqueAdicional';
+                        5- Após cada div.imageContainer inserir a div.respiro para aplicar uma margem entre eles. Insira um valor de margin-top no próprio html, visto que há inúmeras necessidades de tamanhos de margin;
+
+                        -->
+
+                        <h2 id="subTitulo1">Configuração de Testes</h2>
+                        <p>Na <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/testes-e-pesquisas/criar-ou-alterar-testes-com-nota/" target="_blank">criação/edição do Teste</a>, é possível fazer uma série de configurações, dentre elas:</p>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tableAvalExistente tableBoasPraticas">
+                            <tr>
+                                <td style="background-color:#fff">&nbsp;</td>
+                                <td>Explicação</td>
+                                <td>Sugestões</td>
+                            </tr>
+                            <tr>
+                                <td>Número de tentativas</td>
+                                <td>
+                                    Definição do número de tentativas para resolução do teste:
+                                    <ul>
+                                        <li>uma única tentativa</li>
+                                        <li>número x de tentativas</li>
+                                        <li>tentativas ilimitadas</li>
+                                    </ul>
+                                </td>
+                                <td>Uma única tentativa é mais indicada em avaliações somativas, enquanto a opção de tentativas ilimitadas é mais indicada para listas de exercícios, nas quais é interessante a repetição.</td>
+                            </tr>
+                            <tr>
+                                <td>Forçar conclusão</td>
+                                <td>Uma vez iniciado, o aluno deve finalizar o teste sem possibilidade de fechá-lo e retomá-lo posteriormente.</td>
+                                <td>Embora pareça uma opção interessante, sugerimos nunca usá-la, pois caso aconteça alguma queda de energia ou de sinal de internet, o aluno não poderá retomar o teste.</td>
+                            </tr>
+                            <tr>
+                                <td>Cronômetro</td>
+                                <td>Uma vez iniciado o teste, o aluno tem um tempo determinado para finalizá-lo. Mesmo assim ele pode salvar a tentativa e retomá-la posteriormente caso a opção “Forçar conclusão” não esteja marcada.</td>
+                                <td>Com essa opção é possível permitir que os alunos façam um teste em casa do dia 1 ao dia 10, mas tenham apenas 30 minutos para finalizarem o teste.</td>
+                            </tr>
+                            <tr>
+                                <td>Data/hora de disponibilidade</td>
+                                <td>Definição de data/hora de início e fim da disponibilidade do teste.</td>
+                                <td>Em uma aplicação presencial é possível indicar que os usuários tenham acesso ao teste apenas no período exato da aula.</td>
+                            </tr>
+                            <tr>
+                                <td>Senha</td>
+                                <td>Se escolhida essa opção, os usuários precisarão de senha para acessar o teste.</td>
+                                <td>O uso de senha é importante em aplicações presenciais para evitar que alunos que faltaram façam o teste em casa. Mesmo com o teste já disponível, os alunos não conseguem iniciá-lo até a divulgação da senha.</td>
+                            </tr>
+                            <tr>
+                                <td>Data de vencimento</td>
+                                <td>Data limite para finalização do teste (dependendo da configuração, o aluno pode fazer o teste mesmo após a data de vencimento; em tais casos, o sistema acusa “atraso”).<br>Uma vez preenchida, a data de vencimento aparece automaticamente no calendário da disciplina no ambiente virtual.</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>Exceção de disponibilidade</td>
+                                <td>Exceções para alunos ou grupos específicos com relação a:
+                                    <ul>
+                                        <li>número de tentativas</li>
+                                        <li>cronômetro</li>
+                                        <li>data/hora de disponibilidade</li>
+                                    </ul>
+                                </td>
+                                <td>Sugerimos muito cuidado junto à classe no uso dessa opção, para evitar acomodação por parte dos alunos ou abertura de precedente.</td>
+                            </tr>
+                            <tr>
+                                <td>Opções de autoavaliação</td>
+                                <td>Definição de visualização das notas por parte do professor na Central de Notas.</td>
+                                <td>Mesmo que você não queira ver as notas dos alunos, mas quiser considerá-las na média do aluno, você precisa vincular o teste à Central de Notas.<br><br>Você só deve desvincular o teste da Central de Notas se realmente não quiser consultar as respostas dos alunos, nem usá-las como nota (autoestudo, por exemplo).</td>
+                            </tr>
+                            <tr>
+                                <td>Informações exibidas aos alunos após a finalização</td>
+                                <td>Definição de até duas regras acerca do que os alunos poderão ver em data específica. Opções:
+                                    <ul>
+                                        <li>pontuação: nota tirada por pergunta</li>
+                                        <li>todas as respostas: todas as alternativas possíveis</li>
+                                        <li>correta: alternativa correta</li>
+                                        <li>enviada: alternativa enviada</li>
+                                        <li>comentários: feedback automático de cada questão.</li>
+                                    </ul>
+                                </td>
+                                <td>Se o aluno por algum motivo não puder ver as notas do teste, é necessário não apenas configurar o teste, mas também ocultar a respectiva coluna na Central de Notas. Em testes avaliativos é interessante “segurar” o gabarito até que todos os alunos tenham feito o teste, para evitar que o gabarito seja repassado de um aluno a outro.</td>
+                            </tr>
+                            <tr>
+                                <td>Apresentação do teste</td>
+                                <td>Definição de visualização das questões:
+                                    <ul>
+                                        <li>todas as questões em uma única página.</li>
+                                        <li>uma questão por página</li>
+                                    </ul>
+                                    Definição de ordem aleatória de exibição das questões.
+                                </td>
+                                <td>No caso de listas curtas sugere-se deixar todas as questões na mesma página. Com relação à ordem aleatória, essa opção é sempre boa para evitar “cola”, mas é preciso atenção em casos do tipo “Leia o texto e responda as questões 1, 2 e 3”.</td>
+                            </tr>
+                        </table>
+                        
+                        <div class="margemParaImagem" style="height:60px"></div>
+
+                        <h2 id="subTitulo2">Aplicação presencial e a distância</h2>
+                        <p>Os testes podem ser aplicados presencialmente ou a distância:</p>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tableAvalExistente tableBoasPraticas">
+                            <tr>
+                                <td style="background-color:#fff">&nbsp;</td>
+                                <td>Explicação</td>
+                                <td>Sugestões</td>
+                            </tr>
+                            <tr>
+                                <td>Aplicação presencial</td>
+                                <td>Em sala de aula, com notebooks dos próprios alunos ou com computadores do Insper.</td>
+                                <td>
+                                    <ul>
+                                        <li>Não marcar a opção “Forçar Conclusão” para evitar problemas com queda de energia ou de sinal de Internet.</li>
+                                        <li>Configurar senha para o teste.</li>
+                                        <li>Configurar datas/horários de disponibilidade de acordo com o horário da aula.</li>
+                                        <li>Reservar com antecedência computadores junto ao HelpDesk, mesmo quando solicitar que os alunos tragam seus notebooks (para casos de esquecimentos ou problemas técnicos).</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Aplicação a distância</td>
+                                <td>Cada aluno faz na sua própria casa, de modo síncrono (em horário predeterminado) ou de modo assíncrono (no dia e horário que julgar mais adequado dentro do período de disponibilidade do teste).</td>
+                                <td>
+                                    <ul>
+                                        <li>Não marcar a opção “Forçar Conclusão” para evitar problemas com queda de energia ou de sinal de Internet.</li>
+                                        <li>Aplicar o teste de modo assíncrono, mesmo quando usar cronômetro.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <div class="margemParaImagem" style="height:80px"></div>
+
+                        <h2 id="subTitulo3">Exemplos de dinâmica</h2>
+                        <p>Veja a seguir alguns exemplos de Testes conduzidos por professores do Insper. Se tiver outros exemplos para compartilhar, escreva para <a href="mailto:blackboard@insper.edu.br" target="_blank">blackboard@insper.edu.br</a></p>
+
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tableAvalExistente tableBoasPraticas">
+                            <tr>
+                                <td style="background-color:#fff">&nbsp;</td>
+                                <td>Exemplo de uso na Graduação</td>
+                                <td>Exemplo de uso na Pós Lato-Sensu</td>
+                            </tr>
+                            <tr>
+                                <td>Quem usa</td>
+                                <td>Professores Carlos Caldeira e David Kallás na disciplina “Fundamentos de Estratégia e Marketing”.</td>
+                                <td>Professor Adalto Gonçalves em disciplinas do CBA e do CFM.</td>
+                            </tr>
+                            <tr>
+                                <td>Como é a aplicação</td>
+                                <td>Aplicação a distância, duas tentativas. Concluiu-se ser melhor deixar duas tentativas para melhorar o aprendizado.</td>
+                                <td>Duas aplicações são presenciais, com questões aleatórias, sem direito a voltar, com uma só tentativa. As demais aplicações são a distância, com questões aleatórias e tentativas ilimitadas até o prazo final.</td>
+                            </tr>
+                            <tr>
+                                <td>Qual a finalidade</td>
+                                <td>Na maioria das vezes para aferição de leitura. Também já foi utilizado como quiz.</td>
+                                <td>Os testes a distância são usados para fixação do conhecimento. Os testes presenciais são usados para verificação do conhecimento e aprendizagem.</td>
+                            </tr>
+                            <tr>
+                                <td>Tipos de questões usadas</td>
+                                <td>A maioria das questões são de múltipla escolha. Também são usadas algumas questões de fórmula calculada.</td>
+                                <td>Principalmente múltipla escolha e fórmula calculada. Às vezes também são usadas questões de resposta múltipla.</td>
+                            </tr>
+                            <tr>
+                                <td>O que se faz com os resultados</td>
+                                <td>As questões são trabalhadas em pontos específicos durante a aula.</td>
+                                <td>Valem parte da nota. Também servem de feedback ara saber onde os alunos estão com dificuldades.</td>
+                            </tr>
+                            <tr>
+                                <td>Recepção por parte dos alunos</td>
+                                <td>Embora os alunos não gostem da carga de testes, gostam do uso intensivo do Blackboard.</td>
+                                <td>A maioria dos alunos gosta dos exercícios de casa, mas não gostam muito do presencial, pois não têm duas chances.</td>
+                            </tr>
+                            <tr>
+                                <td>Comentários e sugestões</td>
+                                <td><span class="nomeProf">Caldeira:</span> “Temos exercícios praticamente em toda a aula. Usamos estes exercícios como nota de participação. Portanto, não damos nota para quem está ausente.”<br><br><span class="nomeProf">Kallás:</span> “Outra coisa é que fazer questões de múltipla escolha não é trivial. Verificamos algumas questões que deverão ser melhoradas no ano que vem. Mas vale muito a pena.”</td>
+                                <td><span class="nomeProf">Adalto:</span> “Vá montando aos poucos. O exercício de casa sempre é elogiado no final do curso por muitos alunos, que dizem que aprenderam por conta deles.<br><br>Cuidado com os gabaritos, pois no começo sempre aparece alguém com dúvidas pertinentes, ou apontando erros de formulação.”</td>
+                            </tr>
+                        </table>
+
+                        <div class="margemParaImagem" style="height:80px"></div>
+
+                        <!-- 
+                        
+                        ÂNCORAS [VOLTAR AO SUMÁRIO]
+                        1- Adicionar a div.row vazia antes de cada subtítulo ('h2'). Ela será respónsável também de inserir a âncora para retornar ao sumário lá em cima;
+                        2- a div#ancoraSaibaMais fica após o fechamento desta tag 'article'. Ela é por padrão fixa em todos os manuais. Em situações em que o manual não tiver 'Manuais relacionados' e 'Manuais Complementares' esta div desaparece;
+                        3- Depois da tag section.saibaMais há a única âncora da página que não recebe condicionais;
+
+                         -->
+
+                    </article>
+
+                    <div id="ancoraSaibaMais" class="voltarSumario fix">
+                        <a href="#pesquisa">Início</a>
+                    </div>
+                    
+                    <!-- inicio do box Saiba mais -->
+                    <section class="saibaMais row fix">
+                        <h2 id="saiba-mais" class="ancora">Saiba Mais</h2>
+                        
+                        <h4 id="relacionado">Manuais relacionados</h4>
+                        <ul  ng-controller="manuaisRelacionados">
+                            <!-- class="default"  -->
+                            <li ng-repeat="item in Boas_praticas" class="ng-class: item.tipoIcone">
+                                <div><a href="{{item.Link}}">{{item.manual}}</a></div>
+                            </li>
+                        </ul>
+                        
+                        <h4 id="complementar">Materiais complementares</h4>
+                        <ul ng-controller="materiaisComplementares">
+                            <li ng-repeat="item in Boas_praticas" class="ng-class: item.tipoIcone">
+                                <div><a href="{{item.Link}}" target="_blank">{{item.manual}}</a></div>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <div class="voltarSumario fix">
+                        <a href="#pesquisa">Início</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="fix respiro"></div>
+
+<!-- Scripts: plugins -->
+<script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
+<script src="../../../js/libs/angular.js"></script>
+<script src="../../../js/libs/jquery.placeholder.js"></script>
+
+<!-- Scripts: controllers do AngularJs -->
+<script src="../../../js/listaCompletaManual.js"></script>
+<script src="../../../js/manuaisRelacionados.js"></script>
+<script src="../../../js/materiaisComplementares.js"></script>
+
+<!-- Scripts: do projeto -->
+<script src="../../../js/main.js"></script>
+
+<!-- Scripts: google analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53927287-1', 'auto');
+  ga('send', 'pageview');
+  // ga('set', '&uid', {{UA-53927287-1}});
+</script>
+</body>
+</html>

@@ -309,6 +309,16 @@
     #BbTesPesquisaImportarWord11 { @include settingsBoxImagem(42%, auto, 40%, 0, auto) }
     #BbTesPesquisaImportarWord12 { @include settingsBoxImagem(45%, auto, auto, 31%, -80px) }
 
+    // Copiar testes e pesquisas de outra disciplina
+    #BbCopiarTestPesq1 { @include settingsBoxImagem(35%, auto, 90px, 0, auto) }
+    #BbCopiarTestPesq2 { @include settingsBoxImagem(35%, auto, auto, 0, 40px) }
+    #BbCopiarTestPesq3 { @include settingsBoxImagem(35%, auto, 60px, 0, auto) }
+    #BbCopiarTestPesq4 { @include settingsBoxImagem(35%, auto, auto, 0, 210px) }
+    #BbCopiarTestPesq5 { @include settingsBoxImagem(40%, 20px, auto, auto, -90px) }
+    #BbCopiarTestPesq6 { @include settingsBoxImagem(32%, auto, 95px, 0, auto) }
+    #BbCopiarTestPesq7 { @include settingsBoxImagem(35%, auto, auto, 0, 170px) }
+    #BbCopiarTestPesq8 { @include settingsBoxImagem(40%, 20px, auto, auto, -90px) }
+
     // Gerar relatórios de testes
     #BbTesPesquisagerarRel1 { @include settingsBoxImagem(32%, auto, auto, 20px, 20px) }
     #BbTesPesquisagerarRel2 { @include settingsBoxImagem(30%, auto, 90px, 20px, auto) }
@@ -959,7 +969,6 @@
     #BbTesPesquisaImportarWord1 { @include settingsBoxImagem(45%, auto, 0, 0, auto) }
 
     // Importar testes e pesquisas do word
-    // @include                           settingsBoxImagem(W%,  l,   t,   r,   b)
     #BbTesPesquisaImportarWord1 { @include settingsBoxImagem(54%, auto, 0, 0, auto) }
     #BbTesPesquisaImportarWord2 { @include settingsBoxImagem(60%, 0, auto, auto, -160px) }
     #BbTesPesquisaImportarWord3 { @include settingsBoxImagem(50%, 0, auto, auto, -240px) }
@@ -973,8 +982,18 @@
     #BbTesPesquisaImportarWord11 { @include settingsBoxImagem(50%, auto, 30%, 0, auto) }
     #BbTesPesquisaImportarWord12 { @include settingsBoxImagem(63%, auto, auto, 20%, -80px) }
 
+    // Copiar testes e pesquisas de outra disciplina
+    #BbCopiarTestPesq1 { @include settingsBoxImagem(35%, auto, 90px, 0, auto) }
+    #BbCopiarTestPesq2 { @include settingsBoxImagem(35%, 0, auto, auto, -10px) }
+    #BbCopiarTestPesq3 { @include settingsBoxImagem(35%, auto, 60px, 0, auto) }
+    #BbCopiarTestPesq4 { @include settingsBoxImagem(35%, auto, auto, 0, 170px) }
+    #BbCopiarTestPesq5 { @include settingsBoxImagem(40%, 20px, auto, auto, -90px) }
+    #BbCopiarTestPesq6 { @include settingsBoxImagem(42%, auto, 70px, 0, auto) }
+    #BbCopiarTestPesq7 { @include settingsBoxImagem(32%, auto, auto, 0, 210px) }
+    #BbCopiarTestPesq8 { @include settingsBoxImagem(30%, 20px, auto, auto, -110px) }
+
+
     // Gerar relatórios de testes
-    // @include                        settingsBoxImagem(W%,  l,       t,    r,   b)
     #BbTesPesquisagerarRel1 { @include settingsBoxImagem(46%, auto, auto, 0, 0) }
     #BbTesPesquisagerarRel2 { @include settingsBoxImagem(30%, auto, 70px, 0, auto) }
     #BbTesPesquisagerarRel3 { @include settingsBoxImagem(28%, auto, auto, 0, -20px) }
@@ -1442,6 +1461,22 @@
     #BbComunicacaoCriarDiario9,
     #BbComunicacaoCriarDiario10,
     #BbComunicacaoCriarDiario11,
+
+    // Exemplos de dinamicas
+    #BbExemplosDinamicas1,
+    #BbExemplosDinamicas2,
+    #BbExemplosDinamicas3,
+    #BbExemplosDinamicas4,
+    #BbExemplosDinamicas5,
+    #BbExemplosDinamicas6,
+    #BbExemplosDinamicas7,
+    #BbExemplosDinamicas8,
+    #BbExemplosDinamicas9,
+    #BbExemplosDinamicas9a,
+    #BbExemplosDinamicas10,
+    #BbExemplosDinamicas11,
+    #BbExemplosDinamicas12,
+    #BbExemplosDinamicas13,
 
     // Receber trabalhos com verificação de plágio (SafeAssignment)
     #BbTrabalhosRecTrabSemPlagio1,

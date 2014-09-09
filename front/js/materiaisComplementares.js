@@ -650,6 +650,21 @@ manuaisBB.controller("materiaisComplementares", function ($scope) {
 	}
 	];
 
+	// "Copiar Testes e Pesquisas para outra Disciplina"
+	$scope.Copiar_testes_pesquisas = 
+	[
+	{
+		"manual"  		: 	"Creating Exams",
+		"Link" 			: 	"http://www.cmu.edu/teaching/assessment/assesslearning/creatingexams.html",
+		"tipoIcone" 	:   "arquivo"
+	},
+	{
+		"manual"  		: 	"Developing Objective Test Questions ",
+		"Link" 			: 	"https://insper.blackboard.com/bbcswebdav/pid-135100-dt-content-rid-538944_3/orgs/com_pratica_docentes/Workshops%202014/Aplicacao_quiz_online/MaterialComplementar_DevelopingObjectiveTestQuestions.pdf",
+		"tipoIcone" 	: 	"arquivo" 
+	}
+	];
+
 	// "Gerar relatórios de testes"
 	$scope.Gerar_relatorios_de_testes = 
 	[
@@ -662,6 +677,21 @@ manuaisBB.controller("materiaisComplementares", function ($scope) {
 		"manual"  		: 	"Item Analysys",
 		"Link" 			: 	"http://ondemand.blackboard.com/r91/movies/Bb91_tools_item_analysis.htm",
 		"tipoIcone" 	: 	"video" 
+	}
+	];
+
+	// "Boas práticas"
+	$scope.Boas_praticas = 
+	[
+	{
+		"manual"  		: 	"Creating Exams",
+		"Link" 			: 	"http://www.cmu.edu/teaching/assessment/assesslearning/creatingexams.html",
+		"tipoIcone" 	:   "arquivo"
+	},
+	{
+		"manual"  		: 	"Developing Objective Test Questions ",
+		"Link" 			: 	"https://insper.blackboard.com/bbcswebdav/pid-135100-dt-content-rid-538944_3/orgs/com_pratica_docentes/Workshops%202014/Aplicacao_quiz_online/MaterialComplementar_DevelopingObjectiveTestQuestions.pdf",
+		"tipoIcone" 	: 	"arquivo" 
 	}
 	];
 
