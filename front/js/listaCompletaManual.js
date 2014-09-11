@@ -106,7 +106,7 @@ manuaisBB.controller('listaMenu', function ($scope) {
 		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/comunicacao-e-interacao/criar-wiki/'
 	},
 	{
-		'manual'			: 	'Exemplos de dinâmicas',
+		'manual'			: 	'Exemplos de dinâmicas – atividades colaborativas',
 		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/'
 	}
 	];

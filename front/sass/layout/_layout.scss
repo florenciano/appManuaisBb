@@ -417,11 +417,13 @@ body {
             border:1px solid #c8c8c8;
             td { vertical-align: middle; text-align: center }
         }
-        figure { margin: 0 }
+        figure { margin: 0; }
         figcaption { 
-            color: #a3a3a3;
-            margin-bottom: $meioGrid / 4;
-            @include font(italic, 92.5%);
+            @include font(normal, 92.5%);
+            text-align: center;
+            display: block;
+            color: #8f8f8f;
+            margin-top: $meioGrid / 4;
         }
         // O que é blackboard: quais instituições
         .containerSec { 
@@ -633,16 +635,9 @@ body {
                 margin: 10px 0;
                 li { margin: 0; }
             }
-            .nomeProf {
-                background-color: #f15a22;
-                color: #fff;
-                padding: .125em .25em;
-                margin-right: .5em;
-                border-radius: 2px;
-                font-size: 92.5%;
-                letter-spacing: 1px;
-                border: 1px solid #E7551F;
-            }
+        }
+        .imageContainer {
+            img { border: 1px solid #e6e7e8; }
         }
 
         // Novos elementos do catme

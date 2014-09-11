@@ -181,6 +181,11 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 		"manual"	: 	"Criar blog",
 		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/comunicacao-e-interacao/criar-um-blog/",
 		"tipoIcone"	: 	"blackboard"
+	},
+	{
+		"manual"	: 	"Exemplos de dinâmicas – atividades colaborativas",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/",
+		"tipoIcone"	: 	"blackboard"
 	}
 	];
 
@@ -200,6 +205,12 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	{
 		"manual"	: 	"Criar um fórum de discussão",
 		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/comunicacao-e-interacao/criar-um-forum-de-discussao/",
+		"tipoIcone"	: 	"blackboard"
+	},
+	{
+
+		"manual"	: 	"Exemplos de dinâmicas – atividades colaborativas",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
@@ -226,6 +237,31 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	{
 		"manual"	: 	"Avaliar wiki",
 		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/avaliar-wiki/",
+		"tipoIcone"	: 	"blackboard"
+	},
+	{
+		"manual"	: 	"Exemplos de dinâmicas – atividades colaborativas",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/",
+		"tipoIcone"	: 	"blackboard"
+	}
+	];
+
+	// Exemplos de dinâmicas - atividades colaborativas
+	$scope.Exemplos_dinamicas = 
+	[
+	{
+		"manual"	: 	"Criar um fórum de discussão",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/comunicacao-e-interacao/criar-um-forum-de-discussao/",
+		"tipoIcone"	: 	"blackboard"
+	},
+	{
+		"manual"	: 	"Criar blog",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/comunicacao-e-interacao/criar-um-blog/",
+		"tipoIcone"	: 	"blackboard"
+	},
+	{
+		"manual"	: 	"Criar wiki",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/comunicacao-e-interacao/criar-wiki/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
