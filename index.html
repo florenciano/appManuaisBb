@@ -11,112 +11,87 @@
 			max-width: 1024px;
 			padding: 1em;
 		}
-		/* estyle document. Use if necessary */
-		.nameProject {
-			color: #fff;
-			background-color: #cf1432;
-			padding: .25em;
-			font-weight: normal;
-			margin: 0;
-			font-size: 87.5%;
-			display: inline-block;
-		}
-		a, a:hover, a:active, a:focus {
-			color: #cf1432;
-		}
-		ul li {
-			margin: .25em 0;
-			font-size: 92.5%;
-		}
-		ul li ul li {
-			font-size: 100%;
-		}
+		h1 { margin-bottom: .25em; }
+		h2 { margin: 2em 0 0; }
+		h4 { margin: 0; padding: 0; 	}
+		a, a:hover, a:active, a:focus { color: #cf1432;	}
+		ul li { margin: .25em 0; font-size: 92.5%;	}
+		ul li ul li { font-size: 100%; }
+		li figure {	margin-top: .5em;	}
 		figcaption {
-			border-left: 3px solid #737373;
+			border-left: 2px solid #5a5a5a;
 			padding: .25em .5em;
 			font-size: 82.5%;
 			margin: .5em 0 1em 0;
 		}
+		img { border: 1px solid #E9E9E9; }
 	</style>
 </head>
 <body>
 	<div class="wrapper">
-		<h1 id="inicio">Reformulação dos manuais</h1>
-		<h2 class="nameProject">Documentação do Projeto</h2>
-		<p>O presente documento esclarece todas as diretrizes necessárias ao(s) desenvolvedor(es) responsável(is) visando atender qualquer alteração necessária no projeto ou, simplesmente, o contínuo desenvolvimento do mesmo.</p>
-		<p>Aqui também estão descritas todas as lógicas de funcionamento [scripts, markups, regras de estilos], detalhamento da estrutura de diretórios [links, regra de rotulagem e sistema de navegação].</p>
+		<h1 id="inicio">Reformulação dos manuais de utilização</h1>
+		
 
-		<hr>
+		<h4 class="nameProject">Documentação do Projeto</h4>
+		<p>Este documento esclarece todas as diretrizes necessárias ao(s) desenvolvedor(es) responsável(is) visando atender qualquer alteração necessária no projeto ou, simplesmente, o contínuo desenvolvimento do mesmo.</p>
+		<p>Aqui também estão descritas todas as lógicas de funcionamento (scripts, markups, regras de estilos) e o detalhamento da estrutura de diretórios.</p>
 
+		<!-- 
 		<h3>Sumário</a></h3>
 		<ul>
 			<li><a href="#detalhesGeral">Detalhes gerais do Projeto</a></li>
-			<li><a href="#habilidades">Habilidades requeridas</a></li>
-			<li><a href="#estruturaProjeto">Estrutura do Projeto</a></li>
+			<li><a href="#habilidades">Requisitos</a></li>
+			<li><a href="#estruturaProjeto">Estrutura de diretórios</a></li>
 		</ul>
-
 		<hr>
+		-->
 
-		<!-- DETALHES GERAIS -->
-		<h2><a name="detalhesGeral"></a>Detalhes gerais do Projeto</h2>
+		<h2 id="detalhesGeral">Detalhes gerais do Projeto</h2>
 		<p><strong>Nome do Projeto</strong>
 		<br>Reformulação dos manuais</p>
 
 		<p><strong>Diretório de gravação do Projeto</strong>
-		<br>Material armazenado no computador no seguinte endereço*: <strong>D:\wamp\www\projetos\appManuaisBb\front</strong>
-		<br><small>* diretório <em>default</em> de desenvolvimento de projetos. Segue a diretriz de endereço recomendado e gerenciada pelo <a href="http://www.wampserver.com/en/">Wamp</a> (plataforma de desenvolvimento de aplicação web).</small></p>
-		<p>Um backup deste projeto esta sendo armazenada em: <br>
-		<strong>U:\TAI\Projetos\Projetos 2014\Reformulacao_manuais\Professor\DI\Para_Producao</strong> <br>tendo como nome do arquivo: <em>bckRefManuais <small>[DATA DA ÚLTIMA ATUALIZAÇÃO]</small></em></p>
+		<br>Material armazenado no seguinte endereço: <strong>/Applications/MAMP/htdocs/projetos</strong>
+		<br>Backup da última versão válida deste projeto esta sendo armazenada em: <strong>servidor $DEA-TAI (a definir)</strong>.</p>
 		
 		<p><strong>Objetivo do Projeto</strong>
-		<br>Transpor os manuais do Blackboard da versão .pdf para .html mantendo a mesma (ou a mais próxima de) experiência de uso do modelo de origem.</p>
+		<br>Transpor os manuais do Blackboard da versão .pdf para .html mantendo a mesma (ou a mais próxima de) experiência de uso do modelo de origem. E a produção de novas demandas conforme necessidade.</p>
 		
 		<p><strong>Requisitos mínimos do Projeto</strong>
-		<br>Responsive web design (RWD); Cross-browser compatível com todos os browser que recebem suporte do Blackboard (<a href="http://help.blackboard.com/en-us/Learn/9.1_SP_12_and_SP_13/Administrator/010_Release_Notes/025_SP13_Release_Notes/Browser_Support">veja lista</a>).</p>
-		
+		<br>Responsive web design (RWD)*; Cross-browser compatível com todos os browser que recebem suporte do Blackboard (<a href="http://help.blackboard.com/en-us/Learn/9.1_SP_12_and_SP_13/Administrator/010_Release_Notes/025_SP13_Release_Notes/Browser_Support">veja lista</a>).
+		<br>
+		*: <small><em>Desktop e tablet.</em></small>
+		</p>
 		<p><strong>Metas do Projeto</strong></p>
 		<ul>
-			<li>Permitir que o usuário tira as principais dúvidas referente ao Blackboard por meio da navegação das páginas do projeto;</li>
+			<li>Permitir que o usuário tira as principais dúvidas referente ao Blackboard, Catme, Clickers e os Recursos de aprendizagem <em>(casos, simuladores e Cursos online)</em>;</li>
 			<li>Facilitar a busca por determinados assuntos de interesses;</li>
-			<li>Poder imprimir o documento mantendo a mesma experiência do formato original .pdf;</li>
 		</ul>
-		
-		<p><strong>Início de desenvolvimento do Projeto</strong>
-		<br>dezembro de 2013</p>
-		<p><a href="#inicio">Subir</a></p>
+		<!-- <p><strong>Início de desenvolvimento do Projeto</strong><br>dezembro de 2013</p> -->
 
-		<hr>
 		
-		<!-- HABILIDADES -->
-		<h2><a name="habilidades"></a>Habilidades requeridas</h2>
-		<p>Para realizar quaisquer alterações no projeto é necessário identificar as tecnologias implementadas no projeto. É recomendável que o desenvolver ou o responsável pela manutenção do Projeto tenha familariedade com estas tecnologias abaixo:</p>
+		<h2 id="habilidades">Requisitos</h2>
+		<p>As tecnologias utilizadas no desenvolvimento deste projetos foram:</p>
 		<ul>
-			<li>HTML5</li>
-			<li>Framework de autoração de CSS: COMPASS (<a href="http://compass-style.org">mais informação</a>)</li>
-			<li>Extensão de linguagem CSS: SASS (<a href="http://sass-lang.com">mais informação</a>).</li>
-			<li>CSS3 <s>e CSS direcionado a impressão</s></li>
-			<li>Javascript e biblitoteca de script jQuery</li>
-			<li>Framework MVW Javascript: AngularJS (<a href="http://angularjs.org">mais informação</a>)</li>	
+			<li>HTML5/CSS3</li>
+			<li>Framework de autoração de css: COMPASS. (<a href="http://compass-style.org">mais informação</a>)</li>
+			<li>Extensão de linguagem css: SASS. (<a href="http://sass-lang.com">mais informação</a>)</li>
+			<li>Javascript e biblitoteca de script jQuery.</li>
+			<li>Framework MVW Javascript: AngularJS. (<a href="http://angularjs.org">mais informação</a>)</li>	
 		</ul>
-		<p><a href="#inicio">Subir</a></p>
 
-		<hr>
-		
-		<!-- ESTRUTURA DO PROJETO -->
-		<h2><a name="estruturaProjeto"></a>Estrutura do Projeto</h2>
-		<!-- <p>O projeto esta sob a seguintes estrutura de diretórios:</p> -->
-		<!-- <h4>Diretrizes da estrutura de diretório</h4> -->
-		<p>A estrutura de diretórios foi definida com base nas recomendações de boas práticas para o desenvolvimento de projetos web. A estrutura inicial seguiu as diretrizes do <a href="http://html5boilerplate.com/">boilerplate templantes</a> disponível para desenvolvimento front-end, no entanto, para atender as necessidades peculiares do Projeto ocorreu pequenas modificações. Segue abaixo a estrutura principal de diretórios:</p>
+		<h2 id="estruturaProjeto">Estrutura de diretórios</h2>
+		<p>A estrutura de diretórios seguiu as boas práticas de desenvolvimento web baseado nas recomendações do <a href="http://html5boilerplate.com/">boilerplate templantes</a>. O projeto foi configurado no diretório raiz <em>front</em>.</p>
 		<p>
 			<figure>
 				<img src="img/estruturaDiretorio.png" alt="Estrutura principal de diretórios">
-				<figcaption>Estrutura inicial do projeto</figcaption>
+				<figcaption>Estrutura de diretórios para os documentos de produção: css, img, js e sass.</figcaption>
 			</figure>
 		</p>
 		<ul>
 			<li>
-				<strong>Diretório raiz (front)</strong>
-				<p>Diretório responsável para armazenar o arquivo <em>índice</em> do diretório (index.html). Ainda sobre este diretório fica reservado a alocação de outros <strong>arquivos</strong> que complementam o desenvolvimento necessário do projeto, por exemplo: <em>favicon.ico</em>.</p>
+				<strong>Diretório raiz</strong>
+				<p>Responsável pela locação do <em>index.html</em>.</p>
 				<p>Para atender as recomendações do conceito <em>Friendly URLs</em> foram criados novos diretórios para cada <strong>tema</strong> de manual a ser produzido. Para facilitar a identificação destes itens a letra inicial fica gravado em caixa alta.</p>
 				<p>
 				<figure>
@@ -135,76 +110,92 @@
 				<p>
 				<figure>
 					<img src="img/estruturaAssunto.png" alt="Estrutura de diretórios: tópicos do assunto escolhido">
-					<figcaption>Um exemplo de aplicação do asssunto 'Avaliação'. Cada tópico recebe uma pasta.</figcaption>
+					<figcaption>Um exemplo de aplicação do asssunto 'Comunicação e interação'. Cada tópico recebe uma pasta.</figcaption>
 				</figure>
 				</p>
-				<p>Os documentos HTML´s tem o mesmo none: <strong>index.html</strong></p>
 			</li>
 			<li>
-				<strong>Diretório de imagens (img)</strong>
-				<p>Ficarão alocados neste diretórios todas as imagens necessárias para o desenvolvimento do projeto. Os dois principais temas são:</p>
+				<strong>Diretório de imagens</strong>
+				<p>Ficarão alocados neste diretório todas as imagens necessárias para o desenvolvimento do projeto.</p>
+				<p>O armazenamento das imagens seguem o mesmo critério adotado na padronização de estruturação dos documentos HTML´s. O agrupamento segue por temas, assuntos e tópicos.</p>
+				<figure>
+					<img src="img/estruturaPastaImg.png" alt="Pasta imagem do projeto">
+					<figcaption>Um preview da organização e rotulagem do diretório <em>img</em>.</figcaption>
+				</figure>
+				<p>A convenção adotado para organizar as imagens do projeto foi rotular os arquivos <em>PSDs</em> com _stepX.psd (conforme indicado no box amarelo), indicando assim a sequencia dos passos das explicações dos manuais. Na exportação das imagens manteve-se o mesmo padrão da nomenclatura, porém, sem o sinal de '_' (conforme indicado no box azul).</p>
 				<ul>
 					<li>
 						<p><strong>Diretório de imagens 'ui'</strong>
-						<br>Local exclusivo de armazenamento das imagens da GUI (Graphical User Interface). O local de armazenamento da GUI estão armazenados em diretório fora da raiz do Projeto denominada 'layouts'.</p>
-					</li>
-					<li>
-						<p><strong>Diretório de imagens 'geral'</strong>
-						<br>Local de armazenamento default das imagens dos Manuais. Estão alocados dentro de seus respectivos: temas/assuntos/tópcios. A regra adotada é numerar sequencialmente as imagens de acordo com a ordem de leitura do conteúdo. ex: step1.png; step2.png... step<em>n</em>.png.</p>
-
-						<p>Para facilitar futuramente quaisquer necessidades de alterações das imagens uma cópia dos arquivos em formato aberto de edição '.psd' foi adicionado no mesmo diretório seguindo a mesma regra de nomenclatura descrita acima. Por convenção acrescentamos um sinal de underline '_' no início do nome. Ex: _step1.psd; _stpe<em>n</em>.psd. No entanto, recomendamos não subir para o repositório tais documentos.</p>
+						<br>Local exclusivo de armazenamento das imagens extraídas da GUI (Graphical User Interface). Os arquivos PSDs que compõe a GUI estão armazenados no diretório do Projeto denominado <strong>layouts</strong>.</p>
 					</li>
 				</ul>
-				<p>O armazenamento das imagens seguem o mesmo critério adotado na padronização de estruturação dos documentos HTML´s. Na prática, há um agrupamento por temas, por assuntos, e por tópicos.</p>
-				<figure>
-					<img src="img/pastaImg.png" alt="Pasta imagem do projeto">
-					<figcaption>Um preview da pasta <em>img</em>. Separação dos arquivos 'ui' dos demais conteúdos usados no Projeto. A nomenclatura das pastas seguem o mesmo critério adotado nos documentos HTML´s.</figcaption>
-				</figure>
-
-				<figure>
-					<img src="img/pastaImg2.png" alt="Estrutura das pastas de imagens">
-					<figcaption>Exemplo da estrutura de uma determinada pasta. Nomes e árvore de pasta seguindo o mesmo critérios dos HTML´s e rotulagem dos arquivos, tanto para uso dos manuais quanto para os arquivos de edições '.psd'.</figcaption>
-				</figure>
 			</li>
 			<li>
-				<strong>Diretório de estilos (sass)</strong>
-				<p>Neste diretório ficarão alocados os arquivos <em>.scss</em> que gerarão os documentos <em>.css</em> do projeto. A pasta esta separada em duas divisões: 
+				<strong>Diretório de estilos</strong>
+				<p>O diretório <strong>sass </strong>é reponsável por alocar os arquivos <em>.scss</em> que gerarão os documentos <em>.css</em> do projeto. A pasta esta separada em duas divisões: 
+				<figure>
+					<img src="img/estruturaPastaSass.png" alt="Estrutura de diretórios dos arquios css">
+					<figcaption>Estrutura dos arquivos SCSS (SASS).</figcaption>
+				</figure>
 				<ul>
 					<li>
-						<p><strong>layouts</strong>: reponsável pela organização dos arquivos .scss principais do Projeto. Eles geram os .css necessários para construir a interface dos documentos.</p>
+						<p><strong>layouts</strong>: reponsável pela organização dos principais arquivos .scss do Projeto. Eles geram os arquivos .css necessários para construir a interface (UI) dos manuais. O resultado final da compilação é adicionar no diretório <em>css</em> os seguintes documentos:</p>
+						<figure>
+							<img src="img/estruturaPastaCss.png" alt="Pasta imagem do projeto">
+							<figcaption><em>ie.css: </em>Para uso exclusivo nos navegadores Internet Explorer®. <em>print.css: </em>Estilos para documentos impressos (descontinuado do projeto). <em>main.css: </em>Arquivo principal da construção da interface do projeto.</figcaption>
+						</figure>
 					</li>
 					<li>
-						<p><strong>plugins</strong> = responsável pelos  arquivos de estilos adicionais para o desenvolvimento do Projeto. No momento estão sendo utilizados: _normalizr.scss (<a href="http://necolas.github.io/normalize.css/" target="_blank">ver plugin</a>) e _gridiculous.scss (<a href="http://gridiculo.us/" target="_blank">ver plugin</a>).</p>
+						<p><strong>plugins</strong>: responsável pelos  arquivos de estilos adicionais para o desenvolvimento do Projeto. Foram utilizados estes dois plugins: _normalizr.scss (<a href="http://necolas.github.io/normalize.css/" target="_blank">ver plugin</a>) e _gridiculous.scss (<a href="http://gridiculo.us/" target="_blank">ver plugin</a>).</p>
 					</li>
 				</ul>
-				<figure>
-					<img src="img/pastaSass.png" alt="Estrutura de diretórios dos arquios css">
-					<figcaption>Estrutura dos arquivos CSS.</figcaption>
-				</figure>
-				<p><strong>Compilando .scss para .css</strong></p>
-				<p>Para gerar os arquivos .css segue as orientações a seguir:</p>
+				<p class="subtopico"><strong>Gerandos os arquivos .CSS do projeto</strong></p>
+				<p>Para gerar os arquivos <em>css</em> basta seguir as orientações abaixo:</p>
 				<ul>
-					<li>Abra o programa <strong>Command Prompt with Ruby</strong>; </li>
-					<li>Acesse o diretório d: em seguida &#60;Enter&#62;;</li>
-					<li>Digite o comando cd &#60;<strong>diretório do Projeto</strong>&#62;;</li>
-					<li>Por fim o comando: <code>compass watch</code>;</li>
+					<li>No <strong>terminal</strong> acessar o diretório raiz do projeto localizado em: <code>/Applications/MAMP/htdocs/projetos/appManuaisBb/front</code>;
+						<figure>
+							<img src="img/comandSass.png" alt="Linha de comando para acessar o diretório raiz dos arquivos .scss">
+							<figcaption>Utilize o comando <strong>cd</strong> para acessar um determinado diretório.</figcaption>
+						</figure>
+					</li>
+					<li>Digitar o comando a seguir:
+						<figure>
+							<img src="img/comandSass_step2.png" alt="Linha de comando para compilar arquivos .scss">
+							<figcaption>Para mais detalhes sobre os comandos de gerenciamento do COMPASS/SASS acesse a <a href="http://compass-style.org/help/">documentação</a> da plataforma.</figcaption>
+						</figure>
+					</li>
+					<li>Verificando status de compilação. A cada alteração/edição nos arquivos .scss é gerado automaticamente os arquivos .css no seu respectivo diretório.
+						<figure>
+							<img src="img/comandSass_step3.png" alt="Verificando status da compilação dos arquivos .scss">
+							<figcaption>Status indicando que o arquivo '_layout.scss' foi alterado e consequentemente o arquivo 'main.css' foi atualizado.</figcaption>
+						</figure>
+					</li>
+					<li>Para interromper a compilação automática dos arquivos .scss pressionar CTRL + C.</li>
 				</ul>
-				<figure>
-					<img src="img/comandSass.png" alt="Linha de comando para compilar arquivos .scss">
-					<figcaption>Procedimento para gerar os arquivos .css</figcaption>
-				</figure>
 			</li>
 			<li>
-				<strong>Diretório de scripts e suas bibliotecas (js)</strong>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, dolores dicta commodi nihil eum. Eaque, repellendus ad maiores velit reprehenderit fugiat in vero perferendis blanditiis iste. Dignissimos, perspiciatis consequuntur eligendi.</p>
+				<strong>Diretório de scripts</strong>
+				<p>Neste diretório ficará os arquivos responsáveis por:</p>
+				<ol>
+					<li>Listar o nome de todos os manuais existentes (<em>listaCompletaManual.js</em>);</li>
+					<li>Listar os demais manuais correlacionados com o assunto vigente (<em>manuaisRelacionados.js</em>);</li>
+					<li>Listar (quando houver) materiais externos que complementam o assunto vigente (<em>materiaisComplementares.js</em>);</li>
+					<li>Para as demais necessidades do Projeto vincular no arquivo: <em>main.js</em>;</li>
+				</ol>
+				<figure>
+					<img src="img/estruturaPastaJs.png" alt="Estrutura de pasta dos arquivos de script .js">
+					<figcaption>O diretório 'libs' é responsável para armazenar os scripts das bibliotecas utilizadas, e também, para os arquivos de plugins utilizados no Projeto.</figcaption>
+				</figure>
 			</li>
 		</ul>
-		<p><a href="#inicio">Subir</a></p>
-
-		<hr>
 		
 
-
+		<h2 id="recomendacoes">Recomendações de uso</h2>
+		<ul>
+			<li>Continue o desenvolvimento de produção de novos manuais mantendo a estrutura de diretórios e a regra de rotulagem usados atualmente;</li>
+			<li>Evite alterar a URL raiz do Projeto, localizado atualmente no endereço: <code>https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/...</code></li>
+			<li>As regras/estrutura de marcações, estilos e scripts possuem comentários locais para melhor entendimento. Em caso de mudança ou adaptação do código adicionar comentários adicionais;</li>
+		</ul>
 	</div>
 </body>
 </html>
