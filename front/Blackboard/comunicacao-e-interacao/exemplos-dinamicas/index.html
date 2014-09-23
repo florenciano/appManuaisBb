@@ -437,7 +437,7 @@
                         <p>O fórum também pode ser usado para discussão teórica ou prática. Um exemplo é a disciplina “Estratégia Organizacional e Gestão de Clientes” (Santander – MGN III), que foi ministrada pela professora Letícia Costa em 2012. Nessa disciplina, a professora decidiu conduzir uma atividade (com nota) usando a ferramenta Fórum. O intuito era promover a discussão de aspectos práticos dos artigos lidos ao longo da disciplina.</p>
                         <div class="imageContainer row">
                             <figure>
-                                <img src="../../../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/step5.png" alt="" class="">
+                                <img src="../../../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/step5.png" alt="" class="imgLeft">
                                 <figcaption>Imagem 5. Fórum da disciplina “Estratégia Organizacional e Gestão de Clientes”.</figcaption>
                             </figure>
                             <div class="boxParaRefletir" id="BbExemplosDinamicas5">
@@ -761,21 +761,6 @@
 
 <!-- Scripts: do projeto -->
 <script src="../../../js/main.js"></script>
-<script>
-    // Ajustar a largura do figcaption para a mesma da imagem
-    // ambos estão dentro do 'figure' e do container 'imageContainer'
-    setTimeout(function(){
-        var imgs = $( ".imageContainer figure img" );
-        imgs.each( function (index, value) {
-            var largImg = $(this).width();
-            $(this).next( "figcaption" ).css( "width",largImg );
-
-            if( $(this).hasClass( "" ) ) {
-                $(this).next( "figcaption" ).css( "margin","5px auto 0" );
-            }
-        }); 
-    },400);    
-</script>
 
 <!-- Scripts: google analytics -->
 <script>

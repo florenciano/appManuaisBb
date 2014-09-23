@@ -218,4 +218,23 @@ $( document ).ready( function() {
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
+    /*
+        Pág: Blackboard/comunicacao-e-interacao/exemplos-dinamicas/
+        Ajustar a largura do figcaption para a mesma da imagem
+        ambos estão dentro do 'figure' e do container 'imageContainer'
+        Obs: Este script irá rodar somente quando a página terminar de carregar seus elementos
+    */
+    $(window).load(function(){
+        var imgs = $( ".contentArticleExDinamicas .imageContainer figure" );
+        imgs.each( function() {
+            var largImg = $(this).children( "img" ).width();
+            $(this).children( "figcaption" ).css( "width", largImg );
+
+            if( $(this).children( "img" ).hasClass( "" ) ) {
+                $(this).children( "figcaption" ).css( "margin","5px auto 0" );
+            }
+        });
+    });
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 });
