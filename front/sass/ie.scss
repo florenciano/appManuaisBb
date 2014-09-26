@@ -374,7 +374,7 @@ button.close {
             margin: 0;
             a {
                 @include corLink();
-                @include font(normal, 1em);
+                @include font(normal, 12px);
             }
         }
     }

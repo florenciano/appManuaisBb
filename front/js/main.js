@@ -153,21 +153,16 @@ $( document ).ready( function() {
     // Não queremos que aparece a âncora antes do 1º subTítulo do manual
     // quando este mesmo vier imediatamente após a lista de sumário.
     var allAnchor = $( ".voltarSumario" );
-
-    // desabilitando o script em páginas sem subtítulo ex: FAQ
-    if(allAnchor.length == 0) { return false }
-
-    if(allAnchor[0].previousElementSibling.className == "sumario row") {
-        allAnchor[0].style.display = "none";
-    }
+    allAnchor.each( function (index, posicao) {
+        if($(this).prev().hasClass( "sumario row" )) {
+            $(this).css( "display","none" );
+        }
+    });
 
     // O título 'Saiba mais' também é marcado com 'h2', portanto,
     // irá aparecer uma âncora indesejada dentro do box. Eliminamos.
-    var sumarioOut = $( ".saibaMais .voltarSumario" );
-    sumarioOut.remove();
+    $( ".saibaMais" ).find( ".voltarSumario" ).remove();
 
-    // var lastAnchor = allAnchor.slice( -1 )[0];
-    // lastAnchor.style.marginTop = "40px";
 
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
     
