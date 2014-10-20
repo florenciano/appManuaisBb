@@ -11,10 +11,6 @@
 // fonts
 $font: "Tahoma", "arial", "sans-serif";
 
-@mixin font($fstyle, $fsize) {
-    font: $fstyle $fsize $font;
-}
-
 // colors
 $corDefault: #c00026; // red insper
 $corTitle: #2d2d2d; // title h1 html
@@ -23,6 +19,15 @@ $corBorda: #bcbec0; // gray default
 $corDefaultDark: #7b0012; // red dark GUI
 $corSec01: #f57d8c; // secundary GUI
 $corSec02: #e64b64; // secundary2 GUI
+
+// grids
+$grid: 40px;
+$meioGrid: $grid / 2;
+
+
+@mixin font($fstyle, $fsize) {
+    font: $fstyle $fsize $font;
+}
 
 @mixin corLink() {
     text-decoration: none;
@@ -47,10 +52,6 @@ $corSec02: #e64b64; // secundary2 GUI
         text-decoration: underline;
     }
 }
-
-// grids
-$grid: 40px;
-$meioGrid: $grid / 2;
 
 
 /////////////////////////////////////////////////////////////////////
@@ -1067,8 +1068,9 @@ body {
         .icoExpandir { background: url("../img/ui/expandir.png") no-repeat left center; }
         .icoRecolher { background: url("../img/ui/recolher.png") no-repeat left center; }
 
-        // listas
-
+        // effect transition
+        .invisivel { opacity: 0 }
+        .visivel { opacity: 1 }
 
         /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
             PÁGINA: INDEX 

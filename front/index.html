@@ -313,7 +313,7 @@
                     <article class="contentMain row">
                         <h1>Como navegar</h1>
 
-                        <div class="imageContainer row">
+                        <div class="imageContainer row invisivel">
                             <img src="img/step1.png" alt="" class="imgLeft">
                             <div class="legendaIndex" id="posLegendaIndex1">
                                 <p>Procure no menu lateral a informação desejada.</p>
@@ -325,7 +325,7 @@
                         </div>
                         <hr class="linhaIndex">
                         
-                        <div class="imageContainer row">
+                        <div class="imageContainer row invisivel">
                             <img src="img/step2.png" alt="" class="imgRight">
                             <div class="legendaIndex right" id="posLegendaIndex3">
                                 <p>Outra opção é utilizar a <strong>caixa de busca.</strong></p>
@@ -334,7 +334,7 @@
                         </div>
                         <hr class="linhaIndex">
 
-                        <div class="imageContainer row">
+                        <div class="imageContainer row invisivel">
                             <img src="img/step3.png" alt="" class="imgLeft">
                             <div class="legendaIndex" id="posLegendaIndex4">
                                 <p>Algumas páginas possuem um <strong>sumário</strong> que permite <strong>localizar informações específicas</strong> no conteúdo.</p>
@@ -342,7 +342,7 @@
                         </div>
                         <hr class="linhaIndex">
 
-                        <div class="imageContainer row">
+                        <div class="imageContainer row invisivel">
                             <img src="img/step4.png" alt="" class="">
                             <div class="legendaIndex" id="posLegendaIndex5">
                                 <p>A maioria das páginas <strong>possui ao final uma caixa “Saiba Mais”</strong>. Nela estão listados outros itens relacionados ao mesmo assunto, bem como links externos de materiais complementares.</p>
@@ -350,13 +350,13 @@
                         </div>
                         <hr class="linhaIndex">
 
-                        <div class="imageContainer row">
+                        <div class="imageContainer row invisivel">
                             <img src="img/step5a.png" alt="" class="imgLeft">
                             <div class="legendaIndex" id="posLegendaIndex6">
                                 <p>Você também pode <strong>consultar as perguntas mais frequentes</strong> no item “FAQ” do menu.</p>
                             </div>
                         </div>
-                        <div class="imageContainer row">
+                        <div class="imageContainer row invisivel">
                             <img src="img/step5b.png" alt="" class="imgRight">
                             <div class="legendaIndex" id="posLegendaIndex7">
                                 <p>Na página de FAQ, basta <strong>clicar na pergunta</strong> para expandir a resposta.</p>
@@ -364,7 +364,7 @@
                         </div>
                         <hr class="linhaIndex">
 
-                        <div class="imageContainer row">
+                        <div class="imageContainer row invisivel">
                             <img src="img/step6.png" alt="" class="imgRight">
                             <div class="legendaIndex right" id="posLegendaIndex8">
                                 <p><span class="icoContato"></span></p>
@@ -390,16 +390,35 @@
 
 <!-- Scripts: do projeto -->
 <script src="js/main.js"></script>
+<script>
+    $(document).ready(function(){
+        
+        $(window).bind( "load scroll touchmove", function(){
+            var elementos = $( ".invisivel", ".contentMain" ),
+                myOffset = 100; // compensação visual. A lá Cardinalli
+            elementos.each(function(i){
+                var bottomObj = $( this ).position().top + $( this ).outerHeight(),
+                    bottomWindow = $( window ).scrollTop() + $( window ).height() - myOffset;
+
+                // if object is completely in the window, fade it
+                if( bottomWindow > bottomObj ){
+                    $( this ).animate({ "opacity": "1" }, 400);
+                }
+            });
+        });
+
+    });
+</script>
 
 <!-- Scripts: google analytics -->
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-53927287-1', 'auto');
-  ga('send', 'pageview');
+    ga('create', 'UA-53927287-1', 'auto');
+    ga('send', 'pageview');
 </script>
 </body>
 </html>
