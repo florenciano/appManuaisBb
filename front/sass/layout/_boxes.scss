@@ -511,10 +511,15 @@
     #CatmePesqAvalCriarPesq7 { @include settingsBoxImagem(55%, auto, auto, 0, 0) }
     #CatmePesqAvalCriarPesq8 { @include settingsBoxImagem(56%, auto, auto, 22%, -310px) }
 
-    // Criar pesquisa de avaliação
-    #CatmePesqAvalEditarInfo1 { @include settingsBoxImagem(38%, auto, auto, 0, 50px) }
+    // Editar informações da pesquisa
+    #CatmePesqAvalEditarInfo1 { @include settingsBoxImagem(30%, auto, auto, 0, 50px) }
     #CatmePesqAvalEditarInfo2 { @include settingsBoxImagem(50%, 0, auto, auto, 10px) }
     #CatmePesqAvalEditarInfo3 { @include settingsBoxImagem(30%, 0, auto, auto, 15px) }
+
+    // Trocar aluno de grupo com pesquisa em andamento
+    #CatmeTrocaAlunoGrupo1 { @include settingsBoxImagem(32%, auto, 80px, 0, auto) }
+    #CatmeTrocaAlunoGrupo2 { @include settingsBoxImagem(34%, auto, auto, 0, 40px) }
+    #CatmeTrocaAlunoGrupo3 { @include settingsBoxImagem(32%, auto, auto, 0, 150px) }
 
     // CATEGORIA: Analisar os resultados
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -1185,10 +1190,15 @@
     #CatmePesqAvalCriarPesq7 { @include settingsBoxImagem(55%, auto, auto, 0, -20px) }
     #CatmePesqAvalCriarPesq8 { @include settingsBoxImagem(80%, auto, auto, 10%, -310px) }
 
-    // Criar pesquisa de avaliação
+    // Editar informações da pesquisa
     #CatmePesqAvalEditarInfo1 { @include settingsBoxImagem(30%, auto, auto, 0, 10px) }
     #CatmePesqAvalEditarInfo2 { @include settingsBoxImagem(45%, 0, auto, auto, 0) }
     #CatmePesqAvalEditarInfo3 { @include settingsBoxImagem(30%, 10px, auto, auto, 0) }
+
+    // Trocar aluno de grupo com pesquisa em andamento
+    #CatmeTrocaAlunoGrupo1 { @include settingsBoxImagem(28%, auto, 30px, 0, auto) }
+    #CatmeTrocaAlunoGrupo2 { @include settingsBoxImagem(45%, auto, auto, 0, -10px) }
+    #CatmeTrocaAlunoGrupo3 { @include settingsBoxImagem(35%, auto, auto, 0, 105px) }
 
     // CATEGORIA: Analisar os resultados
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -1743,10 +1753,15 @@
     #CatmePesqAvalCriarPesq7,
     #CatmePesqAvalCriarPesq8,
 
-    // Criar pesquisa de avaliação
+    // Editar informações da pesquisa
     #CatmePesqAvalEditarInfo1,
     #CatmePesqAvalEditarInfo2,
     #CatmePesqAvalEditarInfo3,
+
+    // Trocar aluno de grupo com pesquisa em andamento
+    #CatmeTrocaAlunoGrupo1,
+    #CatmeTrocaAlunoGrupo2,
+    #CatmeTrocaAlunoGrupo3,
 
     // Acessar resultados de uma avaliação
     #CatmeAnalisarAcessarRes1,
@@ -1808,8 +1823,6 @@
     #clickersDuranteAula2,
     #clickersDuranteAula3,
     #clickersDuranteAula4,
-
-
 
     // importar testes e pesquisa do word
     #BbTesPesquisaImportarWord1,

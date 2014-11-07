@@ -508,10 +508,15 @@
 #CatmePesqAvalCriarPesq7 { @include settingsBoxImagem(55%, auto, auto, 0, 0) }
 #CatmePesqAvalCriarPesq8 { @include settingsBoxImagem(56%, auto, auto, 22%, -310px) }
 
-// Criar pesquisa de avaliação
+// Editar informações da pesquisa
 #CatmePesqAvalEditarInfo1 { @include settingsBoxImagem(41%, auto, auto, 0, 50px) }
 #CatmePesqAvalEditarInfo2 { @include settingsBoxImagem(50%, 0, auto, auto, 10px) }
 #CatmePesqAvalEditarInfo3 { @include settingsBoxImagem(30%, 0, auto, auto, 15px) }
+
+// Trocar aluno de grupo com pesquisa em andamento
+#CatmeTrocaAlunoGrupo1 { @include settingsBoxImagem(32%, auto, 80px, 0, auto) }
+#CatmeTrocaAlunoGrupo2 { @include settingsBoxImagem(34%, auto, auto, 0, 40px) }
+#CatmeTrocaAlunoGrupo3 { @include settingsBoxImagem(35%, auto, auto, 0, 150px) }
 
 // CATEGORIA: Analisar os resultados
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

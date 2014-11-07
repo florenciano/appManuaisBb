@@ -358,6 +358,10 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	{
 		'manual'			: 	'Editar informações da pesquisa',
 		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/#editar-informacoes-pesquisa'
+	},
+	{
+		'manual'			: 	'Trocar aluno de grupo com pesquisa em andamento',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Catme/aplicar-uma-pesquisa-de-avaliacao/#trocar-aluno-grupo'
 	}
 	];
 
