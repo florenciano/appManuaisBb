@@ -398,7 +398,7 @@
                 myOffset = 100; // compensação visual. A lá Cardinalli
             elementos.each(function(i){
                 var bottomObj = $( this ).position().top + $( this ).outerHeight(),
-                    bottomWindow = $( window ).scrollTop() + $( window ).height() - myOffset;
+                    bottomWindow = $( window ).scrollTop() + $( window ).height(); // - myOffset
 
                 // if object is completely in the window, fade it
                 if( bottomWindow > bottomObj ){
