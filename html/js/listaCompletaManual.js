@@ -121,20 +121,20 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	},
 	/////////////////////////////////////////////////////////////////
 	{
-		'manual'			: 	'Receber trabalhos sem verificação de plágio (Exercício)',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/trabalhos/receber-trabalhos-sem-verificacao-de-plagio/'
+		'manual'			: 	'Receber trabalhos com ou sem verificação de plágio (Exercício)',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/trabalhos/receber-trabalhos-com-ou-sem-verificacao-de-plagio/'
 	},
+	// {
+	// 	'manual'			: 	'Receber trabalhos com verificação de plágio (SafeAssignment)',
+	// 	'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/trabalhos/receber-trabalhos-com-verificacao-de-plagio/'
+	// },
 	{
-		'manual'			: 	'Receber trabalhos com verificação de plágio (SafeAssignment)',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/trabalhos/receber-trabalhos-com-verificacao-de-plagio/'
+		'manual'			: 	'Receber trabalhos para autoavaliação e avaliação de colegas',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/'
 	},
 	{
 		'manual'			: 	'Submeter arquivos para verificação de plágio ou criar base de comparação (SafeAssign)',
 		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/trabalhos/submeter-arquivos-para-verificacao-de-plagio-ou-criar-base-de-comparacao/'
-	},
-	{
-		'manual'			: 	'Receber trabalhos para autoavaliação e avaliação de colegas',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/'
 	}
 	];
 
@@ -148,8 +148,8 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	},
 	/////////////////////////////////////////////////////////////////
 	{
-		'manual'			: 	'Criar Grupos',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/grupos/criar-grupos/'
+		'manual'			: 	'Criar ou alterar grupos',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/grupos/criar-alterar-grupos/'
 	}
 	];
 
@@ -237,13 +237,17 @@ manuaisBB.controller('listaMenu', function ($scope) {
 		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/calcular-a-media-do-aluno/'
 	},
 	{
-		'manual'			: 	'Corrigir trabalhos sem verificação de plágio (Exercício)',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/corrigir-trabalhos-sem-verificacao-de-plagio/'
+		'manual'			: 	'Corrigir trabalhos com ou sem verificação de plágio (Exercício)',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/corrigir-trabalhos-com-ou-sem-verificacao-de-plagio/'
 	},
-	{
-		'manual'			: 	'Corrigir trabalhos com verificação de plágio (SafeAssignment)',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/corrigir-trabalhos-com-verificacao-de-plagio/'
-	},
+	// {
+	// 	'manual'			: 	'Corrigir trabalhos sem verificação de plágio (Exercício)',
+	// 	'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/corrigir-trabalhos-sem-verificacao-de-plagio/'
+	// },
+	// {
+	// 	'manual'			: 	'Corrigir trabalhos com verificação de plágio (SafeAssignment)',
+	// 	'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/corrigir-trabalhos-com-verificacao-de-plagio/'
+	// },
 	{
 		'manual'			: 	'Avaliar fórum de discussão',
 		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/avaliar-forum-de-discussao/'
@@ -301,6 +305,10 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	/////////////////////////////////////////////////////////////////
 	{
 		'manual'			: 	'Restringir visualização de materiais ou atividades a público específico',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/geral/restringir-visualizacao-de-materiais/'
+	},
+	{
+		'manual'			: 	'Simular como os alunos visualizam o ambiente',
 		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/geral/restringir-visualizacao-de-materiais/'
 	},
 	{

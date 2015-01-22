@@ -184,6 +184,24 @@
     #BbTrabalhosRecTrabComPlagio5 { @include settingsBoxImagem(42%, auto, auto, 0, 70px) }
     #BbTrabalhosRecTrabComPlagio6 { @include settingsBoxImagem(59%, 20%, auto, auto, -100px) }
 
+    // Receber trabalhos com ou sem verificação de plágio (SafeAssignment)
+    // @include                                 settingsBoxImagem(W%,  l,   t,   r,   b)
+    #BbTrabalhosRecTrabComESemPlagio1 { @include settingsBoxImagem(70%, 15%, auto, 0, -100px) }
+    #BbTrabalhosRecTrabComESemPlagio2 { @include settingsBoxImagem(30%, auto, 18%, 0, auto) }
+    #BbTrabalhosRecTrabComESemPlagio3 { @include settingsBoxImagem(40%, auto, 55%, 0, auto) }
+    #BbTrabalhosRecTrabComESemPlagio3b { @include settingsBoxImagem(30%, auto, 80%, 70px, auto) }
+    #BbTrabalhosRecTrabComESemPlagio5 { @include settingsBoxImagem(70%, 15%, auto, 0, 40px) }
+    #BbTrabalhosRecTrabComESemPlagio6 { @include settingsBoxImagem(30%, auto, auto, 5%, 0) }
+    #BbTrabalhosRecTrabComESemPlagio7 { @include settingsBoxImagem(40%, auto, auto, 0, 30%) }
+    #BbTrabalhosRecTrabComESemPlagio8 { @include settingsBoxImagem(50%, auto, auto, 0, 10%) }
+    #BbTrabalhosRecTrabComESemPlagio9 { @include settingsBoxImagem(50%, auto, -60px, 0, auto) }
+    #BbTrabalhosRecTrabComESemPlagio10 { @include settingsBoxImagem(55%, auto, 0, 0, auto) }
+    #BbTrabalhosRecTrabComESemPlagio11 { @include settingsBoxImagem(40%, auto, 10%, 0, auto) }
+    #BbTrabalhosRecTrabComESemPlagio12 { @include settingsBoxImagem(60%, 20%, auto, auto, 30px) }
+    #BbTrabalhosRecTrabComESemPlagio13 { @include settingsBoxImagem(40%, auto, auto, 0, 20%) }
+    #BbTrabalhosRecTrabComESemPlagio14 { @include settingsBoxImagem(35%, auto, 10%, 0, auto) }
+    #BbTrabalhosRecTrabComESemPlagio15 { @include settingsBoxImagem(60%, 20%, auto, auto, 30px) }
+
     // Submeter arquivos para verificação de plágio ou criar base de comparação (SafeAssign)
     #BbTrabalhosSubmeter1 { @include settingsBoxImagem(60%, auto, auto, 20%, -150px) }
     #BbTrabalhosSubmeter2 { @include settingsBoxImagem(52%, auto, auto, 24%, -150px) }
@@ -231,6 +249,38 @@
     #BbGruposCriarGrupos10 { @include settingsBoxImagem(33%, auto, 30px, 0, auto) }
     #BbGruposCriarGrupos11 { @include settingsBoxImagem(42%, auto, auto, 0, 250px) }
     #BbGruposCriarGrupos12 { @include settingsBoxImagem(48%, auto, auto, 0, 130px) }
+
+    // Criar ou alterar Grupos
+    // @include                             settingsBoxImagem(W%,  l,   t,   r,   b)
+    #BbGruposCriarAlterarGrupos1 { @include settingsBoxImagem(40%, auto, auto, 10%, 40%) }
+    #BbGruposCriarAlterarGrupos2 { @include settingsBoxImagem(80%, auto, auto, 10%, -10px) }
+    #BbGruposCriarAlterarGrupos3 { @include settingsBoxImagem(40%, auto, 10%, 0, auto) }
+    #BbGruposCriarAlterarGrupos4 { @include settingsBoxImagem(40%, auto, 32%, 0, auto) }
+    #BbGruposCriarAlterarGrupos5 { @include settingsBoxImagem(30%, auto, auto, 0, 20%) }
+    #BbGruposCriarAlterarGrupos6 { @include settingsBoxImagem(35%, auto, auto, 0, 0) }
+    #BbGruposCriarAlterarGrupos7 { @include settingsBoxImagem(20%, auto, auto, 0, 0) }
+    #BbGruposCriarAlterarGrupos8 { @include settingsBoxImagem(40%, auto, 10%, 0, auto) }
+    #BbGruposCriarAlterarGrupos9 { @include settingsBoxImagem(40%, auto, 32%, 0, auto) }
+    #BbGruposCriarAlterarGrupos10 { @include settingsBoxImagem(30%, auto, auto, 0, 20%) }
+    #BbGruposCriarAlterarGrupos11 { @include settingsBoxImagem(40%, auto, auto, 0, 0) }
+    #BbGruposCriarAlterarGrupos12 { @include settingsBoxImagem(45%, auto, 0, 0, auto) }
+    #BbGruposCriarAlterarGrupos13 { @include settingsBoxImagem(50%, auto, auto, 0, 10%) }
+    #BbGruposCriarAlterarGrupos14 { @include settingsBoxImagem(40%, auto, auto, 10%, 10%) }
+    #BbGruposCriarAlterarGrupos15 { @include settingsBoxImagem(40%, auto, 10%, 0, auto) }
+    #BbGruposCriarAlterarGrupos16 { @include settingsBoxImagem(45%, auto, 35%, 0, auto) }
+    #BbGruposCriarAlterarGrupos17 { @include settingsBoxImagem(30%, auto, auto, 0, 25%) }
+    #BbGruposCriarAlterarGrupos18 { @include settingsBoxImagem(30%, auto, auto, 0, 0) }
+    #BbGruposCriarAlterarGrupos19 { @include settingsBoxImagem(40%, auto, auto, 0, 0) }
+    #BbGruposCriarAlterarGrupos20 { @include settingsBoxImagem(32%, auto, 35%, 0, auto) }
+    #BbGruposCriarAlterarGrupos21 { @include settingsBoxImagem(70%, auto, auto, 0, 0) }
+    #BbGruposCriarAlterarGrupos22 { @include settingsBoxImagem(40%, auto, auto, 0, 10%) }
+    #BbGruposCriarAlterarGrupos23 { @include settingsBoxImagem(50%, auto, 10%, 0, auto) }
+    #BbGruposCriarAlterarGrupos24 { @include settingsBoxImagem(50%, 20%, auto, 0, -25%) }
+    #BbGruposCriarAlterarGrupos25 { @include settingsBoxImagem(50%, auto, auto, 0, 10%) }
+    #BbGruposCriarAlterarGrupos26 { @include settingsBoxImagem(70%, 0, auto, auto, -45%) }
+    #BbGruposCriarAlterarGrupos26b { @include settingsBoxImagem(40%, auto, auto, 0, 0) }
+    #BbGruposCriarAlterarGrupos27 { @include settingsBoxImagem(35%, auto, auto, 5%, 20%) }
+    #BbGruposCriarAlterarGrupos28 { @include settingsBoxImagem(35%, auto, auto, 5%, 30%) }
 
     
     // CATEGORIA: Testes e pesquisas
@@ -387,6 +437,21 @@
     #BbAvaliacaoCorrigirComPlagio4 { @include settingsBoxImagem(27%, auto, 50%, 0, auto) }
     #BbAvaliacaoCorrigirComPlagio5 { @include settingsBoxImagem(23%, auto, auto, 0, 0) }
 
+    // Corrigir trabalhos com e sem verificação de plágio
+    // @include                                   settingsBoxImagem(W%,  l,   t,   r,   b)
+    #BbAvaliacaoCorrigirComESemPlagio1 { @include settingsBoxImagem(42%, auto, 20%, 0, auto) }
+    #BbAvaliacaoCorrigirComESemPlagio2 { @include settingsBoxImagem(50%, 25%, auto, auto, -40px) }
+    #BbAvaliacaoCorrigirComESemPlagio3 { @include settingsBoxImagem(25%, auto, 10%, 0, auto) }
+    #BbAvaliacaoCorrigirComESemPlagio4 { @include settingsBoxImagem(35%, auto, 0, 0, auto) }
+    #BbAvaliacaoCorrigirComESemPlagio5 { @include settingsBoxImagem(35%, auto, 0, 0, auto) }
+    #BbAvaliacaoCorrigirComESemPlagio6 { @include settingsBoxImagem(60%, 15%, auto, auto, 30px) }
+    #BbAvaliacaoCorrigirComESemPlagio7 { @include settingsBoxImagem(30%, auto, 0, 80px, auto) }
+    #BbAvaliacaoCorrigirComESemPlagio8 { @include settingsBoxImagem(30%, auto, 0, 80px, auto) }
+    #BbAvaliacaoCorrigirComESemPlagio9 { @include settingsBoxImagem(40%, auto, 20px, 0, auto) }
+    #BbAvaliacaoCorrigirComESemPlagio9b { @include settingsBoxImagem(40%, auto, auto, 0, 40%) }
+    #BbAvaliacaoCorrigirComESemPlagio10 { @include settingsBoxImagem(30%, auto, 50%, 0, auto) }
+    #BbAvaliacaoCorrigirComESemPlagio11 { @include settingsBoxImagem(30%, auto, 0, 0, auto) }
+
     // Avaliar fórum de discussão
     #BbAvaliacaoAvForumDiscussao1 { @include settingsBoxImagem(36%, auto, 40%, 10%, auto) }
     #BbAvaliacaoAvForumDiscussao2 { @include settingsBoxImagem(30%, auto, 25%, 5%, auto) }
@@ -429,7 +494,7 @@
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
     // Restringir visualização de materiais ou atividades a público específico
-    // @include                             settingsBoxImagem(W%,  l,   t,   r,   b)
+
     #BbGeralRestringirVisualizacao1 {  @include settingsBoxImagem(55%, 22.5%, auto, auto, -100px) }
     #BbGeralRestringirVisualizacao2 {  @include settingsBoxImagem(36%, auto, auto, 0, -50px) }
     #BbGeralRestringirVisualizacao3 {  @include settingsBoxImagem(65%, auto, auto, 0, -20px) }
@@ -440,8 +505,14 @@
     #BbGeralRestringirVisualizacao8 {  @include settingsBoxImagem(40%, auto, auto, 0, 0) }
 
     // Padronização dos ambientes online da PGLS
-    // @include                             settingsBoxImagem(W%,  l,   t,   r,   b)
     #BbGeralPadronizarPGLS1{  @include settingsBoxImagem(42%, 24%, auto, auto, 0) }
+
+    // Simular como os alunos visualizam o ambiente
+    // @include                                settingsBoxImagem(W%,  l,   t,   r,   b)
+    #BbGeralSimularComoAluVisuaAmb1 {  @include settingsBoxImagem(30%, auto, 30%, 0, auto) }
+    #BbGeralSimularComoAluVisuaAmb2 {  @include settingsBoxImagem(60%, auto, auto, 20%, -180px) }
+    #BbGeralSimularComoAluVisuaAmb3 {  @include settingsBoxImagem(35%, auto, 60%, 0, auto) }
+    #BbGeralSimularComoAluVisuaAmb4 {  @include settingsBoxImagem(65%, auto, auto, 17.5%, -60px) }
 
 
     // CATEGORIA: Calendário
@@ -856,12 +927,29 @@
     #BbTrabalhosRecTrabComPlagio5 { @include settingsBoxImagem(60%, auto, auto, 0, 50px) }
     #BbTrabalhosRecTrabComPlagio6 { @include settingsBoxImagem(68%, 16%, auto, auto, -120px) }
 
+    // Receber trabalhos com ou sem verificação de plágio (SafeAssignment)
+    // @include                                 settingsBoxImagem(W%,  l,   t,   r,   b)
+    #BbTrabalhosRecTrabComESemPlagio1 { @include settingsBoxImagem(98%, 1%, auto, 0, -75px) }
+    #BbTrabalhosRecTrabComESemPlagio2 { @include settingsBoxImagem(40%, auto, 18%, 0, auto) }
+    #BbTrabalhosRecTrabComESemPlagio3 { @include settingsBoxImagem(60%, auto, 50%, 0, auto) }
+    #BbTrabalhosRecTrabComESemPlagio3b { @include settingsBoxImagem(40%, auto, 80%, 0, auto) }
+    #BbTrabalhosRecTrabComESemPlagio5 { @include settingsBoxImagem(70%, 15%, auto, 0, 40px) }
+    #BbTrabalhosRecTrabComESemPlagio6 { @include settingsBoxImagem(30%, auto, auto, 0, 0) }
+    #BbTrabalhosRecTrabComESemPlagio7 { @include settingsBoxImagem(40%, auto, auto, 0, 15%) }
+    #BbTrabalhosRecTrabComESemPlagio8 { @include settingsBoxImagem(30%, auto, auto, 0, -30px) }
+    #BbTrabalhosRecTrabComESemPlagio9 { @include settingsBoxImagem(45%, auto, -55px, 0, auto) }
+    #BbTrabalhosRecTrabComESemPlagio10 { @include settingsBoxImagem(42%, auto, 0, 0, auto) }
+    #BbTrabalhosRecTrabComESemPlagio11 { @include settingsBoxImagem(60%, auto, 20%, 0, auto) }
+    #BbTrabalhosRecTrabComESemPlagio12 { @include settingsBoxImagem(60%, 20%, auto, auto, 30px) }
+    #BbTrabalhosRecTrabComESemPlagio13 { @include settingsBoxImagem(45%, auto, auto, 20px, 15%) }
+    #BbTrabalhosRecTrabComESemPlagio14 { @include settingsBoxImagem(45%, auto, 0, 0, auto) }
+    #BbTrabalhosRecTrabComESemPlagio15 { @include settingsBoxImagem(80%, 10%, auto, auto, 30px) }
+
     // Submeter arquivos para verificação de plágio ou criar base de comparação (SafeAssign)
     #BbTrabalhosSubmeter1 { @include settingsBoxImagem(100%, auto, auto, 0, -160px) }
     #BbTrabalhosSubmeter2 { @include settingsBoxImagem(76%, auto, auto, 12%, -150px) }
 
     // Receber trabalhos para autoavaliação e avaliação de colegas
-    // @include                              settingsBoxImagem          (W%, l,  t,  r, b)
     #BbTrabalhosRecTrabParaAutoavaliacao0 { @include settingsBoxImagem(60%, auto, 30%, 10%, auto) }
     #BbTrabalhosRecTrabParaAutoavaliacao1 { @include settingsBoxImagem(40%, 0, 25%, auto, auto) }
     #BbTrabalhosRecTrabParaAutoavaliacao2 { @include settingsBoxImagem(40%, auto, 40%, 0, auto) }
@@ -905,6 +993,38 @@
     #BbGruposCriarGrupos10 { @include settingsBoxImagem(47%, auto, 0, 0, auto) }
     #BbGruposCriarGrupos11 { @include settingsBoxImagem(46%, auto, auto, 0, 180px) }
     #BbGruposCriarGrupos12 { @include settingsBoxImagem(37%, auto, auto, 0, 80px) }
+
+    // Criar ou alterar Grupos
+    // @include                             settingsBoxImagem(W%,  l,   t,   r,   b)
+    #BbGruposCriarAlterarGrupos1 { @include settingsBoxImagem(50%, auto, auto, 0, 40%) }
+    #BbGruposCriarAlterarGrupos2 { @include settingsBoxImagem(100%, auto, auto, 0, -10px) }
+    #BbGruposCriarAlterarGrupos3 { @include settingsBoxImagem(30%, auto, 0, 0, auto) }
+    #BbGruposCriarAlterarGrupos4 { @include settingsBoxImagem(40%, auto, 32%, 0, auto) }
+    #BbGruposCriarAlterarGrupos5 { @include settingsBoxImagem(45%, auto, auto, 0, 20%) }
+    #BbGruposCriarAlterarGrupos6 { @include settingsBoxImagem(45%, auto, auto, 0, 0) }
+    #BbGruposCriarAlterarGrupos7 { @include settingsBoxImagem(30%, auto, auto, 0, 0) }
+    #BbGruposCriarAlterarGrupos8 { @include settingsBoxImagem(30%, auto, 0, 0, auto) }
+    #BbGruposCriarAlterarGrupos9 { @include settingsBoxImagem(40%, auto, 32%, 0, auto) }
+    #BbGruposCriarAlterarGrupos10 { @include settingsBoxImagem(45%, auto, auto, 0, 22%) }
+    #BbGruposCriarAlterarGrupos11 { @include settingsBoxImagem(40%, auto, auto, 0, -5%) }
+    #BbGruposCriarAlterarGrupos12 { @include settingsBoxImagem(45%, auto, 0, 0, auto) }
+    #BbGruposCriarAlterarGrupos13 { @include settingsBoxImagem(35%, auto, auto, 0, 0) }
+    #BbGruposCriarAlterarGrupos14 { @include settingsBoxImagem(45%, auto, auto, 0, 10%) }
+    #BbGruposCriarAlterarGrupos15 { @include settingsBoxImagem(40%, auto, 10%, 0, auto) }
+    #BbGruposCriarAlterarGrupos16 { @include settingsBoxImagem(45%, auto, 35%, 0, auto) }
+    #BbGruposCriarAlterarGrupos17 { @include settingsBoxImagem(50%, auto, auto, 0, 25%) }
+    #BbGruposCriarAlterarGrupos18 { @include settingsBoxImagem(30%, auto, auto, 0, 0) }
+    #BbGruposCriarAlterarGrupos19 { @include settingsBoxImagem(50%, auto, auto, 0, 0) }
+    #BbGruposCriarAlterarGrupos20 { @include settingsBoxImagem(42%, auto, 25%, 0, auto) }
+    #BbGruposCriarAlterarGrupos21 { @include settingsBoxImagem(70%, auto, auto, 0, -40px); ol { margin: 0; padding-left: 20px; } }
+    #BbGruposCriarAlterarGrupos22 { @include settingsBoxImagem(40%, auto, auto, 0, 10%) }
+    #BbGruposCriarAlterarGrupos23 { @include settingsBoxImagem(20%, auto, 10%, 0, auto) }
+    #BbGruposCriarAlterarGrupos24 { @include settingsBoxImagem(50%, 20%, auto, 0, -25%) }
+    #BbGruposCriarAlterarGrupos25 { @include settingsBoxImagem(35%, auto, auto, 0, 0); ol { margin: 0; padding-left: 20px; } }
+    #BbGruposCriarAlterarGrupos26 { @include settingsBoxImagem(70%, 0, auto, auto, -85%) }
+    #BbGruposCriarAlterarGrupos26b { @include settingsBoxImagem(50%, auto, auto, 0, 0) }
+    #BbGruposCriarAlterarGrupos27 { @include settingsBoxImagem(35%, auto, auto, 0, 30%) }
+    #BbGruposCriarAlterarGrupos28 { @include settingsBoxImagem(35%, auto, auto, 0, 30%) }
 
     
     // CATEGORIA: Testes e pesquisas
@@ -1066,6 +1186,21 @@
     #BbAvaliacaoCorrigirComPlagio4 { @include settingsBoxImagem(47%, auto, 50%, 0, auto) }
     #BbAvaliacaoCorrigirComPlagio5 { @include settingsBoxImagem(44%, auto, auto, 0, 0) }
 
+    // Corrigir trabalhos com e sem verificação de plágio
+    // @include                                   settingsBoxImagem(W%,  l,   t,   r,   b)
+    #BbAvaliacaoCorrigirComESemPlagio1 { @include settingsBoxImagem(60%, auto, auto, 0, 5%) }
+    #BbAvaliacaoCorrigirComESemPlagio2 { @include settingsBoxImagem(80%, 15%, auto, auto, -50px) }
+    #BbAvaliacaoCorrigirComESemPlagio3 { @include settingsBoxImagem(35%, auto, 0, 0, auto) }
+    #BbAvaliacaoCorrigirComESemPlagio4 { @include settingsBoxImagem(40%, auto, 0, 0, auto) }
+    #BbAvaliacaoCorrigirComESemPlagio5 { @include settingsBoxImagem(35%, auto, 0, 0, auto) }
+    #BbAvaliacaoCorrigirComESemPlagio6 { @include settingsBoxImagem(60%, 20%, auto, auto, 30px) }
+    #BbAvaliacaoCorrigirComESemPlagio7 { @include settingsBoxImagem(40%, auto, 0, 0, auto) }
+    #BbAvaliacaoCorrigirComESemPlagio8 { @include settingsBoxImagem(35%, auto, -80px, 0, auto) }
+    #BbAvaliacaoCorrigirComESemPlagio9 { @include settingsBoxImagem(40%, auto, -20px, 0, auto) }
+    #BbAvaliacaoCorrigirComESemPlagio9b { @include settingsBoxImagem(50%, auto, 45%, 0, auto) }
+    #BbAvaliacaoCorrigirComESemPlagio10 { @include settingsBoxImagem(40%, auto, 50%, 0, auto) }
+    #BbAvaliacaoCorrigirComESemPlagio11 { @include settingsBoxImagem(35%, auto, 0, 0, auto) }
+
     // Avaliar fórum de discussão
     #BbAvaliacaoAvForumDiscussao1 { @include settingsBoxImagem(50%, auto, 40%, 0, auto) }
     #BbAvaliacaoAvForumDiscussao2 { @include settingsBoxImagem(30%, auto, 25%, 0, auto) }
@@ -1121,8 +1256,14 @@
     #BbGeralRestringirVisualizacao8 {  @include settingsBoxImagem(50%, auto, auto, 0, -40px) }
 
     // Padronização dos ambientes online da PGLS
-    // @include                             settingsBoxImagem(W%,  l,   t,   r,   b)
     #BbGeralPadronizarPGLS1{  @include settingsBoxImagem(60%, 15%, auto, auto, 10px) }
+
+    // Simular como os alunos visualizam o ambiente
+    // @include                                settingsBoxImagem(W%,  l,   t,   r,   b)
+    #BbGeralSimularComoAluVisuaAmb1 {  @include settingsBoxImagem(60%, auto, 25%, 0, auto) }
+    #BbGeralSimularComoAluVisuaAmb2 {  @include settingsBoxImagem(90%, auto, auto, 5%, -180px) }
+    #BbGeralSimularComoAluVisuaAmb3 {  @include settingsBoxImagem(50%, auto, 60%, 0, auto) }
+    #BbGeralSimularComoAluVisuaAmb4 {  @include settingsBoxImagem(65%, auto, auto, 17.5%, -60px) }
 
     // CATEGORIA: Calendário
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -1503,6 +1644,23 @@
     #BbTrabalhosRecTrabComPlagio4,
     #BbTrabalhosRecTrabComPlagio5,
     #BbTrabalhosRecTrabComPlagio6,
+    
+    // Receber trabalhos com ou sem verificação de plágio (SafeAssignment)
+    #BbTrabalhosRecTrabComESemPlagio1,
+    #BbTrabalhosRecTrabComESemPlagio2,
+    #BbTrabalhosRecTrabComESemPlagio3,
+    #BbTrabalhosRecTrabComESemPlagio3b,
+    #BbTrabalhosRecTrabComESemPlagio5,
+    #BbTrabalhosRecTrabComESemPlagio6 
+    #BbTrabalhosRecTrabComESemPlagio7,
+    #BbTrabalhosRecTrabComESemPlagio8,
+    #BbTrabalhosRecTrabComESemPlagio9,
+    #BbTrabalhosRecTrabComESemPlagio10,
+    #BbTrabalhosRecTrabComESemPlagio11,
+    #BbTrabalhosRecTrabComESemPlagio12,
+    #BbTrabalhosRecTrabComESemPlagio13,
+    #BbTrabalhosRecTrabComESemPlagio14,
+    #BbTrabalhosRecTrabComESemPlagio15,
 
     // Receber trabalhos para autoavaliação e avaliação de colegas
     #BbTrabalhosRecTrabParaAutoavaliacao0,
@@ -1543,6 +1701,37 @@
     #BbGruposCriarGrupos10,
     #BbGruposCriarGrupos11,
     #BbGruposCriarGrupos12,
+
+    // Criar ou alterar Grupos
+    #BbGruposCriarAlterarGrupos1,
+    #BbGruposCriarAlterarGrupos2,
+    #BbGruposCriarAlterarGrupos3,
+    #BbGruposCriarAlterarGrupos4,
+    #BbGruposCriarAlterarGrupos5,
+    #BbGruposCriarAlterarGrupos6,
+    #BbGruposCriarAlterarGrupos7,
+    #BbGruposCriarAlterarGrupos8,
+    #BbGruposCriarAlterarGrupos9,
+    #BbGruposCriarAlterarGrupos10,
+    #BbGruposCriarAlterarGrupos11,
+    #BbGruposCriarAlterarGrupos12,
+    #BbGruposCriarAlterarGrupos13,
+    #BbGruposCriarAlterarGrupos14,
+    #BbGruposCriarAlterarGrupos15,
+    #BbGruposCriarAlterarGrupos16,
+    #BbGruposCriarAlterarGrupos17,
+    #BbGruposCriarAlterarGrupos18,
+    #BbGruposCriarAlterarGrupos19,
+    #BbGruposCriarAlterarGrupos20,
+    #BbGruposCriarAlterarGrupos21,
+    #BbGruposCriarAlterarGrupos22,
+    #BbGruposCriarAlterarGrupos23,
+    #BbGruposCriarAlterarGrupos24,
+    #BbGruposCriarAlterarGrupos25,
+    #BbGruposCriarAlterarGrupos26,
+    #BbGruposCriarAlterarGrupos26b,
+    #BbGruposCriarAlterarGrupos27,
+    #BbGruposCriarAlterarGrupos28,
 
     // Criar ou alterar testes com nota
     #BbTesPesquisaCriarTesComNota1,
@@ -1694,13 +1883,26 @@
     #BbAvaliacaoCorrigirRubric2,
     #BbAvaliacaoCorrigirRubric3,
 
-
     // Corrigir trabalhos com verificação de plágio
     #BbAvaliacaoCorrigirComPlagio1,
     #BbAvaliacaoCorrigirComPlagio2,
     #BbAvaliacaoCorrigirComPlagio3,
     #BbAvaliacaoCorrigirComPlagio4,
     #BbAvaliacaoCorrigirComPlagio5,
+
+    // Corrigir trabalhos com e sem verificação de plágio
+    #BbAvaliacaoCorrigirComESemPlagio1,
+    #BbAvaliacaoCorrigirComESemPlagio2,
+    #BbAvaliacaoCorrigirComESemPlagio3,
+    #BbAvaliacaoCorrigirComESemPlagio4,
+    #BbAvaliacaoCorrigirComESemPlagio5,
+    #BbAvaliacaoCorrigirComESemPlagio6,
+    #BbAvaliacaoCorrigirComESemPlagio7,
+    #BbAvaliacaoCorrigirComESemPlagio8,
+    #BbAvaliacaoCorrigirComESemPlagio9,
+    #BbAvaliacaoCorrigirComESemPlagio9b,
+    #BbAvaliacaoCorrigirComESemPlagio10,
+    #BbAvaliacaoCorrigirComESemPlagio11,
 
     // Exportar as notas para o sistema acadêmico
     #BbAvaliacaoExSistAcademico1,
@@ -1732,7 +1934,6 @@
     #BbCalendarioSincronizarEmail12,
     #BbCalendarioSincronizarEmail13,
 
-    
     // Criar conta
     #CatmeSobreCriarConta1,
     #CatmeSobreCriarConta2,

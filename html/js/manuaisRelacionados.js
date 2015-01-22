@@ -304,15 +304,31 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	}
 	];
 
+	// "Receber trabalhos com ou sem verificação de plágio (Exercício)"
+	$scope.Receber_trabalhos_com_e_sem_verificacao_de_plagio = 
+	[
+	{
+		"manual"	: 	"Corrigir trabalhos com ou sem verificação de plágio (Exercício)",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/corrigir-trabalhos-com-ou-sem-verificacao-de-plagio/",
+		"tipoIcone"	: 	"blackboard"
+	},
+	{
+		"manual"	: 	"Submeter arquivos para verificação de plágio ou criar base de comparação (SafeAssign)",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/trabalhos/submeter-arquivos-para-verificacao-de-plagio-ou-criar-base-de-comparacao/",
+		"tipoIcone"	: 	"blackboard"
+	},
+	{
+		"manual"	: 	"Criar Grupos",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/grupos/criar-alterar-grupos/",
+		"tipoIcone"	: 	"blackboard"
+	}
+	];
+
 	// "Submeter arquivos para verificação de plágio ou criar base de comparação"
 	$scope.Submeter_arquivos_para_verificacao_de_plagio_ou_criar_base_de_comparacao = 
 	[
-	{	"manual"	: 	"Receber trabalhos com verificação de plágio (SafeAssignment)",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/trabalhos/receber-trabalhos-com-verificacao-de-plagio/",
-		"tipoIcone"	: 	"blackboard"
-	},
-	{	"manual"	: 	"Corrigir trabalhos com verificação de plágio (SafeAssignment)",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/corrigir-trabalhos-com-verificacao-de-plagio/",
+	{	"manual"	: 	"Receber trabalhos com ou sem verificação de plágio (Exercício)",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/trabalhos/receber-trabalhos-com-ou-sem-verificacao-de-plagio/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
@@ -330,8 +346,28 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	$scope.Criar_Grupos = 
 	[
 	{
-		"manual"	: 	"Receber trabalhos sem verificação de plágio (Exercício)",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/trabalhos/receber-trabalhos-sem-verificacao-de-plagio/",
+		"manual"	: 	"Receber trabalhos com ou sem verificação de plágio (Exercício)",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/trabalhos/receber-trabalhos-com-ou-sem-verificacao-de-plagio/",
+		"tipoIcone"	: 	"blackboard"
+	}
+	];
+
+	// "Criar ou alterrar Grupos"
+	$scope.Criar_Alterar_Grupos = 
+	[
+	{
+		"manual"	: 	"Receber trabalhos com ou sem verificação de plágio (Exercício)",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/trabalhos/receber-trabalhos-com-ou-sem-verificacao-de-plagio/",
+		"tipoIcone"	: 	"blackboard"
+	},
+	{
+		"manual"	: 	"Corrigir trabalhos com ou sem verificação de plágio (Exercício)",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/avaliacao/corrigir-trabalhos-com-ou-sem-verificacao-de-plagio/",
+		"tipoIcone"	: 	"blackboard"
+	},
+	{
+		"manual"	: 	"Enviar e-mail pelo ambiente",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/comunicacao-e-interacao/enviar-email-pelo-ambiente/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
@@ -605,8 +641,18 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	$scope.Corrigir_trabalhos_com_verificacao_de_plagio = 
 	[
 	{
-		"manual"	: 	"Receber trabalhos com verificação de plágio (SafeAssignment)", 
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/trabalhos/receber-trabalhos-com-verificacao-de-plagio/",
+		"manual"	: 	"Receber trabalhos com ou sem verificação de plágio (Exercício)", 
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/trabalhos/receber-trabalhos-com-ou-sem-verificacao-de-plagio/",
+		"tipoIcone"	: 	"blackboard"
+	}
+	];
+
+	// "Corrigir trabalhos com e sem verificação de plágio (Exercício)"
+	$scope.Corrigir_trabalhos_com_e_sem_verificacao_de_plagio = 
+	[
+	{
+		"manual"	: 	"Receber trabalhos com ou sem verificação de plágio (Exercício)", 
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/trabalhos/receber-trabalhos-com-ou-sem-verificacao-de-plagio/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
@@ -693,7 +739,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual" 	: 	"Criar grupos",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/grupos/criar-grupos/",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/grupos/criar-alterar-grupos/",
 		"tipoIcone"	: 	"blackboard"
 	},
 	{
@@ -748,6 +794,29 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	{
 		"manual" 	: 	"Criar e visualizar eventos",
 		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/calendario/criar-e-visualizar-eventos/",
+		"tipoIcone"	: 	"blackboard"
+	}
+	];
+
+	// CATEGORIA: Melhorias no Blackboard
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+	// "Criar e visualizar eventos"
+	$scope.MelhoriasBb = 
+	[
+	{
+		"manual" 	: 	"Receber trabalhos com ou sem verificação de plágio",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/trabalhos/receber-trabalhos-com-ou-sem-verificacao-de-plagio/",
+		"tipoIcone"	: 	"blackboard"
+	},
+	{
+		"manual" 	: 	"Criar ou alterar grupos",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/grupos/criar-alterar-grupos/",
+		"tipoIcone"	: 	"blackboard"
+	},
+	{
+		"manual" 	: 	"Simular como os alunos visualizam o ambiente",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/geral/simular-como-alunos-visualizam-o-ambiente/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];

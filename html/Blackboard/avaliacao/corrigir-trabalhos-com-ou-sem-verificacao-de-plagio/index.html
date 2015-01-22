@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br" ng-app="manuaisBB">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Tecnologias de Aprendizagem - Manuais de utilização</title>
+<meta name="viewport" content="width=device-width">
+<meta name="msapplication-TileImage" content="tile.png"/>
+<meta name="msapplication-TileColor" content="#d02034"/>
+
+<link rel="stylesheet" type="text/css" media="print" href="../../../css/print.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../../../css/main.css">
+
+<!--[if IE]><link rel="shortcut icon" href="favicon.ico"><![endif]-->
+<link rel="icon" href="../../../favicon-16.png" sizes="16x16">
+<link rel="icon" href="../../../favicon-32.png" sizes="32x32">
+<link rel="icon" href="../../../favicon-48.png" sizes="48x48">
+<link rel="icon" href="../../../favicon-64.png" sizes="64x64">
+<link rel="icon" href="../../../favicon-128.png" sizes="128x128">
+
+<!--
+1- iPad com Retina Display;
+2- iPhone com Retina Display;
+3- Primeira e segunda geração de iPad;
+4- Versões antigas de iPhone, iPod Touch e Android 2.2+
+-->
+<link rel="apple-touch-icon" sizes="144x144" href="../../../apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../../apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../../apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+
+<!--[if IE]>
+    <link href="../../../css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script>window.html5 || document.write('<script src="../../../js/libs/html5shiv.js"><\/script>')</script>
+<![endif]-->
+
+</head>
+<body>
+    <!-- alert para visualização abaixo de 768px -->
+    <div class="alert alert-warning alert-dismissable">
+        <button type="button" class="close">&times;</button>
+        Melhor visualizado com resolução de 768px de largura ou superior.
+    </div>
+
+    <div class="wrapper">
+        
+        <header id="top" class="wfull fix">
+            <div class="logo c4">
+                <img src="../../../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
+            </div>
+            <div class="titleHeader c8">
+                <p class="title">Tecnologias de Aprendizagem</p>
+                <p class="description">Manuais de utilização</p>
+            </div>
+        </header>
+
+        <div id="main" role="main" class="fix wfull">
+            <div class="containerMain fix row">
+
+                <!-- início da área da busca -->
+                <section class="buscaMain c4" ng-controller="listaMenu">
+                    <div class="inputSearch">
+                        <form id="busca">
+                            <label for="pesquisa"></label>
+                            <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Busca por título ou palavra-chave" ng-model="searchText">
+                        </form>
+                    </div>
+
+                    <nav role="navigation" class="navigationMain">
+                        <h5 class="icoBlackboard">Blackboard</h5>
+
+                        <ol class="noCategory" ng-repeat="item in BbConhecerAmbiente | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>    
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbMateriais | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbComunicacaoInteracao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbTrabalhos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbGrupos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbTestesPesquisas | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbRubrics | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbAvaliacao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist ng-class: addMark()" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbGeral| filter: {manual:searchText}">
+                        <li class="nameCategory">
+                            <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            
+                        </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbCalendario | filter: {manual:searchText}">
+                        <li class="nameCategory">
+                            <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            
+                        </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <h5 class="icoCatme">Catme</h5>
+                        <ol class="noCategory" ng-repeat="item in catmeSobreFerramenta | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in catmeAplicarPesquisaAval | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in catmeAnalisarResultados | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <!-- <h5 class="icoClickers">Votadores eletrônicos (clickers)</h5>
+                        <ol class="noCategory" ng-repeat="item in clickerSobreFerramenta | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerUtilizarVotadores | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerPrepararSlides | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerIdentificarVoto | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerPromoverVotacao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerAnalisarResultados | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol> -->
+                        
+                        <h5 class="icoCursosOnline">Casos, Simuladores e Cursos online</h5>
+                        <ol class="noCategory" ng-repeat="item in SobreOsRecursos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in ConsultarRecursosDisponiveis | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in UtilizarRecursos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                         <div class="faqBusca icoFaq">
+                            <h5>
+                            <ol class="noCategory">
+                                <li><a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/faq/index.html" class="">FAQ</a></li>
+                            </ol>
+                            </h5>
+                        </div>
+                        <div class="outros">
+                            <h6>
+                                <a href="mailto:tai@insper.edu.br?subject=TAI%20-%20Manuais%20de%20utiliza&#231;&#227;o">Não encontrou o que queria?</a>
+                            </h6>
+                        </div>
+                    </nav>
+                </section>
+
+                <!-- início do conteúdo do manual -->
+                <section class="mainContent c8">
+                    <section class="headerContent row">
+                        <div class="cabecalho fix">
+                            <p>
+                                <!-- adicionar a data da produção do material -->
+                                <span><strong>Atualizado: </strong>22/01/2015</span>
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="breadcrumb">
+                            <p>
+                                <span class="nameCategory">Blackboard </span>
+                                <span>&#62; </span>
+                                Corrigir trabalhos com ou sem verificação de plágio (Exercício)
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- 
+                    
+                    INTRODUCAO
+                    1- Texto do título h1 é o mesmo do 'p' da div.breadcrumb;
+                    2- div.sumario aparece logo depois da introdução do texto 'quando houver' e serve para listar todos os subtítulos da página definidos pela tag 'h2';
+                    3- toda tag 'h2' receberá esta sintaxe:
+                    '<h2 id="subTituloX">Texto aqui</h2>'
+                    É necessário adicionar um número identificador na âncora;
+
+                     -->
+
+                    <article class="contentMain row">
+                        <h1>Corrigir trabalhos com ou sem verificação de plágio (Exercício)</h1>
+
+                        <div class="sumario row">
+                            <h3 id="sumarioAncora">Sumário</h3>
+                        </div>
+
+                        <!--
+                        
+                        IMAGENS E BOX DE TEXTO
+                        1- Alinhamento das imgs adicionar as classes: imgLeft ou imgRight. O comportamenteo padrão é centralizado;
+                        2- Adicionar um id para cada box.
+                        REGRAS:
+                        - nome pasta assunto. ex: Bb, Catme, Casos, Clickers +
+                        - nome da categoria [se houver]. ex: materiais, avaliação, trabalhos +
+                        - nome do manual: as duas palavras iniciais. ex: criar pesquisa, associar rubric +
+                        - numero identificador sequencial.
+
+                        MODELO: BbMateriaisCarregarMateriais1
+
+                        3- No CSS vc controla a posição de cada um. Há + de 1 media queries para adaptar!;
+                        4- A classe 'boxDestaque' é o padrão. Para box com informações adicionais em fundo vermelho usar a classe 'boxDestaqueAdicional';
+                        5- Após cada div.imageContainer inserir a div.respiro para aplicar uma margem entre eles. Insira um valor de margin-top no próprio html, visto que há inúmeras necessidades de tamanhos de margin;
+
+                        -->
+
+                        <h2 id="subtitulo1">Avaliar envios</h2>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/avaliacao/corrigir-trabalhos-com-ou-sem-verificacao-de-plagio/step1.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbAvaliacaoCorrigirComESemPlagio1">
+                                <p>Identifique a coluna do Exercício e selecione a tentativa nas células que possuem o símbolo <span class="enfaseBox">!</span>.</p>
+                            </div>
+                            <div class="boxDestaqueAdicional" id="BbAvaliacaoCorrigirComESemPlagio2">
+                                <p>A exclamação indica que a atividade precisa de correção.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:60px"></div>
+
+                        <p>O arquivo enviado pelo aluno será automaticamente exibido na tela:</p>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/avaliacao/corrigir-trabalhos-com-ou-sem-verificacao-de-plagio/step2.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbAvaliacaoCorrigirComESemPlagio3">
+                                <p>É possível fazer anotações no trabalho do aluno diretamente na tela, sem necessidade de download.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/avaliacao/corrigir-trabalhos-com-ou-sem-verificacao-de-plagio/step3.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbAvaliacaoCorrigirComESemPlagio4">
+                                <p>Se o Exercício permitir mais de um envio, certifique-se de avaliar a(s) tentativa(s) correta(s) – é possível atribuir uma nota por tentativa.</p>
+                                <p>Após avaliar o trabalho, dê “Enter” para confirmar, ou clique no botão “Enviar”.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/avaliacao/corrigir-trabalhos-com-ou-sem-verificacao-de-plagio/step4.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbAvaliacaoCorrigirComESemPlagio5">
+                                <p>Caso o Exercício esteja com a opção <strong>Rastrear possibilidades de plágio via SafeAssign</strong> habilitada, o item <strong>SafeAssign</strong> estará disponível para verificação do relatório de plágio.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:80px"></div>
+                        <div class="imageContainer row">
+                            <div class="boxDestaqueAdicional" id="BbAvaliacaoCorrigirComESemPlagio6">
+                                <p>Embora a ferramenta indique o percentual de cópia atribuída à atividade do aluno, é fundamental conferir o relatório apresentado.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/avaliacao/corrigir-trabalhos-com-ou-sem-verificacao-de-plagio/step5.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbAvaliacaoCorrigirComESemPlagio7">
+                                <p>Clique no botão <span class="enfaseBox">v</span> para acessar o painel de avaliação.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/avaliacao/corrigir-trabalhos-com-ou-sem-verificacao-de-plagio/step6.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbAvaliacaoCorrigirComESemPlagio8">
+                                <p>Se existir uma Rubric associada ao Exercício, ela pode ser usada para atribuir a nota ao aluno.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/avaliacao/corrigir-trabalhos-com-ou-sem-verificacao-de-plagio/step7.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbAvaliacaoCorrigirComESemPlagio9">
+                                <p>Além das marcações no documento é possível dar um feedback geral ao aluno, inclusive anexando um arquivo.</p>
+                            </div>
+                            <div class="boxDestaque" id="BbAvaliacaoCorrigirComESemPlagio9b">
+                                <p>A opção de adicionar notas possibilita registrar comentários particulares, que não ficarão visíveis aos alunos.</p>
+                            </div>
+                        </div>
+                         <div class="margemParaImagem" style="margin-top:20px"></div>
+
+                        <h2 id="subtitulo2">Fazer o download de todas as submissões</h2>
+                        <p>Caso deseje fazer o download de todos os arquivos submetidos na atividade:</p>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/avaliacao/corrigir-trabalhos-com-ou-sem-verificacao-de-plagio/step8.png" alt="" class="imgLeft">
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/avaliacao/corrigir-trabalhos-com-ou-sem-verificacao-de-plagio/step9.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbAvaliacaoCorrigirComESemPlagio10">
+                                <p>Selecione de quais alunos/grupos você deseja baixar os trabalhos.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/avaliacao/corrigir-trabalhos-com-ou-sem-verificacao-de-plagio/step10.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbAvaliacaoCorrigirComESemPlagio11">
+                                <p>Caso o exercício aceite mais de uma tentativa, selecione se deseja baixar apenas os arquivos da última tentativa ou os arquivos de todas as tentativas.</p>
+                            </div>
+                        </div>
+                         <div class="margemParaImagem" style="margin-top:20px"></div>
+
+                        <h2 id="subTitulo3">O que fazer em caso de plágio</h2>
+
+                        <h4>Papel do Docente</h4>
+                        <ul>
+                            <li>Consiste em:</li>
+                            <ul class="subListas">
+                                <li>Identificar ocorrências;</li>
+                                <li>Informar, se necessário, os envolvidos;</li>
+                                <li>Registrar os fatos;</li>
+                                <li>Corrigir as avaliações e NÃO PUBLICAR as notas dos envolvidos.</li>
+                            </ul>
+                            <li>Após o encaminhamento, o assunto passa a ser gerenciado pelo Apoio/Coordenação (PGLS) ou MultiInsper/Coordenação (Graduação).</li>
+                        </ul>
+
+                        <h4>Identificar ocorrências</h4>
+                        <ul>
+                            <li>Ocorrências:</li>
+                            <ul class="subListas">
+                                <li>Referem-se a quaisquer situações de SUSPEITA de plágio, cola ou outras formas de desonestidade intelectual;</li>
+                                <li>Não deve haver qualificação prévia:</li>
+                                <ul class="subListasNivel2">
+                                    <li>TODAS SITUAÇÕES FUNDAMENTADAS devem ser encaminhadas ao Apoio/Coordenação (PGLS) ou MultiInsper/Coordenação (Graduação).</li>
+                                </ul>
+                            </ul>
+                        </ul>
+
+                        <h4>Informar, se necessário, os envolvidos</h4>
+                        <ul>
+                            <li>Nos casos onde a identificação da ocorrência não se dá na presença do(s) aluno(s), ou seja, na correção de atividades:</li>
+                            <ul class="subListas">
+                                <li>Se necessário, deve-se comunicar INDIVIDUALMENTE ao aluno a existência de um QUESTIONAMENTO quanto à atividade e que, por essa razão, o tema foi encaminhado à Coordenação, devendo o aluno aguardar contato;</li>
+                                <li>Ao publicar as notas, automaticamente, o aluno perceberá que sua nota não foi divulgada.</li>
+                            </ul>
+                        </ul>
+
+                        <h4>Registrar os fatos</h4>
+                        <ul>
+                            <li>Enviar ao Apoio/Coordenação (PGLS) ou ao MultiInsper/Coordenação (Graduação), os materiais que suportam a ocorrência: avaliações, trabalhos, Relatório Blackboard, informações da Internet.</li>
+                            <li>Preparar também um relatório simples descrevendo a ocorrência e a avaliação quanto ao ocorrido.</li>
+                            <ul class="subListas">
+                                <li>Atenção quanto ao Relatório do Blackboard.</li>
+                            </ul>
+                            <li>Aluno será contato para relatar o ocorrido e apresentar justificativa.</li>
+                            <li>Caso é avaliado pela Coordenação.</li>
+                        </ul>
+
+                        <h4>Em caso de constatação de plágio</h4>
+                        <ul>
+                            <li>PGLS</li>
+                            <ul class="subListas">
+                                <li>Qualquer Notificação por Desonestidade Intelectual implica na REPROVAÇÃO do aluno na disciplina, independentemente do peso ou valor da avaliação (válido a partir de 2013/1).</li>
+                            </ul>
+                            <li>Graduação</li>
+                            <ul class="subListas">
+                                <li>Aluno recebe “Notificação de infração ao código de ética”. Processo é arquivo e, em caso de reincidência, a depender da gravidade, aluno é desligado da escola.</li>
+                                <li>Aluno notificado não recebe menção honrosa.</li>
+                            </ul>
+                        </ul>
+
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+
+                        <!-- 
+                        
+                        ÂNCORAS [VOLTAR AO SUMÁRIO]
+                        1- Adicionar a div.row vazia antes de cada subtítulo ('h2'). Ela será respónsável também de inserir a âncora para retornar ao sumário lá em cima;
+                        2- a div#ancoraSaibaMais fica após o fechamento desta tag 'article'. Ela é por padrão fixa em todos os manuais. Em situações em que o manual não tiver 'Manuais relacionados' e 'Manuais Complementares' esta div desaparece;
+                        3- Depois da tag section.saibaMais há a única âncora da página que não recebe condicionais;
+
+                         -->
+
+                    </article>
+                    <div id="ancoraSaibaMais" class="voltarSumario fix">
+                        <a href="#pesquisa">Início</a>
+                    </div>
+                    
+                    <!-- inicio do box Saiba mais -->
+                    <section class="saibaMais row fix">
+                        <h2 id="saiba-mais" class="ancora">Saiba Mais</h2>
+                        
+                        <h4 id="relacionado">Manuais relacionados</h4>
+                        <ul  ng-controller="manuaisRelacionados">
+                            <!-- class="default"  -->
+                            <li ng-repeat="item in Corrigir_trabalhos_com_e_sem_verificacao_de_plagio" class="ng-class: item.tipoIcone">
+                                <div><a href="{{item.Link}}">{{item.manual}}</a></div>
+                            </li>
+                        </ul>
+                        
+                        <h4 id="complementar">Materiais complementares</h4>
+                        <ul ng-controller="materiaisComplementares">
+                            <li ng-repeat="item in Corrigir_trabalhos_com_e_sem_verificacao_de_plagio" class="ng-class: item.tipoIcone">
+                                <div><a href="{{item.Link}}" target="_blank">{{item.manual}}</a></div>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <div class="voltarSumario fix">
+                        <a href="#pesquisa">Início</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="fix respiro"></div>
+
+<!-- Scripts: plugins -->
+<script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
+<script src="../../../js/libs/angular.js"></script>
+<script src="../../../js/libs/jquery.placeholder.js"></script>
+
+<!-- Scripts: controllers do AngularJs -->
+<script src="../../../js/listaCompletaManual.js"></script>
+<script src="../../../js/manuaisRelacionados.js"></script>
+<script src="../../../js/materiaisComplementares.js"></script>
+
+<!-- Scripts: do projeto -->
+<script src="../../../js/main.js"></script>
+
+<!-- Scripts: google analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53927287-1', 'auto');
+  ga('send', 'pageview');
+  // ga('set', '&uid', {{UA-53927287-1}});
+</script>
+</body>
+</html>

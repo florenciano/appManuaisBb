@@ -261,6 +261,51 @@ manuaisBB.controller("materiaisComplementares", function ($scope) {
 		"tipoIcone" : 	"video"
 	}
 	];
+
+	// "Receber trabalhos com ou sem verificação de plágio (Exercício)"
+	$scope.Receber_trabalhos_com_e_sem_verificacao_de_plagio = 
+	[
+	{	
+		"manual"	: 	"Assignment Grade Settings",
+		"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_2014_04/Instructor/100_Assignments/020_Assignment_Grade_Settings",
+		"tipoIcone" : 	"site"
+	},
+	{	
+		"manual"	: 	"Multiple Assignment Attempts",
+		"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_2014_04/Instructor/100_Assignments/020_Assignment_Grade_Settings",
+		"tipoIcone" : 	"site"
+	},
+	{	
+		"manual"	: 	"Anonymous Grading",
+		"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_2014_04/Instructor/100_Assignments/050_Grade_Assignments/010_Anonymous_Grading",
+		"tipoIcone" : 	"site"
+	},
+	{	
+		"manual"	: 	"Delegated Grading",
+		"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_2014_04/Instructor/100_Assignments/050_Grade_Assignments/020_Delegated_Grading",
+		"tipoIcone" : 	"site"
+	},
+	{	
+		"manual"	: 	"Use SafeAssign in Assignments",
+		"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_2014_04/Instructor/100_Assignments/025_Use_SafeAssign",
+		"tipoIcone" : 	"site"
+	},
+	{	
+		"manual"	: 	"SafeAssign Originality Report",
+		"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_2014_04/Instructor/100_Assignments/025_Use_SafeAssign/010_SafeAssign_Originality_Reports",
+		"tipoIcone" : 	"site"
+	},
+	{	
+		"manual"	: 	"Language Support in SafeAssign",
+		"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_2014_04/Instructor/100_Assignments/025_Use_SafeAssign/Language_Support_in_SafeAssign",
+		"tipoIcone" : 	"site"
+	},
+	{	
+		"manual"	: 	"SafeAssign FAQs",
+		"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_2014_04/Instructor/100_Assignments/025_Use_SafeAssign/SafeAssign_FAQs",
+		"tipoIcone" : 	"site"
+	}
+	];
 	
 	// "Receber trabalhos para autoavaliação e avaliação de colegas"
 	$scope.Receber_trabalhos_para_autoavaliacao_e_avaliacao_de_colegas = 
@@ -268,6 +313,31 @@ manuaisBB.controller("materiaisComplementares", function ($scope) {
 	{	
 		"manual"	: 	"Self and Peer Assessment",
 		"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_SP_10_and_SP_11/Instructor/070_Assignments/005_Self_and_Peer_Assessment",
+		"tipoIcone" : 	"site"
+	}
+	];
+
+	// "Submeter arquivos para verificação de plágio ou criar base de comparação (SafeAssign)"
+	$scope.Submeter_arquivos_para_verificacao_de_plagio_ou_criar_base_de_comparacao = 
+	[
+	{	
+		"manual"	: 	"SafeAssign Originality Report",
+		"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_2014_04/Instructor/100_Assignments/025_Use_SafeAssign/010_SafeAssign_Originality_Reports",
+		"tipoIcone" : 	"site"
+	},
+	{	
+		"manual"	: 	"DirectSubmit",
+		"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_2014_04/Instructor/100_Assignments/025_Use_SafeAssign/DirectSubmit",
+		"tipoIcone" : 	"site"
+	},
+	{	
+		"manual"	: 	"Language Support in SafeAssign",
+		"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_2014_04/Instructor/100_Assignments/025_Use_SafeAssign/Language_Support_in_SafeAssign",
+		"tipoIcone" : 	"site"
+	},
+	{	
+		"manual"	: 	"SafeAssign FAQs",
+		"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_2014_04/Instructor/100_Assignments/025_Use_SafeAssign/SafeAssign_FAQs",
 		"tipoIcone" : 	"site"
 	}
 	];
@@ -831,6 +901,46 @@ manuaisBB.controller("materiaisComplementares", function ($scope) {
 	}
 	];
 
+	// "Corrigir trabalhos com e sem verificação de plágio (Exercício)"
+	$scope.Corrigir_trabalhos_com_e_sem_verificacao_de_plagio = 
+	[
+	{	
+		"manual"	: 	"Grade Assignments",
+		"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_2014_04/Instructor/100_Assignments/050_Grade_Assignments/020_Delegated_Grading",
+		"tipoIcone" : 	"site"
+	},
+	{	
+		"manual"	: 	"Multiple Assignment Attempts",
+		"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_2014_04/Instructor/100_Assignments/030_Multiple_Assignment_Attempts",
+		"tipoIcone" : 	"site"
+	},
+	{	
+		"manual"	: 	"Grade With SafeAssign",
+		"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_2014_04/Instructor/100_Assignments/050_Grade_Assignments/000_Grade_With_SafeAssign",
+		"tipoIcone" : 	"site"
+	},
+	{	
+		"manual"	: 	"Use SafeAssign in Assignments",
+		"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_2014_04/Instructor/100_Assignments/025_Use_SafeAssign",
+		"tipoIcone" : 	"site"
+	},
+	{	
+		"manual"	: 	"SafeAssign Originality Report",
+		"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_2014_04/Instructor/100_Assignments/025_Use_SafeAssign/010_SafeAssign_Originality_Reports",
+		"tipoIcone" : 	"site"
+	},
+	{	
+		"manual"	: 	"Anonymous Grading",
+		"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_2014_04/Instructor/100_Assignments/050_Grade_Assignments/010_Anonymous_Grading",
+		"tipoIcone" : 	"site"
+	},
+	{	
+		"manual"	: 	"Delegated Grading",
+		"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_2014_04/Instructor/100_Assignments/050_Grade_Assignments/020_Delegated_Grading",
+		"tipoIcone" : 	"site"
+	}
+	];
+
 	// "Avaliar fórum de discussão"
 	$scope.Avaliar_forum_de_discussao = 
 	[
@@ -892,6 +1002,14 @@ manuaisBB.controller("materiaisComplementares", function ($scope) {
 		"tipoIcone"	: 	"site"
 	}
 	];
+	$scope.BbGeralSimularComoAluno = 
+	[
+	{
+		"manual" 	: 	"Student Preview",
+		"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_2014_04/Instructor/130_Student_Performance/Student_Preview",
+		"tipoIcone"	: 	"site"
+	}
+	];
 
 	// Padronização dos ambientes online da
 	// $scope.BbGeral_Padronizacao_PGLS = 
@@ -920,5 +1038,47 @@ manuaisBB.controller("materiaisComplementares", function ($scope) {
 	$scope.Sincronizar_com_eMail_pessoal = 
 	[
 	];
+
+	// CATEGORIA: Grupos
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+	// "Criar ou alterar Grupos"
+	$scope.Criar_Alterar_Grupos = 
+	[
+	{	
+		"manual"	: 	"Create Groups",
+		"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_SP_14/Instructor/080_Collaboration/050_Course_Groups/030_Create_Groups",
+		"tipoIcone" : 	"site"
+	},
+	{	
+		"manual"	: 	"Groups Page",
+		"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_SP_14/Instructor/080_Collaboration/050_Course_Groups/010_Groups_Page",
+		"tipoIcone" : 	"site"
+	},
+	{	
+		"manual"	: 	"Create Group Assignments",
+		"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_SP_14/Instructor/080_Collaboration/050_Course_Groups/080_Create_Group_Assignments",
+		"tipoIcone" : 	"site"
+	},
+	{	
+		"manual"	: 	" Import and Export Groups",
+		"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_SP_14/Instructor/080_Collaboration/050_Course_Groups/090_Import_and_Export_Groups",
+		"tipoIcone" : 	"site"
+	}
+	];
+
+	// CATEGORIA: Melhorias no Blackboard
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+	// "Criar e visualizar eventos"
+	$scope.MelhoriasBb = 
+	[
+	{
+		"manual" 	: 	"What's New in Learn (Learn 9.1 April 2014)",
+		"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_2014_04/Instructor",
+		"tipoIcone"	: 	"site"
+	}
+	];
+
 
 });

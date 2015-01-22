@@ -331,20 +331,6 @@
                             <h3 id="sumarioAncora">Sumário</h3>
                         </div>
 
-                        <h2 id="subTitulo1">Página de grupos</h2>
-                        <h2 id="subTitulo2">Criação por inscrição aleatória (sorteio do sistema)</h2>
-                        <h2 id="subTitulo3">Criação por inscrição automática (autoinscrição dos alunos)</h2>
-                        <h2 id="subTitulo4">Criação por inscrição manual (feita pelo professor)</h2>
-                        <h2 id="subTitulo5">Alteração de grupos únicos</h2>
-                        <h2 id="subTitulo6">Alteração de conjuntos de grupos</h2>
-                        <h2 id="subTitulo7">Administração dos membros dos grupos</h2>
-                        <h2 id="subTitulo8">Envio de e-mail para o grupo</h2>
-
-
-
-
-                        <p>Escolha <strong>Inscrição automática</strong> para que os próprios alunos ingressem em um grupo.</p>
-
                         <!--
                         
                         IMAGENS E BOX DE TEXTO
@@ -363,111 +349,268 @@
                         5- Após cada div.imageContainer inserir a div.respiro para aplicar uma margem entre eles. Insira um valor de margin-top no próprio html, visto que há inúmeras necessidades de tamanhos de margin;
 
                         -->
+                        <h2 id="subTitulo1">Página de grupos</h2>
+                        <p>Na página de grupos é possível criar novos grupos ou alterar as configurações de grupos já existentes.</p>
 
                         <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/grupos/criar-grupos/step1.png" alt="" class="">
-                            <!-- <div class="boxDestaque" id="BbMateriaisCarregarMateriais1">
-                                <p>Carregue os materiais pasta <strong>Meus Conteúdos</strong>. Essa pasta é individual e não tem vínculo com qualquer disciplina.</p>
-                            </div> -->
+                            <img src="../../../img/Blackboard/grupos/criar-alterar-grupos/step1.png" alt="" class="imgLeft">
+                            <div class="boxDestaqueAdicional" id="BbGruposCriarAlterarGrupos1">
+                                <p>Uma vez alocados em determinado grupo, os alunos não podem cancelar sua inscrição.</p>
+                            </div>
                         </div>
-
                         <div class="margemParaImagem" style="margin-top:40px"></div>
 
                         <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/grupos/criar-grupos/step2.png" alt="" class="imgLeft">
-                            <div class="boxDestaque" id="BbGruposCriarGrupos1">
-                                <p>Escolha um nome para identificar o conjunto de grupos que será criado.</p>
+                            <img src="../../../img/Blackboard/grupos/criar-alterar-grupos/step2.png" alt="" class="">
+                        </div>
+                        <!-- começo da listagem -->
+                        <section class="row fix listagemAlunos listagemBbGrupos">
+                            <div class="c2"><img src="../../../img/Blackboard/grupos/criar-alterar-grupos/step2a.png" alt="" class="imgRight"></div>
+                            <div class="c10">
+                                <p><strong>Modos de exibição:</strong> altera o modo de visualização das informações por grupos, por conjuntos de grupos ou por usuários.</p>
                             </div>
-                            <div class="boxDestaque" id="BbGruposCriarGrupos2">
+                        </section>
+                        <section class="row fix listagemAlunos listagemBbGrupos">
+                            <div class="c2"><img src="../../../img/Blackboard/grupos/criar-alterar-grupos/step2b.png" alt="" class="imgRight"></div>
+                            <div class="c10">
+                                <p><strong>Criação de grupos:</strong> permite criar grupos um a um, em conjunto (vários grupos que herdam as mesmas características) ou mesmo importar membros ou grupos completos de outros ambientes.</p>
+                            </div>
+                        </section>
+                        <section class="row fix listagemAlunos listagemBbGrupos">
+                            <div class="c2"><img src="../../../img/Blackboard/grupos/criar-alterar-grupos/step2c.png" alt="" class="imgRight"></div>
+                            <div class="c10">
+                                <p><strong>Exportar: </strong>permite exportar membros ou grupos completos para posterior importação em outro ambiente.</p>
+                            </div>
+                        </section>
+                        <section class="row fix listagemAlunos listagemBbGrupos">
+                            <div class="c2"><img src="../../../img/Blackboard/grupos/criar-alterar-grupos/step2d.png" alt="" class="imgRight"></div>
+                            <div class="c10">
+                                <p><strong>Configurações de grupo: </strong>permite configurar o ambiente de modo que os alunos possam criar seus próprios grupos.</p>
+                            </div>
+                        </section>
+                        <section class="row fix listagemAlunos listagemBbGrupos">
+                            <div class="c2"><img src="../../../img/Blackboard/grupos/criar-alterar-grupos/step2e.png" alt="" class="imgRight"></div>
+                            <div class="c10">
+                                <p><strong>Ações em lote:</strong> permite que diversos grupos sejam excluídos simultaneamente, ou mesmo que sejam criadas exibições inteligentes para esses grupos na Central de Notas.</p>
+                            </div>
+                        </section>
+                        <section class="row fix listagemAlunos listagemBbGrupos">
+                            <div class="c2"><img src="../../../img/Blackboard/grupos/criar-alterar-grupos/step2f.png" alt="" class="imgRight"></div>
+                            <div class="c10">
+                                <p style="margin-top: 1.5em;"><strong>Exibir opções:</strong> permite adicionar na página outras colunas de detalhes dos grupos.</p>
+                            </div>
+                        </section>
+                        
+                        <div class="margemParaImagem" style="margin-top:80px"></div>
+
+                        <div class="imageContainer row">
+                            <div class="boxDestaqueAdicional" id="BbGruposCriarAlterarGrupos2">
+                                <p><strong>Exibição inteligente</strong> é uma configuração da Central de Notas que permite filtrar apenas informações que atendam a um critério definido.</p>
+                                <p>Ao criar uma exibição inteligente para determinado grupo é possível visualizar somente os alunos e atividades daquele grupo. Isso é útil quando a Central de Notas possui muitos alunos e colunas.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        
+                        <h2 id="subTitulo2">Criação por inscrição aleatória (sorteio do sistema)</h2>
+                        <p>Escolha <strong>Inscrição aleatória</strong> para que o sistema distribua os alunos aleatoriamente nos grupos.</p>
+                        <p>Embora seja possível criar um único grupo, no exemplo será exibida a criação de um conjunto de grupos.</p>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/grupos/criar-alterar-grupos/step3.png" alt="" class="imgLeft">
+                        </div>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/grupos/criar-alterar-grupos/step4.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos3">
+                                <p>Escolha um nome para identificar o conjunto de grupos que será criado e, se necessário, escreva uma descrição.</p>
+                            </div>
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos4">
                                 <p>Defina quais ferramentas de colaboração ficarão à disposição do grupo para troca de informações e comunicação entre os membros.</p>
                             </div>
-                            <div class="boxDestaque" id="BbGruposCriarGrupos3">
-                                <p>Defina o nome da página em que os alunos deverão fazer suas inscrições nos grupos.</p>
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos5">
+                                <p>Indique se os membros terão permissão para adicionar módulos pessoais à página inicial do grupo.</p>
                             </div>
-                            <div class="boxDestaque" id="BbGruposCriarGrupos4">
-                                <p>Marque a opção <strong>Mostrar membros</strong> para que os alunos saibam quem já está inscrito nos grupos correspondentes.</p>
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos6">
+                                <p>Defina a criação ou não de páginas inteligentes na Central de Notas.</p>
                             </div>
                         </div>
-
                         <div class="margemParaImagem" style="margin-top:40px"></div>
-
                         <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/grupos/criar-grupos/step3.png" alt="" class="imgLeft">
-                            <div class="boxDestaque" id="BbGruposCriarGrupos5">
-                                <p>Defina quantos grupos deverão ser criados. Os nomes serão compostos pelo nome do grupo + numeração sequencial (veja o exemplo abaixo).</p>
+                            <img src="../../../img/Blackboard/grupos/criar-alterar-grupos/step5.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos7">
+                                <p>Defina a maneira como os grupos serão criados e a distribuição dos membros entre eles. Clique em Enviar.</p>
                             </div>
                         </div>
-
                         <div class="margemParaImagem" style="margin-top:40px"></div>
 
+
+                        <h2 id="subTitulo3">Criação por inscrição automática (autoinscrição dos alunos)</h2>
+                        <p>Escolha <strong>Inscrição automática</strong> para que os próprios alunos ingressem em um grupo.</p>
+                        <p>Embora seja possível criar um único grupo, no exemplo será exibida a criação de um conjunto de grupos.</p>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/grupos/criar-alterar-grupos/step3b.png" alt="" class="imgLeft">
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/grupos/criar-alterar-grupos/step6.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos8">
+                                <p>Escolha um nome para identificar o conjunto de grupos que será criado e, se necessário, escreva uma descrição.</p>
+                            </div>
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos9">
+                                <p>Defina quais ferramentas de colaboração ficarão à disposição do grupo para troca de informações e comunicação entre os membros.</p>
+                            </div>
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos10">
+                                <p>Indique se os membros terão permissão para adicionar módulos pessoais à página inicial do grupo.</p>
+                            </div>
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos11">
+                                <p>Defina o nome da página em que os alunos deverão fazer suas inscrições nos grupos e, se necessário, escreva as instruções.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/grupos/criar-alterar-grupos/step7.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos12">
+                                <p>Quando o número de membros for atingido, outros usuários não poderão se inscrever no grupo.</p>
+                                <p>Marque a opção Mostrar membros para que os alunos saibam quem já está inscrito nos grupos correspondentes.</p>
+                            </div>
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos13">
+                                <p>Defina a quantidade de grupos e a criação ou não de páginas inteligentes na Central de Notas. Clique em Enviar.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
                         <p>Para que os alunos possam se inscrever nos grupos criados é necessário disponibilizar a página de registro em alguma área do ambiente, como por exemplo, a área <strong>Conteúdos</strong>.</p>
                         <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/grupos/criar-grupos/step4.png" alt="" class="">
+                            <img src="../../../img/Blackboard/grupos/criar-alterar-grupos/step8.png" alt="" class="imgLeft">
                         </div>
-
                         <div class="margemParaImagem" style="margin-top:40px"></div>
-
                         <p>Na visão de aluno, ao clicar no link de grupos serão exibidos todos os grupos da disciplina e a opção para que ele se inscreva em cada um deles.</p>
-                        <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/grupos/criar-grupos/step5.png" alt="" class="">
-                            <div class="boxDestaque" id="BbGruposCriarGrupos6">
+                         <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/grupos/criar-alterar-grupos/step9.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos14">
                                 <p>Ao se registrar em um grupo, o aluno visualiza os membros daquele grupo, as ferramentas disponíveis para interação e também as atribuições (exercícios) a serem ser desenvolvidas.</p>
                             </div>
                         </div>
-                        
                         <div class="margemParaImagem" style="margin-top:40px"></div>
-                        
-                        <h2 id="subTitulo2">Inscrição manual</h2>
-                        <p>Escolha <strong>Inscrição manual</strong> para determinar quais alunos comporão cada grupo.</p>
+
+                        <h2 id="subTitulo4">Criação por inscrição manual (feita pelo professor)</h2>
+                        <p>Escolha <strong>Inscrição manual</strong> para determinar quais alunos vão compor cada grupo.</p>
+                        <p>Embora seja possível criar um único grupo, no exemplo será exibida a criação de um conjunto de grupos.</p>
                         <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/grupos/criar-grupos/step6.png" alt="" class="">
+                            <img src="../../../img/Blackboard/grupos/criar-alterar-grupos/step3b.png" alt="" class="imgLeft">
                         </div>
-
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
-
                         <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/grupos/criar-grupos/step7.png" alt="" class="">
-                            <div class="boxDestaque" id="BbGruposCriarGrupos7">
-                                <p>Escolha um nome para identificar o conjunto de grupos que será criado.</p>
+                            <img src="../../../img/Blackboard/grupos/criar-alterar-grupos/step10.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos15">
+                                <p>Escolha um nome para identificar o conjunto de grupos que será criado e, se necessário, escreva uma descrição.</p>
                             </div>
-                            <div class="boxDestaque" id="BbGruposCriarGrupos8">
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos16">
                                 <p>Defina quais ferramentas de colaboração ficarão à disposição do grupo para troca de informações e comunicação entre os membros.</p>
                             </div>
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos17">
+                                <p>Indique se os membros terão permissão para adicionar módulos pessoais à página inicial do grupo.</p>
+                            </div>
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos18">
+                                <p>Defina a quantidade de grupos e a criação ou não de páginas inteligentes na Central de Notas. Clique em Enviar.</p>
+                            </div>
                         </div>
 
                         <div class="margemParaImagem" style="margin-top:40px"></div>
-
                         <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/grupos/criar-grupos/step8.png" alt="" class="">
-                            <div class="boxDestaque" id="BbGruposCriarGrupos9">
-                                <p>Selecione na lista da esquerda, os alunos que farão parte do grupo. Repita o procedimento para todos os grupos criados.</p>
+                            <img src="../../../img/Blackboard/grupos/criar-alterar-grupos/step11.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos19">
+                                <p>Para evitar que um mesmo membro seja inscrito em mais de um grupo, marque a opção <strong>Ocultar membros...</strong></p>
+                            </div>
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos20">
+                                <p>Faça a inscrição dos usuários em cada grupo de maneira randômica ou escolhendo um a um.</p>
+                            </div>
+                             <div class="boxDestaque" id="BbGruposCriarAlterarGrupos21">
+                               <ol type="a">
+                                   <li>Uma vez feita a inscrição de um membro, é possível removê-lo do grupo manualmente.</li>
+                                   <li>Também é possível excluir um grupo inteiro para remanejar seus membros, ou caso o grupo tenha ficado sem nenhum inscrito.</li>
+                                   <li>Por fim, é possível criar um grupo adicional ao conjunto de grupos.</li>
+                               </ol>
                             </div>
                         </div>
-
                         <div class="margemParaImagem" style="margin-top:40px"></div>
 
-                        <h2 id="subTitulo3">Inscrição aleatória</h2>
-                        <p>Escolha <strong>Inscrição aleatória</strong> para determinar quais alunos comporão cada grupo.</p>
+                        <h2 id="subTitulo5">Alteração de grupos únicos</h2>
+                        <p>Para alterar grupos específicos dentro de um conjunto de grupos ou mesmo um grupo criado como Grupo único:</p>
                         <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/grupos/criar-grupos/step9.png" alt="" class="">
+                            <img src="../../../img/Blackboard/grupos/criar-alterar-grupos/step12.png" alt="" class="imgLeft">
                         </div>
-
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
-
                         <div class="imageContainer row">
-                            <img src="../../../img/Blackboard/grupos/criar-grupos/step10.png" alt="" class="imgLeft">
-                            <div class="boxDestaque" id="BbGruposCriarGrupos10">
-                                <p>Escolha um nome para identificar o conjunto de grupos que será criado.</p>
+                            <img src="../../../img/Blackboard/grupos/criar-alterar-grupos/step13.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos22">
+                                <p>A edição de um grupo abre a mesma página do momento de sua criação. É possível alterar seu nome, descrição, disponibilidade, ferramentas e membros.</p>
                             </div>
-                            <div class="boxDestaque" id="BbGruposCriarGrupos11">
-                                <p>Defina quais ferramentas de colaboração ficarão à disposição do grupo para troca de informações e comunicação entre os membros.</p>
+                        </div>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/grupos/criar-alterar-grupos/step14.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos23">
+                                <p>Uma maneira prática de alterar a relação de ferramentas do grupo é pelo botão <strong>Exibir opções</strong>.</p>
                             </div>
-                            <div class="boxDestaque" id="BbGruposCriarGrupos12">
-                                <p>Configure as opções para criação aleatória dos grupos.</p>
+                        </div>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/grupos/criar-alterar-grupos/step15.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos24">
+                                <p>Clique na célula correspondente a cada ferramenta do grupo para ativar/desativar sua disponibilidade.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:60px"></div>
+
+                        <h2 id="subTitulo6">Alteração de conjuntos de grupos</h2>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/grupos/criar-alterar-grupos/step16.png" alt="" class="imgLeft">
+                        </div>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/grupos/criar-alterar-grupos/step17.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos25">
+                                <ol type="a">
+                                    <li>Ao editar um conjunto de grupos é possível alterar sua disponibilidade, ferramentas associadas e, caso a inscrição seja do tipo “automática”, informações de registro.</li>
+                                    <li>É possível ainda administrar os membros de todos os grupos de um determinado conjunto.</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <h2 id="subTitulo7">Administração dos membros dos grupos</h2>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/grupos/criar-alterar-grupos/step18.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos26b">
+                                <p>Embora as inscrições dos membros de um grupo possam ser administradas via Menu de opções <img src="../../../img/Blackboard/grupos/criar-alterar-grupos/step20b.png" alt=""> dos respectivos grupos ou conjuntos, a visualização Todos os usuários pode ser mais prática.</p>
+                            </div>
+                        </div>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/grupos/criar-alterar-grupos/step19.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos26">
+                                <p>Essa visualização lista todos os alunos do ambiente, indicando em quais grupos estão inscritos. É possível:</p>
+                                <ol type="a">
+                                    <li>Remover o aluno do grupo clicando no <span class="enfaseBox">x</span> correspondente.</li>
+                                    <li>Adicionar o aluno a um dos grupos já criados.</li>
+                                    <li>Inscrever diversos alunos simultaneamente.</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:120px"></div>
+
+                        <h2 id="subTitulo8">Envio de e-mail para o grupo</h2>
+                        <p>Há duas maneiras de enviar e-mail aos alunos de um determinado grupo:</p>
+                        <ol>
+                            <li>Pelo menu da disciplina, opção <strong>Enviar e-mail, Selecionar grupos</strong></li>
+                            <li>Na própria página de grupos:</li>
+                        </ol>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/grupos/criar-alterar-grupos/step20.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos27">
+                                <p>Na visualização <strong>Todos os grupos</strong> é possível escolher o grupo específico para o qual o e-mail será enviado.</p>
+                            </div>
+                        </div>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Blackboard/grupos/criar-alterar-grupos/step21.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos28">
+                                <p>Na visualização <strong>Conjunto de grupos</strong> o e-mail é enviado a todos os grupos de um determinado conjunto.</p>
                             </div>
                         </div>
 
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <div class="margemParaImagem" style="margin-top:60px"></div>
 
 
                         <!-- 
@@ -493,14 +636,14 @@
                         <h4 id="relacionado">Manuais relacionados</h4>
                         <ul  ng-controller="manuaisRelacionados">
                             <!-- class="default"  -->
-                            <li ng-repeat="item in Criar_Grupos" class="ng-class: item.tipoIcone">
+                            <li ng-repeat="item in Criar_Alterar_Grupos" class="ng-class: item.tipoIcone">
                                 <div><a href="{{item.Link}}">{{item.manual}}</a></div>
                             </li>
                         </ul>
                         
                         <h4 id="complementar">Materiais complementares</h4>
                         <ul ng-controller="materiaisComplementares">
-                            <li ng-repeat="item in Criar_Grupos" class="ng-class: item.tipoIcone">
+                            <li ng-repeat="item in Criar_Alterar_Grupos" class="ng-class: item.tipoIcone">
                                 <div><a href="{{item.Link}}" target="_blank">{{item.manual}}</a></div>
                             </li>
                         </ul>

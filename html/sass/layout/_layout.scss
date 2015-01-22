@@ -112,6 +112,7 @@ html, body { height: 100%; min-height: 100%;}
 body {
     @include font(normal, 12px);
     color: $corTexto;
+    text-rendering: optimizeLegibility;
     // @include transition(all .20s ease);
     // Trasition removed in all style, it's not a good pratice
 }
@@ -376,6 +377,13 @@ body {
     }
     .mainContent .contentMain { margin-top: $meioGrid + 10; }
 
+    // regras de estilo para a página de melhorias
+    .contentMainMelhorias {
+        font-size: 112.5%;
+        ol {
+            li { line-height: 1.75em; }
+        }
+    }
     // regras que afetam o conteúdo do manual
     .contentMain {
         h1 {
@@ -643,7 +651,6 @@ body {
             }  
         }
         
-
         // Novos elementos do catme
         
         // O que é a ferramenta Catme
@@ -721,6 +728,14 @@ body {
                 &:last-child { margin: 0 }
                 img { display: inline-block; }
                 a { @include corLinkUpBox($corSec01); }
+            }
+        }
+
+        // Grupos (new)
+        .listagemBbGrupos {
+            p { 
+                margin-top: .875em;
+                line-height: 1.4em;
             }
         }
         // acessar resultados de uma avaliacao existente
