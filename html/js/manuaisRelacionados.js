@@ -318,7 +318,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 		"tipoIcone"	: 	"blackboard"
 	},
 	{
-		"manual"	: 	"Criar Grupos",
+		"manual"	: 	"Criar ou alterar grupos",
 		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/grupos/criar-alterar-grupos/",
 		"tipoIcone"	: 	"blackboard"
 	}

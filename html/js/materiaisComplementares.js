@@ -272,7 +272,7 @@ manuaisBB.controller("materiaisComplementares", function ($scope) {
 	},
 	{	
 		"manual"	: 	"Multiple Assignment Attempts",
-		"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_2014_04/Instructor/100_Assignments/020_Assignment_Grade_Settings",
+		"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_2014_04/Instructor/100_Assignments/030_Multiple_Assignment_Attempts",
 		"tipoIcone" : 	"site"
 	},
 	{	
@@ -906,7 +906,7 @@ manuaisBB.controller("materiaisComplementares", function ($scope) {
 	[
 	{	
 		"manual"	: 	"Grade Assignments",
-		"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_2014_04/Instructor/100_Assignments/050_Grade_Assignments/020_Delegated_Grading",
+		"Link" 		: 	"https://help.blackboard.com/en-us/Learn/9.1_2014_04/Instructor/100_Assignments/050_Grade_Assignments",
 		"tipoIcone" : 	"site"
 	},
 	{	

@@ -309,7 +309,7 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	},
 	{
 		'manual'			: 	'Simular como os alunos visualizam o ambiente',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/geral/restringir-visualizacao-de-materiais/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html/Blackboard/geral/simular-como-alunos-visualizam-o-ambiente/'
 	},
 	{
 		'manual'			: 	'Padronização dos ambientes online da PGLS',
