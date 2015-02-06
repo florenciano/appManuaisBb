@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br" ng-app="manuaisBB">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Tecnologias de Aprendizagem - Manuais de utilização</title>
+<meta name="viewport" content="width=device-width">
+<meta name="msapplication-TileImage" content="tile.png"/>
+<meta name="msapplication-TileColor" content="#d02034"/>
+
+<link rel="stylesheet" type="text/css" media="print" href="../../../css/print.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../../../css/main.css">
+
+<!--[if IE]><link rel="shortcut icon" href="favicon.ico"><![endif]-->
+<link rel="icon" href="../../../favicon-16.png" sizes="16x16">
+<link rel="icon" href="../../../favicon-32.png" sizes="32x32">
+<link rel="icon" href="../../../favicon-48.png" sizes="48x48">
+<link rel="icon" href="../../../favicon-64.png" sizes="64x64">
+<link rel="icon" href="../../../favicon-128.png" sizes="128x128">
+
+<!--
+1- iPad com Retina Display;
+2- iPhone com Retina Display;
+3- Primeira e segunda geração de iPad;
+4- Versões antigas de iPhone, iPod Touch e Android 2.2+
+-->
+<link rel="apple-touch-icon" sizes="144x144" href="../../../apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../../apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../../apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+
+<!--[if IE]>
+    <link href="../../../css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script>window.html5 || document.write('<script src="../../../js/libs/html5shiv.js"><\/script>')</script>
+<![endif]-->
+
+</head>
+<body>
+    <!-- alert para visualização abaixo de 768px -->
+    <div class="alert alert-warning alert-dismissable">
+        <button type="button" class="close">&times;</button>
+        Melhor visualizado com resolução de 768px de largura ou superior.
+    </div>
+
+    <div class="wrapper">
+        
+        <header id="top" class="wfull fix">
+            <div class="logo c4">
+                <img src="../../../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
+            </div>
+            <div class="titleHeader c8">
+                <p class="title">Tecnologias de Aprendizagem</p>
+                <p class="description">Manuais de utilização</p>
+            </div>
+        </header>
+
+        <div id="main" role="main" class="fix wfull">
+            <div class="containerMain fix row">
+
+                <!-- início da área da busca -->
+                <section class="buscaMain c4" ng-controller="listaMenu">
+                    <div class="inputSearch">
+                        <form id="busca">
+                            <label for="pesquisa"></label>
+                            <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Busca por título ou palavra-chave" ng-model="searchText">
+                        </form>
+                    </div>
+
+                    <nav role="navigation" class="navigationMain">
+                        <h5 class="icoBlackboard">Blackboard</h5>
+
+                        <ol class="noCategory" ng-repeat="item in BbConhecerAmbiente | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>    
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbMateriais | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbComunicacaoInteracao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbTrabalhos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbGrupos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbTestesPesquisas | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbRubrics | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbAvaliacao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbCalendario | filter: {manual:searchText}">
+                        <li class="nameCategory">
+                            <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            
+                        </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <h5 class="icoCatme">Catme</h5>
+                        <ol class="noCategory" ng-repeat="item in catmeSobreFerramenta | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in catmeAplicarPesquisaAval | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in catmeAnalisarResultados | filter: {manual:searchText}">
+                            <li class="nameCategory selectedCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <!-- <h5 class="icoClickers">Votadores eletrônicos (clickers)</h5>
+                        <ol class="noCategory" ng-repeat="item in clickerSobreFerramenta | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerUtilizarVotadores | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerPrepararSlides | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerIdentificarVoto | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerPromoverVotacao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerAnalisarResultados | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol> -->
+                        
+                        <h5 class="icoCursosOnline">Casos, Simuladores e Cursos online</h5>
+                        <ol class="noCategory" ng-repeat="item in SobreOsRecursos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in ConsultarRecursosDisponiveis | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in UtilizarRecursos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <div class="faqBusca icoFaq">
+                            <h5>
+                            <ol class="noCategory">
+                                <li><a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html-TAI/faq/index.html" class="">FAQ</a></li>
+                            </ol>
+                            </h5>
+                        </div>
+                        <div class="outros">
+                            <h6>
+                                <a href="mailto:tai@insper.edu.br?subject=TAI%20-%20Manuais%20de%20utiliza&#231;&#227;o">Não encontrou o que queria?</a>
+                            </h6>
+                        </div>
+                    </nav>
+                </section>
+
+                <!-- início do conteúdo do manual -->
+                <section class="mainContent c8">
+                    <section class="headerContent row">
+                        <div class="cabecalho fix">
+                            <p>
+                                <!-- adicionar a data da produção do material -->
+                                <span><strong>Atualizado: </strong>11/03/2014</span>
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="breadcrumb">
+                            <p>
+                                <span class="nameCategory">Catme </span>
+                                <span>&#62; </span>
+                                Acessar resultados de uma avaliação existente
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- 
+                    
+                    INTRODUCAO
+                    1- Texto do título h1 é o mesmo do 'p' da div.breadcrumb;
+                    2- div.sumario aparece logo depois da introdução do texto 'quando houver' e serve para listar todos os subtítulos da página definidos pela tag 'h2';
+                    3- toda tag 'h2' receberá esta sintaxe:
+                    '<h2 id="subTituloX">Texto aqui</h2>'
+                    É necessário adicionar um número identificador;
+
+                     -->
+
+                    <article class="contentMain row">
+                        <h1>
+                            Acessar resultados de uma avaliação existente
+                        </h1>
+                        <p>Ao entrar no Catme é exibida a lista de pesquisas criadas. As colunas Start, End e &#37; Comp. permitem acompanhar o status de cada pesquisa.</p>
+                        <p>Exemplo de visualização da lista de pesquisas em <time datetime="2013-09-04">04/09/2013</time></p>
+
+                        <div class="sumario row">
+                            <h3 id="sumarioAncora">Sumário</h3>
+                        </div>
+
+                        <!--
+                        
+                        IMAGENS E BOX DE TEXTO
+                        1- Alinhamento das imgs adicionar as classes: imgLeft ou imgRight. O comportamenteo padrão é centralizado;
+                        2- Adicionar um id para cada box.
+                        REGRAS:
+                        - nome pasta assunto. ex: Bb, Catme, Casos, Clickers +
+                        - nome da categoria [se houver]. ex: materiais, avaliação, trabalhos +
+                        - nome do manual: as duas palavras iniciais. ex: criar pesquisa, associar rubric +
+                        - numero identificador sequencial.
+
+                        MODELO: BbMateriaisCarregarMateriais1
+
+                        3- No CSS vc controla a posição de cada um. Há + de 1 media queries para adaptar!;
+                        4- A classe 'boxDestaque' é o padrão. Para box com informações adicionais em fundo vermelho usar a classe 'boxDestaqueAdicional';
+                        5- Após cada div.imageContainer inserir a div.respiro para aplicar uma margem entre eles. Insira um valor de margin-top no próprio html, visto que há inúmeras necessidades de tamanhos de margin;
+
+                        -->
+
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Catme/analisar-os-resultados/acessar-resultados-de-uma-avaliacao-existente/step1.png" alt="" class="">
+                            <!-- <div class="boxDestaque" id="CatmeAnalisarAcessarRes1">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae culpa ipsam ipsa.</p>
+                            </div> -->
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <!-- 
+                        
+                        ÂNCORAS [VOLTAR AO SUMÁRIO]
+                        1- Adicionar a div.row vazia antes de cada subtítulo ('h2'). Ela será respónsável também de inserir a âncora para retornar ao sumário lá em cima;
+                        2- a div#ancoraSaibaMais fica após o fechamento desta tag 'article'. Ela é por padrão fixa em todos os manuais. Em situações em que o manual não tiver 'Manuais relacionados' e 'Manuais Complementares' esta div desaparece;
+                        3- Depois da tag section.saibaMais há a única âncora da página que não recebe condicionais;
+
+                        -->
+
+                        <section class="row fix listagemAlunos">
+                            <div class="c2"><img src="../../../../html-TAI/img/Catme/analisar-os-resultados/acessar-resultados-de-uma-avaliacao-existente/step1a.png" alt="" class="imgRight recuoList"></div>
+                            <div class="c10">
+                                <p>A dois dias do término da pesquisa nenhum aluno iniciou a avaliação (&#37; <strong>Comp</strong>.  é 0&#37;). É possível enviar um lembrete aos alunos em <strong>Send Reminder</strong>.</p>
+                            </div>
+                        </section>
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+
+                        <section class="row fix listagemAlunos">
+                            <div class="c2"><img src="../../../../html-TAI/img/Catme/analisar-os-resultados/acessar-resultados-de-uma-avaliacao-existente/step1b.png" alt="" class="imgRight recuoList"></div>
+                            <div class="c10">
+                                <p>O prazo para realização da pesquisa chegou ao fim (<time datetime="2013-08-06">06/08/2013</time>), mas não houve participação dos alunos (&#37;  Comp.  é 0&#37; ).</p>
+                            </div>
+                        </section>
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+
+                        <section class="row fix listagemAlunos">
+                            <div class="c2"><img src="../../../../html-TAI/img/Catme/analisar-os-resultados/acessar-resultados-de-uma-avaliacao-existente/step1c.png" alt="" class="imgRight recuoList"></div>
+                            <div class="c10">
+                                <p>A pesquisa está finalizada e o resultado foi divulgado (<strong>End</strong> é <strong>Released</strong>). 87&#37; dos alunos responderam à pesquisa.</p>
+                            </div>
+                        </section>
+                        
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+
+                        <section class="row fix listagemAlunos">
+                            <div class="c2"><img src="../../../../html-TAI/img/Catme/analisar-os-resultados/acessar-resultados-de-uma-avaliacao-existente/step1d.png" alt="" class="imgRight recuoList"></div>
+                            <div class="c10">
+                                <p>O prazo para realização da pesquisa chegou ao fim, mas o resultado não foi divulgado. 66&#37; dos alunos responderam à pesquisa.</p>
+                            </div>
+                        </section>
+                        
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+                        <div class="boxURLCatme boxURLListExistente">
+                            <p>Para visualizar os resultados de uma determinada pesquisa clique em <strong>View Results</strong>.</p>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+
+                        <p>O resultado da pesquisa apresenta uma tabela com o resumo das avaliações. São identificados:</p>
+                        <ul>
+                            <li>Aluno e equipe a qual pertence.</li>
+                            <li>Médias para cada um dos critérios avaliados (Ex.: Contributing to the Team's Work, Interacting with Teammates, Keeping the Team on Track etc.</li>
+                            <li>Contribuição média de determinado aluno em relação aos outros membros da equipe (classificação média do aluno dividida pela média geral para todos os membros da equipe). São calculados dois valores de "fator de ajuste": um considerando as autoavaliações e outro, não.</li>
+                        </ul>
+
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Catme/analisar-os-resultados/acessar-resultados-de-uma-avaliacao-existente/step2.png" alt="" class="">
+                            <div class="boxDestaque" id="CatmeAnalisarAcessarRes2">
+                                <p>A opção <strong>Enabled pop-up texts</strong> permite visualizar comentários feitos pelos alunos e informações importantes sobre a equipe ao passar o mouse sobre os dados da tabela.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Catme/analisar-os-resultados/acessar-resultados-de-uma-avaliacao-existente/step3.png" alt="" class="">
+                            <div class="boxDestaque" id="CatmeAnalisarAcessarRes3">
+                                <p>A coluna <strong>Note</strong> indica "<a href="#condExcepcinais">Condições excepcionais</a>" que são depreendidas a partir do confronto entre a nota da autoavaliação e as notas atribuídas pelos demais integrantes da equipe.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:60px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Catme/analisar-os-resultados/acessar-resultados-de-uma-avaliacao-existente/step4.png" alt="" class="imgRight">
+                            <div class="boxDestaque" id="CatmeAnalisarAcessarRes4">
+                                <p>Para liberar o resultado da atividade – desde que o prazo já tenha chegado ao fim – escolha na lista suspensa quem terá acesso aos dados e clique em <strong>Release</strong>.</p>
+                                <p>Um e-mail será enviado aos usuários selecionados.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:80px"></div>
+                        
+                        <p id="condExcepcinais">Existem sete "Condições excepcionais" que podem ser indicadas na coluna <strong>Note</strong>.</p>
+
+                        <div class="imageContainer row">
+                            <!-- tabela -->
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tableAvalExistente">
+                                <tr>
+                                    <th scope="col">Condition</th>
+                                    <th scope="col">Explanation</th>
+                                </tr>
+                                <tr>
+                                    <td valign="top"> 
+                                    <strong>Manipulator</strong> <br>(Manip) <br> <br>
+                                    <img src="../../../../html-TAI/img/Catme/analisar-os-resultados/acessar-resultados-de-uma-avaliacao-existente/step4a.png" alt="" class="imgLeft">
+                                    </td>
+                                    <td>
+                                    One of the students on the team appears to be trying to "skew the curve" by giving themselves high ratings while rating the other team members poorly (it's possible that the student honestly believes that they were a star performer and the other team members failed to contribute). Strictly speaking, the student has to have given themselves an overall rating of 4 or higher while rating all of the other members on their team at least two points below this rating. The "Manipulator" condition is one that can cause erroneous "Adjustment Factor" values and will result in the "Adjustment Factor" column being highlighted.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top">
+                                    <strong>Underconfident</strong> <br>(Under)<br>
+                                    </td>
+                                    <td>
+                                    The overall team rating for this student is greater than 3, but the student rated themselves at least a point lower than this value. This would indicate that the student is "underconfident" or too critical of their own contributions.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top">
+                                    <strong>Overconfiden</strong> <br>(Over)<br>
+                                    </td>
+                                    <td>
+                                    This is essentially the opposite of the "Underconfident" situation described above. The overall rating for the student is less than 3, but the student rated themselves a full point or more higher than their average rating. Possibly the student contributed but managed to alienate the other team members, or more likely they tend to overstate their own contributions.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top">
+                                    <strong>High Performer</strong> <br>(High)<br>
+                                    </td>
+                                    <td>
+                                    The student received an average rating better than 3.5 and their rating was more than half a point higher than the overall average for the team as a whole. Clearly this student was an exceptional contributor to this team's work.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top">
+                                    <strong>Low Performer</strong> <br>(Low)<br>
+                                    </td>
+                                    <td>
+                                    This student did not contribute greatly to the team's success-- their average overall rating is less than 2.5. This is difficult to achieve without significant lack of effort.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top">
+                                    <strong>Cliques</strong> <br>(Cliq)<br> <br>
+                                    <img src="../../../../html-TAI/img/Catme/analisar-os-resultados/acessar-resultados-de-uma-avaliacao-existente/step4a.png" alt="" class="imgLeft">
+                                    </td>
+                                    <td>
+                                    None of the other conditions described above apply, but there is still significant disagreement between the ratings from various team members. "Significant disagreement" here is defined as the sum of the standard deviations for the ratings in each behavioral category being greater than the total number of behaviors surveyed (typically 5). When this occurs, it usually means that the team has split into multiple non-cooperating groups-- hence "Cliques". This is another situation that can lead to erroneous "Adjustment Factor" values, and so the "Adjustment Factor" column will be highlighted in this case.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top">
+                                    <strong>Conflit</strong> <br>(Conf)<br> <br>
+                                    <img src="../../../../html-TAI/img/Catme/analisar-os-resultados/acessar-resultados-de-uma-avaliacao-existente/step4a.png" alt="" class="imgLeft">
+                                    </td>
+                                    <td>
+                                    This condition is best summarized as "somebody didn't get along". Specifically, this student rated another team member at 2 or less, while the median rating for that student from the other team members is 3 or more. Note that the system checks for the "Clique" condition described above before evaluating the data for potential personality conflicts. For the "Clique" condition not to be flagged there must be significant agreement among the other students' scores, so this would appear to be an individual personality conflict. This is another condition that can result in erroneous "Adjustment Factor" values, and so the "Adjustment Factor" column will be highlighted in this case.
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="boxDestaqueAdicional" id="CatmeAnalisarAcessarRes5">
+                                <p>As situações marcadas com <img src="../../../../html-TAI/img/Catme/analisar-os-resultados/acessar-resultados-de-uma-avaliacao-existente/step4a.png" alt="" class="icos">podem levar a valores inconsistentes. Assim, as colunas "Adjustment Factor" ficarão destacadas.</p>
+                                <p>Para mais informações acesse: <a href="https://www.catme.org/faculty/help#ExceptionManip" target="_blank">https://www.catme.org/faculty/help#ExceptionManip</a></p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:120px"></div>
+
+                        <p>Para cada uma das "Condições excepcionais" existe uma mensagem exibida ao aluno.</p>
+
+                        <div class="imageContainer row">
+                            <!-- tabela -->
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tableAvalExistente">
+                                <tr>
+                                    <th scope="col">Condition</th>
+                                    <th scope="col">Student Message</th>
+                                </tr>
+                                <tr>
+                                    <td valign="top"> 
+                                    <strong>Manipulator</strong> <br>(Manip) <br>
+                                    </td>
+                                    <td>
+                                    Your self-evaluation indicates you made the primary contribution to the project with little value added by your teammates. The ratings from your teammates did not concur with your assessment. Your instructor may require additional information to clarify what happened in your team.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top">
+                                    <strong>Underconfident</strong> <br>(Under)<br>
+                                    </td>
+                                    <td>
+                                    Your self-ratings were significantly lower than your teammates. ratings of your contributions to the team. The members of your team have indicated that you were a highly effective team member. Please try not to minimize the value of your contributions to the team.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top">
+                                    <strong>Overconfiden</strong> <br>(Over)<br>
+                                    </td>
+                                    <td>
+                                    Your self-ratings were significantly higher than your teammates. ratings of your contributions to the team. The members of your team indicated that your contributions to the team were below expectations. This report gives you details about how the members of your team perceived your team contributions in five key areas. Please use this information to identify problem areas in order to contribute effectively in future teamwork situations. Please contact your course instructor if you need assistance or if you believe that your ratings were inappropriate.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top">
+                                    <strong>High Performer</strong> <br>(High)<br>
+                                    </td>
+                                    <td>
+                                    Congratulations! The members of your team have indicated that you were a highly effective team member. Keep up the good work!
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top">
+                                    <strong>Low Performer</strong> <br>(Low)<br>
+                                    </td>
+                                    <td>
+                                    The members of your team indicated that your contributions to the team were below expectations. This report gives you details about how the members of your team perceived your team contributions in five key areas. Please use this information to identify problem areas in order to contribute effectively in future teamwork situations. Please contact your course instructor if you need assistance or if you believe that your ratings were inappropriate.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top">
+                                    <strong>Cliques</strong> <br>(Cliq)<br>
+                                    </td>
+                                    <td>
+                                    There was considerable disagreement among your teammates as to which team members were most effective during team assignments. Your instructor may require additional information to clarify what happened in your team.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top">
+                                    <strong>Conflit</strong> <br>(Conf)<br>
+                                    </td>
+                                    <td>
+                                    Your evaluation indicates that <span class="enfaseBox">&#60;other student&#62;</span> contributed very little to the project. This is not consistent with the assessment of the rest of the team. Your instructor may require additional information to clarify what happened in your team.
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="boxDestaqueAdicional" id="CatmeAnalisarAcessarRes6">
+                                <p>Na mensagem do aluno sob a condição "Conflict" será exibido o nome do aluno em questão, no campo marcado como <span class="enfaseBox">&#60;other student&#62;</span>.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:110px"></div>
+
+                        <section class="row fix">
+                            <div class="c5">
+                                <p><strong>View Raw Data</strong> exibe todas as notas atribuídas, por aluno e por critério. Ao final da tabela são exibidos os comentários consolidados escritos pelos alunos.</p>    
+                            </div>
+                            <div class="c7">
+                                <img src="../../../../html-TAI/img/Catme/analisar-os-resultados/acessar-resultados-de-uma-avaliacao-existente/step5.png" alt="" class="">    
+                            </div>
+                        </section>
+
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Catme/analisar-os-resultados/acessar-resultados-de-uma-avaliacao-existente/step6.png" alt="" class="">
+                            <div class="boxDestaqueAdicional" id="CatmeAnalisarAcessarRes7">
+                                <p>No Exemplo, nota-se que ninguém do Grupo 01 avaliou o aluno "caiovccc" (Rater 1), nem ele próprio, uma vez que a coluna "Rater 1" está vazia.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="margemParaImagem" style="margin-top:60px"></div>
+                        
+                        <!--
+                        ##############################################
+                        Este conteúdo era um html separado.
+                        Foi adaptado para unificar o conteúdo do manual.
+                        -->
+
+                        <h2 id="resultados-no-excel">
+                            Trabalhar resultados no Excel
+                        </h2>
+                        <p>Caso seja necessário trabalhar sobre os dados brutos do Catme para realização de outros cálculos ou mesmo para geração de gráficos, as tabelas poderão ser exportadas para uma planilha Excel.</p>
+
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Catme/analisar-os-resultados/trabalhar-resultados-no-excel/step1.png" alt="" class="">
+                            <div class="boxDestaque" id="CatmeAnalisarResTrabExcel1">
+                                <p>Escolha o local em que o relatório será salvo. Será gerado um arquivo no formato CSV.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Catme/analisar-os-resultados/trabalhar-resultados-no-excel/step2.png" alt="" class="">
+                            <div class="boxDestaque" id="CatmeAnalisarResTrabExcel2">
+                                <p>Abra o arquivo, selecione a primeira coluna e, na aba <strong>Dados</strong>, escolha a opção <strong>Texto para colunas</strong>.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Catme/analisar-os-resultados/trabalhar-resultados-no-excel/step3.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="CatmeAnalisarResTrabExcel3">
+                                <p>Siga os passos indicados e, ao finalizar, os dados estarão disponíveis para análise no Excel.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Catme/analisar-os-resultados/trabalhar-resultados-no-excel/step4.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="CatmeAnalisarResTrabExcel4">
+                                <p>Outra opção é copiados os dados do Catme e colá-los diretamente em uma planilha Excel.</p>
+                                <p>A seleção deve começar um parágrafo antes do início da tabela.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:60px"></div>
+
+                    </article>
+
+                    <!-- Devido aos poucos itens do 'Saiba Mais'
+                    <div id="ancoraSaibaMais" class="voltarSumario fix">
+                        <a href="#pesquisa">Início</a>
+                    </div> -->
+                    
+                    <!-- inicio do box Saiba mais -->
+                    <section class="saibaMais row fix">
+                        <h2 id="saiba-mais" class="ancora">Saiba Mais</h2>
+                        
+                        <h4 id="relacionado">Manuais relacionados</h4>
+                        <ul  ng-controller="manuaisRelacionados">
+                            <!-- class="default"  -->
+                            <li ng-repeat="item in Acessar_resultados_de_uma_avaliacao_existente" class="ng-class: item.tipoIcone">
+                                <div><a href="{{item.Link}}">{{item.manual}}</a></div>
+                            </li>
+                        </ul>
+                        
+                        <h4 id="complementar">Materiais complementares</h4>
+                        <ul ng-controller="materiaisComplementares">
+                            <li ng-repeat="item in Acessar_resultados_de_uma_avaliacao_existente" class="ng-class: item.tipoIcone">
+                                <div><a href="{{item.Link}}" target="_blank">{{item.manual}}</a></div>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <div class="voltarSumario fix">
+                        <a href="#pesquisa">Início</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="fix respiro"></div>
+
+<!-- Scripts: plugins -->
+<script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
+<script src="../../../../html-TAI/js/libs/angular.js"></script>
+<script src="../../../../html-TAI/js/libs/jquery.placeholder.js"></script>
+
+<!-- Scripts: controllers do AngularJs -->
+<script src="../../../../html-TAI/js/listaCompletaManual.js"></script>
+<script src="../../../../html-TAI/js/manuaisRelacionados.js"></script>
+<script src="../../../../html-TAI/js/materiaisComplementares.js"></script>
+
+<!-- Scripts: do projeto -->
+<script src="../../../../html-TAI/js/main.js"></script>
+</body>
+</html>

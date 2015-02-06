@@ -2,26 +2,23 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 // Vars
-$font: "tahoma";
+// $font: "tahoma";
 
-@mixin font($fstyle, $fsize) {
-    font: $fstyle $fsize $font;
-}
+// @mixin font($fstyle, $fsize) {
+//     font: $fstyle $fsize $font;
+// }
 
 // Source
-html,
 button,
 input,
 select,
 textarea {
     color: #222;
-    @include font(normal, 12px);
+    font-size: 100%;
     margin: 0;
     padding: 0;
 }
 body {
-    @include font(normal, 12px);
-    line-height: 1.6875;
     margin: 0;
     padding: 0;
 }

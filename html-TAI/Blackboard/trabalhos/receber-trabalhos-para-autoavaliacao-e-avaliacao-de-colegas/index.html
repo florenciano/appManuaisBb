@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br" ng-app="manuaisBB">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Tecnologias de Aprendizagem - Manuais de utilização</title>
+<meta name="viewport" content="width=device-width">
+<meta name="msapplication-TileImage" content="tile.png"/>
+<meta name="msapplication-TileColor" content="#d02034"/>
+
+<link rel="stylesheet" type="text/css" media="print" href="../../../css/print.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../../../css/main.css">
+
+<!--[if IE]><link rel="shortcut icon" href="favicon.ico"><![endif]-->
+<link rel="icon" href="../../../favicon-16.png" sizes="16x16">
+<link rel="icon" href="../../../favicon-32.png" sizes="32x32">
+<link rel="icon" href="../../../favicon-48.png" sizes="48x48">
+<link rel="icon" href="../../../favicon-64.png" sizes="64x64">
+<link rel="icon" href="../../../favicon-128.png" sizes="128x128">
+
+<!--
+1- iPad com Retina Display;
+2- iPhone com Retina Display;
+3- Primeira e segunda geração de iPad;
+4- Versões antigas de iPhone, iPod Touch e Android 2.2+
+-->
+<link rel="apple-touch-icon" sizes="144x144" href="../../../apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../../apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../../apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+
+<!--[if IE]>
+    <link href="../../../css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script>window.html5 || document.write('<script src="../../../js/libs/html5shiv.js"><\/script>')</script>
+<![endif]-->
+
+</head>
+<body>
+    <!-- alert para visualização abaixo de 768px -->
+    <div class="alert alert-warning alert-dismissable">
+        <button type="button" class="close">&times;</button>
+        Melhor visualizado com resolução de 768px de largura ou superior.
+    </div>
+
+    <div class="wrapper">
+        
+        <header id="top" class="wfull fix">
+            <div class="logo c4">
+                <img src="../../../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
+            </div>
+            <div class="titleHeader c8">
+                <p class="title">Tecnologias de Aprendizagem</p>
+                <p class="description">Manuais de utilização</p>
+            </div>
+        </header>
+
+        <div id="main" role="main" class="fix wfull">
+            <div class="containerMain fix row">
+
+                <!-- início da área da busca -->
+                <section class="buscaMain c4" ng-controller="listaMenu">
+                    <div class="inputSearch">
+                        <form id="busca">
+                            <label for="pesquisa"></label>
+                            <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Busca por título ou palavra-chave" ng-model="searchText">
+                        </form>
+                    </div>
+
+                    <nav role="navigation" class="navigationMain">
+                        <h5 class="icoBlackboard">Blackboard</h5>
+
+                        <ol class="noCategory" ng-repeat="item in BbConhecerAmbiente | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>    
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbMateriais | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbComunicacaoInteracao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbTrabalhos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist ng-class: addMark()" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbGrupos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbTestesPesquisas | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbRubrics | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbAvaliacao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbGeral| filter: {manual:searchText}">
+                        <li class="nameCategory">
+                            <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            
+                        </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbCalendario | filter: {manual:searchText}">
+                        <li class="nameCategory">
+                            <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            
+                        </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <h5 class="icoCatme">Catme</h5>
+                        <ol class="noCategory" ng-repeat="item in catmeSobreFerramenta | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in catmeAplicarPesquisaAval | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in catmeAnalisarResultados | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <!-- <h5 class="icoClickers">Votadores eletrônicos (clickers)</h5>
+                        <ol class="noCategory" ng-repeat="item in clickerSobreFerramenta | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerUtilizarVotadores | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerPrepararSlides | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerIdentificarVoto | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerPromoverVotacao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerAnalisarResultados | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol> -->
+                        
+                        <h5 class="icoCursosOnline">Casos, Simuladores e Cursos online</h5>
+                        <ol class="noCategory" ng-repeat="item in SobreOsRecursos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in ConsultarRecursosDisponiveis | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in UtilizarRecursos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                         <div class="faqBusca icoFaq">
+                            <h5>
+                            <ol class="noCategory">
+                                <li><a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html-TAI/faq/index.html" class="">FAQ</a></li>
+                            </ol>
+                            </h5>
+                        </div>
+                        <div class="outros">
+                            <h6>
+                                <a href="mailto:tai@insper.edu.br?subject=TAI%20-%20Manuais%20de%20utiliza&#231;&#227;o">Não encontrou o que queria?</a>
+                            </h6>
+                        </div>
+                    </nav>
+                </section>
+
+                <!-- início do conteúdo do manual -->
+                <section class="mainContent c8">
+                    <section class="headerContent row">
+                        <div class="cabecalho fix">
+                            <p>
+                                <!-- adicionar a data da produção do material -->
+                                <span><strong>Atualizado: </strong>11/07/2014</span>
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="breadcrumb">
+                            <p>
+                                <span class="nameCategory">Blackboard </span>
+                                <span>&#62; </span>
+                                Receber trabalhos para autoavaliação e avaliação de colegas
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- 
+                    
+                    INTRODUCAO
+                    1- Texto do título h1 é o mesmo do 'p' da div.breadcrumb;
+                    2- div.sumario aparece logo depois da introdução do texto 'quando houver' e serve para listar todos os subtítulos da página definidos pela tag 'h2';
+                    3- toda tag 'h2' receberá esta sintaxe:
+                    '<h2 id="subTituloX">Texto aqui</h2>'
+                    É necessário adicionar um número identificador;
+
+                     -->
+
+                    <article class="contentMain row">
+                        <h1>Receber trabalhos para autoavaliação e avaliação de colegas</h1>
+                        <p>A ferramenta <strong>Autoavaliação e avaliação de colegas</strong>  possibilita que os alunos submetam trabalhos e, de acordo com critérios predefinidos, avaliem os trabalhos um dos outros. A avaliação pode ser anônima ou identificada.</p>
+
+                        <div class="sumario row">
+                            <h3 id="sumarioAncora">Sumário</h3>
+                        </div>
+
+                        <!--
+                        
+                        IMAGENS E BOX DE TEXTO
+                        1- Alinhamento das imgs adicionar as classes: imgLeft ou imgRight. O comportamenteo padrão é centralizado;
+                        2- Adicionar um id para cada box.
+                        REGRAS:
+                        - nome pasta assunto. ex: Bb, Catme, Casos, Clickers +
+                        - nome da categoria [se houver]. ex: materiais, avaliação, trabalhos +
+                        - nome do manual: as duas palavras iniciais. ex: criar pesquisa, associar rubric +
+                        - numero identificador sequencial.
+
+                        MODELO: BbMateriaisCarregarMateriais1
+
+                        3- No CSS vc controla a posição de cada um. Há + de 1 media queries para adaptar!;
+                        4- A classe 'boxDestaque' é o padrão. Para box com informações adicionais em fundo vermelho usar a classe 'boxDestaqueAdicional';
+                        5- Após cada div.imageContainer inserir a div.respiro para aplicar uma margem entre eles. Insira um valor de margin-top no próprio html, visto que há inúmeras necessidades de tamanhos de margin;
+
+                        -->
+
+                        <h2 id="subTitulo1">Funcionamento da ferramenta</h2>
+                        <p>Uma vez disponível aos alunos, a atividade possui dois grandes momentos: primeiro, os alunos submetem seus trabalhos; na sequência, ocorre o período de avaliação. Acompanhe o fluxo complexo na ilustração.</p>
+
+                        <div class="imageContainer row" style="margin:0!important;">
+                            <img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step1-1.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao0">
+                                <p>Professor cria a atividade e define enunciado, períodos de entrega e correção e quais serão os critérios de avaliação.</p>
+                            </div>
+                        </div>
+                        <div class="imageContainer row" style="margin:0!important;">
+                            <img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step1-2.png" alt="" class="imgRight">
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao1">
+                                <p>Durante período de entrega, alunos desenvolvem a atividade  individualmente e a submetem no ambiente virtual.</p>
+                            </div>
+                        </div>
+                        <div class="imageContainer row" style="margin:0!important;">
+                            <img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step1-3.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao2">
+                                <p>Ambiente  distribui aleatoriamente os trabalhos entre os alunos, conforme parâmetros preestabelecidos.</p>
+                            </div>
+                        </div>
+                        <div class="imageContainer row" style="margin:0!important;">
+                            <img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step1-4.png" alt="" class="imgRight">
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao3">
+                                <p>Durante período de correção, alunos avaliam o trabalho de colegas, conforme critérios de avaliação preestabelecidos.</p>
+                            </div>
+                        </div>
+                        <div class="imageContainer row" style="margin:0!important;">
+                            <img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step1-5.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao4">
+                                <p>Professor confere as correções feitas pelos alunos e libera os resultados.</p>
+                            </div>
+                        </div>
+                        <div class="imageContainer row" style="margin:0!important;">
+                            <img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step1-6.png" alt="" class="imgRight">
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao5">
+                                <p>Ao final, alunos recebem notas e feedbacks de seus trabalhos.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <h2 id="subTitulo2">Restrições da ferramenta</h2>
+                        <p>Antes de usar a ferramenta, é necessário ter ciência de algumas restrições:</p>
+                        <h4 class="subTopicos">Só é possível criar atividades que envolvam a turma toda.</h4>
+                        <p>Não é possível criar atividades envolvendo apenas alguns alunos ou mesmo grupos específicos de alunos. No período de avaliação, o sistema faz o sorteio e distribuição dos trabalhos para correção considerando todos os alunos inscritos na disciplina.</p>
+                        <h4 class="subTopicos">Se algum aluno não submeter o trabalho no período de entrega, ainda assim entrará no sorteio e distribuição de trabalhos para correção.</h4>
+                        <p>Pode acontecer de alunos receberem para corrigir o trabalho “vazio” de quem não fez. Além disso, quem não fez a atividade receberá trabalhos para corrigir e, se não o fizer, deixará os colegas que seriam avaliados sem um dos feedbacks.</p>
+                        <h4 class="subTopicos">Não é possível modificar os prazos após sorteio e distribuição dos trabalhos.</h4>
+                        <p>Uma vez que o sistema sorteou e distribuiu os trabalhos para correção, não é possível alterar o prazo de entrega. Assim, se os alunos não tiverem entregue o trabalho no prazo, não terão uma segunda chance. Apesar disso, os trabalhos não entregues entrarão no sorteio para que os colegas o avaliem com nota zero.</p>
+                        <h4 class="subTopicos">Os critérios de avaliação permitem nota parcial, mas não admitem valores decimais.</h4>
+                        <p>O sistema só admite atribuição de notas inteiras na avaliação. Por exemplo: se determinado critério vale até 2 pontos e admite nota parcial, os alunos poderão atribuir as notas <span class="enfaseBox">0</span>, <span class="enfaseBox">1</span> ou <span class="enfaseBox">2</span>, mas não poderão atribuir notas quebradas, como <span class="enfaseBox">1,5</span>.</p>
+                        <h4 class="subTopicos">Os trabalhos submetidos não passam por verificação de plágio.</h4>
+                        <p>Para verificar eventuais plágios nos trabalhos enviados pelos alunos é necessário analisar os arquivos no <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html-TAI/Blackboard/trabalhos/submeter-arquivos-para-verificacao-de-plagio-ou-criar-base-de-comparacao/">SafeAssign</a>.</p>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <h2 id="subTitulo3">Criar atividade</h2>
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step2.png" alt="" class="imgLeft">
+                        </div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step3.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao6">
+                                <p>Informe nome, instruções e período em que os alunos poderão submeter seus trabalhos.</p>
+                            </div>
+                        </div>
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step4.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao7">
+                                <p>Informe período em que os alunos farão a avaliação de trabalhos dos colegas.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:80px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step5.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao8">
+                                <div class="row fltLeft">
+                                    <div class="c12"style="margin-bottom:5px">
+                                        <div class="c3">
+                                            <img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step8a.png" alt="">
+                                        </div>
+                                        <div class="c9">
+                                            <p>Se “sim”, aluno não sabe de quem é o trabalho que recebeu para avaliar, nem quem o avaliou.</p> 
+                                        </div>    
+                                    </div>
+
+                                    <div class="c12"style="margin-bottom:5px">
+                                        <div class="c3">
+                                            <img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step18b.png" alt="">
+                                        </div>
+                                        <div class="c9">
+                                            <p>Se “sim”, alunos também avaliarão seus próprios trabalhos.</p> 
+                                        </div>    
+                                    </div>
+
+                                    <div class="c12"style="margin-bottom:5px">
+                                        <div class="c3">
+                                            <img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step18c.png" alt="">
+                                        </div>
+                                        <div class="c9">
+                                            <p>Se “sim”, após validação do professor, alunos recebem as notas/feedbacks de seus pares.</p> 
+                                        </div>    
+                                    </div>
+
+                                    <div class="c12"style="margin-bottom:5px">
+                                        <div class="c3">
+                                            <img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step5d.png" alt="">
+                                        </div>
+                                        <div class="c9">
+                                            <p>Quantos trabalhos cada aluno receberá para avaliar, (excluindo o seu próprio, em caso de autoavaliação).</p> 
+                                        </div>    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step6.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao9">
+                                <p>Configure as regras de disponibilização da atividade para os alunos e confirme.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <h2 id="subTitulo3">Criar pergunta</h2>
+                        <p>Uma vez que a atividade é criada é preciso criar uma ou mais perguntas para que os alunos desenvolvam a atividade.</p>
+                        <p>Cada pergunta equivale a uma “entrega” que o aluno deve fazer, seja em forma de texto digitado no próprio ambiente, seja em forma de arquivo anexo.</p>
+                        <p>Se você deseja que os alunos entreguem um único arquivo, basta criar uma única pergunta, mesmo que o enunciado possua mais de um tópico. Se você deseja que os alunos apresentem diversas respostas, é necessário criar mais de uma pergunta.</p>
+
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step7.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao10">
+                                <p>Em <strong>Texto da pergunta</strong>, insira o enunciado que os alunos enxergarão no momento que estiverem submetendo a resposta/arquivo.</p>
+                            </div>
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao11">
+                                <p>Em <strong>Resposta do modelo</strong>, insira a resposta esperada/considerada correta.</p>
+                                <p>Os alunos a enxergarão apenas no momento em que estiverem corrigindo atividades.</p>
+                            </div>
+                            <div class="boxDestaqueAdicional" id="BbTrabalhosRecTrabParaAutoavaliacao12">
+                                <p>O campo <strong>Resposta do modelo</strong> não é obrigatório. A depender do caso, você pode deixá-lo vazio, explicitando nos passos seguintes os critérios de avaliação.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="height:40px"></div>
+
+                        <h2 id="subtitulo4">Adicionar critérios de correção</h2>
+                        <p>Após criar uma ou mais perguntas é necessário informar seu critério de correção. É com base nos critérios que os alunos realizarão a autoavaliação e avaliação dos colegas.</p>
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step8.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao13">
+                                <p>Ao clicar em <strong>Critérios</strong>, você poderá criar um novo critério.</p>
+                                <p>Se preferir, você também pode criar critério de contagem de palavras <span class="enfaseBox">A</span> ou reaproveitar modelos de critérios <span class="enfaseBox">B</span>.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step9.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao14">
+                                <p>Descreva o critério.</p>
+                            </div>
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao15">
+                                <p>Informe o total de pontos e escolha o modelo de atribuição:</p>
+                                <ul>
+                                    <li>Tudo ou nada: não admite notas parciais. Ex.: se pontos possíveis for <strong>2</strong>, aluno só pode atribuir <strong>0</strong> ou <strong>2</strong>.</li>
+                                    <li>Crédito parcial: admite notas parciais (não decimais). Ex.: se pontos possíveis for <strong>2</strong>, aluno pode atribuir <strong>0</strong>, <strong>1</strong> ou <strong>2</strong>.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:80px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step10.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao16">
+                                <p>Ao permitir comentários, os alunos podem dar feedback por escrito aos seus colegas no momento da correção.</p>
+                            </div>
+                            <div class="boxDestaqueAdicional" id="BbTrabalhosRecTrabParaAutoavaliacao17">
+                                <p>Atenção! Caso a atividade entre na ponderação da média da disciplina, <strong>a soma de todos os critérios criados deve ser igual a 10</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:120px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step11.png" alt="" class="">
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao18">
+                                <p>Repita o procedimento para cada critério que desejar criar.</p>
+                                <p>Ao final, confira a soma de todos os critérios e, se for o caso, <a href="#editarPergunta">edite-os</a>.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <h2 id="subtitulo5">Editar atividade</h2>
+                        <p>Ao finalizar a configuração de uma atividade (ou a qualquer momento que acessá-la após a criação), estarão disponíveis três opções:</p>
+
+                        <div class="row fltLeft">
+                            <div class="c12"style="margin-bottom:5px">
+                                <div class="c5">
+                                    <img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step12.png" alt="">
+                                </div>
+                                <div class="c7">
+                                    <ul>
+                                        <li style="margin-bottom:1em;"><span class="enfaseBox">A</span>&nbsp;Permite consultar, editar ou excluir alguma informação da tela de avaliação, como perguntas e critérios.</li>
+                                        <li style="margin-bottom:1em;"><span class="enfaseBox">B</span>&nbsp;Permite consultar ou editar as propriedades da atividade, como as datas e o número de trabalhos a serem avaliados por aluno.</li>
+                                        <li><span class="enfaseBox">C</span>&nbsp;Salva a atividade para reaproveitamento posterior.</li>
+                                    </ul>
+                                </div>    
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <h4 class="subtopicos">Editar ou excluir pergunta</h4>
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step13.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao19">
+                                <p>Clique em <strong>Modificar</strong> para acessar a tela de <a href="#subTitulo3">criação de pergunta</a> e editá-la.</p>
+                                <p>Clique em <strong>Remover</strong> para excluir a pergunta.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <h4 class="subtopicos" id="editarPergunta">Editar ou excluir critérios da pergunta</h4>
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step14.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao20">
+                                <p>Clique em <strong>Modificar</strong> para acessar a mesma tela de <a href="#subtitulo4">criação do critério</a> e editá-lo.</p>
+                                <p>Clique em <strong>Remover</strong> para para excluir o critério.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <h2 id="subtitulo6">Reaproveitar atividade</h2>
+                        <p>Para salvar uma atividade para reaproveitá-la em outra disciplina:</p>
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step15.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao21">
+                                <p>Ao clicar em <strong>Exportar avaliação</strong>, um arquivo .zip será carregado em seu computador. É esse o arquivo que você carregará na disciplina de destino.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <h4 class="subtopicos">Para carregar uma atividade já salva</h4>
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step16.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbTrabalhosRecTrabParaAutoavaliacao22">
+                                <p>Inicie a <a href="#subTitulo3">criação de atividade,</a> escolha <strong>Importar</strong>, localize o arquivo .zip da atividade que será reaproveitada e informe um nome para a atividade.</p>
+                            </div>
+                            <div class="boxDestaqueAdicional" id="BbTrabalhosRecTrabParaAutoavaliacao23">
+                                <p>Ao reaproveitar uma atividade, é necessário reajustar os prazos de entrega e de correção.</p>
+                            </div>
+                        </div>
+
+                         <div class="margemParaImagem" style="margin-top:20px"></div>
+
+                        <h2 id="subtitulo7">Acompanhar andamento da atividade</h2>
+                        <p>Ao longo da atividade você pode acompanhar os envios que os alunos fizeram, as avaliações que estão fazendo uns dos outros e os resultados obtidos ao final da avaliação.</p>
+
+                        <div class="margemParaImagem" style="height:20px"></div>
+                        <h4 class="subtopicos">Visualizar envios</h4>
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step18.png" alt="" class="">
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <div class="row fltLeft">
+                            <div class="c12" style="margin-bottom:5px">
+                                <div class="c3"><img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step18a.png" alt=""></div>
+                                <div class="c9" style="padding-top:1.5em;">Abas superiores: filtros de exibição dos envios.</div>
+                            </div>
+                            <div class="c12"style="margin-bottom:5px">
+                                <div class="c3"><img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step18b.png" alt=""></div>
+                                <div class="c9" style="padding-top:1.5em;">Botão <strong>Baixar tudo</strong>: baixa todos os arquivos filtrados pelas abas superiores.</div>
+                            </div>
+                            <div class="c12"style="margin-bottom:5px">
+                                <div class="c3"><img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step18c.png" alt=""></div>
+                                <div class="c9" style="padding-top:.75em;">Colunas: exibem o status de cada aluno, bem como a relação entre perguntas respondidas/total de perguntas. Ao clicar no topo de cada coluna, os dados são exibidos em ordem crescente ou decrescente.</div>
+                            </div>
+                            <div class="c12"style="margin-bottom:5px">
+                                <div class="c3"><img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step18d.png" alt=""></div>
+                                <div class="c9">Exibir/baixar envio: por meio do botão de opções de cada aluno é possível exibir ou baixar seu envio da tentativa.</div>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="height:40px"></div>
+
+                        <h4 class="subtopicos">Visualizar avaliações</h4>
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step19.png" alt="" class="">
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <div class="row fltLeft">
+                            <div class="c12" style="margin-bottom:5px">
+                                <div class="c3"><img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step18a.png" alt=""></div>
+                                <div class="c9" style="padding-top:1.5em;">Abas superiores: filtros de exibição das avaliações.</div>
+                            </div>
+                            <div class="c12"style="margin-bottom:5px">
+                                <div class="c3"><img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step18b.png" alt=""></div>
+                                <div class="c9" style="padding-top:1.5em;">Botão <strong>Baixar tudo</strong>: baixa todos os arquivos filtrados pelas abas superiores.</div>
+                            </div>
+                            <div class="c12"style="margin-bottom:5px">
+                                <div class="c3"><img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step18c.png" alt=""></div>
+                                <div class="c9">Colunas: exibem o status da avaliação de colegas, o nome do Avaliador, a relação de colegas a serem avaliados pelo avaliador, o resultado total em porcentagem e pontos, a média e o status da autoavaliação. Ao clicar no topo de cada coluna, os dados são exibidos em ordem crescente ou decrescente.</div>
+                            </div>
+                            <div class="c12"style="margin-bottom:5px">
+                                <div class="c3"><img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step18d.png" alt=""></div>
+                                <div class="c9">Ver avaliações: por meio do botão de opções de cada avaliador é possível acessar a avaliação completa que ele fez de cada um dos avaliados, inclusive dele mesmo quando houver autoavaliação.</div>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="height:40px"></div>
+
+                        <h4 class="subtopicos">Visualizar resultados</h4>
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step20.png" alt="" class="">
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <div class="row fltLeft">
+                            <div class="c12" style="margin-bottom:5px">
+                                <div class="c3"><img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step18a.png" alt=""></div>
+                                <div class="c9" style="padding-top:.75em;">Botão <strong>Enviar resultados para a Central de Notas</strong>: envia as notas da atividade para a Central de Notas. Após transposição, se necessário, é possível alterar as notas.</div>
+                            </div>
+                            <div class="c12"style="margin-bottom:5px">
+                                <div class="c3"><img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step20b.png" alt=""></div>
+                                <div class="c9" style="padding-top:1.5em;">Botão <strong>Baixar tudo</strong>: baixa todos os arquivos filtrados pelas abas superiores.</div>
+                            </div>
+                            <div class="c12"style="margin-bottom:5px">
+                                <div class="c3"><img src="../../../../html-TAI/img/Blackboard/trabalhos/receber-trabalhos-para-autoavaliacao-e-avaliacao-de-colegas/step18c.png" alt=""></div>
+                                <div class="c9" style="padding-top:.75em;">Marcando a opção <strong>Atualizar pontos possíveis</strong>, ao enviar os resultados para a <strong>Central de notas</strong>, os “pontos possíveis” também são atualizados.</div>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="height:80px"></div>
+
+                        <!-- 
+                        
+                        ÂNCORAS [VOLTAR AO SUMÁRIO]
+                        1- Adicionar a div.row vazia antes de cada subtítulo ('h2'). Ela será respónsável também de inserir a âncora para retornar ao sumário lá em cima;
+                        2- a div#ancoraSaibaMais fica após o fechamento desta tag 'article'. Ela é por padrão fixa em todos os manuais. Em situações em que o manual não tiver 'Manuais relacionados' e 'Manuais Complementares' esta div desaparece;
+                        3- Depois da tag section.saibaMais há a única âncora da página que não recebe condicionais;
+
+                         -->
+
+                    </article>
+
+                    <!-- <div id="ancoraSaibaMais" class="voltarSumario fix">
+                        <a href="#pesquisa">Início</a>
+                    </div> -->
+                    
+                    <!-- inicio do box Saiba mais -->
+                    <section class="saibaMais row fix">
+                        <h2 id="saiba-mais" class="ancora">Saiba Mais</h2>
+                        
+                        <h4 id="relacionado">Manuais relacionados</h4>
+                        <ul  ng-controller="manuaisRelacionados">
+                            <!-- class="default"  -->
+                            <li ng-repeat="item in Receber_trabalhos_para_autoavaliacao_e_avaliacao_de_colegas" class="ng-class: item.tipoIcone">
+                                <div><a href="{{item.Link}}">{{item.manual}}</a></div>
+                            </li>
+                        </ul>
+                        
+                        <h4 id="complementar">Materiais complementares</h4>
+                        <ul ng-controller="materiaisComplementares">
+                            <li ng-repeat="item in Receber_trabalhos_para_autoavaliacao_e_avaliacao_de_colegas" class="ng-class: item.tipoIcone">
+                                <div><a href="{{item.Link}}" target="_blank">{{item.manual}}</a></div>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <div class="voltarSumario fix">
+                        <a href="#pesquisa">Início</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="fix respiro"></div>
+
+<!-- Scripts: plugins -->
+<script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
+<script src="../../../../html-TAI/js/libs/angular.js"></script>
+<script src="../../../../html-TAI/js/libs/jquery.placeholder.js"></script>
+
+<!-- Scripts: controllers do AngularJs -->
+<script src="../../../../html-TAI/js/listaCompletaManual.js"></script>
+<script src="../../../../html-TAI/js/manuaisRelacionados.js"></script>
+<script src="../../../../html-TAI/js/materiaisComplementares.js"></script>
+
+<!-- Scripts: do projeto -->
+<script src="../../../../html-TAI/js/main.js"></script>
+
+<!-- Scripts: google analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53927287-1', 'auto');
+  ga('send', 'pageview');
+  // ga('set', '&uid', {{UA-53927287-1}});
+</script>
+</body>
+</html>

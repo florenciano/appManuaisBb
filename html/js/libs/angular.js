@@ -2143,7 +2143,7 @@ function JQLite(element) {
     var div = document.createElement('div');
     // Read about the NoScope elements here:
     // http://msdn.microsoft.com/en-us/library/ms533897(VS.85).aspx
-    div.innerHTML = '<div>&#160;</div>' + element; // IE insanity to make NoScope elements work!
+    div.innerHTML = '<div> </div>' + element; // IE insanity to make NoScope elements work!
     div.removeChild(div.firstChild); // remove the superfluous div
     jqLiteAddNodes(this, div.childNodes);
     var fragment = jqLite(document.createDocumentFragment());
@@ -17471,7 +17471,7 @@ var ngClassOddDirective = classDirective('Odd', 0);
         <ol ng-init="names=['John', 'Mary', 'Cate', 'Suz']">
           <li ng-repeat="name in names">
            <span ng-class-odd="'odd'" ng-class-even="'even'">
-             {{name}} &nbsp; &nbsp; &nbsp;
+             {{name}}      
            </span>
           </li>
         </ol>

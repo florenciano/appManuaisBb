@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br" ng-app="manuaisBB">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Tecnologias de Aprendizagem - Manuais de utilização</title>
+<meta name="viewport" content="width=device-width">
+<meta name="msapplication-TileImage" content="tile.png"/>
+<meta name="msapplication-TileColor" content="#d02034"/>
+
+<link rel="stylesheet" type="text/css" media="print" href="../../../css/print.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../../../css/main.css">
+
+<!--[if IE]><link rel="shortcut icon" href="favicon.ico"><![endif]-->
+<link rel="icon" href="../../../favicon-16.png" sizes="16x16">
+<link rel="icon" href="../../../favicon-32.png" sizes="32x32">
+<link rel="icon" href="../../../favicon-48.png" sizes="48x48">
+<link rel="icon" href="../../../favicon-64.png" sizes="64x64">
+<link rel="icon" href="../../../favicon-128.png" sizes="128x128">
+
+<!--
+1- iPad com Retina Display;
+2- iPhone com Retina Display;
+3- Primeira e segunda geração de iPad;
+4- Versões antigas de iPhone, iPod Touch e Android 2.2+
+-->
+<link rel="apple-touch-icon" sizes="144x144" href="../../../apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../../apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../../apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+
+<!--[if IE]>
+    <link href="../../../css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script>window.html5 || document.write('<script src="../../../js/libs/html5shiv.js"><\/script>')</script>
+<![endif]-->
+
+</head>
+<body>
+    <!-- alert para visualização abaixo de 768px -->
+    <div class="alert alert-warning alert-dismissable">
+        <button type="button" class="close">&times;</button>
+        Melhor visualizado com resolução de 768px de largura ou superior.
+    </div>
+
+    <div class="wrapper">
+        
+        <header id="top" class="wfull fix">
+            <div class="logo c4">
+                <img src="../../../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
+            </div>
+            <div class="titleHeader c8">
+                <p class="title">Tecnologias de Aprendizagem</p>
+                <p class="description">Manuais de utilização</p>
+            </div>
+        </header>
+
+        <div id="main" role="main" class="fix wfull">
+            <div class="containerMain fix row">
+
+                <!-- início da área da busca -->
+                <section class="buscaMain c4" ng-controller="listaMenu">
+                    <div class="inputSearch">
+                        <form id="busca">
+                            <label for="pesquisa"></label>
+                            <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Busca por título ou palavra-chave" ng-model="searchText">
+                        </form>
+                    </div>
+
+                    <nav role="navigation" class="navigationMain">
+                        <h5 class="icoBlackboard">Blackboard</h5>
+
+                        <ol class="noCategory" ng-repeat="item in BbConhecerAmbiente | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>    
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbMateriais | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbComunicacaoInteracao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbTrabalhos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbGrupos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                
+                            </li>
+                            <li class="sublist ng-class: addMark()" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbTestesPesquisas | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbRubrics | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbAvaliacao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbGeral| filter: {manual:searchText}">
+                        <li class="nameCategory">
+                            <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            
+                        </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbCalendario | filter: {manual:searchText}">
+                        <li class="nameCategory">
+                            <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            
+                        </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <h5 class="icoCatme">Catme</h5>
+                        <ol class="noCategory" ng-repeat="item in catmeSobreFerramenta | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in catmeAplicarPesquisaAval | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in catmeAnalisarResultados | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <!-- <h5 class="icoClickers">Votadores eletrônicos (clickers)</h5>
+                        <ol class="noCategory" ng-repeat="item in clickerSobreFerramenta | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerUtilizarVotadores | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerPrepararSlides | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerIdentificarVoto | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerPromoverVotacao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerAnalisarResultados | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol> -->
+                        
+                        <h5 class="icoCursosOnline">Casos, Simuladores e Cursos online</h5>
+                        <ol class="noCategory" ng-repeat="item in SobreOsRecursos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in ConsultarRecursosDisponiveis | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in UtilizarRecursos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                         <div class="faqBusca icoFaq">
+                            <h5>
+                            <ol class="noCategory">
+                                <li><a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html-TAI/faq/index.html" class="">FAQ</a></li>
+                            </ol>
+                            </h5>
+                        </div>
+                        <div class="outros">
+                            <h6>
+                                <a href="mailto:tai@insper.edu.br?subject=TAI%20-%20Manuais%20de%20utiliza&#231;&#227;o">Não encontrou o que queria?</a>
+                            </h6>
+                        </div>
+                    </nav>
+                </section>
+
+                <!-- início do conteúdo do manual -->
+                <section class="mainContent c8">
+                    <section class="headerContent row">
+                        <div class="cabecalho fix">
+                            <p>
+                                <!-- adicionar a data da produção do material -->
+                                <span><strong>Atualizado: </strong>22/01/2015</span>
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="breadcrumb">
+                            <p>
+                                <span class="nameCategory">Grupos </span>
+                                <span>&#62; </span>
+                                Criar ou alterar grupos
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- 
+                    
+                    INTRODUCAO
+                    1- Texto do título h1 é o mesmo do 'p' da div.breadcrumb;
+                    2- div.sumario aparece logo depois da introdução do texto 'quando houver' e serve para listar todos os subtítulos da página definidos pela tag 'h2';
+                    3- toda tag 'h2' receberá esta sintaxe:
+                    '<h2 id="subTituloX">Texto aqui</h2>'
+                    É necessário adicionar um número identificador;
+
+                     -->
+
+                    <article class="contentMain row">
+                        <h1>Criar ou alterar grupos</h1>
+                        <p>A ferramenta <strong>Grupos</strong> permite que os alunos de determinado grupo interajam no ambiente virtual e submetam uma única atividade para avaliação do professor. Ela facilita o controle, avaliação e feedback dos trabalhos quando eles não são realizados individualmente.</p>
+                        <p>Os grupos podem ser criados um por vez ou em conjuntos. O agrupamento dos alunos  pode ser feito de modo aleatório pelo sistema, manualmente pelo professor ou por autoinscrição dos próprios alunos em seus grupos de interesse.</p>
+
+                        <div class="sumario row">
+                            <h3 id="sumarioAncora">Sumário</h3>
+                        </div>
+
+                        <!--
+                        
+                        IMAGENS E BOX DE TEXTO
+                        1- Alinhamento das imgs adicionar as classes: imgLeft ou imgRight. O comportamenteo padrão é centralizado;
+                        2- Adicionar um id para cada box.
+                        REGRAS:
+                        - nome pasta assunto. ex: Bb, Catme, Casos, Clickers +
+                        - nome da categoria [se houver]. ex: materiais, avaliação, trabalhos +
+                        - nome do manual: as duas palavras iniciais. ex: criar pesquisa, associar rubric +
+                        - numero identificador sequencial.
+
+                        MODELO: BbMateriaisCarregarMateriais1
+
+                        3- No CSS vc controla a posição de cada um. Há + de 1 media queries para adaptar!;
+                        4- A classe 'boxDestaque' é o padrão. Para box com informações adicionais em fundo vermelho usar a classe 'boxDestaqueAdicional';
+                        5- Após cada div.imageContainer inserir a div.respiro para aplicar uma margem entre eles. Insira um valor de margin-top no próprio html, visto que há inúmeras necessidades de tamanhos de margin;
+
+                        -->
+                        <h2 id="subTitulo1">Página de grupos</h2>
+                        <p>Na página de grupos é possível criar novos grupos ou alterar as configurações de grupos já existentes.</p>
+
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/grupos/criar-alterar-grupos/step1.png" alt="" class="imgLeft">
+                            <div class="boxDestaqueAdicional" id="BbGruposCriarAlterarGrupos1">
+                                <p>Uma vez alocados em determinado grupo, os alunos não podem cancelar sua inscrição.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/grupos/criar-alterar-grupos/step2.png" alt="" class="">
+                        </div>
+                        <!-- começo da listagem -->
+                        <section class="row fix listagemAlunos listagemBbGrupos">
+                            <div class="c2"><img src="../../../../html-TAI/img/Blackboard/grupos/criar-alterar-grupos/step2a.png" alt="" class="imgRight"></div>
+                            <div class="c10">
+                                <p><strong>Modos de exibição:</strong> altera o modo de visualização das informações por grupos, por conjuntos de grupos ou por usuários.</p>
+                            </div>
+                        </section>
+                        <section class="row fix listagemAlunos listagemBbGrupos">
+                            <div class="c2"><img src="../../../../html-TAI/img/Blackboard/grupos/criar-alterar-grupos/step2b.png" alt="" class="imgRight"></div>
+                            <div class="c10">
+                                <p><strong>Criação de grupos:</strong> permite criar grupos um a um, em conjunto (vários grupos que herdam as mesmas características) ou mesmo importar membros ou grupos completos de outros ambientes.</p>
+                            </div>
+                        </section>
+                        <section class="row fix listagemAlunos listagemBbGrupos">
+                            <div class="c2"><img src="../../../../html-TAI/img/Blackboard/grupos/criar-alterar-grupos/step2c.png" alt="" class="imgRight"></div>
+                            <div class="c10">
+                                <p><strong>Exportar: </strong>permite exportar membros ou grupos completos para posterior importação em outro ambiente.</p>
+                            </div>
+                        </section>
+                        <section class="row fix listagemAlunos listagemBbGrupos">
+                            <div class="c2"><img src="../../../../html-TAI/img/Blackboard/grupos/criar-alterar-grupos/step2d.png" alt="" class="imgRight"></div>
+                            <div class="c10">
+                                <p><strong>Configurações de grupo: </strong>permite configurar o ambiente de modo que os alunos possam criar seus próprios grupos.</p>
+                            </div>
+                        </section>
+                        <section class="row fix listagemAlunos listagemBbGrupos">
+                            <div class="c2"><img src="../../../../html-TAI/img/Blackboard/grupos/criar-alterar-grupos/step2e.png" alt="" class="imgRight"></div>
+                            <div class="c10">
+                                <p><strong>Ações em lote:</strong> permite que diversos grupos sejam excluídos simultaneamente, ou mesmo que sejam criadas exibições inteligentes para esses grupos na Central de Notas.</p>
+                            </div>
+                        </section>
+                        <section class="row fix listagemAlunos listagemBbGrupos">
+                            <div class="c2"><img src="../../../../html-TAI/img/Blackboard/grupos/criar-alterar-grupos/step2f.png" alt="" class="imgRight"></div>
+                            <div class="c10">
+                                <p style="margin-top: 1.5em;"><strong>Exibir opções:</strong> permite adicionar na página outras colunas de detalhes dos grupos.</p>
+                            </div>
+                        </section>
+                        
+                        <div class="margemParaImagem" style="margin-top:80px"></div>
+
+                        <div class="imageContainer row">
+                            <div class="boxDestaqueAdicional" id="BbGruposCriarAlterarGrupos2">
+                                <p><strong>Exibição inteligente</strong> é uma configuração da Central de Notas que permite filtrar apenas informações que atendam a um critério definido.</p>
+                                <p>Ao criar uma exibição inteligente para determinado grupo é possível visualizar somente os alunos e atividades daquele grupo. Isso é útil quando a Central de Notas possui muitos alunos e colunas.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        
+                        <h2 id="subTitulo2">Criação por inscrição aleatória (sorteio do sistema)</h2>
+                        <p>Escolha <strong>Inscrição aleatória</strong> para que o sistema distribua os alunos aleatoriamente nos grupos.</p>
+                        <p>Embora seja possível criar um único grupo, no exemplo será exibida a criação de um conjunto de grupos.</p>
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/grupos/criar-alterar-grupos/step3.png" alt="" class="imgLeft">
+                        </div>
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/grupos/criar-alterar-grupos/step4.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos3">
+                                <p>Escolha um nome para identificar o conjunto de grupos que será criado e, se necessário, escreva uma descrição.</p>
+                            </div>
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos4">
+                                <p>Defina quais ferramentas de colaboração ficarão à disposição do grupo para troca de informações e comunicação entre os membros.</p>
+                            </div>
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos5">
+                                <p>Indique se os membros terão permissão para adicionar módulos pessoais à página inicial do grupo.</p>
+                            </div>
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos6">
+                                <p>Defina a criação ou não de páginas inteligentes na Central de Notas.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/grupos/criar-alterar-grupos/step5.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos7">
+                                <p>Defina a maneira como os grupos serão criados e a distribuição dos membros entre eles. Clique em Enviar.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+
+                        <h2 id="subTitulo3">Criação por inscrição automática (autoinscrição dos alunos)</h2>
+                        <p>Escolha <strong>Inscrição automática</strong> para que os próprios alunos ingressem em um grupo.</p>
+                        <p>Embora seja possível criar um único grupo, no exemplo será exibida a criação de um conjunto de grupos.</p>
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/grupos/criar-alterar-grupos/step3b.png" alt="" class="imgLeft">
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/grupos/criar-alterar-grupos/step6.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos8">
+                                <p>Escolha um nome para identificar o conjunto de grupos que será criado e, se necessário, escreva uma descrição.</p>
+                            </div>
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos9">
+                                <p>Defina quais ferramentas de colaboração ficarão à disposição do grupo para troca de informações e comunicação entre os membros.</p>
+                            </div>
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos10">
+                                <p>Indique se os membros terão permissão para adicionar módulos pessoais à página inicial do grupo.</p>
+                            </div>
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos11">
+                                <p>Defina o nome da página em que os alunos deverão fazer suas inscrições nos grupos e, se necessário, escreva as instruções.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/grupos/criar-alterar-grupos/step7.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos12">
+                                <p>Quando o número de membros for atingido, outros usuários não poderão se inscrever no grupo.</p>
+                                <p>Marque a opção Mostrar membros para que os alunos saibam quem já está inscrito nos grupos correspondentes.</p>
+                            </div>
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos13">
+                                <p>Defina a quantidade de grupos e a criação ou não de páginas inteligentes na Central de Notas. Clique em Enviar.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <p>Para que os alunos possam se inscrever nos grupos criados é necessário disponibilizar a página de registro em alguma área do ambiente, como por exemplo, a área <strong>Conteúdos</strong>.</p>
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/grupos/criar-alterar-grupos/step8.png" alt="" class="imgLeft">
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <p>Na visão de aluno, ao clicar no link de grupos serão exibidos todos os grupos da disciplina e a opção para que ele se inscreva em cada um deles.</p>
+                         <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/grupos/criar-alterar-grupos/step9.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos14">
+                                <p>Ao se registrar em um grupo, o aluno visualiza os membros daquele grupo, as ferramentas disponíveis para interação e também as atribuições (exercícios) a serem ser desenvolvidas.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <h2 id="subTitulo4">Criação por inscrição manual (feita pelo professor)</h2>
+                        <p>Escolha <strong>Inscrição manual</strong> para determinar quais alunos vão compor cada grupo.</p>
+                        <p>Embora seja possível criar um único grupo, no exemplo será exibida a criação de um conjunto de grupos.</p>
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/grupos/criar-alterar-grupos/step3b.png" alt="" class="imgLeft">
+                        </div>
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/grupos/criar-alterar-grupos/step10.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos15">
+                                <p>Escolha um nome para identificar o conjunto de grupos que será criado e, se necessário, escreva uma descrição.</p>
+                            </div>
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos16">
+                                <p>Defina quais ferramentas de colaboração ficarão à disposição do grupo para troca de informações e comunicação entre os membros.</p>
+                            </div>
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos17">
+                                <p>Indique se os membros terão permissão para adicionar módulos pessoais à página inicial do grupo.</p>
+                            </div>
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos18">
+                                <p>Defina a quantidade de grupos e a criação ou não de páginas inteligentes na Central de Notas. Clique em Enviar.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/grupos/criar-alterar-grupos/step11.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos19">
+                                <p>Para evitar que um mesmo membro seja inscrito em mais de um grupo, marque a opção <strong>Ocultar membros...</strong></p>
+                            </div>
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos20">
+                                <p>Faça a inscrição dos usuários em cada grupo de maneira randômica ou escolhendo um a um.</p>
+                            </div>
+                             <div class="boxDestaque" id="BbGruposCriarAlterarGrupos21">
+                               <ol type="a">
+                                   <li>Uma vez feita a inscrição de um membro, é possível removê-lo do grupo manualmente.</li>
+                                   <li>Também é possível excluir um grupo inteiro para remanejar seus membros, ou caso o grupo tenha ficado sem nenhum inscrito.</li>
+                                   <li>Por fim, é possível criar um grupo adicional ao conjunto de grupos.</li>
+                               </ol>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <h2 id="subTitulo5">Alteração de grupos únicos</h2>
+                        <p>Para alterar grupos específicos dentro de um conjunto de grupos ou mesmo um grupo criado como Grupo único:</p>
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/grupos/criar-alterar-grupos/step12.png" alt="" class="imgLeft">
+                        </div>
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/grupos/criar-alterar-grupos/step13.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos22">
+                                <p>A edição de um grupo abre a mesma página do momento de sua criação. É possível alterar seu nome, descrição, disponibilidade, ferramentas e membros.</p>
+                            </div>
+                        </div>
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/grupos/criar-alterar-grupos/step14.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos23">
+                                <p>Uma maneira prática de alterar a relação de ferramentas do grupo é pelo botão <strong>Exibir opções</strong>.</p>
+                            </div>
+                        </div>
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/grupos/criar-alterar-grupos/step15.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos24">
+                                <p>Clique na célula correspondente a cada ferramenta do grupo para ativar/desativar sua disponibilidade.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:60px"></div>
+
+                        <h2 id="subTitulo6">Alteração de conjuntos de grupos</h2>
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/grupos/criar-alterar-grupos/step16.png" alt="" class="imgLeft">
+                        </div>
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/grupos/criar-alterar-grupos/step17.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos25">
+                                <ol type="a">
+                                    <li>Ao editar um conjunto de grupos é possível alterar sua disponibilidade, ferramentas associadas e, caso a inscrição seja do tipo “automática”, informações de registro.</li>
+                                    <li>É possível ainda administrar os membros de todos os grupos de um determinado conjunto.</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <h2 id="subTitulo7">Administração dos membros dos grupos</h2>
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/grupos/criar-alterar-grupos/step18.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos26b">
+                                <p>Embora as inscrições dos membros de um grupo possam ser administradas via Menu de opções <img src="../../../../html-TAI/img/Blackboard/grupos/criar-alterar-grupos/step20b.png" alt=""> dos respectivos grupos ou conjuntos, a visualização Todos os usuários pode ser mais prática.</p>
+                            </div>
+                        </div>
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/grupos/criar-alterar-grupos/step19.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos26">
+                                <p>Essa visualização lista todos os alunos do ambiente, indicando em quais grupos estão inscritos. É possível:</p>
+                                <ol type="a">
+                                    <li>Remover o aluno do grupo clicando no <span class="enfaseBox">x</span> correspondente.</li>
+                                    <li>Adicionar o aluno a um dos grupos já criados.</li>
+                                    <li>Inscrever diversos alunos simultaneamente.</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:120px"></div>
+
+                        <h2 id="subTitulo8">Envio de e-mail para o grupo</h2>
+                        <p>Há duas maneiras de enviar e-mail aos alunos de um determinado grupo:</p>
+                        <ol>
+                            <li>Pelo menu da disciplina, opção <strong>Enviar e-mail, Selecionar grupos</strong></li>
+                            <li>Na própria página de grupos:</li>
+                        </ol>
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/grupos/criar-alterar-grupos/step20.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos27">
+                                <p>Na visualização <strong>Todos os grupos</strong> é possível escolher o grupo específico para o qual o e-mail será enviado.</p>
+                            </div>
+                        </div>
+                        <div class="imageContainer row">
+                            <img src="../../../../html-TAI/img/Blackboard/grupos/criar-alterar-grupos/step21.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbGruposCriarAlterarGrupos28">
+                                <p>Na visualização <strong>Conjunto de grupos</strong> o e-mail é enviado a todos os grupos de um determinado conjunto.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:60px"></div>
+
+
+                        <!-- 
+                        
+                        ÂNCORAS [VOLTAR AO SUMÁRIO]
+                        1- Adicionar a div.row vazia antes de cada subtítulo ('h2'). Ela será respónsável também de inserir a âncora para retornar ao sumário lá em cima;
+                        2- a div#ancoraSaibaMais fica após o fechamento desta tag 'article'. Ela é por padrão fixa em todos os manuais. Em situações em que o manual não tiver 'Manuais relacionados' e 'Manuais Complementares' esta div desaparece;
+                        3- Depois da tag section.saibaMais há a única âncora da página que não recebe condicionais;
+
+                         -->
+
+                    </article>
+
+                    <!-- Devido aos poucos itens do 'Saiba Mais'
+                    <div id="ancoraSaibaMais" class="voltarSumario fix">
+                        <a href="#pesquisa">Início</a>
+                    </div> -->
+                    
+                    <!-- inicio do box Saiba mais -->
+                    <section class="saibaMais row fix">
+                        <h2 id="saiba-mais" class="ancora">Saiba Mais</h2>
+                        
+                        <h4 id="relacionado">Manuais relacionados</h4>
+                        <ul  ng-controller="manuaisRelacionados">
+                            <!-- class="default"  -->
+                            <li ng-repeat="item in Criar_Alterar_Grupos" class="ng-class: item.tipoIcone">
+                                <div><a href="{{item.Link}}">{{item.manual}}</a></div>
+                            </li>
+                        </ul>
+                        
+                        <h4 id="complementar">Materiais complementares</h4>
+                        <ul ng-controller="materiaisComplementares">
+                            <li ng-repeat="item in Criar_Alterar_Grupos" class="ng-class: item.tipoIcone">
+                                <div><a href="{{item.Link}}" target="_blank">{{item.manual}}</a></div>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <div class="voltarSumario fix">
+                        <a href="#pesquisa">Início</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="fix respiro"></div>
+
+<!-- Scripts: plugins -->
+<script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
+<script src="../../../../html-TAI/js/libs/angular.js"></script>
+<script src="../../../../html-TAI/js/libs/jquery.placeholder.js"></script>
+
+<!-- Scripts: controllers do AngularJs -->
+<script src="../../../../html-TAI/js/listaCompletaManual.js"></script>
+<script src="../../../../html-TAI/js/manuaisRelacionados.js"></script>
+<script src="../../../../html-TAI/js/materiaisComplementares.js"></script>
+
+<!-- Scripts: do projeto -->
+<script src="../../../../html-TAI/js/main.js"></script>
+
+<!-- Scripts: google analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53927287-1', 'auto');
+  ga('send', 'pageview');
+  // ga('set', '&uid', {{UA-53927287-1}});
+</script>
+</body>
+</html>

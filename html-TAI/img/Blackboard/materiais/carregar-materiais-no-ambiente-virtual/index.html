@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br" ng-app="manuaisBB">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Tecnologias de Aprendizagem - Manuais de utilização</title>
+<meta name="viewport" content="width=device-width">
+<meta name="msapplication-TileImage" content="tile.png"/>
+<meta name="msapplication-TileColor" content="#d02034"/>
+
+<link rel="stylesheet" type="text/css" media="print" href="../../../../../html/img/css/print.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../../../../../html/img/css/main.css">
+
+<!--[if IE]><link rel="shortcut icon" href="favicon.ico"><![endif]-->
+<link rel="icon" href="../../../../../html/img/favicon-16.png" sizes="16x16">
+<link rel="icon" href="../../../../../html/img/favicon-32.png" sizes="32x32">
+<link rel="icon" href="../../../../../html/img/favicon-48.png" sizes="48x48">
+<link rel="icon" href="../../../../../html/img/favicon-64.png" sizes="64x64">
+<link rel="icon" href="../../../../../html/img/favicon-128.png" sizes="128x128">
+
+
+<!-- iPad com Retina Display -->
+<link rel="apple-touch-icon" sizes="144x144" href="../../../../../html/img/apple-touch-icon-144x144.png">
+<!-- iPhone com Retina Display -->
+<link rel="apple-touch-icon" sizes="114x114" href="../../../../../html/img/apple-touch-icon-114x114.png">
+<!-- Primeira e segunda geração de iPad -->
+<link rel="apple-touch-icon" sizes="72x72" href="../../../../../html/img/apple-touch-icon-72x72.png">
+<!-- Versões antigas de iPhone, iPod Touch e Android 2.2+  -->
+<link rel="apple-touch-icon" href="../../../../../html/img/apple-touch-icon.png">
+
+<!--[if IE]>
+    <link href="css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script>window.html5 || document.write('<script src="js/libs/html5shiv.js"><\/script>')</script>
+<![endif]-->
+</head>
+<body>
+    <!-- alert para visualização abaixo de 768px -->
+    <div class="alert alert-warning alert-dismissable">
+        <button type="button" class="close">&times;</button>
+        Melhor visualizado com resolução de 768px de largura ou superior.
+    </div>
+
+    <div class="wrapper">
+        
+        <header id="top" class="wfull fix">
+            <div class="logo c4">
+                <img src="../../../../../html/img/img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
+            </div>
+            <div class="titleHeader c8">
+                <p class="title">Tecnologias de Aprendizagem</p>
+                <p class="description">Manuais de utilização</p>
+            </div>
+        </header>
+
+        <div id="main" role="main" class="fix wfull">
+            <div class="containerMain fix row">
+
+                <!-- início da área da busca -->
+                <section class="buscaMain c4" ng-controller="listaMenu">
+                    <div class="inputSearch">
+                        <form id="busca" action="">
+                            <label for="pesquisa"></label>
+                            <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Busca por título ou palavra-chave" ng-model="searchText" ng-change="countLink()"><br>
+                            <!-- mostrar a quantidade de links encontrados -->
+                            <span id="display" style="display:none">
+                            <strong>{{
+                            (blackboardBb |filter:{manual: searchText}).length + 
+                            (BbMateriais |filter:{manual: searchText}).length +
+                            (BbComunicacaoInteracao |filter:{manual: searchText}).length + 
+                            (BbTrabalhos |filter:{manual: searchText}).length +
+                            (BbGrupos |filter:{manual: searchText}).length + 
+                            (BbTestesPesquisas |filter:{manual: searchText}).length +
+                            (BbRubrics |filter:{manual: searchText}).length + 
+                            (BbAvaliacao |filter:{manual: searchText}).length +
+                            (BbCalendario |filter:{manual: searchText}).length +
+                            (catmeSobreFerramenta |filter:{manual: searchText}).length + 
+                            (catmeAplicarPesquisaAval |filter:{manual: searchText}).length +
+                            (catmeAnalisarResultados |filter:{manual: searchText}).length +
+                            (clickers |filter:{manual: searchText}).length +
+                            (casos |filter:{manual: searchText}).length + 
+                            (simuladores |filter:{manual: searchText}).length +
+                            (cursosOnline |filter:{manual: searchText}).length }}</strong>
+                            item(ns) encontrado(s)</span>
+                        </form>
+                    </div>
+
+                    <nav role="navigation" class="navigationMain">
+                        <h5 class="icoBlackboard"><a name="inicio"></a>Blackboard</h5>
+                        <ol class="noCategory">
+                            <p ng-repeat="item in lorem">{{item.categoria}}</p>
+                            <li class="sublist" ng-repeat="item in BbConhecerAmbiente | filter:{manual: searchText}">
+                                <a href="{{item.linkManual}}">{{item.manual}}</a>
+                            </li>
+                        </ol>
+                        <ol class="noCategory">
+                            <p class="selectedCategory">Materiais</p>
+                            <li class="sublist" ng-repeat="item in BbMateriais | filter:{manual: searchText}">
+                                <a href="{{item.linkManual}}">{{item.manual}}</a>
+                            </li>
+                        </ol>
+                        <ol class="noCategory">
+                            <p>Comunicação e Interação</p>
+                            <li class="sublist" ng-repeat="item in BbComunicacaoInteracao | filter:{manual: searchText}">
+                                <a href="{{item.linkManual}}">{{item.manual}}</a>
+                            </li>
+                        </ol>
+                        <ol class="noCategory">
+                            <p>Trabalhos</p>
+                            <li class="sublist" ng-repeat="item in BbTrabalhos | filter:{manual: searchText}">
+                                <a href="{{item.linkManual}}">{{item.manual}}</a>
+                            </li>
+                        </ol>
+                        <ol class="noCategory">
+                            <p>Grupos</p>
+                            <li class="sublist" ng-repeat="item in BbGrupos | filter:{manual: searchText}">
+                                <a href="{{item.linkManual}}">{{item.manual}}</a>
+                            </li>
+                        </ol>
+                        <ol class="noCategory">
+                            <p>Testes e Pesquisas</p>
+                            <li class="sublist" ng-repeat="item in BbTestesPesquisas | filter:{manual: searchText}">
+                                <a href="{{item.linkManual}}">{{item.manual}}</a>
+                            </li>
+                        </ol>
+                        <ol class="noCategory">
+                            <p>Rubrics</p>
+                            <li class="sublist" ng-repeat="item in BbRubrics | filter:{manual: searchText}">
+                                <a href="{{item.linkManual}}">{{item.manual}}</a>
+                            </li>
+                        </ol>
+                        <ol class="noCategory">
+                            <p>Avaliação</p>
+                            <li class="sublist" ng-repeat="item in BbAvaliacao | filter:{manual: searchText}">
+                                <a href="{{item.linkManual}}">{{item.manual}}</a>
+                            </li>
+                        </ol>
+                        <ol class="noCategory">
+                            <p>Calendário</p>
+                            <li class="sublist" ng-repeat="item in BbCalendario | filter:{manual: searchText}">
+                                <a href="{{item.linkManual}}">{{item.manual}}</a>
+                            </li>
+                        </ol>
+                        
+                        <h5 class="icoCatme">Catme</h5>
+                        <ol class="noCategory">
+                            <p>Sobre a ferramenta</p>
+                            <li class="sublist" ng-repeat="item in catmeSobreFerramenta | filter:{manual: searchText}">
+                                <a href="{{item.linkManual}}">{{item.manual}}</a>
+                            </li>
+                        </ol>
+                        <ol class="noCategory">
+                            <p>Aplicar uma pesquisa de avaliação</p>
+                            <li class="sublist" ng-repeat="item in catmeAplicarPesquisaAval | filter:{manual: searchText}">
+                                <a href="{{item.linkManual}}">{{item.manual}}</a>
+                            </li>
+                        </ol>
+                        <ol class="noCategory">
+                            <p>Analisar os resultados</p>
+                            <li class="sublist" ng-repeat="item in catmeAnalisarResultados | filter:{manual: searchText}">
+                                <a href="{{item.linkManual}}">{{item.manual}}</a>
+                            </li>
+                        </ol>
+                        
+                        <h5 class="icoClickers">Votadores eletrônicos (clickers)</h5>
+                        <ol class="noCategory">
+                            <li class="sublist" ng-repeat="item in clickers | filter:{manual: searchText}">
+                                <a href="{{item.linkManual}}">{{item.manual}}</a>
+                            </li>
+                        </ol>
+                        
+                        <h5 class="icoCasos">Casos</h5>
+                        <ol class="noCategory">
+                            <li class="sublist" ng-repeat="item in casos | filter:{manual: searchText}">
+                                <a href="{{item.linkManual}}">{{item.manual}}</a>
+                            </li>
+                        </ol>
+                        
+                        <h5 class="icoSimuladores">Simuladores</h5>
+                        <ol class="noCategory">
+                            <li class="sublist" ng-repeat="item in simuladores | filter:{manual: searchText}">
+                                <a href="{{item.linkManual}}">{{item.manual}}</a>
+                            </li>
+                        </ol>
+                        
+                        <h5 class="icoCursosOnline">Cursos online</h5>
+                        <ol class="noCategory">
+                            <li class="sublist" ng-repeat="item in cursosOnline | filter:{manual: searchText}">
+                                <a href="{{item.linkManual}}">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <div class="faqBusca">
+                            <h5>
+                                <a href="#" >FAQ</a>
+                            </h5>
+                        </div>
+                        <div class="outros">
+                            <h6>
+                                <a href="#titleManual">Não encontrou o que queria?</a>
+                            </h6>
+                        </div>
+                    </nav>
+                </section>
+
+                <!-- início do conteúdo do manual -->
+                <section class="mainContent c8">
+                    <section class="headerContent row">
+                        <div class="cabecalho fix">
+                            <p>
+                                <span><strong>Atualizado: </strong>01/01/2014</span>
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="breadcrumb">
+                            <p>
+                                <span class="nameCategory">Materiais </span>
+                                <span>&#62; </span>
+                                Carregar materiais no ambiente virtual 
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- 
+                    
+                    INTRODUCAO
+                    1- Texto do título h1 é o mesmo do 'p' da div.breadcrumb;
+                    2- div.sumario aparece logo depois da introdução do texto 'quando houver' e serve para listar todos os subtítulos da página definidos pela tag 'h2';
+                    3- toda tag 'h2' receberá esta sintaxe: '<h2><a name="Titulo1" class="ancora"></a>Texto aqui</h2>';
+
+                     -->
+
+                    <article class="contentMain row">
+                        <h1><a name="titleManual"></a>
+                            Carregar materiais no ambiente virtual
+                        </h1>
+                        <p>Para compartilhar materiais nas disciplinas é importante ter em mente quais arquivos são específicos da disciplina e não se repetirão em disciplinas futuras (plano de aula, por exemplo) e quais arquivos podem ser reutilizados em diferentes turmas/disciplinas, como estudos de caso, artigos etc.</p>
+                        <p>O primeiro passo é carregar esses arquivos “menos voláteis” na <strong>Coleção de conteúdos</strong>, uma espécie de <em>pendrive virtual</em> em que o professor pode alocar todo seu material. Uma vez carregados neste local, os arquivos podem ser referenciados em diferentes ambientes, evitando que tenham de ser recarregados a cada nova turma</p>
+
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+
+                        <div class="sumario row">
+                            <h3><a name="sumarioAncora"></a>Sumário</h3>
+                        </div>
+
+                        <!--
+                        
+                        IMAGENS E BOX DE TEXTO
+                        1- Alinhamento das imgs adicionar as classes: imgLeft ou imgRight. O comportamenteo padrão é centralizado;
+                        2- Adicionar um id para cada box.
+                        REGRAS:
+                        - nome pasta assunto. ex: Bb, Catme, Casos, Clickers +
+                        - nome da categoria [se houver]. ex: materiais, avaliação, trabalhos +
+                        - nome do manual: as duas palavras iniciais. ex: criar pesquisa, associar rubric +
+                        - numero identificador sequencial.
+
+                        MODELO: BbMateriaisCarregarMateriais1
+
+                        3- No CSS vc controla a posição de cada um. Há + de 1 media queries para adaptar!;
+                        4- A classe 'boxDestaque' é o padrão. Para box com informações adicionais em fundo vermelho usar a classe 'boxDestaqueAdicional';
+                        5- Após cada div.imageContainer inserir a div.respiro para aplicar uma margem entre eles. Insira um valor de margin-top no próprio html, visto que há inúmeras necessidades de tamanhos de margin;
+
+                        -->
+
+                        <div class="imageContainer row">
+                            <img src="../../../../../html/img/img/Bb/materiais/step1.png" alt="" class="">
+                            <div class="boxDestaque" id="BbMateriaisCarregarMateriais1">
+                                <p>Carregue os materiais pasta <strong>Meus Conteúdos</strong>. Essa pasta é individual e não tem vínculo com qualquer disciplina.</p>
+                            </div>
+                            <div class="boxDestaqueAdicional" id="BbMateriaisCarregarMateriais2">
+                                <p>Para facilitar a organização dos arquivos, separe-os em pastas e subpastas. Um exemplo é dividir os materiais em categorias: exercícios, casos, apresentações de slides etc.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:110px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../../../html/img/img/Bb/materiais/step2.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbMateriaisCarregarMateriais3">
+                                <p>Os arquivos podem ser inseridos na <strong>Coleção de conteúdos</strong> de duas maneiras. Em <strong>Carregar arquivos</strong> é possível selecionar um ou mais arquivos de uma só vez. Em <strong>Carregar pacote</strong> o arquivo .zip ou .rar é descompactado automaticamente ao ser inserido.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:50px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../../../html/img/img/Bb/materiais/step3.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbMateriaisCarregarMateriais4">
+                                <p>Após clicar em <strong>Carregar arquivos</strong>, escolha a opção <strong>Múltiplos arquivos</strong>  no canto superior direito.</p>
+                                <p><img src="../../../../../html/img/img/Bb/materiais/step4.png" alt="" style="margin-top:10px"></p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:80px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../../../html/img/img/Bb/materiais/step5.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbMateriaisCarregarMateriais5">
+                                <p>Utilize o botão <strong>Procurar</strong> para localizar os arquivos e/ou pastas em seu computador ou dispositivo móvel ou, se preferir, arraste os arquivos ou pastas diretamente para a lista</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:30px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../../../html/img/img/Bb/materiais/step6.png" alt="" class="imgLeft">
+                            <div class="boxDestaqueAdicional" id="BbMateriaisCarregarMateriais6">
+                                <p>Se desejar remover um arquivo da lista, clique no ícone do item correspondente.</p>
+                                <p style="margin-top:10px">Ao terminar, clique em <strong>Enviar</strong>.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:30px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../../../html/img/img/Bb/materiais/step7.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbMateriaisCarregarMateriais7">
+                                <p>Também é possível selecionar um único arquivo compactado.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:30px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../../../html/img/img/Bb/materiais/step8.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbMateriaisCarregarMateriais8">
+                                <p>Selecione o arquivo em <strong>Escolher arquivo</strong> e confirme clicando em <strong>Enviar</strong>.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:60px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../../../html/img/img/Bb/materiais/step9.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="BbMateriaisCarregarMateriais9">
+                                <p>O arquivo será automaticamente descompactado dentro da <strong>Coleção de contéudos</strong>.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <p>Se houver necessidade de substituir um arquivo inserido na <strong>Coleção de conteúdos</strong> você pode fazer a troca sem que isso interfira nos materiais que já foram compartilhados nos ambientes virtuais das disciplinas.</p>
+
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../../../html/img/img/Bb/materiais/step10.png" alt="">
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:10px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../../../html/img/img/Bb/materiais/step11.png" alt="" class="imgRight">
+                            <div class="boxDestaque" id="BbMateriaisCarregarMateriais11">
+                                <p>Ao substituir o arquivo, todas as disciplinas que utilizam o arquivo serão automaticamente atualizadas.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <p>No ambiente da disciplina, quando for inserir um material que está na <strong>Coleção de conteúdos</strong>, escolha a opção <strong>Procurar Coleção de conteúdo</strong>. Para buscar arquivos que estão salvos no seu computador, rede ou pendrive, escolha <strong>Procurar Meu computador</strong>. Neste caso, o arquivo ficará vinculado à disciplina.</p>
+
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../../../html/img/img/Bb/materiais/step12.png" alt="">
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:30px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../../../html/img/img/Bb/materiais/step13.png" alt="">
+                            <div class="boxDestaque" id="BbMateriaisCarregarMateriais13">
+                                <p>Localize o arquivo nos <strong>Meus Conteúdos</strong>, marque-o na lista e clique em <strong>Enviar</strong>.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:60px"></div>
+
+                        <!-- 
+                        
+                        ÂNCORAS [VOLTAR AO SUMÁRIO]
+                        1- Adicionar a div.row vazia antes de cada subtítulo ('h2'). Ela será respónsável também de inserir a âncora para retornar ao sumário lá em cima;
+                        2- a div#ancoraSaibaMais fica após o fechamento desta tag 'article'. Ela é por padrão fixa em todos os manuais. Em situações em que o manual não tiver 'Manuais relacionados' e 'Manuais Complementares' esta div desaparece;
+                        3- Depois da tag section.saibaMais há a única âncora da página que não recebe condicionais;
+
+                         -->
+
+                    </article>
+
+                    <div id="ancoraSaibaMais" class="voltarSumario fix">
+                        <a href="#sumarioAncora">Sumário</a>
+                    </div>
+                    
+                    <!-- inicio do box Saiba mais -->
+                    <section class="saibaMais row fix">
+                        <h2><a name="Titulo4" class="ancora"></a>Saiba Mais</h2>
+                        
+                        <h4 id="relacionado">Manuais relacionados</h4>
+                        <ul  ng-controller="manuaisRelacionados">
+                            <li ng-repeat="item in Carregar_materiais_no_ambiente_virtual">
+                                <div><a href="{{item.Link}}">{{item.manual}}</a></div>
+                            </li>
+                        </ul>
+                        
+                        <h4 id="complementar">Manuais complementares</h4>
+                        <ul ng-controller="manuaisComplementares">
+                            <li ng-repeat="item in lorem">
+                                <div><a href="{{item.Link}}">{{item.manual}}</a></div>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <div class="voltarSumario fix">
+                        <a href="#inicio">Início</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="fix respiro"></div>
+
+<!-- Scripts: plugins -->
+<script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../../js/libs/jquery-2.0.3.min.js"><\/script>');</script>
+<script src="../../../../../html/img/js/libs/angular.js"></script>
+<script src="../../../../../html/img/js/libs/jquery.placeholder.js"></script>
+
+<!-- Scripts: controllers do AngularJs -->
+<script src="../../../../../html/img/js/listaCategoria.js"></script>
+<script src="../../../../../html/img/js/manuaisRelacionados.js"></script>
+<script src="../../../../../html/img/js/manuaisComplementares.js"></script>
+
+<!-- Scripts: do projeto -->
+<script src="../../../../../html/img/js/main.js"></script>
+</body>
+</html>

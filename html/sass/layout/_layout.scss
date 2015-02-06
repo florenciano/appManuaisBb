@@ -9,7 +9,7 @@
 /////////////////////////////////////////////////////////////////////
 
 // fonts
-$font: "Tahoma", "arial", "sans-serif";
+$font: "verdana", "arial", "sans-serif";
 
 // colors
 $corDefault: #c00026; // red insper
@@ -110,7 +110,8 @@ html, body { height: 100%; min-height: 100%;}
     
 }
 body {
-    @include font(normal, 12px);
+    @include font(normal, 75%);
+    line-height: 1.4875;
     color: $corTexto;
     text-rendering: optimizeLegibility;
     // @include transition(all .20s ease);
@@ -682,8 +683,8 @@ body {
 
         // Listagem geral 
         section.destListagem {
-            width: 82%;
-            left: 9%;
+            width: 85%;
+            left: 7.5%;
             padding: .5em;
             float: left;
             margin: ($meioGrid / 4) !important;
@@ -1344,22 +1345,23 @@ body {
     }
 
     // redefinindo o header: logo + nome do projeto
-    .wrapper > header { padding: $meioGrid 0; }
+    .wrapper > header { padding: ($meioGrid/2) 0; }
     .logo {
         margin: 0;
-        img { max-width: 100%; }
+        img { max-width: 80%; }
     }
     .titleHeader {
         padding-bottom: 0;
+        margin-top: $meioGrid/2;
         .title {
-            @include font(bold, 2em);
+            @include font(bold, 1.8em);
             border-bottom: 3px solid $corDefault;
             width: 78%;
             padding: 0 0 ($meioGrid / 4) 0;
             margin: 0 0 0 $meioGrid;
         }
         .description {
-            @include font(normal, 1.4em);
+            @include font(normal, 1.2em);
             color: #fff;
             padding: ($meioGrid / 2) ($grid - 10);
             height: auto;
@@ -1511,13 +1513,13 @@ body {
     }
     .titleHeader {
         text-align: right;
-        margin-top: $meioGrid / 2;
+        margin-top: $meioGrid - 5;
         .title {
-            @include font(bold, 2.55em);
+            @include font(bold, 2.25em);
             border-bottom: 3px solid $corDefault;
-            width: 69%;
+            width: 75%;
             padding: 0 0 ($meioGrid / 4) 0;
-            margin: 0 0 0 8.13%;
+            margin: 0;
         }
         .description {
             @include font(normal, 1.8em);

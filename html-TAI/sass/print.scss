@@ -1,0 +1,419 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    GENERAL RECOMENDATIONS
+    1. Todas as cores em tons de cinza;
+	2. Sublinhar os links, e de preferência imprimir seus endereços;
+	3. Textos em pontos, e não em pixels;
+	4. Remover elementos desncessários;
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/////////////////////////////////////////////////////////////////////
+// Vars
+/////////////////////////////////////////////////////////////////////
+
+// fonts
+$font: "Tahoma", "arial", "sans-serif";
+
+@mixin font($fstyle, $fsize) {
+    font: $fstyle $fsize $font;
+}
+
+// colors
+$corDefault: #000000;
+$corTitle: #4b4b4b;
+$corTexto: #4b4b4b;
+$corDefaultDark: #3c3c3c;
+$corBorda: #c8c8c8;
+
+@mixin corLink() {
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 1pt dotted $corDefault;
+}
+
+@mixin corLinkUpBox($corDigitada) {
+    text-decoration: none;
+    color: $corDigitada;
+    display: inline-block;
+    border-bottom: 1pt dotted $corDefault;
+}
+
+// grids
+$grid: 30pt;
+$meioGrid: $grid / 2;
+
+/////////////////////////////////////////////////////////////////////
+// Mixin
+/////////////////////////////////////////////////////////////////////
+
+@mixin box-size($boxSize) {
+    box-sizing: $boxSize;
+    -o-box-sizing: $boxSize;
+    -ms-box-sizing: $boxSize;
+    -moz-box-sizing: $boxSize;
+    -webkit-box-sizing: $boxSize;
+}
+
+@mixin radius($radius: 3pt) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin settingsBoxImagem($widthBox, $topBox, $rightBox, $bottomBox, $leftBox) {
+    position: absolute;
+    width: $widthBox;
+    left: $leftBox;
+    top: $topBox;
+    right: $rightBox;
+    bottom: $bottomBox;
+}
+
+// page
+* {
+    @include box-size(border-box);
+}
+body { 
+    @include font(normal, 62.5%);
+    color: $corTexto;
+    width: 100%;
+    margin: 0;
+    // aplicando bordas. Objetivo: sup/inf: 2,5 | dir/esq: 3,0
+    padding: 1.5cm 2cm 0 2.175cm;
+
+}
+.wrapper {
+	margin: 0;
+    padding: 0;
+    border: none;
+    *border: 0;
+}
+
+/*
+ * Don't show links for images, or javascript/internal links
+ */
+.ir a:after,
+a[href^="javascript:"]:after,
+a[href^="#"]:after {
+    content: "";
+}
+
+pre,
+blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+}
+
+thead {
+    display: table-header-group; /* h5bp.com/t */
+}
+
+tr,
+img {
+    page-break-inside: avoid;
+}
+
+img {
+    max-width: 100% !important;
+}
+
+@page {
+    margin: 0.5cm;
+}
+
+p,
+h2,
+h3 {
+    orphans: 3; // qtde linhas orfãos
+    widows: 3; // qtde linhas viúvas
+}
+
+h2,
+h3 {
+    page-break-before: avoid;
+}
+
+/////////////////////////////////////////////////////////////////////
+// Gridiculous
+/////////////////////////////////////////////////////////////////////
+.row .row .c1,.row .row .c2,.row .row .c3,.row .row .c4,.row .row .c5,.row .row .c6,.row .row .c7,.row .row .c8,.row .row .c9,.row .row .c10,.row .row .c11,.row .row .c12{ 
+    width:100%; 
+    margin-bottom:15pt; 
+}
+
+.c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,.c11,.c12{
+    width:100%;
+    margin-right:0;
+    margin-left:0;
+    margin-bottom:0;
+}
+
+/////////////////////////////////////////////////////////////////////
+// Content
+/////////////////////////////////////////////////////////////////////
+
+/* HEADER */
+.logo {
+    margin: 0;
+    width: 26% !important;
+	display: inline-block;
+	float: left;
+    img { max-width: 100%; }
+}
+.titleHeader {
+    padding-bottom: 0;
+    width: 74% !important;
+	display: inline-block;
+    text-align: center;
+    float: left;
+    margin: ($meioGrid / 3) 0;
+    .title {
+        @include font(bold, 1.8em);
+        color: $corTexto !important;
+		width: 90%;
+		padding: 0 0 2pt;
+		margin: 0 auto;
+    }
+    .description {
+        @include font(normal, 1.4em);
+        color: $corTexto !important;
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+    }
+}
+/* GERAL */
+#main{ clear: both; }
+
+.containerMain {
+    border-top: 1pt solid $corBorda;
+}
+
+/* NAVIGATION */
+.buscaMain { display: none; }
+
+// divise navigation and content [only mobile]
+.divisionMobile { display: none; }
+
+/* CONTENT MAIN */
+// Header
+.headerContent  {
+    margin: ($meioGrid / 2) 0 0;
+    @include font(normal, 1.1em);
+    .cabecalho {
+        padding: 0;
+        display: block;
+        p { margin: 0 }
+        .imprimir {
+            display: none;
+        }
+    }
+    hr { display: none; }
+}
+
+// Content Main
+.mainContent .contentMain {
+    margin-top: $meioGrid / 2;
+	border-top: 1pt solid #c8c8c8;
+}
+
+.contentMain {
+    h1 {
+        @include font(bold, 1.8em);
+        line-height: 1em;
+        color: $corTitle;
+    }
+    h2 {
+        margin: $meioGrid 0 ($meioGrid / 4) 0;
+         @include font(bold, 1.6em);
+    }
+    h2 + p { margin-top: 0; }
+    p {
+        @include font(normal, 1.2em);
+        line-height: 1.4em;
+        a { @include corLink(); }
+    }
+}
+
+.sumario {
+    margin: ($grid - 10) 0 !important;
+    h3 {
+        margin: 0 0 ($meioGrid / 4);
+        @include font(bold, 1.4em);
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            margin-bottom: 2pt;
+            &:last-child { margin-bottom: 0;}
+            a { @include corLink(); @include font(normal, 1.2em); }
+        }
+    }
+}
+
+.voltarSumario { display: none; }
+
+// content img and boxText
+.imageContainer {
+    display: block;
+    position: relative;
+    page-break-inside: avoid; //don't break imagem com  destaque
+    margin: 10px 0;
+
+    // highlighted box
+    .boxDestaque {
+        display: block;
+        @include radius($meioGrid/2);
+        // background-color: $corBorda !important;
+        border: 2.25pt solid $corDefault;
+        padding: $meioGrid / 2;
+        margin: $meioGrid 0;
+        p { 
+            @include font(normal, 1.1em);
+            line-height: 1.4em;
+            margin: 0;
+        }
+    }
+    // highlighted box: Additional information
+    .boxDestaqueAdicional {
+        display: block;
+        @include radius($meioGrid/2);
+        // background-color: $corBorda !important;
+        border: 2.25pt solid $corBorda;
+        padding: $meioGrid / 2;
+        margin: $meioGrid 0;
+        p { 
+            @include font(normal, 1.1em);
+            line-height: 16px;
+            margin: 0;
+            padding: 0;
+            a { @include corLinkUpBox($corTexto); }
+        }
+    }
+
+    /////////////////////////////////////////////////////////////
+    //  Here will be the position coordinates individual box
+    //
+    //  1] Nome of the category;
+    //  2] Number of the box;
+    //
+    /////////////////////////////////////////////////////////////
+    
+    //           @include settingsBoxImagem(width, top, right, bottom, left)
+    // #CatNumb01 { @include settingsBoxImagem(60%, 180px, auto, auto, 75px) }
+    #CatNumb02 { @include settingsBoxImagem(70%, auto, auto, -30px, 20px) }
+}
+
+// saiba mais
+.saibaMais {
+    border: 1pt solid $corBorda;
+    @include radius($meioGrid/2);
+    padding: $meioGrid;
+    margin: $grid 0 0;
+    page-break-inside: avoid;
+    
+    h2 {
+        color: $corTexto;
+        margin: 0 0 ($meioGrid / 4) 0;
+        border-bottom: 1pt solid $corBorda;
+        @include font(bold, 1.2em);
+        line-height: 1.6em;
+    }
+
+    h4 {
+        margin: $meioGrid 0 0;
+        @include font(bold, 1.1em);
+        line-height: 1.7em;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style:  none;
+        li {
+            display: block;
+            // border: 1px solid $corDefault;
+            margin: 5pt 0;
+            padding: 0;
+            background: url("../img/ui/icoSaibaMaisManuais.png") 5px center no-repeat;
+            @include radius();
+
+            div {
+                display: block;
+                width: 100%;
+                overflow: hidden;
+                padding: 0;
+                a { 
+                    @include corLink();
+                    @include font(normal, 1.2em);
+                }
+                a[href]:after {
+                    content: " (" attr(href) ")";
+                    @include font(normal, .9em);
+                }
+
+                abbr[title]:after {
+                    content: " (" attr(title) ")";
+                }
+            }
+        }
+    }
+}
+
+
+/////////////////////////////////////////////////////////////////////
+// Helpers classs
+/////////////////////////////////////////////////////////////////////
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.fix:before,
+.fix:after {
+    content: " ";
+    display: table;
+}
+
+.fix:after {
+    clear: both;
+}
+
+.fix {
+    *zoom: 1;
+}
+
+/////////////////////////////////////////////////////////////////////
+// Resets
+/////////////////////////////////////////////////////////////////////
+
+* {
+    background: transparent !important;
+    color: #000 !important; /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    border-bottom: 1pt dotted $corDefault;
+}
+

@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br" ng-app="manuaisBB">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Tecnologias de Aprendizagem - Manuais de utilização</title>
+<meta name="viewport" content="width=device-width">
+<meta name="msapplication-TileImage" content="tile.png"/>
+<meta name="msapplication-TileColor" content="#d02034"/>
+
+<link rel="stylesheet" type="text/css" media="screen" href="../../css/main.css">
+<link rel="stylesheet" type="text/css" media="print" href="../../css/print.css">
+
+<!--[if IE]><link rel="shortcut icon" href="favicon.ico"><![endif]-->
+<link rel="icon" href="../../favicon-16.png" sizes="16x16">
+<link rel="icon" href="../../favicon-32.png" sizes="32x32">
+<link rel="icon" href="../../favicon-48.png" sizes="48x48">
+<link rel="icon" href="../../favicon-64.png" sizes="64x64">
+<link rel="icon" href="../../favicon-128.png" sizes="128x128">
+
+<!--
+1- iPad com Retina Display;
+2- iPhone com Retina Display;
+3- Primeira e segunda geração de iPad;
+4- Versões antigas de iPhone, iPod Touch e Android 2.2+
+-->
+<link rel="apple-touch-icon" sizes="144x144" href="../../apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+
+<!--[if IE]>
+    <link href="../../css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script>window.html5 || document.write('<script src="../../js/libs/html5shiv.js"><\/script>')</script>
+<![endif]-->
+
+</head>
+<body>
+    <!-- alert para visualização abaixo de 768px -->
+    <div class="alert alert-warning alert-dismissable">
+        <button type="button" class="close">&times;</button>
+        Melhor visualizado com resolução de 768px de largura ou superior.
+    </div>
+
+    <div class="wrapper">
+        
+        <header id="top" class="wfull fix">
+            <div class="logo c4">
+                <img src="../../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
+            </div>
+            <div class="titleHeader c8">
+                <p class="title">Tecnologias de Aprendizagem</p>
+                <p class="description">Manuais de utilização</p>
+            </div>
+        </header>
+
+        <div id="main" role="main" class="fix wfull">
+            <div class="containerMain fix row">
+
+                <!-- início da área da busca -->
+                <section class="buscaMain c4" ng-controller="listaMenu">
+                    <div class="inputSearch">
+                        <form id="busca">
+                            <label for="pesquisa"></label>
+                            <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Busca por título ou palavra-chave" ng-model="searchText">
+                        </form>
+                    </div>
+
+                    <nav role="navigation" class="navigationMain">
+                        <h5 class="icoBlackboard">Blackboard</h5>
+
+                        <ol class="noCategory" ng-repeat="item in BbConhecerAmbiente | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>    
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbMateriais | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbComunicacaoInteracao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbTrabalhos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbGrupos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbTestesPesquisas | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbRubrics | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbAvaliacao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbGeral| filter: {manual:searchText}">
+                        <li class="nameCategory">
+                            <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            
+                        </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbCalendario | filter: {manual:searchText}">
+                        <li class="nameCategory">
+                            <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            
+                        </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <h5 class="icoCatme">Catme</h5>
+                        <ol class="noCategory" ng-repeat="item in catmeSobreFerramenta | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in catmeAplicarPesquisaAval | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in catmeAnalisarResultados | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <!-- <h5 class="icoClickers">Votadores eletrônicos (clickers)</h5>
+                        <ol class="noCategory" ng-repeat="item in clickerSobreFerramenta | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerUtilizarVotadores | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerPrepararSlides | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerIdentificarVoto | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerPromoverVotacao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerAnalisarResultados | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol> -->
+                        
+                        <h5 class="icoCursosOnline">Casos, Simuladores e Cursos online</h5>
+                        <ol class="noCategory" ng-repeat="item in SobreOsRecursos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in ConsultarRecursosDisponiveis | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in UtilizarRecursos | filter: {manual:searchText}">
+                            <li class="nameCategory selectedCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <div class="faqBusca icoFaq">
+                            <h5>
+                            <ol class="noCategory">
+                                <li><a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html-TAI/faq/index.html" class="">FAQ</a></li>
+                            </ol>
+                            </h5>
+                        </div>
+                        <div class="outros">
+                            <h6>
+                                <a href="mailto:tai@insper.edu.br?subject=TAI%20-%20Manuais%20de%20utiliza&#231;&#227;o">Não encontrou o que queria?</a>
+                            </h6>
+                        </div>
+                    </nav>
+                </section>
+
+                <!-- início do conteúdo do manual -->
+                <section class="mainContent c8">
+                    <section class="headerContent row">
+                        <div class="cabecalho fix">
+                            <p>
+                                <!-- adicionar a data da produção do material -->
+                                <span><strong>Atualizado: </strong>18/07/2014</span>
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="breadcrumb">
+                            <p>
+                                <span class="nameCategory">Casos, Simuladores, Cursos online </span>
+                                <span>&#62; </span>
+                                Utilizar os recursos
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- 
+                    
+                    INTRODUCAO
+                    1- Texto do título h1 é o mesmo do 'p' da div.breadcrumb;
+                    2- div.sumario aparece logo depois da introdução do texto 'quando houver' e serve para listar todos os subtítulos da página definidos pela tag 'h2';
+                    3- toda tag 'h2' receberá esta sintaxe:
+                    '<h2 id="subTituloX">Texto aqui</h2>'
+                    É necessário adicionar um número identificador;
+
+                     -->
+
+                    <article class="contentMain row">
+                        <h1>Utilizar recursos</h1>
+                        
+                        <div class="sumario row">
+                            <h3 id="sumarioAncora">Sumário</h3>
+                        </div>
+
+                        <h2 id="solicitar-cuca">Solicitar, acompanhar e cancelar casos pelo CUCA</h2>
+                        <p>CUCA é um sistema de Controle de Utilização de Casos. Nele, informações de turmas, professores, cursos e disciplinas estão integradas com o sistema acadêmico Lyceum.</p>
+                        <p>Por meio do CUCA é possível solicitar casos para uso em sala de aula, acompanhar o andamento da solicitação ou mesmo cancelar uma solicitação de caso feita anteriormente.</p>
+
+                        <!--
+                        
+                        IMAGENS E BOX DE TEXTO
+                        1- Alinhamento das imgs adicionar as classes: imgLeft ou imgRight. O comportamenteo padrão é centralizado;
+                        2- Adicionar um id para cada box.
+                        REGRAS:
+                        - nome pasta assunto. ex: Bb, Catme, Casos, Clickers +
+                        - nome da categoria [se houver]. ex: materiais, avaliação, trabalhos +
+                        - nome do manual: as duas palavras iniciais. ex: criar pesquisa, associar rubric +
+                        - numero identificador sequencial.
+
+                        MODELO: BbMateriaisCarregarMateriais1
+
+                        3- No CSS vc controla a posição de cada um. Há + de 1 media queries para adaptar!;
+                        4- A classe 'boxDestaque' é o padrão. Para box com informações adicionais em fundo vermelho usar a classe 'boxDestaqueAdicional';
+                        5- Após cada div.imageContainer inserir a div.respiro para aplicar uma margem entre eles. Insira um valor de margin-top no próprio html, visto que há inúmeras necessidades de tamanhos de margin;
+
+                        -->
+
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+                        
+                        <h4 class="subTopicos">Solicitar caso pelo CUCA</h4>
+                        <div class="imageContainer row">
+                            <img src="../../../html-TAI/img/Recursos/utilizar-recursos/step1.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="RecursosUtilizar1">
+                                <p>Acesse o <a href=" http://cuca.insper.edu.br/" target="_blank">Cuca</a>, faça seu login com o usuário de rede e escolha Professor na lista de opções.</p>
+                            </div>
+                            <div class="boxDestaque" id="RecursosUtilizar2">
+                                <p>Consulte o caso na caixa de busca e clique em <strong>Solicitar</strong>.</p>
+                                <p>O ícone <span class="enfaseBox" style="background-color:#15cd02">v</span> indica que o caso está disponível.</p>
+                            </div>
+                            <div class="boxDestaqueAdicional" id="RecursosUtilizar3">
+                                <p>Se o caso procurado não for encontrado, envie um e-mail para <a href="mailto:casos@insper.edu.br?subject=Casos%20Insper">casos@insper.edu.br</a> e verifique a viabilidade de uso.</p>
+                            </div>
+                        </div>
+                         <div class="margemParaImagem" style="margin-top:80px"></div>
+                        <div class="imageContainer row">
+                            <img src="../../../html-TAI/img/Recursos/utilizar-recursos/step2.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="RecursosUtilizar4">
+                                <p>Preencha as informações referentes à disciplina.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                         <div class="imageContainer row">
+                            <img src="../../../html-TAI/img/Recursos/utilizar-recursos/step3.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="RecursosUtilizar5">
+                                <p>É possível solicitar casos para diferentes turmas de uma mesma disciplina do programa.</p>
+                                <p>Para remover uma solicitação da lista, clique no <span class="enfaseBox">X</span> correspondente.</p>
+                            </div>
+                        </div>
+                        <p><span class="enfaseBox">6</span> Informações dos casos:</p>
+                        <ul>
+                            <li><strong>Entrega ao aluno</strong>: a partir de quando os alunos terão acesso ao caso para preparação prévia.</li>
+                            <li><strong>Aplicação em sala</strong>: quando o caso será discutido presencialmente.</li>
+                            <li><strong>GRUPO TURMA</strong>: qual turma utilizará o recurso.</li>
+                        </ul>
+                        <div class="margemParaImagem" style="margin-top:80px"></div>
+                        <div class="imageContainer row">
+                            <img src="../../../html-TAI/img/Recursos/utilizar-recursos/step4.png" alt="" class="imgLeft">
+                            <div class="boxDestaqueAdicional" id="RecursosUtilizar6">
+                                <p>Caso o grupo de turma não apareça na lista suspensa é necessário abrir um chamado junto ao Help Desk (<a href="mailto:helpdesk@insper.edu.br?subject=Abertura&nbsp;de&nbsp;chamado">helpdesk@insper.edu.br</a>).</p>
+                            </div>
+                            <div class="boxDestaque" id="RecursosUtilizar7">
+                                <p>Se necessário, escreva alguma observação na caixa de comentários e clique em <strong>Solicitar Caso</strong>.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        
+                        <h4 class="subTopicos">Localizar solicitação</h4>
+                        <div class="imageContainer row">
+                            <img src="../../../html-TAI/img/Recursos/utilizar-recursos/step5.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="RecursosUtilizar7a">
+                                <p>Utilize os filtros para localizar a solicitação do caso e clique em <strong>Pesquisar</strong>.</p>
+                            </div>
+                        </div>
+                         <div class="margemParaImagem" style="margin-top:60px"></div>
+                        <h4 class="subTopicos">Acompanhar solicitação</h4>
+                        <div class="imageContainer row">
+                            <img src="../../../html-TAI/img/Recursos/utilizar-recursos/step6.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="RecursosUtilizar8">
+                                <p>Após localizar a solicitação, clique na informação da coluna <strong>Status</strong>. Será exibida uma tela com o WorkFlow da Solicitação.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:80px"></div>
+                        <h4 class="subTopicos">Cancelar solicitação</h4>
+                        <div class="imageContainer row">
+                            <img src="../../../html-TAI/img/Recursos/utilizar-recursos/step7.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="RecursosUtilizar8a">
+                                <p>Para cancelar uma solicitação, clique em Cancelar e confirme.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+
+                        <!-- 
+                        ################################################################
+                        -->
+
+                        <h2 id="solicitar-simuladores">Solicitar, acompanhar e cancelar simuladores</h2>
+                        <p>Para solicitar um simulador de Harvard é necessário:</p>
+                        <ol>
+                            <li>Localizá-lo no <a href="http://hbsp.harvard.edu/" target="_blank">Portal de Harvard</a>.</li>
+                            <li>Pedir autorização de uso para o coordenador do programa.</li>
+                            <li>Após autorização do coordenador, solicitar a compra das licenças, com antecedência mínima de uma semana, para <a href="mailto:cursosonline@insper.edu.br?subject=Simuladores">cursosonline@insper.edu.br</a>. No e-mail é necessário informar:</li>
+                            <ul>
+                                <li>Nome do recurso</li>
+                                <li>Nome da disciplina</li>
+                                <li>Número de licenças (quantidade de alunos)</li>
+                                <li>Período de utilização</li>
+                            </ul>
+                        </ol>
+                        <p>Após a compra das licenças, o link do recurso será enviado para <a href="#disponibilizar-links">disponibilização aos alunos no ambiente virtual da disciplina no Blackboard</a>.</p>
+                        <p>O cancelamento da solicitação deve ser feito pelo e-mail <a href="mailto:cursosonline@insper.edu.br?subject=Simuladores">cursosonline@insper.edu.br</a>.</p>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <!-- 
+                        ################################################################
+                        -->
+
+                        <h2 id="solicitar-cursos">Solicitar, acompanhar e cancelar cursos online</h2>
+                        <p>Para solicitar um curso online de Harvard é necessário:</p>
+                        <ol>
+                            <li>Localizá-lo no <a href="http://hbsp.harvard.edu/" target="_blank">Portal de Harvard.</a></li>
+                            <li>Pedir autorização de uso para o coordenador do programa.</li>
+                            <li>Após autorização do coordenador, solicitar a compra das licenças, com antecedência mínima de uma semana, para <a href="mailto:cursosonline@insper.edu.br?subject=Cursos&nbsp;online">cursosonline@insper.edu.br</a>. No e-mail é necessário informar:</li>
+                            <ul>
+                                <li>Nome do recurso</li>
+                                <li>Nome da disciplina</li>
+                                <li>Número de licenças (quantidade de alunos)</li>
+                                <li>Período de utilização</li>
+                            </ul>
+                        </ol>
+                        <p>Após a compra das licenças, o link do recurso será enviado para <a href="#disponibilizar-links">disponibilização aos alunos no ambiente virtual da disciplina no Blackboard</a>.</p>
+                        <p>O link do recurso também será enviado por e-mail aos alunos.</p>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <h4 class="subTopicos">Localizar curso online</h4>
+                        <p>Ao utilizar um curso online de Harvard, é importante acessar o ambiente, acompanhar o andamento da turma e extrair relatórios de participação.</p>
+                        <div class="imageContainer row">
+                            <img src="../../../html-TAI/img/Recursos/utilizar-recursos/step8.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="RecursosUtilizar8b">
+                                <p>Clique em <strong>My Courses</strong> e acesse a turma que deseja consultar.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <div class="imageContainer row">
+                            <img src="../../../html-TAI/img/Recursos/utilizar-recursos/step9.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="RecursosUtilizar9">
+                                <p>Para exibir turmas já encerradas, clique em <strong>Show Closed Coursepacks</strong>.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <div class="imageContainer row">
+                            <img src="../../../html-TAI/img/Recursos/utilizar-recursos/step10.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="RecursosUtilizar9a">
+                                <p>Ao visualizar a lista de cursos, clique em <strong>Manage Course Section</strong>.</p>
+                            </div>
+                            <div class="boxDestaqueAdicional" id="RecursosUtilizar10">
+                                <p><strong>Atenção</strong>: nunca clique no botão <span class="enfaseBox">X</span> da lista, pois ele excluir o curso.</p>
+                            </div>
+                        </div>
+                        <ul>
+                            <li><span class="enfaseBox">A</span> <strong>CLASS SUMMARY</strong>: permite acompanhar o andamento da turma. Pode-se consultar o rendimento individual dos alunos, bem como exportar o relatório em Excel.</li>
+                            <li><span class="enfaseBox">B</span> <strong>GROUP SETUP</strong>: se necessário, permite editar a nota de corte dos testes (recomenda-se deixar conforme o padrão de Harvard).</li>
+                            <li><span class="enfaseBox">C</span><strong> STUDENT VIEW</strong>: permite visualizar o conteúdo do curso exatamente como os alunos veem.</li>
+                        </ul>
+
+                        <div class="margemParaImagem" style="margin-top:80px"></div>
+                        <h4 class="subTopicos">Acompanhar andamento e gerar relatório</h4>
+                        <div class="imageContainer row">
+                            <img src="../../../html-TAI/img/Recursos/utilizar-recursos/step11.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="RecursosUtilizar11">
+                                <p><img src="../../../html-TAI/img/Recursos/utilizar-recursos/step11a.png" alt=""></p>
+                                <p>Clique em <strong>Export to Excel</strong> para gerar a planilha do relatório. O ícone <span class="enfaseBox">X</span> indica que a nota está abaixo da nota de corte. O ícone <span class="enfaseBox" style="background-color:#15cd02">v</span> indica que a nota é igual ou superior à nota de corte.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:120px"></div>
+
+                         <div class="imageContainer row">
+                            <img src="../../../html-TAI/img/Recursos/utilizar-recursos/step12.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="RecursosUtilizar12">
+                                <p><img src="../../../html-TAI/img/Recursos/utilizar-recursos/step11b.png" alt=""></p>
+                                <p>Ao clicar em <strong>Detail</strong>, pode-se consultar o rendimento de cada aluno O ícone <span class="enfaseBox">X</span> indica que o aluno errou (resposta correta em amarelo). O ícone <span class="enfaseBox" style="background-color:#15cd02">v</span> indica que o aluno acertou.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:80px"></div>
+                        <h4 class="subTopicos">Cancelar solicitação</h4>
+                        <p>O cancelamento da solicitação de um curso online deve ser feito pelo e-mail <a href="mailto:cursosonline@insper.edu.br?subject=Curos%20online%20-%20-cancelamento">cursosonline@insper.edu.br</a>.</p>
+
+
+                        <!-- 
+                        ################################################################
+                        -->
+
+                        <div class="margemParaImagem" style="margin-top:60px"></div>
+                        <h2 id="disponibilizar-links">Disponibilizar links de casos, simuladores e cursos online aos alunos</h2>
+                        <p>Após solicitar os recursos que deseja utilizar, você receberá por e-mail os links de cada um desses recursos. Esses links devem ser disponibilizados aos alunos pelo ambiente virtual da disciplina.</p>
+
+                        <h4 class="subTopicos">Disponibilizar link do recurso no ambiente virtual</h4>
+                        <div class="imageContainer row">
+                            <img src="../../../html-TAI/img/Recursos/utilizar-recursos/step13.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="RecursosUtilizar13">
+                                <p>Para disponibilizar o link do recurso aos alunos no ambiente virtual da disciplina, basta <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html-TAI/Blackboard/materiais/compartilhar-materiais-com-os-alunos/#subTitulo6">criar uma URL</a>.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <h4 class="subTopicos">Disponibilizar link para público específico</h4>
+                        <p>Caso seja necessário restringir a visualização dos recursos a grupos específicos de alunos é preciso criar uma <strong>Versão Adaptável</strong> no link do recurso. Isso é útil, por exemplo, quando o recurso possui versões diferentes para cada grupo.</p>
+                        <p>Para isso, é preciso:</p>
+                        <ul>
+                            <li><a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html-TAI/Blackboard/grupos/criar-grupos/" target="_blank">Criar grupos de alunos</a> (um para cada recurso, por exemplo)</li>
+                            <li><a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html-TAI/Blackboard/materiais/compartilhar-materiais-com-os-alunos/" target="_blank">Criar links para os recursos</a></li>
+                            <li><a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/Manuais/html-TAI/Blackboard/geral/restringir-visualizacao-de-materiais/" target="_blank">Configurar o controle de acesso em cada link</a></li>
+                        </ul>
+                        <div class="imageContainer row">
+                            <img src="../../../html-TAI/img/Recursos/utilizar-recursos/step14.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="RecursosUtilizar14">
+                                <p>No menu de opções do link que terá sua visualização restringida, selecione a opção <strong>Versão Adaptável</strong>.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <div class="imageContainer row">
+                            <img src="../../../html-TAI/img/Recursos/utilizar-recursos/step15.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="RecursosUtilizar15">
+                                <p>Passe para a coluna à direita os alunos e/ou grupos que poderão acessar o recurso e clique em <strong>Enviar</strong>.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+                        <p>No exemplo, o caso “Seneca Systems” possui três links, um para cada “personagem” do caso. Para restringir o acesso de cada versão do caso somente aos seus “personagens”, foram criados previamente três grupos no Blackboard: um para cada versão. Após a publicação dos links na área de Conteúdo, cada um teve sua <strong>Versão Adaptável</strong> configurada de modo a restringir sua visualização ao grupo correspondente.</p>
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        
+                        <!-- 
+                        
+                        ÂNCORAS [VOLTAR AO SUMÁRIO]
+                        1- Adicionar a div.row vazia antes de cada subtítulo ('h2'). Ela será respónsável também de inserir a âncora para retornar ao sumário lá em cima;
+                        2- a div#ancoraSaibaMais fica após o fechamento desta tag 'article'. Ela é por padrão fixa em todos os manuais. Em situações em que o manual não tiver 'Manuais relacionados' e 'Manuais Complementares' esta div desaparece;
+                        3- Depois da tag section.saibaMais há a única âncora da página que não recebe condicionais;
+
+                         -->
+
+
+                    </article>
+
+                    <!-- Devido aos poucos itens do 'Saiba Mais'
+                    <div id="ancoraSaibaMais" class="voltarSumario fix">
+                        <a href="#pesquisa">Início</a>
+                    </div> -->
+                    
+                    <!-- inicio do box Saiba mais -->
+                    <section class="saibaMais row fix">
+                        <h2 id="saiba-mais" class="ancora">Saiba Mais</h2>
+                        
+                        <h4 id="relacionado">Manuais relacionados</h4>
+                        <ul  ng-controller="manuaisRelacionados">
+                            <!-- class="default"  -->
+                            <li ng-repeat="item in utilizar_recursos" class="ng-class: item.tipoIcone">
+                                <div><a href="{{item.Link}}">{{item.manual}}</a></div>
+                            </li>
+                        </ul>
+                        
+                        <h4 id="complementar">Materiais complementares</h4>
+                        <ul ng-controller="materiaisComplementares">
+                            <li ng-repeat="item in utilizar_recursos" class="ng-class: item.tipoIcone">
+                                <div><a href="{{item.Link}}" target="_blank">{{item.manual}}</a></div>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <div class="voltarSumario fix">
+                        <a href="#pesquisa">Início</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="fix respiro"></div>
+
+<!-- Scripts: plugins -->
+<script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
+<script src="../../../html-TAI/js/libs/angular.js"></script>
+<script src="../../../html-TAI/js/libs/jquery.placeholder.js"></script>
+
+<!-- Scripts: controllers do AngularJs -->
+<script src="../../../html-TAI/js/listaCompletaManual.js"></script>
+<script src="../../../html-TAI/js/manuaisRelacionados.js"></script>
+<script src="../../../html-TAI/js/materiaisComplementares.js"></script>
+
+<!-- Scripts: do projeto -->
+<script src="../../../html-TAI/js/main.js"></script>
+
+<!-- Scripts: google analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53927287-1', 'auto');
+  ga('send', 'pageview');
+  // ga('set', '&uid', {{UA-53927287-1}});
+</script>
+</body>
+</html>

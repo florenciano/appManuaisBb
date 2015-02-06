@@ -1,0 +1,19 @@
+/*  ===============================================================
+    
+    ESTE DOCUMENTO CONTÉM TODAS AS REGRAS DE ESTILO
+
+    A divisão consiste em:
+    1- Reset CSS: Normalizr.
+    Disponível em: https://github.com/necolas/normalize.css
+    2- Responsive Web Design RWD: Gridiculous.
+    Disponível em: http://gridiculo.us;
+    3- As regras de definição do visual designer UI;
+    4- Um anexo para uso exclusivo do posicionamento dos boxes
+    das imagens [printscreen] dos manuais;
+
+================================================================== */
+
+@import "plugins/normalizr";
+@import "plugins/gridiculous";
+@import "layout/layout";
+@import "layout/boxes";

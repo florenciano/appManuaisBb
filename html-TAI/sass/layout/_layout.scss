@@ -1,0 +1,1633 @@
+/*  ===============================================================
+   
+    REGRAS DE ESTILO: VISUAL DESIGNER
+
+================================================================== */
+
+/////////////////////////////////////////////////////////////////////
+// Vars
+/////////////////////////////////////////////////////////////////////
+
+// fonts
+$font: "verdana", "arial", "sans-serif";
+
+// colors
+$corDefault: #c00026; // red insper
+$corTitle: #2d2d2d; // title h1 html
+$corTexto: #414042; // default text content
+$corBorda: #bcbec0; // gray default
+$corDefaultDark: #7b0012; // red dark GUI
+$corSec01: #f57d8c; // secundary GUI
+$corSec02: #e64b64; // secundary2 GUI
+
+// grids
+$grid: 40px;
+$meioGrid: $grid / 2;
+
+
+@mixin font($fstyle, $fsize) {
+    font: $fstyle $fsize $font;
+}
+
+@mixin corLink() {
+    text-decoration: none;
+    color: $corDefault;
+    // display: inline-block;
+    &:visited {
+        color: $corDefaultDark
+    }
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+@mixin corLinkUpBox($corDigitada) {
+    text-decoration: none;
+    color: $corDigitada;
+    // display: inline-block;
+    &:visited {
+        color: $corDigitada;
+    }
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+/////////////////////////////////////////////////////////////////////
+// Mixin
+/////////////////////////////////////////////////////////////////////
+
+@mixin bShadow($typeShadow, $lenH,$lenV,$blur,$spread,$rgba) {
+    box-shadow: $typeShadow $lenH $lenV $blur $spread $rgba;
+    -o-box-shadow: $typeShadow $lenH $lenV $blur $spread $rgba;
+    -ms-box-shadow: $typeShadow $lenH $lenV $blur $spread $rgba;
+    -moz-box-shadow: $typeShadow $lenH $lenV $blur $spread $rgba;
+    -webkit-box-shadow: $typeShadow $lenH $lenV $blur $spread $rgba;
+}
+
+@mixin box-size($boxSize) {
+    box-sizing: $boxSize;
+    -o-box-sizing: $boxSize;
+    -ms-box-sizing: $boxSize;
+    -moz-box-sizing: $boxSize;
+    -webkit-box-sizing: $boxSize;
+}
+
+@mixin radius($radius: 4px) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin transition($transition) {
+    transition: $transition;
+    -o-transition: $transition;
+    -ms-transition: $transition;
+    -moz-transition: $transition;
+    -webkit-transition: $transition;
+}
+
+@mixin settingsBoxImagem($widthBox, $leftBox, $topBox, $rightBox, $bottomBox) {
+    position: absolute;
+    width: $widthBox;
+    left: $leftBox;
+    bottom: $bottomBox;
+    top: $topBox;
+    right: $rightBox;
+}
+
+/////////////////////////////////////////////////////////////////////
+// Resets
+/////////////////////////////////////////////////////////////////////
+
+html, body { height: 100%; min-height: 100%;}
+
+* {
+    @include box-size(border-box);
+    
+}
+body {
+    @include font(normal, 100%);
+    line-height: 1.6875;
+    color: $corTexto;
+    text-rendering: optimizeLegibility;
+    // @include transition(all .20s ease);
+    // Trasition removed in all style, it's not a good pratice
+}
+
+.wrapper {
+    background-color: #fff;
+    border: 1px solid $corBorda;
+}
+
+/*  $Media Queries
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Media query MOBILE
+
+// As regras que afetarão todas as medias queries ficam declaradas aqui.
+// O projeto foi desenvolvido sob o conceito 'mobile first'.
+// Mesmo após ser abdicado a aplicação para mobiles.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@media only screen and (min-width:160px) {
+    
+    // pop-up para alerta de pequena resolução
+    // solução baseada nos alerts Bootstrap
+   .alert, .alert-change {
+        padding: ($meioGrid - 5);
+        border: 1px solid transparent;
+        width: 90%;
+        margin: $meioGrid auto;
+        @include radius();
+        @include font(normal, .9em);
+        @include transition(none !important)
+    }
+    .alert-change { display: block; }
+    .alert-dismissable {
+        padding-right: $grid - 5;
+    }
+    .alert-warning {
+        color: $corDefaultDark;
+        background-color: #f2dede;
+        border-color: #ebccd1;
+    }
+    button.close, button.close-change {
+        float: right;
+        @include font(bold, 1.4em);
+        line-height: 1;
+        text-shadow: 0 1px 0 #fff;
+        opacity: .3;
+        padding: 0;
+        cursor: pointer;
+        background: transparent;
+        border: 0;
+        -webkit-appearance: none;
+        position: relative;
+        top: -3px;
+        right: -21px;
+        color: inherit;
+    }
+
+    // regras para o header: logo + nome do projeto
+    .logo {
+        margin: ($meioGrid /2) 0 auto;
+        img {
+            max-width: $grid * 5;
+        }
+    }
+    .titleHeader {
+        text-align: center;
+        padding-bottom: $meioGrid;
+        .title {
+            @include font(bold, 1.6em);
+            margin: 0;
+        }
+        .description {
+            @include font(normal, 1.2em);
+            color: #fff;
+            display: inline-block;
+            background-color: $corDefault;
+            height: $meioGrid + 2;
+            line-height: $meioGrid + 2;
+            padding: 0 $meioGrid;
+            margin: ($meioGrid/4) 0 0;
+        }
+    }
+
+    // regra para o container
+    .containerMain { border-top: 1px solid $corBorda; padding-top: $meioGrid; }
+
+    // display mostrando a qtde de links encontrados
+    // NOTA: desontinuado a partir da versão 3
+    #display { margin-top: 5px; text-align: center; @include font(normal, 1.1em); }
+
+    // regras para a área de busca 'input'
+    .inputSearch {
+        input[type="text"] {
+            color: $corTexto;
+            width: 100%;
+            height: $grid - 8;
+            padding: 0 1em;
+            @include radius();
+            @include bShadow(inset, 0, 0, 5px, 0, rgba(0,0,0,0.25));
+            border: 1px solid $corBorda;
+            &:focus {
+                @include bShadow(inset, 0, 0, 5px, 0, rgba(207,20,50,0.25));
+                // only application
+                border: 1px solid $corDefault;
+            }
+        }
+        p { line-height: $meioGrid + 2;}
+    }
+
+
+    /* regras para a seção de busca dos manuais */
+    
+    // definindo estilos dos ícones dos assuntos
+    .icoBlackboard  { background: url("../img/ui/icoBlackboard.png") left center no-repeat; }
+    .icoCatme       { background: url("../img/ui/icoCatme.png") left center no-repeat; }
+    .icoClickers    { background: url("../img/ui/icoClickers.png") left center no-repeat; }
+    .icoCasos       { background: url("../img/ui/icoCaso.png") left center no-repeat; }
+    .icoSimuladores { background: url("../img/ui/icoSimulador.png") left center no-repeat; }
+    .icoCursosOnline  { background: url("../img/ui/icoCurso.png") left center no-repeat; }
+    .icoFaq  { background: url("../img/ui/icoFaq.png") left center no-repeat; }
+
+    // regras que afetam títulos dos assuntos, listas, sublistas e links
+    .navigationMain {
+        // @include transition(all .40s ease);
+        margin-top: $meioGrid;
+
+        // regra da categoria vigente do manual ex: categoria 'Trabalhos' do Blackboard
+        .selectedCategory {
+            // border: 1px solid $corDefault;
+            background-color: $corDefault;
+            padding: ($meioGrid / 4) ($meioGrid / 4) ($meioGrid / 4) ($meioGrid - 5);
+            margin: 0;
+            color: #fff;
+            @include radius();
+            a, a.hover, a.active, a.visited {
+                color: #fff !important;
+            }
+        }
+        h5 {
+            clear: both;
+            margin: 0;
+            @include font(bold, 1.2em);
+            display: block;
+            padding: ($meioGrid - 8) 0 ($meioGrid - 8) $grid ;
+            min-height: $grid - 2;
+        }
+        ol, ul {
+            margin: 0 0 0 0;
+            padding: 0;
+            list-style: none;
+            display: block;
+            width: 100%;
+            float: left;
+
+            li {
+                margin: 0;
+                padding: 0;
+                padding-left: $meioGrid;
+                float: left;
+                width: 100%;
+                @include radius();
+
+                a {
+                    margin: 0;
+                    padding: 0 ($meioGrid / 4);
+                    text-decoration: none;
+                    display: inline-block;
+                    height: 100%;
+                }
+            }
+        }
+
+        // regras que afetam o GUI da área do menu
+        // OBS: acabou virando o modelo principal
+        // NOTA: Adotado a partir da versão 3 quando não se tinha
+        // categoria entre os assuntos
+        .noCategory {
+            p { 
+                margin: 3px 0;
+                padding-left: $meioGrid / 2;
+                @include font(bold, 1em);
+            }
+            li {
+                a {
+                    @include corLink();
+                    padding: 0;
+                }
+                &:last-child { margin-bottom: $meioGrid / 4 }
+            }
+            .nameCategory { padding: 0; margin: 0}
+        }
+
+        hr { clear: both; margin: ($meioGrid / 2) 0; border-top: 1px solid $corBorda; }
+
+        .faqBusca {
+            margin-top: ($meioGrid / 2);
+            display: block;
+            padding: ($meioGrid / 4) 0;
+            float: left;
+            width: 100%;
+            border-top: 1px solid $corBorda;
+            border-bottom: 1px solid $corBorda;
+            h5 {
+                margin: ($meioGrid / 10) 0;
+                a {
+                    @include corLink();
+                    &:visited {
+                        color: $corDefault;
+                    }
+                }
+            }
+        }
+
+        .outros {
+            clear: both;
+            padding: $meioGrid 0;
+            text-align: center;
+            h6 {
+                margin: 0;
+                @include font(normal, 1em); // para sobrescrever o reset 'h6' 0.667em
+                a {
+                    @include corLink();
+                }
+            }
+        }
+    }
+
+    // divise navigation and content [only mobile]
+    // NOTA: descontinuado a partir da versão 2
+    .divisionMobile {
+        height: 20px;
+        display: block;
+        background: url("../img/ui/separatedMenu.gif") 0 0 repeat-x;
+        border-bottom: 1px solid $corBorda;
+        border-top: 1px solid $corBorda;
+    }
+
+    // regras de estilo que afetam o header do manual. ex: breadbrumb, data de atualização
+   .headerContent  {
+        margin: 0;
+        .cabecalho {
+            padding: $meioGrid 0;
+            display: block;
+            p { margin: 0 }
+            .imprimir {
+                float: right;
+                span {
+                    height: 15px;
+                    width: $meioGrid;
+                    background: url("../img/ui/imprimir.png") center center no-repeat;
+                    margin-right: $meioGrid / 5;
+                    display: inline-block;
+                    text-indent: -9999px;
+                }
+                a { @include corLink(); }
+            }
+        }
+
+        hr { margin: 0; }
+    }
+    .mainContent { 
+
+    }
+    .mainContent .contentMain { margin-top: $meioGrid; }
+
+    // regras de estilo para a página de melhorias
+    .contentMainMelhorias {
+        font-size: 112.5%;
+        ol {
+            li { line-height: 1.75em; }
+        }
+    }
+    // regras que afetam o conteúdo do manual
+    .contentMain {
+        h1 {
+            @include font(bold, 1.8em);
+            line-height: 1em;
+            color: $corTitle;
+        }
+        h2 {
+            margin: $meioGrid 0 ($meioGrid / 4) 0;
+        }
+        h2 + p { margin-top: 0; }
+        p {
+            line-height: 1.6em;
+            a { @include corLink(); display: inline}
+        }
+
+        /////////////////////////////////////////////////////////////
+        // Aqui ficarão declaradas as novas regras conforme
+        // for produzido o material. Ex: listas, tabelas, videos etc
+        /////////////////////////////////////////////////////////////
+
+        //regras gerais
+        section { @include font(normal, 1em); }
+        a { @include corLink(); }
+        ol {
+            li { margin: ($meioGrid / 4) 0; line-height: 1.45em; }
+            li:first-child { margin-top: 0; }
+        }
+        ul {
+            li { 
+                list-style-type: square;
+                margin: ($meioGrid / 4) 0;
+            }
+            li:first-child { margin-top: 0}
+        }
+        table { 
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+            border:1px solid #c8c8c8;
+            td { vertical-align: middle; text-align: center }
+        }
+        figure { margin: 0; }
+        figcaption { 
+            @include font(normal, 92.5%);
+            text-align: center;
+            display: block;
+            color: #8f8f8f;
+            margin-top: $meioGrid / 4;
+        }
+        // O que é blackboard: quais instituições
+        .containerSec { 
+            width: 80%;
+            margin: 0 auto;
+            display: block;
+            border: 1px solid $corBorda;
+            @include radius();
+            p {
+                @include font(bold, 1em);
+                margin: ($meioGrid / 2) ($meioGrid / 2) ($meioGrid / 2) $grid;
+            }
+        }
+        
+        // O que é blackboard: principais funções
+        .funcBlackboard {
+            h4 {
+                background-color: $corDefault;
+                color: #fff;
+                text-align: center;
+                padding: 1em 0;
+                margin: 0;
+                display: block;
+            }
+            ul {
+                margin: 0;
+                padding: ($meioGrid / 2) 0 ($meioGrid / 2) ($grid - 10px);
+                border: 1px solid $corBorda;
+            }
+        }
+        
+        // Acessar pelo computador: tabelas
+        .plataformasTable {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            tr:nth-child(odd) { background-color: #f0f0f0; } //cores especificas para este caso
+            tr:nth-child(even) { background-color: #dcdcdc; } //cores especificas para este caso
+            tr:first-child { 
+                background-color: #737373; 
+                td { color: #fff; border-color: #fff; }
+            }
+            td {
+                border: 1px solid $corBorda;
+                border-width: 0px 1px 1px 0px;
+                padding: ($meioGrid / 4);
+            }
+            tr:last-child td { border-width: 0px 1px 0px 0px; }
+            tr td:last-child { border-width: 0px 0px 1px 0px; }
+            tr:last-child td:last-child{ border-width: 0px 0px 0px 0px; }
+            }
+        }
+        // ... avaliação entre colegas
+        .subTopicos {
+            margin: 0;
+            & + p { margin: 0 0 1em 0; }
+        }
+
+        // blackboard: receber trabalho com verficacao de plagio
+            // criei uma classe no article para atacar os elementos desta página
+        .recTrabComVerPlagio {
+            h4 { margin: 1em 0 .25em; font-size: 111.25%; }
+            ol, ul {
+                padding-left: 1.5em;
+                margin: 0;
+            }
+            .subListas {
+                padding: 0;
+                li {
+                    list-style: none;
+                    &::before {
+                        content: "\0336\ ";
+                        display: inline-block;
+                        padding: 0 .5em;
+                        margin-right: .5em;
+                    }
+                }
+            }
+            .subListasNivel2 {
+                padding-left: 3em;
+                li {
+                    list-style-type: disc;
+                    &::before {
+                        content: "";
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        // copiar testes e pesquisas de outra disciplina
+        .tableCopiarTestPesquisa {
+            .tableEnfaseText {
+                font-size: 111.25%;
+                line-height: 1.25em;
+                display: block;
+                margin: 10px 0 0;
+                // border-top: 1px solid rgba(255,255,255,.3);
+                padding-top: 5px;
+            }
+            margin: 0 auto !important;
+            width: 80% !important;
+            tr {
+                td { padding: 10px !important; }
+            }
+            tr:last-child {
+                td { line-height: 1.45em }
+            }
+            .opcao {
+                background-color: #fff;
+                padding: .25em;
+                color: #009491;
+                border-radius: 2px;
+                font-weight: bold;
+            }
+        }
+
+        // Exemplos de dinâmicas
+            // Box: 'Para Refletir' e 'Pontos Positivos'
+            .boxParaRefletir, .boxPontosPositivos {
+                box-shadow: 0 0 15px rgba(1,1,1,.2);
+                    -o-box-shadow: 0 0 15px rgba(1,1,1,.2);
+                    -ms-box-shadow: 0 0 15px rgba(1,1,1,.2);
+                    -moz-box-shadow: 0 0 15px rgba(1,1,1,.2);
+                    -webkit-box-shadow: 0 0 15px rgba(1,1,1,.2);
+                @include radius(4px);
+                border: 1px solid #ccc;
+                margin: ($meioGrid / 4) 0;
+                .titleBox {
+                    width: 100%;
+                    display: block;
+                    border-bottom: 2px solid #ccc;
+                    background: transparent url("../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/icoRefletir.png") no-repeat 10px center; // 20X20px tirar daqui
+                    h4 {
+                        padding: 1em 0;
+                        margin: 0;
+                        text-indent: $grid;
+                    }
+                }
+                .listBox {
+                    line-height: 1.4em;
+                    ul {
+                        padding: $meioGrid;
+                        margin: 0;
+                        li {
+                            list-style: none;
+                            position: relative;
+                            margin-bottom: $meioGrid / 2;
+                        }
+                    }
+                }
+            }
+            // Box: 'Para refletir'
+            .boxParaRefletir {
+                background-color: #fcf8e3;
+                border-color: #faebcc;
+                .titleBox { border-bottom-color: #f8b412; }
+            }
+            // Box: 'Pontos Positivos'
+            .boxPontosPositivos {
+                background-color: #fff;
+                border-color: #d6e9c6;
+                .titleBox {  
+                    border-bottom-color: #45c113; 
+                    background-image: url("../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/icoPositivos.png");
+                }
+                .listBox {
+                    ul {
+                        padding-left: $meioGrid * 1.5;
+                        li {
+                            &:before {
+                                content: "";
+                                display: inline-block;
+                                background: transparent;
+                                width: $meioGrid / 2;
+                                height: $meioGrid * 1.5;
+                                position: absolute;
+                                left: -20px;
+                                top: -5px;
+                            }
+                        }
+                        li.verdeClaro:before { background: transparent url("../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/bulletVerde.png") no-repeat center center; }
+                        li.verdeEscuro:before { background: transparent url("../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/bulletVerdeEscuro.png") no-repeat center center; }
+                        li.azul:before { background: transparent url("../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/bulletAzul.png") no-repeat center center; }
+                        li.rosa:before { background: transparent url("../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/bulletRosa.png") no-repeat center center; }
+                        li.amarelo:before { background: transparent url("../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/bulletAmarelo.png") no-repeat center center; }
+                        li.laranja:before { background: transparent url("../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/bulletLaranja.png") no-repeat center center; }
+                        li.roxo:before { background: transparent url("../img/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/bulletRoxo.png") no-repeat center center; }
+                    }
+                }
+            }
+            .tableExDinamicas {
+                font-size: 92.5%;
+                tr {
+                    td { width: 20%; vertical-align: middle; }
+                }
+            }
+
+        // Boas práticas
+        .tableBoasPraticas {
+            tr {
+                td { width: 40%; line-height: 1.45em; }
+                td:first-child { width: 20%; font-weight: bold; }
+            }
+            ul {
+                padding-left: 20px;
+                margin: 10px 0;
+                li { margin: 0; }
+            }
+        }
+        .contentArticleExDinamicas {
+            .imageContainer {
+                img { border: 1px solid #e6e7e8; }
+            }  
+        }
+        
+        // Novos elementos do catme
+        
+        // O que é a ferramenta Catme
+        .boxURLCatme {
+            display: block;
+            border: 2px solid $corDefault;
+            width: 30%;
+            margin: 2em auto;
+            text-align: center;
+            padding: 1em 0;
+            @include radius();
+        }
+        .boxURLListExistente{
+            width: 45%;
+            margin: 1em auto;
+        }
+        section.destCatme {
+            width: 75%;
+            left: 12.5%;
+            padding: .5em;
+            float: left;
+            margin: ($meioGrid / 4) !important;
+            
+            .boxDestaqueAdicional {
+                @include radius(10px);
+                padding: 1.75em 0;
+            }
+        }
+
+        // Listagem geral 
+        section.destListagem {
+            width: 82%;
+            left: 9%;
+            padding: .5em;
+            float: left;
+            margin: ($meioGrid / 4) !important;
+
+            .atencaoListagemAl {
+                padding: 1em !important;
+                @include radius(10px);
+                
+                h3 { margin: .25em 0 .75em 0; }
+            }
+        }
+
+        // listagem de alunos
+        .listagemAlunos {
+            p { margin: 0; }
+            ul {
+                margin: 0;    
+                padding: 0 0 0 1.25em;
+                li {
+                   ul { 
+                        li { list-style-type: circle; }
+                    }
+                }
+            }
+            img { margin-top: $meioGrid / 4 }
+            .recuoList{ margin-top: 0;}
+        }
+
+        // pesquisa de avaliação
+        .pesqAvaliacao {
+            @include radius($meioGrid/5);
+            padding: $meioGrid / 2;
+            background-color: $corDefaultDark;
+            border: 0;
+            color: #fff;
+            // sobrescrevendo regras
+            width: 77% !important;
+            margin-left: 11.5% !important;
+            p {
+                line-height: 1.5em;
+                margin: 0 0 .5em;
+                &:last-child { margin: 0 }
+                img { display: inline-block; }
+                a { @include corLinkUpBox($corSec01); }
+            }
+        }
+
+        // Grupos (new)
+        .listagemBbGrupos {
+            p { 
+                margin-top: .875em;
+                line-height: 1.4em;
+            }
+        }
+        // acessar resultados de uma avaliacao existente
+        .tableAvalExistente {
+            margin:0px;
+            padding:0px;
+            width:100%;
+            border:1px solid $corBorda;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        .tableAvalExistente th[scope="col"] {
+            background-color: #737373;
+            color: #fff;
+            height: 3em;
+            border: 1px solid #555;
+        }
+        .tableAvalExistente tr:nth-child(odd) { background-color:#ebebeb; }
+        .tableAvalExistente tr:nth-child(even) { background-color:#ffffff; }
+        .tableAvalExistente tr td {
+            vertical-align: top;
+            border:1px solid $corBorda;
+            border-width:0px 1px 1px 0px;
+            text-align:left;
+            padding:5px;
+            color:#000000;
+        }.tableAvalExistente tr:last-child td {
+            border-width:0px 1px 0px 0px;
+        }.tableAvalExistente tr td:last-child {
+            border-width:0px 0px 1px 0px;
+        }.tableAvalExistente tr:last-child td:last-child {
+            border-width:0px 0px 0px 0px;
+        }
+        .tableAvalExistente tr:first-child td {
+            background-color:#3c3c3c;
+            border:0px solid $corBorda;
+            text-align:center;
+            border-width:0px 0px 1px 1px;
+            color:#ffffff;
+        }
+        .tableAvalExistente tr:first-child td:first-child {
+            border-width:0px 0px 1px 0px;
+        }
+        .tableAvalExistente tr:first-child td:last-child {
+            border-width:0px 0px 1px 1px;
+        }
+        
+        // REGRAS PARA O CLICKERS
+
+        // instalar o software TurningPoint
+        .boxInstalarTurning {
+            @extend .boxURLCatme;
+            width: 40%;
+            background-color: #7b0012;
+            color: #fff;
+            padding: $meioGrid / 4;
+            border: none;
+        }
+
+        // Reservar aparelhos com HelpDesk
+        .boxImagem {
+            margin: 0;
+            padding: 0;
+            figcaption {
+                @include font(normal, 93.75%);
+                text-align: center;
+                margin-top: $meioGrid / 4;
+            }
+        }
+
+        // Inserir cronômetro nos slides
+        .boxErrado {
+            //format
+            background-color: #f2dede;
+            border: 1px solid #ebccd1;
+            color: #a94442;
+            text-align: center;
+            
+            // boxFlex
+            width: 100%;
+            margin: 0 auto;
+            padding: ($meioGrid - 5) ($meioGrid / 4);
+            display: block;
+
+            // radius
+            @include radius();
+
+            p { 
+                margin: 0;
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            span {
+                display: block;
+                height: 45px; 
+                width: 45px; 
+                margin: $meioGrid auto ($meioGrid / 4);
+                background: #DF110D url(../img/Clickers/preparar-slides/inserir-cronometro/icoErrado.png) center center no-repeat;
+                border-radius: 500px;
+            }
+        }
+        .boxCerto { 
+            @extend .boxErrado;
+
+            // format
+            background-color: #dff0d8;
+            border: 1px solid #d6e9c6;
+            color: #3c763d;
+
+            span { background: #4bc44d url(../img/Clickers/preparar-slides/inserir-cronometro/icoCerto.png) center center no-repeat; }
+        }
+
+        // Editar lista de alunos
+        .ClikcerListaAlunos { list-style-type:upper-latin; }
+
+        // Criar lista de controle
+        .tableListaControle { 
+            caption {
+                font-weight: bold;
+                margin: ($meioGrid / 4) 0;
+            }
+            tr {
+                td { text-align: center; }
+            }
+        }
+
+        //  Preparar apresentação
+        .prepararAp {
+            font-weight: bold;
+            span { font-weight: normal; }
+        }
+
+        // Durante a aula
+        .duranteAula {
+            .boxDestaqueAdicional {
+                p {
+                    padding-left: $meioGrid / 2; padding-right: $meioGrid / 2;
+                } 
+                h4 {
+                    margin-left: $meioGrid / 2;
+                }  
+            } 
+        }
+
+        .numb1, .numb2, .numb3, .numb4 {
+            margin-top: $meioGrid / 4;
+            border: 1px solid $corDefault !important;
+            > span {
+                color: #fff;
+                @include font(bold, 112.5%);
+                background-color: $corDefault;
+                @include radius(500px);
+                text-align: center;
+
+                width: 25px;
+                height: 25px;
+                line-height: 25px;
+                display: block;
+                margin: 0 auto ($meioGrid / 2);
+            }
+            p:not(:last-child) {
+                border-bottom: 1px solid $corBorda;
+                padding-bottom: $meioGrid / 4;    
+            }
+            .verde, .vermelho {
+                padding: 0 ($meioGrid / 4);
+                color: #fff;
+            }
+            .verde {
+                background-color: green;
+            }
+            .vermelho {
+                background-color: red;
+            }
+        }
+
+        // Continuar sessão
+        section.continuarSessao {
+            width: 50%;
+            left: 24.5%;
+            h4 { margin-left: $meioGrid  / 2; }
+            p {
+                padding-left: $meioGrid / 2; padding-right: $meioGrid / 2;
+            }
+        }
+
+        // Padronização dos ambientes online da PGLS
+        h4.introdPadronizPGLS { 
+            @include font(normal, 125%);
+        }
+        .subTituloIntrod {
+            margin: 0;
+            font-size: 100%;
+            & + p { margin: 0; }
+        }
+
+
+        ////////////////////////////////////
+        // Blackboard [EXCEÇÃO]
+        ////////////////////////////////////
+        // Gerar relatórios de testes
+        .tiposRel {
+            p {
+                border: 1px solid $corBorda;
+                border-top: none;
+                margin: 0;
+                padding: ($meioGrid / 2);
+            }
+        }
+        section.analiseTeste {
+            width: 60%;
+            left: 15%;
+            .boxDestaqueAdicional {
+                padding: $meioGrid / 2;
+            }
+        }
+        .resumoRel {
+            img {
+                margin-top: $meioGrid / 2;
+            }
+            img.valNegativo { margin-top: -5px;}
+            ul {
+                padding-left: $meioGrid;
+            }
+        }
+        .perguntasTableRel {
+            tr {
+                td { 
+                    width: 50%;
+                    vertical-align: middle;
+                }
+            }
+        }
+
+        /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            PÁGINA: RECURSOS 
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+        // Sobre recursos
+
+        .sobreRecursos {
+            margin:0px;padding:0px;
+            width:100%;
+            border:1px solid #bcbec0;
+        }
+        .sobreRecursos table {
+            border-collapse: collapse;
+             border-spacing: 0;
+            width:100%;
+            height:100%;
+            margin:0px;
+            padding:0px;
+        }
+        .sobreRecursos td {
+            vertical-align:middle;
+            background-color:#ffffff;
+            border:1px solid #bcbec0;
+            border-width:0px 1px 1px 0px;
+            text-align: left;
+            padding: 10px;
+            color:#000000;
+            width: 20%;
+            font-size: 1.1em;
+        }
+        .sobreRecursos tr:last-child td { border-width:0px 1px 0px 0px; }
+        .sobreRecursos tr td:last-child {   border-width:0px 0px 1px 0px; }
+        .sobreRecursos tr:last-child td:last-child { border-width:0px 0px 0px 0px; }
+        .sobreRecursos tr:first-child td {
+            background-color:#faa61a;
+            border:0px solid #bcbec0;
+            text-align:center;
+            border-width:0px 0px 1px 0px;
+            color:#ffffff;
+        }
+        .sobreRecursos tr:first-child td:first-child { border-width:0px 0px 1px 0px; }
+        .sobreRecursos tr:first-child td:last-child { border-width:0px 0px 1px 0px; }
+        // coloring cells
+        .sobreRecursos tr td.fluxo1 { 
+            background: #fff;
+            color: #000;
+        }
+        .sobreRecursos tr td.fluxo2 { background: #faa61a url("../img/Recursos/sobre-os-recursos/step1-0.png") no-repeat left center; }
+        .sobreRecursos tr td.fluxo3 { background: #f58220 url("../img/Recursos/sobre-os-recursos/step1-1.png") no-repeat left center; }
+        .sobreRecursos tr td.fluxo4 { background: #f15a22 url("../img/Recursos/sobre-os-recursos/step1-2.png") no-repeat left center; }
+        .sobreRecursos tr td.fluxo5 { background: #c43150 url("../img/Recursos/sobre-os-recursos/step1-3.png") no-repeat left center; }
+
+
+
+        /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            PÁGINA: FAQ 
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+        // btns de expandir e recolher
+        .exp-rec {
+            .expandAll {
+                display: inline-block;
+                line-height: 1em;
+                height: 100%;
+                padding: 2px;
+                cursor: pointer;
+                img {
+                    margin: -3px .5em 0 0;
+                    display: inline-block;
+                }
+            }
+            .colapseAll {
+                @extend .expandAll;
+            }
+        }
+
+        // title of the sessions
+        .blackboard-faq,
+        .catme-faq,
+        .clickers-faq,
+        .recursos-faq {
+            header {
+                h1 { @include font(bold, 1.6em); }    
+            }
+        }
+
+        // questions and answer of the sessions
+        .question {
+            padding: ($meioGrid / 4) 0;
+            margin: 5px 0 0 0;
+            h4 { 
+                margin: 0;
+                padding: 0;
+                @include font(normal, 1em);
+                span {
+                    width: $meioGrid + 5;
+                    display: inline-block;
+                }
+            }
+        }
+        .answer {
+            margin: 0 0 $meioGrid ($meioGrid + 5);
+            p { margin: ($meioGrid / 4) 0 0; }
+            ul, ol { 
+                padding: 0 0 0 1.25em;
+                li { line-height: 1.25em; } 
+            }
+        }
+
+        // icones de expandir e recolher
+        // estas classes serão alteradas via script
+        .icoExpandir { background: url("../img/ui/expandir.png") no-repeat left center; }
+        .icoRecolher { background: url("../img/ui/recolher.png") no-repeat left center; }
+
+        // effect transition
+        .invisivel { opacity: 0 }
+        .visivel { opacity: 1 }
+
+        /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            PÁGINA: INDEX 
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+        .linhaIndex {
+            width: 50%;
+            margin: ($grid * 1.5) auto;
+            border-color: $corBorda;
+        }
+        .legendaIndex {
+            @include font(normal, 116.67%);
+            p {
+                margin: 0 0 ($meioGrid / 2) 0;
+                padding: 0;
+                line-height: 1.325em;
+                span.icoContato {
+                    background: transparent url("../img/ui/icoContatoIndex.png") no-repeat center center;
+                    width: $grid - 10;
+                    text-align: center;
+                    display: block;
+                    height: 24px;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+
+        /////////////////////////////////////////////////////////////
+        // fim das novas regras
+        /////////////////////////////////////////////////////////////
+
+    // sumario: content dinamic
+    .sumario {
+        margin: $grid 0 !important;
+        h3 {
+            margin: 0 0 ($meioGrid / 4);
+            @include font(bold, 1.2em);
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li {
+                list-style-type: none;;
+                margin: 0 0 ($meioGrid / 2) 0;
+                &:last-child { margin-bottom: 0;}
+                a { @include corLink(); }
+            }
+        }
+    }
+
+    .voltarSumario {
+        display: block;
+        padding-bottom: $meioGrid;
+        margin-top: $meioGrid;
+        a {
+            float: right;
+            @include corLink();
+            &:before {
+                content: "";
+                height: 1.2em;
+                width: 2em;
+                display: inline-block;
+                background: url("../img/ui/sumario.png") center center no-repeat;
+            }
+        }
+    }
+    
+    // controla o alinhamento das img dos manuais
+    .imgLeft { margin-left: 0; }
+    .imgRight { margin-right: 0; }
+
+    // aplica um espacamento entre as imagens
+    .margemParaImagem { 
+        clear: both;
+        display: block;
+        width: 100%;
+        height: $meioGrid / 2;
+    }
+
+    // regras dos estilos do box sobre as imagens
+    .imageContainer {
+        display: block;
+        position: relative;
+        margin: 20px 0 !important;
+
+        .boxDestaque {
+            display: block;
+            @include radius($meioGrid/5);
+            // background-color: #e6e6e6;
+            // border: 3px solid $corDefault;
+            background-color: #fff;
+            border: 2px solid $corDefault;
+            padding: $meioGrid / 2;
+            p {
+                line-height: 1.5em;
+                margin: 0 0 .5em;
+                &:last-child { margin: 0 }
+                img { display: inline-block; }
+            }
+            ul { margin: 0; padding-left: 2em }
+            .c12 { padding: 0;}
+        }
+
+        .boxDestaqueAdicional {
+            display: block;
+            @include radius($meioGrid/5);
+            padding: $meioGrid / 2;
+            background-color: $corDefaultDark;
+            border: 0;
+            color: #fff;
+            p {
+                line-height: 1.5em;
+                margin: 0 0 .5em;
+                &:last-child { margin: 0 }
+                img { display: inline-block; }
+                a { @include corLinkUpBox($corSec01); }
+            }
+            ul { 
+                margin: 0;
+                a { @include corLinkUpBox($corSec01); }
+            }
+            .c12 { padding: 0;}
+        }
+        .icos { margin: 0 .5em; } // ícones nos box de destaques
+       
+
+        h4 { margin: 0 0 ($meioGrid / 4) 0; }
+
+    }
+
+    // textos em ênfase dentro dos boxes
+    .enfaseBox { 
+        color: #fff;
+        text-transform: uppercase;
+        background-color: $corDefault;
+        padding: 2px .5em;
+    }
+
+    .enfaseBoxBolinha { 
+        background-color: #faa61a;
+        border-radius: 50%
+    }
+
+    // saiba mais
+    .saibaMais {
+        border: 1px solid #f57d8c;
+        @include radius();
+        padding: $meioGrid;
+        margin: 0 0 $meioGrid !important;
+
+        h2 {
+            color: #e64b64;
+            margin: 0 0 ($meioGrid / 4) 0;
+            border-bottom: 1px solid #e64b64;
+            @include font(bold, 1.2em);
+            line-height: 1.6em;
+        }
+
+        h4 {
+            margin: $meioGrid 0 ($meioGrid / 2);
+            @include font(bold, 1.1em);
+            line-height: 1.7em;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style:  none;
+            li {
+                display: block;
+                height: $grid;
+                margin: ($meioGrid / 4) 0;
+                padding: 0;
+                @include radius();
+
+                div {
+                    height: $grid;
+                    display: table-cell;
+                    vertical-align: middle;
+                    padding: 0 ($meioGrid / 2) 0 ($grid + 10);
+                    a {
+                        @include corLink();
+                        line-height: 1.4em;
+                    }
+                }
+
+            }
+
+            // inserindo icones nas listas dos manuais relacionados
+            .blackboard     { background: url("../img/ui/icoBlackboard2.png") 5px center no-repeat; }
+            .catme          { background: url("../img/ui/icoCatme2.png") 5px center no-repeat; }
+            .clickers       { background: url("../img/ui/icoClickers2.png") 5px center no-repeat; }
+            .casos          { background: url("../img/ui/icoCaso2.png") 5px center no-repeat; }
+            .simuladores    { background: url("../img/ui/icoSimulador2.png") 5px center no-repeat; }
+            .cursosOnline   { background: url("../img/ui/icoCurso2.png") 5px center no-repeat; }
+
+            // inserindo icones nas listas dos materiais complementares
+            .default    { background: url("../img/ui/icoSaibaMaisManuais.png") 5px center no-repeat; }
+            .arquivo    { background: url("../img/ui/icoSaibaMaisArquivo.png") 5px center no-repeat; } // [Arquivo] (pode ser PDF, DOC, PPT etc.)
+            .video      { background: url("../img/ui/icoSaibaMaisVideo.png") 5px center no-repeat; } // [Vídeo] (videoaula ou tutorial narrado)
+            .site       { background: url("../img/ui/icoSaibaMaisSite.png") 5px center no-repeat; } // [Site] (link para portais ou páginas específicas)
+            .curso      { background: url("../img/ui/icoSaibaMaisCurso.png") 5px center no-repeat; } // [Curso] (indicação de algum curso, workshop etc.)
+            .livro      { background: url("../img/ui/icoSaibaMaisLivro.png") 5px center no-repeat; } // [Livro] (indicação de bibliografia)
+            .discussao  { background: url("../img/ui/icoSaibaMaisDiscussao.png") 5px center no-repeat; } // [Discussão] (indicação de algum fórum ou lista de discussão, comunidade de prática etc.)
+
+        }
+    }
+
+    // area de respiro após o wrapper
+    .respiro { display: block; height: 1px; float: left; width: 100%; }
+
+}
+
+// rwd convert in 100%
+@media only screen and (max-width: 767px) {
+    .row .row .c1,.row .row .c2,.row .row .c3,.row .row .c4,.row .row .c5,.row .row .c6,.row .row .c7,.row .row .c8,.row .row .c9,.row .row .c10,.row .row .c11,.row .row .c12{
+        width:100%;
+        margin: 0;
+        padding: 0;
+    }
+    // .row .row > div:last-child{ margin-bottom:0 !important }
+    .c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,.c11,.c12{
+        width:100%;
+        margin-right:0;
+        margin-left:0;
+        margin-bottom:0;
+    }
+    .c1 img,
+    .c2 img,
+    .c3 img,
+    .c4 img,
+    .c5 img,
+    .c6 img,
+    .c7 img,
+    .c8 img,
+    .c9 img,
+    .c10 img { margin-left: 0; }
+}
+
+/* Media query TABLET
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@media handheld, only screen and (min-width: 768px) and (max-width: 1024px), only screen  and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:portrait) {
+
+    // ocultando o pop-up de alerta de pequena resolução
+    .alert { display: none !important }
+
+    .wrapper { margin: $grid auto; }
+
+    // regra para o container geral dos conteúdos.
+    // Aqui é inserida a linha divisória entre a área da busca e do conteúdo
+    .containerMain {
+        padding-top: 0;
+        float: left;
+        background: transparent url("../img/ui/borderDivision.png") 33.33% top repeat-y;
+    }
+
+    // redefinindo o header: logo + nome do projeto
+    .wrapper > header { padding: $meioGrid 0; }
+    .logo {
+        margin: 0;
+        img { max-width: 100%; }
+    }
+    .titleHeader {
+        padding-bottom: 0;
+        .title {
+            @include font(bold, 1.8em);
+            border-bottom: 3px solid $corDefault;
+            width: 78%;
+            padding: 0 0 ($meioGrid / 4) 0;
+            margin: 0 0 0 $meioGrid;
+        }
+        .description {
+            @include font(normal, 1.4em);
+            color: #fff;
+            padding: ($meioGrid / 2) ($grid - 10);
+            height: auto;
+            margin: -3px 0 0 ($meioGrid * 11);
+            letter-spacing: 1px;
+        }
+    }
+
+    .buscaMain { padding-top: $meioGrid; padding-bottom: $meioGrid;}
+    
+    .inputSearch {
+        input[type="text"],
+        input [type="text"]:focus {
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+        }
+        input[type="text"] {
+            padding: 0 .5em;
+        }
+        p { text-align: center; }
+        // .interat { margin: 0 .5em 0 0; }
+    }
+
+    .navigationMain {
+        h5 {
+            padding: ($meioGrid - 4) 0 ($meioGrid - 4)  $grid;
+        }
+        hr { margin: ($meioGrid / 4) 0;}
+        ol, ul {
+
+            li {
+                margin: ($meioGrid / 10) 0;
+                padding: 0 ($meioGrid / 2);
+                .containerCategory {
+                    span.titleCategory { max-width: 180px; }
+                }
+                ul {
+                    margin-bottom:  $meioGrid / 2;
+                    li {
+                        margin: ($meioGrid / 4) 0;
+                        &:last-child { margin-bottom: 0; }
+                        a { margin-bottom:  0; }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .divisionMobile { display: none; }
+
+    /////////////////////////////////////////////////////////////
+    // Aqui ficarão declaradas as novas regras conforme
+    // for produzido o material. Ex: listas, tabelas, videos etc
+    /////////////////////////////////////////////////////////////
+    
+    .contentMain .funcBlackboard {
+        h4 { @include font(normal, .875em); }
+        ul { 
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            li {
+                list-style-type: none;
+                margin: ($meioGrid / 4) 0;
+                text-align: center
+            }
+        }
+    }
+
+    // catme
+
+    // criar pesquisa de avaliacao
+    .pesqAvaliacao {
+        width: auto !important;
+        margin-left: 0 !important;
+        img { margin-top: 20% }
+    }
+    // acessar resultados avaliação existente
+    .boxURLListExistente {
+        width: 65%;
+        margin: 1em auto;
+    }
+
+    .imageContainer {
+        display: block;
+        position: relative;
+        margin: 40px 0 !important;
+    }
+
+    .saibaMais {
+        ul {
+            li { margin-bottom: 0; }
+        }
+    }
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    // INDEX
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    .legendaIndex {
+        @include font(normal, 100%);
+        background: #fff;
+        padding: $meioGrid / 5;
+        border: 1px solid #faa61a;
+        p { margin: 0; 
+            span.icoContato { margin-bottom: $meioGrid / 4;}
+        }
+    }
+
+}
+
+/* Media query DESKTOP
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@media only screen and (min-width: 1024px) and (max-width: 1920px) {
+
+    // ocultando o pop-up de alerta de pequena resolução
+    .alert { display: none !important }
+
+    .wrapper { margin: $grid auto; }
+
+    // regra para o container geral dos conteúdos.
+    // Aqui é inserida a linha divisória entre a área da busca e do conteúdo
+    .containerMain { 
+        padding-top: 0;
+        float: left;
+        background: transparent url("../img/ui/borderDivision.png") 33.33% top repeat-y; }
+
+    .contentMain {
+        padding-top: 0;
+        h1 {
+            @include font(bold, 2em);
+            margin-bottom: 0;
+        }
+        h1 + p {
+            margin-top: 0;
+        }
+        h2 {
+            @include font(bold, 1.4em);
+        }
+    }
+
+    .mainContent { padding: 0 $meioGrid; }
+
+    // redefinindo o header: logo + nome do projeto
+    .wrapper > header { padding: $meioGrid 0; }
+    .logo { margin: 0;
+        img { max-width: 100%; }
+    }
+    .titleHeader {
+        text-align: right;
+        margin-top: $meioGrid / 2;
+        .title {
+            @include font(bold, 2.25em);
+            border-bottom: 3px solid $corDefault;
+            width: 69%;
+            padding: 0 0 ($meioGrid / 4) 0;
+            margin: 0 0 0 8.13%;
+            white-space: nowrap;
+        }
+        .description {
+            @include font(normal, 1.6em);
+            color: #fff;
+            padding: ($meioGrid / 2) ($grid - 10);
+            height: auto;
+            margin: -3px 8.13% 0 0;
+            letter-spacing: 1px;
+        }
+    }
+
+    .buscaMain { padding: $grid $meioGrid;}
+
+    .inputSearch {
+        input[type="text"],
+        input [type="text"]:focus {
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+        }
+        input[type="text"] { padding: 0 1em; }
+        p {
+            text-align: left;
+            margin-bottom: $grid - 10;
+        }
+        // .interat { margin: 0 .5em 0 ($meioGrid / 2); }
+    }
+
+    // .navigation { @include transition(all 0.4s ease); }
+    
+    .navigationMain {
+        h5 { @include font(bold, 1.2em); padding-left: $grid +2; }
+
+        hr { margin: ($meioGrid - 5) 0; }
+
+        ol, ul {
+            li {
+                .containerCategory {
+                    .titleCategory { width: 85%; max-width: 285px; }
+                }
+                ul { margin: ($meioGrid / 4) 0;
+                    li {
+                        margin: 0 0 ($meioGrid / 2) 0;
+                        &:last-child { margin-bottom: 0; }
+                        a { padding-left: $grid + 2; }
+                    }
+                }
+            }
+        }
+
+    }
+    .faqBusca {
+        h5 {
+          a { margin-left: 2px !important; }
+        }
+    }
+
+    .divisionMobile { display: none; }
+
+    .saibaMais {
+        ul {
+            li { margin-bottom: 0; }
+        }
+    }
+
+}
+
+/* $Helper classes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.fix:before,
+.fix:after {
+    content: " ";
+    display: block;
+}
+
+.fix:after {
+    clear: both;
+}
+
+.fix {
+    *zoom: 1;
+}
+
+.fltLeft {
+    float: left;
+}
+
+.fltRight {
+    float: right;
+}
+
+.right { text-align: right }
