@@ -1,0 +1,150 @@
+/*  ===============================================================
+    Regras para os Manuais dos alunos
+================================================================== */
+
+/////////////////////////////////////////////////////////////////////
+// Vars
+/////////////////////////////////////////////////////////////////////
+
+// fonts
+$font: "verdana", "arial", "sans-serif";
+
+// colors
+$corDefault: #c00026; // red insper
+$corTitle: #2d2d2d; // title h1 html
+$corTexto: #414042; // default text content
+$corBorda: #bcbec0; // gray default
+$corDefaultDark: #7b0012; // red dark GUI
+$corSec01: #f57d8c; // secundary GUI
+$corSec02: #e64b64; // secundary2 GUI
+
+// grids
+$grid: 40px;
+$meioGrid: $grid / 2;
+
+
+@mixin font($fstyle, $fsize) {
+    font: $fstyle $fsize $font;
+}
+
+@mixin corLink() {
+    text-decoration: none;
+    color: $corDefault;
+    // display: inline-block;
+    &:visited {
+        color: $corDefaultDark
+    }
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+@mixin corLinkUpBox($corDigitada) {
+    text-decoration: none;
+    color: $corDigitada;
+    // display: inline-block;
+    &:visited {
+        color: $corDigitada;
+    }
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+/////////////////////////////////////////////////////////////////////
+// Mixin
+/////////////////////////////////////////////////////////////////////
+
+@mixin bShadow($typeShadow, $lenH,$lenV,$blur,$spread,$rgba) {
+    box-shadow: $typeShadow $lenH $lenV $blur $spread $rgba;
+    -o-box-shadow: $typeShadow $lenH $lenV $blur $spread $rgba;
+    -ms-box-shadow: $typeShadow $lenH $lenV $blur $spread $rgba;
+    -moz-box-shadow: $typeShadow $lenH $lenV $blur $spread $rgba;
+    -webkit-box-shadow: $typeShadow $lenH $lenV $blur $spread $rgba;
+}
+
+@mixin box-size($boxSize) {
+    box-sizing: $boxSize;
+    -o-box-sizing: $boxSize;
+    -ms-box-sizing: $boxSize;
+    -moz-box-sizing: $boxSize;
+    -webkit-box-sizing: $boxSize;
+}
+
+@mixin radius($radius: 4px) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin transition($transition) {
+    transition: $transition;
+    -o-transition: $transition;
+    -ms-transition: $transition;
+    -moz-transition: $transition;
+    -webkit-transition: $transition;
+}
+
+@mixin settingsBoxImagem($widthBox, $leftBox, $topBox, $rightBox, $bottomBox) {
+    position: absolute;
+    width: $widthBox;
+    left: $leftBox;
+    bottom: $bottomBox;
+    top: $topBox;
+    right: $rightBox;
+}
+
+/////////////////////////////////////////////////////////////////////
+// Regras dos manuais dos alunos
+/////////////////////////////////////////////////////////////////////
+@media only screen and (min-width: 769px) and (max-width: 1920px) {
+    // desabilitando a linha horizontal que divide as seções de navegação do conteúdo
+    .containerMain {
+        background: none;
+    }
+    .mainContent {
+        width: 83.33%;
+        margin: 0 auto;
+    }
+
+    /* ===============================================================
+        COORDENADAS DAS POSIÇÕES DOS BOXES SOBRE AS IMAGENS DO MANUAL
+    ================================================================== */
+    #alunoInfoAlterarFoto1 {
+        //       settingsBoxImagem(W%,  l,   t,   r,   b)
+        @include settingsBoxImagem(25%, auto, auto, 0, 40%);
+    }
+}
+
+
+// tablet
+@media handheld, only screen and (max-width: 768px), only screen and (max-device-width: 768px) and (orientation:portrait) {
+    // desabilitando a linha horizontal que divide as seções de navegação do conteúdo
+    .containerMain {
+        background: none;
+    }
+    .mainContent {
+        padding: 0 $meioGrid;
+    }
+
+    /* ===============================================================
+        COORDENADAS DAS POSIÇÕES DOS BOXES SOBRE AS IMAGENS DO MANUAL
+    ================================================================== */
+    #alunoInfoAlterarFoto1 {
+        //       settingsBoxImagem(W%,  l,   t,   r,   b)
+        @include settingsBoxImagem(50%, auto, auto, 0, 20%);
+    }
+}
+
+// mobile
+@media only screen and (max-width:767px) {
+    #alunoInfoAlterarFoto1 {
+        clear: both;
+        width: 100%;
+        float: left;
+        margin: 5px 0 0 0;
+    }
+}
