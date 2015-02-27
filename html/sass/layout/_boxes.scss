@@ -507,11 +507,14 @@
     #BbGeralPadronizarPGLS1{  @include settingsBoxImagem(42%, 24%, auto, auto, 0) }
 
     // Simular como os alunos visualizam o ambiente
-    // @include                                settingsBoxImagem(W%,  l,   t,   r,   b)
     #BbGeralSimularComoAluVisuaAmb1 {  @include settingsBoxImagem(30%, auto, 30%, 0, auto) }
     #BbGeralSimularComoAluVisuaAmb2 {  @include settingsBoxImagem(60%, auto, auto, 20%, -180px) }
     #BbGeralSimularComoAluVisuaAmb3 {  @include settingsBoxImagem(30%, auto, 60%, 0, auto) }
     #BbGeralSimularComoAluVisuaAmb4 {  @include settingsBoxImagem(55%, auto, auto, 22.5%, -60px) }
+
+    // Visualizar foto do perfil do aluno
+    #alunoInfoAlterarFoto1 { @include settingsBoxImagem(25%, auto, auto, 0, 40%) }
+    #profInfoAlterarFoto1 { @include settingsBoxImagem(55%, auto, auto, 22.5%, -60px) }
 
 
     // CATEGORIA: Calendário
@@ -1263,6 +1266,10 @@
     #BbGeralSimularComoAluVisuaAmb3 {  @include settingsBoxImagem(50%, auto, 60%, 0, auto) }
     #BbGeralSimularComoAluVisuaAmb4 {  @include settingsBoxImagem(60%, auto, auto, 15%, -60px) }
 
+    // Visualizar foto do perfil do aluno
+    #alunoInfoAlterarFoto1 { @include settingsBoxImagem(50%, auto, auto, 0, 20%) }
+    #profInfoAlterarFoto1 { @include settingsBoxImagem(78%, auto, auto, 11.5%, -60px) }
+
     // CATEGORIA: Calendário
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -1958,6 +1965,9 @@
     #BbCalendarioSincronizarEmail11,
     #BbCalendarioSincronizarEmail12,
     #BbCalendarioSincronizarEmail13,
+
+    // Visualizar foto do perfil
+    #profInfoAlterarFoto1,
 
     // CATME
 

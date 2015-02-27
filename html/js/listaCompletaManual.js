@@ -314,6 +314,10 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	{
 		'manual'			: 	'Padronização dos ambientes online da PGLS',
 		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Blackboard/geral/padronizacao-ambiente-online-pgls/'
+	},
+	{
+		'manual'			: 	'Visualizar fotos dos alunos (carômetro)',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Blackboard/geral/visualizar-foto-alunos/'
 	}
 	];
 
