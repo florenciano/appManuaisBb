@@ -181,11 +181,11 @@ body {
         text-align: center;
         padding-bottom: $meioGrid;
         .title {
-            @include font(bold, 1.6em);
+            @include font(bold, 1.2em);
             margin: 0;
         }
         .description {
-            @include font(normal, 1.2em);
+            @include font(normal, 1em);
             color: #fff;
             display: inline-block;
             background-color: $corDefault;
@@ -193,6 +193,7 @@ body {
             line-height: $meioGrid + 2;
             padding: 0 $meioGrid;
             margin: ($meioGrid/4) 0 0;
+            border-radius: 4px;
         }
     }
 
@@ -324,6 +325,9 @@ body {
                     }
                 }
             }
+            .noCategory {
+                li { padding-left: 0; }
+            }
         }
 
         .outros {
@@ -372,9 +376,6 @@ body {
         }
 
         hr { margin: 0; }
-    }
-    .mainContent { 
-
     }
     .mainContent .contentMain { margin-top: $meioGrid + 10; }
 
@@ -1115,7 +1116,6 @@ body {
             }
         }
 
-
         /////////////////////////////////////////////////////////////
         // fim das novas regras
         /////////////////////////////////////////////////////////////
@@ -1354,9 +1354,9 @@ body {
     }
     .titleHeader {
         padding-bottom: 0;
-        margin-top: $meioGrid/2;
+        margin-top: 1em;
         .title {
-            @include font(bold, 1.8em);
+            @include font(bold, 1.3em);
             border-bottom: 3px solid $corDefault;
             width: 78%;
             padding: 0 0 ($meioGrid / 4) 0;
@@ -1515,18 +1515,18 @@ body {
     }
     .titleHeader {
         text-align: right;
-        margin-top: $meioGrid - 5;
+        margin-top: $meioGrid;
         .title {
-            @include font(bold, 2.25em);
+            @include font(bold, 1.65em);
             border-bottom: 3px solid $corDefault;
-            width: 75%;
+            width: 71%;
             padding: 0 0 ($meioGrid / 4) 0;
             margin: 0;
         }
         .description {
-            @include font(normal, 1.8em);
+            @include font(normal, 1.4em);
             color: #fff;
-            padding: ($meioGrid / 2) ($grid - 10);
+            padding: ($meioGrid / 2) ($meioGrid);
             height: auto;
             margin: -3px 8.13% 0 0;
             letter-spacing: 1px;
@@ -1632,3 +1632,5 @@ body {
 }
 
 .right { text-align: right }
+
+.banner { display: none; }

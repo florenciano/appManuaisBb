@@ -7,14 +7,23 @@
     <meta name="msapplication-TileImage" content="tile.png"/>
     <meta name="msapplication-TileColor" content="#d02034"/>
 
-    <link rel="stylesheet" type="text/css" media="print" href="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/css/print.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/css/pie.css">
     <link rel="stylesheet" type="text/css" media="screen" href="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/css/main.css">
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/css/fixedBugIE.css">
+    <![endif]-->
+    <style type="text/css">
+        .homeLinkModulo { margin: 0 0 10px 0; text-align: right; }
+        .homeLinkModulo a { text-decoration: none; color: #c00026; position: relative; }
+        .homeLinkModulo a:visited { color: #7b0012; }
+        .homeLinkModulo a:hover { text-decoration: underline; }
+        .homeLinkModulo a::before { content: ""; width: 18px; height: 18px; display: inline-block; background-color: orange; background: transparent url("https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/img/ui/icoHome.png") no-repeat center center; position: absolute; left: -2em; top: -2px;}
+    </style>
 
 </head>
 <body style="background-color:#ffffff">
 <div class="wrapper fixedWrapperIe" style="border:none;">
     <section class="buscaMain" ng-controller="listaMenu" style="padding:20px">
+        <p class="homeLinkModulo"><a href="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/" target="Visite a página dos manuais de Recursos e Tecnologias de Aprendizagem">Abrir em nova aba</a></p>
         <div class="inputSearch">
             <form id="busca">
                 <label for="pesquisa"></label>
@@ -235,6 +244,11 @@
         </nav>
     </section>
 </div>
+<!-- image placeholder IE lower than 9 -->
+<div class="banner">
+    <a href="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/" target="_blank" title="Manuais de utilização, clique para acessar!"><img src="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/img/ui/bannerNoBox_Bb.png" alt="Manuais de utilização, clique para acessar!"></a>
+</div>
+
 
 <script src="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/js/libs/jquery-1.10.2.min.js"></script>
 <script src="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/js/libs/angular.js"></script>
