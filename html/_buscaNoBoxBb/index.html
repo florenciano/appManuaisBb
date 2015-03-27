@@ -106,6 +106,15 @@
                     <a href="{{item.linkManual}}" type="text/html" target="_blank">{{item.manual}}</a>
                 </li>
             </ol>
+            <ol class="noCategory" ng-repeat="item in BbGeral| filter: {manual:searchText}">
+                <li class="nameCategory">
+                    <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                    
+                </li>
+                <li class="sublist" ng-show="item.manual.length > 1">
+                    <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                </li>
+            </ol>
 
             <ol class="noCategory" ng-repeat="item in BbCalendario | filter: {manual:searchText}">
             <li class="nameCategory">
@@ -145,7 +154,6 @@
                 </li>
             </ol>
 
-            <!-- HIDE CLICKERS = PROJETO EM PILOTO NO MOMENTO DA DIVULGACAO DESTE MATERIAL
             <h5 class="icoClickers">Votadores eletrônicos (clickers)</h5>
             <ol class="noCategory" ng-repeat="item in clickerSobreFerramenta | filter: {manual:searchText}">
                 <li class="nameCategory">
@@ -199,7 +207,7 @@
                 <li class="sublist" ng-show="item.manual.length > 1">
                     <a href="{{item.linkManual}}" type="text/html" target="_blank">{{item.manual}}</a>
                 </li>
-            </ol> -->
+            </ol>
             
             <h5 class="icoCursosOnline">Casos, Simuladores e Cursos online</h5>
             <ol class="noCategory" ng-repeat="item in SobreOsRecursos | filter: {manual:searchText}">

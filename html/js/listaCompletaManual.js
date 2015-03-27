@@ -318,6 +318,10 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	{
 		'manual'			: 	'Visualizar fotos dos alunos (carômetro)',
 		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Blackboard/geral/visualizar-foto-alunos/'
+	},
+	{
+		'manual'			: 	'Editar as disciplinas disponíveis na página inicial',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Blackboard/geral/editar-disciplinas-disponiveis-pagina-inicial/'
 	}
 	];
 
@@ -416,7 +420,11 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	},
 	{
 		'manual'			: 	'Funcionamento dos votadores eletrônicos',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/sobre-a-ferramenta/#funcionamento-votadores'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/sobre-a-ferramenta/#funcionamento-votadores-fisicos'
+	},
+	{
+		'manual'			: 	'Funcionamento dos votadores eletrônicos',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/sobre-a-ferramenta/#funcionamento-votadores-mobile'
 	}
 	];
 
@@ -495,20 +503,20 @@ manuaisBB.controller('listaMenu', function ($scope) {
 		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/promover-votacao-em-sala/'
 	},
 	{
-		'manual'			: 	'Preparar apresentação',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/promover-votacao-em-sala/#preparar-apresentacao'
+		'manual'			: 	'Preparar apresentação para votadores eletrônicos físicos',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/promover-votacao-em-sala/#preparar-apresentacao-votadores-fisicos'
+	},
+	{
+		'manual'			: 	'Preparar apresentação para votadores eletrônicos mobile',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/promover-votacao-em-sala/#preparar-apresentacao-votadores-mobile'
 	},
 	{
 		'manual'			: 	'Durante a aula',
 		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/promover-votacao-em-sala/#durante-aula'
 	},
 	{
-		'manual'			: 	'Salvar sessão',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/promover-votacao-em-sala/#salvar-sessao'
-	},
-	{
-		'manual'			: 	'Continuar sessão',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/promover-votacao-em-sala/#continuar-sessao'
+		'manual'			: 	'Salvar ou continuar sessão',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/promover-votacao-em-sala/#salvar-continuar-sessao'
 	}
 	];
 

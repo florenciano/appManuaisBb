@@ -516,6 +516,10 @@
     #alunoInfoAlterarFoto1 { @include settingsBoxImagem(25%, auto, auto, 0, 40%) }
     #profInfoAlterarFoto1 { @include settingsBoxImagem(55%, auto, auto, 22.5%, -60px) }
 
+    // Editar as disciplinas disponíveis na página inicial
+    #BbGeralEditarDisciplinas1 { @include settingsBoxImagem(35%, auto, auto, 0, 0) }
+    #BbGeralEditarDisciplinas2 { @include settingsBoxImagem(80%, auto, auto, 10%, -80px) }
+
 
     // CATEGORIA: Calendário
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -620,14 +624,17 @@
 
     // Funcionamento dos votadores eletrônicos
     #ClickerSobreFerramenta1 { @include settingsBoxImagem(31%, 20px, 16%, auto, auto) }
+    #ClickerSobreFerramenta1mob { @include settingsBoxImagem(31%, 20px, 22%, auto, auto) }
     #ClickerSobreFerramenta2 { @include settingsBoxImagem(28%, auto, 12%, 15px, auto) }
     #ClickerSobreFerramenta3 { @include settingsBoxImagem(30%, 20px, 48%, auto, auto) }
+    #ClickerSobreFerramenta3mob { @include settingsBoxImagem(30%, 20px, 68%, auto, auto) }
     #ClickerSobreFerramenta4 { @include settingsBoxImagem(30%, auto, auto, 60px, 9%) }
     #ClickerSobreFerramenta5 { @include settingsBoxImagem(36%, 270px, 14%, auto, auto) }
     #ClickerSobreFerramenta6 { @include settingsBoxImagem(30%, auto, 45%, 30px, auto) }
     #ClickerSobreFerramenta7 { @include settingsBoxImagem(36%, 30px, auto, auto, 30px) }
     #ClickerSobreFerramenta8 { @include settingsBoxImagem(25%, 20px, 25%, auto, auto) }
-    #ClickerSobreFerramenta9 { @include settingsBoxImagem(28%, auto, auto, 30px, 20%) }
+    #ClickerSobreFerramenta9 { @include settingsBoxImagem(28%, auto, auto, 30px, 12%) }
+    #ClickerSobreFerramenta9mob { @include settingsBoxImagem(33%, auto, auto, 40px, 25%) }
 
     // CATEGORIA: Utilizar votadores eletronicos
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -1270,6 +1277,10 @@
     #alunoInfoAlterarFoto1 { @include settingsBoxImagem(50%, auto, auto, 0, 20%) }
     #profInfoAlterarFoto1 { @include settingsBoxImagem(78%, auto, auto, 11.5%, -60px) }
 
+    // Editar as disciplinas disponíveis na página inicial
+    #BbGeralEditarDisciplinas1 { @include settingsBoxImagem(45%, auto, auto, 0, -20px) }
+    #BbGeralEditarDisciplinas2 { @include settingsBoxImagem(100%, auto, auto, 0, -80px) }
+
     // CATEGORIA: Calendário
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -1385,6 +1396,10 @@
 
     #ClickerSobreFerramenta8 { @include settingsBoxImagem(27%, 10px, 22%, auto, auto) }
     #ClickerSobreFerramenta9 { @include settingsBoxImagem(28%, auto, auto, 20px, 5%) }
+    
+    #ClickerSobreFerramenta1mob { @include settingsBoxImagem(35%, 20px, 22%, auto, auto) }
+    #ClickerSobreFerramenta3mob { @include settingsBoxImagem(30%, 15px, 55%, auto, auto) }
+    #ClickerSobreFerramenta9mob { @include settingsBoxImagem(33%, auto, auto, 40px, 25%) }
 
     // CATEGORIA: Utilizar votadores eletronicos
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
