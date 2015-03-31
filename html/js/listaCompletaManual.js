@@ -416,15 +416,15 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	},
 	{
 		'manual'			: 	'O que são votadores eletrônicos (clickers)',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/sobre-a-ferramenta/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/sobre-a-ferramenta/o-que-sao-votadores-eletronicos/'
 	},
 	{
-		'manual'			: 	'Funcionamento dos votadores eletrônicos',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/sobre-a-ferramenta/#funcionamento-votadores-fisicos'
+		'manual'			: 	'Funcionamento dos votadores eletrônicos físicos',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/sobre-a-ferramenta/funcionamento-votadores-fisicos'
 	},
 	{
-		'manual'			: 	'Funcionamento dos votadores eletrônicos',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/sobre-a-ferramenta/#funcionamento-votadores-mobile'
+		'manual'			: 	'Funcionamento dos votadores eletrônicos mobile',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/sobre-a-ferramenta/funcionamento-votadores-mobile'
 	}
 	];
 
