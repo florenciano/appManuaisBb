@@ -29,7 +29,7 @@
 			font-size: 82.5%;
 			margin: .5em 0 1em 0;
 		}
-		img { border: 1px solid #E9E9E9; }
+		img { border: 1px solid #E9E9E9; max-width: 100% }
 	</style>
 </head>
 <body>
@@ -38,6 +38,7 @@
 		
 
 		<h4 class="nameProject">Documentação do Projeto</h4>
+		<p>URI <a href="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/">https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/</a></p>
 		<p>Este documento esclarece todas as diretrizes necessárias ao(s) desenvolvedor(es) responsável(is) visando atender qualquer alteração necessária no projeto ou, simplesmente, o contínuo desenvolvimento do mesmo.</p>
 		<p>Aqui também estão descritas todas as lógicas de funcionamento dos scripts (js), das marcações HTML (semântica), regras de estilos (CSS) e o detalhamento da estrutura de diretórios.</p>
 
@@ -57,13 +58,13 @@
 
 		<p><strong>Diretório de gravação do Projeto</strong>
 		<br>Material armazenado no seguinte endereço: <strong>/Applications/MAMP/htdocs/projetos/AppManuaisBb</strong>
-		<br>Backup da última versão válida deste projeto esta sendo armazenada em: <strong>servidor $DEA-TAI<br>(smb://servidor-82/TAI-DEA$/Administrativo/Pastas Individuais/RodrigoFS3/appManuaisBb)</strong>.</p>
+		<br>Backup da última versão válida deste projeto esta sendo armazenada em: <strong>servidor $DEA-TAI<br>smb://servidor-82/TAI-DEA$/Administrativo/Pastas Individuais/RodrigoFS3/appManuaisBb</strong>.</p>
 		
 		<p><strong>Objetivo do Projeto</strong>
 		<br>Transpor os manuais do Blackboard da versão .pdf para .html mantendo a mesma (ou a mais próxima de) experiência de uso do modelo de origem. E a produção de novas demandas conforme necessidade.</p>
 		
 		<p><strong>Requisitos mínimos do Projeto</strong>
-		<br>Responsive web design (RWD)*; Cross-browser compatível com todos os browser que recebem suporte do Blackboard (<a href="http://help.blackboard.com/en-us/Learn/9.1_SP_12_and_SP_13/Administrator/010_Release_Notes/025_SP13_Release_Notes/Browser_Support">veja lista</a>).
+		<br>Responsive web design (RWD)*; Cross-browser compatível com todos os <a href="https://insper.blackboard.com/bbcswebdav/institution/TAI/pagLogin/requisitos-sistemas/">browser que recebem suporte do Blackboard</a>.
 		<br>
 		*: <small><em>Desktop e tablet.</em></small>
 		</p>
@@ -86,7 +87,7 @@
 		</ul>
 
 		<h2 id="estruturaProjeto">Estrutura de diretórios</h2>
-		<p>A estrutura de diretórios seguiu as boas práticas de desenvolvimento web baseado nas recomendações do <a href="http://html5boilerplate.com/">boilerplate templantes</a>. O projeto foi configurado no diretório raiz <em>front</em>.</p>
+		<p>A estrutura de diretórios seguiu as boas práticas de desenvolvimento web baseado nas recomendações do <a href="http://html5boilerplate.com/">boilerplate templantes</a>. O projeto foi configurado no diretório raiz <em>html</em>.</p>
 		<p>
 			<figure>
 				<img src="img/estruturaDiretorio.png" alt="Estrutura principal de diretórios">
@@ -151,7 +152,7 @@
 						</figure>
 					</li>
 					<li>
-						<p><strong>plugins</strong>: responsável pelos  arquivos de estilos adicionais para o desenvolvimento do Projeto. Foram utilizados estes dois plugins: _normalizr.scss (<a href="http://necolas.github.io/normalize.css/" target="_blank">ver plugin</a>) e _gridiculous.scss (<a href="http://gridiculo.us/" target="_blank">ver plugin</a>).</p>
+						<p><strong>plugins</strong>: responsável pelos  arquivos de estilos adicionais para o desenvolvimento do Projeto. Foram utilizados estes dois plugins: <a href="http://necolas.github.io/normalize.css/">_normalizr.scss </a> e <a href="http://gridiculo.us/" target="_blank">_gridiculous.scss</a>.</p>
 					</li>
 				</ul>
 				<p class="subtopico"><strong>Gerandos os arquivos .CSS do projeto</strong></p>
@@ -194,6 +195,14 @@
 			</li>
 		</ul>
 		
+		<h2 id="estruturaProjeto">Local de upload dos materiais no Blackboard</h2>
+		<p>Local para realizar o upload do diretório encontra-se na plataforma <a href="http://insper.blackboard.com" title="Blackboard Learn - Insper">Blackboard</a> ®
+		</p>
+			<figure>
+				<img src="img/blackboard.jpg" alt="Estrutura principal de diretórios">
+				<figcaption>Estrutura de diretórios para os documentos de produção: css, img, js e sass.</figcaption>
+			</figure>
+		</p>
 
 		<h2 id="recomendacoes">Recomendações de uso</h2>
 		<ul>
