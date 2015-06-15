@@ -1117,13 +1117,13 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	},
 	{
 		"manual"	: 	"Consultar recursos disponíveis",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Blackboard/geral/restringir-visualizacao-de-materiais/",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Recursos/consultar-recursos-disponiveis/",
 		"tipoIcone"	: 	"cursosOnline"
 	},
 	{
 
 		"manual"	: 	"Restringir visualização de materiais ou atividades a público específico",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Recursos/consultar-recursos-disponiveis/",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Blackboard/geral/restringir-visualizacao-de-materiais/",
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
