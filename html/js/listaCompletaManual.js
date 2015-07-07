@@ -575,10 +575,10 @@ manuaisBB.controller('listaMenu', function ($scope) {
 		'manual'			: 	'Casos, simuladores e cursos online de Harvard',
 		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Recursos/consultar-recursos-disponiveis/'
 	},
-	{
-		'manual'			: 	'Casos de Darden',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Recursos/consultar-recursos-disponiveis/#casos-darden'
-	},
+	// {
+	// 	'manual'			: 	'Casos de Darden',
+	// 	'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Recursos/consultar-recursos-disponiveis/#casos-darden'
+	// },
 	{
 		'manual'			: 	'Casos Insper',
 		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Recursos/consultar-recursos-disponiveis/#casos-insper'
