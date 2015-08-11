@@ -169,6 +169,27 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	}
 	];
 
+	// "Planejar uma discussão via fórum"
+	$scope.Planejar_discussao_via_forum = 
+	[
+	{
+		"manual"	: 	"Criar um fórum de discussão",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Blackboard/comunicacao-e-interacao/criar-um-forum-de-discussao/",
+		"tipoIcone"	: 	"blackboard"
+	},
+	{
+		"manual"	: 	"Avaliar fórum de discussão", 
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Blackboard/avaliacao/avaliar-forum-de-discussao/",
+		"tipoIcone"	: 	"blackboard"
+	},
+	{
+
+		"manual"	: 	"Exemplos de dinâmicas – atividades colaborativas",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Blackboard/comunicacao-e-interacao/exemplos-dinamicas/",
+		"tipoIcone"	: 	"blackboard"
+	}
+	];
+
 	// "Criar um fórum de discussão"
 	$scope.Criar_forum_de_discussao = 
 	[
@@ -918,8 +939,8 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	$scope.Utilizar_votadores_eletronicos = 
 	[
 	{
-		"manual"	: 	"Sobre a ferramenta",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/sobre-a-ferramenta/o-que-sao-votadores-eletronicos/",
+		"manual"	: 	"Promover votação eletrônica em sala de aula",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/sobre-a-ferramenta/promover-votacao-eletronica-em-sala-de-aula/",
 		"tipoIcone"	: 	"clickers"
 	},
 	{
@@ -949,8 +970,8 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	$scope.Preparar_slides = 
 	[
 	{
-		"manual"	: 	"Sobre a ferramenta",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/sobre-a-ferramenta/o-que-sao-votadores-eletronicos/",
+		"manual"	: 	"Promover votação eletrônica em sala de aula",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/sobre-a-ferramenta/promover-votacao-eletronica-em-sala-de-aula/",
 		"tipoIcone"	: 	"clickers"
 	},
 	{
@@ -980,8 +1001,8 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	$scope.Identificar_votos_alunos = 
 	[
 	{
-		"manual"	: 	"Sobre a ferramenta",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/sobre-a-ferramenta/o-que-sao-votadores-eletronicos/",
+		"manual"	: 	"Promover votação eletrônica em sala de aula",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/sobre-a-ferramenta/promover-votacao-eletronica-em-sala-de-aula/",
 		"tipoIcone"	: 	"clickers"
 	},
 	{
@@ -1011,8 +1032,8 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	$scope.Promover_votacao_sala = 
 	[
 	{
-		"manual"	: 	"Sobre a ferramenta",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/sobre-a-ferramenta/o-que-sao-votadores-eletronicos/",
+		"manual"	: 	"Promover votação eletrônica em sala de aula",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/sobre-a-ferramenta/promover-votacao-eletronica-em-sala-de-aula/",
 		"tipoIcone"	: 	"clickers"
 	},
 	{
@@ -1042,8 +1063,8 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	$scope.Analisar_os_resultados_clickers = 
 	[
 	{
-		"manual"	: 	"Sobre a ferramenta",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/sobre-a-ferramenta/o-que-sao-votadores-eletronicos/",
+		"manual"	: 	"Promover votação eletrônica em sala de aula",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/sobre-a-ferramenta/promover-votacao-eletronica-em-sala-de-aula/",
 		"tipoIcone"	: 	"clickers"
 	},
 	{

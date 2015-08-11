@@ -30,12 +30,12 @@
 <link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
 
 <!--[if IE]>
-    <link href="../../css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="../../../css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
 <![endif]-->
 
 <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <script>window.html5 || document.write('<script src="../../js/libs/html5shiv.js"><\/script>')</script>
+    <script>window.html5 || document.write('<script src="../../../js/libs/html5shiv.js"><\/script>')</script>
 <![endif]-->
 
 </head>
@@ -146,16 +146,6 @@
                             </li>
                         </ol>
 
-                        <ol class="noCategory" ng-repeat="item in BbGeral| filter: {manual:searchText}">
-                        <li class="nameCategory">
-                            <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
-                            
-                        </li>
-                            <li class="sublist" ng-show="item.manual.length > 1">
-                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
-                            </li>
-                        </ol>
-
                         <ol class="noCategory" ng-repeat="item in BbCalendario | filter: {manual:searchText}">
                         <li class="nameCategory">
                             <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
@@ -197,9 +187,9 @@
                         <h5 class="icoClickers">Votadores eletrônicos (clickers)</h5>
                         <ol class="noCategory" ng-repeat="item in clickerSobreFerramenta | filter: {manual:searchText}">
                             <li class="nameCategory">
-                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
-                            <li class="sublist ng-class: addMark()" ng-show="item.manual.length > 1">
+                            <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
                             </li>
                         </ol>
@@ -215,7 +205,7 @@
 
                         <ol class="noCategory" ng-repeat="item in clickerPrepararSlides | filter: {manual:searchText}">
                             <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                <p class="selectedCategory" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
                             <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
@@ -249,28 +239,30 @@
                             </li>
                         </ol>
                         
-                        <h5 class="icoCursosOnline">Casos, Simuladores e Cursos online</h5>
-                        <ol class="noCategory" ng-repeat="item in SobreOsRecursos | filter: {manual:searchText}">
+                        <h5 class="icoCasos">Casos</h5>
+                        <ol class="noCategory" ng-repeat="item in casos | filter: {manual:searchText}">
                             <li class="nameCategory">
-                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
                             <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
                             </li>
                         </ol>
 
-                        <ol class="noCategory" ng-repeat="item in ConsultarRecursosDisponiveis | filter: {manual:searchText}">
+                        <h5 class="icoSimuladores">Simuladores</h5>
+                        <ol class="noCategory" ng-repeat="item in simuladores | filter: {manual:searchText}">
                             <li class="nameCategory">
-                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
                             <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
                             </li>
                         </ol>
 
-                        <ol class="noCategory" ng-repeat="item in UtilizarRecursos | filter: {manual:searchText}">
-                            <li class="nameCategory">
-                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                        <h5 class="icoCursosOnline">Cursos online</h5>
+                        <ol class="noCategory" ng-repeat="item in cursosOnline | filter: {manual:searchText}">
+                            <li class="nameCategory">    
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
                             <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
@@ -279,14 +271,12 @@
 
                         <div class="faqBusca icoFaq">
                             <h5>
-                            <ol class="noCategory">
-                                <li><a href="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/faq/index.html" class="">FAQ</a></li>
-                            </ol>
+                                <a href="../../../faq/index.html" >FAQ</a>
                             </h5>
                         </div>
                         <div class="outros">
                             <h6>
-                                <a href="mailto:dea@insper.edu.br?subject=DEA%20-%20Manuais%20de%20utiliza&#231;&#227;o">Não encontrou o que queria?</a>
+                                <a href="../../../nao-encontrou-o-que-queria/index.html">Não encontrou o que queria?</a>
                             </h6>
                         </div>
                     </nav>
@@ -298,7 +288,7 @@
                         <div class="cabecalho fix">
                             <p>
                                 <!-- adicionar a data da produção do material -->
-                                <span><strong>Atualizado: </strong>27/03/2015</span>
+                                <span><strong>Atualizado: </strong>31/03/2014</span>
                             </p>
                         </div>
                         <hr>
@@ -306,7 +296,7 @@
                             <p>
                                 <span class="nameCategory">Votadores eletrônicos (clickers) </span>
                                 <span>&#62; </span>
-                               Funcionamento dos votadores eletrônicos físicos
+                                Criar questões e configurar votação nos slides
                             </p>
                         </div>
                     </section>
@@ -323,9 +313,14 @@
                      -->
 
                     <article class="contentMain row">
-                        <h1>Funcionamento dos votadores eletrônicos físicos</h1>
-                        
-                        
+                        <h1>
+                            Criar questões e configurar votação nos slides
+                        </h1>
+
+                        <div class="sumario row">
+                            <h3 id="sumarioAncora">Sumário</h3>
+                        </div>
+
                         <!--
                         
                         IMAGENS E BOX DE TEXTO
@@ -345,51 +340,90 @@
 
                         -->
 
-                        <p>Para utilizar os votadores eletrônicos são necessários os seguintes procedimentos:</p>
+                        <p>Antes de tudo, <a href="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/utilizar-votadores-eletronicos/abrir-powerPoint/">abra o PowerPoint com o plug-in do TurningPoint</a>.</p>
+                        <p>Cada slide que contém uma questão para votação pode ser formatado e configurado de maneira diferente. No entanto, visando otimizar o tempo de preparação da apresentação e manter sua uniformidade, sugere-se configurar um slide-modelo e replicá-lo para as demais questões, efetuando somente a troca dos enunciados e alternativas.</p>
+                        
                         <div class="imageContainer row">
-                            <img src="../../../img/Clickers/sobre-a-ferramenta/funcionamento-dos-votadores-eletronicos/step1.png" alt="" class="">
-                            <div class="boxDestaque" id="ClickerSobreFerramenta1">
-                                <p><a href="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/utilizar-votadores-eletronicos/#reservar-aparelhos">Verificar junto ao Help Desk</a> a disponibilidade dos equipamentos no dia e hora desejados.</p>
+                            <img src="../../../img/Clickers/preparar-slides/criar-questoes/step1.png" alt="" class="imgLeft">
+                            <div class="boxDestaqueAdicional" id="ClickerCriarQuestoes1">
+                                <p>O exemplo utiliza uma questão do tipo "Multiple Choice", mas existem outros formatos de questão.</p>
                             </div>
-                            <div class="boxDestaque" id="ClickerSobreFerramenta2">
-                                <p><a href="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/utilizar-votadores-eletronicos/#instalar-software">Instalar software</a> TurningPoint no computador (uma aba do aplicativo será criada no PowerPoint).</p>
+                            <div class="boxDestaque" id="ClickerCriarQuestoes2">
+                                <p>Clique sobre os quadros para editar o enunciado e as alternativas, separando-as com "Enter".</p>
                             </div>
-                            <div class="boxDestaque" id="ClickerSobreFerramenta3">
-                                <p>Em uma apresentação de slides, <a href="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/preparar-slides/">criar sequência de questões e configurar as regras de votação</a>.</p>
-                            </div>
-                            <div class="boxDestaque" id="ClickerSobreFerramenta4">
-                                <p>Caso a votação não seja anônima, <a href="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/identificar-votos-alunos/">informar quem são os alunos</a> (por exemplo, a partir da lista de alunos do Blackboard).</p>
+                            <div class="boxDestaqueAdicional" id="ClickerCriarQuestoes3">
+                                <p>Após inserir o enunciado e as alternativas, é possível mudar a disposição dos elementos na tela, bem como alterar o estilo dos textos.</p>
                             </div>
                         </div>
 
-                        <div class="imageContainer row">
-                            <img src="../../../img/Clickers/sobre-a-ferramenta/funcionamento-dos-votadores-eletronicos/step2.png" alt="" class="">
-                            <div class="boxDestaque" id="ClickerSobreFerramenta5">
-                                <p>Distribuir votadores aos alunos mediante assinatura de <a href="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/identificar-votos-alunos/#editar-lista-alunos/">lista de controle</a>.</p>
-                            </div>
-                            <div class="boxDestaque" id="ClickerSobreFerramenta6">
-                                <p>Durante a apresentação de slides, lançar perguntas à turma.</p>
-                            </div>
-                            <div class="boxDestaque" id="ClickerSobreFerramenta7">
-                                <p>Aguardar votação dos alunos com base nas opções oferecidas para cada questão (os resultados são processados e apresentados instantaneamente).</p>
-                            </div>
-                        </div>
+                        <div class="margemParaImagem" style="margin-top:120px"></div>
+
+                        <p>Para editar as opções de uma questão criada, clique sobre a caixa das alternativas e utilize o quadro <strong>Slide Preferences</strong>.</p>
 
                         <div class="imageContainer row">
-                            <img src="../../../img/Clickers/sobre-a-ferramenta/funcionamento-dos-votadores-eletronicos/step3.png" alt="" class="">
-                            <div class="boxDestaque" id="ClickerSobreFerramenta8">
-                                <p>Solicitar aos alunos a devolução dos votadores.</p>
-                            </div>
-                            <div class="boxDestaque" id="ClickerSobreFerramenta9">
-                                <p><a href="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/analisar-resultados/">Salvar os relatórios</a> (opcional).</p>
+                            <img src="../../../img/Clickers/preparar-slides/criar-questoes/step2.png" alt="" class="imgRight">
+                            <div class="boxDestaque" id="ClickerCriarQuestoes4">
+                                <h4>Question Options</h4>
+                                <ul>
+                                    <li><strong>Anonymous</strong>: os votos não serão identificados.</li>
+                                    <li><strong>Multiple Responses</strong>: permite que cada aluno vote mais de uma vez na mesma questão. Sugere-se não marcar esta opção.</li>
+                                </ul>
                             </div>
                         </div>
 
                         <div class="margemParaImagem" style="margin-top:40px"></div>
 
-                        <!-- 
-                        ################################################################
-                        -->
+                        <div class="imageContainer row">
+                            <img src="../../../img/Clickers/preparar-slides/criar-questoes/step3.png" alt="" class="imgRight">
+                            <div class="boxDestaque" id="ClickerCriarQuestoes5">
+                                <h4>Polling Options</h4>
+                                <ul>
+                                    <li><strong>Automatically Open Polling</strong>: a votação começa assim que o slide é exibido. Sugere-se não marcar esta opção, ficando sob responsabilidade do professor iniciar a votação.</li>
+                                    <li><strong>Show Results</strong>: define se o resultado da votação será exibido aos alunos e em que momento.</li>
+                                    <li><strong>First Response Only</strong>: computa apenas o primeiro voto dos alunos. Sugere-se não marcar esta opção, possibilitando que os alunos mudem de opinião durante o período de votação.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:120px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Clickers/preparar-slides/criar-questoes/step4.png" alt="" class="imgRight">
+                            <div class="boxDestaque" id="ClickerCriarQuestoes6">
+                                <h4>Scoring Options</h4>
+                                <ul>
+                                    <li><strong>Correct/Incorrect Point Value</strong>: define a pontuação para cada resposta correta e incorreta. Admite valores decimais e negativos.</li>
+                                    <li><strong>Speed Scoring</strong>: pontos variam de acordo com a velocidade de resposta dos alunos.</li>
+                                    <li><strong>Show Advanced Scoring</strong>: permite configurar pontos diferentes para cada questão.</li>
+                                    <li><strong>Gabarito</strong>: indica quais são as alternativas corretas e incorretas. Em caso de pesquisas, deve-se selecionar a opção "no value".</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:40px"></div>
+
+                        <p>Para editar as configurações do gráfico, clique sobre a caixa do gráfico e utilize o quadro <strong>Slide Preferences</strong>.</p>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Clickers/preparar-slides/criar-questoes/step5.png" alt="" class="imgRight">
+                            <div class="boxDestaque" id="ClickerCriarQuestoes7">
+                                <ul>
+                                    <li><strong>Chart Colors</strong>: define a cor correspondente às alternativas. Caso a questão possua alternativas corretas/incorretas, sugere-se a opção "Correct/Incorrect".</li>
+                                    <li><strong>Chart Labels</strong>: define os rótulos do gráfico. Caso os textos das alternativas sejam curtos, sugere-se a opção "Answer Text", que exibe o próprio texto da alternativa. Caso os textos sejam longos, sugere-se a opção "Bullets", que exibe no gráfico apenas a indicação da alternativa (ex.: a, b, c).</li>
+                                    <li><strong>Chart Values</strong>: formato dos valores exibidos no gráfico.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:100px"></div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Clickers/preparar-slides/criar-questoes/step6.png" alt="" class="imgLeft">
+                            <div class="boxDestaque" id="ClickerCriarQuestoes8">
+                                <p>Para alterar o tipo de gráfico, utilize a opção <strong>Objects</strong> do menu.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="margin-top:80px"></div>
 
                         <!-- 
                         
@@ -414,14 +448,14 @@
                         <h4 id="relacionado">Manuais relacionados</h4>
                         <ul  ng-controller="manuaisRelacionados">
                             <!-- class="default"  -->
-                            <li ng-repeat="item in Sobre_a_ferramenta_clickers" class="ng-class: item.tipoIcone">
+                            <li ng-repeat="item in criar_questoes_e_configurar_votacao_nos_slides" class="ng-class: item.tipoIcone">
                                 <div><a href="{{item.Link}}">{{item.manual}}</a></div>
                             </li>
                         </ul>
                         
                         <h4 id="complementar">Materiais complementares</h4>
                         <ul ng-controller="materiaisComplementares">
-                            <li ng-repeat="item in Sobre_a_ferramenta_clickers" class="ng-class: item.tipoIcone">
+                            <li ng-repeat="item in criar_questoes_e_configurar_votacao_nos_slides" class="ng-class: item.tipoIcone">
                                 <div><a href="{{item.Link}}" target="_blank">{{item.manual}}</a></div>
                             </li>
                         </ul>
@@ -448,16 +482,5 @@
 
 <!-- Scripts: do projeto -->
 <script src="../../../js/main.js"></script>
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-59172929-3', 'auto');
-  ga('send', 'pageview');
-
-</script>
 </body>
 </html>

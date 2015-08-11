@@ -419,7 +419,8 @@ body {
                 list-style-type: square;
                 margin: ($meioGrid / 4) 0;
             }
-            li:first-child { margin-top: 0}
+            li:first-child { margin-top: 0; }
+            li:last-child { margin-bottom: 0; }
         }
         table { 
             width: 100%;
@@ -1115,6 +1116,89 @@ body {
                 }
             }
         }
+
+        /////////////////////////////////////////////////////////////
+        // Novas regras para os materiais de cunho mais pedagógico
+        /////////////////////////////////////////////////////////////
+
+        // Clickers: promover votação eletrônica em sala de aula
+
+        // variaveis: cor
+        $background-caution: #fcf8e3;
+        $border-caution: #faebcc;
+        .manuais-pedag {
+            h1 { margin-bottom: .25em; }
+            p + ul { margin-top: -.875em; }
+            .subtitle, h4 {
+                margin: 0;
+                & + p, & + ul { margin-top: 0; }
+            }
+            figure {
+                figcaption { margin-top: 0; padding: .5em; }
+            }
+            ul {
+                li {
+                    ul {
+                        li { list-style-type: circle; }
+                    }
+                }
+            }
+            .alert-caution {
+                margin: 20px auto;
+                width: 95%;
+                background-color: $background-caution;
+                border: 2px solid $border-caution;
+                border-radius: 4px;
+                padding: 1em;
+                ul {
+                    margin: 0;
+                    padding-left: 2em;
+                    li { line-height: 1.6; }
+                }
+                a:visited { color: $corDefault; }
+                p { margin: 0; }
+                p + p { margin-top: 1em; }
+                .icos-manuais {
+                    margin-top: 1em;
+                    li {
+                        position: relative;
+                        height: 35px;
+                        padding-left: 3.5em;
+                        &:before {
+                            width: 35px;
+                            height: 35px;
+                            display: inline-block;
+                            content: "";
+                            position: absolute;
+                            top: -8px;
+                            left: 0;
+                        }
+                    }
+                    // icos
+                    .blackboard:before { background: url("../img/ui/icoBlackboard2.png") center center no-repeat; }
+                }
+            }
+            .ballon-discussao-forum {
+                h5 { text-align: center; }
+                img { margin: 0 auto; }
+                .display {
+                    background-color: #fcf8e3;
+                    border: 1px solid #faebcc;
+                    padding: 1em .5em;
+                    margin: 1em .25em;
+                    text-align: center;
+                    line-height: 1.6;
+                    border-radius: 4px;
+                }
+            }
+            .legend {
+                text-align: right;
+                color: #8f8f8f;
+                font-size: 92.5%;
+                margin: -.5em 0 2em 0;
+            }
+        }
+
 
         /////////////////////////////////////////////////////////////
         // fim das novas regras

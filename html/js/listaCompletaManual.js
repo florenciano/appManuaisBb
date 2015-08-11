@@ -90,6 +90,10 @@ manuaisBB.controller('listaMenu', function ($scope) {
 		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Blackboard/comunicacao-e-interacao/enviar-email-pelo-ambiente/'
 	},
 	{
+		'manual'			: 	'Planejar uma discussão via fórum',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Blackboard/comunicacao-e-interacao/planejar-discussao-via-forum/'
+	},
+	{
 		'manual'			: 	'Criar fórum de discussão',
 		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Blackboard/comunicacao-e-interacao/criar-um-forum-de-discussao/'
 	},
@@ -415,8 +419,8 @@ manuaisBB.controller('listaMenu', function ($scope) {
 		'linkManual'		: 	''
 	},
 	{
-		'manual'			: 	'O que são votadores eletrônicos (clickers)',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/sobre-a-ferramenta/o-que-sao-votadores-eletronicos/'
+		'manual'			: 	'Promover votação eletrônica em sala de aula',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/sobre-a-ferramenta/promover-votacao-eletronica-em-sala-de-aula/'
 	},
 	{
 		'manual'			: 	'Funcionamento dos votadores eletrônicos físicos',
@@ -438,7 +442,7 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	},
 	{
 		'manual'			: 	'Instalar software TurningPoint',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/utilizar-votadores-eletronicos/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/utilizar-votadores-eletronicos/#instalar-software'
 	},
 	{
 		'manual'			: 	'Reservar aparelhos com HelpDesk',
@@ -460,7 +464,7 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	},
 	{
 		'manual'			: 	'Criar questões e configurar votação nos slides',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/preparar-slides/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/preparar-slides/#criar-questoes'
 	},
 	{
 		'manual'			: 	'Inserir cronômetro nos slides (opcional)',
@@ -478,7 +482,7 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	},
 	{
 		'manual'			: 	'Criar lista de alunos',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/identificar-votos-alunos/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/identificar-votos-alunos/#criar-lista-alunos'
 	},
 	{
 		'manual'			: 	'Vincular lista de alunos aos slides',
@@ -490,33 +494,33 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	}
 	];
 
-	// CATEGORIA: Promover votação em sala
+	// CATEGORIA: Iniciar votação eletrônica em sala
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 	$scope.clickerPromoverVotacao = [
 	{
-		'categoria' 		: 	'Promover votação em sala', // Este equivale ao nome da categoria
+		'categoria' 		: 	'Iniciar votação eletrônica em sala', // Este equivale ao nome da categoria
 		'manual'			: 	'',
 		'linkManual'		: 	''
 	},
 	{
 		'manual'			: 	'Criar lista de controle',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/promover-votacao-em-sala/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/iniciar-votacao-eletronica-em-sala/#criar-lista-controle'
 	},
 	{
 		'manual'			: 	'Preparar apresentação para votadores eletrônicos físicos',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/promover-votacao-em-sala/#preparar-apresentacao-votadores-fisicos'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/iniciar-votacao-eletronica-em-sala/#preparar-apresentacao-votadores-fisicos'
 	},
 	{
 		'manual'			: 	'Preparar apresentação para votadores eletrônicos mobile',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/promover-votacao-em-sala/#preparar-apresentacao-votadores-mobile'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/iniciar-votacao-eletronica-em-sala/#preparar-apresentacao-votadores-mobile'
 	},
 	{
 		'manual'			: 	'Durante a aula',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/promover-votacao-em-sala/#durante-aula'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/iniciar-votacao-eletronica-em-sala/#durante-aula'
 	},
 	{
 		'manual'			: 	'Salvar ou continuar sessão',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/promover-votacao-em-sala/#salvar-continuar-sessao'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/iniciar-votacao-eletronica-em-sala/#salvar-continuar-sessao'
 	}
 	];
 
@@ -530,7 +534,7 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	},
 	{
 		'manual'			: 	'Visualizar resultados da votação',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/analisar-resultados/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/analisar-resultados/#visualizar-resultados-votacao'
 	},
 	{
 		'manual'			: 	'Trabalhar resultados no Excel',
