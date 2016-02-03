@@ -26,9 +26,14 @@ $( document ).ready( function() {
         aparece quando a resolução de tela é inferior a 768px [tablet]
         NOTA: Implantado a partir da versão 4
     */
-    $( "button.close" ).click( function() {
-        $( "div.alert" ).hide( 400 );
-    });
+    var b =  $( "button.close" ), c = $( ".alert" );
+    
+    function closeAlert (argument) {
+        c.hide( 400 );
+    }
+
+    b.on( "click", closeAlert );
+
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
@@ -39,7 +44,7 @@ $( document ).ready( function() {
         NOTA: Disponível apenas na versão 1
     */
     /* 
-        $( "a#imprimir" ).click(function() {
+        $( "#imprimir" ).click(function() {
             window.print();
             return false;
         });
