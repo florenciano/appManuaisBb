@@ -924,7 +924,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	},
 	{
 		"manual"	: 	"Promover votação em sala",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/promover-votacao-em-sala/",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/sobre-a-ferramenta/promover-votacao-eletronica-em-sala-de-aula/",
 		"tipoIcone"	: 	"clickers"
 	},
 	{
@@ -955,7 +955,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	},
 	{
 		"manual"	: 	"Promover votação em sala",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/promover-votacao-em-sala/",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/sobre-a-ferramenta/promover-votacao-eletronica-em-sala-de-aula/",
 		"tipoIcone"	: 	"clickers"
 	},
 	{
@@ -986,7 +986,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	},
 	{
 		"manual"	: 	"Promover votação em sala",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/promover-votacao-em-sala/",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/sobre-a-ferramenta/promover-votacao-eletronica-em-sala-de-aula/",
 		"tipoIcone"	: 	"clickers"
 	},
 	{
@@ -1017,7 +1017,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	},
 	{
 		"manual"	: 	"Promover votação em sala",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/promover-votacao-em-sala/",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/sobre-a-ferramenta/promover-votacao-eletronica-em-sala-de-aula/",
 		"tipoIcone"	: 	"clickers"
 	},
 	{
@@ -1084,7 +1084,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	},
 	{
 		"manual"	: 	"Promover votação em sala",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/promover-votacao-em-sala/",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/sobre-a-ferramenta/promover-votacao-eletronica-em-sala-de-aula/",
 		"tipoIcone"	: 	"clickers"
 	}
 	];
