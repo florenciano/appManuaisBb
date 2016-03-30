@@ -28,6 +28,36 @@
 <link rel="apple-touch-icon" sizes="114x114" href="../../apple-touch-icon-114x114.png">
 <link rel="apple-touch-icon" sizes="72x72" href="../../apple-touch-icon-72x72.png">
 <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<style>
+    .progressBar {
+        /* Positioning */
+        position: fixed;
+        left: 33.33%;
+        top: 0;
+        z-index: 1000;
+
+        /* Dimensions */
+        width: 66.66%;
+        height: 5px;
+
+        /* Reset the appearance */
+        -webkit-appearance: none;
+        -moz-appearance: none;
+            appearance: none;
+
+        /* Get rid of the default border in Firefox/Opera. */
+        border: none;
+
+        /* Progress bar container for Firefox/IE10+ */
+        background-color: transparent;
+
+        /* Progress bar value for IE10+ */
+        color: #58D3F7;
+    }
+    .progressBar::-webkit-progress-bar { background-color: transparent; }
+    .progressBar::-webkit-progress-value { background-color: #58D3F7;  }
+    .progressBar::-moz-progress-bar { background-color: #58D3F7;  }
+</style>
 
 <!--[if IE]>
     <link href="../../css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -295,6 +325,7 @@
                 <!-- início do conteúdo do manual -->
                 <section class="mainContent c8">
                     <section class="headerContent row">
+                        <progress max="0" value="0" class="progressBar"></progress> 
                         <div class="cabecalho fix">
                             <p>
                                 <!-- adicionar a data da produção do material -->
@@ -513,14 +544,49 @@
 <script src="../../js/main.js"></script>
 
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    // Readind position indicator
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    var $progress = $( ".progressBar" ),
+        max, value;
 
-  ga('create', 'UA-59172929-3', 'auto');
-  ga('send', 'pageview');
+    var getMax = function() {
+        return $( ".contentMain" ).outerHeight() - $( window ).height(); // 2025
+    };
 
+    var getValue = function() {
+        return $( window ).scrollTop(); // - $( "#top" ).outerHeight();
+    };
+
+    $progress.attr({ max: getMax() });
+
+    /* set value position window in scroll */
+    $( document ).on( "scroll", function() {
+        $progress.attr({ value: getValue() });  
+    });
+
+    /* When resizes the window, the height of the window and the document will change */
+    $(window).on( "resize", function() {
+        // Need to reset the Max attr
+        max = getMax();
+        $progress.attr({ max: getMax() });
+
+        // Need to reset the Max attr
+        value =  getValue();
+        $progress.attr({ value: getValue() });
+    });
+
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    // Google Analytics®
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    // ga('create', 'UA-59172929-3', 'auto');
+    // ga('send', 'pageview');
 </script>
 </body>
 </html>
