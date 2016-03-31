@@ -3,24 +3,6 @@
 ================================================================== */
 
 $( document ).ready( function() {
-    
-    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-    /*
-        Emula o placeholder em browser antigo [lê-se IE]
-    */
-    // $( "input" ).placeholder();
-    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-
-    /*
-        Focus no input de pesquisa.
-        NOTA: Desativado a partir da versão 4
-    */
-    /* $( "#pesquisa" ).focus(); */
-    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-
     /*
         Fechar pop-up de alerta de pequena resolução. Este alerta
         aparece quando a resolução de tela é inferior a 768px [tablet]
@@ -28,27 +10,10 @@ $( document ).ready( function() {
     */
     var b =  $( "button.close" ), c = $( ".alert" );
     
-    function closeAlert (argument) {
-        c.hide( 400 );
-    }
+    function closeAlert (argument) { c.hide( 400 );}
 
     b.on( "click", closeAlert );
 
-    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-
-    /*
-        Chamando a janela de impressão
-        OBS: No momento este script não tem valor devido
-        a desistência de fornecer material impresso.
-        NOTA: Disponível apenas na versão 1
-    */
-    /* 
-        $( "#imprimir" ).click(function() {
-            window.print();
-            return false;
-        });
-    */
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
     /*
@@ -94,8 +59,9 @@ $( document ).ready( function() {
         respFaq.hide( 400 );
         $( ".display" ).text( "[+]" );
     });
-    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
     /*
         Criando a lista de sumário e suas respectivas âncoras.
@@ -186,6 +152,8 @@ $( document ).ready( function() {
             }
         }
     }
+
+
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
     /*
@@ -215,6 +183,8 @@ $( document ).ready( function() {
         // também precisa desaparecer o link do 'Saiba mais' do sumário
         hideSaibaMaisDoSumario();
     }
+
+
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
@@ -235,6 +205,5 @@ $( document ).ready( function() {
             }
         });
     });
-    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 });
