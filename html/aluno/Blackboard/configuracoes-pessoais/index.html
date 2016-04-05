@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br" ng-app="manuaisBb-aluno">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Recursos e Tecnologias de Aprendizagem - Manuais de utilização - Alunos</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/png" href="../../../favicon-16.png">
+    <link rel="stylesheet" type="text/css" media="print" href="../../../css/print.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../../css/main.css">
+    <!--[if IE]>
+        <link href="css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script>window.html5 || document.write('<script src="../../js/libs/html5shiv.js"><\/script>')</script>
+    <![endif]-->
+</head>
+<body>
+    <div class="wrapper">
+        <header id="top" class="wfull fix">
+            <div class="logo c4">
+                <img src="../../../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
+            </div>
+            <div class="titleHeader c8">
+                <p class="title">Recursos e Tecnologias de Aprendizagem</p>
+                <p class="description">Manuais de utilização</p>
+            </div>
+        </header>
+        <div id="main" role="main" class="fix wfull">
+            <div class="containerMain fix row">
+                <!-- início da área da busca -->
+                <section class="buscaMain c4" ng-controller="listaMenu">
+                    <div class="inputSearch">
+                        <form id="busca">
+                            <label for="pesquisa"></label>
+                            <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Assunto ou palavra-chave" ng-model="searchText">
+                        </form>
+                    </div>
+                    <nav role="navigation" class="navigationMain">
+                        <!-- blackbaord -->
+                        <h5 class="icoBlackboard">Blackboard</h5>
+                        <ul class="noCategory" ng-repeat="item in blackboard | filter: {manual:searchText}">
+                            <li class="sublist">
+                                <a href="{{item.linkManual}}" title="{{item.manual}}">{{item.manual}}</a>
+                            </li>    
+                        </ul>
+                        
+                        <!-- plagio acadêmico -->
+                        <h5 class="icoPlagio">Plágio Acadêmico</h5>
+                        <ul class="noCategory" ng-repeat="item in plagio_academico | filter: {manual:searchText}">
+                            <li class="sublist">
+                                <a href="{{item.linkManual}}" title="{{item.manual}}">{{item.manual}}</a>
+                            </li>    
+                        </ul>
+
+                        <!-- curso online -->
+                        <h5 class="icoCursosOnline">Curso online de Harvard</h5>
+                        <ul class="noCategory" ng-repeat="item in curso_online | filter: {manual:searchText}">
+                            <li class="sublist">
+                                <a href="{{item.linkManual}}" title="{{item.manual}}">{{item.manual}}</a>
+                            </li>    
+                        </ul>
+
+                        <!-- clickers -->
+                        <h5 class="icoClickers">Votadores eletrônicos (clickers)</h5>
+                        <ul class="noCategory" ng-repeat="item in clikcers | filter: {manual:searchText}">
+                            <li class="sublist">
+                                <a href="{{item.linkManual}}" title="{{item.manual}}">{{item.manual}}</a>
+                            </li>    
+                        </ul>
+                        
+                         <!--catme -->
+                        <h5 class="icoCatme">Catme</h5>
+                        <ul class="noCategory" ng-repeat="item in catme | filter: {manual:searchText}">
+                            <li class="sublist ng-class:addMark()">
+                                <a href="{{item.linkManual}}" title="{{item.manual}}">{{item.manual}}</a>
+                            </li>    
+                        </ul>
+                    </nav>
+                </section>
+
+                <!-- início do conteúdo do manual -->
+                <section class="mainContent c8">
+                    <section class="headerContent row">
+                        <div class="cabecalho fix">
+                            <p><span><strong>Atualizado: </strong>05/04/2016</span></p>
+                        </div>
+                    </section>
+                    <article class="contentMain row">
+                        <!-- 
+                            INTRODUCAO
+                            1- Texto do título h1 é o mesmo do 'p' da div.breadcrumb;
+                            2- div.sumario aparece logo depois da introdução do texto 'quando houver' e serve para listar todos os subtítulos da página definidos pela tag 'h2';
+                            3- toda tag 'h2' receberá esta sintaxe:
+                            '<h2 id="subTituloX>Texto aqui</h2>';
+                            É necessário adicionar um número identificador na âncora;
+                            4- Para casos em que haverá uma sublistagem no sumário adicionar no elemento 'h2' o atributo: data-sublist="true"
+                            e para cada tópico desta listagem inserir a tag 'h3' com a seguinte sintaxe: '<h3 id="subList_sumarioX">'
+                         -->
+                        <h1 class="nameCategory">Configurações pessoais</h1>
+                        <p>Ao acessar o Blackboard, você encontrará os seguintes elementos:</p>
+
+                        <div class="sumario row">
+                            <h3 id="sumarioAncora">Sumário</h3>
+                        </div>
+                        
+                        <h2 id="subTitulo1">Foto do perfil</h2>
+                        <p>É possível fazer o upload de uma foto no seu perfil no Blackboard. Ela será visualizada por professores e colegas de curso, facilitando o reconhecimento, a comunicação e a dinâmica das atividades.</p>
+                        <p>Para inserir sua foto:</p>
+                        <div class="imageContainer row">
+                            <img src="../../../img/aluno/informacoes-pessoais/step1.png" alt="captura de tela-1" class="">
+                            <div class="boxDestaque">
+                                <p>Selecione uma foto sua, preferencialmente recente e com boa qualidade. O tamanho recomendado é de <strong>150px</strong> por <strong>150px</strong>.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="height:40px"></div>
+
+                        <h2 id="subTitulo2">Alterar idioma do sistema <em>(changing language)</em></h2>
+                        <p>Para alterar a linguagem padrão do sistema <em>(to change the default language of the system)</em>:</p>
+                        <div class="imageContainer row">
+                            <img src="../../../img/aluno/Blackboard/configuracoes-pessoais/step1.png" alt="captura de tela-2" class="">
+                        </div>
+                        <ol>
+                            <li>Click on the arrow at the right top corner of Blackboard’s main screen.</li>
+                            <li>Click on <strong>Configurações</strong>.</li>
+                            <li>Then, click on <strong>Informações Pessoais</strong>.</li>
+                        </ol>
+                        <div class="imageContainer row">
+                            <img src="../../../img/aluno/Blackboard/configuracoes-pessoais/step2.png" alt="captura de tela-3" class="">
+                        </div>
+                        <ol start="4">
+                            <li>Click on <strong>Alterar configurações do sistema</strong>.</li>
+                        </ol>
+                        <div class="imageContainer row">
+                            <img src="../../../img/aluno/Blackboard/configuracoes-pessoais/step3.png" alt="captura de tela-4" class="">
+                        </div>
+                        <ol start="5">
+                            <li>Choose your most familiar language.</li>
+                        </ol>
+                        <div class="imageContainer row">
+                            <img src="../../../img/aluno/Blackboard/configuracoes-pessoais/step4.png" alt="captura de tela-5" class="">
+                        </div>
+                        <ol start="6">
+                            <li>Click on <strong>Enviar</strong> to save the changes.</li>
+                            <li>If you see the message “Success: Personal settings updated.”, it means that your setup was done successfully.</li>
+                        </ol>
+                    </article>
+                    <div class="margemParaImagem" style="height:20px"></div>
+                    <div class="voltarSumario fix">
+                        <a href="#main">Início</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts: plugins -->
+    <script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
+    <script src="../../../js/libs/angular.js"></script>
+    <script src="../../../js/listaCompletaManual-aluno.js"></script>
+    <script src="../../../js/main.js"></script>
+    <script>
+      // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      // ga('create', 'UA-59172929-3', 'auto');
+      // ga('send', 'pageview');
+    </script>
+</body>
+</html>

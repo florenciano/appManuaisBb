@@ -24,7 +24,6 @@ $corSec02: #e64b64; // secundary2 GUI
 $grid: 40px;
 $meioGrid: $grid / 2;
 
-
 @mixin font($fstyle, $fsize) {
     font: $fstyle $fsize $font;
 }

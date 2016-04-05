@@ -1,46 +1,14 @@
 <!DOCTYPE html>
 <html class="no-js" lang="pt-br" ng-app="manuaisBB">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Recursos e Tecnologias de Aprendizagem - Manuais de utilização</title>
-<meta name="viewport" content="width=device-width">
-<meta name="msapplication-TileImage" content="tile.png"/>
-<meta name="msapplication-TileColor" content="#d02034"/>
-
-<link rel="stylesheet" type="text/css" media="print" href="../../css/print.css">
-<link rel="stylesheet" type="text/css" media="screen" href="../../css/pie.css">
-<link rel="stylesheet" type="text/css" media="screen" href="../../css/main.css">
-<link rel="stylesheet" type="text/css" media="screen" href="../../css/layoutAluno.css">
-
-
-<!--[if IE]><link rel="shortcut icon" href="favicon.ico"><![endif]-->
-<link rel="icon" href="../../favicon-16.png" sizes="16x16">
-<link rel="icon" href="../../favicon-32.png" sizes="32x32">
-<link rel="icon" href="../../favicon-48.png" sizes="48x48">
-<link rel="icon" href="../../favicon-64.png" sizes="64x64">
-<link rel="icon" href="../../favicon-128.png" sizes="128x128">
-
-<!--
-1- iPad com Retina Display;
-2- iPhone com Retina Display;
-3- Primeira e segunda geração de iPad;
-4- Versões antigas de iPhone, iPod Touch e Android 2.2+
--->
-<link rel="apple-touch-icon" sizes="144x144" href="../../apple-touch-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="114x114" href="../../apple-touch-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="72x72" href="../../apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
-
-<!--[if IE]>
-    <link href="css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
-<![endif]-->
-
-<!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <script>window.html5 || document.write('<script src="../../js/libs/html5shiv.js"><\/script>')</script>
-<![endif]-->
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Recursos e Tecnologias de Aprendizagem - Manuais de utilização</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/png" href="../../favicon-16.png">
+    <link rel="icon" type="image/png" href="../../favicon-16.png">
+    <link rel="stylesheet" type="text/css" media="print" href="../../css/print.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/main.css">
 </head>
 <body>
     <!-- alert para visualização abaixo de 768px -->
@@ -50,7 +18,6 @@
     </div>
 
     <div class="wrapper">
-        
         <header id="top" class="wfull fix">
             <div class="logo c4">
                 <img src="../../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
@@ -60,214 +27,22 @@
                 <p class="description">Manuais de utilização</p>
             </div>
         </header>
-
         <div id="main" role="main" class="fix wfull">
-            <div class="containerMain fix row">
-
-                <!-- início da área da busca -->
-                <section class="buscaMain c4" ng-controller="listaMenu">
-                    <div class="inputSearch">
-                        <form id="busca">
-                            <label for="pesquisa"></label>
-                            <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Busca por título ou palavra-chave" ng-model="searchText">
-                        </form>
-                    </div>
-
-                    <nav role="navigation" class="navigationMain">
-                        <h5 class="icoBlackboard">Blackboard</h5>
-
-                        <ol class="noCategory" ng-repeat="item in BbConhecerAmbiente | filter: {manual:searchText}">
-                            <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
-                            </li>
-                            <li class="sublist" ng-show="item.manual.length > 1">
-                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
-                            </li>    
-                        </ol>
-
-                        <ol class="noCategory" ng-repeat="item in BbMateriais | filter: {manual:searchText}">
-                            <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
-                            </li>
-                            <li class="sublist" ng-show="item.manual.length > 1">
-                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
-                            </li>
-                        </ol>
-
-                        <ol class="noCategory" ng-repeat="item in BbComunicacaoInteracao | filter: {manual:searchText}">
-                            <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
-                            </li>
-                            <li class="sublist" ng-show="item.manual.length > 1">
-                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
-                            </li>
-                        </ol>
-
-                        <ol class="noCategory" ng-repeat="item in BbTrabalhos | filter: {manual:searchText}">
-                            <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
-                            </li>
-                            <li class="sublist" ng-show="item.manual.length > 1">
-                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
-                            </li>
-                        </ol>
-
-                        <ol class="noCategory" ng-repeat="item in BbGrupos | filter: {manual:searchText}">
-                            <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
-                                
-                            </li>
-                            <li class="sublist" ng-show="item.manual.length > 1">
-                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
-                            </li>
-                        </ol>
-
-                        <ol class="noCategory" ng-repeat="item in BbTestesPesquisas | filter: {manual:searchText}">
-                            <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
-                            </li>
-                            <li class="sublist" ng-show="item.manual.length > 1">
-                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
-                            </li>
-                        </ol>
-
-                        <ol class="noCategory" ng-repeat="item in BbRubrics | filter: {manual:searchText}">
-                            <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
-                            </li>
-                            <li class="sublist" ng-show="item.manual.length > 1">
-                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
-                            </li>
-                        </ol>
-
-                        <ol class="noCategory" ng-repeat="item in BbAvaliacao | filter: {manual:searchText}">
-                            <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
-                            </li>
-                            <li class="sublist" ng-show="item.manual.length > 1">
-                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
-                            </li>
-                        </ol>
-
-                        <ol class="noCategory" ng-repeat="item in BbGeral| filter: {manual:searchText}">
-                        <li class="nameCategory">
-                            <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
-                            
-                        </li>
-                            <li class="sublist" ng-show="item.manual.length > 1">
-                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
-                            </li>
-                        </ol>
-
-                        <ol class="noCategory" ng-repeat="item in BbCalendario | filter: {manual:searchText}">
-                        <li class="nameCategory">
-                            <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
-                            
-                        </li>
-                            <li class="sublist" ng-show="item.manual.length > 1">
-                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
-                            </li>
-                        </ol>
-
-                        <h5 class="icoCatme">Catme</h5>
-                        <ol class="noCategory" ng-repeat="item in catmeSobreFerramenta | filter: {manual:searchText}">
-                            <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
-                            </li>
-                            <li class="sublist" ng-show="item.manual.length > 1">
-                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
-                            </li>
-                        </ol>
-
-                        <ol class="noCategory" ng-repeat="item in catmeAplicarPesquisaAval | filter: {manual:searchText}">
-                            <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
-                            </li>
-                            <li class="sublist" ng-show="item.manual.length > 1">
-                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
-                            </li>
-                        </ol>
-
-                        <ol class="noCategory" ng-repeat="item in catmeAnalisarResultados | filter: {manual:searchText}">
-                            <li class="nameCategory">
-                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
-                            </li>
-                            <li class="sublist" ng-show="item.manual.length > 1">
-                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
-                            </li>
-                        </ol>
-                        
-                        <h5 class="icoCursosOnline">Casos, Simuladores e Cursos online</h5>
-                        <ol class="noCategory" ng-repeat="item in SobreOsRecursos | filter: {manual:searchText}">
-                            <li class="nameCategory">
-                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
-                            </li>
-                            <li class="sublist" ng-show="item.manual.length > 1">
-                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
-                            </li>
-                        </ol>
-
-                        <ol class="noCategory" ng-repeat="item in ConsultarRecursosDisponiveis | filter: {manual:searchText}">
-                            <li class="nameCategory">
-                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
-                            </li>
-                            <li class="sublist" ng-show="item.manual.length > 1">
-                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
-                            </li>
-                        </ol>
-
-                        <ol class="noCategory" ng-repeat="item in UtilizarRecursos | filter: {manual:searchText}">
-                            <li class="nameCategory">
-                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
-                            </li>
-                            <li class="sublist" ng-show="item.manual.length > 1">
-                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
-                            </li>
-                        </ol>
-
-                        <div class="faqBusca icoFaq">
-                            <h5>
-                            <ol class="noCategory">
-                                <li><a href="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/faq/index.html" class="">FAQ</a></li>
-                            </ol>
-                            </h5>
-                        </div>
-                        <div class="outros">
-                            <h6>
-                                <a href="mailto:dea@insper.edu.br?subject=DEA%20-%20Manuais%20de%20utiliza&#231;&#227;o">Não encontrou o que queria?</a>
-                            </h6>
-                        </div>
-                    </nav>
-
+            <div class="containerMain_carometro fix row">
                 <!-- início do conteúdo do manual -->
-                <section class="mainContent">
-                    <!--
-                    <section class="headerContent row">
-                        <div class="cabecalho fix">
-                            <p>
-                                <span><strong>Atualizado: </strong>19/02/2015</span>
-                            </p>
-                        </div>
-                        <hr>
-                        <div class="breadcrumb">
-                            <p><span class="nameCategory">home </span></p>
-                        </div> 
-                    </section>
-                    -->
-
+                <section class="mainContent-fotoPerfil">
                     <article class="contentMain row">
                         <h1>Foto do perfil</h1>
                         <p>É possível fazer o upload de uma foto no seu perfil no Blackboard. Ela será visualizada por professores e colegas de curso, facilitando o reconhecimento, a comunicação e a dinâmica das atividades.</p>
                         <p>Para inserir sua foto:</p>
-
                         <div class="imageContainer row">
                             <img src="../../img/aluno/informacoes-pessoais/step1.png" alt="" class="">
-                            <div class="boxDestaque" id="alunoInfoAlterarFoto1">
+                            <div class="boxDestaque">
                                 <p>Selecione uma foto sua, preferencialmente recente e com boa qualidade.</p>
                                 <p>O tamanho recomendado é de <strong>150px</strong> por <strong>150px</strong>.</p>
                             </div>
                         </div>
-                        <div class="margemParaImagem" style="margin-top:40px"></div>
+                        <div class="margemParaImagem" style="height:40px"></div>
                     </article>
                 </section>
             </div>
@@ -277,15 +52,10 @@
 
 <!-- Scripts: plugins -->
 <script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
-
 <script src="../../js/libs/angular.js"></script>
 <script src="../../js/libs/jquery.placeholder.js"></script>
-
 <script src="../../js/listaCompletaManual.js"></script>
-
-
 <script src="../../js/main.js"></script>
-
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

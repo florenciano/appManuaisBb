@@ -9,9 +9,7 @@ $( document ).ready( function() {
         NOTA: Implantado a partir da versão 4
     */
     var b =  $( "button.close" ), c = $( ".alert" );
-    
     function closeAlert (argument) { c.hide( 400 );}
-
     b.on( "click", closeAlert );
 
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -77,10 +75,10 @@ $( document ).ready( function() {
     // Função para criar as âncoras
     function createAnchor() {
         todosTitulos.each( function() {
+            // para cada 'h2' encontrado crie uma div com âncora para subir no topo da página
             var tagDiv = $( "<div>" ).addClass( "voltarSumario", "fix" );
             var tagAnchor = $( "<a>" );
                 tagAnchor.attr( "href", "#sumarioAncora" );
-            // texto que ira aparecer no DOM HTML
             var txtA = "Sumário";
 
             tagAnchor.text( txtA );
@@ -90,7 +88,6 @@ $( document ).ready( function() {
             // $(this).prev().append( tagDiv );
             $( tagDiv ).insertBefore( $(this) );
         });
-
     }
 
     // criando as listas
@@ -99,33 +96,31 @@ $( document ).ready( function() {
     todosTitulos.each( function() {
         var tagA = $( "<a>" );
             tagA.attr( "href","#" + this.id );
-
-        var contentTagA = $(this).text();
-        tagA.append( contentTagA );
+            tagA.append( $(this).text() );
 
         // criando os <li> e inserido seus respectivos conteúdos
         var tagLi = $( "<li>" );
-        tagLi.append( tagA );
-        tagUl.append( tagLi );
+            tagLi.append( tagA );
+            tagUl.append( tagLi );
     });
 
     // Aqui fica as condições para que seja exibida no DOM
     // se houver mais de um subTítulo (lembre-se que sempre haverá pelo menos um: 'Saiba Mais')
-    // caso não há nenhum subtítulo então não insira 'as divs' do sumário
-    // porém a última âncora precisa do espaçamento entre conteúdo e box do Saiba Mais
+    // caso não há nenhum subtítulo então não insira o sumário
+    // porém a última âncora precisa do espaçamento entre seu conteúdo e o box do 'Saiba Mais'
     if( todosTitulos.length > 1 ) {
         divSumario.append( tagUl );
         createAnchor();
     } else {
         divSumario.css( "display", "none" );
-        anchor.css( "margin-top", "40px" );
+        anchor.css( "height", "40px" );
     }
 
     // Não queremos que aparece a âncora antes do 1º subTítulo do manual
     // quando este mesmo vier imediatamente após a lista de sumário.
     var allAnchor = $( ".voltarSumario" );
-    allAnchor.each( function (index, posicao) {
-        if($(this).prev().hasClass( "sumario row" )) {
+    allAnchor.each( function() {
+        if( $(this).prev().hasClass( "sumario row" ) ) {
             $(this).css( "display","none" );
         }
     });

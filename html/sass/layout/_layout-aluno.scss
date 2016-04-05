@@ -51,7 +51,6 @@ $meioGrid: $grid / 2;
     -moz-box-shadow: $typeShadow $lenH $lenV $blur $spread $rgba;
     -webkit-box-shadow: $typeShadow $lenH $lenV $blur $spread $rgba;
 }
-
 @mixin box-size($boxSize) {
     box-sizing: $boxSize;
     -o-box-sizing: $boxSize;
@@ -67,7 +66,6 @@ $meioGrid: $grid / 2;
        -o-border-radius: $radius;
           border-radius: $radius;
 }
-
 @mixin transition($transition) {
     transition: $transition;
     -o-transition: $transition;
@@ -75,7 +73,6 @@ $meioGrid: $grid / 2;
     -moz-transition: $transition;
     -webkit-transition: $transition;
 }
-
 @mixin settingsBoxImagem($widthBox, $leftBox, $topBox, $rightBox, $bottomBox) {
     position: absolute;
     width: $widthBox;
@@ -84,46 +81,87 @@ $meioGrid: $grid / 2;
     top: $topBox;
     right: $rightBox;
 }
-.teste {
-    
+
+// Menu de navegação
+.navigationMain {
+    h5 { padding-left: $grid; }
+    ul {
+        li { padding-left: $grid;
+            a { display: block; }
+        }
+    }
+    .selectedCategory { padding-left: $grid; }
 }
-/////////////////////////////////////////////////////////////////////
-// Regras dos manuais dos alunos
-/////////////////////////////////////////////////////////////////////
 
-// DESKTOP-DESKTOP-DESKTOP-DESKTOP-DESKTOP-DESKTOP-DESKTOP-DESKTOP-DESKTOP (desculpe a bainada;)
-@media only screen and (min-width: 769px) and (max-width: 1920px) {
+// sublistas do sumário
+.sumario {
+    ul {
+        li { margin-bottom: $grid/8;
+            ul { margin-top: $grid/8;
+                li { padding-left: $grid/2; }
+            }
+        }
+    }
+}
 
+// 'ol' dentro dos box de destaque
+.imageContainer {
+    .boxDestaque {
+        ol { 
+            margin: 0;
+            padding-left: $grid/2;
+        }
+    }
+}
+
+// box destaques (.boxDestaque)e box destaque adicional (.boxDestaqueAdicional)
+.boxDestaque, .boxDestaqueAdicional { margin: ($grid/4) auto; }
+
+// DESKTOP
+@media only screen and (min-width: 769px) {
+    /* Inserir foto (carômetro)*/
     // desabilitando a linha horizontal que divide as seções de navegação do conteúdo
-    .containerMain { background: none; }
-    .mainContent { width: 83.33%; margin: 0 auto;}
-    /* ===============================================================
-        COORDENADAS DAS POSIÇÕES DOS BOXES SOBRE AS IMAGENS DO MANUAL
-    ================================================================== */
+    .containerMain_carometro { background: none; }
+    .mainContent-fotoPerfil { width: 83.33%; margin: 0 auto;}
     #alunoInfoAlterarFoto1 { @include settingsBoxImagem(25%, auto, auto, 0, 40%);}
+
+    // breadcrumb
+    .headerContent {
+        .cabecalho { padding: ($grid/4) 0; }
+    }
 }
 
 
-// TABLET-TABLET-TABLET-TABLET-TABLET-TABLET-TABLET-TABLET-TABLET
+// TABLET
 @media handheld, only screen and (max-width: 768px), only screen and (max-device-width: 768px) and (orientation:portrait) {
     
+    /* Inserir foto (carômetro) */
     // desabilitando a linha horizontal que divide as seções de navegação do conteúdo
     .containerMain { background: none; }
-    .mainContent { padding: 0 $meioGrid; }
-
-    /* ===============================================================
-        COORDENADAS DAS POSIÇÕES DOS BOXES SOBRE AS IMAGENS DO MANUAL
-    ================================================================== */
+    .mainContent-fotoPerfil { padding: 0 $meioGrid; }
     #alunoInfoAlterarFoto1 { @include settingsBoxImagem(50%, auto, auto, 0, 20%); }
+
+    // logo header
+    .logo {
+        img { margin-left: auto; margin-right: auto; }
+    }
+
+    // transformando as tabelas em responsivos
+    .table-responsivo { 
+        overflow-x: auto;
+        overflow-y: hidden;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+
+
+
 }
 
-// MOBILE-MOBILE-MOBILE-MOBILE-MOBILE-MOBILE-MOBILE-MOBILE-MOBILE
+// MOBILE
 @media only screen and (max-width:767px) {
     
-    #alunoInfoAlterarFoto1 {
-        clear: both;
-        width: 100%;
-        float: left;
-        margin: 5px 0 0 0;
-    }
+    /* Inserir foto (carômetro) */
+    #alunoInfoAlterarFoto1 { clear: both; width: 100%; float: left; margin: 5px 0 0 0; }
+    
+    
 }
