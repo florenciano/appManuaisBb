@@ -104,11 +104,12 @@ $( document ).ready( function() {
             tagUl.append( tagLi );
     });
 
+
     // Aqui fica as condições para que seja exibida no DOM
     // se houver mais de um subTítulo (lembre-se que sempre haverá pelo menos um: 'Saiba Mais')
     // caso não há nenhum subtítulo então não insira o sumário
     // porém a última âncora precisa do espaçamento entre seu conteúdo e o box do 'Saiba Mais'
-    if( todosTitulos.length > 1 ) {
+    if (todosTitulos.length > 1) {
         divSumario.append( tagUl );
         createAnchor();
     } else {
@@ -124,6 +125,9 @@ $( document ).ready( function() {
             $(this).css( "display","none" );
         }
     });
+
+    // Em casos em que não queremos a âncora antes dos títulos (execeção)
+    $("h2[data-remove-ancora]").prev().remove();
 
     // O título 'Saiba mais' também é marcado com 'h2', portanto,
     // irá aparecer uma âncora indesejada dentro do box. Eliminamos.

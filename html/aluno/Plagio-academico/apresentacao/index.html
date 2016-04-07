@@ -42,7 +42,7 @@
                         <!-- blackbaord -->
                         <h5 class="icoBlackboard">Blackboard</h5>
                         <ul class="noCategory" ng-repeat="item in blackboard | filter: {manual:searchText}">
-                            <li class="sublist ng-class:addMark()">
+                            <li class="sublist">
                                 <a href="{{item.linkManual}}" title="{{item.manual}}">{{item.manual}}</a>
                             </li>    
                         </ul>
@@ -50,7 +50,7 @@
                         <!-- plagio acadêmico -->
                         <h5 class="icoPlagio">Plágio Acadêmico</h5>
                         <ul class="noCategory" ng-repeat="item in plagio_academico | filter: {manual:searchText}">
-                            <li class="sublist">
+                            <li class="sublist ng-class:addMark()">
                                 <a href="{{item.linkManual}}" title="{{item.manual}}">{{item.manual}}</a>
                             </li>    
                         </ul>
@@ -99,97 +99,28 @@
                             4- Para casos em que haverá uma sublistagem no sumário adicionar no elemento 'h2' o atributo: data-sublist="true"
                             e para cada tópico desta listagem inserir a tag 'h3' com a seguinte sintaxe: '<h3 id="subList_sumarioX">'
                          -->
-                        <h1 class="nameCategory">Participação em atividades</h1>
+                        <h1 class="nameCategory">Apresentação</h1>
 
                         <div class="sumario row">
                             <h3 id="sumarioAncora">Sumário</h3>
                         </div>
                         
-                        <h2 id="subTitulo1">Envio de trabalhos</h2>
-                        <p>Caso o professor tenha solicitado o envio de uma atividade individual ou em grupo, faça o seguinte:</p>
+                        <h2 id="subTitulo1">Objetivo</h2>
+                        <p>Orientar toda a Comunidade Insper sobre a visão institucional quanto às práticas que caracterizam plágio acadêmico e como essa infração pode ser evitada.</p>
                         <div class="imageContainer row">
-                            <img src="../../../img/aluno/Blackboard/participacao-atividades/step1.png" alt="captura de tela-1" class="">
-                            <div class="boxDestaque">
-                                <p>No local em que o professor disponibilizou a atividade, clique em seu título.</p>
-                            </div>
-                        </div>
-                        <div class="imageContainer row">
-                            <img src="../../../img/aluno/Blackboard/participacao-atividades/step2.png" alt="captura de tela-2" class="">
-                            <div class="boxDestaque">
-                                <p>Atente-se para o prazo de entrega e, quando houver, leia atentamente os termos apresentados.</p>
-                            </div>
-                            <div class="boxDestaque">
-                                <p>Se o professor pediu a entrega de um arquivo, clique em “Pesquisar Meu Computador” para localizá-lo. Se foi solicitada apenas uma resposta simples de texto, clique em “Redigir resposta”.</p>
-                            </div>
-                        </div>
-                        <div class="imageContainer row">
-                            <img src="../../../img/aluno/Blackboard/participacao-atividades/step3.png" alt="captura de tela-3" class="">
-                            <div class="boxDestaque">
-                                <p>No local em que o professor disponibilizou a atividade, clique em seu título.</p>
-                            </div>
-                            <div class="boxDestaqueAdicional">
-                                <p>Nas atividades em grupo, qualquer um dos integrantes pode realizar o envio.</p>
-                            </div>
-                        </div>
-
-                        <h2 id="subTitulo2">Fórum de discussão</h2>
-                        <p>O Fórum de Discussão pode estar localizado tanto na área Conteúdos quanto no próprio menu da disciplina.</p>
-                        <div class="imageContainer row">
-                            <img src="../../../img/aluno/Blackboard/participacao-atividades/step4.png" alt="captura de tela-4" class="">
-                            <div class="boxDestaque">
-                                Ao selecionar um Fórum são exibidas suas <strong>Linhas de Discussão</strong> (assuntos dentro da temática do Fórum). Cada Linha apresenta o número total de mensagens já postadas e quantas delas ainda não foram lidas.
-                            </div>
-                        </div>
-                        <div class="imageContainer row">
-                            <img src="../../../img/aluno/Blackboard/participacao-atividades/step5.png" alt="captura de tela-5" class="">
-                        </div>
-                        <ol type="a">
-                            <li>Clique para criar uma <strong>Linha de Discussão</strong> independente das demais já criadas no Fórum. Essa opção pode ter</li>
-                            <li>Ao se <strong>Inscrever</strong> em um <strong>Fórum</strong> ou <strong>Linha de Discussão</strong> você recebe o resumo das discussões por e-mail. Essa opção pode ter sido desabilitada pelo professor.</li>
-                        </ol>
-                        <div class="imageContainer row">
-                            <img src="../../../img/aluno/Blackboard/participacao-atividades/step6.png" alt="captura de tela-6" class="">
-                            <div class="boxDestaque">
-                                <p>Para participar de uma <strong>Linha de Discussão</strong> selecione-a na lista.</p>
-                            </div>
-                        </div>
-                        <div class="imageContainer row">
-                            <img src="../../../img/aluno/Blackboard/participacao-atividades/step7.png" alt="captura de tela-7" class="">
-                            <div class="boxDestaque">
-                                <p>Clique na mensagem desejada e em <strong>Responder</strong>. Escolha <strong>Citação</strong> para agregar, abaixo da sua resposta, um histórico com a mensagem que está sendo respondida.</p>
-                            </div>
-                        </div>
-                        <div class="imageContainer row">
-                            <img src="../../../img/aluno/Blackboard/participacao-atividades/step8.png" alt="captura de tela-8" class="">
-                            <div class="boxDestaqueAdicional">
-                                <p>Para ler em sequência todas as mensagens já postadas, basta coletá-las.</p>
-                            </div>
-                        </div>
-
-                        <h2 id="subTitulo3">Blog</h2>
-                        <p>O Blog pode estar localizado tanto na área Conteúdos quanto no próprio menu da disciplina.</p>
-                        <div class="imageContainer row">
-                            <img src="../../../img/aluno/Blackboard/participacao-atividades/step9.png" alt="captura de tela-9" class="">
-                            <div class="boxDestaque">
-                                <p>O <strong>Blog</strong> pode ser tanto individual (cada aluno tem o seu) quanto da disciplina (um único <strong>Blog</strong> para todos os alunos.</p>
-                            </div>
-                        </div>
-                        <div class="imageContainer row">
-                            <img src="../../../img/aluno/Blackboard/participacao-atividades/step10.png" alt="captura de tela-10" class="">
-                            <div class="boxDestaque">
-                                <p>Para participar do Blog é preciso clicar em Criar postagem. Não existe número máximo de entradas.</p>
-                            </div>
-                            <div class="boxDestaque">
-                                <p>Na lista lateral direita são exibidos os demais alunos da disciplina com suas respectivas postagens.</p>
-                                <p>Ao clicar nas postagens é possível deixar comentários.</p>
-                            </div>
+                            <a href="../../../img/aluno/Plagio-academico/apresentacao/cartilha-plagio-academico-insper.pdf" title="Baixe aqui a Cartilha de Plágio Acadêmico"><img src="../../../img/aluno/Plagio-academico/apresentacao/download.png" alt="download cartilha de plágio acadêmico" class="imgLeft"></a>
                         </div>
                         <div class="margemParaImagem" style="height:20px"></div>
+
+                        <h2 id="subTitulo2" data-remove-ancora="true">Plágio Acadêmico</h2>
+                        <p>A prática que leva à falsa representação do nível de conhecimento de alguém durante a avaliação formal ou informal desse conhecimento, dentre outras infrações de desonestidade intelectual, pode ser considerada plágio</p>
+                        <p>O plágio destrói o princípio fundamental de confiança que deve existir no processo de transmissão e aquisição de conhecimento em atividades de pesquisa e de ensino-aprendizagem, além de comprometer a reputação acadêmica do aluno e, por consequência, da instituição de ensino à qual o aluno está vinculado.</p>
+                        <p>Alguns dicionários definem plágio como o ato de “cometer furto literário, apresentando como sua uma ideia literária ou científica de outrem”. Ainda, complementa-se como a “apresentação feita por alguém como de sua própria autoria de trabalho, obra intelectual, etc. produzida por outrem”. A legislação brasileira entende como plágio a “cópia dissimulada da forma da obra exteriorizada de terceiro, com o intuito de passar-se por seu autor”. Portanto, o que caracteriza o plágio não é somente a semelhança física entre os textos, mas qualquer possibilidade de cópia, ainda que na ausência de dolo.</p>
+                        <p>Não somente considera-se plágio aquilo que é literalmente copiado; explicar com suas palavras o que leu em um determinado documento, sintetizar ou confrontar ideias de diversas fontes em um único texto não faz com que o seu texto seja original; esta ação também é considerada plágio se não citada a fonte. Porém, há casos em que o uso de citações é dispensado, como em resumos solicitados pelo professor de um texto a ser discutido ou de algo considerado senso comum.</p>
+                        <p>Não há qualquer impedimento de fazer uso da ideia de outrem para fundamentar um texto. O que não se pode é omitir a fonte de onde a informação foi retirada ou na qual a ideia foi baseada. Por isso, o uso de citações1 é fundamental, uma vez que a omissão caracteriza apropriação indevida de conteúdo e é plágio.</p>
+                        <div class="margemParaImagem" style="height:20px"></div>
+
                     </article>
-                    <div class="margemParaImagem" style="height:20px"></div>
-                    <div class="voltarSumario fix">
-                        <a href="#main">Início</a>
-                    </div>
                 </section>
             </div>
         </div>
@@ -199,6 +130,19 @@
     <script src="../../../js/libs/angular.js"></script>
     <script src="../../../js/listaCompletaManual-aluno.js"></script>
     <script src="../../../js/main.js"></script>
+    <script>
+        // Esta fn() foi criada para corrigir uma incoverinência
+        // de ter itens no menu de navegação com o mesmo txt
+        function removeHighlight() {
+            var h = document.querySelectorAll(".selectedCategory");
+            for (var i = 0; i < h.length; i++) {
+                if(i != 0)
+                    h[i].className = "sublist";
+            }
+        }
+        window.onload = removeHighlight;
+
+    </script>
     <script>
       // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

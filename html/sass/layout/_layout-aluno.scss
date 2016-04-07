@@ -137,7 +137,6 @@ $meioGrid: $grid / 2;
     
     /* Inserir foto (carômetro) */
     // desabilitando a linha horizontal que divide as seções de navegação do conteúdo
-    .containerMain { background: none; }
     .mainContent-fotoPerfil { padding: 0 $meioGrid; }
     #alunoInfoAlterarFoto1 { @include settingsBoxImagem(50%, auto, auto, 0, 20%); }
 
@@ -163,5 +162,23 @@ $meioGrid: $grid / 2;
     /* Inserir foto (carômetro) */
     #alunoInfoAlterarFoto1 { clear: both; width: 100%; float: left; margin: 5px 0 0 0; }
     
+    // eliminando a borda central
+    .containerMain { background: none; }
+
+    // entre o menu de navegação e o article
+    .mainContent { 
+        border-top: 1px solid $corBorda;
+        margin-top: $grid/8;
+        .contentMain { 
+            margin-top: 0;
+            h1 { margin: .25em 0; }
+        }
+    }
+    .headerContent {
+        .cabecalho { 
+            padding: ($grid/8) 0;
+            p { font-size: .875em; }
+        }
+    }
     
 }

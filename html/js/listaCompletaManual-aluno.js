@@ -59,35 +59,35 @@ manuaisBbAluno.controller('listaMenu', function ($scope) {
 	$scope.plagio_academico = [
 	{
 		'manual'		: 	'Apresentação',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/plagio-academico/apresentacao/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Plagio-academico/apresentacao/'
 	},
 	{
 		'manual'		: 	'Plágio acidental e plágio intencional',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/plagio-academico/acidental-e-intencional/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Plagio-academico/acidental-e-intencional/'
 	},
 	{
 		'manual'		: 	'Categorizações de plágio',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/plagio-academico/categorizacao/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Plagio-academico/categorizacao/'
 	},
 	{
 		'manual'		: 	'Trabalhos colaborativos ou em grupo',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/plagio-academico/trabalhos-colaborativos-ou-em-grupo/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Plagio-academico/trabalhos-colaborativos-ou-em-grupo/'
 	},
 	{
 		'manual'		: 	'Conhecimento comum',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/plagio-academico/conhecimento-comum/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Plagio-academico/conhecimento-comum/'
 	},
 	{
 		'manual'		: 	'Como evitar o plágio',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/plagio-academico/como-evitar/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Plagio-academico/como-evitar/'
 	},
 	{
 		'manual'		: 	'Documentos e sites consultados',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/plagio-academico/documentos-sites-consultados/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Plagio-academico/documentos-sites-consultados/'
 	},
 	{
 		'manual'		: 	'Sites recomendados',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/plagio-academico/sites-recomendados/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Plagio-academico/sites-recomendados/'
 	}
 	];
 
@@ -98,11 +98,11 @@ manuaisBbAluno.controller('listaMenu', function ($scope) {
 	$scope.curso_online = [
 	{
 		'manual'		: 	'Apresentação',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/curso-online/apresentacao/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Curso-online/apresentacao/'
 	},
 	{
 		'manual'		: 	'Como acessar ',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/curso-online/como-acessar/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Curso-online/como-acessar/'
 	}
 	];
 
@@ -113,11 +113,11 @@ manuaisBbAluno.controller('listaMenu', function ($scope) {
 	$scope.clikcers = [
 	{
 		'manual'		: 	'Realizar cadastro',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/clikcers/realizar-cadastro/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Clickers/realizar-cadastro/'
 	},
 	{
 		'manual'		: 	'Participar da votação',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/clikcers/participar-votacao/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Clickers/participar-votacao/'
 	}
 	];
 
@@ -128,40 +128,32 @@ manuaisBbAluno.controller('listaMenu', function ($scope) {
 	$scope.catme = [
 	{
 		'manual'		: 	'Apresentação',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/catme/apresentacao/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Catme/apresentacao/'
 	},
 	{
 		'manual'		: 	'Cadastro',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/catme/cadastro/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Catme/cadastro/'
 	},
 	{
 		'manual'		: 	'Calibragem',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/catme/calibragem/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Catme/calibragem/'
 	},
 	{
 		'manual'		: 	'Processo de Avaliação',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/catme/processo-avaliacao/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Catme/processo-avaliacao/'
 	},
 	{
 		'manual'		: 	'Resultados',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/catme/resultados/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Catme/resultados/'
 	}
 	];
 
-	/*
-        Esta função add o '.selectedCategory' no menu
-        incluir na marcação class='ng-class: addMark()'
-        Atribuir apenas na categoria referente ao manual
-    */
-	$scope.addMark = function() {
-        var title = $(".nameCategory");
-        var links = $(".sublist").find("a");
-
-        links.each( function () {
-            if( $(this).text() == $(title).text() ) {
+	$scope.addMark = function(str) {
+		var title = $(".nameCategory"), links = $(".sublist").find("a");
+        links.each( function() {
+            if($(this).text() == $(title).text()) {
                 $(this).parent().addClass("selectedCategory");
             }
         });
-	}
-	
+    }
 });

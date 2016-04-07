@@ -42,7 +42,7 @@
                         <!-- blackbaord -->
                         <h5 class="icoBlackboard">Blackboard</h5>
                         <ul class="noCategory" ng-repeat="item in blackboard | filter: {manual:searchText}">
-                            <li class="sublist">
+                            <li class="sublist ng-class:addMark()">
                                 <a href="{{item.linkManual}}" title="{{item.manual}}">{{item.manual}}</a>
                             </li>    
                         </ul>
@@ -74,7 +74,7 @@
                          <!--catme -->
                         <h5 class="icoCatme">Catme</h5>
                         <ul class="noCategory" ng-repeat="item in catme | filter: {manual:searchText}">
-                            <li class="sublist ng-class:addMark()">
+                            <li class="sublist">
                                 <a href="{{item.linkManual}}" title="{{item.manual}}">{{item.manual}}</a>
                             </li>    
                         </ul>

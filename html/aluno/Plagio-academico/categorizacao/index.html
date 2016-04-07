@@ -42,7 +42,7 @@
                         <!-- blackbaord -->
                         <h5 class="icoBlackboard">Blackboard</h5>
                         <ul class="noCategory" ng-repeat="item in blackboard | filter: {manual:searchText}">
-                            <li class="sublist ng-class:addMark()">
+                            <li class="sublist">
                                 <a href="{{item.linkManual}}" title="{{item.manual}}">{{item.manual}}</a>
                             </li>    
                         </ul>
@@ -50,7 +50,7 @@
                         <!-- plagio acadêmico -->
                         <h5 class="icoPlagio">Plágio Acadêmico</h5>
                         <ul class="noCategory" ng-repeat="item in plagio_academico | filter: {manual:searchText}">
-                            <li class="sublist">
+                            <li class="sublist ng-class:addMark()">
                                 <a href="{{item.linkManual}}" title="{{item.manual}}">{{item.manual}}</a>
                             </li>    
                         </ul>
@@ -85,7 +85,7 @@
                 <section class="mainContent c8">
                     <section class="headerContent row">
                         <div class="cabecalho fix">
-                            <p><span><strong>Atualizado: </strong>05/04/2016</span></p>
+                            <p><span><strong>Atualizado: </strong>06/04/2016</span></p>
                         </div>
                     </section>
                     <article class="contentMain row">
@@ -99,72 +99,32 @@
                             4- Para casos em que haverá uma sublistagem no sumário adicionar no elemento 'h2' o atributo: data-sublist="true"
                             e para cada tópico desta listagem inserir a tag 'h3' com a seguinte sintaxe: '<h3 id="subList_sumarioX">'
                          -->
-                        <h1 class="nameCategory">Ambiente das disciplinas</h1>
-                        <p>Ao acessar o ambiente de apoio de uma disciplina presencial, você terá a seguinte visualização:</p>
+                        <h1 class="nameCategory">Categorizações de plágio</h1>
+                        <p>Este documento apresenta as práticas de plágio mais comumente encontradas no meio acadêmico, partindo-se do entendimento de códigos de conduta e de integridade acadêmica disponibilizados por diversas instituições brasileiras e estrangeiras. Também realizamos um levantamento das ocorrências entendidas como contraditórias ao Código de Ética e Conduta do <strong>Insper</strong> e que resultaram na penalização dos alunos envolvidos.</p>
+                        <p>Categorizamos, a seguir, os tipos de infração de plágio e apresentamos o posicionamento institucional de forma estruturada.</p>
 
                         <div class="sumario row">
                             <h3 id="sumarioAncora">Sumário</h3>
                         </div>
-                        
-                        <h2 id="subTitulo1">Avisos</h2>
-                        <div class="imageContainer row">
-                            <img src="../../../img/aluno/Blackboard/ambiente-disciplinas/step1.png" alt="captura de tela-1" class="">
-                            <div class="boxDestaque">
-                                <ol>
-                                    <li>Este é o menu da disciplina. Embora as opções possam variar de programa para programa, aqui você encontrará links para as páginas de avisos, conteúdos disponibilizados pelos professores, notas e central de ajuda, além da ferramenta de envio de e-mail.</li>
-                                    <li>A página de Avisos é a primeira a ser exibida. Aqui o professor postará avisos importantes para a turma. Uma cópia dos avisos poderá ou não ser enviada por e-mail, de acordo com a escolha do professor.</li>
-                                </ol>    
-                            </div>
-                        </div>
-                       
-                        <div class="margemParaImagem" style="height:40px"></div>
 
-                        <h2 id="subTitulo2">Conteúdos</h2>
-                        <p>No link Conteúdos do menu da disciplina você visualizará os conteúdos das aulas postados pelo professor, além do plano de aula.</p>
-                        <p>A organização dos materiais fica a cargo do professor. Exemplo:</p>
-                        <div class="imageContainer row">
-                            <img src="../../../img/aluno/Blackboard/ambiente-disciplinas/step2.png" alt="captura de tela-2" class="">
-                        </div>
+                        <h2 id="subTitulo1">Plágio literal ou direto</h2>
+                        <p>Copiar diretamente uma passagem do texto sem citar a fonte.</p>
+                        <p><strong>Exemplo<sup>1</sup></strong></p>
+                        <!-- table1 -->
 
-                        <h2 id="subTitulo3">Notas</h2>
-                        <p>Ao acessar o link Notas, você visualizará as notas de todas as atividades realizadas na disciplina, bem como feedback do professor e média final.</p>
-                        <p>Caso o professor tenha habilitado esta opção, também será possível visualizar a média e a mediana da turma em determinadas atividades.</p>
-                        <div class="imageContainer row">
-                            <img src="../../../img/aluno/Blackboard/ambiente-disciplinas/step3.png" alt="captura de tela-3" class="">
-                            <div class="boxDestaque">
-                                <ul>
-                                    <li>Ao clicar no item de média <span class="enfaseBox">A</span> será exibido seu critério de cálculo, caso já tenha sido configurado pelo professor.</li>
-                                    <li>Para conferir o feedback do professor para um Exercício, clique no respectivo link <span class="enfaseBox">B</span> e no nome do arquivo enviado <span class="enfaseBox">C</span>.</li>
-                                </ul>    
-                            </div>
-                        </div>
-                        <p>Exemplo de visualização de um Exercício:</p>
-                        <div class="imageContainer row">
-                            <img src="../../../img/aluno/Blackboard/ambiente-disciplinas/step4.png" alt="captura de tela-4" class="">
-                        </div>
-                        <div class="imageContainer row">
-                            <img src="../../../img/aluno/Blackboard/ambiente-disciplinas/step5.png" alt="captura de tela-5" class="">
-                            <div class="boxDestaque">
-                                <ul>
-                                    <li>Veja seu desempenho nos testes clicando sobre seu link <span class="enfaseBox">D</span> e, na sequência, sobre sua nota <span class="enfaseBox">E</span>. As informações podem variar de acordo com a configuração do professor.</li>
-                                </ul>
-                            </div>
-                        </div>
+                        <h2 id="subTitulo2">Plágio transliteral</h2>
+                        <p>Parafrasear uma passagem do texto sem citar a fonte. Parafrasear um texto é por vezes necessário, principalmente quando se quer reproduzi-lo com linguagem mais acessível ao público leitor. É comum acreditar que trocando palavras por sinônimos a ideia torna-se original, sendo desnecessária a citação da fonte. Escrever a ideia de outra pessoa com suas palavras não torna a ideia sua, e também caracteriza plágio.</p>
+                        <p><strong>Exemplo<sup>2</sup></strong></p>
+                        <!-- table2 -->
 
-                        <h2 id="subTitulo3">Enviar E-mail</h2>
-                        <p>Professores e alunos podem trocar e-mails pelo ambiente. Para isso, basta clicar no link Enviar E-mail no menu e selecionar a opção desejada.</p>
-                        <p>Atenção: a leitura das mensagens deve ser feita via webmail ou servidor Outlook.</p>
-                        <div class="imageContainer row">
-                            <img src="../../../img/aluno/Blackboard/ambiente-disciplinas/step6.png" alt="captura de tela-6" class="">
-                            <div class="boxDestaqueAdicional">
-                                <p>Caso queira redirecionar os e-mails recebidos pela conta do Insper para sua caixa de e-mails pessoal, entre em contato com o Help Desk pelo e-mail <a href="mailto:helpdesk@insper.edu.br">helpdesk@insper.edu.br</a> ou pelo telefone 4504-2550.</p>
-                            </div>
-                        </div>
+                        <h2 id="subTitulo3">Plágio consentido e autoplágio</h2>
+                        <p>Texto de uma pessoa ou grupo que serve como base - ou é copiado - e é apresentado como sendo original em mais de uma situação.</p>
+                        <p><strong>Exemplo 1</strong>: quando um trabalho apresentado na instituição A é apresentado como original na instituição B.</p>
+                        <p><strong>Exemplo 2</strong>: quando um mesmo trabalho é usado em mais de uma disciplina como sendo original.</p>
+                        <p><strong>Exemplo<sup>3</sup></strong></p>
+                        <!-- table2 -->
+
                     </article>
-                    <div class="margemParaImagem" style="height:20px"></div>
-                    <div class="voltarSumario fix">
-                        <a href="#main">Início</a>
-                    </div>
                 </section>
             </div>
         </div>
