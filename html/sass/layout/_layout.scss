@@ -1318,7 +1318,7 @@ body {
     }
 
     // saiba mais
-    .saibaMais {
+    .saibaMais, .saibaMais-aluno {
         border: 1px solid #f57d8c;
         @include radius();
         padding: $meioGrid;

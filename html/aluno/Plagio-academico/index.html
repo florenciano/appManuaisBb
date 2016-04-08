@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br" ng-app="manuaisBb-aluno">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Recursos e Tecnologias de Aprendizagem - Manuais de utilização - Alunos</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/png" href="../../favicon-16.png">
+    <link rel="stylesheet" type="text/css" media="print" href="../../css/print.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/main.css">
+    <!--[if IE]>
+        <link href="css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script>window.html5 || document.write('<script src="../../js/libs/html5shiv.js"><\/script>')</script>
+    <![endif]-->
+</head>
+<body>
+    <div class="wrapper">
+        <header id="top" class="wfull fix">
+            <div class="logo c4">
+                <img src="../../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
+            </div>
+            <div class="titleHeader c8">
+                <p class="title">Recursos e Tecnologias de Aprendizagem</p>
+                <p class="description">Manuais de utilização</p>
+            </div>
+        </header>
+        <div id="main" role="main" class="fix wfull">
+            <div class="containerMain fix row">
+                <!-- início da área da busca -->
+                <section class="buscaMain c4" ng-controller="listaMenu">
+                    <div class="inputSearch">
+                        <form id="busca">
+                            <label for="pesquisa"></label>
+                            <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Assunto ou palavra-chave" ng-model="searchText">
+                        </form>
+                    </div>
+                    <nav role="navigation" class="navigationMain">
+                        <!-- blackbaord -->
+                        <h5 class="icoBlackboard">Blackboard</h5>
+                        <ul class="noCategory" ng-repeat="item in blackboard | filter: {manual:searchText}">
+                            <li class="sublist">
+                                <a href="{{item.linkManual}}" title="{{item.manual}}">{{item.manual}}</a>
+                            </li>    
+                        </ul>
+                        
+                        <!-- plagio acadêmico -->
+                        <h5 class="icoPlagio">Plágio Acadêmico</h5>
+                        <!-- <ol class="noCategory">
+                            <li class="selectedCategory">Apresentação da Cartilha de Plágio</li>
+                        </ol> -->
+                        <ul class="noCategory" ng-repeat="item in plagio_academico | filter: {manual:searchText}">
+                            <li class="sublist ng-class:addMark()">
+                                <a href="{{item.linkManual}}" title="{{item.manual}}">{{item.manual}}</a>
+                            </li>    
+                        </ul>
+
+                        <!-- curso online -->
+                        <h5 class="icoCursosOnline">Curso online de Harvard</h5>
+                        <ul class="noCategory" ng-repeat="item in curso_online | filter: {manual:searchText}">
+                            <li class="sublist">
+                                <a href="{{item.linkManual}}" title="{{item.manual}}">{{item.manual}}</a>
+                            </li>    
+                        </ul>
+
+                        <!-- clickers -->
+                        <h5 class="icoClickers">Votadores eletrônicos (clickers)</h5>
+                        <ul class="noCategory" ng-repeat="item in clikcers | filter: {manual:searchText}">
+                            <li class="sublist">
+                                <a href="{{item.linkManual}}" title="{{item.manual}}">{{item.manual}}</a>
+                            </li>    
+                        </ul>
+                        
+                         <!--catme -->
+                        <h5 class="icoCatme">Catme</h5>
+                        <ul class="noCategory" ng-repeat="item in catme | filter: {manual:searchText}">
+                            <li class="sublist">
+                                <a href="{{item.linkManual}}" title="{{item.manual}}">{{item.manual}}</a>
+                            </li>    
+                        </ul>
+                    </nav>
+                </section>
+
+                <!-- início do conteúdo do manual -->
+                <section class="mainContent c8">
+                    <section class="headerContent row">
+                        <div class="cabecalho fix">
+                            <p><span><strong>Atualizado: </strong>07/04/2016</span></p>
+                        </div>
+                    </section>
+                    <article class="contentMain row">
+                        <!-- 
+                            INTRODUCAO
+                            1- Texto do título h1 é o mesmo do 'p' da div.breadcrumb;
+                            2- div.sumario aparece logo depois da introdução do texto 'quando houver' e serve para listar todos os subtítulos da página definidos pela tag 'h2';
+                            3- toda tag 'h2' receberá esta sintaxe:
+                            '<h2 id="subTituloX>Texto aqui</h2>';
+                            É necessário adicionar um número identificador na âncora;
+                            4- Para casos em que haverá uma sublistagem no sumário adicionar no elemento 'h2' o atributo: data-sublist="true"
+                            e para cada tópico desta listagem inserir a tag 'h3' com a seguinte sintaxe: '<h3 id="subList_sumarioX">'
+                         -->
+                        <h1 class="nameCategory">Apresentação da Cartilha de Plágio</h1>
+
+                        <div class="sumario row">
+                            <h3 id="sumarioAncora">Sumário</h3>
+                        </div>
+                        <div class="imageContainer row">
+                            <a href="../../img/aluno/Plagio-academico/apresentacao/cartilha-plagio-academico-insper.pdf" title="Baixe aqui a Cartilha de Plágio Acadêmico"><img src="../../img/aluno/Plagio-academico/apresentacao/download.png" alt="download cartilha de plágio acadêmico" class="imgLeft"></a>
+                        </div>
+                        <div class="margemParaImagem" style="height:20px"></div>
+                        
+                        <h2 id="subTitulo1" data-remove-ancora="true">Objetivo</h2>
+                        <p>Orientar toda a Comunidade Insper sobre a visão institucional quanto às práticas que caracterizam plágio acadêmico e como essa infração pode ser evitada.</p>
+                        <div class="margemParaImagem" style="height:20px"></div>
+
+                        <h2 id="subTitulo2">Plágio Acadêmico</h2>
+                        <p>A prática que leva à falsa representação do nível de conhecimento de alguém durante a avaliação formal ou informal desse conhecimento, dentre outras infrações de desonestidade intelectual, pode ser considerada plágio</p>
+                        <p>O plágio destrói o princípio fundamental de confiança que deve existir no processo de transmissão e aquisição de conhecimento em atividades de pesquisa e de ensino-aprendizagem, além de comprometer a reputação acadêmica do aluno e, por consequência, da instituição de ensino à qual o aluno está vinculado.</p>
+                        <p>Alguns dicionários definem plágio como o ato de “cometer furto literário, apresentando como sua uma ideia literária ou científica de outrem”. Ainda, complementa-se como a “apresentação feita por alguém como de sua própria autoria de trabalho, obra intelectual, etc. produzida por outrem”. A legislação brasileira entende como plágio a “cópia dissimulada da forma da obra exteriorizada de terceiro, com o intuito de passar-se por seu autor”. Portanto, o que caracteriza o plágio não é somente a semelhança física entre os textos, mas qualquer possibilidade de cópia, ainda que na ausência de dolo.</p>
+                        <p>Não somente considera-se plágio aquilo que é literalmente copiado; explicar com suas palavras o que leu em um determinado documento, sintetizar ou confrontar ideias de diversas fontes em um único texto não faz com que o seu texto seja original; esta ação também é considerada plágio se não citada a fonte. Porém, há casos em que o uso de citações é dispensado, como em resumos solicitados pelo professor de um texto a ser discutido ou de algo considerado senso comum.</p>
+                        <p>Não há qualquer impedimento de fazer uso da ideia de outrem para fundamentar um texto. O que não se pode é omitir a fonte de onde a informação foi retirada ou na qual a ideia foi baseada. Por isso, o uso de citações1 é fundamental, uma vez que a omissão caracteriza apropriação indevida de conteúdo e é plágio.</p>
+                        <div class="margemParaImagem" style="height:20px"></div>
+
+                        <h2 id="subTitulo3">Plágio acidental e plágio intencional</h2>
+                        <p>Por vezes o plágio pode acontecer acidentalmente, por falta de organização das leituras ou do conhecimento metodológico de como citar as fontes, além do desconhecimento do significado de plágio propriamente. Em outros casos, é realizado de forma intencional. No entanto, não há qualquer razão que justifique a infração.</p>
+                        <p>Faz parte das responsabilidades do <strong>Insper</strong> orientar os alunos sobre o tema e como evitar o plágio, bem como é dever do aluno tomar conhecimento dessas orientações.</p>
+                        <div class="margemParaImagem" style="height:20px"></div>
+
+                        <h2 id="subTitulo4" data-sublist="true">Categorizações de plágio</h2>
+                        <p>Este documento apresenta as práticas de plágio mais comumente encontradas no meio acadêmico, partindo-se do entendimento de códigos de conduta e de integridade acadêmica disponibilizados por diversas instituições brasileiras e estrangeiras. Também realizamos um levantamento das ocorrências entendidas como contraditórias ao Código de Ética e Conduta do <strong>Insper</strong> e que resultaram na penalização dos alunos envolvidos.</p>
+                        <p>Categorizamos, a seguir, os tipos de infração de plágio e apresentamos o posicionamento institucional de forma estruturada.</p>
+
+                        <h3 id="subList_sumario1">Plágio literal ou direto</h3>
+                        <p>Copiar diretamente uma passagem do texto sem citar a fonte.</p>
+                        <p><strong>Exemplo<sup>1</sup></strong>:</p>
+                        <table class="table-plagio table-plagio_col3">
+                            <tr>
+                                <th>Fonte Original</th>
+                                <th>Plágio</th>
+                                <th>Citação direta correta</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    O que se conclui a partir dessa pesquisa é que a opinião pública brasileira reconhece e aceita, em grande medida, que se recorra ao jeitinho como padrão moral. Além disso, há uma divisão profunda (50% versus 50%) entre os que o consideram certo e os que o condenam. Por isso, se os níveis de corrupção no Brasil provavelmente estão relacionados à aceitação social do jeitinho – que é grande e bastante enraizada entre nós –, os resultados da pesquisa indicam <strong>que temos um longo caminho pela frente se o que desejamos é o efetivo combate à corrupção</strong>.
+                                    <p><strong>Referência</strong>: ALMEIDA, Alberto Carlos. <strong>A cabeça do brasileiro</strong>. Rio de Janeiro: Record, 2007. p. 70-71.</p>
+                                </td>
+                                <td>
+                                    É bem provável que no Brasil a corrupção esteja associada à aceitação do jeitinho como prática social aceitável. Isto indica que <strong>temos um longo caminho pela frente se o que desejamos é o efetivo combate à corrupção. (ALMEIDA, 2007)</strong>.
+                                    <p><strong>Comentário</strong>: O texto em negrito é a reprodução literal da fonte consultada, mas o redator não indicou isto claramente. Devido à ausência de aspas, o texto elaborado ficou parecendo uma paráfrase, mas na realidade é uma colagem.</p>
+                                </td>
+                                <td>
+                                    É bem provável que no Brasil a corrupção esteja associada à aceitação do jeitinho como prática social. Somado a isto o fato de que <strong>“há uma divisão profunda (50% versus 50%) entre os que o consideram certo e os que o condenam [.] podemos concluir que temos um longo caminho pela frente se o que desejamos é o efetivo combate à corrupção</strong>”. (ALMEIDA, 2007, p. 70-71).
+                                    <p><strong>Comentário</strong>: Neste caso, o redator reescreveu parte da fonte consultada com as próprias palavras e completou com um trecho copiado da fonte original. Entretanto, utilizou corretamente as aspas para indicar o texto reproduzido e na citação registrou o número da página da qual consta.</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <p class="note"><sup>1</sup> Extraído do site <a href="http://www.plagio.net.br/">plagio.net</a></p>
+                        <div class="margemParaImagem" style="height:20px"></div>
+
+                        <h3 id="subList_sumario2">Plágio transliteral</h3>
+                        <p>Parafrasear uma passagem do texto sem citar a fonte. Parafrasear um texto é por vezes necessário, principalmente quando se quer reproduzi-lo com linguagem mais acessível ao público leitor. É comum acreditar que trocando palavras por sinônimos a ideia torna-se original, sendo desnecessária a citação da fonte. Escrever a ideia de outra pessoa com suas palavras não torna a ideia sua, e também caracteriza plágio.</p>
+                        <p><strong>Exemplo<sup>2</sup></strong>:</p>
+                        <table class="table-plagio table-plagio_col3">
+                            <tr>
+                                <th>Fonte Original</th>
+                                <th>Plágio</th>
+                                <th>Citação direta correta</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    É esse o erro de Descartes: a separação abissal entre o corpo e a mente, entre a substância corporal, infinitamente divisível, com volume, com dimensões e com um funcionamento mecânico, de um lado, e a substância mental, indivisível, sem volume, sem dimensões e intangível, de outro; a sugestão de que o raciocínio, o juízo moral e o sofrimento adveniente da dor física ou agitação emocional poderiam existir independentemente do corpo.
+                                    <p><strong>Referência</strong>: DAMÁSIO, Antonio R. <strong>O erro de Descartes</strong>: emoção, razão e cérebro humano. São Paulo: Companhia das Letras, 2001. p. 280.</p>
+                                </td>
+                                <td>
+                                    A separação cartesiana entre corpo e mente pode ser considerada um equívoco porque supõe que o sofrimento e as dores do corpo acontecem independentemente dos juízos morais e dos elementos emocionais.
+                                </td>
+                                <td>
+                                    Para Damásio (2001) a separação cartesiana entre corpo e mente pode ser considerada um equívoco porque supõe que o sofrimento e as dores do corpo acontecem independentemente dos juízos morais e dos elementos emocionais.
+                                    <p><strong>Referência</strong>: DAMÁSIO, Antonio R. O erro de Descartes: emoção, razão e cérebro humano. São Paulo: Companhia das Letras, 2001. p. 280.</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <p class="note"><sup>2</sup> Extraído do site <a href="http://www.plagio.net.br/">plagio.net</a></p>
+                        <div class="margemParaImagem" style="height:20px"></div>
+
+                        <h3 id="subList_sumario3">Plágio consentido e autoplágio</h3>
+                        <p>Texto de uma pessoa ou grupo que serve como base - ou é copiado - e é apresentado como sendo original em mais de uma situação.</p>
+                        <p><strong>Exemplo 1</strong>: quando um trabalho apresentado na instituição A é apresentado como original na instituição B.</p>
+                        <p><strong>Exemplo 2</strong>: quando um mesmo trabalho é usado em mais de uma disciplina como sendo original.</p>
+                        <p><strong>Exemplo<sup>3</sup></strong>:</p>
+                        <table class="table-plagio table-plagio_col2">
+                            <tr>
+                                <th>Texto original (autor)</th>
+                                <th>Texto autoplagiado (mesmo autor)</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Baseado em duas décadas de pesquisa com pacientes com lesões neurológicas, Damásio (2001) defende a opinião de que, juntamente com a razão, as emoções e sentimentos exercem um papel importante na elaboração dos raciocínios e tomada de decisões. Em sua obra, esse autor resgata também a importância do corpo, rompendo com a visão dualista cartesiana que separou pensamento (res cogitans) e sentimentos (res extensa).
+                                    <p>Texto apresentado na instituição A</p>
+                                </td>
+                                <td>
+                                    Baseado em duas décadas de pesquisa com pacientes com lesões neurológicas, Damásio (2001) defende a opinião de que, juntamente com a razão, as emoções e sentimentos exercem um papel importante na elaboração dos raciocínios e tomada de decisões. Em sua obra, esse autor resgata também a importância do corpo, rompendo com a visão dualista cartesiana que separou pensamento (res cogitans) e sentimentos (res extensa).
+                                    <p>Texto apresentado na Instituição B</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <p class="note"><sup>3</sup> Extraído do site <a href="http://www.plagio.net.br/">plagio.net</a></p>
+                        <div class="margemParaImagem" style="height:20px"></div>
+
+                        <h3 id="subList_sumario4">Plágio de fontes</h3>
+                        <p>Quando o redator, ao elaborar seu texto, usa uma citação do autor consultado em seu trabalho como se tivesse consultado o documento original. Neste caso, o correto é fazer a citação da citação, ou seja, citar a fonte secundária (aquela que está em seu poder) usando termos como “apud” ou “de acordo com”, referindo-se à fonte primária. Este tipo de citação deve ser evitada e, sempre que possível, o ideal é acessar o documento original.</p>
+                        <p><strong>Exemplo<sup>4</sup></strong>:</p>
+                         <table class="table-plagio table-plagio_col3">
+                            <tr>
+                                <th>Texto</th>
+                                <th>Plágio</th>
+                                <th>Citação correta</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Para Salvador (1980), os trabalhos científicos, originais, devem permitir a outro pesquisador, baseado nas informações dadas:
+                                    <ol type="a">
+                                        <li><em>reproduzir as experiências e obter resultados descritos com a mesma precisão e sem ultrapassar a margem de erro indicada pelo autor;</em></li>
+                                        <li><em>repetir as observações e julgar as conclusões do autor.</em></li>
+                                    </ol>
+                                    <p><strong>Referência do texto lido</strong>:</p>
+                                    <p>MARCONI, M. de A.; LAKATOS, E. M. <strong>Fundamentos de metodologia científica</strong>. 7ª ed. São Paul: Atlas, 2010. p. 218</p>
+                                </td>
+                                <td>
+                                    Para Salvador (1980), os trabalhos científicos, originais, devem permitir a outro pesquisador, baseado nas informações dadas:
+                                    <ol type="a">
+                                        <li><em>reproduzir as experiências e obter resultados descritos com a mesma precisão e sem ultrapassar a margem de erro indicada pelo autor;</em></li>
+                                        <li><em>repetir as observações e julgar as conclusões do autor.</em></li>
+                                    </ol>
+                                    <p><strong>Referência</strong>:</p>
+                                    <p>SALVADOR, A. D. <strong>Métodos e técnicas de pesquisa bibliográfica</strong>: elaboração de trabalhos científicos. 8ª ed. Porto Alegre: Sulina, 1980.</p>
+                                    <p><strong>Comentário:</strong></p>
+                                    <p>O plágio se caracteriza pelo fato de o autor ter citado e referenciado um texto a que não teve acesso (SALVADOR). Neste caso, deveria ter dado crédito, citado e referenciado o texto que estava em seu poder (MARCONI, LAKATOS).</p>
+                                </td>
+                                <td>
+                                    Para Salvador (1980), citado por Marconi e Lakatos (2010, p. 218), os trabalhos científicos, originais, devem permitir a outro pesquisador, baseado nas informações dadas:
+                                    <ol type="a">
+                                        <li><em>reproduzir as experiências e obter resultados descritos com a mesma precisão e sem ultrapassar a margem de erro indicada pelo autor;</em></li>
+                                        <li><em>repetir as observações e julgar as conclusões do autor.</em></li>
+                                    </ol>
+                                    <p><strong>Referência do texto lido e Referência do texto não lido, mas citado</strong>:</p>
+                                    <p>MARCONI, M. de A.; LAKATOS, E. M. Fundamentos de metodologia científica. 7ª ed. São Paul: Atlas, 2010. p. 218</p>
+                                    <p>SALVADOR, A. D. <strong>Métodos e técnicas de pesquisa bibliográfica</strong>: elaboração de trabalhos científicos. 8ª ed. Porto Alegre: Sulina, 1980.*</p>
+                                    <p>* Esta referência é opcional, porém desejável.</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <p class="note"><sup>4</sup> Extraído do site <a href="http://www.plagio.net.br/">plagio.net</a></p>
+                        <div class="margemParaImagem" style="height:20px"></div>
+
+                        <h3 id="subList_sumario5">Informações da internet</h3>
+                        <p>Todo texto publicado, independentemente do meio em que se reproduz, deve ser citado. O fato de um texto estar na internet não isenta o autor da obrigação de citar a fonte, do contrário será caracterizado plágio.</p>
+                        <p><strong>Exemplo<sup>*</sup></strong>:</p>
+                        <table class="table-plagio table-plagio_col2">
+                            <tr>
+                                <th>Texto original</th>
+                                <th>Citação direta</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Para expandir a oferta de cana-de-açúcar destinada à produção de etanol até 2015, o governo federal anunciou hoje a criação do Plano Estratégico do Setor Sucroalcooleiro, que vai agir em três ações de investimento mais estocagem de etanol. Os investimentos previstos ultrapassam os R$ 60 bilhões.
+                                </td>
+                                <td>
+                                    “Para expandir a oferta de cana-de-açúcar destinada à produção de etanol até 2015, o governo federal anunciou hoje a criação do Plano Estratégico do Setor Sucroalcooleiro, que vai agir em três ações de investimento mais estocagem de etanol. Os investimentos previstos ultrapassam os R$ 60 bilhões”. (VELOSO, 2012).
+                                    <p><strong>Referência</strong>: VELOSO, T. Governo anuncia plano para ampliar produção de etanol. Valor Econômico. 24 fev. 2012. Empresas. Disponível em: http://www.valor.com.br/. Acesso em 25 fev. 2012.</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="margemParaImagem" style="height:20px"></div>
+
+                        <h2 id="subTitulo5">Basear-se em trabalhos de colegas</h2>
+                        <p>Quando o autor usa parte ou todo o trabalho de um colega para elaborar seu próprio texto. Ressalta-se que se o trabalho do colega tive sido publicado, independentemente do meio de comunicação, deve-se seguir as regras formais de citação e de referência. Em caso de infração, a punição recai sobre quem plagiou.</p>
+                        <p><strong>Observação</strong>: Quando não for possível identificar o plagiador, ou em casos flagrantes caracterizados como cola, a responsabilidade recairá sobre todos.</p>
+                         <div class="margemParaImagem" style="height:20px"></div>
+
+                        <h2 id="subTitulo6">Trabalhos entregues pelo aluno, mas realizados por terceiros</h2>
+                        <p>Considera-se infração a compra e/ou delegação a outras pessoas ou organizações a elaboração de trabalhos de responsabilidade do aluno.</p>
+                        <p><strong>Exemplos</strong>: compra de trabalhos prontos pela internet, encomenda de trabalhos de profissionais liberais, estudantes ou qualquer outra pessoa que os realize em nome do aluno.</p>
+                         <div class="margemParaImagem" style="height:20px"></div>
+
+                        <h2 id="subTitulo7">Notas de aula de professores</h2>
+                        <p>Copiar informações que constam do material distribuído por professores em sala de aula sem citar a fonte também é plágio.</p>
+                        <p><strong>Exemplos</strong>: compra de trabalhos prontos pela internet, encomenda de trabalhos de profissionais liberais, estudantes ou qualquer outra pessoa que os realize em nome do aluno.</p>
+                        <div class="margemParaImagem" style="height:20px"></div>
+
+                        <h2 id="subTitulo8">Trabalhos colaborativos ou em grupo</h2>
+                        <p>Considera-se plágio copiar exercícios de colegas e provas feitas em casa quando o professor não explicitar que deve haver discussão e troca de ideias.</p>
+                        <p>Para os trabalhos realizados em grupo, se identificado plágio, a responsabilidade recairá sobre todo o grupo.</p>
+
+                        <h2 id="subTitulo10">Conhecimento comum</h2>
+                        <p>Não é necessário citar tudo o que se escreve, mas é importante explicitar a fonte quando não se trata de informação de conhecimento comum - caracterizada como algo já sabido e compartilhado por todos em determinada área do conhecimento, como:</p>
+                        <ul>
+                            <li>fatos marcantes, fatos históricos ou fatos recentes amplamente divulgados e conhecidos;</li>
+                            <li>conceitos amplamente conhecidos dentro de uma área profissional (por exemplo: Cinco Forças de Porter, 4 Ps de Kotler, Análise SWOT);</li>
+                            <li>Fórmulas matemáticas, físicas e químicas de uso corriqueiro.</li>
+                        </ul>
+                        <p>Essas informações não precisam ser, necessariamente, citadas, desde que julgadas pelo redator como sendo de conhecimento comum. Para isso, o texto deve trazer expressões como “conforme amplamente divulgado na mídia”, “como é sabido”, etc.</p>
+                        <p>Vale ressaltar que a audiência da pesquisa é fator importante para julgar o conhecimento comum, principalmente se o público-alvo não domina esse tipo de conhecimento. Nesse caso, é extremamente importante um detalhamento do assunto para ajudar o leitor a entender o contexto. Em caso de dúvida, deve-se sempre validar o item com o professor ou orientador.</p>
+                         <div class="margemParaImagem" style="height:20px"></div>
+
+
+                        <h2 id="subTitulo11">Como evitar o plágio</h2>
+                        <p>O aluno deve estar atento à aplicação das normas de citação e de referência adotadas pela Escola. Em caso de dúvidas sobre como fazer citações e referências corretamente, os alunos devem solicitar o auxílio dos professores, orientadores e bibliotecários.</p>
+                        <p>O portal da Biblioteca Telles tem documentos de apoio à pesquisa que orientam sobre a forma de citar e de referenciar consoante com as normas da ABNT, utilizadas pelo <strong>Insper</strong> para o desenvolvimento de trabalhos de conclusão de curso e de trabalhos acadêmicos em geral.</p>
+                        <div class="margemParaImagem" style="height:20px"></div>
+                        
+                        <h2 id="subTitulo12">Documentos e sites consultados</h2>
+                        <section class="saibaMais-aluno">
+                            <ul>
+                                <li class="plagio">
+                                    <div>ABNT - ASSOCIAÇÃO BRASILEIRA DE NORMAS E TÉCNICAS. <strong>NBR 10520</strong>: informação e documentação: citações em documentos: apresentação. Rio de Janeiro, 2002. 7 p.</div>
+                                </li>
+                                <li class="plagio">
+                                    <div>FERREIRA, A. B. H. <strong>Novo dicionário Aurélio da Língua Portuguesa</strong>. Rio de Janeiro: Nova Fronteira, 2008.</div>
+                                </li>
+                                <li class="plagio">
+                                    <div>HOUAISS, A. <strong>Dicionário Houaiss da Língua Portuguesa</strong>. Rio de Janeiro: Objetiva, 2009.</div>
+                                </li>
+                                <li class="plagio">
+                                    <div>KROCOSCZ, M. <strong>Plágio.net</strong>. Disponível em: http://www.plagio.net.br. Acesso em: 03 jan. 2012.</div>
+                                </li>
+
+                            </ul>
+                        </section>
+                        <div class="margemParaImagem" style="height:20px"></div>
+
+                        <h2 id="subTitulo13">Sites recomendados</h2>
+                        <section class="saibaMais-aluno">
+                            <ul>
+                                <li class="site">
+                                    <div><strong>PLAGIARISM</strong> advice.org. Disponível em: http://www.plagiarismadvice.org/. Acesso: em 03 jan. 2012.</div>
+                                </li>
+                                <li class="site">
+                                    <div>MIT. A<strong>cademic integrity at the Massachusetts Institute of Technology</strong>: a handbook for students. Disponível em: http://web.mit.edu/academicintegrity/handbook/handbook.pdf. Acesso em: 03 Jan. 2012.</div>
+                                </li>
+                                <li class="site">
+                                    <div>RUTGERS UNIVERSITY LIBRARY. <strong>What is plagiarism</strong>. Disponível em: http://library.camden.rutgers.edu/EducationalModule/Plagiarism/whatisplagiarism.html.Acesso: em 03 Jan. 2012.
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+                        <div class="margemParaImagem" style="height:20px"></div>
+                    </article>
+                    <div class="voltarSumario fix">
+                        <a href="#main">Início</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts: plugins -->
+    <script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
+    <script src="../../js/libs/angular.js"></script>
+    <script src="../../js/listaCompletaManual-aluno.js"></script>
+    <script src="../../js/main.js"></script>
+     <script>
+        function init () {
+            /* 
+                Algumas páginas terão no sumário uma sublist
+                Utilizar a fn() abaixo qdo for necessário
+            */
+            function creatSubListSumario() {
+                // capturando textos de todos os subtópicos
+                var h2_subList = document.querySelector("h2[data-sublist]"),
+                    h3_topics = document.querySelectorAll("h3[id*=subList_sumario]"),
+                    matriz = {};
+                    matriz.id_s = [];
+                    matriz.txt_s = [];
+
+                for (var i = 0; i < h3_topics.length; i++) {
+                    matriz.id_s.push(h3_topics[i].getAttribute("id"));
+                    matriz.txt_s.push(h3_topics[i].innerHTML);
+                }
+
+                // varrendo DOM '.sumário' à procura do item correspondente
+                var sumario = document.querySelector(".sumario"),
+                    linkSumario = sumario.querySelectorAll("a"),
+                    ul = document.createElement("ul");
+
+                for (var i = 0; i < linkSumario.length; i++) {
+                    if (linkSumario[i].innerHTML == h2_subList.innerHTML) {
+                        
+                        // se o item for achado iterar com a matriz (id_s ou txt_s)
+                        // já que ambos possuem o mesmo nº de length
+                        for (var j = 0; j < matriz.id_s.length; j++) {
+                            // criando o link e seus attr's
+                            var a = document.createElement("a"),
+                                txt_a = document.createTextNode(matriz.txt_s[j]);
+                            a.appendChild(txt_a);
+                            a.setAttribute("href", "#" + matriz.id_s[j]);
+                           
+                            // criando as listas
+                            var li = document.createElement("li");
+                            li.appendChild(a);
+
+                            // criando o container 'ul'
+                            ul.appendChild(li);
+
+                            // inserindo o container do 'li' pai
+                            linkSumario[i].parentNode.appendChild(ul);
+                        }
+                    }
+                }
+            }
+            creatSubListSumario();
+        }
+        window.onload = init;
+    </script>
+    <script>
+      // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      // ga('create', 'UA-59172929-3', 'auto');
+      // ga('send', 'pageview');
+    </script>
+</body>
+</html>

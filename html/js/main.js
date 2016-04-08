@@ -126,8 +126,8 @@ $( document ).ready( function() {
         }
     });
 
-    // Em casos em que não queremos a âncora antes dos títulos (execeção)
-    $("h2[data-remove-ancora]").prev().remove();
+    // Em casos em que não queremos a âncora antes dos títulos (exceção)
+    $("h2[data-remove-ancora='true']").prev().remove();
 
     // O título 'Saiba mais' também é marcado com 'h2', portanto,
     // irá aparecer uma âncora indesejada dentro do box. Eliminamos.

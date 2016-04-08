@@ -1,18 +1,3 @@
-/* ===============================================================
-	
-	MATRIZ DA LISTA DOS MANUAIS
-
-   	Este documento é responsável por alimentar a lista
-   	de todos os manuais existentes.
-
-   	Local do arquivo base:
-   	U:\TAI\Projetos\Projetos 2014\Reformulacao_manuais\Professor\DI\Para_Producao
-
-   	Nome:
-   	_Geral_Estrutura_Menu_Prof_vf.doc
-
-================================================================== */
-
 var manuaisBbAluno = angular.module('manuaisBb-aluno', []);
 
 manuaisBbAluno.controller('listaMenu', function ($scope) {
@@ -58,36 +43,36 @@ manuaisBbAluno.controller('listaMenu', function ($scope) {
 
 	$scope.plagio_academico = [
 	{
-		'manual'		: 	'Apresentação',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Plagio-academico/apresentacao/'
+		'manual'		: 	'Apresentação da Cartilha de Plágio',
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Plagio-academico/'
 	},
 	{
 		'manual'		: 	'Plágio acidental e plágio intencional',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Plagio-academico/acidental-e-intencional/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Plagio-academico/#subTitulo3'
 	},
 	{
 		'manual'		: 	'Categorizações de plágio',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Plagio-academico/categorizacao/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Plagio-academico/#subTitulo4'
 	},
 	{
 		'manual'		: 	'Trabalhos colaborativos ou em grupo',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Plagio-academico/trabalhos-colaborativos-ou-em-grupo/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Plagio-academico/#subTitulo8'
 	},
 	{
 		'manual'		: 	'Conhecimento comum',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Plagio-academico/conhecimento-comum/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Plagio-academico/#subTitulo10'
 	},
 	{
 		'manual'		: 	'Como evitar o plágio',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Plagio-academico/como-evitar/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Plagio-academico/#subTitulo11'
 	},
 	{
 		'manual'		: 	'Documentos e sites consultados',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Plagio-academico/documentos-sites-consultados/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Plagio-academico/#subTitulo12'
 	},
 	{
 		'manual'		: 	'Sites recomendados',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Plagio-academico/sites-recomendados/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Plagio-academico/#subTitulo13'
 	}
 	];
 
@@ -97,12 +82,12 @@ manuaisBbAluno.controller('listaMenu', function ($scope) {
 
 	$scope.curso_online = [
 	{
-		'manual'		: 	'Apresentação',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Curso-online/apresentacao/'
+		'manual'		: 	'Apresentação do curso online de Havard',
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Curso-online/'
 	},
 	{
 		'manual'		: 	'Como acessar ',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Curso-online/como-acessar/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Curso-online/#subTitulo1'
 	}
 	];
 
@@ -113,11 +98,11 @@ manuaisBbAluno.controller('listaMenu', function ($scope) {
 	$scope.clikcers = [
 	{
 		'manual'		: 	'Realizar cadastro',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Clickers/realizar-cadastro/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Clickers/'
 	},
 	{
 		'manual'		: 	'Participar da votação',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Clickers/participar-votacao/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Clickers/#subTitulo1'
 	}
 	];
 
@@ -128,23 +113,23 @@ manuaisBbAluno.controller('listaMenu', function ($scope) {
 	$scope.catme = [
 	{
 		'manual'		: 	'Apresentação',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Catme/apresentacao/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Catme/'
 	},
 	{
 		'manual'		: 	'Cadastro',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Catme/cadastro/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Catme/'
 	},
 	{
 		'manual'		: 	'Calibragem',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Catme/calibragem/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Catme/'
 	},
 	{
 		'manual'		: 	'Processo de Avaliação',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Catme/processo-avaliacao/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Catme/'
 	},
 	{
 		'manual'		: 	'Resultados',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Catme/resultados/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Catme/'
 	}
 	];
 

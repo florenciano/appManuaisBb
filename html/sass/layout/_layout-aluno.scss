@@ -117,6 +117,45 @@ $meioGrid: $grid / 2;
 // box destaques (.boxDestaque)e box destaque adicional (.boxDestaqueAdicional)
 .boxDestaque, .boxDestaqueAdicional { margin: ($grid/4) auto; }
 
+// Subtítulos que estarão na sublistagem das âncoras
+// h3["=subList_sumario"] { margin-bottom: 0; }
+h3 + p { margin-top: 0; }
+
+/* Plágio Acadêmico */
+// categorização de plágio: tables
+.table-plagio {
+    tr {
+        th, td {
+            padding: .5em;
+            border: 1px solid $corBorda;
+            text-align: left;
+            vertical-align: initial;
+            ol { padding-left: 1.5em; }
+        }
+    }
+}
+.table-plagio_col2 {
+    tr {
+        td { width: 50%; }
+    }
+
+}
+.table-plagio_col3 {
+    tr {
+        td { width: 33%; }
+    }
+
+}
+
+// Saiba Mais aluno
+.saibaMais-aluno {
+    margin: ($grid/2) 0 !important;
+    ul {
+        li { margin: ($grid/4) 0; }
+        .plagio { background: url("../img/ui/icoPlagio2.png") 5px center no-repeat; }
+    }
+}
+
 // DESKTOP
 @media only screen and (min-width: 769px) {
     /* Inserir foto (carômetro)*/

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br" ng-app="manuaisBb-aluno">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
+    <title>Tecnologias de Aprendizagem - Manuais de utilização - aluno</title>
+    <meta name="msapplication-TileImage" content="tile.png"/>
+    <meta name="msapplication-TileColor" content="#d02034"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/css/main.css">
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/css/fixedBugIE.css">
+    <![endif]-->
+    <style type="text/css">
+        .homeLinkModulo { margin: 0 0 10px 0; text-align: right; }
+        .homeLinkModulo a { text-decoration: none; color: #c00026; position: relative; }
+        .homeLinkModulo a:visited { color: #7b0012; }
+        .homeLinkModulo a:hover { text-decoration: underline; }
+        .homeLinkModulo a::before { content: ""; width: 18px; height: 18px; display: inline-block; background-color: orange; background: transparent url("https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/img/ui/icoHome.png") no-repeat center center; position: absolute; left: -2em; top: -2px;}
+    </style>
+</head>
+<body style="background-color:#ffffff">
+    <div class="wrapper fixedWrapperIe" style="border:none;">
+        <section class="buscaMain" ng-controller="listaMenu" style="padding:20px">
+            <p class="homeLinkModulo"><a href="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/" target="Visite a página dos manuais de Recursos e Tecnologias de Aprendizagem">Abrir em nova aba</a></p>
+            <div class="inputSearch">
+                <form id="busca">
+                    <label for="pesquisa"></label>
+                    <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Busca por título ou palavra-chave" ng-model="searchText">
+                </form>
+            </div>
+            <nav role="navigation" class="navigationMain">
+                <h5 class="icoBlackboard">Blackboard</h5>
+                <ol class="noCategory" ng-repeat="item in blackboard | filter: {manual:searchText}">
+                    <li class="nameCategory">
+                        <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                    </li>
+                    <li class="sublist" ng-show="item.manual.length > 1">
+                        <a href="{{item.linkManual}}" target="_blank">{{item.manual}}</a>
+                    </li>    
+                </ol>
+
+                <h5 class="icoBlackboard">Plágio Acadêmico</h5>
+                <ol class="noCategory" ng-repeat="item in plagio_academico | filter: {manual:searchText}">
+                    <li class="nameCategory">
+                        <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                    </li>
+                    <li class="sublist" ng-show="item.manual.length > 1">
+                        <a href="{{item.linkManual}}" target="_blank">{{item.manual}}</a>
+                    </li>    
+                </ol>
+
+                <h5 class="icoBlackboard">Curso online de Harvard</h5>
+                <ol class="noCategory" ng-repeat="item in curso_online | filter: {manual:searchText}">
+                    <li class="nameCategory">
+                        <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                    </li>
+                    <li class="sublist" ng-show="item.manual.length > 1">
+                        <a href="{{item.linkManual}}" target="_blank">{{item.manual}}</a>
+                    </li>    
+                </ol>
+
+                <h5 class="icoBlackboard">Votadores eletrônicos (clickers)</h5>
+                <ol class="noCategory" ng-repeat="item in clikcers | filter: {manual:searchText}">
+                    <li class="nameCategory">
+                        <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                    </li>
+                    <li class="sublist" ng-show="item.manual.length > 1">
+                        <a href="{{item.linkManual}}" target="_blank">{{item.manual}}</a>
+                    </li>    
+                </ol>
+
+                <h5 class="icoBlackboard">Catme</h5>
+                <ol class="noCategory" ng-repeat="item in catme | filter: {manual:searchText}">
+                    <li class="nameCategory">
+                        <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                    </li>
+                    <li class="sublist" ng-show="item.manual.length > 1">
+                        <a href="{{item.linkManual}}" target="_blank">{{item.manual}}</a>
+                    </li>    
+                </ol>
+            </nav>
+        </section>
+    </div>
+    <!-- image placeholder IE lower than 9 -->
+    <div class="banner">
+        <a href="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/" target="_blank" title="Manuais de utilização, clique para acessar!"><img src="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/img/ui/bannerNoBox_Bb-aluno.png" alt="Manuais de utilização, clique para acessar!"></a>
+    </div>
+    <!-- scripts -->
+    <script src="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/js/libs/jquery-1.10.2.min.js"></script>
+    <script src="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/js/libs/angular.js"></script>
+    <script src="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/js/listaCompletaManual-aluno.js"></script>
+    <script src="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/js/main.js"></script>
+</body>
+</html>

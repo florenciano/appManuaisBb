@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Recursos e Tecnologias de Aprendizagem - Manuais de utilização - Alunos</title>
     <meta name="viewport" content="width=device-width">
-    <link rel="icon" type="image/png" href="../../../favicon-16.png">
-    <link rel="stylesheet" type="text/css" media="print" href="../../../css/print.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="../../../css/main.css">
+    <link rel="icon" type="image/png" href="../../favicon-16.png">
+    <link rel="stylesheet" type="text/css" media="print" href="../../css/print.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/main.css">
     <!--[if IE]>
         <link href="css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <![endif]-->
@@ -21,7 +21,7 @@
     <div class="wrapper">
         <header id="top" class="wfull fix">
             <div class="logo c4">
-                <img src="../../../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
+                <img src="../../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
             </div>
             <div class="titleHeader c8">
                 <p class="title">Recursos e Tecnologias de Aprendizagem</p>
@@ -49,8 +49,11 @@
                         
                         <!-- plagio acadêmico -->
                         <h5 class="icoPlagio">Plágio Acadêmico</h5>
+                        <!-- <ol class="noCategory">
+                            <li class="selectedCategory">Apresentação da Cartilha de Plágio</li>
+                        </ol> -->
                         <ul class="noCategory" ng-repeat="item in plagio_academico | filter: {manual:searchText}">
-                            <li class="sublist ng-class:addMark()">
+                            <li class="sublist">
                                 <a href="{{item.linkManual}}" title="{{item.manual}}">{{item.manual}}</a>
                             </li>    
                         </ul>
@@ -58,7 +61,7 @@
                         <!-- curso online -->
                         <h5 class="icoCursosOnline">Curso online de Harvard</h5>
                         <ul class="noCategory" ng-repeat="item in curso_online | filter: {manual:searchText}">
-                            <li class="sublist">
+                            <li class="sublist ng-class:addMark()">
                                 <a href="{{item.linkManual}}" title="{{item.manual}}">{{item.manual}}</a>
                             </li>    
                         </ul>
@@ -85,7 +88,7 @@
                 <section class="mainContent c8">
                     <section class="headerContent row">
                         <div class="cabecalho fix">
-                            <p><span><strong>Atualizado: </strong>06/04/2016</span></p>
+                            <p><span><strong>Atualizado: </strong>08/04/2016</span></p>
                         </div>
                     </section>
                     <article class="contentMain row">
@@ -99,41 +102,53 @@
                             4- Para casos em que haverá uma sublistagem no sumário adicionar no elemento 'h2' o atributo: data-sublist="true"
                             e para cada tópico desta listagem inserir a tag 'h3' com a seguinte sintaxe: '<h3 id="subList_sumarioX">'
                          -->
-                        <h1 class="nameCategory">Categorizações de plágio</h1>
-                        <p>Este documento apresenta as práticas de plágio mais comumente encontradas no meio acadêmico, partindo-se do entendimento de códigos de conduta e de integridade acadêmica disponibilizados por diversas instituições brasileiras e estrangeiras. Também realizamos um levantamento das ocorrências entendidas como contraditórias ao Código de Ética e Conduta do <strong>Insper</strong> e que resultaram na penalização dos alunos envolvidos.</p>
-                        <p>Categorizamos, a seguir, os tipos de infração de plágio e apresentamos o posicionamento institucional de forma estruturada.</p>
+                        <h1 class="nameCategory">Apresentação do curso online de Havard</h1>
+                        <p style="color:red">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse aspernatur odio sit natus fugiat inventore architecto facere magni aut quae perferendis recusandae veritatis, alias. Accusantium necessitatibus facere qui dignissimos in.</p>
 
                         <div class="sumario row">
                             <h3 id="sumarioAncora">Sumário</h3>
                         </div>
-
-                        <h2 id="subTitulo1">Plágio literal ou direto</h2>
-                        <p>Copiar diretamente uma passagem do texto sem citar a fonte.</p>
-                        <p><strong>Exemplo<sup>1</sup></strong></p>
-                        <!-- table1 -->
-
-                        <h2 id="subTitulo2">Plágio transliteral</h2>
-                        <p>Parafrasear uma passagem do texto sem citar a fonte. Parafrasear um texto é por vezes necessário, principalmente quando se quer reproduzi-lo com linguagem mais acessível ao público leitor. É comum acreditar que trocando palavras por sinônimos a ideia torna-se original, sendo desnecessária a citação da fonte. Escrever a ideia de outra pessoa com suas palavras não torna a ideia sua, e também caracteriza plágio.</p>
-                        <p><strong>Exemplo<sup>2</sup></strong></p>
-                        <!-- table2 -->
-
-                        <h2 id="subTitulo3">Plágio consentido e autoplágio</h2>
-                        <p>Texto de uma pessoa ou grupo que serve como base - ou é copiado - e é apresentado como sendo original em mais de uma situação.</p>
-                        <p><strong>Exemplo 1</strong>: quando um trabalho apresentado na instituição A é apresentado como original na instituição B.</p>
-                        <p><strong>Exemplo 2</strong>: quando um mesmo trabalho é usado em mais de uma disciplina como sendo original.</p>
-                        <p><strong>Exemplo<sup>3</sup></strong></p>
-                        <!-- table2 -->
-
+                        
+                        <h2 id="subTitulo1">Como acessar os cursos on-line de havard</h2>
+                        <p>Acesse o site de Harvard Business Publishing por meio do link que você recebeu por e-mail e clique em Register now:</p>
+                        <div class="imageContainer row">
+                            <img src="../../img/aluno/cursos-online/step1.png" alt="captura de tela-1" class="">
+                        </div>
+                        <div class="imageContainer row">
+                            <img src="../../img/aluno/cursos-online/step2.png" alt="captura de tela-2" class="">
+                        </div>
+                        <p>Preencha os dados solicitados utilizando o <strong>seu e-mail do Insper</strong> e clique em Register.</p>
+                        <div class="imageContainer row">
+                            <img src="../../img/aluno/cursos-online/step3.png" alt="captura de tela-3" class="">
+                        </div>
+                        <p>Após o cadastro, acesse novamente o link, clique em Login Now, digite o seu  Username e Password e clique em LOGIN:</p>
+                        <div class="imageContainer row">
+                            <img src="../../img/aluno/cursos-online/step4.png" alt="captura de tela-4" class="">
+                        </div>
+                        <p>Em Coursepacks, localize sua turma e o curso desejado. Você visualizará a lista de cursos online de seu programa. Para acessar o conteúdo do curso, clique em RUN COURSE SECTION\ONLINE COURSE:</p>
+                        <div class="imageContainer row">
+                            <img src="../../img/aluno/cursos-online/step5.png" alt="captura de tela-5" class="">
+                            <div class="boxDestaque">
+                                <p>Caso tenha dúvidas sobre os cursos online, entre em contato com o Help Desk:</p>
+                                <p>Telefone: (11) 4504 2550<br>E-mail: <a href="mailto:helpdesk@insper.edu.br">helpdesk@insper.edu.br</a></p>
+                                <p>Atendimento de segunda a sexta-feira, das 07h às 23h e aos sábados das 08h às 17h.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="height:20px"></div>
+                        
                     </article>
+                    <div class="voltarSumario fix">
+                        <a href="#main">Início</a>
+                    </div>
                 </section>
             </div>
         </div>
     </div>
     <!-- Scripts: plugins -->
-    <script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
-    <script src="../../../js/libs/angular.js"></script>
-    <script src="../../../js/listaCompletaManual-aluno.js"></script>
-    <script src="../../../js/main.js"></script>
+    <script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
+    <script src="../../js/libs/angular.js"></script>
+    <script src="../../js/listaCompletaManual-aluno.js"></script>
+    <script src="../../js/main.js"></script>
     <script>
       // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

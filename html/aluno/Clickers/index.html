@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Recursos e Tecnologias de Aprendizagem - Manuais de utilização - Alunos</title>
     <meta name="viewport" content="width=device-width">
-    <link rel="icon" type="image/png" href="../../../favicon-16.png">
-    <link rel="stylesheet" type="text/css" media="print" href="../../../css/print.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="../../../css/main.css">
+    <link rel="icon" type="image/png" href="../../favicon-16.png">
+    <link rel="stylesheet" type="text/css" media="print" href="../../css/print.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/main.css">
     <!--[if IE]>
         <link href="css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <![endif]-->
@@ -21,7 +21,7 @@
     <div class="wrapper">
         <header id="top" class="wfull fix">
             <div class="logo c4">
-                <img src="../../../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
+                <img src="../../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
             </div>
             <div class="titleHeader c8">
                 <p class="title">Recursos e Tecnologias de Aprendizagem</p>
@@ -42,13 +42,16 @@
                         <!-- blackbaord -->
                         <h5 class="icoBlackboard">Blackboard</h5>
                         <ul class="noCategory" ng-repeat="item in blackboard | filter: {manual:searchText}">
-                            <li class="sublist ng-class:addMark()">
+                            <li class="sublist">
                                 <a href="{{item.linkManual}}" title="{{item.manual}}">{{item.manual}}</a>
                             </li>    
                         </ul>
                         
                         <!-- plagio acadêmico -->
                         <h5 class="icoPlagio">Plágio Acadêmico</h5>
+                        <!-- <ol class="noCategory">
+                            <li class="selectedCategory">Apresentação da Cartilha de Plágio</li>
+                        </ol> -->
                         <ul class="noCategory" ng-repeat="item in plagio_academico | filter: {manual:searchText}">
                             <li class="sublist">
                                 <a href="{{item.linkManual}}" title="{{item.manual}}">{{item.manual}}</a>
@@ -66,7 +69,7 @@
                         <!-- clickers -->
                         <h5 class="icoClickers">Votadores eletrônicos (clickers)</h5>
                         <ul class="noCategory" ng-repeat="item in clikcers | filter: {manual:searchText}">
-                            <li class="sublist">
+                            <li class="sublist ng-class:addMark()">
                                 <a href="{{item.linkManual}}" title="{{item.manual}}">{{item.manual}}</a>
                             </li>    
                         </ul>
@@ -85,7 +88,7 @@
                 <section class="mainContent c8">
                     <section class="headerContent row">
                         <div class="cabecalho fix">
-                            <p><span><strong>Atualizado: </strong>05/04/2016</span></p>
+                            <p><span><strong>Atualizado: </strong>08/04/2016</span></p>
                         </div>
                     </section>
                     <article class="contentMain row">
@@ -99,69 +102,103 @@
                             4- Para casos em que haverá uma sublistagem no sumário adicionar no elemento 'h2' o atributo: data-sublist="true"
                             e para cada tópico desta listagem inserir a tag 'h3' com a seguinte sintaxe: '<h3 id="subList_sumarioX">'
                          -->
-                        <h1 class="nameCategory">Ambiente das disciplinas</h1>
-                        <p>Ao acessar o ambiente de apoio de uma disciplina presencial, você terá a seguinte visualização:</p>
+                        <h1 class="nameCategory">Realizar cadastro</h1>
+                        <div class="imageContainer row">
+                            <img src="../../img/aluno/clickers/step1.png" alt="captura de tela-1" class="">
+                            <div class="boxDestaque">
+                                <p>Acesse o endereço: <a href="https://account.turningtechnologies.com/">https://account.turningtechnologies.com/</a>.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="height:10px"></div>
 
                         <div class="sumario row">
                             <h3 id="sumarioAncora">Sumário</h3>
                         </div>
                         
-                        <h2 id="subTitulo1">Avisos</h2>
                         <div class="imageContainer row">
-                            <img src="../../../img/aluno/Blackboard/ambiente-disciplinas/step1.png" alt="captura de tela-1" class="">
+                            <img src="../../img/aluno/clickers/step2.png" alt="captura de tela-2" class="">
                             <div class="boxDestaque">
-                                <ol>
-                                    <li>Este é o menu da disciplina. Embora as opções possam variar de programa para programa, aqui você encontrará links para as páginas de avisos, conteúdos disponibilizados pelos professores, notas e central de ajuda, além da ferramenta de envio de e-mail.</li>
-                                    <li>A página de Avisos é a primeira a ser exibida. Aqui o professor postará avisos importantes para a turma. Uma cópia dos avisos poderá ou não ser enviada por e-mail, de acordo com a escolha do professor.</li>
-                                </ol>    
+                                <p>Será enviado um e-mail com o link que direcionará você para a tela de cadastro.</p>
                             </div>
                         </div>
-                       
-                        <div class="margemParaImagem" style="height:40px"></div>
-
-                        <h2 id="subTitulo2">Conteúdos</h2>
-                        <p>No link Conteúdos do menu da disciplina você visualizará os conteúdos das aulas postados pelo professor, além do plano de aula.</p>
-                        <p>A organização dos materiais fica a cargo do professor. Exemplo:</p>
+                        <div class="margemParaImagem" style="height:20px"></div>
                         <div class="imageContainer row">
-                            <img src="../../../img/aluno/Blackboard/ambiente-disciplinas/step2a.png" alt="captura de tela-2" class="">
+                            <img src="../../img/aluno/clickers/step3.png" alt="captura de tela-3" class="">
                         </div>
-
-                        <h2 id="subTitulo3">Notas</h2>
-                        <p>Ao acessar o link Notas, você visualizará as notas de todas as atividades realizadas na disciplina, bem como feedback do professor e média final.</p>
-                        <p>Caso o professor tenha habilitado esta opção, também será possível visualizar a média e a mediana da turma em determinadas atividades.</p>
+                        <div class="margemParaImagem" style="height:20px"></div>
                         <div class="imageContainer row">
-                            <img src="../../../img/aluno/Blackboard/ambiente-disciplinas/step3a.png" alt="captura de tela-3" class="">
+                            <img src="../../img/aluno/clickers/step4.png" alt="captura de tela-4" class="">
+                        </div>
+                        <div class="margemParaImagem" style="height:20px"></div>
+                        <div class="imageContainer row">
+                            <img src="../../img/aluno/clickers/step5.png" alt="captura de tela-5" class="">
                             <div class="boxDestaque">
-                                <ul>
-                                    <li>Ao clicar no item de média <span class="enfaseBox">A</span> será exibido seu critério de cálculo, caso já tenha sido configurado pelo professor.</li>
-                                    <li>Para conferir o feedback do professor para um Exercício, clique no respectivo link <span class="enfaseBox">B</span> e no nome do arquivo enviado <span class="enfaseBox">C</span>.</li>
-                                </ul>    
+                                <p>A conta está criada!</p>
+                                <p>Basta usar os dados cadastrados para votar.</p>
                             </div>
                         </div>
-                        <p>Exemplo de visualização de um Exercício:</p>
+                        <div class="margemParaImagem" style="height:20px"></div>
+                        
+                        <h2 id="subTitulo1">Participar da votação</h2>
+                        <div class="margemParaImagem" style="height:20px"></div>
                         <div class="imageContainer row">
-                            <img src="../../../img/aluno/Blackboard/ambiente-disciplinas/step4.png" alt="captura de tela-4" class="">
+                            <img src="../../img/aluno/clickers/step6.png" alt="captura de tela-6" class="">
                         </div>
                         <div class="imageContainer row">
-                            <img src="../../../img/aluno/Blackboard/ambiente-disciplinas/step5.png" alt="captura de tela-5" class="">
+                            <img src="../../img/aluno/clickers/step7.png" alt="captura de tela-7" class="">
                             <div class="boxDestaque">
+                                <p>Você pode votar de duas maneiras:</p>
                                 <ul>
-                                    <li>Veja seu desempenho nos testes clicando sobre seu link <span class="enfaseBox">D</span> e, na sequência, sobre sua nota <span class="enfaseBox">E</span>. As informações podem variar de acordo com a configuração do professor.</li>
+                                    <li>Pelo aplicativo <strong>Responseware</strong> em seu celular ou tablet ou</li>
+                                    <li>Acessando o endereço <a href="ttp://www.rwpoll.com">http://www.rwpoll.com</a>.</li>
                                 </ul>
+                                <p>Insira o número da sessão informada pelo professor e clique em <em>Join Session</em>.</p>
                             </div>
                         </div>
-
-                        <h2 id="subTitulo3">Enviar E-mail</h2>
-                        <p>Professores e alunos podem trocar e-mails pelo ambiente. Para isso, basta clicar no link Enviar E-mail no menu e selecionar a opção desejada.</p>
-                        <p>Atenção: a leitura das mensagens deve ser feita via webmail ou servidor Outlook.</p>
                         <div class="imageContainer row">
-                            <img src="../../../img/aluno/Blackboard/ambiente-disciplinas/step6.png" alt="captura de tela-6" class="">
-                            <div class="boxDestaqueAdicional">
-                                <p>Caso queira redirecionar os e-mails recebidos pela conta do Insper para sua caixa de e-mails pessoal, entre em contato com o Help Desk pelo e-mail <a href="mailto:helpdesk@insper.edu.br">helpdesk@insper.edu.br</a> ou pelo telefone 4504-2550.</p>
+                            <img src="../../img/aluno/clickers/step8.png" alt="captura de tela-8" class="">
+                            <div class="boxDestaque">
+                                <p>Informe o e-mail cadastrado e clique em <em>Sign In</em>.</p>
                             </div>
                         </div>
+                        <div class="margemParaImagem" style="height:20px"></div>
+                        <div class="imageContainer row">
+                            <img src="../../img/aluno/clickers/step9.png" alt="captura de tela-9" class="">
+                            <div class="boxDestaque">
+                                <p>Informe a senha cadastrada e clique em <em>Sign In</em>.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="height:20px"></div>
+                        <div class="imageContainer row">
+                            <img src="../../img/aluno/clickers/step10.png" alt="captura de tela-10" class="">
+                            <div class="boxDestaque">
+                                <p>Confira seu login e clique em <em>Join</em> ou <em>Submit</em>.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="height:20px"></div>
+                        <div class="imageContainer row">
+                            <img src="../../img/aluno/clickers/step11.png" alt="captura de tela-11" class="">
+                            <div class="boxDestaque">
+                                <p>Caso visualize a mensagem <em>Please, wait for your presenter to open pooling</em>, aguarde o professor abrir a votação.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="height:20px"></div>
+                        <div class="imageContainer row">
+                            <img src="../../img/aluno/clickers/step12.png" alt="captura de tela-12" class="">
+                            <div class="boxDestaque">
+                                <p>Ao selecionar uma alternativa ela ficará em destaque.</p>
+                                <p>Isso indica que seu voto foi computado.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="height:20px"></div>
+                         <div class="imageContainer row">
+                            <img src="../../img/aluno/clickers/step13.png" alt="captura de tela-13" class="">
+                            <div class="boxDestaque">
+                                <p>Ao término da votação será exibido o gráfico com o resultado de toda a turma, além da sua resposta.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="height:20px"></div>
                     </article>
-                    <div class="margemParaImagem" style="height:20px"></div>
                     <div class="voltarSumario fix">
                         <a href="#main">Início</a>
                     </div>
@@ -170,10 +207,10 @@
         </div>
     </div>
     <!-- Scripts: plugins -->
-    <script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
-    <script src="../../../js/libs/angular.js"></script>
-    <script src="../../../js/listaCompletaManual-aluno.js"></script>
-    <script src="../../../js/main.js"></script>
+    <script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
+    <script src="../../js/libs/angular.js"></script>
+    <script src="../../js/listaCompletaManual-aluno.js"></script>
+    <script src="../../js/main.js"></script>
     <script>
       // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

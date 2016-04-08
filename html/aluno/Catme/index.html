@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Recursos e Tecnologias de Aprendizagem - Manuais de utilização - Alunos</title>
     <meta name="viewport" content="width=device-width">
-    <link rel="icon" type="image/png" href="../../../favicon-16.png">
-    <link rel="stylesheet" type="text/css" media="print" href="../../../css/print.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="../../../css/main.css">
+    <link rel="icon" type="image/png" href="../../favicon-16.png">
+    <link rel="stylesheet" type="text/css" media="print" href="../../css/print.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/main.css">
     <!--[if IE]>
         <link href="css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <![endif]-->
@@ -21,7 +21,7 @@
     <div class="wrapper">
         <header id="top" class="wfull fix">
             <div class="logo c4">
-                <img src="../../../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
+                <img src="../../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
             </div>
             <div class="titleHeader c8">
                 <p class="title">Recursos e Tecnologias de Aprendizagem</p>
@@ -49,8 +49,11 @@
                         
                         <!-- plagio acadêmico -->
                         <h5 class="icoPlagio">Plágio Acadêmico</h5>
+                        <!-- <ol class="noCategory">
+                            <li class="selectedCategory">Apresentação da Cartilha de Plágio</li>
+                        </ol> -->
                         <ul class="noCategory" ng-repeat="item in plagio_academico | filter: {manual:searchText}">
-                            <li class="sublist ng-class:addMark()">
+                            <li class="sublist">
                                 <a href="{{item.linkManual}}" title="{{item.manual}}">{{item.manual}}</a>
                             </li>    
                         </ul>
@@ -74,7 +77,7 @@
                          <!--catme -->
                         <h5 class="icoCatme">Catme</h5>
                         <ul class="noCategory" ng-repeat="item in catme | filter: {manual:searchText}">
-                            <li class="sublist">
+                            <li class="sublist ng-class:addMark()">
                                 <a href="{{item.linkManual}}" title="{{item.manual}}">{{item.manual}}</a>
                             </li>    
                         </ul>
@@ -85,7 +88,7 @@
                 <section class="mainContent c8">
                     <section class="headerContent row">
                         <div class="cabecalho fix">
-                            <p><span><strong>Atualizado: </strong>06/04/2016</span></p>
+                            <p><span><strong>Atualizado: </strong>08/04/2016</span></p>
                         </div>
                     </section>
                     <article class="contentMain row">
@@ -99,20 +102,18 @@
                             4- Para casos em que haverá uma sublistagem no sumário adicionar no elemento 'h2' o atributo: data-sublist="true"
                             e para cada tópico desta listagem inserir a tag 'h3' com a seguinte sintaxe: '<h3 id="subList_sumarioX">'
                          -->
-                        <h1 class="nameCategory">Plágio acidental e plágio intencional</h1>
-                        <p>Por vezes o plágio pode acontecer acidentalmente, por falta de organização das leituras ou do conhecimento metodológico de como citar as fontes, além do desconhecimento do significado de plágio propriamente. Em outros casos, é realizado de forma intencional. No entanto, não há qualquer razão que justifique a infração.</p>
-                        <p>Faz parte das responsabilidades do <strong>Insper</strong> orientar os alunos sobre o tema e como evitar o plágio, bem como é dever do aluno tomar conhecimento dessas orientações.</p>
-
+                        <h1 class="nameCategory">Apresentação</h1>
+                        <p style="color:red">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae sit, minus voluptates dignissimos distinctio error earum explicabo natus doloribus ut voluptatum velit illo sint quidem placeat autem. Quam, hic id.</p>
                     </article>
                 </section>
             </div>
         </div>
     </div>
     <!-- Scripts: plugins -->
-    <script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
-    <script src="../../../js/libs/angular.js"></script>
-    <script src="../../../js/listaCompletaManual-aluno.js"></script>
-    <script src="../../../js/main.js"></script>
+    <script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
+    <script src="../../js/libs/angular.js"></script>
+    <script src="../../js/listaCompletaManual-aluno.js"></script>
+    <script src="../../js/main.js"></script>
     <script>
       // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
