@@ -112,24 +112,24 @@ manuaisBbAluno.controller('listaMenu', function ($scope) {
 
 	$scope.catme = [
 	{
-		'manual'		: 	'Apresentação',
+		'manual'		: 	'Apresentação do Catme',
 		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Catme/'
 	},
 	{
-		'manual'		: 	'Cadastro',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Catme/'
+		'manual'		: 	'Cadastro na ferramenta',
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Catme/#subTitulo1'
 	},
 	{
 		'manual'		: 	'Calibragem',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Catme/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Catme/#subTitulo2'
 	},
 	{
 		'manual'		: 	'Processo de Avaliação',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Catme/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Catme/#subTitulo3'
 	},
 	{
 		'manual'		: 	'Resultados',
-		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Catme/'
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Catme/#subTitulo4'
 	}
 	];
 
@@ -142,3 +142,35 @@ manuaisBbAluno.controller('listaMenu', function ($scope) {
         });
     }
 });
+
+/*
+	Apply italic in determinate words in nav menu
+*/
+function applyItalicWords (str) {
+	// case add news words..
+	for (var i = 0; i < arguments.length; i++) {
+		replaceTerm(arguments[i]);
+	}
+
+	function replaceTerm (word) {
+		 var a = document.querySelectorAll(".sublist a"),
+	    	term = new RegExp(word,"i"), // in case of multiple occurrence per item of menu
+	    	txt;
+
+	    for (var j = 0; j < a.length; j++) {
+	    	txt = a[j].textContent; // take content text
+
+	    	// if found item...
+	        if (txt.search(term) >= 0 ) {
+	        	// add around term the tag <em>
+	        	txt = txt.replace(term,"<em>"+word+"</em>");
+	        	// apply
+	        	a[j].innerHTML = txt;
+	        }
+	    }
+	}
+}
+window.onload = function() {
+	// call fn() with many parameters as you want, ex:("foo", "foo2", "foo3", ...)
+    applyItalicWords("online");
+}

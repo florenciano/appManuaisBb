@@ -110,6 +110,7 @@ $meioGrid: $grid / 2;
         ol { 
             margin: 0;
             padding-left: $grid/2;
+            li:last-child { margin: 0; }
         }
     }
 }
@@ -156,6 +157,36 @@ h3 + p { margin-top: 0; }
     }
 }
 
+/* CATME */
+// Apresentação
+.ap-catme-steps {
+    background: rgba(192,0,38,0.05);
+    padding: .5em;
+    border: 1px solid $corDefault;
+    border-radius: $grid/8;
+}
+.ap-catme-steps-title {
+    margin: 0;
+    font-size: 1em;
+    text-align: center;
+}
+.ap-catme-details {
+    ul {
+        margin: .5em 0 0;
+        padding: 0;
+        li {
+            list-style-type: none;
+            margin-bottom: .5em;
+        }
+    }
+}
+// setas
+.arrow-catme {
+    background: transparent url("../img/ui/catme-steps.png") center center no-repeat;
+    display: block;
+    height: 2em;
+}
+
 // DESKTOP
 @media only screen and (min-width: 769px) {
     /* Inserir foto (carômetro)*/
@@ -191,6 +222,25 @@ h3 + p { margin-top: 0; }
         -ms-overflow-style: -ms-autohiding-scrollbar;
     }
 
+    /* catme - apresentacao */
+    .ap-catme-details {
+        ul {
+            margin: 1em;
+            padding-left: $grid;
+            li { 
+                margin: 0;
+                list-style-type: disc;
+            }
+        }
+    }
+    .arrow-catme-steps { margin: .5em 0 !important; }
+    .arrow-catme {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
 
 
 }

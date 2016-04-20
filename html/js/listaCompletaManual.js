@@ -645,6 +645,4 @@ manuaisBB.controller('listaMenu', function ($scope) {
             }
         });
 	}
-
-	
 });

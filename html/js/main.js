@@ -96,7 +96,7 @@ $( document ).ready( function() {
     todosTitulos.each( function() {
         var tagA = $( "<a>" );
             tagA.attr( "href","#" + this.id );
-            tagA.append( $(this).text() );
+            tagA.append( $(this).html() );
 
         // criando os <li> e inserido seus respectivos conteúdos
         var tagLi = $( "<li>" );
