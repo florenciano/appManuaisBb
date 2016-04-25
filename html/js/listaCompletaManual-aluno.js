@@ -97,12 +97,16 @@ manuaisBbAluno.controller('listaMenu', function ($scope) {
 
 	$scope.clikcers = [
 	{
-		'manual'		: 	'Realizar cadastro',
+		'manual'		: 	'Apresentação dos votadores',
 		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Clickers/'
 	},
 	{
-		'manual'		: 	'Participar da votação',
+		'manual'		: 	'Realizar cadastro',
 		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Clickers/#subTitulo1'
+	},
+	{
+		'manual'		: 	'Participar da votação',
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Clickers/#subTitulo2'
 	}
 	];
 
@@ -154,7 +158,7 @@ function applyItalicWords (str) {
 
 	function replaceTerm (word) {
 		 var a = document.querySelectorAll(".sublist a"),
-	    	term = new RegExp(word,"i"), // in case of multiple occurrence per item of menu
+	    	term = new RegExp(word,"g"), // in case of multiple occurrence per item
 	    	txt;
 
 	    for (var j = 0; j < a.length; j++) {
@@ -171,6 +175,7 @@ function applyItalicWords (str) {
 	}
 }
 window.onload = function() {
-	// call fn() with many parameters as you want, ex:("foo", "foo2", "foo3", ...)
+	// call fn() with many parameters as you want, ex:("foo", "foo2", ...)
+	// OBS: case sensitive
     applyItalicWords("online");
 }
