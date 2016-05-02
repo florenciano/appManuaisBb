@@ -22,10 +22,9 @@
     #posLegendaIndex7 { @include settingsBoxImagem(30%, 0, 3%, auto, auto) }
     #posLegendaIndex8 { @include settingsBoxImagem(30%, 2%, 18%, auto, auto) }
 
-    #posLegendaIndex-aluno1 { @include settingsBoxImagem(22%, auto, 2%, 0, auto) }
-    #posLegendaIndex-aluno2 { @include settingsBoxImagem(20%, auto, auto, 0, 32%) }
-    #posLegendaIndex-aluno3 { @include settingsBoxImagem(20%, 0, auto, auto, 30%) }
-    #posLegendaIndex-aluno4 { @include settingsBoxImagem(20%, auto, 32%, 0, auto) }
+    #posLegendaIndex-aluno1 { @include settingsBoxImagem(30%, auto, 15%, 15%, auto) }
+    #posLegendaIndex-aluno3 { @include settingsBoxImagem(30%, 0%, auto, auto, 35%)  }
+    #posLegendaIndex-aluno4 { @include settingsBoxImagem(30%, auto, auto, 0, 50%) }
 
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
     // ASSUNTO: BLACKBOARD

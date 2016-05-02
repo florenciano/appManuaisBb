@@ -82,7 +82,7 @@ manuaisBbAluno.controller('listaMenu', function ($scope) {
 
 	$scope.curso_online = [
 	{
-		'manual'		: 	'Apresentação do curso online de Havard',
+		'manual'		: 	'Apresentação dos cursos',
 		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Curso-online/'
 	},
 	{

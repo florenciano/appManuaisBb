@@ -59,7 +59,7 @@
                         </ul>
 
                         <!-- curso online -->
-                        <h5 class="icoCursosOnline">Curso online de Harvard</h5>
+                        <h5 class="icoCursosOnline">Cursos <em>online</em> de Harvard</h5>
                         <ul class="noCategory" ng-repeat="item in curso_online | filter: {manual:searchText}">
                             <li class="sublist">
                                 <a href="{{item.linkManual}}" title="{{item.manual}}">{{item.manual}}</a>
@@ -69,7 +69,7 @@
                         <!-- clickers -->
                         <h5 class="icoClickers">Votadores eletrônicos (clickers)</h5>
                         <ul class="noCategory" ng-repeat="item in clikcers | filter: {manual:searchText}">
-                            <li class="sublist ng-class:addMark()">
+                            <li class="sublist">
                                 <a href="{{item.linkManual}}" title="{{item.manual}}">{{item.manual}}</a>
                             </li>    
                         </ul>
@@ -163,18 +163,20 @@
                         <h2 id="subTitulo2">Participar da votação</h2>
                         <div class="margemParaImagem" style="height:20px"></div>
                         <div class="imageContainer row">
-                            <img src="../../img/aluno/clickers/step6.png" alt="captura de tela-6" class="">
-                        </div>
-                        <div class="imageContainer row">
-                            <img src="../../img/aluno/clickers/step7.png" alt="captura de tela-7" class="">
                             <div class="boxDestaque">
                                 <p>Você pode votar de duas maneiras:</p>
                                 <ul>
                                     <li>Pelo aplicativo <strong>Responseware</strong> em seu celular ou tablet ou</li>
-                                    <li>Acessando o endereço <a href="ttp://www.rwpoll.com">http://www.rwpoll.com</a>.</li>
+                                    <li>Acessando o endereço <a href="http://www.rwpoll.com" target="_blank">http://www.rwpoll.com</a>.</li>
                                 </ul>
                                 <p>Insira o número da sessão informada pelo professor e clique em <em>Join Session</em>.</p>
                             </div>
+                        </div>
+                        <div class="imageContainer row">
+                            <img src="../../img/aluno/clickers/step6.png" alt="captura de tela-6" class="">
+                        </div>
+                        <div class="imageContainer row">
+                            <img src="../../img/aluno/clickers/step7.png" alt="captura de tela-7" class="">
                         </div>
                         <div class="imageContainer row">
                             <img src="../../img/aluno/clickers/step8b.png" alt="captura de tela-8" class="">
@@ -212,7 +214,7 @@
                             </div>
                         </div>
                         <div class="margemParaImagem" style="height:20px"></div>
-                         <div class="imageContainer row">
+                        <div class="imageContainer row">
                             <img src="../../img/aluno/clickers/step13.png" alt="captura de tela-13" class="">
                             <div class="boxDestaque">
                                 <p>Ao término da votação será exibido o gráfico com o resultado de toda a turma, além da sua resposta.</p>

@@ -59,7 +59,7 @@
                         </ul>
 
                         <!-- curso online -->
-                        <h5 class="icoCursosOnline">Curso online de Harvard</h5>
+                        <h5 class="icoCursosOnline">Cursos <em>online</em> de Harvard</h5>
                         <ul class="noCategory" ng-repeat="item in curso_online | filter: {manual:searchText}">
                             <li class="sublist">
                                 <a href="{{item.linkManual}}" title="{{item.manual}}">{{item.manual}}</a>
@@ -77,7 +77,7 @@
                          <!--catme -->
                         <h5 class="icoCatme">Catme</h5>
                         <ul class="noCategory" ng-repeat="item in catme | filter: {manual:searchText}">
-                            <li class="sublist ng-class:addMark()">
+                            <li class="sublist">
                                 <a href="{{item.linkManual}}" title="{{item.manual}}">{{item.manual}}</a>
                             </li>    
                         </ul>
@@ -104,10 +104,10 @@
                          -->
                         <h1 class="nameCategory">Apresentação do Catme</h1>
                         <div class="margemParaImagem" style="height:20px"></div>
-                        <a href="https://www.catme.org/login/index" title="CATME | Smarter Teamwork"><img src="../../img/aluno/catme/logo-catme.png" alt="logo Catme"></a>
+                        <a href="https://www.catme.org/login/" title="CATME | Smarter Teamwork" target="_blank"><img src="../../img/aluno/catme/logo-catme.png" alt="logo Catme"></a>
                         <div class="margemParaImagem" style="height:20px"></div>
                         <p>Para desenvolver a habilidade de Trabalho em Equipe você participará do processo de avaliação de pares, que consiste em observar seu desempenho e de seus colegas durante as atividades relacionadas ao trabalho em grupo, analisar este desempenho frente aos padrões estabelecidos pelo grupo previamente, realizar <em>feedbacks</em> para melhoria de desempenho e ajustar seus comportamentos em função dos <em>feedbacks</em>.</p>
-                        <p>A avaliação usará a Ferramenta <strong>CATME - Comprehensive Assessment of Team Member Effectiveness</strong> (<a href="www.catme.org/" title="CATME | Smarter Teamwork" target="_blank">www.catme.org/</a>).</p>
+                        <p>A avaliação usará a Ferramenta <strong>CATME - Comprehensive Assessment of Team Member Effectiveness</strong> (<a href="https://www.catme.org/login/" title="CATME | Smarter Teamwork" target="_blank">www.catme.org/</a>).</p>
                         <p>Cada professor fará a gestão do processo de avaliação em sua disciplina, bem como a apresentação dos resultados.</p>
                         <p>O processo completo de avaliação compreenderá as seguintes fases:</p>
                         <section class="catme fix">
@@ -250,6 +250,9 @@
                         <p>Aproveite esta oportunidade para fazer uma auto reflexão e verificar seus pontos fortes e pontos de melhoria.</p>
                         <div class="margemParaImagem" style="height:40px"></div>
                     </article>
+                    <div class="voltarSumario fix">
+                        <a href="#main">Início</a>
+                    </div>
                 </section>
             </div>
         </div>
