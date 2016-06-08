@@ -418,6 +418,7 @@ body {
             li { 
                 list-style-type: square;
                 margin: ($meioGrid / 4) 0;
+                ul li { list-style-type: inherit; }
             }
             li:first-child { margin-top: 0; }
             li:last-child { margin-bottom: 0; }
