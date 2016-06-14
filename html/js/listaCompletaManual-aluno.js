@@ -34,6 +34,10 @@ manuaisBbAluno.controller('listaMenu', function ($scope) {
 	{
 		'manual'		: 	'Calendário',
 		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Blackboard/calendario/'
+	},
+	{
+		'manual'		: 	'Webconferência',
+		'linkManual'	: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/aluno/Blackboard/webconferencia/'
 	}
 	];
 
