@@ -183,9 +183,44 @@ $( document ).ready( function() {
         hideSaibaMaisDoSumario();
     }
 
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */ 
+
+    /*
+        Readind position indicator.
+        Mostra um display no inferior da página de acordo
+        com o avanço do scroll.
+        Features embutida no Catme
+    */
+    var $progress = $( ".progressBar" ),
+        max, value;
+
+    var getMax = function() {
+        return $( document ).innerHeight() - $( window ).innerHeight(); // 2025
+    };
+
+    var getValue = function() {
+        return $( window ).scrollTop(); // - $( "#top" ).outerHeight();
+    };
+
+    $progress.attr({ max: getMax() });
+
+    /* set value position window in scroll */
+    $( document ).on( "scroll", function() {
+        $progress.attr({ value: getValue() });  
+    });
+
+    /* When resizes the window, the height of the window and the document will change */
+    $( window ).on( "resize", function() {
+        // Need to reset the Max attr
+        max = getMax();
+        $progress.attr({ max: getMax() });
+
+        // Need to reset the Max attr
+        value =  getValue();
+        $progress.attr({ value: getValue() });
+    });
 
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
 
     /*
         Pág: Blackboard/comunicacao-e-interacao/exemplos-dinamicas/

@@ -273,6 +273,10 @@ manuaisBB.controller('listaMenu', function ($scope) {
 		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Blackboard/avaliacao/corrigir-com-rubric/'
 	},
 	{
+		'manual'			: 	'Avaliar monografias da Graduação (ADM e ECO)',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Blackboard/avaliacao/avaliar-monografia-graduacao/'
+	},
+	{
 		'manual'			: 	'Exportar as notas para o sistema acadêmico',
 		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Blackboard/avaliacao/exportar-as-notas-para-o-sistema-academico/'
 	}

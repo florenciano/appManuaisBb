@@ -442,7 +442,6 @@
     #BbAvaliacaoCorrigirComPlagio5 { @include settingsBoxImagem(23%, auto, auto, 0, 0) }
 
     // Corrigir trabalhos com e sem verificação de plágio
-    // @include                                   settingsBoxImagem(W%,  l,   t,   r,   b)
     #BbAvaliacaoCorrigirComESemPlagio1 { @include settingsBoxImagem(44%, auto, 20%, 0, auto) }
     #BbAvaliacaoCorrigirComESemPlagio2 { @include settingsBoxImagem(50%, 25%, auto, auto, -40px) }
     #BbAvaliacaoCorrigirComESemPlagio3 { @include settingsBoxImagem(25%, auto, 10%, 0, auto) }
@@ -493,6 +492,15 @@
     #BbAvaliacaoExSistAcademico2 { @include settingsBoxImagem(30%, 0, auto, auto, -60px) }
     #BbAvaliacaoExSistAcademico3 { @include settingsBoxImagem(58%, auto, auto, 0, -60px) }
 
+    // Avaliar monografia da Graduação
+    // @include                             settingsBoxImagem(W%,  l,   t,   r,   b)
+    #BbAvaliacaoAvaliarMonGrad2 { @include settingsBoxImagem(45%, auto, auto, 0, 40%) }
+    #BbAvaliacaoAvaliarMonGrad2x { @include settingsBoxImagem(30%, auto, 0, 0, auto) }
+    #BbAvaliacaoAvaliarMonGrad3 { @include settingsBoxImagem(23%, auto, auto, 0, 0) }
+    #BbAvaliacaoAvaliarMonGrad4 { @include settingsBoxImagem(55%, 0, auto, auto, 0) }
+    #BbAvaliacaoAvaliarMonGrad5 { @include settingsBoxImagem(38%, auto, auto, 0, 0) }
+    #BbAvaliacaoAvaliarMonGrad6 { @include settingsBoxImagem(60%, 0, auto, auto, -20%) }
+    #BbAvaliacaoAvaliarMonGrad7 { @include settingsBoxImagem(28%, auto, auto, 0, 0) }
     
     // CATEGORIA: Geral
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -566,8 +574,8 @@
     #CatmeFuncCatme1 { @include settingsBoxImagem(60%, auto, 0, 20%, auto) }
 
     // Criar conta
-    #CatmeSobreCriarConta1 { @include settingsBoxImagem(40%, 0, auto, auto, -100px) }
-    #CatmeSobreCriarConta2 { @include settingsBoxImagem(38%, auto, auto, 0, -100px) }
+    #CatmeSobreCriarConta1 { @include settingsBoxImagem(45%, 0, auto, auto, -100px) }
+    #CatmeSobreCriarConta2 { @include settingsBoxImagem(45%, auto, auto, 0, -35%) }
     #CatmeSobreCriarConta3 { @include settingsBoxImagem(55%, 22.5%, auto, auto, -130px) }
 
     // CATEGORIA: Aplicar uma pesquisa de avaliação
@@ -1247,10 +1255,19 @@
     #BbAvaliacaoCorrigirRubric3 { @include settingsBoxImagem(45%, auto, auto, 0, -30px) }
 
     // Exportar as notas para o sistema acadêmico
-    // @include                             settingsBoxImagem(W%,  l,   t,   r,   b)
     #BbAvaliacaoExSistAcademico1 { @include settingsBoxImagem(42%, auto, auto, 30%, -170px) }
     #BbAvaliacaoExSistAcademico2 { @include settingsBoxImagem(40%, 0, auto, auto, -60px) }
     #BbAvaliacaoExSistAcademico3 { @include settingsBoxImagem(46%, auto, auto, 0, -60px) }
+
+    // Avaliar monografia da Graduação
+    // @include                             settingsBoxImagem(W%,  l,   t,   r,   b)
+    #BbAvaliacaoAvaliarMonGrad2 { @include settingsBoxImagem(35%, auto, auto, 0, 40%) }
+    #BbAvaliacaoAvaliarMonGrad2x { @include settingsBoxImagem(37%, auto, -25%, 0, auto) }
+    #BbAvaliacaoAvaliarMonGrad3 { @include settingsBoxImagem(23%, auto, auto, 0, 0) }
+    #BbAvaliacaoAvaliarMonGrad4 { @include settingsBoxImagem(60%, 0, auto, auto, 0) }
+    #BbAvaliacaoAvaliarMonGrad5 { @include settingsBoxImagem(20%, auto, auto, 0, -30%) }
+    #BbAvaliacaoAvaliarMonGrad6 { @include settingsBoxImagem(80%, 0, auto, auto, -30%) }
+    #BbAvaliacaoAvaliarMonGrad7 { @include settingsBoxImagem(30%, auto, auto, 0, -20%) }
 
     
     // CATEGORIA: Geral
@@ -1326,8 +1343,8 @@
     #CatmeFuncCatme1 { @include settingsBoxImagem(100%, auto, -10px, 0, auto) }
 
     // Criar conta
-    #CatmeSobreCriarConta1 { @include settingsBoxImagem(45%, 0, auto, auto, -120px) }
-    #CatmeSobreCriarConta2 { @include settingsBoxImagem(45%, auto, auto, 0, -120px) }
+    #CatmeSobreCriarConta1 { @include settingsBoxImagem(50%, 0, auto, auto, -45%) }
+    #CatmeSobreCriarConta2 { @include settingsBoxImagem(45%, auto, auto, 0, -55%) }
     #CatmeSobreCriarConta3 { @include settingsBoxImagem(60%, 15%, auto, auto, -140px) }
 
      // CATEGORIA: Aplicar uma pesquisa de avaliação
@@ -1954,6 +1971,14 @@
     #BbGeralRestringirVisualizacao6,
     #BbGeralRestringirVisualizacao7,
     #BbGeralRestringirVisualizacao8,
+
+    #BbAvaliacaoAvaliarMonGrad2,
+    #BbAvaliacaoAvaliarMonGrad2x,
+    #BbAvaliacaoAvaliarMonGrad3,
+    #BbAvaliacaoAvaliarMonGrad4,
+    #BbAvaliacaoAvaliarMonGrad5,
+    #BbAvaliacaoAvaliarMonGrad6,
+    #BbAvaliacaoAvaliarMonGrad7,
 
     // Exportar as notas para o sistema acadêmico
     #BbAvaliacaoExSistAcademico1,

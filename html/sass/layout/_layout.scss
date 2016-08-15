@@ -221,8 +221,6 @@ body {
         }
         p { line-height: $meioGrid + 2;}
     }
-
-
     /* regras para a seção de busca dos manuais */
     
     // definindo estilos dos ícones dos assuntos
@@ -654,7 +652,6 @@ body {
                 img { border: 1px solid #e6e7e8; }
             }  
         }
-        
         // Novos elementos do catme
         
         // O que é a ferramenta Catme
@@ -1382,6 +1379,34 @@ body {
 
         }
     }
+
+    // Readind Position Indicator
+    .progressBar {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        z-index: 1000;
+
+        width: 100%;
+        height: 5px;
+
+        /* Reset the appearance */
+        -webkit-appearance: none;
+        -moz-appearance: none;
+            appearance: none;
+
+        /* Get rid of the default border in Firefox/Opera. */
+        border: none;
+
+        /* Progress bar container for Firefox/IE10+ */
+        background-color: transparent;
+
+        /* Progress bar value for IE10+ */
+        color: #58D3F7;
+    }
+    .progressBar::-webkit-progress-bar { background-color: transparent; }
+    .progressBar::-webkit-progress-value { background-color: #58D3F7;  }
+    .progressBar::-moz-progress-bar { background-color: #58D3F7;  }
 
     // area de respiro após o wrapper
     .respiro { display: block; height: 1px; float: left; width: 100%; }

@@ -753,6 +753,16 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 		"tipoIcone"	: 	"blackboard"
 	}
 	];
+
+	// "Avaliar monografia da graduação"
+	$scope.Avaliar_monografia_grad = 
+	[
+	{
+		"manual"	: 	"Corrigir com Rubric",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Blackboard/avaliacao/corrigir-com-rubric/",
+		"tipoIcone"	: 	"blackboard"
+	}
+	];
 	
 	// CATEGORIA: Geral
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
