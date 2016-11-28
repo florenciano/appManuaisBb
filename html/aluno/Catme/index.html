@@ -250,6 +250,16 @@
                         <p>Aproveite esta oportunidade para fazer uma auto reflexão e verificar seus pontos fortes e pontos de melhoria.</p>
                         <div class="margemParaImagem" style="height:40px"></div>
                     </article>
+                    <!-- inicio do box Saiba mais -->
+                    <section class="saibaMais row fix">
+                        <h2 id="saiba-mais" class="ancora">Saiba Mais</h2>
+                        <h4 id="complementar">Materiais complementares</h4>
+                        <ul ng-controller="materiaisComplementares-aluno">
+                            <li ng-repeat="item in Catme_sobreFerramenta" class="ng-class: item.tipoIcone">
+                                <div><a href="{{item.Link}}" target="_blank">{{item.manual}}</a> (série de tutoriais do próprio fornecedor do CATME explicando todos os procedimentos para participar de uma avaliação de pares na ferramenta)</div>
+                            </li>
+                        </ul>
+                    </section>
                     <div class="voltarSumario fix">
                         <a href="#main">Início</a>
                     </div>

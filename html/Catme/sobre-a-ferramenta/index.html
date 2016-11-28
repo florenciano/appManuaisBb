@@ -452,11 +452,6 @@
 
                          -->
                     </article>
-
-                    <!-- Devido aos poucos itens do 'Saiba Mais'
-                    <div id="ancoraSaibaMais" class="voltarSumario fix">
-                        <a href="#pesquisa">Início</a>
-                    </div> -->
                     
                     <!-- inicio do box Saiba mais -->
                     <section class="saibaMais row fix">
@@ -471,14 +466,11 @@
                         </ul>
                         <h4 id="complementar">Materiais complementares</h4>
                         <ul ng-controller="materiaisComplementares">
-                            <li ng-repeat="item in Sobre_a_ferramenta" class="ng-class: item.tipoIcone">
-                                <div><a href="{{item.Link}}" target="_blank">{{item.manual}}</a></div>
+                            <li ng-repeat="item in Catme_sobreFerramenta" class="ng-class: item.tipoIcone">
+                                <div><a href="{{item.Link}}" target="_blank">{{item.manual}}</a> (série de tutoriais do próprio fornecedor do CATME explicando todos os procedimentos para promover uma avaliação de pares na ferramenta)</div>
                             </li>
                         </ul>
                     </section>
-                    <div class="voltarSumario fix">
-                        <a href="#pesquisa">Início</a>
-                    </div>
                 </section>
             </div>
         </div>

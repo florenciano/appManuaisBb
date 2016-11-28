@@ -183,3 +183,39 @@ window.onload = function() {
 	// OBS: case sensitive
     applyItalicWords("online");
 }
+
+manuaisBbAluno.controller('materiaisComplementares-aluno', function ($scope) {
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	// ASSUNTO: CATME
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+	// "Analisar resultados"
+	$scope.Catme_analisarResultados = 
+	[
+	{
+		"manual" 	: 	"CATME Student Videos",
+		"Link" 		: 	"http://info.catme.org/catme-student-videos/",
+		"tipoIcone"	: 	"video"
+	}
+	];
+
+	// "Aplicar uma pesquisa de avaliação"
+	$scope.Catme_aplicarPesquisaAvaliacao = 
+	[
+	{
+		"manual" 	: 	"CATME Student Videos",
+		"Link" 		: 	"http://info.catme.org/catme-student-videos/",
+		"tipoIcone"	: 	"video"
+	}
+	];
+
+	// "Sobre a ferramenta"
+	$scope.Catme_sobreFerramenta = 
+	[
+	{
+		"manual" 	: 	"CATME Student Videos",
+		"Link" 		: 	"http://info.catme.org/catme-student-videos/",
+		"tipoIcone"	: 	"video"
+	}
+	];
+});
