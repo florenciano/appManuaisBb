@@ -19,3 +19,6 @@ css/
 layouts/
 *.psd
 *.pdf
+*.docx
+*.pptx
+*xlsx
