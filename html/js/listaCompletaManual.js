@@ -449,7 +449,7 @@ manuaisBB.controller('listaMenu', function ($scope) {
 		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/utilizar-votadores-eletronicos/#instalar-software'
 	},
 	{
-		'manual'			: 	'Reservar aparelhos com HelpDesk',
+		'manual'			: 	'Reservar aparelhos ou licenças com Help Desk',
 		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Clickers/utilizar-votadores-eletronicos/#reservar-aparelhos'
 	},
 	{

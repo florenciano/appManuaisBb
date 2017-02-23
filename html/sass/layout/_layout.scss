@@ -109,12 +109,10 @@ html, body { height: 100%; min-height: 100%;}
     
 }
 body {
-    @include font(normal, 75%);
-    line-height: 1.4875;
+    @include font(normal, 82.5%); // 75%
+    line-height: 1.45;
     color: $corTexto;
     text-rendering: optimizeLegibility;
-    // @include transition(all .20s ease);
-    // Trasition removed in all style, it's not a good pratice
 }
 
 .wrapper {
@@ -235,12 +233,10 @@ body {
 
     // regras que afetam títulos dos assuntos, listas, sublistas e links
     .navigationMain {
-        // @include transition(all .40s ease);
         margin-top: $meioGrid;
 
         // regra da categoria vigente do manual ex: categoria 'Trabalhos' do Blackboard
         .selectedCategory {
-            // border: 1px solid $corDefault;
             background-color: $corDefault;
             padding: ($meioGrid / 4) ($meioGrid / 4) ($meioGrid / 4) ($meioGrid - 5);
             margin: 0;
@@ -381,14 +377,14 @@ body {
     .contentMainMelhorias {
         font-size: 112.5%;
         ol {
-            li { line-height: 1.75em; }
+            li { line-height: 1.35em; }
         }
     }
     // regras que afetam o conteúdo do manual
     .contentMain {
         h1 {
             @include font(bold, 1.8em);
-            line-height: 1em;
+            line-height: 1.35em;
             color: $corTitle;
         }
         h2 {
@@ -396,7 +392,6 @@ body {
         }
         h2 + p { margin-top: 0; }
         p {
-            line-height: 1.6em;
             a { @include corLink(); display: inline}
         }
 
@@ -409,7 +404,7 @@ body {
         section { @include font(normal, 1em); }
         a { @include corLink(); }
         ol {
-            li { margin: ($meioGrid / 4) 0; line-height: 1.45em; }
+            li { margin: ($meioGrid / 4) 0; line-height: 1.35em; }
             li:first-child { margin-top: 0; }
         }
         ul {
@@ -531,7 +526,6 @@ body {
         .tableCopiarTestPesquisa {
             .tableEnfaseText {
                 font-size: 111.25%;
-                line-height: 1.25em;
                 display: block;
                 margin: 10px 0 0;
                 // border-top: 1px solid rgba(255,255,255,.3);
@@ -543,7 +537,7 @@ body {
                 td { padding: 10px !important; }
             }
             tr:last-child {
-                td { line-height: 1.45em }
+                td { line-height: 1.35em }
             }
             .opcao {
                 background-color: #fff;
@@ -577,7 +571,6 @@ body {
                     }
                 }
                 .listBox {
-                    line-height: 1.4em;
                     ul {
                         padding: $meioGrid;
                         margin: 0;
@@ -638,7 +631,7 @@ body {
         // Boas práticas
         .tableBoasPraticas {
             tr {
-                td { width: 40%; line-height: 1.45em; }
+                td { width: 40%; line-height: 1.35em; }
                 td:first-child { width: 20%; font-weight: bold; }
             }
             ul {
@@ -736,7 +729,7 @@ body {
         .listagemBbGrupos {
             p { 
                 margin-top: .875em;
-                line-height: 1.4em;
+                line-height: 1.35em;
             }
         }
         // acessar resultados de uma avaliacao existente
@@ -789,7 +782,7 @@ body {
         // instalar o software TurningPoint
         .boxInstalarTurning {
             @extend .boxURLCatme;
-            width: 40%;
+            width: 50%;
             background-color: #7b0012;
             color: #fff;
             padding: $meioGrid / 4;
@@ -1077,7 +1070,6 @@ body {
             p { margin: ($meioGrid / 4) 0 0; }
             ul, ol { 
                 padding: 0 0 0 1.25em;
-                li { line-height: 1.25em; } 
             }
         }
 
@@ -1103,7 +1095,6 @@ body {
             p {
                 margin: 0 0 ($meioGrid / 2) 0;
                 padding: 0;
-                line-height: 1.325em;
                 span.icoContato {
                     background: transparent url("../img/ui/icoContatoIndex.png") no-repeat center center;
                     width: $grid - 10;
@@ -1151,7 +1142,6 @@ body {
                 ul {
                     margin: 0;
                     padding-left: 2em;
-                    li { line-height: 1.6; }
                 }
                 a:visited { color: $corDefault; }
                 p { margin: 0; }
@@ -1185,7 +1175,6 @@ body {
                     padding: 1em .5em;
                     margin: 1em .25em;
                     text-align: center;
-                    line-height: 1.6;
                     border-radius: 4px;
                 }
             }
@@ -1266,7 +1255,6 @@ body {
             border: 2px solid $corDefault;
             padding: $meioGrid / 2;
             p {
-                line-height: 1.5em;
                 margin: 0 0 .5em;
                 &:last-child { margin: 0 }
                 img { display: inline-block; }
@@ -1283,7 +1271,6 @@ body {
             border: 0;
             color: #fff;
             p {
-                line-height: 1.5em;
                 margin: 0 0 .5em;
                 &:last-child { margin: 0 }
                 img { display: inline-block; }
@@ -1327,13 +1314,13 @@ body {
             margin: 0 0 ($meioGrid / 4) 0;
             border-bottom: 1px solid #e64b64;
             @include font(bold, 1.2em);
-            line-height: 1.6em;
+            // line-height: 1.6em;
         }
 
         h4 {
             margin: $meioGrid 0 ($meioGrid / 2);
             @include font(bold, 1.1em);
-            line-height: 1.7em;
+            // line-height: 1.7em;
         }
 
         ul {
@@ -1354,7 +1341,6 @@ body {
                     padding: 0 ($meioGrid / 2) 0 ($grid + 10);
                     a {
                         @include corLink();
-                        line-height: 1.4em;
                     }
                 }
 
@@ -1630,7 +1616,7 @@ body {
         .title {
             @include font(bold, 1.65em);
             border-bottom: 3px solid $corDefault;
-            width: 71%;
+            width: 75%;
             padding: 0 0 ($meioGrid / 4) 0;
             margin: 0;
         }

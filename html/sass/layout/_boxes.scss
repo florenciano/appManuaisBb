@@ -652,10 +652,12 @@
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
     // Instalar software TurnningPoint
-    #ClickerInstalarTurning1 { @include settingsBoxImagem(40%, auto, 15%, 20px, auto) }
+    #ClickerInstalarTurning1 { @include settingsBoxImagem(40%, auto, 40%, 0, auto) }
+    #ClickerInstalarTurning2 { @include settingsBoxImagem(65%, auto, 0, 20%, auto) }
 
     // Abrir PowerPoint com TurnnginPoint
-    #ClickerAbrirPowerPoint1 { @include settingsBoxImagem(48%, auto, 45%, 20px, auto) }
+    #ClickerAbrirPowerPoint1 { @include settingsBoxImagem(35%, auto, -30%, 0, auto) }
+    #ClickerAbrirPowerPoint2 { @include settingsBoxImagem(55%, auto, auto, 26%, -60%) }
 
     // CATEGORIA: Prepara slides
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -1426,10 +1428,12 @@
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
     // Instalar software TurnningPoint
-    #ClickerInstalarTurning1 { @include settingsBoxImagem(45%, auto, 15%, 0, auto) }
+    #ClickerInstalarTurning1 { @include settingsBoxImagem(45%, auto, 35%, 0, auto) }
+    #ClickerInstalarTurning2 { @include settingsBoxImagem(99%, auto, 0, 0, auto) }
 
     // Abrir PowerPoint com TurnnginPoint
-    #ClickerAbrirPowerPoint1 { @include settingsBoxImagem(40%, auto, 45%, 20px, auto) }
+    #ClickerAbrirPowerPoint1 { @include settingsBoxImagem(50%, auto, -45%, 0, auto) }
+    #ClickerAbrirPowerPoint2 { @include settingsBoxImagem(55%, auto, auto, 26%, -100%) }
 
 
     // CATEGORIA: Prepara slides
@@ -2100,6 +2104,12 @@
     #ClickerSobreFerramenta8,
     #ClickerSobreFerramenta9,
 
+    // utilizando votadores eletrônicos
+    #ClickerInstalarTurning1,
+    #ClickerInstalarTurning2,
+    #ClickerAbrirPowerPoint1,
+    #ClickerAbrirPowerPoint2,
+
     // Criar questões e configurar votação nos slides
     #ClickerCriarQuestoes1,
     #ClickerCriarQuestoes2,
@@ -2188,7 +2198,7 @@
         clear: both;
         width: 100%;
         float: left;
-        margin: 5px 0 0 0;
+        margin: 1em 0;
     }
 }
 
