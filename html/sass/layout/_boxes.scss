@@ -659,24 +659,24 @@
     #ClickerAbrirPowerPoint1 { @include settingsBoxImagem(35%, auto, -30%, 0, auto) }
     #ClickerAbrirPowerPoint2 { @include settingsBoxImagem(55%, auto, auto, 26%, -60%) }
 
-    // CATEGORIA: Prepara slides
+    // CATEGORIA: Preparar slides
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
     // Criar questões e configurar votação nos slides
-    #ClickerCriarQuestoes1 { @include settingsBoxImagem(44%, auto, 30%, 0, auto) }
-    #ClickerCriarQuestoes2 { @include settingsBoxImagem(32%, auto, 65%, 0, auto) }
-    #ClickerCriarQuestoes3 { @include settingsBoxImagem(40%, auto, auto, 30%, -25%) }
+    #ClickerCriarQuestoes1 { @include settingsBoxImagem(30%, auto, 10%, 0, auto) }
+    #ClickerCriarQuestoes2 { @include settingsBoxImagem(30%, auto, 55%, 0, auto) }
+    #ClickerCriarQuestoes3 { @include settingsBoxImagem(50%, auto, auto, 25%, -25%) }
 
     #ClickerCriarQuestoes4 { @include settingsBoxImagem(50%, 20px, 0, auto, auto) }
     #ClickerCriarQuestoes5 { @include settingsBoxImagem(50%, 20px, 0, auto, auto) }
     #ClickerCriarQuestoes6 { @include settingsBoxImagem(50%, 20px, 0, auto, auto) }
     #ClickerCriarQuestoes7 { @include settingsBoxImagem(46%, 20px, 0, auto, auto) }
-    #ClickerCriarQuestoes8 { @include settingsBoxImagem(31%, auto, 20%%, 80px, auto) }
+    #ClickerCriarQuestoes8 { @include settingsBoxImagem(35%, auto, 20%, 0, auto) }
 
     // Criar questões e configurar votação nos slides
     #ClickerInserirCronometro1 { @include settingsBoxImagem(29%, auto, 30%, 80px, auto) }
     #ClickerInserirCronometro2 { @include settingsBoxImagem(38%, auto, auto, 20px, 50px) }
-    #ClickerInserirCronometro3 { @include settingsBoxImagem(40%, auto, auto, 30%, -30%) }
+    #ClickerInserirCronometro3 { @include settingsBoxImagem(50%, auto, auto, 25%, -25%) }
     #ClickerInserirCronometro4 { @include settingsBoxImagem(40%, auto, 45%, 40px, auto) }
 
     // CATEGORIA: Identificar votos dos alunos
@@ -691,11 +691,11 @@
     // Vincular lista de alunos
     #ClickerVincularListaAlunos1 { @include settingsBoxImagem(32%, auto, auto, 0, -80%) }
     #ClickerVincularListaAlunos2 { @include settingsBoxImagem(24%, auto, auto, 0, -10%) }
-    #ClickerVincularListaAlunos3 { @include settingsBoxImagem(30%, auto, auto, 35%, -15%) }
-    #ClickerVincularListaAlunos4 { @include settingsBoxImagem(30%, auto, auto, 0, -20%) } 
+    #ClickerVincularListaAlunos3 { @include settingsBoxImagem(35%, auto, auto, 35%, -15%) }
+    #ClickerVincularListaAlunos4 { @include settingsBoxImagem(15%, auto, auto, 0, -20%) } 
     #ClickerVincularListaAlunos5 { @include settingsBoxImagem(30%, auto, 0, 0, auto) }
     #ClickerVincularListaAlunos5 { @include settingsBoxImagem(40%, auto, auto, 30%, -20%) } 
-    #ClickerVincularListaAlunos6 { @include settingsBoxImagem(30%, auto, auto, 0, -20%) }
+    #ClickerVincularListaAlunos6 { @include settingsBoxImagem(15%, auto, auto, 0, -20%) }
 
 
     // CATEGORIA: Promover votação em sala
@@ -718,7 +718,7 @@
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
     // Visualizar resultados no excel
-    #ClickerVisResVotacao1 { @include settingsBoxImagem(40%, auto, 20px, 40px, auto) }
+    #ClickerVisResVotacao1 { @include settingsBoxImagem(35%, auto, -55%, 0, auto) }
 
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
     // ASSUNTO: RECURSOS
@@ -1440,20 +1440,20 @@
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
     // Criar questões e configurar votação nos slides
-    #ClickerCriarQuestoes1 { @include settingsBoxImagem(44%, auto, 30%, 0, auto) }
-    #ClickerCriarQuestoes2 { @include settingsBoxImagem(36%, auto, 65%, 0, auto) }
-    #ClickerCriarQuestoes3 { @include settingsBoxImagem(60%, auto, auto, 20%, -34%) }
-    #ClickerCriarQuestoes4 { @include settingsBoxImagem(50%, 0, 0, auto, auto) }
-    #ClickerCriarQuestoes5 { @include settingsBoxImagem(54%, 0, 0, auto, auto) }
-    #ClickerCriarQuestoes6 { @include settingsBoxImagem(50%, 0, 0, auto, auto) }
+    #ClickerCriarQuestoes1 { @include settingsBoxImagem(44%, auto, -5%, 0, auto) }
+    #ClickerCriarQuestoes2 { @include settingsBoxImagem(66%, auto, 88%, 0, auto) }
+    #ClickerCriarQuestoes3 { @include settingsBoxImagem(70%, auto, auto, 15%, -30%) }
+    #ClickerCriarQuestoes4 { @include settingsBoxImagem(45%, 0, 0, auto, auto) }
+    #ClickerCriarQuestoes5 { @include settingsBoxImagem(50%, 0, 0%, auto, auto) }
+    #ClickerCriarQuestoes6 { @include settingsBoxImagem(50%, 0, 5%, auto, auto) }
     #ClickerCriarQuestoes7 { @include settingsBoxImagem(53%, 0, 0, auto, auto) }
-    #ClickerCriarQuestoes8 { @include settingsBoxImagem(44%, auto, 20%, 0, auto) }
+    #ClickerCriarQuestoes8 { @include settingsBoxImagem(25%, auto, 20%, 0, auto) }
 
     // Criar questões e configurar votação nos slides
     // @include                          settingsBoxImagem(W%,  l,   t,   r,   b)
     #ClickerInserirCronometro1 { @include settingsBoxImagem(42%, auto, 20px, 0, auto) }
-    #ClickerInserirCronometro2 { @include settingsBoxImagem(41%, auto, 90px, 0, auto) }
-    #ClickerInserirCronometro3 { @include settingsBoxImagem(58%, auto, auto, 26%, -40%) }
+    #ClickerInserirCronometro2 { @include settingsBoxImagem(41%, auto, 35%, 0, auto) }
+    #ClickerInserirCronometro3 { @include settingsBoxImagem(60%, auto, auto, 20%, -40%) }
     #ClickerInserirCronometro4 { @include settingsBoxImagem(50%, auto, 45%, 0, auto) }
 
 
@@ -2144,6 +2144,9 @@
     #clickersDuranteAula2,
     #clickersDuranteAula3,
     #clickersDuranteAula4,
+
+    // Analisar resultados
+    #ClickerVisResVotacao1,
 
     // importar testes e pesquisa do word
     #BbTesPesquisaImportarWord1,
