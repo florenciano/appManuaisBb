@@ -853,6 +853,32 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	];
 
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	// ASSUNTO: DIARIO DE CLASSE
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	// CATEGORIA: Informações
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	$scope.DiarioClasse_sobreInformacoes= 
+	[
+	{
+		"manual" 	: 	"Sobre o Sistema",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Diario-classe/sistema/sobre-sistema/",
+		"tipoIcone"	: 	"diarioClasse"
+	}
+	];
+
+	// CATEGORIA: Sistema
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	$scope.DiarioClasse_sobreSistema= 
+	[
+	{
+		"manual" 	: 	"Informações sobre ementário, plano de ensino e plano de aula (PGLS)",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Diario-classe/informacoes/informacoes-sobre-ementario/",
+		"tipoIcone"	: 	"diarioClasse"
+	}
+	];
+
+
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 	// ASSUNTO: CATME
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 	// CATEGORIA: Sobre a ferramenta

@@ -334,6 +334,63 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	];
 
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	// ASSUNTO: DIARIO DE CLASSE
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	
+	// CATEGORIA: Informações
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	$scope.diarioClasseInformacoes = [
+	{
+		'categoria' 		: 	'Informações', // Este equivale ao nome da categoria
+		'manual'			: 	'',
+		'linkManual'		: 	''
+	},
+	{
+		'manual'			: 	'Informações sobre ementário, plano de ensino e plano de aula (PGLS)',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Diario-classe/informacoes/informacoes-sobre-ementario/'
+	}
+	];
+
+	// CATEGORIA: Sobre o sistema
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+	$scope.diarioClasseSistema = [
+	{
+		'categoria' 		: 	'O sistema', // Este equivale ao nome da categoria
+		'manual'			: 	'',
+		'linkManual'		: 	''
+	},
+	{
+		'manual'			: 	'Sobre o sistema',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Diario-classe/sistema/sobre-sistema/'
+	},
+	{
+		'manual'			: 	'Acesso ao sistema',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Diario-classe/sistema/sobre-sistema/#acesso-sistema'
+	},
+	{
+
+		'manual'			: 	'Publicar plano de aula',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Diario-classe/sistema/sobre-sistema/#publicar-plano-aula'
+	},
+	{
+	
+		'manual'			: 	'Editar plano de aula já publicado',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Diario-classe/sistema/sobre-sistema/#editar-plano-de-aula-ja-publicado'
+	},
+	{
+	
+		'manual'			: 	'Replicar plano de aula',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Diario-classe/sistema/sobre-ssitema/#replicar-plano-aula'
+	},
+	{
+	
+		'manual'			: 	'Publicar plano de aula atualizado',
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Diario-classe/sistema/sobre-sistema/#publicar-plano-aula-atualizado'
+	}
+	];
+
+
+	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 	// ASSUNTO: CATME
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 	

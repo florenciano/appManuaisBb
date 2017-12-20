@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br" ng-app="manuaisBB">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Recursos e Tecnologias de Aprendizagem - Manuais de utilização</title>
+<meta name="viewport" content="width=device-width">
+<meta name="msapplication-TileImage" content="tile.png"/>
+<meta name="msapplication-TileColor" content="#d02034"/>
+
+<link rel="stylesheet" type="text/css" media="print" href="../../../css/print.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../../../css/main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+<link rel="icon" href="../../../favicon-16.png" sizes="16x16">
+
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script>window.html5 || document.write('<script src="../../../js/libs/html5shiv.js"><\/script>')</script>
+<![endif]-->
+</head>
+<body>
+    <div class="wrapper">
+        <header id="top" class="wfull fix">
+            <div class="logo c4">
+                <img src="../../../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
+            </div>
+            <div class="titleHeader c8">
+                <p class="title">Recursos e Tecnologias de Aprendizagem</p>
+                <p class="description">Manuais de utilização</p>
+            </div>
+        </header>
+
+        <div id="main" role="main" class="fix wfull">
+            <div class="containerMain fix row">
+
+                <!-- início da área da busca -->
+                <section class="buscaMain c4" ng-controller="listaMenu">
+                    <div class="inputSearch">
+                        <form id="busca">
+                            <label for="pesquisa"></label>
+                            <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Busca por título ou palavra-chave" ng-model="searchText">
+                        </form>
+                    </div>
+
+                    <nav role="navigation" class="navigationMain">
+                        <h5 class="icoBlackboard">Blackboard</h5>
+
+                        <ol class="noCategory" ng-repeat="item in BbConhecerAmbiente | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>    
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbMateriais | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbComunicacaoInteracao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbTrabalhos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbGrupos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbTestesPesquisas | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbRubrics | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbAvaliacao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbGeral| filter: {manual:searchText}">
+                        <li class="nameCategory">
+                            <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            
+                        </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbCalendario | filter: {manual:searchText}">
+                        <li class="nameCategory">
+                            <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            
+                        </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+
+                         <h5 class="icoDiarioClasse">Sistema de Diário de Classe</h5>
+                        <ol class="noCategory" ng-repeat="item in diarioClasseInformacoes | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist selectedCategory" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in diarioClasseSistema | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <h5 class="icoCatme">Catme</h5>
+                        <ol class="noCategory" ng-repeat="item in catmeSobreFerramenta | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in catmeAplicarPesquisaAval | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in catmeAnalisarResultados | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <h5 class="icoClickers">Votadores eletrônicos (clickers)</h5>
+                        <ol class="noCategory" ng-repeat="item in clickerSobreFerramenta | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerUtilizarVotadores | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerPrepararSlides | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerIdentificarVoto | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerPromoverVotacao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerAnalisarResultados | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <h5 class="icoCursosOnline">Casos, Simuladores e Cursos online</h5>
+                        <ol class="noCategory" ng-repeat="item in SobreOsRecursos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in ConsultarRecursosDisponiveis | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in UtilizarRecursos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <div class="faqBusca icoFaq">
+                            <h5>
+                            <ol class="noCategory">
+                                <li><a href="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/faq/index.html" class="">FAQ</a></li>
+                            </ol>
+                            </h5>
+                        </div>
+                        <div class="outros">
+                            <h6>
+                                <a href="mailto:dea@insper.edu.br?subject=DEA%20-%20Manuais%20de%20utiliza&#231;&#227;o">Não encontrou o que queria?</a>
+                            </h6>
+                        </div>
+                    </nav>
+                </section>
+
+                <!-- início do conteúdo do manual -->
+                <section class="mainContent c8">
+                    <section class="headerContent row">
+                        <div class="cabecalho fix">
+                            <p>
+                                <!-- adicionar a data da produção do material -->
+                                <span><strong>Atualizado: </strong>18/12/2017</span>
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="breadcrumb">
+                            <p>
+                                <span class="nameCategory">Sistema de Diário de Classe </span>
+                                <span>&#62; </span>
+                                Informações sobre ementário, plano de ensino e plano de aula (PGLS)
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- 
+                    
+                    INTRODUCAO
+                    1- Texto do título h1 é o mesmo do 'p' da div.breadcrumb;
+                    2- div.sumario aparece logo depois da introdução do texto 'quando houver' e serve para listar todos os subtítulos da página definidos pela tag 'h2';
+                    3- toda tag 'h2' receberá esta sintaxe:
+                    '<h2 id="subTituloX">Texto aqui</h2>'
+                    É necessário adicionar um número identificador;
+
+                     -->
+
+                    <article class="contentMain row">
+                        <h1>Informações sobre ementário, plano de ensino e plano de aula (PGLS)</h1>
+                        <div class="sumario row">
+                            <h3 id="sumarioAncora">Sumário</h3>
+                        </div>
+                        <p>Este manual tem por finalidade apresentar os modelos institucionais que organizam o planejamento das disciplinas dos cursos Pós-Graduação Lato Sensu (Ementário, Plano de Ensino, Plano de Aulas), bem como sua estruturação no sistema de gestão de registro de disciplina (Diário de Classe).</p>
+                        <div class="imageContainer row">
+                            <a data-fancybox="gallery" href="../../../img/Diario-classe/informacoes/informacoes-sobre-ementario/step1-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Diario-classe/informacoes/informacoes-sobre-ementario/step1.png" alt="Informações sobre: ementário, plano de ensino e plano de aulas" class=""></a>
+                        </div>
+                        <p>Os alunos acessam o Plano de Ensino e o Plano de Aulas pelo Blackboard, no item “Plano de Ensino” no menu da disciplina. O link é criado automaticamente pelo sistema.</p>
+
+                        <div class="margemParaImagem" style="height:20px"></div>
+
+                        <h2 id="visualizar-resultados-votacao">Ementário</h2>
+                        <p>É o documento norteador da disciplina, em que são organizadas as informações operacionais (número do currículo, curso, disciplina, carga horária total e período letivo), bem como a ementa, os objetivos de aprendizagem, os conteúdos programáticos e as bibliografias básica e complementar.</p>
+                        <p>Como elemento constitutivo do projeto pedagógico do curso (PPC), deve ser validado pelo Núcleo Docente Estruturante (NDE) e pelos colegiados dos cursos. A partir dessa validação, não pode ser modificado sem passar novamente pelo mesmo processo.</p>
+                        <h3>Itens de composição de ementário:</h3>
+                        <div class="imageContainer row">
+                            <a data-fancybox="gallery" href="../../../img/Diario-classe/informacoes/informacoes-sobre-ementario/step2-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Diario-classe/informacoes/informacoes-sobre-ementario/step2.gif" alt="Itens que compõe o ementário" class=""></a>
+                        </div>
+                        <ul>
+                            <li><strong>Currículo: </strong>indicação do código com ano, periodicidade da disciplina e trimestre de ocorrência.</li>
+                            <li><strong>Curso: </strong>indicação do nome do curso.</li>
+                            <li><strong>Disciplina: </strong>indicação do nome da disciplina.</li>
+                            <li><strong>Carga horária total: </strong>indicação da quantidade de horas total da disciplina.</li>
+                            <li><strong>Período letivo: </strong>indicação do período letivo, de acordo com a oferta do curso.</li>
+                            <li><strong>Ementa: </strong>pequeno texto composto por um parágrafo narrativo que declare quais os tópicos do conteúdo da disciplina, limitando sua abrangência dentro da carga horária. Deve ser sucinta e objetiva, e estar alinhada com o projeto pedagógico do curso.</li>
+                            <li><strong>Objetivos de aprendizagem da disciplina: </strong>conforme documento institucional de gestão da aprendizagem, são “declarações claras, passíveis de mensuração e inseridas em um dado nível cognitivo, relativas ao que o estudante deve compreender (conteúdos), incluindo o que deve ser capaz de fazer (habilidades), após participar de experiências de aprendizagem planejadas, no nível do Programa ou das disciplinas”. Nesse sentido, devem explicitar os conteúdos que suportam seu desenvolvimento.</li>
+                            <li><strong>Conteúdo programático: </strong>conforme documento institucional de gestão da aprendizagem “podem ser vistos como um conjunto de conceitos e técnicas a serem aprendidos pelos estudantes”. São os conteúdos que suportam o desenvolvimento do objetivo de aprendizagem e devem ser inseridos no processo de ensino e aprendizagem nas perspectivas teóricas fundamentadas pelas bibliografias básicas e/ou complementares da disciplina.</li>
+                            <li><strong>Bibliografia básica: </strong>indicação de livro de leitura obrigatória, entregue aos estudantes no início de cada disciplina.</li>
+                            <li><strong>Bibliografia complementar: </strong>dicação de até cinco leituras complementares da disciplina.</li>
+                        </ul>
+
+                        <div class="margemParaImagem" style="height:40px"></div>
+
+                        <h2 id="visualizar-resultados-votacao">Plano de ensino</h2>
+                        <p>Apresenta praticamente o mesmo conteúdo do ementário. A diferença é que o plano de ensino contém também as informações específicas de cada turma.</p>
+                        <h3>Itens de composição do plano de ensino:</h3>
+                        <div class="imageContainer row">
+                            <a data-fancybox="gallery" href="../../../img/Diario-classe/informacoes/informacoes-sobre-ementario/step3-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Diario-classe/informacoes/informacoes-sobre-ementario/step3.gif" alt="Itens que compõe o ementário" class=""></a>
+                        </div>
+                        <p>O plano de ensino apresenta todos os itens do ementário e as informações adicionais a seguir.</p>
+                        <ul>
+                            <li><strong>Turma: </strong>indicação do código da turma a qual se destina a disciplina.</li>
+                            <li><strong>Professor: </strong>indicação do(s) nome do(s) docente(s) responsável(is) pela disciplina.</li>
+                            <li><strong>E-mail: </strong>indicação do(s) e-mail(s) do(s) professor(es) responsável(is) pela disciplina.</li>
+                            <li><strong>Horário das aulas: </strong>indicação do horário das aulas presenciais.</li>
+                        </ul>
+
+                        <div class="margemParaImagem" style="height:40px"></div>
+
+                        <h2 id="visualizar-resultados-votacao">Plano de aula</h2>
+                        <p>É um detalhamento do plano de ensino. Deve ser voltado ao estudante, permitindo que ele saiba aonde deve chegar no processo de aprendizagem a cada aula.</p>
+                        <p>A figura a seguir procura representar a relação entre os planos de ensino e de aula, entendidos como partes de um todo, que se unem pelos objetivos de aprendizagem. No plano de ensino, entre outras informações anteriormente apresentadas, apresentam-se os objetivos de aprendizagem da disciplina. No plano de aula, por sua vez, está planejado o desenvolvimento desses objetivos.</p>
+                        <h3>Itens de composição do plano de aula:</h3>
+                        <div class="imageContainer row">
+                            <a data-fancybox="gallery" href="../../../img/Diario-classe/informacoes/informacoes-sobre-ementario/step4-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Diario-classe/informacoes/informacoes-sobre-ementario/step4.gif" alt="Itens que compõe o ementário" class=""></a>
+                        </div>
+                        <ul>
+                            <li><strong>Objetivos de aprendizagem da disciplina no plano de aula: </strong>cada objetivo deve estar associado a um ou mais conjunto de aulas, considerando-se que esse será o intervalo proposto a seu desenvolvimento com o intuito de assegurar o alcance dos objetivos de aprendizagem da disciplina pelos alunos.</li>
+                            <li><strong>Tema: </strong>Deve indicar o tema e todos os conteúdos (conceitos, ferramentas, teorias, etc.) que serão abordados na aula ou em uma sequência de aulas.</li>
+                            <li><strong>Pré-aula: </strong>deve indicar ao estudante o que deve ser feito como preparação para a dinâmica que ocorrerá em sala. Para que o aluno saiba, de forma efetiva, o que precisa realizar, é importante que a(s) atividade(s) proposta(s) seja(m) orientada(s), de tal modo que o professor deixe claro como essa preparação contribui para a dinâmica que será vivida em sala de aula. Nesse campo também podem ser acrescentadas indicações de leituras específicas para uma aula ou uma sequência de aulas, desde que sejam propostas orientações de leitura.</li>
+                            <li><strong>Durante a aula: </strong>pode ser composto em texto corrido ou em itens. Em linhas gerais, deve descrever como será a(s) dinâmica(s) proposta(s), orientando o estudante sobre como está planejado o desenvolvido do objetivo de aprendizagem no intervalo de tempo proposto.
+                                <p>Nesse descritivo está inserido o aprendizado dos conteúdos, considerando-se que eles são o suporte para o desenvolvimento do objetivo de aprendizagem. Sendo a aprendizagem um processo, o professor pode também orientar os estudantes na complementação ou retomada de aspectos que se fizerem necessários.</p>
+                                <p>Atividades de avaliação formativa<sup>1</sup> previstas para a aula, com o intuito de acompanhar como está o processo de aprendizado e poder fornecer alguma forma de feedback, devem estar indicadas neste campo.</p>
+                            </li>
+                            <li><strong>Critério de avaliação: </strong>na perspectiva institucional, as avaliações são compreendidas como momentos de controle, para o professor e para o aluno, do processo de aprendizagem. Desse modo, devem ser planejadas para que ambos possam ter clareza de como está o processo e quais ações precisam ser tomadas para intervir em resultados indesejados. Ao docente, cabe planejar o que precisa ser feito para criar novas oportunidades de desenvolvimento do objetivo de aprendizagem. Ao estudante, com base nas avaliações e feedbacks recebidos, cabe a autoavaliação de seu processo, tendo consciência dos aspectos que necessitam de maior dedicação e engajamento de sua parte.</li>
+                        </ul>
+                        <p><sup>1 </sup><small>Maiores detalhamentos no Book de Gestão da Aprendizagem do Insper, 2017, p. 32 à 34.</small></p>
+
+                        <div class="margemParaImagem" style="height:40px"></div>
+                    </article>
+
+                    <!-- Devido aos poucos itens do 'Saiba Mais'
+                    <div id="ancoraSaibaMais" class="voltarSumario fix">
+                        <a href="#pesquisa">Início</a>
+                    </div> -->
+                    
+                    <!-- inicio do box Saiba mais -->
+                    <section class="saibaMais row fix">
+                        <h2 id="saiba-mais" class="ancora">Saiba Mais</h2>
+                        <h4 id="relacionado">Manuais relacionados</h4>
+                        <ul  ng-controller="manuaisRelacionados">
+                            <li ng-repeat="item in DiarioClasse_sobreInformacoes" class="ng-class: item.tipoIcone">
+                                <div><a href="{{item.Link}}">{{item.manual}}</a></div>
+                            </li>
+                        </ul>
+                        <h4 id="complementar">Materiais complementares</h4>
+                        <ul ng-controller="materiaisComplementares">
+                            <li ng-repeat="item in DiarioClasse_sobreInformacoes" class="ng-class: item.tipoIcone">
+                                <div><a href="{{item.Link}}" target="_blank">{{item.manual}}</a></div>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <div class="voltarSumario fix">
+                        <a href="#pesquisa">Início</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="fix respiro"></div>
+
+<!-- Scripts: plugins -->
+<script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
+<script src="../../../js/libs/angular.js"></script>
+<script src="../../../js/libs/jquery.placeholder.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+
+<!-- Scripts: controllers do AngularJs -->
+<script src="../../../js/listaCompletaManual.js"></script>
+<script src="../../../js/manuaisRelacionados.js"></script>
+<script src="../../../js/materiaisComplementares.js"></script>
+
+<!-- Scripts: do projeto -->
+<script src="../../../js/main.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59172929-3', 'auto');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>

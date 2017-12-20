@@ -175,22 +175,21 @@ body {
         }
     }
     .titleHeader {
-        text-align: center;
-        padding-bottom: $meioGrid;
+        text-align: left;
+        margin-top: 1em;
         .title {
-            @include font(bold, 1.2em);
-            margin: 0;
+            font-size: 1.8em;
+            font-weight: 400;
+            width: 100%;
+            margin: .25em 0;
         }
         .description {
-            @include font(normal, 1em);
-            color: #fff;
-            display: inline-block;
-            background-color: $corDefault;
-            height: $meioGrid + 2;
-            line-height: $meioGrid + 2;
-            padding: 0 $meioGrid;
-            margin: ($meioGrid/4) 0 0;
-            border-radius: 4px;
+            @include font(normal, 1.4em);
+            padding: .25em 0.5em;
+            height: auto;
+            margin: 0;
+            background-color: #c00026;
+            color: #fff
         }
     }
 
@@ -229,7 +228,8 @@ body {
     .icoSimuladores     { background: url("../img/ui/icoSimulador.png") left center no-repeat; }
     .icoCursosOnline    { background: url("../img/ui/icoCurso.png") left center no-repeat; }
     .icoFaq             { background: url("../img/ui/icoFaq.png") left center no-repeat; }
-    .icoPlagio            { background: url("../img/ui/icoPlagio.png") left center no-repeat; }
+    .icoPlagio          { background: url("../img/ui/icoPlagio.png") left center no-repeat; }
+    .icoDiarioClasse    { background: url("../img/ui/icoDiarioClasse.png") left center no-repeat; }
 
     // regras que afetam títulos dos assuntos, listas, sublistas e links
     .navigationMain {
@@ -645,8 +645,19 @@ body {
                 img { border: 1px solid #e6e7e8; }
             }  
         }
-        // Novos elementos do catme
-        
+
+        ////////////////////////////////////
+        // SISTEMA DE DIARIO DE CLASSE
+        ////////////////////////////////////
+        // Tabela sobre o sistema
+        .tableDiarioClasse_sobreSistema tr:nth-child(1) {
+            background-color: #000 !important;
+            color: #fff;
+        }
+
+        ////////////////////////////////////
+        // CATME
+        ////////////////////////////////////
         // O que é a ferramenta Catme
         .boxURLCatme {
             display: block;
@@ -1353,6 +1364,7 @@ body {
             .casos          { background: url("../img/ui/icoCaso2.png") 5px center no-repeat; }
             .simuladores    { background: url("../img/ui/icoSimulador2.png") 5px center no-repeat; }
             .cursosOnline   { background: url("../img/ui/icoCurso2.png") 5px center no-repeat; }
+            .diarioClasse  { background: url("../img/ui/icoDiarioClasse2.png") 5px center no-repeat; }
 
             // inserindo icones nas listas dos materiais complementares
             .default    { background: url("../img/ui/icoSaibaMaisManuais.png") 5px center no-repeat; }
@@ -1447,25 +1459,6 @@ body {
     .logo {
         margin: 0;
         img { max-width: 80%; }
-    }
-    .titleHeader {
-        padding-bottom: 0;
-        margin-top: 1em;
-        .title {
-            @include font(bold, 1.3em);
-            border-bottom: 3px solid $corDefault;
-            width: 78%;
-            padding: 0 0 ($meioGrid / 4) 0;
-            margin: 0 0 0 $meioGrid;
-        }
-        .description {
-            @include font(normal, 1.2em);
-            color: #fff;
-            padding: ($meioGrid / 2) ($grid - 10);
-            height: auto;
-            margin: -3px 0 0 ($meioGrid * 11);
-            letter-spacing: 1px;
-        }
     }
 
     .buscaMain { padding-top: $meioGrid; padding-bottom: $meioGrid;}
@@ -1575,7 +1568,7 @@ body {
 
 /* Media query DESKTOP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-@media only screen and (min-width: 1024px) and (max-width: 1920px) {
+@media only screen and (min-width: 1024px) {
 
     // ocultando o pop-up de alerta de pequena resolução
     .alert { display: none !important }
@@ -1610,24 +1603,10 @@ body {
     .logo { margin: 0;
         img { max-width: 100%; }
     }
+    
     .titleHeader {
-        text-align: right;
-        margin-top: $meioGrid;
-        .title {
-            @include font(bold, 1.65em);
-            border-bottom: 3px solid $corDefault;
-            width: 75%;
-            padding: 0 0 ($meioGrid / 4) 0;
-            margin: 0;
-        }
-        .description {
-            @include font(normal, 1.4em);
-            color: #fff;
-            padding: ($meioGrid / 2) ($meioGrid);
-            height: auto;
-            margin: -3px 8.13% 0 0;
-            letter-spacing: 1px;
-        }
+        .title { font-size: 2em }
+        .description { @include font(normal, 1.8em); }
     }
 
     .buscaMain { padding: $grid $meioGrid;}
