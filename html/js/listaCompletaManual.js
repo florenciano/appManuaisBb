@@ -347,7 +347,7 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	},
 	{
 		'manual'			: 	'Informações sobre ementário, plano de ensino e plano de aula (PGLS)',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Diario-classe/informacoes/informacoes-sobre-ementario/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Gestao-registro-disciplinas/informacoes/informacoes-sobre-ementario/'
 	}
 	];
 
@@ -361,31 +361,31 @@ manuaisBB.controller('listaMenu', function ($scope) {
 	},
 	{
 		'manual'			: 	'Sobre o sistema',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Diario-classe/sistema/sobre-sistema/'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Gestao-registro-disciplinas/sistema/sobre-sistema/'
 	},
 	{
 		'manual'			: 	'Acesso ao sistema',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Diario-classe/sistema/sobre-sistema/#acesso-sistema'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Gestao-registro-disciplinas/sistema/sobre-sistema/#acesso-sistema'
 	},
 	{
 
 		'manual'			: 	'Publicar plano de aula',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Diario-classe/sistema/sobre-sistema/#publicar-plano-aula'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Gestao-registro-disciplinas/sistema/sobre-sistema/#publicar-plano-aula'
 	},
 	{
 	
 		'manual'			: 	'Editar plano de aula já publicado',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Diario-classe/sistema/sobre-sistema/#editar-plano-de-aula-ja-publicado'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Gestao-registro-disciplinas/sistema/sobre-sistema/#editar-plano-de-aula-ja-publicado'
 	},
 	{
 	
 		'manual'			: 	'Replicar plano de aula',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Diario-classe/sistema/sobre-ssitema/#replicar-plano-aula'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Gestao-registro-disciplinas/sistema/sobre-ssitema/#replicar-plano-aula'
 	},
 	{
 	
 		'manual'			: 	'Publicar plano de aula atualizado',
-		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Diario-classe/sistema/sobre-sistema/#publicar-plano-aula-atualizado'
+		'linkManual'		: 	'https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Gestao-registro-disciplinas/sistema/sobre-sistema/#publicar-plano-aula-atualizado'
 	}
 	];
 

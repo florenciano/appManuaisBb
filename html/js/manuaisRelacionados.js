@@ -861,7 +861,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual" 	: 	"Sobre o Sistema",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Diario-classe/sistema/sobre-sistema/",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Gestao-registro-disciplinas/sistema/sobre-sistema/",
 		"tipoIcone"	: 	"diarioClasse"
 	}
 	];
@@ -872,7 +872,7 @@ manuaisBB.controller("manuaisRelacionados", function ($scope) {
 	[
 	{
 		"manual" 	: 	"Informações sobre ementário, plano de ensino e plano de aula (PGLS)",
-		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Diario-classe/informacoes/informacoes-sobre-ementario/",
+		"Link" 		: 	"https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Gestao-registro-disciplinas/informacoes/informacoes-sobre-ementario/",
 		"tipoIcone"	: 	"diarioClasse"
 	}
 	];

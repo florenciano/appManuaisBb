@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html class="no-js" lang="pt-br" ng-app="manuaisBB">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Recursos e Tecnologias de Aprendizagem - Manuais de utilização</title>
-<meta name="viewport" content="width=device-width">
-<meta name="msapplication-TileImage" content="tile.png"/>
-<meta name="msapplication-TileColor" content="#d02034"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Recursos e Tecnologias de Aprendizagem - Manuais de utilização</title>
+    <link rel="stylesheet" type="text/css" media="print" href="../../../css/print.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../../css/main.css?v=17">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+    <link rel="icon" href="../../../favicon-16.png" sizes="16x16">
 
-<link rel="stylesheet" type="text/css" media="print" href="../../../css/print.css">
-<link rel="stylesheet" type="text/css" media="screen" href="../../../css/main.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
-<link rel="icon" href="../../../favicon-16.png" sizes="16x16">
-
-<!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <script>window.html5 || document.write('<script src="../../../js/libs/html5shiv.js"><\/script>')</script>
-<![endif]-->
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script>window.html5 || document.write('<script src="../../../js/libs/html5shiv.js"><\/script>')</script>
+    <![endif]-->
 </head>
 <body>
     <div class="wrapper">
@@ -41,7 +38,6 @@
                             <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Busca por título ou palavra-chave" ng-model="searchText">
                         </form>
                     </div>
-
                     <nav role="navigation" class="navigationMain">
                         <h5 class="icoBlackboard">Blackboard</h5>
 
@@ -138,13 +134,12 @@
                             </li>
                         </ol>
 
-
-                         <h5 class="icoDiarioClasse">Sistema de Diário de Classe</h5>
+                        <h5 class="icoDiarioClasse">Sistema de Gestão de Registro de Disciplinas</h5>
                         <ol class="noCategory" ng-repeat="item in diarioClasseInformacoes | filter: {manual:searchText}">
                             <li class="nameCategory">
                                 <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
-                            <li class="sublist selectedCategory" ng-show="item.manual.length > 1">
+                            <li class="sublist" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
                             </li>
                         </ol>
@@ -153,7 +148,7 @@
                             <li class="nameCategory">
                                 <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
                             </li>
-                            <li class="sublist" ng-show="item.manual.length > 1">
+                            <li class="sublist ng-class: addMark()" ng-show="item.manual.length > 1">
                                 <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
                             </li>
                         </ol>
@@ -288,17 +283,14 @@
                 <section class="mainContent c8">
                     <section class="headerContent row">
                         <div class="cabecalho fix">
-                            <p>
-                                <!-- adicionar a data da produção do material -->
-                                <span><strong>Atualizado: </strong>18/12/2017</span>
-                            </p>
+                            <p><span><strong>Atualizado: </strong>19/12/2017</span></p>
                         </div>
                         <hr>
                         <div class="breadcrumb">
                             <p>
                                 <span class="nameCategory">Sistema de Diário de Classe </span>
                                 <span>&#62; </span>
-                                Informações sobre ementário, plano de ensino e plano de aula (PGLS)
+                                Publicar plano de aula atualizado
                             </p>
                         </div>
                     </section>
@@ -315,95 +307,91 @@
                      -->
 
                     <article class="contentMain row">
-                        <h1>Informações sobre ementário, plano de ensino e plano de aula (PGLS)</h1>
+                        <h1>Publicar plano de aula atualizado</h1>
                         <div class="sumario row">
                             <h3 id="sumarioAncora">Sumário</h3>
                         </div>
-                        <p>Este manual tem por finalidade apresentar os modelos institucionais que organizam o planejamento das disciplinas dos cursos Pós-Graduação Lato Sensu (Ementário, Plano de Ensino, Plano de Aulas), bem como sua estruturação no sistema de gestão de registro de disciplina (Diário de Classe).</p>
+                        <p>Após a publicação do Plano de Aula, qualquer alteração necessária deve refletir no Plano de Aula Atualizado. Para isso, o sistema copia automaticamente os dados dos Planos de Aula publicados para o Plano de Aula Atualizado, facilitando o trabalho do docente na atualização do programa quando necessário.</p>
                         <div class="imageContainer row">
-                            <a data-fancybox="gallery" href="../../../img/Diario-classe/informacoes/informacoes-sobre-ementario/step1-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Diario-classe/informacoes/informacoes-sobre-ementario/step1.png" alt="Informações sobre: ementário, plano de ensino e plano de aulas" class=""></a>
+                            <img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula-atualizado/step1.png" alt="Sistema de Diário de Classe">
+                            <div class="boxDestaque" id="DiarioClasse-publicarPlanoAula2">
+                                <p>Você pode utilizar os filtros (curso, ano, período, disciplina e turma) para encontrar o plano de aula desejado.</p>
+                            </div>
                         </div>
-                        <p>Os alunos acessam o Plano de Ensino e o Plano de Aulas pelo Blackboard, no item “Plano de Ensino” no menu da disciplina. O link é criado automaticamente pelo sistema.</p>
+                        
+                        <div class="margemParaImagem" style="height:20px"></div>
+
+                        <div class="imageContainer row">
+                            <a data-fancybox="gallery" href="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step2-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step2.png" alt="Planos de aula vinculados"></a>
+                            <div class="boxDestaque" id="DiarioClasse-publicarPlanoAula2">
+                                <p>Somente os planos das turmas vinculados ao docente, referentes ao período letivo corrente, serão exibidos para preenchimento. Todos os documentos terão inicialmente o status “Preenchimento pendente”.</p>
+                            </div>
+                        </div>
+
+                        <div class="margemParaImagem" style="height:80px"></div>
+
+                        <div class="imageContainer row">
+                            <a data-fancybox="gallery" href="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula-atualizado/step2-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula-atualizado/step2.png" alt=""></a>
+                        </div>
+
+                        <div class="margemParaImagem" style="height:40px"></div>
+
+                        <p>No caso de cancelamento e reposição de aula, as alterações de data são refletidas automaticamente no Plano de Aula Atualizado, sem haver perda dos conteúdos inseridos anteriormente.</p>
+                        <div class="imageContainer row">
+                            <a data-fancybox="gallery" href="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula-atualizado/step3-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula-atualizado/step3.png" alt=""></a>
+                        </div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step6.png" alt="">
+                            <div class="boxDestaqueAdicional" id="DiarioClasse-publicarPlanoAulaAtualizado1">
+                                <p>Somente após o preenchimento de todos os campos obrigatórios do Plano de Aula, os botões “Salvar” e “Salvar e visualizar” serão habilitados.</p>
+                            </div>
+                        </div>
 
                         <div class="margemParaImagem" style="height:20px"></div>
 
-                        <h2 id="visualizar-resultados-votacao">Ementário</h2>
-                        <p>É o documento norteador da disciplina, em que são organizadas as informações operacionais (número do currículo, curso, disciplina, carga horária total e período letivo), bem como a ementa, os objetivos de aprendizagem, os conteúdos programáticos e as bibliografias básica e complementar.</p>
-                        <p>Como elemento constitutivo do projeto pedagógico do curso (PPC), deve ser validado pelo Núcleo Docente Estruturante (NDE) e pelos colegiados dos cursos. A partir dessa validação, não pode ser modificado sem passar novamente pelo mesmo processo.</p>
-                        <h3>Itens de composição de ementário:</h3>
+                        <section class="row fix listagemAlunos">
+                            <div class="c2"><img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step4a.png" alt="" class="imgRight recuoList"></div>
+                            <div class="c10">
+                                <p style="margin-top: 1em;">Salva as informações e permanece na tela do plano de aula.</p>
+                            </div>
+                        </section>
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+                        <section class="row fix listagemAlunos">
+                            <div class="c2"><img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step4b.png" alt="" class="imgRight recuoList"></div>
+                            <div class="c10">
+                                <p>Salva e gera um documento PDF idêntico à versão disponibilizada aos alunos no Blackboard.</p>
+                                <p>Atenção: o bloqueador de pop-up precisa estar desativado</p>
+                            </div>
+                        </section>
+
+                        <div class="margemParaImagem" style="height:60px"></div>
+
+                        <p>Ao salvar o Plano de Aula Atualizado ele é automaticamente publicado, portanto o status do documento permanece como “Publicado” e a <strong>versão mais recente é disponibilizada para os alunos</strong>.</p>
+
                         <div class="imageContainer row">
-                            <a data-fancybox="gallery" href="../../../img/Diario-classe/informacoes/informacoes-sobre-ementario/step2-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Diario-classe/informacoes/informacoes-sobre-ementario/step2.gif" alt="Itens que compõe o ementário" class=""></a>
+                            <a data-fancybox="gallery" href="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula-atualizado/step4-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula-atualizado/step4.png" alt=""></a>
+                            <div class="boxDestaque" id="DiarioClasse-publicarPlanoAulaAtualizado2">
+                                <p>Caso tenha replicado esse plano para outra disciplina será necessário replica-lo novamente. <strong>Isso não é feito automaticamente</strong>.</p>
+                            </div>
                         </div>
-                        <ul>
-                            <li><strong>Currículo: </strong>indicação do código com ano, periodicidade da disciplina e trimestre de ocorrência.</li>
-                            <li><strong>Curso: </strong>indicação do nome do curso.</li>
-                            <li><strong>Disciplina: </strong>indicação do nome da disciplina.</li>
-                            <li><strong>Carga horária total: </strong>indicação da quantidade de horas total da disciplina.</li>
-                            <li><strong>Período letivo: </strong>indicação do período letivo, de acordo com a oferta do curso.</li>
-                            <li><strong>Ementa: </strong>pequeno texto composto por um parágrafo narrativo que declare quais os tópicos do conteúdo da disciplina, limitando sua abrangência dentro da carga horária. Deve ser sucinta e objetiva, e estar alinhada com o projeto pedagógico do curso.</li>
-                            <li><strong>Objetivos de aprendizagem da disciplina: </strong>conforme documento institucional de gestão da aprendizagem, são “declarações claras, passíveis de mensuração e inseridas em um dado nível cognitivo, relativas ao que o estudante deve compreender (conteúdos), incluindo o que deve ser capaz de fazer (habilidades), após participar de experiências de aprendizagem planejadas, no nível do Programa ou das disciplinas”. Nesse sentido, devem explicitar os conteúdos que suportam seu desenvolvimento.</li>
-                            <li><strong>Conteúdo programático: </strong>conforme documento institucional de gestão da aprendizagem “podem ser vistos como um conjunto de conceitos e técnicas a serem aprendidos pelos estudantes”. São os conteúdos que suportam o desenvolvimento do objetivo de aprendizagem e devem ser inseridos no processo de ensino e aprendizagem nas perspectivas teóricas fundamentadas pelas bibliografias básicas e/ou complementares da disciplina.</li>
-                            <li><strong>Bibliografia básica: </strong>indicação de livro de leitura obrigatória, entregue aos estudantes no início de cada disciplina.</li>
-                            <li><strong>Bibliografia complementar: </strong>dicação de até cinco leituras complementares da disciplina.</li>
-                        </ul>
 
-                        <div class="margemParaImagem" style="height:40px"></div>
+                        <div class="margemParaImagem" style="height:120px"></div>
 
-                        <h2 id="visualizar-resultados-votacao">Plano de ensino</h2>
-                        <p>Apresenta praticamente o mesmo conteúdo do ementário. A diferença é que o plano de ensino contém também as informações específicas de cada turma.</p>
-                        <h3>Itens de composição do plano de ensino:</h3>
-                        <div class="imageContainer row">
-                            <a data-fancybox="gallery" href="../../../img/Diario-classe/informacoes/informacoes-sobre-ementario/step3-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Diario-classe/informacoes/informacoes-sobre-ementario/step3.gif" alt="Itens que compõe o ementário" class=""></a>
-                        </div>
-                        <p>O plano de ensino apresenta todos os itens do ementário e as informações adicionais a seguir.</p>
-                        <ul>
-                            <li><strong>Turma: </strong>indicação do código da turma a qual se destina a disciplina.</li>
-                            <li><strong>Professor: </strong>indicação do(s) nome do(s) docente(s) responsável(is) pela disciplina.</li>
-                            <li><strong>E-mail: </strong>indicação do(s) e-mail(s) do(s) professor(es) responsável(is) pela disciplina.</li>
-                            <li><strong>Horário das aulas: </strong>indicação do horário das aulas presenciais.</li>
-                        </ul>
-
-                        <div class="margemParaImagem" style="height:40px"></div>
-
-                        <h2 id="visualizar-resultados-votacao">Plano de aula</h2>
-                        <p>É um detalhamento do plano de ensino. Deve ser voltado ao estudante, permitindo que ele saiba aonde deve chegar no processo de aprendizagem a cada aula.</p>
-                        <p>A figura a seguir procura representar a relação entre os planos de ensino e de aula, entendidos como partes de um todo, que se unem pelos objetivos de aprendizagem. No plano de ensino, entre outras informações anteriormente apresentadas, apresentam-se os objetivos de aprendizagem da disciplina. No plano de aula, por sua vez, está planejado o desenvolvimento desses objetivos.</p>
-                        <h3>Itens de composição do plano de aula:</h3>
-                        <div class="imageContainer row">
-                            <a data-fancybox="gallery" href="../../../img/Diario-classe/informacoes/informacoes-sobre-ementario/step4-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Diario-classe/informacoes/informacoes-sobre-ementario/step4.gif" alt="Itens que compõe o ementário" class=""></a>
-                        </div>
-                        <ul>
-                            <li><strong>Objetivos de aprendizagem da disciplina no plano de aula: </strong>cada objetivo deve estar associado a um ou mais conjunto de aulas, considerando-se que esse será o intervalo proposto a seu desenvolvimento com o intuito de assegurar o alcance dos objetivos de aprendizagem da disciplina pelos alunos.</li>
-                            <li><strong>Tema: </strong>Deve indicar o tema e todos os conteúdos (conceitos, ferramentas, teorias, etc.) que serão abordados na aula ou em uma sequência de aulas.</li>
-                            <li><strong>Pré-aula: </strong>deve indicar ao estudante o que deve ser feito como preparação para a dinâmica que ocorrerá em sala. Para que o aluno saiba, de forma efetiva, o que precisa realizar, é importante que a(s) atividade(s) proposta(s) seja(m) orientada(s), de tal modo que o professor deixe claro como essa preparação contribui para a dinâmica que será vivida em sala de aula. Nesse campo também podem ser acrescentadas indicações de leituras específicas para uma aula ou uma sequência de aulas, desde que sejam propostas orientações de leitura.</li>
-                            <li><strong>Durante a aula: </strong>pode ser composto em texto corrido ou em itens. Em linhas gerais, deve descrever como será a(s) dinâmica(s) proposta(s), orientando o estudante sobre como está planejado o desenvolvido do objetivo de aprendizagem no intervalo de tempo proposto.
-                                <p>Nesse descritivo está inserido o aprendizado dos conteúdos, considerando-se que eles são o suporte para o desenvolvimento do objetivo de aprendizagem. Sendo a aprendizagem um processo, o professor pode também orientar os estudantes na complementação ou retomada de aspectos que se fizerem necessários.</p>
-                                <p>Atividades de avaliação formativa<sup>1</sup> previstas para a aula, com o intuito de acompanhar como está o processo de aprendizado e poder fornecer alguma forma de feedback, devem estar indicadas neste campo.</p>
-                            </li>
-                            <li><strong>Critério de avaliação: </strong>na perspectiva institucional, as avaliações são compreendidas como momentos de controle, para o professor e para o aluno, do processo de aprendizagem. Desse modo, devem ser planejadas para que ambos possam ter clareza de como está o processo e quais ações precisam ser tomadas para intervir em resultados indesejados. Ao docente, cabe planejar o que precisa ser feito para criar novas oportunidades de desenvolvimento do objetivo de aprendizagem. Ao estudante, com base nas avaliações e feedbacks recebidos, cabe a autoavaliação de seu processo, tendo consciência dos aspectos que necessitam de maior dedicação e engajamento de sua parte.</li>
-                        </ul>
-                        <p><sup>1 </sup><small>Maiores detalhamentos no Book de Gestão da Aprendizagem do Insper, 2017, p. 32 à 34.</small></p>
-
-                        <div class="margemParaImagem" style="height:40px"></div>
                     </article>
-
-                    <!-- Devido aos poucos itens do 'Saiba Mais'
-                    <div id="ancoraSaibaMais" class="voltarSumario fix">
-                        <a href="#pesquisa">Início</a>
-                    </div> -->
                     
                     <!-- inicio do box Saiba mais -->
                     <section class="saibaMais row fix">
                         <h2 id="saiba-mais" class="ancora">Saiba Mais</h2>
                         <h4 id="relacionado">Manuais relacionados</h4>
                         <ul  ng-controller="manuaisRelacionados">
-                            <li ng-repeat="item in DiarioClasse_sobreInformacoes" class="ng-class: item.tipoIcone">
+                            <li ng-repeat="item in DiarioClasse_publicarPlanoAulaAtualizado" class="ng-class: item.tipoIcone">
                                 <div><a href="{{item.Link}}">{{item.manual}}</a></div>
                             </li>
                         </ul>
                         <h4 id="complementar">Materiais complementares</h4>
                         <ul ng-controller="materiaisComplementares">
-                            <li ng-repeat="item in DiarioClasse_sobreInformacoes" class="ng-class: item.tipoIcone">
+                            <li ng-repeat="item in DiarioClasse_publicarPlanoAulaAtualizado" class="ng-class: item.tipoIcone">
                                 <div><a href="{{item.Link}}" target="_blank">{{item.manual}}</a></div>
                             </li>
                         </ul>

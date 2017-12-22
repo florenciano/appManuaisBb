@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br" ng-app="manuaisBB">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Recursos e Tecnologias de Aprendizagem - Manuais de utilização</title>
+    <link rel="stylesheet" type="text/css" media="print" href="../../../css/print.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../../css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+    <link rel="icon" href="../../../favicon-16.png" sizes="16x16">
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script>window.html5 || document.write('<script src="../../../js/libs/html5shiv.js"><\/script>')</script>
+    <![endif]-->
+</head>
+<body>
+    <div class="wrapper">
+        <header id="top" class="wfull fix">
+            <div class="logo c4">
+                <img src="../../../img/logoInsper.jpg" alt="Insper Instituto de Ensino e Pesquisa">
+            </div>
+            <div class="titleHeader c8">
+                <p class="title">Recursos e Tecnologias de Aprendizagem</p>
+                <p class="description">Manuais de utilização</p>
+            </div>
+        </header>
+
+        <div id="main" role="main" class="fix wfull">
+            <div class="containerMain fix row">
+
+                <!-- início da área da busca -->
+                <section class="buscaMain c4" ng-controller="listaMenu">
+                    <div class="inputSearch">
+                        <form id="busca">
+                            <label for="pesquisa"></label>
+                            <input type="text" id="pesquisa" class="inputPesquisa" placeholder="Busca por título ou palavra-chave" ng-model="searchText">
+                        </form>
+                    </div>
+                    <nav role="navigation" class="navigationMain">
+                        <h5 class="icoBlackboard">Blackboard</h5>
+
+                        <ol class="noCategory" ng-repeat="item in BbConhecerAmbiente | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>    
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbMateriais | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbComunicacaoInteracao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbTrabalhos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbGrupos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                                
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbTestesPesquisas | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbRubrics | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbAvaliacao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbGeral| filter: {manual:searchText}">
+                        <li class="nameCategory">
+                            <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            
+                        </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in BbCalendario | filter: {manual:searchText}">
+                        <li class="nameCategory">
+                            <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            
+                        </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <h5 class="icoDiarioClasse">Sistema de Gestão de Registro de Disciplinas</h5>
+                        <ol class="noCategory" ng-repeat="item in diarioClasseInformacoes | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in diarioClasseSistema | filter: {manual:searchText}">
+                            <li class="nameCategory selectedCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <h5 class="icoCatme">Catme</h5>
+                        <ol class="noCategory" ng-repeat="item in catmeSobreFerramenta | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in catmeAplicarPesquisaAval | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in catmeAnalisarResultados | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <h5 class="icoClickers">Votadores eletrônicos (clickers)</h5>
+                        <ol class="noCategory" ng-repeat="item in clickerSobreFerramenta | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerUtilizarVotadores | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerPrepararSlides | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerIdentificarVoto | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerPromoverVotacao | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in clickerAnalisarResultados | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <h5 class="icoCursosOnline">Casos, Simuladores e Cursos online</h5>
+                        <ol class="noCategory" ng-repeat="item in SobreOsRecursos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in ConsultarRecursosDisponiveis | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <ol class="noCategory" ng-repeat="item in UtilizarRecursos | filter: {manual:searchText}">
+                            <li class="nameCategory">
+                                <p class="" ng-show="item.categoria.length > 1">{{item.categoria}}</p>
+                            </li>
+                            <li class="sublist" ng-show="item.manual.length > 1">
+                                <a href="{{item.linkManual}}" type="text/html">{{item.manual}}</a>
+                            </li>
+                        </ol>
+
+                        <div class="faqBusca icoFaq">
+                            <h5>
+                            <ol class="noCategory">
+                                <li><a href="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/faq/index.html" class="">FAQ</a></li>
+                            </ol>
+                            </h5>
+                        </div>
+                        <div class="outros">
+                            <h6>
+                                <a href="mailto:dea@insper.edu.br?subject=DEA%20-%20Manuais%20de%20utiliza&#231;&#227;o">Não encontrou o que queria?</a>
+                            </h6>
+                        </div>
+                    </nav>
+                </section>
+
+                <!-- início do conteúdo do manual -->
+                <section class="mainContent c8">
+                    <section class="headerContent row">
+                        <div class="cabecalho fix">
+                            <p><span><strong>Atualizado: </strong>20/12/2017</span></p>
+                        </div>
+                        <hr>
+                        <div class="breadcrumb">
+                            <p>
+                                <span class="nameCategory">Sistema de Gestão de Registro de Disciplinas </span>
+                                <span>&#62; </span>
+                                O Sistema
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- 
+                    
+                    INTRODUCAO
+                    1- Texto do título h1 é o mesmo do 'p' da div.breadcrumb;
+                    2- div.sumario aparece logo depois da introdução do texto 'quando houver' e serve para listar todos os subtítulos da página definidos pela tag 'h2';
+                    3- toda tag 'h2' receberá esta sintaxe:
+                    '<h2 id="subTituloX">Texto aqui</h2>'
+                    É necessário adicionar um número identificador;
+
+                     -->
+
+                    <article class="contentMain row">
+                        <!-- <h1>O sistema</h1> -->
+                        <div class="sumario row">
+                            <h3 id="sumarioAncora">Sumário</h3>
+                        </div>
+                        <h2 id="sobre-sistema">Sobre o sistema</h2>
+                        <p>O Sistema de Gestão de Registro de Disciplinas é a ferramenta na qual é realizado o registro acadêmico dos seguintes documentos relacionados abaixo, para o acervo acadêmico e disponibilização aos alunos e docentes conforme exigência MEC.</p>
+                        <table class="tableAvalExistente tableDiarioClasse_sobreSistema">
+                            <tr>
+                                <th>Documento</th>
+                                <th>Conteúdo</th>
+                                <th>Responsável (preenchimento, aprovação e publicação/geração)</th>
+                                <th>Prazo</th>
+                            </tr>
+                            <tr>
+                                <td>Ementário do Curso</td>
+                                <td>Curso, Ementa, Objetivo, Conteúdo Programático e Bibliografia Básica e Complementar</td>
+                                <td>NDEs (Coordenação e Líderes de trilha) e Apoio (Livros – por meio dos Líderes)</td>
+                                <td>Início dos trimestres</td>
+                            </tr>
+                            <tr>
+                                <td>Plano de Ensino da Disciplina</td>
+                                <td>Curso, Turma, Carga horária, Ementa, Objetivo, Conteúdo Programático e Bibliografia Básica e Complementar</td>
+                                <td>Apoio Acadêmico</td>
+                                <td>Início dos trimestres</td>
+                            </tr>
+                            <tr>
+                                <td>Plano de Aula</td>
+                                <td>Programa aula a aula, Atividade Prática Supervisionada e Critérios de Avaliação</td>
+                                <td>Docente</td>
+                                <td>Até data publicada pelo Apoio acadêmico Programas para Executivos</td>
+                            </tr>
+                            <tr>
+                                <td>Plano de Aula Atualizado</td>
+                                <td>Conteúdo aula a aula efetivamente ministrado</td>
+                                <td>Docente</td>
+                                <td>Até uma semana após última aula</td>
+                            </tr>
+                            <tr>
+                                <td>Diário de Classe</td>
+                                <td>Notas, Faltas, APS, Status do Aluno e o Plano de Aula Atualizado</td>
+                                <td>Apoio Acadêmico</td>
+                                <td>Após encerramento do período letivo</td>
+                            </tr>
+                        </table>
+                        <div class="margemParaImagem" style="height:40px"></div>
+
+                        <h2 id="acesso-sistema">Acesso ao sistema</h2>
+                        <p>O Acesso ao sistema pode ser realizado pelo <strong>NOC</strong> (a) ou pelo <strong>Blackboard</strong> (b).</p>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Gestao-registro-disciplinas/sistema/sobre-sistema/step1.png" alt="Acesso ao sistema">
+                        </div>
+                        <div class="margemParaImagem" style="height:40px"></div>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Gestao-registro-disciplinas/sistema/sobre-sistema/step2.png" alt="Acesso ao sistema">
+                            <div class="boxDestaque" id="DiarioClasse-AcessoSistema1">
+                                <p>Preencha com seu usuário de rede.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="height:40px"></div>
+
+                        <h2 id="publicar-plano-aula">Publicar plano de aula</h2>
+                        <p>O Plano de Aula é composto pelo planejamento do programa, bem como os Critérios de Avaliação da disciplina. Na primeira semana de aula, o docente deve publicar o Plano de Aula no Blackboard para acesso dos alunos e apresentá-lo em sala de aula.</p>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step1.png" alt="Sistema de Diário de Classe">
+                            <div class="boxDestaque" id="DiarioClasse-publicarPlanoAula1">
+                                <p>Você pode utilizar os filtros (curso, ano, período, disciplina e turma) para encontrar o plano de aula desejado.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="height:20px"></div>
+                        <div class="imageContainer row">
+                            <a data-fancybox="gallery" href="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step2-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step2.png" alt="Planos de aula vinculados"></a>
+                            <div class="boxDestaque" id="DiarioClasse-publicarPlanoAula2">
+                                <p>Somente os planos das turmas vinculados ao docente, referentes ao período letivo corrente, serão exibidos para preenchimento. Todos os documentos terão inicialmente o status “Preenchimento pendente”.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="height:80px"></div>
+                        <div class="imageContainer row">
+                            <a data-fancybox="gallery" href="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step3-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step3.png" alt="Planos de aula vinculados"></a>
+                        </div>
+                        <div class="imageContainer row">
+                            <div class="boxDestaque" id="DiarioClasse-publicarPlanoAula3">
+                                <p>O preenchimento e publicação devem ser realizados até o prazo informado na coluna “Preencher”. Após esse prazo, somente será possível visualizar o documento não sendo mais possível editá-lo. As edições poderão ser feitas no <a href="https://insper.blackboard.com/bbcswebdav/institution/DEA/manuais/Gestao-registro-disciplinas/sistema/publicar-plano-aula-atualizado/">Plano de Aula Atualizado</a>.</p>
+                                <p>O prazo é parametrizado e monitorado pelo Apoio.</p>
+                            </div>
+                        </div>
+                        <p>No Programa da turma, que faz parte do Plano de Aula, serão exibidas todas as aulas previstas no calendário do curso e as respectivas colunas “Problema, Fundamentos/Conteúdo, Evidências de Aprendizado e Programação/Atividades”.</p>
+                        <p><img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/3.png" alt="Item 3">Você deverá realizar o preenchimento dos campos para cada uma das aulas. Lembrando que todos os campos são de <strong>preenchimento obrigatório</strong> e que não há limitação de caracteres.</p>
+                        <div class="imageContainer row">
+                            <a data-fancybox="gallery" href="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step4-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step4.png" alt="Preenchimento dos campos"></a>
+                        </div>
+                        <section class="row fix listagemAlunos">
+                            <div class="c2"><img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step4a.png" alt="" class="imgRight recuoList"></div>
+                            <div class="c10">
+                                <p style="margin-top: 1em;">Datas das aulas.</p>
+                            </div>
+                        </section>
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+                        <section class="row fix listagemAlunos">
+                            <div class="c2"><img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step4b.png" alt="" class="imgRight recuoList"></div>
+                            <div class="c10">
+                                <p style="margin-top: .5em;">Botão que permite salvar parcialmente as inserções realizadas, mesmo sem ter completado o preenchimento de todos os campos obrigatórios.</p>
+                            </div>
+                        </section>
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+                        <section class="row fix listagemAlunos">
+                            <div class="c2"><img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step4c.png" alt="" class="imgRight recuoList"></div>
+                            <div class="c10">
+                                <p>Totalizador de campos obrigatórios que, além de exibir o total de itens obrigatórios e a quantidade de itens já preenchidos, também destaca em vermelho os campos obrigatórios pendentes de preenchimento ao clicar no ícone de interrogação. Os campos pendentes serão visualizados com um traço vermelho na sua lateral esquerda.</p>
+                            </div>
+                        </section>
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+                        <section class="row fix listagemAlunos">
+                            <div class="c2"><img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step4d.png" alt="" class="imgRight recuoList"></div>
+                            <div class="c10">
+                                <p>Ferramentas de edição para copiar, recortar, colar e limpar as informações de todas as colunas da linha escolhida. Para utilizar as funções Copiar / Recortar e Colar, basta selecionar o botão de copiar ou recortar da linha de origem e, em seguida, selecionar o botão colar da linha de destino.</p>
+                            </div>
+                        </section>
+                        <div class="margemParaImagem" style="margin-top:60px"></div>
+                        <p><img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/4.png" alt="Item 4">Também é <strong>obrigatório</strong> o preenchimento dos Critérios de Avaliação.</p>
+                        <div class="imageContainer row">
+                            <a data-fancybox="gallery" href="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step5-big.png" title="Critérios de avaliação"><img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step5.png" alt="Planos de aula vinculados"></a>
+                        </div>
+                        <section class="row fix listagemAlunos">
+                            <div class="c2"><img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step4a.png" alt="" class="imgRight recuoList"></div>
+                            <div class="c10">
+                                <p style="margin-top: 1em;">Adicionar mais um critério de avaliação.</p>
+                            </div>
+                        </section>
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+                        <section class="row fix listagemAlunos">
+                            <div class="c2"><img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step4b.png" alt="" class="imgRight recuoList"></div>
+                            <div class="c10">
+                                <p style="margin-top: .5em;">Excluir o último critério de avaliação.</p>
+                            </div>
+                        </section>
+                        <div class="margemParaImagem" style="margin-top:60px"></div>
+                        <p><img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/5.png" alt="Item 5">O campo Orientações Gerais poderá ser preenchido a critério do docente, não sendo um campo de preenchimento obrigatório.</p>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step6.png" alt="Planos de aula vinculados">
+                            <div class="boxDestaqueAdicional" id="DiarioClasse-publicarPlanoAula3b">
+                                <p>Somente após o preenchimento de todos os campos obrigatórios do Plano de Aula, os botões “Salvar” e “Salvar e visualizar” serão habilitados.</p>
+                            </div>
+                        </div>
+                        <section class="row fix listagemAlunos">
+                            <div class="c2"><img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step4a.png" alt="" class="imgRight recuoList"></div>
+                            <div class="c10">
+                                <p style="margin-top: 1em;">Salva as informações e permanece na tela do plano de aula.</p>
+                            </div>
+                        </section>
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+                        <section class="row fix listagemAlunos">
+                            <div class="c2"><img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step4b.png" alt="" class="imgRight recuoList"></div>
+                            <div class="c10">
+                                <p>Salva e gera um documento PDF idêntico à versão disponibilizada aos alunos no Blackboard.</p>
+                                <p>Atenção: o bloqueador de pop-up precisa estar desativado</p>
+                            </div>
+                        </section>
+                        <div class="margemParaImagem" style="margin-top:60px"></div>
+                        <p>Ao salvar o Plano de Aula preenchido completamente, seu status será alterado para “Preenchido” e o botão “Aprovar plano de aula” será habilitado.</p>
+                        <div class="imageContainer row">
+                            <a data-fancybox="gallery" href="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step7-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step7.png" alt="Preenchimento dos campos"></a>
+                        </div>
+                        <p>O botão “Publicar” estará disponível somente após aprovação do plano de aula.</p>
+                        <div class="imageContainer row">
+                            <a data-fancybox="gallery" href="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step8-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step8.png" alt="Preenchimento dos campos"></a>
+                             <div class="boxDestaqueAdicional" id="DiarioClasse-publicarPlanoAula4">
+                                <p>Após a aprovação e publicação do plano de aula o mesmo será automaticamente publicado no Blackboard para os alunos.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="margin-top:120px"></div>
+                        
+                        <h2 id="editar-plano-aula-publicado">Editar plano de aula já publicado</h2>
+                        <p>Você pode realizar alterações em um plano de aula já publicado, desde que ainda esteja dentro do prazo de edição.</p>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step1.png" alt="Sistema de Diário de Classe">
+                        </div>
+                        <div class="margemParaImagem" style="height:40px"></div>
+                        <div class="imageContainer row">
+                            <a data-fancybox="gallery" href="../../../img/Gestao-registro-disciplinas/sistema/editar-plano-de-aula-ja-publicado/step1-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Gestao-registro-disciplinas/sistema/editar-plano-de-aula-ja-publicado/step1.png" alt="Editando o plano de aula"></a>
+                             <div class="boxDestaque" id="DiarioClasse-editarPlanoAulaEditado1">
+                                <p>Após editar os dados, será necessário aprovar e publicar novamente o documento.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="height:120px"></div>
+
+                        <h2 id="replicar-plano-aula">Replicar plano de aula</h2>
+                        <p>Você pode realizar alterações em um plano de aula já publicado, desde que ainda esteja dentro do prazo de edição.</p>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step1.png" alt="Sistema de Diário de Classe">
+                        </div>
+                        <div class="margemParaImagem" style="height:20px"></div>
+                        <div class="imageContainer row">
+                            <a data-fancybox="gallery" href="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step3-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step3.png" alt="Planos de aula vinculados"></a>
+                            <div class="boxDestaque" id="DiarioClasse-replicarPlanoAula1">
+                                <p>Selecione a turma que ainda não possui o plano de aula preenchido.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="height:20px"></div>
+                        <div class="imageContainer row">
+                            <a data-fancybox="gallery" href="../../../img/Gestao-registro-disciplinas/sistema/replicar-plano-aula/step1-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Gestao-registro-disciplinas/sistema/replicar-plano-aula/step1.png" alt="Planos de aula vinculados"></a>
+                        </div>
+                        <div class="margemParaImagem" style="height:20px"></div>
+                        <p>Caso o plano que está sendo editado tenha aulas a mais do que o plano copiado, as aulas excedidas serão exibidas sem conteúdo e precisarão ser preenchidas.</p>
+                        <div class="imageContainer row">
+                            <a data-fancybox="gallery" href="../../../img/Gestao-registro-disciplinas/sistema/replicar-plano-aula/step2-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Gestao-registro-disciplinas/sistema/replicar-plano-aula/step2.png" alt=""></a>
+                        </div>
+                        <p>Caso ocorra o inverso e o plano que está sendo editado tenha menos aulas do que o plano copiado, as aulas a mais serão exibidas na cor cinza. Caso seja aplicável o conteúdo destas aulas deverá ser remanejado. A aula a mais deverá obrigatoriamente ser excluída do plano de aula.</p>
+                        <div class="margemParaImagem" style="height:20px"></div>
+                        <div class="imageContainer row">
+                            <a data-fancybox="gallery" href="../../../img/Gestao-registro-disciplinas/sistema/replicar-plano-aula/step3-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Gestao-registro-disciplinas/sistema/replicar-plano-aula/step3.png" alt=""></a>
+                        </div>
+                        <div class="margemParaImagem" style="height:40px"></div>
+
+                        <h2 id="publicar-plano-aula-atualizado">Publicar plano de aula atualizado</h2>
+                        <p>Após a publicação do Plano de Aula, qualquer alteração necessária deve refletir no Plano de Aula Atualizado. Para isso, o sistema copia automaticamente os dados dos Planos de Aula publicados para o Plano de Aula Atualizado, facilitando o trabalho do docente na atualização do programa quando necessário.</p>
+                        <div class="imageContainer row">
+                            <img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula-atualizado/step1.png" alt="Sistema de Diário de Classe">
+                            <div class="boxDestaque" id="DiarioClasse-publicarPlanoAula2">
+                                <p>Você pode utilizar os filtros (curso, ano, período, disciplina e turma) para encontrar o plano de aula desejado.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="height:20px"></div>
+                        <div class="imageContainer row">
+                            <a data-fancybox="gallery" href="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step2-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step2.png" alt="Planos de aula vinculados"></a>
+                            <div class="boxDestaque" id="DiarioClasse-publicarPlanoAula2">
+                                <p>Somente os planos das turmas vinculados ao docente, referentes ao período letivo corrente, serão exibidos para preenchimento. Todos os documentos terão inicialmente o status “Preenchimento pendente”.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="height:80px"></div>
+                        <div class="imageContainer row">
+                            <a data-fancybox="gallery" href="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula-atualizado/step2-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula-atualizado/step2.png" alt=""></a>
+                        </div>
+                        <div class="margemParaImagem" style="height:40px"></div>
+                        <p>No caso de cancelamento e reposição de aula, as alterações de data são refletidas automaticamente no Plano de Aula Atualizado, sem haver perda dos conteúdos inseridos anteriormente.</p>
+                        <div class="imageContainer row">
+                            <a data-fancybox="gallery" href="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula-atualizado/step3-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula-atualizado/step3.png" alt=""></a>
+                        </div>
+
+                        <div class="imageContainer row">
+                            <img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step6.png" alt="">
+                            <div class="boxDestaqueAdicional" id="DiarioClasse-publicarPlanoAulaAtualizado1">
+                                <p>Somente após o preenchimento de todos os campos obrigatórios do Plano de Aula, os botões “Salvar” e “Salvar e visualizar” serão habilitados.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="height:20px"></div>
+                        <section class="row fix listagemAlunos">
+                            <div class="c2"><img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step4a.png" alt="" class="imgRight recuoList"></div>
+                            <div class="c10">
+                                <p style="margin-top: 1em;">Salva as informações e permanece na tela do plano de aula.</p>
+                            </div>
+                        </section>
+                        <div class="margemParaImagem" style="margin-top:20px"></div>
+                        <section class="row fix listagemAlunos">
+                            <div class="c2"><img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step4b.png" alt="" class="imgRight recuoList"></div>
+                            <div class="c10">
+                                <p>Salva e gera um documento PDF idêntico à versão disponibilizada aos alunos no Blackboard.</p>
+                                <p>Atenção: o bloqueador de pop-up precisa estar desativado</p>
+                            </div>
+                        </section>
+                        <div class="margemParaImagem" style="height:60px"></div>
+                        <p>Ao salvar o Plano de Aula Atualizado ele é automaticamente publicado, portanto o status do documento permanece como “Publicado” e a <strong>versão mais recente é disponibilizada para os alunos</strong>.</p>
+                        <div class="imageContainer row">
+                            <a data-fancybox="gallery" href="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula-atualizado/step4-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula-atualizado/step4.png" alt=""></a>
+                            <div class="boxDestaque" id="DiarioClasse-publicarPlanoAulaAtualizado2">
+                                <p>Caso tenha replicado esse plano para outra disciplina será necessário replica-lo novamente. <strong>Isso não é feito automaticamente</strong>.</p>
+                            </div>
+                        </div>
+                        <div class="margemParaImagem" style="height:120px"></div>
+
+                    </article>
+                    
+                    <!-- inicio do box Saiba mais -->
+                    <section class="saibaMais row fix">
+                        <h2 id="saiba-mais" class="ancora">Saiba Mais</h2>
+                        <h4 id="relacionado">Manuais relacionados</h4>
+                        <ul  ng-controller="manuaisRelacionados">
+                            <li ng-repeat="item in DiarioClasse_sobreSistema" class="ng-class: item.tipoIcone">
+                                <div><a href="{{item.Link}}">{{item.manual}}</a></div>
+                            </li>
+                        </ul>
+                        <h4 id="complementar">Materiais complementares</h4>
+                        <ul ng-controller="materiaisComplementares">
+                            <li ng-repeat="item in DiarioClasse_sobreSistema" class="ng-class: item.tipoIcone">
+                                <div><a href="{{item.Link}}" target="_blank">{{item.manual}}</a></div>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <div class="voltarSumario fix">
+                        <a href="#pesquisa">Início</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="fix respiro"></div>
+
+<!-- Scripts: plugins -->
+<script>navigator.userAgent.match("MSIE")&&document.write('<script src="../../../js/libs/jquery-1.10.2.min.js"><\/script>')||document.write('<script src="../../../js/libs/jquery-2.0.2.min.js"><\/script>');</script>
+<script src="../../../js/libs/angular.js"></script>
+<script src="../../../js/libs/jquery.placeholder.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+
+<!-- Scripts: controllers do AngularJs -->
+<script src="../../../js/listaCompletaManual.js"></script>
+<script src="../../../js/manuaisRelacionados.js"></script>
+<script src="../../../js/materiaisComplementares.js"></script>
+
+<!-- Scripts: do projeto -->
+<script src="../../../js/main.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59172929-3', 'auto');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>

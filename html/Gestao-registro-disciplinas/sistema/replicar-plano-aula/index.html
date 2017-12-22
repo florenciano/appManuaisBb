@@ -134,7 +134,7 @@
                             </li>
                         </ol>
 
-                        <h5 class="icoDiarioClasse">Sistema de Diário de Classe</h5>
+                        <h5 class="icoDiarioClasse">Sistema de Gestão de Registro de Disciplinas</h5>
                         <ol class="noCategory" ng-repeat="item in diarioClasseInformacoes | filter: {manual:searchText}">
                             <li class="nameCategory">
                                 <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
@@ -290,7 +290,7 @@
                             <p>
                                 <span class="nameCategory">Sistema de Diário de Classe </span>
                                 <span>&#62; </span>
-                                Editar plano de aula já publicado
+                                Replicar plano de aula
                             </p>
                         </div>
                     </section>
@@ -307,25 +307,46 @@
                      -->
 
                     <article class="contentMain row">
-                        <h1>Editar plano de aula já publicado</h1>
+                        <h1>Replicar plano de aula</h1>
                         <div class="sumario row">
                             <h3 id="sumarioAncora">Sumário</h3>
                         </div>
                         <p>Você pode realizar alterações em um plano de aula já publicado, desde que ainda esteja dentro do prazo de edição.</p>
                         <div class="imageContainer row">
-                            <img src="../../../img/Diario-classe/sistema/publicar-plano-aula/step1.png" alt="Sistema de Diário de Classe">
+                            <img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step1.png" alt="Sistema de Diário de Classe">
                         </div>
                         
-                        <div class="margemParaImagem" style="height:40px"></div>
+                        <div class="margemParaImagem" style="height:20px"></div>
 
                         <div class="imageContainer row">
-                            <a data-fancybox="gallery" href="../../../img/Diario-classe/sistema/editar-plano-de-aula-ja-publicado/step1-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Diario-classe/sistema/editar-plano-de-aula-ja-publicado/step1.png" alt="Editando o plano de aula"></a>
-                             <div class="boxDestaque" id="DiarioClasse-editarPlanoAulaEditado1">
-                                <p>Após editar os dados, será necessário aprovar e publicar novamente o documento.</p>
+                            <a data-fancybox="gallery" href="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step3-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Gestao-registro-disciplinas/sistema/publicar-plano-aula/step3.png" alt="Planos de aula vinculados"></a>
+                            <div class="boxDestaque" id="DiarioClasse-replicarPlanoAula1">
+                                <p>Selecione a turma que ainda não possui o plano de aula preenchido.</p>
                             </div>
                         </div>
 
-                        <div class="margemParaImagem" style="height:120px"></div>
+                        <div class="margemParaImagem" style="height:20px"></div>
+
+                        <div class="imageContainer row">
+                            <a data-fancybox="gallery" href="../../../img/Gestao-registro-disciplinas/sistema/replicar-plano-aula/step1-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Gestao-registro-disciplinas/sistema/replicar-plano-aula/step1.png" alt="Planos de aula vinculados"></a>
+                        </div>
+
+                        <div class="margemParaImagem" style="height:20px"></div>
+
+                        <p>Caso o plano que está sendo editado tenha aulas a mais do que o plano copiado, as aulas excedidas serão exibidas sem conteúdo e precisarão ser preenchidas.</p>
+
+                        <div class="imageContainer row">
+                            <a data-fancybox="gallery" href="../../../img/Gestao-registro-disciplinas/sistema/replicar-plano-aula/step2-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Gestao-registro-disciplinas/sistema/replicar-plano-aula/step2.png" alt=""></a>
+                        </div>
+                        <p>Caso ocorra o inverso e o plano que está sendo editado tenha menos aulas do que o plano copiado, as aulas a mais serão exibidas na cor cinza. Caso seja aplicável o conteúdo destas aulas deverá ser remanejado. A aula a mais deverá obrigatoriamente ser excluída do plano de aula.</p>
+                        
+                        <div class="margemParaImagem" style="height:20px"></div>
+
+                        <div class="imageContainer row">
+                            <a data-fancybox="gallery" href="../../../img/Gestao-registro-disciplinas/sistema/replicar-plano-aula/step3-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Gestao-registro-disciplinas/sistema/replicar-plano-aula/step3.png" alt=""></a>
+                        </div>
+                        <div class="margemParaImagem" style="height:40px"></div>
+
                     </article>
                     
                     <!-- inicio do box Saiba mais -->
@@ -333,13 +354,13 @@
                         <h2 id="saiba-mais" class="ancora">Saiba Mais</h2>
                         <h4 id="relacionado">Manuais relacionados</h4>
                         <ul  ng-controller="manuaisRelacionados">
-                            <li ng-repeat="item in DiarioClasse_editarPlanoAulaPublicado" class="ng-class: item.tipoIcone">
+                            <li ng-repeat="item in DiarioClasse_replicarPlanoAula" class="ng-class: item.tipoIcone">
                                 <div><a href="{{item.Link}}">{{item.manual}}</a></div>
                             </li>
                         </ul>
                         <h4 id="complementar">Materiais complementares</h4>
                         <ul ng-controller="materiaisComplementares">
-                            <li ng-repeat="item in DiarioClasse_editarPlanoAulaPublicado" class="ng-class: item.tipoIcone">
+                            <li ng-repeat="item in DiarioClasse_replicarPlanoAula" class="ng-class: item.tipoIcone">
                                 <div><a href="{{item.Link}}" target="_blank">{{item.manual}}</a></div>
                             </li>
                         </ul>

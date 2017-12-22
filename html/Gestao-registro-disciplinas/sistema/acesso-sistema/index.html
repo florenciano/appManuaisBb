@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <title>Recursos e Tecnologias de Aprendizagem - Manuais de utilização</title>
     <link rel="stylesheet" type="text/css" media="print" href="../../../css/print.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="../../../css/main.css?v=17">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../../css/main.css?v=2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
     <link rel="icon" href="../../../favicon-16.png" sizes="16x16">
 
@@ -134,7 +134,7 @@
                             </li>
                         </ol>
 
-                        <h5 class="icoDiarioClasse">Sistema de Diário de Classe</h5>
+                        <h5 class="icoDiarioClasse">Sistema de Gestão de Registro de Disciplinas</h5>
                         <ol class="noCategory" ng-repeat="item in diarioClasseInformacoes | filter: {manual:searchText}">
                             <li class="nameCategory">
                                 <p ng-show="item.categoria.length > 1">{{item.categoria}}</p>
@@ -283,14 +283,14 @@
                 <section class="mainContent c8">
                     <section class="headerContent row">
                         <div class="cabecalho fix">
-                            <p><span><strong>Atualizado: </strong>19/12/2017</span></p>
+                            <p><span><strong>Atualizado: </strong>18/12/2017</span></p>
                         </div>
                         <hr>
                         <div class="breadcrumb">
                             <p>
                                 <span class="nameCategory">Sistema de Diário de Classe </span>
                                 <span>&#62; </span>
-                                Publicar plano de aula atualizado
+                                Acesso ao sistema
                             </p>
                         </div>
                     </section>
@@ -307,77 +307,25 @@
                      -->
 
                     <article class="contentMain row">
-                        <h1>Publicar plano de aula atualizado</h1>
+                        <h1>Acesso ao sistema</h1>
                         <div class="sumario row">
                             <h3 id="sumarioAncora">Sumário</h3>
                         </div>
-                        <p>Após a publicação do Plano de Aula, qualquer alteração necessária deve refletir no Plano de Aula Atualizado. Para isso, o sistema copia automaticamente os dados dos Planos de Aula publicados para o Plano de Aula Atualizado, facilitando o trabalho do docente na atualização do programa quando necessário.</p>
+                        <p>O Acesso ao sistema pode ser realizado pelo <strong>NOC</strong> (a) ou pelo <strong>Blackboard</strong> (b).</p>
                         <div class="imageContainer row">
-                            <img src="../../../img/Diario-classe/sistema/publicar-plano-aula-atualizado/step1.png" alt="Sistema de Diário de Classe">
-                            <div class="boxDestaque" id="DiarioClasse-publicarPlanoAula2">
-                                <p>Você pode utilizar os filtros (curso, ano, período, disciplina e turma) para encontrar o plano de aula desejado.</p>
-                            </div>
+                            <img src="../../../img/Gestao-registro-disciplinas/sistema/sobre-sistema/step1.png" alt="Acesso ao sistema">
                         </div>
                         
-                        <div class="margemParaImagem" style="height:20px"></div>
+                        <div class="margemParaImagem" style="height:40px"></div>
 
                         <div class="imageContainer row">
-                            <a data-fancybox="gallery" href="../../../img/Diario-classe/sistema/publicar-plano-aula/step2-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Diario-classe/sistema/publicar-plano-aula/step2.png" alt="Planos de aula vinculados"></a>
-                            <div class="boxDestaque" id="DiarioClasse-publicarPlanoAula2">
-                                <p>Somente os planos das turmas vinculados ao docente, referentes ao período letivo corrente, serão exibidos para preenchimento. Todos os documentos terão inicialmente o status “Preenchimento pendente”.</p>
+                            <img src="../../../img/Gestao-registro-disciplinas/sistema/sobre-sistema/step2.png" alt="Acesso ao sistema">
+                            <div class="boxDestaque" id="DiarioClasse-AcessoSistema1">
+                                <p>Preencha com seu usuário de rede.</p>
                             </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="height:80px"></div>
-
-                        <div class="imageContainer row">
-                            <a data-fancybox="gallery" href="../../../img/Diario-classe/sistema/publicar-plano-aula-atualizado/step2-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Diario-classe/sistema/publicar-plano-aula-atualizado/step2.png" alt=""></a>
                         </div>
 
                         <div class="margemParaImagem" style="height:40px"></div>
-
-                        <p>No caso de cancelamento e reposição de aula, as alterações de data são refletidas automaticamente no Plano de Aula Atualizado, sem haver perda dos conteúdos inseridos anteriormente.</p>
-                        <div class="imageContainer row">
-                            <a data-fancybox="gallery" href="../../../img/Diario-classe/sistema/publicar-plano-aula-atualizado/step3-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Diario-classe/sistema/publicar-plano-aula-atualizado/step3.png" alt=""></a>
-                        </div>
-
-                        <div class="imageContainer row">
-                            <img src="../../../img/Diario-classe/sistema/publicar-plano-aula/step6.png" alt="">
-                            <div class="boxDestaqueAdicional" id="DiarioClasse-publicarPlanoAulaAtualizado1">
-                                <p>Somente após o preenchimento de todos os campos obrigatórios do Plano de Aula, os botões “Salvar” e “Salvar e visualizar” serão habilitados.</p>
-                            </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="height:20px"></div>
-
-                        <section class="row fix listagemAlunos">
-                            <div class="c2"><img src="../../../img/Diario-classe/sistema/publicar-plano-aula/step4a.png" alt="" class="imgRight recuoList"></div>
-                            <div class="c10">
-                                <p style="margin-top: 1em;">Salva as informações e permanece na tela do plano de aula.</p>
-                            </div>
-                        </section>
-                        <div class="margemParaImagem" style="margin-top:20px"></div>
-                        <section class="row fix listagemAlunos">
-                            <div class="c2"><img src="../../../img/Diario-classe/sistema/publicar-plano-aula/step4b.png" alt="" class="imgRight recuoList"></div>
-                            <div class="c10">
-                                <p>Salva e gera um documento PDF idêntico à versão disponibilizada aos alunos no Blackboard.</p>
-                                <p>Atenção: o bloqueador de pop-up precisa estar desativado</p>
-                            </div>
-                        </section>
-
-                        <div class="margemParaImagem" style="height:60px"></div>
-
-                        <p>Ao salvar o Plano de Aula Atualizado ele é automaticamente publicado, portanto o status do documento permanece como “Publicado” e a <strong>versão mais recente é disponibilizada para os alunos</strong>.</p>
-
-                        <div class="imageContainer row">
-                            <a data-fancybox="gallery" href="../../../img/Diario-classe/sistema/publicar-plano-aula-atualizado/step4-big.png" title="Clique na imagem para ampliar"><img src="../../../img/Diario-classe/sistema/publicar-plano-aula-atualizado/step4.png" alt=""></a>
-                            <div class="boxDestaque" id="DiarioClasse-publicarPlanoAulaAtualizado2">
-                                <p>Caso tenha replicado esse plano para outra disciplina será necessário replica-lo novamente. <strong>Isso não é feito automaticamente</strong>.</p>
-                            </div>
-                        </div>
-
-                        <div class="margemParaImagem" style="height:120px"></div>
-
                     </article>
                     
                     <!-- inicio do box Saiba mais -->
@@ -385,13 +333,13 @@
                         <h2 id="saiba-mais" class="ancora">Saiba Mais</h2>
                         <h4 id="relacionado">Manuais relacionados</h4>
                         <ul  ng-controller="manuaisRelacionados">
-                            <li ng-repeat="item in DiarioClasse_publicarPlanoAulaAtualizado" class="ng-class: item.tipoIcone">
+                            <li ng-repeat="item in DiarioClasse_acessoSistema" class="ng-class: item.tipoIcone">
                                 <div><a href="{{item.Link}}">{{item.manual}}</a></div>
                             </li>
                         </ul>
                         <h4 id="complementar">Materiais complementares</h4>
                         <ul ng-controller="materiaisComplementares">
-                            <li ng-repeat="item in DiarioClasse_publicarPlanoAulaAtualizado" class="ng-class: item.tipoIcone">
+                            <li ng-repeat="item in DiarioClasse_acessoSistema" class="ng-class: item.tipoIcone">
                                 <div><a href="{{item.Link}}" target="_blank">{{item.manual}}</a></div>
                             </li>
                         </ul>
